@@ -46,3 +46,8 @@
 /* Les questions suivent la palette sombre même dans une fiche de cours blanche. */
 :root[data-student-theme] .prof-main .cours-question :is(h1, h2, h3, h4, summary) { color: var(--student-text); }
 :root[data-student-theme] .prof-main .cours-question a { color: var(--student-link); }
+
+/* Les corrigés et aides gardent un texte foncé sur leurs encadrés clairs. */
+:root[data-student-theme] .prof-main :is(.teacher-annotation, .private-course-notes, .private-course-setup, .copy-question-correction, .copy-correction) { color: #43351e; }
+:root[data-student-theme] .prof-main :is(.teacher-annotation, .private-course-notes, .private-course-setup, .copy-question-correction, .copy-correction) :is(h1, h2, h3, h4, p, li, summary, label) { color: #43351e; }
+:root[data-student-theme] .prof-main :is(.teacher-annotation, .private-course-notes, .private-course-setup, .copy-question-correction, .copy-correction) a { color: #245a85; }
