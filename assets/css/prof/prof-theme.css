@@ -42,3 +42,8 @@
 :root[data-student-theme] :is(#tracking-preview, #tracking-correction, .private-course-notes, .private-course-setup, #teacher-course[data-mode="private"] #teacher-course-status) { color: #243047; }
 :root[data-student-theme] :is(#tracking-preview, #tracking-correction, .private-course-notes, .private-course-setup, .copy-correction) :is(h1, h2, h3) { color: #243c58; }
 :root[data-student-theme] .prof-main .tracking-copy[aria-pressed="true"] { background: var(--student-soft); color: var(--student-text); border-color: var(--student-link); }
+
+/* Les questions suivent la palette sombre même dans une fiche de cours blanche. */
+:root[data-student-theme] .prof-main .cours-question :is(h1, h2, h3, h4, summary) { color: var(--student-text); }
+:root[data-student-theme] .prof-main .cours-question a { color: var(--student-link); }
+
