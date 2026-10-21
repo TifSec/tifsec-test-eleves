@@ -46,4 +46,3 @@
 /* Les questions suivent la palette sombre même dans une fiche de cours blanche. */
 :root[data-student-theme] .prof-main .cours-question :is(h1, h2, h3, h4, summary) { color: var(--student-text); }
 :root[data-student-theme] .prof-main .cours-question a { color: var(--student-link); }
-
