@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
+
+    
+    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
+    <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
+    
+
+    <title>
+        
+        Portail pédagogique Technologie | TIM | Mathématiques
+        
+    </title>
+
+    <link rel="icon" href="/tifsec-test-eleves/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/variables.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/base.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/body.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/header.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/main.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/footer.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-message.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-session.css">
+
+    
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    
+    
+
+    
+
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    
+    
+</head>
+
+<body class="student-shell student-course-shell">
+    <a class="student-skip" href="#course-intro">Aller au cours</a>
+    <p id="message" class="auth-message" role="status" aria-live="polite" hidden></p>
+    <header class="student-header" id="course-header">
+    <div class="student-header-inner">
+        <div class="student-topbar">
+            <a class="student-brand" href="/tifsec-test-eleves/eleve/"><img src="/tifsec-test-eleves/images/logo.png" width="44" height="44" alt=""><span>Mon espace<span data-profile-field="matieres"></span></span></a>
+            <div class="student-header-actions"><a class="student-home-link" href="/tifsec-test-eleves/eleve/">Mes séances</a><a id="course-login" href="/tifsec-test-eleves/connexion/">Se connecter</a><details class="student-theme-picker" id="student-theme-picker" hidden>
+    <summary>Apparence</summary>
+    <div class="student-theme-options"><label for="student-theme-select">Les couleurs de mon espace</label><select id="student-theme-select" disabled><option value="ocean">Océan · bleu</option><option value="forest">Forêt · vert</option><option value="plum">Prune · violet</option><option value="terracotta">Terre cuite · orangé</option><option value="ruby">Rubis · rouge</option><option value="slate">Ardoise · gris</option><option value="midnight">Minuit · noir</option><option value="rose">Rosée · rose</option><option value="neon">Néon · RGB sombre</option><option value="cyberpunk">Cyberpunk · cité futuriste</option><option value="minecraft">Minecraft · blocs et pixels</option><option value="farming">Farming · campagne et cultures</option></select><label class="student-theme-motion"><input type="checkbox" id="student-theme-motion"> Mettre les animations en pause</label><p id="student-theme-status" role="status" aria-live="polite">Ce choix te suivra sur les autres ordinateurs.</p><button id="student-theme-retry" type="button" hidden>Réessayer</button></div>
+</details>
+<button type="button" id="course-logout" hidden>Se déconnecter</button></div>
+        </div>
+        <div class="student-welcome-row" id="course-welcome" hidden>
+            <div><p class="student-eyebrow">Une séance à la fois, à ton rythme.</p><p class="student-course-greeting">Bonjour <span id="course-header-identity"></span></p></div>
+            <dl class="student-profile"><div><dt>Établissement</dt><dd data-profile-field="etablissement"></dd></div><div><dt>Classe</dt><dd data-profile-field="classe"></dd></div><div><dt>Inscription</dt><dd data-profile-field="validation"></dd></div></dl>
+        </div>
+    </div>
+</header>
+
+    <main class="student-course-main" id="student-course-main">
+
+<div id="course-work" data-etablissement="mfr" data-matiere="tim" data-classe="3e" data-seance="S03" data-saving-enabled="true" data-collaboration-enabled="true">
+    <div class="course-save-panel course-toolbar">
+        <p id="course-identity" hidden></p>
+        <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+    </div>
+    <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
+        <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
+        <p id="group-status" role="status">Les groupes sont propres à chaque séance. Connecte-toi avec ton compte élève pour choisir ta copie.</p>
+        <div id="group-controls" hidden>
+            <label for="group-copy">Copie de cette séance</label><select id="group-copy"></select>
+            <button type="button" id="group-refresh">Actualiser les groupes</button>
+            <div id="group-create-panel" hidden>
+                <p>Choisis un ou deux camarades. Chacun doit accepter pour partager les réponses. Le groupe reprend ton travail actuel ; ta copie individuelle reste dans l’historique.</p>
+                <div id="group-classmates" class="collaboration-roster"></div>
+                <button type="button" id="group-create">Envoyer les invitations</button>
+            </div>
+        </div>
+    </section>
+    <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
+    <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
+
+
+
+<div class="course-columns">
+    <aside class="course-navigation" aria-label="Étapes de la séance">
+        <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
+        <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
+        <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Pour commencer</a></li><li><a href="#a04">Production attendue</a></li><li><a href="#a05">1. Fichier ou dossier ? – 5 minutes</a></li><li><a href="#a06">2. À quoi sert une extension ? – 5 minutes</a></li><li><a href="#a07">3. Construire une arborescence – 10 minutes</a></li><li><a href="#a08">4. Donner un nom utile à un fichier – 5 minutes</a></li><li><a href="#a09">5. Créer le document de travail – 10 minutes</a></li><li><a href="#a10">6. Même document, deux formats – 5 minutes</a></li><li><a href="#a11">7. Retrouver son fichier – 5 minutes</a></li><li><a href="#a12">8. Vérification et rendu – 5 minutes</a></li><li><a href="#a13">Pour aller plus loin — facultatif</a></li><li><a href="#a14">À retenir</a></li><li><a href="#a15">Référentiel</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+    </aside>
+
+<div class="course-reading">
+<!-- ========== INTRODUCTION DU COURS ========== -->
+
+<header class="cours-intro" id="course-intro">
+    <h1>Comment organiser ses fichiers pour ne plus les perdre ?</h1>
+
+    
+    <p class="cours-theme">
+        <strong>Thème :</strong> TIM — Comment organiser ses fichiers pour ne plus les perdre ?
+    </p>
+    
+
+    
+    <p class="cours-problematique">
+        <strong>Problématique :</strong> Comment organiser ses fichiers pour ne plus les perdre ?
+    </p>
+    
+
+    <section><h2>Pourquoi étudier ce sujet ?</h2><p>La partie située à la fin du nom d&#39;un fichier, généralement après un point, s&#39;appelle son extension.</p></section>
+    
+    <section><h2>Dans la vie quotidienne</h2><p>apprendre à organiser correctement ses fichiers et ses dossiers afin de retrouver rapidement son travail.</p></section>
+    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    
+    
+    <section class="cours-objectifs">
+        <h2>Ce que vous allez apprendre</h2>
+        <ul>
+            
+            <li>Faire la différence entre un fichier et un dossier.</li>
+            
+            <li>Comprendre le rôle d&#39;une extension de fichier.</li>
+            
+            <li>Comprendre l&#39;intérêt d&#39;une organisation en dossiers et sous-dossiers.</li>
+            
+            <li>Comprendre qu&#39;un même contenu peut exister sous plusieurs formats.</li>
+            
+            <li>Comprendre la différence entre enregistrer et exporter un document.</li>
+            
+        </ul>
+
+        <h2>Ce que vous allez apprendre à faire</h2>
+        <ul>
+            
+            <li>Créer une arborescence de dossiers.</li>
+            
+            <li>Nommer correctement un fichier.</li>
+            
+            <li>Déplacer et retrouver un fichier.</li>
+            
+            <li>Identifier le type d&#39;un fichier grâce à son extension.</li>
+            
+            <li>Enregistrer un document Writer.</li>
+            
+            <li>Exporter ce document au format PDF.</li>
+            
+        </ul>
+    </section>
+    
+<h4>Ce que vous allez apprendre</h4>
+    
+
+<ul><li>Faire la différence entre un fichier et un dossier.</li><li>Comprendre le rôle d&#39;une extension de fichier.</li><li>Comprendre l&#39;intérêt d&#39;une organisation en dossiers et sous-dossiers.</li><li>Comprendre qu&#39;un même contenu peut exister sous plusieurs formats.</li><li>Comprendre la différence entre enregistrer et exporter un document.</li></ul>
+    
+
+<h4>Ce que vous allez apprendre à faire</h4>
+    
+
+<ul><li>Créer une arborescence de dossiers.</li><li>Nommer correctement un fichier.</li><li>Déplacer et retrouver un fichier.</li><li>Identifier le type d&#39;un fichier grâce à son extension.</li><li>Enregistrer un document Writer.</li><li>Exporter ce document au format PDF.</li></ul>
+    
+
+
+    <section><h2>Ressources du cours</h2>
+<p>Réalise les manipulations dans le logiciel demandé. Conserve tes fichiers sur ton espace habituel. Le site enregistre seulement tes réponses écrites, tes résultats, tes formules et tes démarches ; aucun fichier n’est téléversé.</p>
+    
+
+</section>
+    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
+<p>Dans cette page du ministère, retrouve le programme ou le référentiel de ta formation. Les objectifs précis étudiés aujourd’hui sont indiqués dans le cours.</p>
+    
+
+<p><a href="https://chlorofil.fr/diplomes/secondaire/4e-3e" target="_blank" rel="noopener noreferrer">Consulter les programmes et attendus officiels</a></p>
+
+
+</div></details>
+
+</header>
+
+    <fieldset id="course-answers" class="course-answer-fields" disabled>
+        <legend>Réponses aux activités</legend>
+        <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
+
+<section class="cours-activites">
+    
+    <article class="cours-activite" id="a01">
+        <h2>Activité 1 — Pour commencer</h2>
+        
+        
+        
+
+        
+
+        
+<p>Classe : 4e / 3e MFR</p>
+    
+
+<p>Durée : 50 minutes</p>
+    
+
+<p>Organisation : travail individuel</p>
+    
+
+<p>Outils : explorateur de fichiers et LibreOffice Writer</p>
+    
+
+<p>Mission : apprendre à organiser correctement ses fichiers et ses dossiers afin de retrouver rapidement son travail.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a04">
+        <h2>Activité 2 — Production attendue</h2>
+        
+        
+        
+
+        
+
+        
+<p>À la fin de la séance, vous devrez avoir créé :</p>
+    
+
+<ul><li>une arborescence de dossiers correctement organisée ;</li><li>4e3e_S03_nom_prenom.odt ;</li><li>4e3e_S03_nom_prenom.pdf.</li></ul>
+    
+
+<p>Le fichier Writer devra être rendu dans l&#39;espace indiqué par le professeur.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a05">
+        <h2>Activité 3 — 1. Fichier ou dossier ? – 5 minutes</h2>
+        
+        
+        
+
+        
+
+        
+<p>Lorsque nous utilisons un ordinateur, nous manipulons principalement des fichiers et des dossiers.</p>
+    
+
+<ul><li>Un fichier contient des données : texte, image, son, vidéo, tableau, programme...</li><li>Un dossier permet de ranger des fichiers ou d&#39;autres dossiers.</li></ul>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a05-q01-label">Question 1 — Question 1 : indiquez si chaque élément est probablement un fichier ou un dossier.</h3>
+            
+
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a05-q02-label">Question 2 — Complète le tableau ci-dessous.</h3>
+            
+
+            
+            
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Élément</th>
+                                
+                                <th>Fichier ou dossier ?</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    rapport_stage.odt
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a05_q02_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="1. Fichier ou dossier ? – 5 minutes — Fichier ou dossier ? — rapport_stage.odt">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Photos_stage
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a05_q02_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="1. Fichier ou dossier ? – 5 minutes — Fichier ou dossier ? — Photos_stage">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    presentation.odp
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a05_q02_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="1. Fichier ou dossier ? – 5 minutes — Fichier ou dossier ? — presentation.odp">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Documents_TIM
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a05_q02_r3_c1" data-required="true" data-row="3" data-col="1" aria-label="1. Fichier ou dossier ? – 5 minutes — Fichier ou dossier ? — Documents_TIM">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    tableau_animaux.ods
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a05_q02_r4_c1" data-required="true" data-row="4" data-col="1" aria-label="1. Fichier ou dossier ? – 5 minutes — Fichier ou dossier ? — tableau_animaux.ods">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            
+            
+            
+<h4>AIDE SI BESOIN – Fichier ou dossier ?</h4>
+    
+
+<p>Indice 1/3 : observez attentivement les noms.</p>
+    
+
+<p>Indice 2/3 : certains éléments possèdent un point suivi de quelques lettres.</p>
+    
+
+<p>Indice 3/3 : .odt, .odp ou .ods sont des extensions de fichiers.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a06">
+        <h2>Activité 4 — 2. À quoi sert une extension ? – 5 minutes</h2>
+        
+        
+        
+
+        
+
+        
+<p>La partie située à la fin du nom d&#39;un fichier, généralement après un point, s&#39;appelle son extension.</p>
+    
+
+<p>Elle permet notamment d&#39;identifier son format.</p>
+    
+
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Extension</th><th scope="col">Type de fichier</th><th scope="col">Exemple de logiciel</th></tr></thead><tbody><tr><td>.odt</td><td>Document texte OpenDocument</td><td>LibreOffice Writer</td></tr><tr><td>.ods</td><td>Classeur OpenDocument</td><td>LibreOffice Calc</td></tr><tr><td>.odp</td><td>Présentation OpenDocument</td><td>LibreOffice Impress</td></tr><tr><td>.pdf</td><td>Document destiné notamment à la consultation</td><td>Navigateur ou lecteur PDF</td></tr><tr><td>.jpg / .png</td><td>Image</td><td>Visionneuse d&#39;image / navigateur</td></tr></tbody></table></div>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a06-q01-label">Question 1 — Question 2 : quelle extension utiliseriez-vous pour :</h3>
+            
+
+            
+            
+                <textarea id="a06-q01" data-answer-id="a06_q01" data-required="true" aria-labelledby="a06-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>un document Writer que vous souhaitez encore modifier ;</p>
+    
+
+<p>un tableau créé avec Calc ;</p>
+    
+
+<p>une présentation créée avec Impress ;</p>
+    
+
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a06-q02-label">Question 2 — une version terminée d&#39;un document destinée surtout à être consultée ?</h3>
+            
+
+            
+            
+                <textarea id="a06-q02" data-answer-id="a06_q02" data-required="true" aria-labelledby="a06-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<h4>AIDE SI BESOIN – Choisir l&#39;extension</h4>
+    
+
+<p>Indice 1/3 : regardez le tableau situé juste au-dessus.</p>
+    
+
+<p>Indice 2/3 : Writer, Calc et Impress n&#39;utilisent pas la même extension.</p>
+    
+
+<p>Indice 3/3 : Writer = .odt, Calc = .ods, Impress = .odp, consultation = souvent .pdf.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a07">
+        <h2>Activité 5 — 3. Construire une arborescence – 10 minutes</h2>
+        
+        
+        
+
+        
+
+        
+<p>Quand tous les fichiers sont placés au même endroit, il devient difficile de retrouver rapidement son travail.</p>
+    
+
+<p>Une solution consiste à créer une arborescence de dossiers.</p>
+    
+
+<p>Dans votre espace personnel, créez l&#39;organisation suivante :</p>
+    
+
+<pre class="cours-code"><code>TIM └── 4e3e ├── Cours ├── Travaux │ └── S03 └── Ressources</code></pre>
+    
+
+<h4>AIDE SI BESOIN – Créer l&#39;arborescence</h4>
+    
+
+<p>Indice 1/3 : commencez uniquement par créer le dossier TIM.</p>
+    
+
+<p>Indice 2/3 : ouvrez ensuite TIM avant de créer 4e3e.</p>
+    
+
+<p>Indice 3/3 : dans 4e3e, créez Cours, Travaux et Ressources. Entrez ensuite dans Travaux pour créer S03.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a07-q01-label">Question 1 — Question 3 : où placeriez-vous les fichiers suivants ?</h3>
+            
+
+            
+            
+                <textarea id="a07-q01" data-answer-id="a07_q01" data-required="true" aria-labelledby="a07-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a07-q02-label">Question 2 — Complète le tableau ci-dessous.</h3>
+            
+
+            
+            
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Fichier</th>
+                                
+                                <th>Dossier choisi</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    4e3e_S03_nom_prenom.odt
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a07_q02_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="3. Construire une arborescence – 10 minutes — Dossier choisi — 4e3e_S03_nom_prenom.odt">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    fiche_aide_writer.pdf
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a07_q02_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="3. Construire une arborescence – 10 minutes — Dossier choisi — fiche_aide_writer.pdf">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    cours_extensions.pdf
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a07_q02_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="3. Construire une arborescence – 10 minutes — Dossier choisi — cours_extensions.pdf">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a08">
+        <h2>Activité 6 — 4. Donner un nom utile à un fichier – 5 minutes</h2>
+        
+        
+        
+
+        
+
+        
+<p>Imaginez que le professeur reçoive les fichiers suivants :</p>
+    
+
+<ul><li>document.odt</li><li>travail.odt</li><li>sansnom1.odt</li><li>montravailfinalvraimentfinal2.odt</li></ul>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a08-q01-label">Question 1 — Question 4 : quels problèmes ces noms peuvent-ils provoquer ?</h3>
+            
+
+            
+            
+                <textarea id="a08-q01" data-answer-id="a08_q01" data-required="true" aria-labelledby="a08-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Nous utiliserons une règle de nommage simple :</p>
+    
+
+<p>classe_seance_nom_prenom.extension</p>
+    
+
+<p>Exemple :</p>
+    
+
+<p>4e3e_S03_martin_lucas.odt</p>
+    
+
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a08-q02-label">Question 2 — Question 5 : corrigez les deux noms suivants :</h3>
+            
+
+            
+            
+                <textarea id="a08-q02" data-answer-id="a08_q02" data-required="true" aria-labelledby="a08-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<ol><li>travail.odt pour Lucas Martin, séance 3 ;</li><li>document.pdf pour Inès Durand, séance 3.</li></ol>
+    
+
+<h4>AIDE SI BESOIN – Nommer correctement un fichier</h4>
+    
+
+<p>Indice 1/3 : reprenez le modèle classe_seance_nom_prenom.</p>
+    
+
+<p>Indice 2/3 : aujourd&#39;hui, la séance est S03.</p>
+    
+
+<p>Indice 3/3 : exemple : 4e3e_S03_martin_lucas.odt.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a09">
+        <h2>Activité 7 — 5. Créer le document de travail – 10 minutes</h2>
+        
+        
+        
+
+        
+
+        
+<p>Ouvrez LibreOffice Writer.</p>
+    
+
+<p>Créez un nouveau document contenant :</p>
+    
+
+<ul><li>votre nom et votre prénom ;</li><li>votre classe ;</li><li>le titre Séance 3 – Organiser ses fichiers ;</li><li>vos réponses aux questions 1 à 5.</li></ul>
+    
+
+<p>Enregistrez le document dans :</p>
+    
+
+<p>TIM &gt; 4e3e &gt; Travaux &gt; S03</p>
+    
+
+<p>sous le nom :</p>
+    
+
+<p>4e3e_S03_nom_prenom.odt</p>
+    
+
+<h4>AIDE SI BESOIN – Enregistrer au bon endroit</h4>
+    
+
+<p>Indice 1/3 : choisissez Enregistrer sous.</p>
+    
+
+<p>Indice 2/3 : retrouvez d&#39;abord votre dossier TIM.</p>
+    
+
+<p>Indice 3/3 : ouvrez TIM → 4e3e → Travaux → S03 puis saisissez le nom demandé.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a10">
+        <h2>Activité 8 — 6. Même document, deux formats – 5 minutes</h2>
+        
+        
+        
+
+        
+
+        
+<p>Votre fichier est actuellement au format ODT.</p>
+    
+
+<p>Il s&#39;agit de votre fichier de travail Writer.</p>
+    
+
+<p>Nous allons maintenant créer une version au format PDF.</p>
+    
+
+<ol><li>Enregistrez d&#39;abord votre travail avec Ctrl + S.</li><li>Utilisez la fonction d&#39;export au format PDF.</li><li>Enregistrez le PDF dans le même dossier S03.</li><li>Nommez-le 4e3e_S03_nom_prenom.pdf.</li></ol>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a10-q01-label">Question 1 — Question 6 : pourquoi les deux fichiers ne sont-ils pas identiques alors qu&#39;ils contiennent presque le même document ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q01" data-answer-id="a10_q01" data-required="true" aria-labelledby="a10-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a11">
+        <h2>Activité 9 — 7. Retrouver son fichier – 5 minutes</h2>
+        
+        
+        
+
+        
+
+        
+<p>Fermez LibreOffice Writer.</p>
+    
+
+<p>Revenez dans le dossier TIM.</p>
+    
+
+<p>Sans utiliser la liste des fichiers récents :</p>
+    
+
+<ol><li>retrouvez votre dossier S03 ;</li><li>retrouvez votre fichier ODT ;</li><li>ouvrez-le ;</li><li>ajoutez à la fin : Je sais retrouver un fichier dans une arborescence.</li><li>enregistrez avec Ctrl + S.</li></ol>
+    
+
+<h4>AIDE SI BESOIN – Retrouver le fichier</h4>
+    
+
+<p>Indice 1/3 : commencez dans le dossier TIM.</p>
+    
+
+<p>Indice 2/3 : souvenez-vous que votre travail se trouve dans le dossier Travaux.</p>
+    
+
+<p>Indice 3/3 : suivez TIM → 4e3e → Travaux → S03.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a12">
+        <h2>Activité 10 — 8. Vérification et rendu – 5 minutes</h2>
+        
+        
+        
+
+        
+
+        
+<p>Vérifiez votre dossier S03.</p>
+    
+
+<p>Il doit contenir :</p>
+    
+
+<ul><li>4e3e_S03_nom_prenom.odt</li><li>4e3e_S03_nom_prenom.pdf</li></ul>
+    
+
+<p>Vérifiez également :</p>
+    
+
+<ul><li>Mon fichier possède le bon nom.</li><li>Il se trouve dans le bon dossier.</li><li>J&#39;ai répondu aux questions.</li><li>Mon fichier ODT s&#39;ouvre correctement.</li><li>Mon fichier PDF s&#39;ouvre correctement.</li></ul>
+    
+
+<p>Déposez ensuite :</p>
+    
+
+<p>4e3e_S03_nom_prenom.odt</p>
+    
+
+<p>dans l&#39;espace indiqué par le professeur.</p>
+    
+
+<p>Le fichier doit être rendu même si tout n&#39;est pas terminé.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a13">
+        <h2>Activité 11 — Pour aller plus loin</h2>
+        <p class="course-optional">Pour aller plus loin — activité facultative.</p>
+        
+        
+
+        
+
+        
+<p>Si vous avez terminé, comparez votre fichier ODT et votre fichier PDF.</p>
+    
+
+<p>Observez leurs propriétés puis répondez :</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a13-q01-label">Question 1 — Question 7 :</h3>
+            
+
+            
+            
+                <textarea id="a13-q01" data-answer-id="a13_q01" data-required="false" aria-labelledby="a13-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a13-q02-label">Question 2 — ont-ils la même extension ?</h3>
+            
+
+            
+            
+                <textarea id="a13-q02" data-answer-id="a13_q02" data-required="false" aria-labelledby="a13-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a13-q03-label">Question 3 — ont-ils exactement la même taille ?</h3>
+            
+
+            
+            
+                <textarea id="a13-q03" data-answer-id="a13_q03" data-required="false" aria-labelledby="a13-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a13-q04-label">Question 4 — quelles différences observez-vous ?</h3>
+            
+
+            
+            
+                <textarea id="a13-q04" data-answer-id="a13_q04" data-required="false" aria-labelledby="a13-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a14">
+        <h2>Activité 12 — À retenir</h2>
+        
+        
+        
+
+        
+
+        
+<ul><li>Un dossier sert à organiser des fichiers et d&#39;autres dossiers.</li><li>Un fichier contient des données.</li><li>L&#39;extension indique le format d&#39;un fichier.</li><li>Une arborescence permet de ranger les documents de manière logique.</li><li>Un nom de fichier précis permet de retrouver et d&#39;identifier plus facilement son travail.</li><li>Un fichier ODT peut servir de document de travail dans Writer.</li><li>Une version PDF peut être créée pour faciliter la consultation ou la transmission.</li><li>Je dois être capable de retrouver un fichier sans dépendre uniquement de la liste des documents récents.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a15">
+        <h2>Activité 13 — Référentiel</h2>
+        
+        
+        
+
+        
+
+        
+<p>Cette séance permet notamment de travailler l&#39;utilisation et la gestion d&#39;un environnement informatique et des espaces de stockage.</p>
+    
+
+<p>Source : ChloroFil – Classes de 4e et 3e de l&#39;enseignement agricole .</p>
+    
+
+<p><a href="https://chlorofil.fr/diplomes/secondaire/4e-3e" target="_blank" rel="noopener noreferrer">ChloroFil – Classes de 4e et 3e de l&#39;enseignement agricole</a></p>
+
+
+
+        
+        
+    </article>
+    
+</section>
+
+    </fieldset>
+    <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
+    <h2 id="course-summary-title">À retenir</h2><ul></ul>
+    <h3>Faire le point</h3><p>Relis tes réponses et vérifie les points demandés dans le bilan du cours. Tu peux revenir sur ton travail tant que le professeur ne l’a pas clôturé.</p>
+</section>
+
+    <div class="course-submit-panel">
+        <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
+        <p id="course-submit-status" role="status" aria-live="polite"></p>
+        <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
+    </div>
+</div></div>
+</div>
+<noscript><p>Active JavaScript pour charger ta copie et enregistrer tes réponses.</p></noscript>
+
+<script id="classes-data" type="application/json">
+{"college":{"nom":"Collège","classes":[{"id":"5e","nom":"5e","matieres":["techno"]},{"id":"4e","nom":"4e","matieres":["techno"]},{"id":"3e","nom":"3e","matieres":["techno"]}]},"mfr":{"nom":"MFR","classes":[{"id":"4e","nom":"4e MFR","matieres":["tim","maths"]},{"id":"3e","nom":"3e MFR","matieres":["tim","maths"]},{"id":"cap1","nom":"CAP 1","matieres":["tim"]},{"id":"cap2","nom":"CAP 2","matieres":["tim"]},{"id":"2de","nom":"2de Pro","matieres":["tim","maths"]},{"id":"1re","nom":"Bac Pro 1","matieres":["tim","maths"]},{"id":"term","nom":"Bac Pro 2","matieres":["tim","maths"]},{"id":"bts1","nom":"BTS 1","matieres":["tim"]},{"id":"bts2","nom":"BTS 2","matieres":["tim"]}]}}
+</script>
+<script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
+    </main>
+    <footer class="site-footer">
+    <p>
+        &copy; 2026
+        Portail pédagogique Technologie | TIM | Mathématiques
+    </p>
+</footer>
+</body>
+</html>

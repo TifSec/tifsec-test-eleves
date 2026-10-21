@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
+
+    
+    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
+    <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
+    
+
+    <title>
+        
+        Portail pédagogique Technologie | TIM | Mathématiques
+        
+    </title>
+
+    <link rel="icon" href="/tifsec-test-eleves/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/variables.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/base.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/body.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/header.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/main.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/footer.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-message.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-session.css">
+
+    
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    
+    
+
+    
+
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    
+    
+</head>
+
+<body class="student-shell student-course-shell">
+    <a class="student-skip" href="#course-intro">Aller au cours</a>
+    <p id="message" class="auth-message" role="status" aria-live="polite" hidden></p>
+    <header class="student-header" id="course-header">
+    <div class="student-header-inner">
+        <div class="student-topbar">
+            <a class="student-brand" href="/tifsec-test-eleves/eleve/"><img src="/tifsec-test-eleves/images/logo.png" width="44" height="44" alt=""><span>Mon espace<span data-profile-field="matieres"></span></span></a>
+            <div class="student-header-actions"><a class="student-home-link" href="/tifsec-test-eleves/eleve/">Mes séances</a><a id="course-login" href="/tifsec-test-eleves/connexion/">Se connecter</a><details class="student-theme-picker" id="student-theme-picker" hidden>
+    <summary>Apparence</summary>
+    <div class="student-theme-options"><label for="student-theme-select">Les couleurs de mon espace</label><select id="student-theme-select" disabled><option value="ocean">Océan · bleu</option><option value="forest">Forêt · vert</option><option value="plum">Prune · violet</option><option value="terracotta">Terre cuite · orangé</option><option value="ruby">Rubis · rouge</option><option value="slate">Ardoise · gris</option><option value="midnight">Minuit · noir</option><option value="rose">Rosée · rose</option><option value="neon">Néon · RGB sombre</option><option value="cyberpunk">Cyberpunk · cité futuriste</option><option value="minecraft">Minecraft · blocs et pixels</option><option value="farming">Farming · campagne et cultures</option></select><label class="student-theme-motion"><input type="checkbox" id="student-theme-motion"> Mettre les animations en pause</label><p id="student-theme-status" role="status" aria-live="polite">Ce choix te suivra sur les autres ordinateurs.</p><button id="student-theme-retry" type="button" hidden>Réessayer</button></div>
+</details>
+<button type="button" id="course-logout" hidden>Se déconnecter</button></div>
+        </div>
+        <div class="student-welcome-row" id="course-welcome" hidden>
+            <div><p class="student-eyebrow">Une séance à la fois, à ton rythme.</p><p class="student-course-greeting">Bonjour <span id="course-header-identity"></span></p></div>
+            <dl class="student-profile"><div><dt>Établissement</dt><dd data-profile-field="etablissement"></dd></div><div><dt>Classe</dt><dd data-profile-field="classe"></dd></div><div><dt>Inscription</dt><dd data-profile-field="validation"></dd></div></dl>
+        </div>
+    </div>
+</header>
+
+    <main class="student-course-main" id="student-course-main">
+
+<div id="course-work" data-etablissement="college" data-matiere="techno" data-classe="5e" data-seance="S05" data-saving-enabled="true" data-collaboration-enabled="true">
+    <div class="course-save-panel course-toolbar">
+        <p id="course-identity" hidden></p>
+        <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+    </div>
+    <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
+        <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
+        <p id="group-status" role="status">Les groupes sont propres à chaque séance. Connecte-toi avec ton compte élève pour choisir ta copie.</p>
+        <div id="group-controls" hidden>
+            <label for="group-copy">Copie de cette séance</label><select id="group-copy"></select>
+            <button type="button" id="group-refresh">Actualiser les groupes</button>
+            <div id="group-create-panel" hidden>
+                <p>Choisis un ou deux camarades. Chacun doit accepter pour partager les réponses. Le groupe reprend ton travail actuel ; ta copie individuelle reste dans l’historique.</p>
+                <div id="group-classmates" class="collaboration-roster"></div>
+                <button type="button" id="group-create">Envoyer les invitations</button>
+            </div>
+        </div>
+    </section>
+    <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
+    <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
+
+
+
+<div class="course-columns">
+    <aside class="course-navigation" aria-label="Étapes de la séance">
+        <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
+        <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
+        <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a04">1. Quel est le meilleur vélo ?</a></li><li><a href="#a05">2. Le meilleur... mais pour quel usage ?</a></li><li><a href="#a06">3. Sur quoi nous sommes-nous appuyés pour choisir ?</a></li><li><a href="#a07">4. Découvrir les critères de choix</a></li><li><a href="#a08">5. Comparer de vrais vélos avec des données de constructeur</a></li><li><a href="#a09">6. Les données seules ne choisissent pas à notre place</a></li><li><a href="#a10">7. Tous les critères ont-ils la même importance ?</a></li><li><a href="#a11">8. Découvrir le compromis</a></li><li><a href="#a12">9. Petit défi : changeons les priorités</a></li><li><a href="#a13">10. Conclusion du travail</a></li><li><a href="#a14">Sources et ressources</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+    </aside>
+
+<div class="course-reading">
+<!-- ========== INTRODUCTION DU COURS ========== -->
+
+<header class="cours-intro" id="course-intro">
+    <h1>Existe-t-il un meilleur vélo ?</h1>
+
+    
+    <p class="cours-theme">
+        <strong>Thème :</strong> Les objets et les systèmes techniques : leurs usages et leurs interactions à découvrir et analyser
+    </p>
+    
+
+    
+    <p class="cours-problematique">
+        <strong>Problématique :</strong> Existe-t-il un vélo meilleur que tous les autres ou le choix dépend-il de son utilisation ?
+    </p>
+    
+
+    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : Comprendre qu&#39;un même besoin peut être satisfait par plusieurs objets techniques différents.</p></section>
+    
+    <section><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
+    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    
+    
+    <section class="cours-objectifs">
+        <h2>Ce que vous allez apprendre</h2>
+        <ul>
+            
+            <li>Comprendre qu&#39;un même besoin peut être satisfait par plusieurs objets techniques différents.</li>
+            
+            <li>Comprendre qu&#39;un objet adapté à une situation ne l&#39;est pas forcément à une autre.</li>
+            
+            <li>Découvrir la notion de critère de choix.</li>
+            
+            <li>Comprendre que les critères importants dépendent de l&#39;usage et des contraintes.</li>
+            
+            <li>Comprendre qu&#39;un choix technique est souvent un compromis.</li>
+            
+        </ul>
+
+        <h2>Ce que vous allez apprendre à faire</h2>
+        <ul>
+            
+        </ul>
+    </section>
+    
+<h4>Compétence visée : Comparer plusieurs objets techniques et choisir une solution adaptée à un besoin en utilisant différents critères</h4>
+    
+
+<p>Objectifs d’apprentissage :</p>
+    
+
+<ul><li>Comprendre qu&#39;un même besoin peut être satisfait par plusieurs objets techniques différents.</li><li>Comprendre qu&#39;un objet adapté à une situation ne l&#39;est pas forcément à une autre.</li><li>Découvrir la notion de critère de choix.</li><li>Comprendre que les critères importants dépendent de l&#39;usage et des contraintes.</li><li>Comprendre qu&#39;un choix technique est souvent un compromis.</li></ul>
+    
+
+<ul><li>Comparer plusieurs objets techniques.</li><li>Identifier les critères importants dans une situation donnée.</li><li>Lire et exploiter des caractéristiques issues de fiches techniques réelles.</li><li>Organiser des informations dans un tableau comparatif.</li><li>Justifier un choix en utilisant plusieurs critères.</li><li>Distinguer une donnée mesurable d&#39;une appréciation ou d&#39;un jugement.</li></ul>
+    
+
+<ul><li>Un document LibreOffice Writer nommé 5e_S5_nom1_nom2.odt.</li><li>Les noms et prénoms des élèves du groupe.</li><li>Le titre de la séance.</li><li>Les réponses aux différentes questions.</li><li>L&#39;exploitation d&#39;un tableau comparatif de vélos réels.</li><li>Des choix argumentés pour les situations proposées.</li><li>Une courte conclusion répondant à la problématique.</li></ul>
+    
+
+<p>Le document devra être enregistré puis déposé dans l&#39;espace d&#39;échange à la fin de la séance, même s&#39;il n&#39;est pas entièrement terminé.</p>
+    
+
+
+    
+    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
+<p>Dans cette page du ministère, retrouve le programme ou le référentiel de ta formation. Les objectifs précis étudiés aujourd’hui sont indiqués dans le cours.</p>
+    
+
+<p><a href="https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4" target="_blank" rel="noopener noreferrer">Consulter les programmes et attendus officiels</a></p>
+
+
+</div></details>
+
+</header>
+
+    <fieldset id="course-answers" class="course-answer-fields" disabled>
+        <legend>Réponses aux activités</legend>
+        <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
+
+<section class="cours-activites">
+    
+    <article class="cours-activite" id="a04">
+        <h2>Activité 1 — 1. Quel est le meilleur vélo ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Lors de la séance précédente, nous avons constaté que le vélo a beaucoup évolué et qu&#39;il existe aujourd&#39;hui de nombreux modèles répondant à des usages différents.</p>
+    
+
+<p>Observez les quatre types de vélos suivants :</p>
+    
+
+<figure class="cours-document"><img src="https://tifsec.github.io/techno/5/images/velo_ville_vs_vtt_vs_velo_route_vs_velo_cargo.jpg" alt="Comparaison d&#39;un vélo de ville, d&#39;un VTT, d&#39;un vélo de route et d&#39;un vélo cargo" loading="lazy" decoding="async"></figure>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a04-q01-label">Question 1 — Q1 : Sans effectuer de recherche, lequel de ces quatre vélos vous semble être le meilleur ?</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a04-q02-label">Question 2 — Q2 : Expliquez votre choix en une ou deux phrases.</h3>
+            
+
+            
+            
+                <textarea id="a04-q02" data-answer-id="a04_q02" data-required="true" aria-labelledby="a04-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Comparez ensuite votre réponse avec celle des autres groupes.</p>
+    
+
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a04-q03-label">Question 3 — Q3 : Tous les groupes ont-ils choisi le même vélo ? Pourquoi, selon vous ?</h3>
+            
+
+            
+            
+                <textarea id="a04-q03" data-answer-id="a04_q03" data-required="true" aria-labelledby="a04-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a05">
+        <h2>Activité 2 — 2. Le meilleur... mais pour quel usage ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Quatre personnes souhaitent acheter un vélo. Leurs situations sont différentes.</p>
+    
+
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Utilisateur</th><th scope="col">Situation</th></tr></thead><tbody><tr><td>Lina</td><td>Elle parcourt environ 3 km pour aller au collège. Elle roule principalement en ville et doit transporter son sac.</td></tr><tr><td>Noah</td><td>Il utilise principalement son vélo sur des chemins forestiers comportant de la boue, des pierres et des pentes.</td></tr><tr><td>Émilie</td><td>Elle pratique le vélo pour effectuer de longues sorties sportives sur route et souhaite limiter la masse du vélo.</td></tr><tr><td>Sam</td><td>Il souhaite transporter régulièrement des courses et parfois deux enfants.</td></tr></tbody></table></div>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a05-q01-label">Question 1 — Q4 : Quel type de vélo conseilleriez-vous à Lina ? Justifiez.</h3>
+            
+
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a05-q02-label">Question 2 — Q5 : Quel type de vélo conseilleriez-vous à Noah ? Justifiez.</h3>
+            
+
+            
+            
+                <textarea id="a05-q02" data-answer-id="a05_q02" data-required="true" aria-labelledby="a05-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a05-q03-label">Question 3 — Q6 : Quel type de vélo conseilleriez-vous à Émilie ? Justifiez.</h3>
+            
+
+            
+            
+                <textarea id="a05-q03" data-answer-id="a05_q03" data-required="true" aria-labelledby="a05-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a05-q04-label">Question 4 — Q7 : Quel type de vélo conseilleriez-vous à Sam ? Justifiez.</h3>
+            
+
+            
+            
+                <textarea id="a05-q04" data-answer-id="a05_q04" data-required="true" aria-labelledby="a05-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a06">
+        <h2>Activité 3 — 3. Sur quoi nous sommes-nous appuyés pour choisir ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pour choisir un vélo, vous avez utilisé certaines caractéristiques comme :</p>
+    
+
+<ul><li>la masse ;</li><li>le prix ;</li><li>le terrain d&#39;utilisation ;</li><li>la capacité de transport ;</li><li>la présence d&#39;une assistance électrique ;</li><li>la facilité d&#39;utilisation ;</li><li>les équipements ;</li><li>la facilité d&#39;entretien ou de réparation.</li></ul>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a06-q01-label">Question 1 — Q8 : Dans votre document, listez au moins cinq éléments que l&#39;on pourrait utiliser pour comparer deux vélos.</h3>
+            
+
+            
+            
+                <textarea id="a06-q01" data-answer-id="a06_q01" data-required="true" aria-labelledby="a06-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a07">
+        <h2>Activité 4 — 4. Découvrir les critères de choix</h2>
+        
+        
+        
+
+        
+
+        
+<p>Les caractéristiques que l&#39;on prend en compte pour comparer plusieurs solutions sont appelées des critères de choix.</p>
+    
+
+<p>Certains critères peuvent être mesurés précisément :</p>
+    
+
+<ul><li>la masse en kilogrammes ;</li><li>le prix en euros ;</li><li>la capacité de chargement en kilogrammes ;</li><li>l&#39;autonomie d&#39;un vélo électrique en kilomètres.</li></ul>
+    
+
+<p>D&#39;autres sont plus difficiles à résumer par une seule valeur :</p>
+    
+
+<ul><li>le confort ;</li><li>la facilité de réparation ;</li><li>l&#39;adaptation à un type de terrain ;</li><li>la facilité d&#39;utilisation.</li></ul>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a07-q01-label">Question 1 — Q9 : Donnez deux exemples de critères mesurables.</h3>
+            
+
+            
+            
+                <textarea id="a07-q01" data-answer-id="a07_q01" data-required="true" aria-labelledby="a07-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a07-q02-label">Question 2 — Q10 : Donnez deux exemples de critères qui nécessitent davantage d&#39;observation ou d&#39;appréciation.</h3>
+            
+
+            
+            
+                <textarea id="a07-q02" data-answer-id="a07_q02" data-required="true" aria-labelledby="a07-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a08">
+        <h2>Activité 5 — 5. Comparer de vrais vélos avec des données de constructeur</h2>
+        
+        
+        
+
+        
+
+        
+<p>Nous allons maintenant travailler à partir de caractéristiques publiées par Decathlon pour quatre vélos réels.</p>
+    
+
+<p>Les quatre modèles choisis correspondent à des usages très différents.</p>
+    
+
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Caractéristique</th><th scope="col">A BTWIN – Vélo de ville 120 à cadre bas</th><th scope="col">B ROCKRIDER – VTT randonnée EXPL 500</th><th scope="col">C VAN RYSEL – Vélo route endurance EDR AF Microshift Sword 2x10v</th><th scope="col">D BTWIN – Vélo cargo électrique biporteur famille F900E</th></tr></thead><tbody><tr><td>Type principal</td><td>Vélo de ville</td><td>VTT semi-rigide</td><td>Vélo de route endurance</td><td>Vélo cargo électrique biporteur</td></tr><tr><td>Masse annoncée</td><td>17,5 kg</td><td>14,85 kg en taille M, sans pédales</td><td>10,45 kg en taille M, sans pédales</td><td>66 kg</td></tr><tr><td>Prix observé lors de la préparation de la séance</td><td>299,99 €</td><td>499,99 €</td><td>899,99 €</td><td>4 999,99 €</td></tr><tr><td>Usage principal annoncé</td><td>Déplacements urbains occasionnels</td><td>Randonnée VTT et chemins</td><td>Vélo de route et sorties endurance</td><td>Transport familial et chargement important</td></tr><tr><td>Équipement caractéristique</td><td>Porte-bagages, garde-boue, béquille, éclairage par dynamo</td><td>Fourche suspendue de 100 mm, freins à disque hydrauliques</td><td>Cadre aluminium, fourche carbone, pneus 700 × 32, freins à disque mécaniques</td><td>Moteur central 90 Nm, batterie 630 Wh, caisse avant, freins à disque hydrauliques 4 pistons</td></tr><tr><td>Capacité de transport</td><td>Porte-bagages pouvant supporter jusqu&#39;à 27 kg, compatible avec un siège enfant</td><td>Aucun équipement spécifique de transport mis en avant sur la fiche produit</td><td>Charge maximale utilisateur + chargement : 110 kg</td><td>Jusqu&#39;à 184 kg de charge hors poids du vélo ; conçu pour transporter jusqu&#39;à 4 enfants</td></tr><tr><td>Particularité</td><td>Position assise droite et équipements adaptés aux déplacements urbains</td><td>Roues de 29&quot; en tailles M à XL et équipement adapté aux terrains accidentés</td><td>Masse la plus faible des quatre modèles et équipement orienté vers la pratique sur route</td><td>Assistance électrique, autonomie annoncée de 40 à 80 km et forte capacité de chargement</td></tr></tbody></table></div>
+    
+
+<p><a href="https://www.decathlon.fr/p/velo-de-ville-elops-120-a-cadre-bas/_/R-p-168864" target="_blank" rel="noopener noreferrer">BTWIN – Vélo de ville 120 à cadre bas</a></p>
+
+
+<p><a href="https://www.decathlon.fr/p/velo-vtt-randonnee-expl-500-noir-29/330628/c71m8920255" target="_blank" rel="noopener noreferrer">ROCKRIDER – VTT randonnée EXPL 500</a></p>
+
+
+<p><a href="https://www.decathlon.fr/p/velo-route-endurance-microshift-sword-2x10v-edr-af-gris-fonce/343660/c383m8771991" target="_blank" rel="noopener noreferrer">VAN RYSEL – Vélo route endurance EDR AF Microshift Sword 2x10v</a></p>
+
+
+<p><a href="https://www.decathlon.fr/p/velo-cargo-electrique-biporteur-famille-f900e-polar-white/329211/c4m9009628" target="_blank" rel="noopener noreferrer">BTWIN – Vélo cargo électrique biporteur famille F900E</a></p>
+
+
+<p>Sources des données : fiches produits Decathlon accessibles directement en cliquant sur le nom de chaque vélo dans le tableau. Données consultées lors de la préparation de la séance. Les prix, caractéristiques et disponibilités commerciales peuvent évoluer. La masse peut également varier selon la taille choisie pour certains modèles.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a08-q01-label">Question 1 — Q11 : Quel modèle possède la masse la plus faible ?</h3>
+            
+
+            
+            
+                <textarea id="a08-q01" data-answer-id="a08_q01" data-required="true" aria-labelledby="a08-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a08-q02-label">Question 2 — Q12 : Quel modèle est conçu pour transporter le plus de personnes ou de marchandises ?</h3>
+            
+
+            
+            
+                <textarea id="a08-q02" data-answer-id="a08_q02" data-required="true" aria-labelledby="a08-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a08-q03-label">Question 3 — Q13 : Quel modèle possède des équipements spécifiquement adaptés aux chemins accidentés ?</h3>
+            
+
+            
+            
+                <textarea id="a08-q03" data-answer-id="a08_q03" data-required="true" aria-labelledby="a08-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a08-q04-label">Question 4 — Q14 : Quel modèle semble conçu en priorité pour rouler sur route avec une masse réduite ?</h3>
+            
+
+            
+            
+                <textarea id="a08-q04" data-answer-id="a08_q04" data-required="true" aria-labelledby="a08-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            <h3 id="a08-q05-label">Question 5 — Q15 : Quel modèle possède une assistance électrique ?</h3>
+            
+
+            
+            
+                <textarea id="a08-q05" data-answer-id="a08_q05" data-required="true" aria-labelledby="a08-q05-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            <h3 id="a08-q06-label">Question 6 — Q16 : Existe-t-il un modèle qui soit meilleur que tous les autres sur tous les critères ? Justifiez avec au moins deux exemples issus du tableau.</h3>
+            
+
+            
+            
+                <textarea id="a08-q06" data-answer-id="a08_q06" data-required="true" aria-labelledby="a08-q06-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a09">
+        <h2>Activité 6 — 6. Les données seules ne choisissent pas à notre place</h2>
+        
+        
+        
+
+        
+
+        
+<p>Une fiche technique fournit des informations, mais elle ne dit pas automatiquement quel vélo choisir.</p>
+    
+
+<p>Il faut d&#39;abord connaître la situation de l&#39;utilisateur.</p>
+    
+
+<p>Situation :</p>
+    
+
+<p>Alex effectue régulièrement un trajet d&#39;environ 5 km sur route. Son trajet comporte une côte. Il transporte un sac et son budget est limité.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a09-q01-label">Question 1 — Q17 : Relevez dans cette situation toutes les informations qui peuvent influencer son choix.</h3>
+            
+
+            
+            
+                <textarea id="a09-q01" data-answer-id="a09_q01" data-required="true" aria-labelledby="a09-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a09-q02-label">Question 2 — Q18 : Transformez ces informations en trois critères prioritaires.</h3>
+            
+
+            
+            
+                <textarea id="a09-q02" data-answer-id="a09_q02" data-required="true" aria-labelledby="a09-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a09-q03-label">Question 3 — Q19 : À partir du tableau, quel modèle choisiriez-vous parmi A, B, C et D ?</h3>
+            
+
+            
+            
+                <textarea id="a09-q03" data-answer-id="a09_q03" data-required="true" aria-labelledby="a09-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a09-q04-label">Question 4 — Q20 : Justifiez votre choix en utilisant au moins trois critères.</h3>
+            
+
+            
+            
+                <textarea id="a09-q04" data-answer-id="a09_q04" data-required="true" aria-labelledby="a09-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a10">
+        <h2>Activité 7 — 7. Tous les critères ont-ils la même importance ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pour Alex, le prix peut être très important.</p>
+    
+
+<p>Pour Sam, qui transporte deux enfants, la capacité de transport peut être prioritaire.</p>
+    
+
+<p>Pour Noah, le comportement sur les chemins peut être plus important que la masse minimale.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a10-q01-label">Question 1 — Q21 : Pourquoi ne peut-on pas simplement choisir le vélo possédant le plus grand nombre de « bonnes caractéristiques » ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q01" data-answer-id="a10_q01" data-required="true" aria-labelledby="a10-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a10-q02-label">Question 2 — Q22 : Choisissez deux utilisateurs parmi Lina, Noah, Émilie et Sam et indiquez pour chacun :</h3>
+            
+
+            
+            
+                <textarea id="a10-q02" data-answer-id="a10_q02" data-required="true" aria-labelledby="a10-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<ul><li>son critère le plus important ;</li><li>un critère qu&#39;il pourrait accepter comme moins favorable.</li></ul>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a11">
+        <h2>Activité 8 — 8. Découvrir le compromis</h2>
+        
+        
+        
+
+        
+
+        
+<p>Un objet ne peut généralement pas être optimal pour tous les critères en même temps.</p>
+    
+
+<p>Choisir consiste donc souvent à privilégier certaines caractéristiques et à en accepter d&#39;autres moins favorables.</p>
+    
+
+<p>On appelle cela un compromis.</p>
+    
+
+<p>Un compromis consiste à rechercher une solution adaptée aux priorités d&#39;une situation, sans exiger qu&#39;elle soit la meilleure pour tous les critères.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a11-q01-label">Question 1 — Q23 : Donnez un exemple de compromis visible dans le tableau des quatre vélos.</h3>
+            
+
+            
+            
+                <textarea id="a11-q01" data-answer-id="a11_q01" data-required="true" aria-labelledby="a11-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a12">
+        <h2>Activité 9 — 9. Petit défi : changeons les priorités</h2>
+        
+        
+        
+
+        
+
+        
+<p>Reprenons les quatre modèles A, B, C et D.</p>
+    
+
+<p>Pour chacune des situations suivantes, choisissez le modèle qui vous semble le plus adapté.</p>
+    
+
+<p>Vous devez indiquer deux critères qui expliquent votre choix.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a12-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
+            
+
+            
+            
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Situation</th>
+                                
+                                <th>Modèle choisi</th>
+                                
+                                <th>Critère 1</th>
+                                
+                                <th>Critère 2</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Effectuer principalement des sorties sportives sur route
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a12_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="9. Petit défi : changeons les priorités — Modèle choisi — Effectuer principalement des sorties sportives sur route">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a12_q01_r0_c2" data-required="true" data-row="0" data-col="2" aria-label="9. Petit défi : changeons les priorités — Critère 1 — Effectuer principalement des sorties sportives sur route">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a12_q01_r0_c3" data-required="true" data-row="0" data-col="3" aria-label="9. Petit défi : changeons les priorités — Critère 2 — Effectuer principalement des sorties sportives sur route">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Faire régulièrement de la randonnée sur des chemins accidentés
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a12_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="9. Petit défi : changeons les priorités — Modèle choisi — Faire régulièrement de la randonnée sur des chemins accidentés">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a12_q01_r1_c2" data-required="true" data-row="1" data-col="2" aria-label="9. Petit défi : changeons les priorités — Critère 1 — Faire régulièrement de la randonnée sur des chemins accidentés">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a12_q01_r1_c3" data-required="true" data-row="1" data-col="3" aria-label="9. Petit défi : changeons les priorités — Critère 2 — Faire régulièrement de la randonnée sur des chemins accidentés">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Transporter régulièrement deux enfants
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a12_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="9. Petit défi : changeons les priorités — Modèle choisi — Transporter régulièrement deux enfants">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a12_q01_r2_c2" data-required="true" data-row="2" data-col="2" aria-label="9. Petit défi : changeons les priorités — Critère 1 — Transporter régulièrement deux enfants">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a12_q01_r2_c3" data-required="true" data-row="2" data-col="3" aria-label="9. Petit défi : changeons les priorités — Critère 2 — Transporter régulièrement deux enfants">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Effectuer quotidiennement un petit trajet urbain avec un budget limité
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a12_q01_r3_c1" data-required="true" data-row="3" data-col="1" aria-label="9. Petit défi : changeons les priorités — Modèle choisi — Effectuer quotidiennement un petit trajet urbain avec un budget limité">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a12_q01_r3_c2" data-required="true" data-row="3" data-col="2" aria-label="9. Petit défi : changeons les priorités — Critère 1 — Effectuer quotidiennement un petit trajet urbain avec un budget limité">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a12_q01_r3_c3" data-required="true" data-row="3" data-col="3" aria-label="9. Petit défi : changeons les priorités — Critère 2 — Effectuer quotidiennement un petit trajet urbain avec un budget limité">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a12-q02-label">Question 2 — Q24 : Pourquoi le modèle choisi change-t-il alors que les quatre vélos proposés restent exactement les mêmes ?</h3>
+            
+
+            
+            
+                <textarea id="a12-q02" data-answer-id="a12_q02" data-required="true" aria-labelledby="a12-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a13">
+        <h2>Activité 10 — 10. Conclusion du travail</h2>
+        
+        
+        
+
+        
+
+        
+<p>Sans retourner lire les définitions précédentes, complétez :</p>
+    
+
+<ul><li>Pour comparer plusieurs solutions, on utilise des ................................................ .</li><li>L&#39;importance d&#39;un critère dépend de l&#39;................................................ et des contraintes de la situation.</li><li>Une solution n&#39;est pas forcément la meilleure pour tous les ................................................ .</li><li>Accepter qu&#39;une solution soit moins performante sur certains critères pour en privilégier d&#39;autres correspond à un ................................................ .</li></ul>
+    
+
+<p>Dernière question :</p>
+    
+
+<p>Répondez maintenant à la problématique de départ :</p>
+    
+
+<p>« Existe-t-il un meilleur vélo ? »</p>
+    
+
+<p>Justifiez votre réponse en deux ou trois phrases en utilisant les mots :</p>
+    
+
+<p>usage — critère — compromis</p>
+    
+
+<p>Enregistrez votre travail puis déposez-le dans l&#39;espace d&#39;échange.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a14">
+        <h2>Activité 11 — Sources et ressources</h2>
+        
+        
+        
+
+        
+
+        
+<ul><li>Ministère de l&#39;Éducation nationale – Programme de technologie du cycle 4 : Programme officiel de technologie</li></ul>
+    
+
+<p><a href="https://www.education.gouv.fr/bo/2024/Hebdo9/MENE2402802A" target="_blank" rel="noopener noreferrer">Programme officiel de technologie</a></p>
+
+
+<p>Les données techniques de la partie 5 proviennent de fiches produits réelles. Elles ont été sélectionnées et simplifiées pour permettre une comparaison adaptée au niveau 5e. Les prix correspondent à un relevé effectué lors de la préparation du cours et peuvent évoluer. Les modèles proposés constituent des exemples et ne représentent pas l&#39;ensemble des vélos disponibles sur le marché.</p>
+    
+
+
+        
+        
+    </article>
+    
+</section>
+
+    </fieldset>
+    <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
+    <h2 id="course-summary-title">À retenir</h2><ul></ul>
+    <h3>Faire le point</h3><p>Relis tes réponses et vérifie les points demandés dans le bilan du cours. Tu peux revenir sur ton travail tant que le professeur ne l’a pas clôturé.</p>
+</section>
+
+    <div class="course-submit-panel">
+        <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
+        <p id="course-submit-status" role="status" aria-live="polite"></p>
+        <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
+    </div>
+</div></div>
+</div>
+<noscript><p>Active JavaScript pour charger ta copie et enregistrer tes réponses.</p></noscript>
+
+<script id="classes-data" type="application/json">
+{"college":{"nom":"Collège","classes":[{"id":"5e","nom":"5e","matieres":["techno"]},{"id":"4e","nom":"4e","matieres":["techno"]},{"id":"3e","nom":"3e","matieres":["techno"]}]},"mfr":{"nom":"MFR","classes":[{"id":"4e","nom":"4e MFR","matieres":["tim","maths"]},{"id":"3e","nom":"3e MFR","matieres":["tim","maths"]},{"id":"cap1","nom":"CAP 1","matieres":["tim"]},{"id":"cap2","nom":"CAP 2","matieres":["tim"]},{"id":"2de","nom":"2de Pro","matieres":["tim","maths"]},{"id":"1re","nom":"Bac Pro 1","matieres":["tim","maths"]},{"id":"term","nom":"Bac Pro 2","matieres":["tim","maths"]},{"id":"bts1","nom":"BTS 1","matieres":["tim"]},{"id":"bts2","nom":"BTS 2","matieres":["tim"]}]}}
+</script>
+<script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
+    </main>
+    <footer class="site-footer">
+    <p>
+        &copy; 2026
+        Portail pédagogique Technologie | TIM | Mathématiques
+    </p>
+</footer>
+</body>
+</html>

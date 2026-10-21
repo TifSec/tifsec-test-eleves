@@ -34,8 +34,5 @@ if (picker && select && status && retry && db) {
         if (event !== 'SIGNED_OUT') timer = setTimeout(() => { controller.load(); }, 0);
     });
     window.addEventListener('pageshow', event => { if (event.persisted) controller.load(); });
-    document.addEventListener('visibilitychange', () => {
-        if (document.visibilityState === 'visible' && !controller.isSaving()) controller.load();
-    });
     controller.load();
 }

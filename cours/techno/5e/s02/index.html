@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
+
+    
+    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
+    <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
+    
+
+    <title>
+        
+        Portail pédagogique Technologie | TIM | Mathématiques
+        
+    </title>
+
+    <link rel="icon" href="/tifsec-test-eleves/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/variables.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/base.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/body.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/header.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/main.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/footer.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-message.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-session.css">
+
+    
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    
+    
+
+    
+
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    
+    
+</head>
+
+<body class="student-shell student-course-shell">
+    <a class="student-skip" href="#course-intro">Aller au cours</a>
+    <p id="message" class="auth-message" role="status" aria-live="polite" hidden></p>
+    <header class="student-header" id="course-header">
+    <div class="student-header-inner">
+        <div class="student-topbar">
+            <a class="student-brand" href="/tifsec-test-eleves/eleve/"><img src="/tifsec-test-eleves/images/logo.png" width="44" height="44" alt=""><span>Mon espace<span data-profile-field="matieres"></span></span></a>
+            <div class="student-header-actions"><a class="student-home-link" href="/tifsec-test-eleves/eleve/">Mes séances</a><a id="course-login" href="/tifsec-test-eleves/connexion/">Se connecter</a><details class="student-theme-picker" id="student-theme-picker" hidden>
+    <summary>Apparence</summary>
+    <div class="student-theme-options"><label for="student-theme-select">Les couleurs de mon espace</label><select id="student-theme-select" disabled><option value="ocean">Océan · bleu</option><option value="forest">Forêt · vert</option><option value="plum">Prune · violet</option><option value="terracotta">Terre cuite · orangé</option><option value="ruby">Rubis · rouge</option><option value="slate">Ardoise · gris</option><option value="midnight">Minuit · noir</option><option value="rose">Rosée · rose</option><option value="neon">Néon · RGB sombre</option><option value="cyberpunk">Cyberpunk · cité futuriste</option><option value="minecraft">Minecraft · blocs et pixels</option><option value="farming">Farming · campagne et cultures</option></select><label class="student-theme-motion"><input type="checkbox" id="student-theme-motion"> Mettre les animations en pause</label><p id="student-theme-status" role="status" aria-live="polite">Ce choix te suivra sur les autres ordinateurs.</p><button id="student-theme-retry" type="button" hidden>Réessayer</button></div>
+</details>
+<button type="button" id="course-logout" hidden>Se déconnecter</button></div>
+        </div>
+        <div class="student-welcome-row" id="course-welcome" hidden>
+            <div><p class="student-eyebrow">Une séance à la fois, à ton rythme.</p><p class="student-course-greeting">Bonjour <span id="course-header-identity"></span></p></div>
+            <dl class="student-profile"><div><dt>Établissement</dt><dd data-profile-field="etablissement"></dd></div><div><dt>Classe</dt><dd data-profile-field="classe"></dd></div><div><dt>Inscription</dt><dd data-profile-field="validation"></dd></div></dl>
+        </div>
+    </div>
+</header>
+
+    <main class="student-course-main" id="student-course-main">
+
+<div id="course-work" data-etablissement="college" data-matiere="techno" data-classe="5e" data-seance="S02" data-saving-enabled="true" data-collaboration-enabled="true">
+    <div class="course-save-panel course-toolbar">
+        <p id="course-identity" hidden></p>
+        <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+    </div>
+    <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
+        <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
+        <p id="group-status" role="status">Les groupes sont propres à chaque séance. Connecte-toi avec ton compte élève pour choisir ta copie.</p>
+        <div id="group-controls" hidden>
+            <label for="group-copy">Copie de cette séance</label><select id="group-copy"></select>
+            <button type="button" id="group-refresh">Actualiser les groupes</button>
+            <div id="group-create-panel" hidden>
+                <p>Choisis un ou deux camarades. Chacun doit accepter pour partager les réponses. Le groupe reprend ton travail actuel ; ta copie individuelle reste dans l’historique.</p>
+                <div id="group-classmates" class="collaboration-roster"></div>
+                <button type="button" id="group-create">Envoyer les invitations</button>
+            </div>
+        </div>
+    </section>
+    <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
+    <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
+
+
+
+<div class="course-columns">
+    <aside class="course-navigation" aria-label="Étapes de la séance">
+        <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
+        <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
+        <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a04">1. Observer et classer</a></li><li><a href="#a05">2. Pourquoi le vélo existe-t-il ?</a></li><li><a href="#a06">3. Le vélo fonctionne-t-il tout seul ?</a></li><li><a href="#a07">4. Les interacteurs du vélo</a></li><li><a href="#a08">5. Représenter les interactions</a></li><li><a href="#a09">6. Comprendre les interactions</a></li><li><a href="#a10">7. Petit défi : existe-t-il un seul type de vélo ?</a></li><li><a href="#a11">8. Conclusion du travail</a></li><li><a href="#a12">Sources et ressources</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+    </aside>
+
+<div class="course-reading">
+<!-- ========== INTRODUCTION DU COURS ========== -->
+
+<header class="cours-intro" id="course-intro">
+    <h1>Pourquoi fabrique-t-on des objets techniques ?</h1>
+
+    
+    <p class="cours-theme">
+        <strong>Thème :</strong> Les objets et les systèmes techniques : leurs usages et leurs interactions à découvrir et analyser
+    </p>
+    
+
+    
+    <p class="cours-problematique">
+        <strong>Problématique :</strong> Pourquoi les êtres humains fabriquent-ils des objets techniques et avec quoi ces objets interagissent-ils lorsqu&#39;ils sont utilisés ?
+    </p>
+    
+
+    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Nous allons maintenant nous intéresser au vélo.</p></section>
+    
+    <section><h2>Dans la vie quotidienne</h2><p>Avant d&#39;étudier les objets techniques, commençons par observer différents éléments que nous pouvons rencontrer autour de nous.</p></section>
+    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    
+    
+    <section class="cours-objectifs">
+        <h2>Ce que vous allez apprendre</h2>
+        <ul>
+            
+            <li>Faire la différence entre un objet naturel et un objet technique.</li>
+            
+            <li>Comprendre les notions de besoin et d&#39;usage.</li>
+            
+            <li>Comprendre qu&#39;un même objet peut avoir plusieurs usages.</li>
+            
+            <li>Comprendre qu&#39;un objet technique interagit avec son utilisateur et son environnement.</li>
+            
+            <li>Découvrir la notion d&#39;interacteur extérieur.</li>
+            
+        </ul>
+
+        <h2>Ce que vous allez apprendre à faire</h2>
+        <ul>
+            
+        </ul>
+    </section>
+    
+<h4>Compétence visée : Identifier un objet technique, comprendre son usage et décrire ses interactions avec son environnement et ses utilisateurs</h4>
+    
+
+<p>Objectifs d’apprentissage :</p>
+    
+
+<ul><li>Faire la différence entre un objet naturel et un objet technique.</li><li>Comprendre les notions de besoin et d&#39;usage.</li><li>Comprendre qu&#39;un même objet peut avoir plusieurs usages.</li><li>Comprendre qu&#39;un objet technique interagit avec son utilisateur et son environnement.</li><li>Découvrir la notion d&#39;interacteur extérieur.</li></ul>
+    
+
+<ul><li>Observer et classer des objets.</li><li>Justifier un classement.</li><li>Identifier le besoin auquel répond un objet technique.</li><li>Identifier les éléments qui interagissent avec un objet technique.</li><li>Réaliser un schéma simple représentant ces interactions.</li><li>Produire un document numérique structuré.</li></ul>
+    
+
+<ul><li>Un document LibreOffice Writer nommé 5e_S2_nom1_nom2.odt.</li><li>Les noms et prénoms des élèves du groupe.</li><li>Le titre de la séance.</li><li>Les réponses aux différentes questions.</li><li>Un schéma représentant le vélo et ses interacteurs.</li><li>Un tableau présentant les interacteurs du vélo.</li><li>Une courte conclusion.</li></ul>
+    
+
+<p>Le document devra être enregistré puis déposé dans l&#39;espace d&#39;échange à la fin de la séance, même s&#39;il n&#39;est pas entièrement terminé.</p>
+    
+
+
+    
+    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
+<p>Dans cette page du ministère, retrouve le programme ou le référentiel de ta formation. Les objectifs précis étudiés aujourd’hui sont indiqués dans le cours.</p>
+    
+
+<p><a href="https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4" target="_blank" rel="noopener noreferrer">Consulter les programmes et attendus officiels</a></p>
+
+
+</div></details>
+
+</header>
+
+    <fieldset id="course-answers" class="course-answer-fields" disabled>
+        <legend>Réponses aux activités</legend>
+        <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
+
+<section class="cours-activites">
+    
+    <article class="cours-activite" id="a04">
+        <h2>Activité 1 — 1. Observer et classer</h2>
+        
+        
+        
+
+        
+
+        
+<p>Avant d&#39;étudier les objets techniques, commençons par observer différents éléments que nous pouvons rencontrer autour de nous.</p>
+    
+
+<p>Classez les éléments suivants en deux catégories de votre choix :</p>
+    
+
+<ul><li>un arbre ;</li><li>un vélo ;</li><li>un caillou ;</li><li>une chaussure ;</li><li>un coquillage ;</li><li>une table ;</li><li>une fleur ;</li><li>un smartphone ;</li><li>une branche ;</li><li>une bouteille.</li></ul>
+    
+
+<p>Dans votre document Writer, répondez aux questions suivantes :</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a04-q01-label">Question 1 — Q1 : Quels sont les deux groupes que vous avez créés ?</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a04-q02-label">Question 2 — Q2 : Quel critère avez-vous utilisé pour séparer les éléments ?</h3>
+            
+
+            
+            
+                <textarea id="a04-q02" data-answer-id="a04_q02" data-required="true" aria-labelledby="a04-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a04-q03-label">Question 3 — Q3 : Dans quel groupe placez-vous le vélo ? Justifiez votre réponse en une phrase.</h3>
+            
+
+            
+            
+                <textarea id="a04-q03" data-answer-id="a04_q03" data-required="true" aria-labelledby="a04-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Mise en commun :</p>
+    
+
+<p>Un objet naturel existe sans avoir été conçu ou fabriqué par l&#39;être humain.</p>
+    
+
+<p>Un objet technique est créé ou transformé par l&#39;être humain pour répondre à un besoin.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a05">
+        <h2>Activité 2 — 2. Pourquoi le vélo existe-t-il ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Nous allons maintenant nous intéresser au vélo.</p>
+    
+
+<p>Pourquoi les êtres humains ont-ils créé le vélo ?</p>
+    
+
+<p>Dans votre document Writer :</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a05-q01-label">Question 1 — Q4 : Quel est le besoin principal auquel répond le vélo ?</h3>
+            
+
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Q5 : Trouvez au moins quatre utilisations différentes que l&#39;on peut faire d&#39;un vélo.</p>
+    
+
+<p>Deux personnes peuvent utiliser un vélo pour des raisons très différentes.</p>
+    
+
+<p>Une personne peut par exemple l&#39;utiliser pour aller travailler alors qu&#39;une autre l&#39;utilise pour pratiquer un sport.</p>
+    
+
+<h4>Besoin et usage</h4>
+    
+
+<p>Le besoin correspond à ce que l&#39;on cherche à satisfaire.</p>
+    
+
+<p>L&#39;usage correspond à la manière dont l&#39;objet est utilisé dans une situation donnée.</p>
+    
+
+<p>Un même objet technique peut donc répondre à un même besoin tout en ayant plusieurs usages.</p>
+    
+
+<p>Exemple :</p>
+    
+
+<ul><li>Objet : vélo</li><li>Besoin : se déplacer</li><li>Usages possibles : aller au collège ; faire du sport ; se promener ; transporter des courses ; effectuer une livraison.</li></ul>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a06">
+        <h2>Activité 3 — 3. Le vélo fonctionne-t-il tout seul ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Imaginez maintenant une personne circulant à vélo.</p>
+    
+
+<p>Le vélo n&#39;est pas isolé : pendant son utilisation, de nombreux éléments extérieurs peuvent agir sur lui, influencer son déplacement ou fournir des informations au cycliste.</p>
+    
+
+<p>Recherche en groupe :</p>
+    
+
+<p>Trouvez tout ce qui peut avoir une interaction avec le vélo lorsqu&#39;il est utilisé.</p>
+    
+
+<p>Vous devez proposer au minimum six éléments différents.</p>
+    
+
+<p>Quelques questions peuvent vous aider :</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a06-q01-label">Question 1 — Qui utilise le vélo ?</h3>
+            
+
+            
+            
+                <textarea id="a06-q01" data-answer-id="a06_q01" data-required="true" aria-labelledby="a06-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a06-q02-label">Question 2 — Sur quoi roule-t-il ?</h3>
+            
+
+            
+            
+                <textarea id="a06-q02" data-answer-id="a06_q02" data-required="true" aria-labelledby="a06-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a06-q03-label">Question 3 — Que peut rencontrer le cycliste ?</h3>
+            
+
+            
+            
+                <textarea id="a06-q03" data-answer-id="a06_q03" data-required="true" aria-labelledby="a06-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a06-q04-label">Question 4 — Qu&#39;est-ce qui peut modifier son déplacement ?</h3>
+            
+
+            
+            
+                <textarea id="a06-q04" data-answer-id="a06_q04" data-required="true" aria-labelledby="a06-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            <h3 id="a06-q05-label">Question 5 — Avec quels autres objets partage-t-il son environnement ?</h3>
+            
+
+            
+            
+                <textarea id="a06-q05" data-answer-id="a06_q05" data-required="true" aria-labelledby="a06-q05-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            <h3 id="a06-q06-label">Question 6 — Quelles informations le cycliste doit-il percevoir ?</h3>
+            
+
+            
+            
+                <textarea id="a06-q06" data-answer-id="a06_q06" data-required="true" aria-labelledby="a06-q06-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a07">
+        <h2>Activité 4 — 4. Les interacteurs du vélo</h2>
+        
+        
+        
+
+        
+
+        
+<p>Les éléments que vous venez de rechercher sont extérieurs au vélo, mais ils peuvent agir sur lui, être utilisés par lui ou modifier son fonctionnement et son utilisation.</p>
+    
+
+<p>On les appelle des interacteurs extérieurs.</p>
+    
+
+<p>Ils peuvent notamment être :</p>
+    
+
+<ul><li>des usagers ;</li><li>d&#39;autres objets techniques ;</li><li>des éléments de l&#39;environnement ;</li><li>des éléments fournissant des informations.</li></ul>
+    
+
+<p>Exemples possibles autour d&#39;un vélo :</p>
+    
+
+<ul><li>le cycliste ;</li><li>la route ;</li><li>les autres véhicules ;</li><li>les piétons ;</li><li>la pluie ou le vent ;</li><li>les panneaux de circulation ;</li><li>les feux de circulation ;</li><li>les bagages transportés.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a08">
+        <h2>Activité 5 — 5. Représenter les interactions</h2>
+        
+        
+        
+
+        
+
+        
+<p>Dans votre document LibreOffice Writer, réalisez maintenant un schéma des interactions.</p>
+    
+
+<p>Placez une image ou un dessin de vélo au centre.</p>
+    
+
+<p>Placez autour du vélo les différents interacteurs que vous avez trouvés.</p>
+    
+
+<p>Reliez chaque interacteur au vélo avec une ligne ou une flèche.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a08-q01-label">Question 1 — Indiquez clairement le nom de chaque interacteur.</h3>
+            
+
+            
+            
+                <textarea id="a08-q01" data-answer-id="a08_q01" data-required="true" aria-labelledby="a08-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Votre schéma doit contenir au minimum :</p>
+    
+
+<ul><li>1 usager ;</li><li>2 autres objets techniques ;</li><li>2 éléments de l&#39;environnement ;</li><li>1 élément fournissant une information utile au cycliste.</li></ul>
+    
+
+<p>Exemple de structure :</p>
+    
+
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a08-q02-label">Question 2 — Complète le tableau ci-dessous.</h3>
+            
+
+            
+            
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th></th>
+                                
+                                <th>Route</th>
+                                
+                                <th></th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Cycliste
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    VÉLO
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Autres véhicules
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a08_q02_r1_c0" data-required="true" data-row="1" data-col="0" aria-label="5. Représenter les interactions —  — ">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Pluie
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a08_q02_r1_c2" data-required="true" data-row="1" data-col="2" aria-label="5. Représenter les interactions —  — ">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            
+            
+            
+<p>Vous pouvez organiser votre schéma autrement tant qu&#39;il reste clair, compréhensible et lisible.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a09">
+        <h2>Activité 6 — 6. Comprendre les interactions</h2>
+        
+        
+        
+
+        
+
+        
+<p>Sous votre schéma, créez et complétez le tableau suivant :</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a09-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
+            
+
+            
+            
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Interacteur</th>
+                                
+                                <th>Catégorie</th>
+                                
+                                <th>Quelle relation existe avec le vélo ou son utilisateur ?</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Cycliste
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Usager
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Il commande et utilise le vélo.
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Route
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Environnement
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a09_q01_r1_c2" data-required="true" data-row="1" data-col="2" aria-label="6. Comprendre les interactions — Quelle relation existe avec le vélo ou son utilisateur ? — Route">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Automobile
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Objet technique
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a09_q01_r2_c2" data-required="true" data-row="2" data-col="2" aria-label="6. Comprendre les interactions — Quelle relation existe avec le vélo ou son utilisateur ? — Automobile">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Pluie
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a09_q01_r3_c1" data-required="true" data-row="3" data-col="1" aria-label="6. Comprendre les interactions — Catégorie — Pluie">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a09_q01_r3_c2" data-required="true" data-row="3" data-col="2" aria-label="6. Comprendre les interactions — Quelle relation existe avec le vélo ou son utilisateur ? — Pluie">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Feu de circulation
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a09_q01_r4_c1" data-required="true" data-row="4" data-col="1" aria-label="6. Comprendre les interactions — Catégorie — Feu de circulation">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a09_q01_r4_c2" data-required="true" data-row="4" data-col="2" aria-label="6. Comprendre les interactions — Quelle relation existe avec le vélo ou son utilisateur ? — Feu de circulation">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a09_q01_r5_c0" data-required="true" data-row="5" data-col="0" aria-label="6. Comprendre les interactions — Interacteur — ">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a09_q01_r5_c1" data-required="true" data-row="5" data-col="1" aria-label="6. Comprendre les interactions — Catégorie — ">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a09_q01_r5_c2" data-required="true" data-row="5" data-col="2" aria-label="6. Comprendre les interactions — Quelle relation existe avec le vélo ou son utilisateur ? — ">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            
+            
+            
+<p>Votre tableau devra contenir au minimum six interacteurs.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a10">
+        <h2>Activité 7 — 7. Petit défi : existe-t-il un seul type de vélo ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Un élève affirme :</p>
+    
+
+<p>« Un vélo sert à se déplacer, donc tous les vélos sont faits pour exactement la même chose. »</p>
+    
+
+<p>Êtes-vous d&#39;accord ?</p>
+    
+
+<p>Dans votre document, rédigez une réponse de deux ou trois phrases et justifiez votre avis.</p>
+    
+
+<p>Vous pouvez notamment réfléchir aux objets suivants :</p>
+    
+
+<ul><li>VTT ;</li><li>vélo de route ;</li><li>vélo cargo ;</li><li>BMX ;</li><li>vélo de ville.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a11">
+        <h2>Activité 8 — 8. Conclusion du travail</h2>
+        
+        
+        
+
+        
+
+        
+<p>Sans retourner lire les définitions précédentes, complétez dans votre document Writer :</p>
+    
+
+<ul><li>Un objet technique est conçu ou transformé par ................................................ pour répondre à ................................................ .</li><li>Un même objet technique peut avoir plusieurs ................................................ .</li><li>Lorsqu&#39;il est utilisé, un objet technique peut interagir avec son ................................................ et avec son ................................................ .</li><li>Les éléments extérieurs en relation avec l&#39;objet peuvent être appelés des ................................................ .</li></ul>
+    
+
+<p>Dernière question :</p>
+    
+
+<p>En deux ou trois phrases, expliquez pourquoi il est utile d&#39;étudier l&#39;environnement d&#39;un objet technique et pas uniquement l&#39;objet lui-même.</p>
+    
+
+<p>Enregistrez votre travail puis déposez-le dans l&#39;espace d&#39;échange.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a12">
+        <h2>Activité 9 — Sources et ressources</h2>
+        
+        
+        
+
+        
+
+        
+<ul><li>Ministère de l&#39;Éducation nationale – Programme de technologie du cycle 4, BO n°9 du 29 février 2024 : Programme officiel de technologie</li><li>Éduscol – Ressources d&#39;accompagnement du programme de technologie au cycle 4 : Ressources d&#39;accompagnement</li></ul>
+    
+
+<p><a href="https://www.education.gouv.fr/bo/2024/Hebdo9/MENE2402802A" target="_blank" rel="noopener noreferrer">Programme officiel de technologie</a></p>
+
+
+<p><a href="https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4" target="_blank" rel="noopener noreferrer">Ressources d&#39;accompagnement</a></p>
+
+
+<p>Les définitions et exemples de cette séance ont été formulés et simplifiés pour être adaptés au niveau 5e, à partir des attendus du programme officiel de technologie du cycle 4.</p>
+    
+
+
+        
+        
+    </article>
+    
+</section>
+
+    </fieldset>
+    <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
+    <h2 id="course-summary-title">À retenir</h2><ul></ul>
+    <h3>Faire le point</h3><p>Relis tes réponses et vérifie les points demandés dans le bilan du cours. Tu peux revenir sur ton travail tant que le professeur ne l’a pas clôturé.</p>
+</section>
+
+    <div class="course-submit-panel">
+        <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
+        <p id="course-submit-status" role="status" aria-live="polite"></p>
+        <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
+    </div>
+</div></div>
+</div>
+<noscript><p>Active JavaScript pour charger ta copie et enregistrer tes réponses.</p></noscript>
+
+<script id="classes-data" type="application/json">
+{"college":{"nom":"Collège","classes":[{"id":"5e","nom":"5e","matieres":["techno"]},{"id":"4e","nom":"4e","matieres":["techno"]},{"id":"3e","nom":"3e","matieres":["techno"]}]},"mfr":{"nom":"MFR","classes":[{"id":"4e","nom":"4e MFR","matieres":["tim","maths"]},{"id":"3e","nom":"3e MFR","matieres":["tim","maths"]},{"id":"cap1","nom":"CAP 1","matieres":["tim"]},{"id":"cap2","nom":"CAP 2","matieres":["tim"]},{"id":"2de","nom":"2de Pro","matieres":["tim","maths"]},{"id":"1re","nom":"Bac Pro 1","matieres":["tim","maths"]},{"id":"term","nom":"Bac Pro 2","matieres":["tim","maths"]},{"id":"bts1","nom":"BTS 1","matieres":["tim"]},{"id":"bts2","nom":"BTS 2","matieres":["tim"]}]}}
+</script>
+<script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
+    </main>
+    <footer class="site-footer">
+    <p>
+        &copy; 2026
+        Portail pédagogique Technologie | TIM | Mathématiques
+    </p>
+</footer>
+</body>
+</html>

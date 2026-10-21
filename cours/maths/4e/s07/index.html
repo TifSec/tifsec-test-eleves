@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
+
+    
+    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
+    <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
+    
+
+    <title>
+        
+        Portail pédagogique Technologie | TIM | Mathématiques
+        
+    </title>
+
+    <link rel="icon" href="/tifsec-test-eleves/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/variables.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/base.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/body.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/header.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/main.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/footer.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-message.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-session.css">
+
+    
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    
+    
+
+    
+
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    
+    
+</head>
+
+<body class="student-shell student-course-shell">
+    <a class="student-skip" href="#course-intro">Aller au cours</a>
+    <p id="message" class="auth-message" role="status" aria-live="polite" hidden></p>
+    <header class="student-header" id="course-header">
+    <div class="student-header-inner">
+        <div class="student-topbar">
+            <a class="student-brand" href="/tifsec-test-eleves/eleve/"><img src="/tifsec-test-eleves/images/logo.png" width="44" height="44" alt=""><span>Mon espace<span data-profile-field="matieres"></span></span></a>
+            <div class="student-header-actions"><a class="student-home-link" href="/tifsec-test-eleves/eleve/">Mes séances</a><a id="course-login" href="/tifsec-test-eleves/connexion/">Se connecter</a><details class="student-theme-picker" id="student-theme-picker" hidden>
+    <summary>Apparence</summary>
+    <div class="student-theme-options"><label for="student-theme-select">Les couleurs de mon espace</label><select id="student-theme-select" disabled><option value="ocean">Océan · bleu</option><option value="forest">Forêt · vert</option><option value="plum">Prune · violet</option><option value="terracotta">Terre cuite · orangé</option><option value="ruby">Rubis · rouge</option><option value="slate">Ardoise · gris</option><option value="midnight">Minuit · noir</option><option value="rose">Rosée · rose</option><option value="neon">Néon · RGB sombre</option><option value="cyberpunk">Cyberpunk · cité futuriste</option><option value="minecraft">Minecraft · blocs et pixels</option><option value="farming">Farming · campagne et cultures</option></select><label class="student-theme-motion"><input type="checkbox" id="student-theme-motion"> Mettre les animations en pause</label><p id="student-theme-status" role="status" aria-live="polite">Ce choix te suivra sur les autres ordinateurs.</p><button id="student-theme-retry" type="button" hidden>Réessayer</button></div>
+</details>
+<button type="button" id="course-logout" hidden>Se déconnecter</button></div>
+        </div>
+        <div class="student-welcome-row" id="course-welcome" hidden>
+            <div><p class="student-eyebrow">Une séance à la fois, à ton rythme.</p><p class="student-course-greeting">Bonjour <span id="course-header-identity"></span></p></div>
+            <dl class="student-profile"><div><dt>Établissement</dt><dd data-profile-field="etablissement"></dd></div><div><dt>Classe</dt><dd data-profile-field="classe"></dd></div><div><dt>Inscription</dt><dd data-profile-field="validation"></dd></div></dl>
+        </div>
+    </div>
+</header>
+
+    <main class="student-course-main" id="student-course-main">
+
+<div id="course-work" data-etablissement="mfr" data-matiere="maths" data-classe="4e" data-seance="S07" data-saving-enabled="true" data-collaboration-enabled="true">
+    <div class="course-save-panel course-toolbar">
+        <p id="course-identity" hidden></p>
+        <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+    </div>
+    <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
+        <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
+        <p id="group-status" role="status">Les groupes sont propres à chaque séance. Connecte-toi avec ton compte élève pour choisir ta copie.</p>
+        <div id="group-controls" hidden>
+            <label for="group-copy">Copie de cette séance</label><select id="group-copy"></select>
+            <button type="button" id="group-refresh">Actualiser les groupes</button>
+            <div id="group-create-panel" hidden>
+                <p>Choisis un ou deux camarades. Chacun doit accepter pour partager les réponses. Le groupe reprend ton travail actuel ; ta copie individuelle reste dans l’historique.</p>
+                <div id="group-classmates" class="collaboration-roster"></div>
+                <button type="button" id="group-create">Envoyer les invitations</button>
+            </div>
+        </div>
+    </section>
+    <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
+    <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
+
+
+
+<div class="course-columns">
+    <aside class="course-navigation" aria-label="Étapes de la séance">
+        <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
+        <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
+        <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Ce qui est évalué</a></li><li><a href="#a02">Consignes</a></li><li><a href="#a03">1. Automatismes — 3 points</a></li><li><a href="#a04">2. Divisibilité — 3 points</a></li><li><a href="#a05">3. Nombres premiers — 3 points</a></li><li><a href="#a06">4. Comprendre et simplifier les fractions — 3 points</a></li><li><a href="#a07">5. Calculer avec des fractions — 5 points</a></li><li><a href="#a08">6. Problème bilan — 3 points</a></li><li><a href="#a09">Barème</a></li><li><a href="#a10">Avant de rendre</a></li><li><a href="#a11">Rendre l&#39;évaluation</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+    </aside>
+
+<div class="course-reading">
+<!-- ========== INTRODUCTION DU COURS ========== -->
+
+<header class="cours-intro" id="course-intro">
+    <h1>Évaluation 1 : Nombres et fractions</h1>
+
+    
+    <p class="cours-theme">
+        <strong>Thème :</strong> Mathématiques — Évaluation 1 : Nombres et fractions
+    </p>
+    
+
+    
+    <p class="cours-problematique">
+        <strong>Problématique :</strong> Évaluation 1 : Nombres et fractions
+    </p>
+    
+
+    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Les objectifs et le lien avec les situations concrètes sont présentés au début du cours ci-dessous.</p></section>
+    
+    <section><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
+    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    
+    
+    <section class="cours-objectifs">
+        <h2>Ce que vous allez apprendre</h2>
+        <ul>
+            
+        </ul>
+
+        <h2>Ce que vous allez apprendre à faire</h2>
+        <ul>
+            
+        </ul>
+    </section>
+    
+    
+    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
+<p>Dans cette page du ministère, retrouve le programme ou le référentiel de ta formation. Les objectifs précis étudiés aujourd’hui sont indiqués dans le cours.</p>
+    
+
+<p><a href="https://chlorofil.fr/diplomes/secondaire/4e-3e" target="_blank" rel="noopener noreferrer">Consulter les programmes et attendus officiels</a></p>
+
+
+</div></details>
+
+</header>
+
+    <fieldset id="course-answers" class="course-answer-fields" disabled>
+        <legend>Réponses aux activités</legend>
+        <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
+
+<section class="cours-activites">
+    
+    <article class="cours-activite" id="a01">
+        <h2>Activité 1 — Ce qui est évalué</h2>
+        
+        
+        
+
+        
+
+        
+<p>Cette évaluation reprend les notions travaillées depuis le début de la période.</p>
+    
+
+<ul><li>calcul mental et priorités opératoires ;</li><li>multiples, diviseurs et critères de divisibilité ;</li><li>nombres premiers et décomposition en facteurs premiers ;</li><li>comprendre, simplifier et comparer des fractions ;</li><li>additionner et soustraire des fractions ;</li><li>multiplier et diviser des fractions ;</li><li>résoudre un problème en plusieurs étapes.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a02">
+        <h2>Activité 2 — Consignes</h2>
+        
+        
+        
+
+        
+
+        
+<ul><li>Lisez entièrement chaque question avant de commencer.</li><li>Laissez apparaître vos calculs et vos raisonnements.</li><li>Une réponse seule ne suffit pas lorsqu&#39;une justification est demandée.</li><li>Simplifiez les fractions lorsque c&#39;est possible.</li><li>Respectez les unités lorsqu&#39;elles sont nécessaires.</li><li>Vous pouvez vérifier vos résultats avant de rendre.</li></ul>
+    
+
+<p>Important</p>
+    
+
+<p>Une démarche correcte avec une petite erreur de calcul peut rapporter davantage qu&#39;un résultat juste donné sans aucune explication.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a03">
+        <h2>Activité 3 — 1. Automatismes — 3 points</h2>
+        
+        
+        
+
+        
+
+        
+<p>Calculatrice interdite.</p>
+    
+
+<p>Effectuez les calculs suivants.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a03-q01-label">Question 1 — 1. 8 × 7</h3>
+            
+
+            
+            
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a03-q02-label">Question 2 — 2. 84 ÷ 7</h3>
+            
+
+            
+            
+                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a03-q03-label">Question 3 — 3. 30 - 4 × 6</h3>
+            
+
+            
+            
+                <textarea id="a03-q03" data-answer-id="a03_q03" data-required="true" aria-labelledby="a03-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a03-q04-label">Question 4 — 4. Le quart de 72.</h3>
+            
+
+            
+            
+                <textarea id="a03-q04" data-answer-id="a03_q04" data-required="true" aria-labelledby="a03-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            <h3 id="a03-q05-label">Question 5 — 5. Écriture décimale de 3/4.</h3>
+            
+
+            
+            
+                <textarea id="a03-q05" data-answer-id="a03_q05" data-required="true" aria-labelledby="a03-q05-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            <h3 id="a03-q06-label">Question 6 — 6. Calculez 3/5 de 20.</h3>
+            
+
+            
+            
+                <textarea id="a03-q06" data-answer-id="a03_q06" data-required="true" aria-labelledby="a03-q06-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a04">
+        <h2>Activité 4 — 2. Divisibilité — 3 points</h2>
+        
+        
+        
+
+        
+
+        
+<p>Calculatrice interdite.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a04-q01-label">Question 1 — 1. Le nombre 450 est-il divisible par 2, 3, 5, 9 et 10 ? Justifiez chaque réponse.</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a04-q02-label">Question 2 — 2. Donnez tous les diviseurs positifs de 18.</h3>
+            
+
+            
+            
+                <textarea id="a04-q02" data-answer-id="a04_q02" data-required="true" aria-labelledby="a04-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a04-q03-label">Question 3 — 3. Expliquez la différence entre un multiple et un diviseur en utilisant l&#39;exemple : 24 = 6 × 4.</h3>
+            
+
+            
+            
+                <textarea id="a04-q03" data-answer-id="a04_q03" data-required="true" aria-labelledby="a04-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a05">
+        <h2>Activité 5 — 3. Nombres premiers — 3 points</h2>
+        
+        
+        
+
+        
+
+        
+<p>Calculatrice interdite.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a05-q01-label">Question 1 — 1. Parmi 17, 21, 29 et 33, quels nombres sont premiers ? Justifiez les nombres qui ne le sont pas.</h3>
+            
+
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a05-q02-label">Question 2 — 2. Décomposez 36 en facteurs premiers.</h3>
+            
+
+            
+            
+                <textarea id="a05-q02" data-answer-id="a05_q02" data-required="true" aria-labelledby="a05-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a05-q03-label">Question 3 — 3. Expliquez ce qu&#39;est un nombre premier. Le nombre 1 est-il premier ?</h3>
+            
+
+            
+            
+                <textarea id="a05-q03" data-answer-id="a05_q03" data-required="true" aria-labelledby="a05-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a06">
+        <h2>Activité 6 — 4. Comprendre et simplifier les fractions — 3 points</h2>
+        
+        
+        
+
+        
+
+        
+<p>Calculatrice interdite.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a06-q01-label">Question 1 — 1. Simplifiez complètement 18/24.</h3>
+            
+
+            
+            
+                <textarea id="a06-q01" data-answer-id="a06_q01" data-required="true" aria-labelledby="a06-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a06-q02-label">Question 2 — 2. La fraction 7/12 est-elle irréductible ? Justifiez.</h3>
+            
+
+            
+            
+                <textarea id="a06-q02" data-answer-id="a06_q02" data-required="true" aria-labelledby="a06-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a06-q03-label">Question 3 — 3. Comparez 3/4 et 5/8. Montrez votre méthode.</h3>
+            
+
+            
+            
+                <textarea id="a06-q03" data-answer-id="a06_q03" data-required="true" aria-labelledby="a06-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a06-q04-label">Question 4 — 4. Expliquez ce que représentent le numérateur et le dénominateur dans la fraction 3/8.</h3>
+            
+
+            
+            
+                <textarea id="a06-q04" data-answer-id="a06_q04" data-required="true" aria-labelledby="a06-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a07">
+        <h2>Activité 7 — 5. Calculer avec des fractions — 5 points</h2>
+        
+        
+        
+
+        
+
+        
+<p>Calculatrice interdite.</p>
+    
+
+<p>Laissez apparaître les transformations et simplifiez les résultats.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a07-q01-label">Question 1 — 1. Calculez : 3/7 + 2/7.</h3>
+            
+
+            
+            
+                <textarea id="a07-q01" data-answer-id="a07_q01" data-required="true" aria-labelledby="a07-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a07-q02-label">Question 2 — 2. Calculez : 3/4 - 1/2.</h3>
+            
+
+            
+            
+                <textarea id="a07-q02" data-answer-id="a07_q02" data-required="true" aria-labelledby="a07-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a07-q03-label">Question 3 — 3. Calculez : 2/3 + 1/6.</h3>
+            
+
+            
+            
+                <textarea id="a07-q03" data-answer-id="a07_q03" data-required="true" aria-labelledby="a07-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a07-q04-label">Question 4 — 4. Calculez et simplifiez : 2/3 × 3/5.</h3>
+            
+
+            
+            
+                <textarea id="a07-q04" data-answer-id="a07_q04" data-required="true" aria-labelledby="a07-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            <h3 id="a07-q05-label">Question 5 — 5. Calculez et simplifiez : 3/4 × 2/9.</h3>
+            
+
+            
+            
+                <textarea id="a07-q05" data-answer-id="a07_q05" data-required="true" aria-labelledby="a07-q05-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            <h3 id="a07-q06-label">Question 6 — 6. Donnez l&#39;inverse de 3/5 puis vérifiez votre réponse.</h3>
+            
+
+            
+            
+                <textarea id="a07-q06" data-answer-id="a07_q06" data-required="true" aria-labelledby="a07-q06-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q07">
+            
+            <h3 id="a07-q07-label">Question 7 — 7. Calculez et simplifiez : 3/4 ÷ 1/2.</h3>
+            
+
+            
+            
+                <textarea id="a07-q07" data-answer-id="a07_q07" data-required="true" aria-labelledby="a07-q07-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a08">
+        <h2>Activité 8 — 6. Problème bilan — 3 points</h2>
+        
+        
+        
+
+        
+
+        
+<p>Calculatrice autorisée.</p>
+    
+
+<p>Une réserve contient 30 kg d&#39;un produit.</p>
+    
+
+<p>On utilise 2/5 de cette réserve.</p>
+    
+
+<p>La quantité utilisée est ensuite répartie en portions de 3/4 kg.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a08-q01-label">Question 1 — 1. Quelle masse représente 2/5 de 30 kg ?</h3>
+            
+
+            
+            
+                <textarea id="a08-q01" data-answer-id="a08_q01" data-required="true" aria-labelledby="a08-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a08-q02-label">Question 2 — 2. Combien de portions de 3/4 kg peut-on préparer avec cette quantité ?</h3>
+            
+
+            
+            
+                <textarea id="a08-q02" data-answer-id="a08_q02" data-required="true" aria-labelledby="a08-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a08-q03-label">Question 3 — 3. Quelle masse reste-t-il dans la réserve ?</h3>
+            
+
+            
+            
+                <textarea id="a08-q03" data-answer-id="a08_q03" data-required="true" aria-labelledby="a08-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a08-q04-label">Question 4 — 4. Expliquez pourquoi vous avez utilisé une multiplication à la question 1 et une division à la question 2.</h3>
+            
+
+            
+            
+                <textarea id="a08-q04" data-answer-id="a08_q04" data-required="true" aria-labelledby="a08-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Réflexe DNB</p>
+    
+
+<p>Dans un problème en plusieurs étapes, identifiez d&#39;abord ce que chaque question demande avant de choisir l&#39;opération.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a09">
+        <h2>Activité 9 — Barème</h2>
+        
+        
+        
+
+        
+
+        
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Partie</th><th scope="col">Points</th></tr></thead><tbody><tr><td>1. Automatismes</td><td>3 points</td></tr><tr><td>2. Divisibilité</td><td>3 points</td></tr><tr><td>3. Nombres premiers</td><td>3 points</td></tr><tr><td>4. Comprendre et simplifier les fractions</td><td>3 points</td></tr><tr><td>5. Calculer avec des fractions</td><td>5 points</td></tr><tr><td>6. Problème bilan</td><td>3 points</td></tr><tr><td>Total</td><td>20 points</td></tr></tbody></table></div>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a10">
+        <h2>Activité 10 — Avant de rendre</h2>
+        
+        
+        
+
+        
+
+        
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a10-q01-label">Question 1 — Ai-je répondu à toutes les questions ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q01" data-answer-id="a10_q01" data-required="true" aria-labelledby="a10-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a10-q02-label">Question 2 — Ai-je laissé mes calculs visibles ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q02" data-answer-id="a10_q02" data-required="true" aria-labelledby="a10-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a10-q03-label">Question 3 — Ai-je justifié les réponses qui le demandaient ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q03" data-answer-id="a10_q03" data-required="true" aria-labelledby="a10-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a10-q04-label">Question 4 — Ai-je simplifié mes fractions lorsque c&#39;était possible ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q04" data-answer-id="a10_q04" data-required="true" aria-labelledby="a10-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            <h3 id="a10-q05-label">Question 5 — Pour une division de fractions, ai-je inversé la deuxième fraction ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q05" data-answer-id="a10_q05" data-required="true" aria-labelledby="a10-q05-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            <h3 id="a10-q06-label">Question 6 — Ai-je indiqué les unités dans le problème ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q06" data-answer-id="a10_q06" data-required="true" aria-labelledby="a10-q06-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q07">
+            
+            <h3 id="a10-q07-label">Question 7 — Ai-je relu mes résultats ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q07" data-answer-id="a10_q07" data-required="true" aria-labelledby="a10-q07-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a11">
+        <h2>Activité 11 — Rendre l&#39;évaluation</h2>
+        
+        
+        
+
+        
+
+        
+<p>Relisez une dernière fois vos réponses avant de valider.</p>
+    
+
+
+        
+        
+    </article>
+    
+</section>
+
+    </fieldset>
+    <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
+    <h2 id="course-summary-title">À retenir</h2><ul></ul>
+    <h3>Faire le point</h3><p>Relis tes réponses et vérifie les points demandés dans le bilan du cours. Tu peux revenir sur ton travail tant que le professeur ne l’a pas clôturé.</p>
+</section>
+
+    <div class="course-submit-panel">
+        <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
+        <p id="course-submit-status" role="status" aria-live="polite"></p>
+        <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
+    </div>
+</div></div>
+</div>
+<noscript><p>Active JavaScript pour charger ta copie et enregistrer tes réponses.</p></noscript>
+
+<script id="classes-data" type="application/json">
+{"college":{"nom":"Collège","classes":[{"id":"5e","nom":"5e","matieres":["techno"]},{"id":"4e","nom":"4e","matieres":["techno"]},{"id":"3e","nom":"3e","matieres":["techno"]}]},"mfr":{"nom":"MFR","classes":[{"id":"4e","nom":"4e MFR","matieres":["tim","maths"]},{"id":"3e","nom":"3e MFR","matieres":["tim","maths"]},{"id":"cap1","nom":"CAP 1","matieres":["tim"]},{"id":"cap2","nom":"CAP 2","matieres":["tim"]},{"id":"2de","nom":"2de Pro","matieres":["tim","maths"]},{"id":"1re","nom":"Bac Pro 1","matieres":["tim","maths"]},{"id":"term","nom":"Bac Pro 2","matieres":["tim","maths"]},{"id":"bts1","nom":"BTS 1","matieres":["tim"]},{"id":"bts2","nom":"BTS 2","matieres":["tim"]}]}}
+</script>
+<script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
+    </main>
+    <footer class="site-footer">
+    <p>
+        &copy; 2026
+        Portail pédagogique Technologie | TIM | Mathématiques
+    </p>
+</footer>
+</body>
+</html>

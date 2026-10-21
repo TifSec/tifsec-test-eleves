@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
+
+    
+    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
+    <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
+    
+
+    <title>
+        
+        Portail pédagogique Technologie | TIM | Mathématiques
+        
+    </title>
+
+    <link rel="icon" href="/tifsec-test-eleves/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/variables.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/base.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/body.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/header.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/main.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/footer.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-message.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-session.css">
+
+    
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    
+    
+
+    
+
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    
+    
+</head>
+
+<body class="student-shell student-course-shell">
+    <a class="student-skip" href="#course-intro">Aller au cours</a>
+    <p id="message" class="auth-message" role="status" aria-live="polite" hidden></p>
+    <header class="student-header" id="course-header">
+    <div class="student-header-inner">
+        <div class="student-topbar">
+            <a class="student-brand" href="/tifsec-test-eleves/eleve/"><img src="/tifsec-test-eleves/images/logo.png" width="44" height="44" alt=""><span>Mon espace<span data-profile-field="matieres"></span></span></a>
+            <div class="student-header-actions"><a class="student-home-link" href="/tifsec-test-eleves/eleve/">Mes séances</a><a id="course-login" href="/tifsec-test-eleves/connexion/">Se connecter</a><details class="student-theme-picker" id="student-theme-picker" hidden>
+    <summary>Apparence</summary>
+    <div class="student-theme-options"><label for="student-theme-select">Les couleurs de mon espace</label><select id="student-theme-select" disabled><option value="ocean">Océan · bleu</option><option value="forest">Forêt · vert</option><option value="plum">Prune · violet</option><option value="terracotta">Terre cuite · orangé</option><option value="ruby">Rubis · rouge</option><option value="slate">Ardoise · gris</option><option value="midnight">Minuit · noir</option><option value="rose">Rosée · rose</option><option value="neon">Néon · RGB sombre</option><option value="cyberpunk">Cyberpunk · cité futuriste</option><option value="minecraft">Minecraft · blocs et pixels</option><option value="farming">Farming · campagne et cultures</option></select><label class="student-theme-motion"><input type="checkbox" id="student-theme-motion"> Mettre les animations en pause</label><p id="student-theme-status" role="status" aria-live="polite">Ce choix te suivra sur les autres ordinateurs.</p><button id="student-theme-retry" type="button" hidden>Réessayer</button></div>
+</details>
+<button type="button" id="course-logout" hidden>Se déconnecter</button></div>
+        </div>
+        <div class="student-welcome-row" id="course-welcome" hidden>
+            <div><p class="student-eyebrow">Une séance à la fois, à ton rythme.</p><p class="student-course-greeting">Bonjour <span id="course-header-identity"></span></p></div>
+            <dl class="student-profile"><div><dt>Établissement</dt><dd data-profile-field="etablissement"></dd></div><div><dt>Classe</dt><dd data-profile-field="classe"></dd></div><div><dt>Inscription</dt><dd data-profile-field="validation"></dd></div></dl>
+        </div>
+    </div>
+</header>
+
+    <main class="student-course-main" id="student-course-main">
+
+<div id="course-work" data-etablissement="mfr" data-matiere="tim" data-classe="bts2" data-seance="S04" data-saving-enabled="true" data-collaboration-enabled="true">
+    <div class="course-save-panel course-toolbar">
+        <p id="course-identity" hidden></p>
+        <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+    </div>
+    <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
+        <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
+        <p id="group-status" role="status">Les groupes sont propres à chaque séance. Connecte-toi avec ton compte élève pour choisir ta copie.</p>
+        <div id="group-controls" hidden>
+            <label for="group-copy">Copie de cette séance</label><select id="group-copy"></select>
+            <button type="button" id="group-refresh">Actualiser les groupes</button>
+            <div id="group-create-panel" hidden>
+                <p>Choisis un ou deux camarades. Chacun doit accepter pour partager les réponses. Le groupe reprend ton travail actuel ; ta copie individuelle reste dans l’historique.</p>
+                <div id="group-classmates" class="collaboration-roster"></div>
+                <button type="button" id="group-create">Envoyer les invitations</button>
+            </div>
+        </div>
+    </section>
+    <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
+    <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
+
+
+
+<div class="course-columns">
+    <aside class="course-navigation" aria-label="Étapes de la séance">
+        <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
+        <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
+        <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Pour commencer</a></li><li><a href="#a02">Notions et compétences travaillées</a></li><li><a href="#a03">Pourquoi allons-nous travailler cela ?</a></li><li><a href="#a04">À quoi cela va-t-il vous servir ?</a></li><li><a href="#a05">1. Reprendre le travail de la séance précédente</a></li><li><a href="#a06">2. Pourquoi passer de deux alertes à une priorité ?</a></li><li><a href="#a07">3. Comprendre ET</a></li><li><a href="#a08">4. Comprendre OU</a></li><li><a href="#a09">5. Pourquoi commencer par ET avant OU ?</a></li><li><a href="#a10">6. Construire la colonne Priorité</a></li><li><a href="#a11">7. Vérifier que notre classement est cohérent</a></li><li><a href="#a12">8. Pourquoi passer maintenant à la mise en forme ?</a></li><li><a href="#a13">9. Mettre en évidence automatiquement les priorités</a></li><li><a href="#a14">10. Tester notre classement</a></li><li><a href="#a15">11. Une priorité automatique est-elle une décision ?</a></li><li><a href="#a16">12. Faire le lien avec les séances précédentes</a></li><li><a href="#a17">13. Bilan de la séance</a></li><li><a href="#a18">14. Avant de rendre</a></li><li><a href="#a19">À retenir</a></li><li><a href="#a20">Pour la prochaine séance</a></li><li><a href="#a21">Sources et ressources</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+    </aside>
+
+<div class="course-reading">
+<!-- ========== INTRODUCTION DU COURS ========== -->
+
+<header class="cours-intro" id="course-intro">
+    <h1>Croiser plusieurs critères pour définir une priorité</h1>
+
+    
+    <p class="cours-theme">
+        <strong>Thème :</strong> TIM — Croiser plusieurs critères pour définir une priorité
+    </p>
+    
+
+    
+    <p class="cours-problematique">
+        <strong>Problématique :</strong> Croiser plusieurs critères pour définir une priorité
+    </p>
+    
+
+    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Lors de la séance précédente, le tableur surveillait séparément deux indicateurs :</p></section>
+    
+    <section><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
+    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    
+    
+    <section class="cours-objectifs">
+        <h2>Ce que vous allez apprendre</h2>
+        <ul>
+            
+        </ul>
+
+        <h2>Ce que vous allez apprendre à faire</h2>
+        <ul>
+            
+        </ul>
+    </section>
+    
+    <section><h2>Ressources du cours</h2>
+<p>Réalise les manipulations dans le logiciel demandé. Conserve tes fichiers sur ton espace habituel. Le site enregistre seulement tes réponses écrites, tes résultats, tes formules et tes démarches ; aucun fichier n’est téléversé.</p>
+    
+
+</section>
+    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
+<p>Dans cette page du ministère, retrouve le programme ou le référentiel de ta formation. Les objectifs précis étudiés aujourd’hui sont indiqués dans le cours.</p>
+    
+
+<p><a href="https://chlorofil.fr/diplomes/secondaire/btsa/acse/acs-agri-2025" target="_blank" rel="noopener noreferrer">Consulter les programmes et attendus officiels</a></p>
+
+
+</div></details>
+
+</header>
+
+    <fieldset id="course-answers" class="course-answer-fields" disabled>
+        <legend>Réponses aux activités</legend>
+        <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
+
+<section class="cours-activites">
+    
+    <article class="cours-activite" id="a01">
+        <h2>Activité 1 — Pour commencer</h2>
+        
+        
+        
+
+        
+
+        
+<p>Durée prévue : environ 1 heure</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a02">
+        <h2>Activité 2 — Notions et compétences travaillées</h2>
+        
+        
+        
+
+        
+
+        
+<ul><li>fonctions logiques ET et OU ;</li><li>combinaison de plusieurs conditions ;</li><li>classement automatique selon plusieurs critères ;</li><li>fonction SI imbriquée ;</li><li>formatage conditionnel ;</li><li>lecture et interprétation d&#39;un résultat automatisé.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a03">
+        <h2>Activité 3 — Pourquoi allons-nous travailler cela ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Lors de la séance précédente, le tableur surveillait séparément deux indicateurs :</p>
+    
+
+<ul><li>le coût des intrants par hectare ;</li><li>le temps de travail par hectare.</li></ul>
+    
+
+<p>Mais dans une situation professionnelle, une décision repose rarement sur un seul critère.</p>
+    
+
+<p>Une parcelle peut par exemple :</p>
+    
+
+<ul><li>coûter cher mais demander peu de travail ;</li><li>demander beaucoup de travail mais coûter peu ;</li><li>dépasser les deux objectifs en même temps.</li></ul>
+    
+
+<p>Nous allons donc apprendre à croiser plusieurs informations pour faire apparaître différents niveaux de priorité.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a04">
+        <h2>Activité 4 — À quoi cela va-t-il vous servir ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Cette logique permet de construire des outils capables de :</p>
+    
+
+<ul><li>faire ressortir les situations cumulant plusieurs difficultés ;</li><li>hiérarchiser des éléments à examiner ;</li><li>éviter de parcourir manuellement toutes les lignes d&#39;un tableau ;</li><li>préparer un tableau de bord d&#39;aide à la décision ;</li><li>rendre immédiatement visibles les situations nécessitant une attention particulière.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a05">
+        <h2>Activité 5 — 1. Reprendre le travail de la séance précédente</h2>
+        
+        
+        
+
+        
+
+        
+<p>Ouvrez :</p>
+    
+
+<p>BTS2_ACSAGRI_S03_NOM_Prenom.ods</p>
+    
+
+<p>Enregistrez immédiatement une copie sous :</p>
+    
+
+<p>BTS2_ACSAGRI_S04_NOM_Prenom.ods</p>
+    
+
+<p>Vérifiez dans la feuille Analyse que vous possédez bien :</p>
+    
+
+<ul><li>un indicateur Coût intrants (€/ha) ;</li><li>un indicateur Temps de travail (h/ha) ;</li><li>une colonne Alerte coût ;</li><li>une colonne Alerte travail.</li></ul>
+    
+
+<p>Vérifiez également dans Parametres :</p>
+    
+
+<ul><li>Coût maximum : 400 €/ha ;</li><li>Temps de travail maximum : 9 h/ha.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a06">
+        <h2>Activité 6 — 2. Pourquoi passer de deux alertes à une priorité ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Nous avons actuellement deux informations séparées.</p>
+    
+
+<p>Exemple :</p>
+    
+
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Parcelle</th><th scope="col">Alerte coût</th><th scope="col">Alerte travail</th></tr></thead><tbody><tr><td>Exemple A</td><td>OK</td><td>OK</td></tr><tr><td>Exemple B</td><td>À surveiller</td><td>OK</td></tr><tr><td>Exemple C</td><td>OK</td><td>À surveiller</td></tr><tr><td>Exemple D</td><td>À surveiller</td><td>À surveiller</td></tr></tbody></table></div>
+    
+
+<p>Nous souhaitons maintenant obtenir une seule information :</p>
+    
+
+<ul><li>Prioritaire si les deux objectifs sont dépassés ;</li><li>À surveiller si un seul objectif est dépassé ;</li><li>OK si aucun objectif n&#39;est dépassé.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a07">
+        <h2>Activité 7 — 3. Comprendre ET</h2>
+        
+        
+        
+
+        
+
+        
+<p>Commençons par la situation la plus importante :</p>
+    
+
+<p>Quand une parcelle doit-elle être classée Prioritaire ?</p>
+    
+
+<p>Notre règle est :</p>
+    
+
+<p>Le coût dépasse 400 €/ha ET le temps de travail dépasse 9 h/ha.</p>
+    
+
+<p>Dans Calc, la fonction ET permet de vérifier que plusieurs conditions sont vraies en même temps.</p>
+    
+
+<p>Sa structure générale est :</p>
+    
+
+<p>=ET(condition1;condition2)</p>
+    
+
+<p>Complétez mentalement :</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a07-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
+            
+
+            
+            
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Coût &gt; 400</th>
+                                
+                                <th>Travail &gt; 9</th>
+                                
+                                <th>Les deux sont-ils vrais ?</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Non
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Non
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a07_q01_r0_c2" data-required="true" data-row="0" data-col="2" aria-label="3. Comprendre ET — Les deux sont-ils vrais ? — Non">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Oui
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Non
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a07_q01_r1_c2" data-required="true" data-row="1" data-col="2" aria-label="3. Comprendre ET — Les deux sont-ils vrais ? — Oui">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Non
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Oui
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a07_q01_r2_c2" data-required="true" data-row="2" data-col="2" aria-label="3. Comprendre ET — Les deux sont-ils vrais ? — Non">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Oui
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Oui
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a07_q01_r3_c2" data-required="true" data-row="3" data-col="2" aria-label="3. Comprendre ET — Les deux sont-ils vrais ? — Oui">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a08">
+        <h2>Activité 8 — 4. Comprendre OU</h2>
+        
+        
+        
+
+        
+
+        
+<p>Passons maintenant au niveau À surveiller.</p>
+    
+
+<p>Nous voulons utiliser ce niveau lorsque au moins un des deux objectifs est dépassé.</p>
+    
+
+<p>La fonction OU est vraie lorsqu&#39;au moins une condition est vraie.</p>
+    
+
+<p>Sa structure est :</p>
+    
+
+<p>=OU(condition1;condition2)</p>
+    
+
+<p>Complétez mentalement :</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a08-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
+            
+
+            
+            
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Coût &gt; 400</th>
+                                
+                                <th>Travail &gt; 9</th>
+                                
+                                <th>Au moins un est-il vrai ?</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Non
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Non
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a08_q01_r0_c2" data-required="true" data-row="0" data-col="2" aria-label="4. Comprendre OU — Au moins un est-il vrai ? — Non">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Oui
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Non
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a08_q01_r1_c2" data-required="true" data-row="1" data-col="2" aria-label="4. Comprendre OU — Au moins un est-il vrai ? — Oui">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Non
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Oui
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a08_q01_r2_c2" data-required="true" data-row="2" data-col="2" aria-label="4. Comprendre OU — Au moins un est-il vrai ? — Non">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Oui
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Oui
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a08_q01_r3_c2" data-required="true" data-row="3" data-col="2" aria-label="4. Comprendre OU — Au moins un est-il vrai ? — Oui">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a09">
+        <h2>Activité 9 — 5. Pourquoi commencer par ET avant OU ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Notre classement possède trois niveaux.</p>
+    
+
+<p>Nous devons commencer par rechercher le cas le plus précis :</p>
+    
+
+<p>les deux objectifs sont dépassés → Prioritaire.</p>
+    
+
+<p>Seulement si ce premier test est faux, nous regarderons si au moins un objectif est dépassé.</p>
+    
+
+<p>La logique devient donc :</p>
+    
+
+<ol><li>SI les deux objectifs sont dépassés → Prioritaire ;</li><li>SINON, SI au moins un objectif est dépassé → À surveiller ;</li><li>SINON → OK.</li></ol>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a10">
+        <h2>Activité 10 — 6. Construire la colonne Priorité</h2>
+        
+        
+        
+
+        
+
+        
+<p>Dans la feuille Analyse, ajoutez une colonne :</p>
+    
+
+<p>Priorité</p>
+    
+
+<p>Essayez maintenant de traduire la règle précédente avec SI, ET et OU.</p>
+    
+
+<h4>Indice 1</h4>
+    
+
+<p>Commencez uniquement par le premier cas : coût supérieur au paramètre ET travail supérieur au paramètre.</p>
+    
+
+<h4>Indice 2</h4>
+    
+
+<p>La structure commence par =SI(ET(condition1;condition2);&quot;Prioritaire&quot;;...).</p>
+    
+
+<h4>Indice 3</h4>
+    
+
+<p>Une structure possible est :</p>
+    
+
+<p>=SI(ET(I2&gt;$Parametres.$B$2;J2&gt;$Parametres.$B$3);&quot;Prioritaire&quot;;SI(OU(I2&gt;$Parametres.$B$2;J2&gt;$Parametres.$B$3);&quot;À surveiller&quot;;&quot;OK&quot;))</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a11">
+        <h2>Activité 11 — 7. Vérifier que notre classement est cohérent</h2>
+        
+        
+        
+
+        
+
+        
+<p>Filtrez ou observez la colonne Priorité.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a11-q01-label">Question 1 — Q1 : Quelles parcelles sont classées Prioritaire ?</h3>
+            
+
+            
+            
+                <textarea id="a11-q01" data-answer-id="a11_q01" data-required="true" aria-labelledby="a11-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a11-q02-label">Question 2 — Q2 : Quelles parcelles sont classées À surveiller ?</h3>
+            
+
+            
+            
+                <textarea id="a11-q02" data-answer-id="a11_q02" data-required="true" aria-labelledby="a11-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a11-q03-label">Question 3 — Q3 : Pourquoi P04 n&#39;est-elle pas classée Prioritaire ?</h3>
+            
+
+            
+            
+                <textarea id="a11-q03" data-answer-id="a11_q03" data-required="true" aria-labelledby="a11-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<h4>Indice 1</h4>
+    
+
+<p>Comparez séparément son coût/ha et son temps de travail/ha aux deux objectifs.</p>
+    
+
+<h4>Indice 2</h4>
+    
+
+<p>Combien de conditions doivent être vraies pour que ET renvoie VRAI ?</p>
+    
+
+<h4>Indice 3</h4>
+    
+
+<p>Son coût dépasse 400 €/ha, mais son temps de travail reste légèrement inférieur à 9 h/ha. Une seule condition est donc vraie.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a12">
+        <h2>Activité 12 — 8. Pourquoi passer maintenant à la mise en forme ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Notre classement fonctionne, mais il faut encore lire chaque cellule pour repérer les priorités.</p>
+    
+
+<p>Un tableau de bord doit permettre de voir rapidement les informations importantes.</p>
+    
+
+<p>Nous allons donc conserver exactement les mêmes données, mais améliorer leur lecture visuelle.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a13">
+        <h2>Activité 13 — 9. Mettre en évidence automatiquement les priorités</h2>
+        
+        
+        
+
+        
+
+        
+<p>Sélectionnez les cellules de la colonne Priorité.</p>
+    
+
+<p>Utilisez :</p>
+    
+
+<p>Format → Conditionnel → Condition</p>
+    
+
+<p>Créez trois mises en forme permettant de distinguer facilement :</p>
+    
+
+<ul><li>Prioritaire ;</li><li>À surveiller ;</li><li>OK.</li></ul>
+    
+
+<p>Les couleurs ou styles choisis doivent rester faciles à lire.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a13-q01-label">Question 1 — Q4 : Pourquoi utiliser un formatage conditionnel plutôt que colorier les cellules manuellement ?</h3>
+            
+
+            
+            
+                <textarea id="a13-q01" data-answer-id="a13_q01" data-required="true" aria-labelledby="a13-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a14">
+        <h2>Activité 14 — 10. Tester notre classement</h2>
+        
+        
+        
+
+        
+
+        
+<p>Un outil automatisé doit être testé.</p>
+    
+
+<p>Dans Parametres, remplacez temporairement :</p>
+    
+
+<p>Coût intrants maximum : 400 → 700 €/ha</p>
+    
+
+<p>Observez la colonne Priorité.</p>
+    
+
+<p>Remettez ensuite la valeur à 400 €/ha.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a14-q01-label">Question 1 — Q5 : Pourquoi certaines parcelles changent-elles automatiquement de niveau de priorité ?</h3>
+            
+
+            
+            
+                <textarea id="a14-q01" data-answer-id="a14_q01" data-required="true" aria-labelledby="a14-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a15">
+        <h2>Activité 15 — 11. Une priorité automatique est-elle une décision ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Notre outil classe maintenant automatiquement certaines parcelles comme Prioritaires.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a15-q01-label">Question 1 — Q6 : Peut-on en conclure qu&#39;il faut automatiquement réduire les intrants ou le temps de travail sur P02, P06 et P10 ? Expliquez.</h3>
+            
+
+            
+            
+                <textarea id="a15-q01" data-answer-id="a15_q01" data-required="true" aria-labelledby="a15-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<h4>Indice 1</h4>
+    
+
+<p>Que connaît réellement le tableur sur ces parcelles ?</p>
+    
+
+<h4>Indice 2</h4>
+    
+
+<p>Le tableur connaît les valeurs et les seuils, mais connaît-il les raisons du coût ou du temps de travail ?</p>
+    
+
+<h4>Indice 3</h4>
+    
+
+<p>Le classement indique uniquement que les deux objectifs internes sont dépassés. Il faut encore comprendre pourquoi avant de proposer une action.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a16">
+        <h2>Activité 16 — 12. Faire le lien avec les séances précédentes</h2>
+        
+        
+        
+
+        
+
+        
+<p>Depuis la séance 2, notre outil s&#39;est construit progressivement :</p>
+    
+
+<p>Séance 2 : données → vérification → indicateurs</p>
+    
+
+<p>Séance 3 : indicateurs → règles simples → alertes</p>
+    
+
+<p>Séance 4 : plusieurs règles → priorité → affichage automatique</p>
+    
+
+<p>Nous avons donc commencé à construire un véritable outil d&#39;aide à la décision.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a17">
+        <h2>Activité 17 — 13. Bilan de la séance</h2>
+        
+        
+        
+
+        
+
+        
+<p>Dans la feuille Bilan, complétez :</p>
+    
+
+<ul><li>La fonction ET est vraie lorsque ................................................................................................................</li><li>La fonction OU est vraie lorsque ................................................................................................................</li><li>Une fonction SI imbriquée permet de ................................................................................................................</li><li>Le formatage conditionnel permet de ................................................................................................................</li><li>Un niveau de priorité automatique sert à ................................................................................................................</li></ul>
+    
+
+<p>Dernière question :</p>
+    
+
+<p>Expliquez en deux ou trois phrases pourquoi nous avons testé ET avant OU dans notre formule.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a18">
+        <h2>Activité 18 — 14. Avant de rendre</h2>
+        
+        
+        
+
+        
+
+        
+<p>Vérifiez que votre fichier possède :</p>
+    
+
+<ul><li>les paramètres 400 €/ha et 9 h/ha ;</li><li>les colonnes Alerte coût et Alerte travail ;</li><li>une colonne Priorité calculée automatiquement ;</li><li>les trois niveaux Prioritaire, À surveiller et OK ;</li><li>un formatage conditionnel fonctionnel ;</li><li>vos réponses dans la feuille Bilan.</li></ul>
+    
+
+<p>Vérifiez que le coût maximum est bien revenu à :</p>
+    
+
+<p>400 €/ha</p>
+    
+
+<p>Enregistrez :</p>
+    
+
+<p>BTS2_ACSAGRI_S04_NOM_Prenom.ods</p>
+    
+
+<p>Déposez ensuite le fichier dans l&#39;espace indiqué par le professeur.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a19">
+        <h2>Activité 19 — À retenir</h2>
+        
+        
+        
+
+        
+
+        
+<ul><li>ET est vrai lorsque toutes les conditions sont vraies.</li><li>OU est vrai lorsqu&#39;au moins une condition est vraie.</li><li>Lorsque plusieurs niveaux existent, l&#39;ordre des tests est important.</li><li>Une formule peut transformer plusieurs indicateurs en un niveau de priorité.</li><li>Le formatage conditionnel rend automatiquement les résultats plus faciles à repérer.</li><li>Une priorité automatique indique quoi examiner en premier ; elle ne décide pas de l&#39;action à entreprendre.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a20">
+        <h2>Activité 20 — Pour la prochaine séance</h2>
+        
+        
+        
+
+        
+
+        
+<p>Notre outil sait maintenant repérer et classer automatiquement les parcelles.</p>
+    
+
+<p>Mais nous travaillons encore parcelle par parcelle.</p>
+    
+
+<p>Lors de la prochaine séance, nous allons apprendre à répondre automatiquement à des questions comme :</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a20-q01-label">Question 1 — combien de parcelles sont prioritaires ?</h3>
+            
+
+            
+            
+                <textarea id="a20-q01" data-answer-id="a20_q01" data-required="true" aria-labelledby="a20-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a20-q02-label">Question 2 — quelle est la surface totale consacrée au maïs ?</h3>
+            
+
+            
+            
+                <textarea id="a20-q02" data-answer-id="a20_q02" data-required="true" aria-labelledby="a20-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a20-q03-label">Question 3 — quel est le rendement moyen d&#39;une culture donnée ?</h3>
+            
+
+            
+            
+                <textarea id="a20-q03" data-answer-id="a20_q03" data-required="true" aria-labelledby="a20-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Nous découvrirons pour cela les fonctions NB.SI, SOMME.SI et MOYENNE.SI.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a21">
+        <h2>Activité 21 — Sources et ressources</h2>
+        
+        
+        
+
+        
+
+        
+<ul><li>Chlorofil – BTSA ACS&#39;AGRI – référentiel et documents d&#39;accompagnement.</li><li>Inspection de l&#39;enseignement agricole – Exemples d&#39;utilisation des TIM dans des situations favorisant l&#39;acquisition de capacités.</li></ul>
+    
+
+<p><a href="https://chlorofil.fr/diplomes/secondaire/btsa/acse/acs-agri-2025" target="_blank" rel="noopener noreferrer">BTSA ACS&#39;AGRI – référentiel et documents d&#39;accompagnement</a></p>
+
+
+<p><a href="https://chlorofil.fr/fileadmin/user_upload/02-diplomes/referentiels/secondaire/btsa/acsagri-2025/btsa-acsagri-da-tim.pdf" target="_blank" rel="noopener noreferrer">Exemples d&#39;utilisation des TIM dans des situations favorisant l&#39;acquisition de capacités</a></p>
+
+
+<p>Les données et les objectifs utilisés dans cette séance sont fictifs et servent uniquement à l&#39;apprentissage.</p>
+    
+
+
+        
+        
+    </article>
+    
+</section>
+
+    </fieldset>
+    <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
+    <h2 id="course-summary-title">À retenir</h2><ul></ul>
+    <h3>Faire le point</h3><p>Relis tes réponses et vérifie les points demandés dans le bilan du cours. Tu peux revenir sur ton travail tant que le professeur ne l’a pas clôturé.</p>
+</section>
+
+    <div class="course-submit-panel">
+        <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
+        <p id="course-submit-status" role="status" aria-live="polite"></p>
+        <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
+    </div>
+</div></div>
+</div>
+<noscript><p>Active JavaScript pour charger ta copie et enregistrer tes réponses.</p></noscript>
+
+<script id="classes-data" type="application/json">
+{"college":{"nom":"Collège","classes":[{"id":"5e","nom":"5e","matieres":["techno"]},{"id":"4e","nom":"4e","matieres":["techno"]},{"id":"3e","nom":"3e","matieres":["techno"]}]},"mfr":{"nom":"MFR","classes":[{"id":"4e","nom":"4e MFR","matieres":["tim","maths"]},{"id":"3e","nom":"3e MFR","matieres":["tim","maths"]},{"id":"cap1","nom":"CAP 1","matieres":["tim"]},{"id":"cap2","nom":"CAP 2","matieres":["tim"]},{"id":"2de","nom":"2de Pro","matieres":["tim","maths"]},{"id":"1re","nom":"Bac Pro 1","matieres":["tim","maths"]},{"id":"term","nom":"Bac Pro 2","matieres":["tim","maths"]},{"id":"bts1","nom":"BTS 1","matieres":["tim"]},{"id":"bts2","nom":"BTS 2","matieres":["tim"]}]}}
+</script>
+<script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
+    </main>
+    <footer class="site-footer">
+    <p>
+        &copy; 2026
+        Portail pédagogique Technologie | TIM | Mathématiques
+    </p>
+</footer>
+</body>
+</html>

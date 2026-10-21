@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
+
+    
+    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
+    <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
+    
+
+    <title>
+        
+        Portail pédagogique Technologie | TIM | Mathématiques
+        
+    </title>
+
+    <link rel="icon" href="/tifsec-test-eleves/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/variables.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/base.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/body.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/header.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/main.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/footer.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-message.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-session.css">
+
+    
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    
+    
+
+    
+
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    
+    
+</head>
+
+<body class="student-shell student-course-shell">
+    <a class="student-skip" href="#course-intro">Aller au cours</a>
+    <p id="message" class="auth-message" role="status" aria-live="polite" hidden></p>
+    <header class="student-header" id="course-header">
+    <div class="student-header-inner">
+        <div class="student-topbar">
+            <a class="student-brand" href="/tifsec-test-eleves/eleve/"><img src="/tifsec-test-eleves/images/logo.png" width="44" height="44" alt=""><span>Mon espace<span data-profile-field="matieres"></span></span></a>
+            <div class="student-header-actions"><a class="student-home-link" href="/tifsec-test-eleves/eleve/">Mes séances</a><a id="course-login" href="/tifsec-test-eleves/connexion/">Se connecter</a><details class="student-theme-picker" id="student-theme-picker" hidden>
+    <summary>Apparence</summary>
+    <div class="student-theme-options"><label for="student-theme-select">Les couleurs de mon espace</label><select id="student-theme-select" disabled><option value="ocean">Océan · bleu</option><option value="forest">Forêt · vert</option><option value="plum">Prune · violet</option><option value="terracotta">Terre cuite · orangé</option><option value="ruby">Rubis · rouge</option><option value="slate">Ardoise · gris</option><option value="midnight">Minuit · noir</option><option value="rose">Rosée · rose</option><option value="neon">Néon · RGB sombre</option><option value="cyberpunk">Cyberpunk · cité futuriste</option><option value="minecraft">Minecraft · blocs et pixels</option><option value="farming">Farming · campagne et cultures</option></select><label class="student-theme-motion"><input type="checkbox" id="student-theme-motion"> Mettre les animations en pause</label><p id="student-theme-status" role="status" aria-live="polite">Ce choix te suivra sur les autres ordinateurs.</p><button id="student-theme-retry" type="button" hidden>Réessayer</button></div>
+</details>
+<button type="button" id="course-logout" hidden>Se déconnecter</button></div>
+        </div>
+        <div class="student-welcome-row" id="course-welcome" hidden>
+            <div><p class="student-eyebrow">Une séance à la fois, à ton rythme.</p><p class="student-course-greeting">Bonjour <span id="course-header-identity"></span></p></div>
+            <dl class="student-profile"><div><dt>Établissement</dt><dd data-profile-field="etablissement"></dd></div><div><dt>Classe</dt><dd data-profile-field="classe"></dd></div><div><dt>Inscription</dt><dd data-profile-field="validation"></dd></div></dl>
+        </div>
+    </div>
+</header>
+
+    <main class="student-course-main" id="student-course-main">
+
+<div id="course-work" data-etablissement="mfr" data-matiere="maths" data-classe="term" data-seance="S03" data-saving-enabled="true" data-collaboration-enabled="true">
+    <div class="course-save-panel course-toolbar">
+        <p id="course-identity" hidden></p>
+        <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+    </div>
+    <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
+        <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
+        <p id="group-status" role="status">Les groupes sont propres à chaque séance. Connecte-toi avec ton compte élève pour choisir ta copie.</p>
+        <div id="group-controls" hidden>
+            <label for="group-copy">Copie de cette séance</label><select id="group-copy"></select>
+            <button type="button" id="group-refresh">Actualiser les groupes</button>
+            <div id="group-create-panel" hidden>
+                <p>Choisis un ou deux camarades. Chacun doit accepter pour partager les réponses. Le groupe reprend ton travail actuel ; ta copie individuelle reste dans l’historique.</p>
+                <div id="group-classmates" class="collaboration-roster"></div>
+                <button type="button" id="group-create">Envoyer les invitations</button>
+            </div>
+        </div>
+    </section>
+    <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
+    <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
+
+
+
+<div class="course-columns">
+    <aside class="course-navigation" aria-label="Étapes de la séance">
+        <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
+        <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
+        <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a03">1. Automatismes : retrouver les outils nécessaires</a></li><li><a href="#a04">2. Comprendre la situation professionnelle</a></li><li><a href="#a05">Exercice 1 : Comprendre les charges</a></li><li><a href="#a06">Exercice 2 : Calculer le résultat pour 10 participants</a></li><li><a href="#a07">3. Construire un modèle mathématique</a></li><li><a href="#a08">Exercice 1 : Construire les formules</a></li><li><a href="#a09">Exercice 2 : Simplifier et comprendre la formule</a></li><li><a href="#a10">4. Déterminer le seuil de rentabilité</a></li><li><a href="#a11">Exercice 1 : Résoudre l&#39;équation</a></li><li><a href="#a12">Exercice 2 : Vérifier le seuil de rentabilité</a></li><li><a href="#a13">5. Comparer deux tarifs</a></li><li><a href="#a14">Exercice 1 : Construire le nouveau modèle</a></li><li><a href="#a15">Exercice 2 : Comparer et prendre une décision</a></li><li><a href="#a16">6. Bilan de la séance</a></li><li><a href="#a18">À retenir</a></li><li><a href="#a19">Pour aller plus loin : défi facultatif — facultatif</a></li><li><a href="#a20">Sources et ressources</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+    </aside>
+
+<div class="course-reading">
+<!-- ========== INTRODUCTION DU COURS ========== -->
+
+<header class="cours-intro" id="course-intro">
+    <h1>Calcul littéral et équations – Étudier la rentabilité d&#39;une activité équestre</h1>
+
+    
+    <p class="cours-theme">
+        <strong>Thème :</strong> expression littérale et fonction affine.
+    </p>
+    
+
+    
+    <p class="cours-problematique">
+        <strong>Problématique :</strong> Calcul littéral et équations – Étudier la rentabilité d&#39;une activité équestre
+    </p>
+    
+
+    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : Comprendre ce que sont les recettes, les charges et le résultat financier.</p></section>
+    
+    <section><h2>Dans la vie quotidienne</h2><p>Notions : recettes, charges fixes, charges variables et résultat financier.</p></section>
+    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    
+    
+    <section class="cours-objectifs">
+        <h2>Ce que vous allez apprendre</h2>
+        <ul>
+            
+            <li>Comprendre ce que sont les recettes, les charges et le résultat financier.</li>
+            
+            <li>Comprendre comment une expression littérale représente une situation professionnelle.</li>
+            
+            <li>Comprendre ce qu&#39;est un seuil de rentabilité et pourquoi il est important.</li>
+            
+            <li>Comprendre les limites d&#39;un modèle mathématique.</li>
+            
+        </ul>
+
+        <h2>Ce que vous allez apprendre à faire</h2>
+        <ul>
+            
+            <li>Calculer des recettes, des charges et un résultat financier.</li>
+            
+            <li>Construire, développer et réduire une expression littérale.</li>
+            
+            <li>Résoudre une équation du premier degré et vérifier sa solution.</li>
+            
+            <li>Déterminer le nombre minimal de participants pour éviter une perte.</li>
+            
+            <li>Comparer deux tarifs et justifier une décision professionnelle.</li>
+            
+        </ul>
+    </section>
+    
+<h4>Ce que vous allez apprendre</h4>
+    
+
+<ul><li>Comprendre ce que sont les recettes, les charges et le résultat financier.</li><li>Comprendre comment une expression littérale représente une situation professionnelle.</li><li>Comprendre ce qu&#39;est un seuil de rentabilité et pourquoi il est important.</li><li>Comprendre les limites d&#39;un modèle mathématique.</li></ul>
+    
+
+<h4>Ce que vous allez apprendre à faire</h4>
+    
+
+<ul><li>Calculer des recettes, des charges et un résultat financier.</li><li>Construire, développer et réduire une expression littérale.</li><li>Résoudre une équation du premier degré et vérifier sa solution.</li><li>Déterminer le nombre minimal de participants pour éviter une perte.</li><li>Comparer deux tarifs et justifier une décision professionnelle.</li></ul>
+    
+
+<p>Pourquoi étudier cette notion ?</p>
+    
+
+<p>Un centre équestre peut proposer une journée de découverte, mais cette activité entraîne des dépenses. Pour savoir si elle est financièrement viable, il faut comparer l&#39;argent reçu et l&#39;argent dépensé.</p>
+    
+
+<p>Les mathématiques permettent de prévoir le résultat financier avant même d&#39;organiser la journée.</p>
+    
+
+<p>Notre question : combien faut-il accueillir de participants pour que la journée ne fasse pas perdre d&#39;argent ?</p>
+    
+
+<p>Le lien avec les séances précédentes</p>
+    
+
+<p>En séance 1, nous avons repris les pourcentages, les équations et les fonctions. En séance 2, nous avons appris à réduire et développer des expressions littérales.</p>
+    
+
+<p>Aujourd&#39;hui, nous allons utiliser ces méthodes ensemble pour construire une formule, résoudre une équation et prendre une décision.</p>
+    
+
+<p>Ce qui change : nous ne travaillons plus uniquement sur des calculs isolés. Nous allons construire nous-mêmes le modèle mathématique d&#39;une situation professionnelle.</p>
+    
+
+<h4>Ce que je dois savoir faire</h4>
+    
+
+<ul><li>Identifier les recettes, les charges fixes et les charges variables.</li><li>Construire une expression littérale à partir d&#39;une situation professionnelle.</li><li>Développer et réduire une expression.</li><li>Résoudre une équation du premier degré.</li><li>Vérifier et interpréter une solution.</li><li>Déterminer un seuil de rentabilité.</li><li>Comparer plusieurs scénarios et justifier une décision.</li><li>Reconnaître les limites d&#39;un modèle mathématique.</li></ul>
+    
+
+
+    
+    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
+<p>Dans cette page du ministère, retrouve le programme ou le référentiel de ta formation. Les objectifs précis étudiés aujourd’hui sont indiqués dans le cours.</p>
+    
+
+<p><a href="https://chlorofil.fr/diplomes/secondaire/bac-pro/1re-tle/tronc-commun" target="_blank" rel="noopener noreferrer">Consulter les programmes et attendus officiels</a></p>
+
+
+</div></details>
+
+</header>
+
+    <fieldset id="course-answers" class="course-answer-fields" disabled>
+        <legend>Réponses aux activités</legend>
+        <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
+
+<section class="cours-activites">
+    
+    <article class="cours-activite" id="a03">
+        <h2>Activité 1 — 1. Automatismes : retrouver les outils nécessaires</h2>
+        
+        
+        
+
+        
+
+        
+<p>Notions : pourcentages, réduction, développement et équations simples.</p>
+    
+
+<p>Concrètement, qu&#39;est-ce que c&#39;est ? Ce sont des méthodes qui permettent de transformer des calculs et de retrouver une valeur inconnue.</p>
+    
+
+<p>À quoi ça sert ? À construire et utiliser les formules qui serviront ensuite à étudier la rentabilité.</p>
+    
+
+<p>Pourquoi commencer par ces calculs ?</p>
+    
+
+<p>Nous allons réutiliser des méthodes rencontrées lors des deux premières séances. Les retrouver maintenant permettra de mieux comprendre les calculs professionnels qui suivront.</p>
+    
+
+<p>Durée indicative : 6 minutes. Calculatrice interdite.</p>
+    
+
+<p>Effectuez les calculs en indiquant les étapes lorsque cela est nécessaire.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a03-q01-label">Question 1 — Calculer 15 % de 200 €.</h3>
+            
+
+            
+            
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a03-q02-label">Question 2 — Réduire : 12x + 8x - 5x.</h3>
+            
+
+            
+            
+                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a03-q03-label">Question 3 — Développer : 25(x + 4).</h3>
+            
+
+            
+            
+                <textarea id="a03-q03" data-answer-id="a03_q03" data-required="true" aria-labelledby="a03-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a03-q04-label">Question 4 — Résoudre : 20x = 300.</h3>
+            
+
+            
+            
+                <textarea id="a03-q04" data-answer-id="a03_q04" data-required="true" aria-labelledby="a03-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            <h3 id="a03-q05-label">Question 5 — Résoudre : 30x - 120 = 0.</h3>
+            
+
+            
+            
+                <textarea id="a03-q05" data-answer-id="a03_q05" data-required="true" aria-labelledby="a03-q05-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Réflexe Bac :</p>
+    
+
+<p>Lorsque vous résolvez une équation, conservez les étapes et vérifiez la solution en la remplaçant dans l&#39;égalité de départ.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a04">
+        <h2>Activité 2 — 2. Comprendre la situation professionnelle</h2>
+        
+        
+        
+
+        
+
+        
+<p>Notions : recettes, charges fixes, charges variables et résultat financier.</p>
+    
+
+<p>Concrètement, qu&#39;est-ce que c&#39;est ? Les recettes correspondent à l&#39;argent reçu. Les charges correspondent aux dépenses. Le résultat financier simplifié est la différence entre les recettes et les charges.</p>
+    
+
+<p>À quoi ça sert ? À déterminer si une activité couvre ses dépenses ou génère une perte.</p>
+    
+
+<p>Pourquoi cette activité ?</p>
+    
+
+<p>Avant de construire une formule, nous devons comprendre les données de la situation et savoir quels calculs effectuer.</p>
+    
+
+<p>Ce que cela vous apporte : savoir distinguer les différents montants d&#39;une activité professionnelle.</p>
+    
+
+<p>Un centre équestre souhaite organiser une journée de découverte pour attirer de nouveaux clients.</p>
+    
+
+<p>Le responsable veut savoir combien de participants sont nécessaires pour ne pas perdre d&#39;argent.</p>
+    
+
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Donnée</th><th scope="col">Montant</th></tr></thead><tbody><tr><td>Prix payé par participant</td><td>45 €</td></tr><tr><td>Coût variable par participant</td><td>12 €</td></tr><tr><td>Charges fixes de la journée</td><td>396 €</td></tr><tr><td>Capacité maximale</td><td>20 participants</td></tr></tbody></table></div>
+    
+
+<p>Les données sont fictives. Le modèle est simplifié : les charges indiquées sont supposées couvrir toutes les dépenses prises en compte dans l&#39;exercice.</p>
+    
+
+<p>Durée indicative : 8 minutes. Calculatrice autorisée.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a05">
+        <h2>Activité 3 — Exercice 1 : Comprendre les charges</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi cet exercice ? Toutes les dépenses n&#39;évoluent pas de la même façon. Nous devons les distinguer pour prévoir le coût de la journée.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a05-q01-label">Question 1 — Expliquer la différence entre une charge fixe et une charge variable.</h3>
+            
+
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a06">
+        <h2>Activité 4 — Exercice 2 : Calculer le résultat pour 10 participants</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi cet exercice ? Nous allons vérifier si une journée accueillant dix participants couvre les dépenses prévues.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a06-q01-label">Question 1 — Calculer les recettes pour 10 participants.</h3>
+            
+
+            
+            
+                <textarea id="a06-q01" data-answer-id="a06_q01" data-required="true" aria-labelledby="a06-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a06-q02-label">Question 2 — Calculer les charges totales pour 10 participants.</h3>
+            
+
+            
+            
+                <textarea id="a06-q02" data-answer-id="a06_q02" data-required="true" aria-labelledby="a06-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a06-q03-label">Question 3 — La journée est-elle rentable avec 10 participants ? Justifier.</h3>
+            
+
+            
+            
+                <textarea id="a06-q03" data-answer-id="a06_q03" data-required="true" aria-labelledby="a06-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a07">
+        <h2>Activité 5 — 3. Construire un modèle mathématique</h2>
+        
+        
+        
+
+        
+
+        
+<p>Notion : expression littérale et fonction affine.</p>
+    
+
+<p>Concrètement, qu&#39;est-ce que c&#39;est ? Une expression littérale utilise une lettre pour représenter un nombre variable. Une fonction permet de calculer un résultat à partir de ce nombre.</p>
+    
+
+<p>À quoi ça sert ? À prévoir rapidement les recettes, les charges et le résultat financier pour différents nombres de participants.</p>
+    
+
+<p>Pourquoi changer de méthode ?</p>
+    
+
+<p>Nous venons de calculer le résultat pour dix participants. Nous allons maintenant créer une formule réutilisable pour tous les effectifs possibles.</p>
+    
+
+<p>Ce que cela vous apporte : ne plus avoir à reconstruire tous les calculs à chaque changement de fréquentation.</p>
+    
+
+<p>On note x le nombre de participants.</p>
+    
+
+<p>On note R(x) les recettes, C(x) les charges totales et B(x) le résultat financier, en euros.</p>
+    
+
+<p>Durée indicative : 10 minutes. Calculatrice autorisée.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a08">
+        <h2>Activité 6 — Exercice 1 : Construire les formules</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi cet exercice ? Nous allons traduire les données du tableau en expressions mathématiques.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a08-q01-label">Question 1 — Exprimer les recettes R(x) en fonction de x.</h3>
+            
+
+            
+            
+                <textarea id="a08-q01" data-answer-id="a08_q01" data-required="true" aria-labelledby="a08-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a08-q02-label">Question 2 — Exprimer les charges totales C(x) en fonction de x.</h3>
+            
+
+            
+            
+                <textarea id="a08-q02" data-answer-id="a08_q02" data-required="true" aria-labelledby="a08-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a08-q03-label">Question 3 — Exprimer le résultat financier B(x) en fonction de x.</h3>
+            
+
+            
+            
+                <textarea id="a08-q03" data-answer-id="a08_q03" data-required="true" aria-labelledby="a08-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a09">
+        <h2>Activité 7 — Exercice 2 : Simplifier et comprendre la formule</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi cet exercice ? Une formule simplifiée est plus rapide à utiliser et permet de mieux comprendre ce qui fait varier le résultat financier.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a09-q01-label">Question 1 — Développer et réduire l&#39;expression B(x).</h3>
+            
+
+            
+            
+                <textarea id="a09-q01" data-answer-id="a09_q01" data-required="true" aria-labelledby="a09-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a09-q02-label">Question 2 — Expliquer la signification de 33 et de -396 dans cette expression.</h3>
+            
+
+            
+            
+                <textarea id="a09-q02" data-answer-id="a09_q02" data-required="true" aria-labelledby="a09-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a09-q03-label">Question 3 — Vérifier que la formule donne bien une perte de 66 € pour 10 participants.</h3>
+            
+
+            
+            
+                <textarea id="a09-q03" data-answer-id="a09_q03" data-required="true" aria-labelledby="a09-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Notre modèle :</p>
+    
+
+<p>Recettes : R(x) = 45x.</p>
+    
+
+<p>Charges : C(x) = 396 + 12x.</p>
+    
+
+<p>Résultat financier : B(x) = 33x - 396.</p>
+    
+
+<p>Ce modèle est valable pour un nombre entier de participants compris entre 0 et 20.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a10">
+        <h2>Activité 8 — 4. Déterminer le seuil de rentabilité</h2>
+        
+        
+        
+
+        
+
+        
+<p>Notion : équation du premier degré et seuil de rentabilité.</p>
+    
+
+<p>Concrètement, qu&#39;est-ce que c&#39;est ? Dans ce modèle, le seuil de rentabilité correspond au nombre de participants pour lequel les recettes couvrent exactement les charges : le résultat financier est nul.</p>
+    
+
+<p>À quoi ça sert ? À fixer un objectif minimal de fréquentation avant d&#39;organiser une activité.</p>
+    
+
+<p>Pourquoi utiliser une équation ?</p>
+    
+
+<p>Nous connaissons la formule du résultat financier, mais pas encore le nombre de participants qui permet d&#39;obtenir zéro euro de résultat.</p>
+    
+
+<p>Ce que cela vous apporte : savoir retrouver directement une valeur inconnue à partir d&#39;un objectif.</p>
+    
+
+<p>On utilise la formule B(x) = 33x - 396.</p>
+    
+
+<p>Durée indicative : 12 minutes. Calculatrice autorisée.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a11">
+        <h2>Activité 9 — Exercice 1 : Résoudre l&#39;équation</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi cet exercice ? Nous allons déterminer le nombre exact de participants qui permet de couvrir toutes les charges.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a11-q01-label">Question 1 — Écrire l&#39;équation correspondant à un résultat financier nul.</h3>
+            
+
+            
+            
+                <textarea id="a11-q01" data-answer-id="a11_q01" data-required="true" aria-labelledby="a11-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a11-q02-label">Question 2 — Résoudre cette équation en détaillant les étapes.</h3>
+            
+
+            
+            
+                <textarea id="a11-q02" data-answer-id="a11_q02" data-required="true" aria-labelledby="a11-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a11-q03-label">Question 3 — Interpréter le résultat obtenu dans le contexte professionnel.</h3>
+            
+
+            
+            
+                <textarea id="a11-q03" data-answer-id="a11_q03" data-required="true" aria-labelledby="a11-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a12">
+        <h2>Activité 10 — Exercice 2 : Vérifier le seuil de rentabilité</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi cet exercice ? Nous allons vérifier que notre résultat correspond réellement au passage d&#39;une perte à un résultat nul, puis à un bénéfice.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a12-q01-label">Question 1 — Calculer B(11), B(12) et B(13).</h3>
+            
+
+            
+            
+                <textarea id="a12-q01" data-answer-id="a12_q01" data-required="true" aria-labelledby="a12-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a12-q02-label">Question 2 — Déterminer le nombre minimal de participants permettant d&#39;éviter une perte.</h3>
+            
+
+            
+            
+                <textarea id="a12-q02" data-answer-id="a12_q02" data-required="true" aria-labelledby="a12-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a12-q03-label">Question 3 — Calculer le résultat financier maximal possible si le centre accueille 20 participants.</h3>
+            
+
+            
+            
+                <textarea id="a12-q03" data-answer-id="a12_q03" data-required="true" aria-labelledby="a12-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Réflexe Bac :</p>
+    
+
+<p>Après avoir résolu une équation, vérifiez la solution et son sens dans le problème. Une valeur peut être correcte mathématiquement sans être admissible dans la situation réelle.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a13">
+        <h2>Activité 11 — 5. Comparer deux tarifs</h2>
+        
+        
+        
+
+        
+
+        
+<p>Notion : modification d&#39;un modèle et comparaison de résultats.</p>
+    
+
+<p>Concrètement, qu&#39;est-ce que c&#39;est ? Nous allons modifier une donnée du modèle, puis recalculer les résultats pour mesurer son effet.</p>
+    
+
+<p>À quoi ça sert ? À anticiper les conséquences financières d&#39;un changement de prix avant de prendre une décision.</p>
+    
+
+<p>Pourquoi cette dernière activité ?</p>
+    
+
+<p>Nous avons déterminé le seuil de rentabilité avec un tarif de 45 €. Nous allons maintenant voir comment ce seuil évolue si le tarif augmente.</p>
+    
+
+<p>Ce que cela vous apporte : comprendre qu&#39;une formule permet de comparer plusieurs décisions, mais qu&#39;elle ne prédit pas automatiquement le comportement des clients.</p>
+    
+
+<p>Le responsable envisage de faire passer le prix de la journée de 45 € à 50 € par participant.</p>
+    
+
+<p>Les charges restent identiques : 396 € de charges fixes et 12 € de charges variables par participant.</p>
+    
+
+<p>Durée indicative : 11 minutes. Calculatrice autorisée.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a14">
+        <h2>Activité 12 — Exercice 1 : Construire le nouveau modèle</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi cet exercice ? Nous allons réutiliser la méthode précédente avec un prix différent pour voir ce qui change dans la formule.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a14-q01-label">Question 1 — Exprimer le nouveau résultat financier B₂(x), puis développer et réduire.</h3>
+            
+
+            
+            
+                <textarea id="a14-q01" data-answer-id="a14_q01" data-required="true" aria-labelledby="a14-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a14-q02-label">Question 2 — Résoudre l&#39;équation B₂(x) = 0.</h3>
+            
+
+            
+            
+                <textarea id="a14-q02" data-answer-id="a14_q02" data-required="true" aria-labelledby="a14-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a14-q03-label">Question 3 — Déterminer le nombre minimal entier de participants permettant d&#39;éviter une perte.</h3>
+            
+
+            
+            
+                <textarea id="a14-q03" data-answer-id="a14_q03" data-required="true" aria-labelledby="a14-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a15">
+        <h2>Activité 13 — Exercice 2 : Comparer et prendre une décision</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi cet exercice ? Nous allons comparer les deux tarifs, puis expliquer pourquoi un résultat mathématique ne suffit pas toujours pour choisir une stratégie commerciale.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a15-q01-label">Question 1 — Comparer les résultats financiers des deux tarifs pour 15 participants.</h3>
+            
+
+            
+            
+                <textarea id="a15-q01" data-answer-id="a15_q01" data-required="true" aria-labelledby="a15-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a15-q02-label">Question 2 — Expliquer pourquoi augmenter le tarif n&#39;est pas nécessairement la meilleure décision commerciale.</h3>
+            
+
+            
+            
+                <textarea id="a15-q02" data-answer-id="a15_q02" data-required="true" aria-labelledby="a15-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a16">
+        <h2>Activité 14 — 6. Bilan de la séance</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi ce bilan ? Il permet de retrouver les étapes de la démarche et de comprendre ce que nous avons réellement appris à faire.</p>
+    
+
+<p>Calculatrice interdite. Répondez oralement ou par une courte phrase.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a16-q01-label">Question 1 — Pourquoi le seuil de rentabilité est-il de 12 participants au tarif de 45 € ?</h3>
+            
+
+            
+            
+                <textarea id="a16-q01" data-answer-id="a16_q01" data-required="true" aria-labelledby="a16-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a16-q02-label">Question 2 — Pourquoi une équation est-elle plus pratique que de tester tous les nombres de participants ?</h3>
+            
+
+            
+            
+                <textarea id="a16-q02" data-answer-id="a16_q02" data-required="true" aria-labelledby="a16-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a16-q03-label">Question 3 — Pourquoi faut-il vérifier les hypothèses d&#39;un modèle avant de prendre une décision ?</h3>
+            
+
+            
+            
+                <textarea id="a16-q03" data-answer-id="a16_q03" data-required="true" aria-labelledby="a16-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a18">
+        <h2>Activité 15 — À retenir</h2>
+        
+        
+        
+
+        
+
+        
+<ul><li>Les recettes correspondent à l&#39;argent reçu et les charges aux dépenses prises en compte.</li><li>Le résultat financier se calcule en soustrayant les charges aux recettes.</li><li>Une expression littérale permet de représenter une situation avec une valeur variable.</li><li>Le seuil de rentabilité correspond à un résultat financier nul dans notre modèle.</li><li>Une équation permet de déterminer ce seuil.</li><li>Une solution doit être vérifiée et interprétée dans son contexte.</li><li>Un tarif plus élevé ne garantit pas un meilleur résultat si la fréquentation change.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a19">
+        <h2>Activité 16 — Pour aller plus loin : défi facultatif</h2>
+        <p class="course-optional">Pour aller plus loin — activité facultative.</p>
+        
+        
+
+        
+
+        
+<p>Pourquoi ce défi ? Nous avons comparé deux tarifs en supposant la même fréquentation. Nous allons maintenant comparer trois tarifs avec des nombres d&#39;inscriptions prévus différents.</p>
+    
+
+<p>À réaliser uniquement si le travail principal est terminé, ou en prolongement.</p>
+    
+
+<p>Calculatrice autorisée.</p>
+    
+
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Tarif</th><th scope="col">Prix par participant</th><th scope="col">Inscriptions prévues</th></tr></thead><tbody><tr><td>A</td><td>45 €</td><td>18</td></tr><tr><td>B</td><td>50 €</td><td>15</td></tr><tr><td>C</td><td>55 €</td><td>12</td></tr></tbody></table></div>
+    
+
+<p>Les charges fixes restent de 396 € et les charges variables de 12 € par participant. La capacité maximale reste de 20 participants.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a19-q01-label">Question 1 — Calculer le résultat financier pour chacun des trois tarifs.</h3>
+            
+
+            
+            
+                <textarea id="a19-q01" data-answer-id="a19_q01" data-required="false" aria-labelledby="a19-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a19-q02-label">Question 2 — Combien de participants faudrait-il accueillir au tarif B pour obtenir un résultat au moins égal à celui du tarif A ?</h3>
+            
+
+            
+            
+                <textarea id="a19-q02" data-answer-id="a19_q02" data-required="false" aria-labelledby="a19-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a19-q03-label">Question 3 — Le responsable souhaite au moins 200 € de bénéfice et au moins 15 participants. Quels tarifs respectent ces deux objectifs avec les prévisions actuelles ?</h3>
+            
+
+            
+            
+                <textarea id="a19-q03" data-answer-id="a19_q03" data-required="false" aria-labelledby="a19-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a19-q04-label">Question 4 — Proposer une modification d&#39;un seul paramètre permettant au tarif B de respecter les deux objectifs. Justifier par le calcul.</h3>
+            
+
+            
+            
+                <textarea id="a19-q04" data-answer-id="a19_q04" data-required="false" aria-labelledby="a19-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            <h3 id="a19-q05-label">Question 5 — Rédiger une recommandation finale en précisant l&#39;avantage et le risque de votre solution.</h3>
+            
+
+            
+            
+                <textarea id="a19-q05" data-answer-id="a19_q05" data-required="false" aria-labelledby="a19-q05-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a20">
+        <h2>Activité 17 — Sources et ressources</h2>
+        
+        
+        
+
+        
+
+        
+<ul><li>Chlorofil – Baccalauréat professionnel : tronc commun – référentiel et ressources officielles.</li><li>Chlorofil – Document d&#39;accompagnement MG1 – pratique algébrique, fonctions, modélisation et résolution de problèmes.</li><li>Chlorofil – Bac professionnel CGEH – contexte de la filière hippique.</li></ul>
+    
+
+<p><a href="https://chlorofil.fr/diplomes/secondaire/bac-pro/1re-tle/tronc-commun" target="_blank" rel="noopener noreferrer">Chlorofil – Baccalauréat professionnel : tronc commun</a></p>
+
+
+<p><a href="https://chlorofil.fr/fileadmin/user_upload/02-diplomes/referentiels/secondaire/bacpro/bacpro-tc-da-MG1.pdf" target="_blank" rel="noopener noreferrer">Chlorofil – Document d&#39;accompagnement MG1</a></p>
+
+
+<p><a href="https://chlorofil.fr/diplomes/secondaire/bac-pro/1re-tle/cgeh" target="_blank" rel="noopener noreferrer">Chlorofil – Bac professionnel CGEH</a></p>
+
+
+
+        
+        
+    </article>
+    
+</section>
+
+    </fieldset>
+    <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
+    <h2 id="course-summary-title">À retenir</h2><ul></ul>
+    <h3>Faire le point</h3><p>Relis tes réponses et vérifie les points demandés dans le bilan du cours. Tu peux revenir sur ton travail tant que le professeur ne l’a pas clôturé.</p>
+</section>
+
+    <div class="course-submit-panel">
+        <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
+        <p id="course-submit-status" role="status" aria-live="polite"></p>
+        <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
+    </div>
+</div></div>
+</div>
+<noscript><p>Active JavaScript pour charger ta copie et enregistrer tes réponses.</p></noscript>
+
+<script id="classes-data" type="application/json">
+{"college":{"nom":"Collège","classes":[{"id":"5e","nom":"5e","matieres":["techno"]},{"id":"4e","nom":"4e","matieres":["techno"]},{"id":"3e","nom":"3e","matieres":["techno"]}]},"mfr":{"nom":"MFR","classes":[{"id":"4e","nom":"4e MFR","matieres":["tim","maths"]},{"id":"3e","nom":"3e MFR","matieres":["tim","maths"]},{"id":"cap1","nom":"CAP 1","matieres":["tim"]},{"id":"cap2","nom":"CAP 2","matieres":["tim"]},{"id":"2de","nom":"2de Pro","matieres":["tim","maths"]},{"id":"1re","nom":"Bac Pro 1","matieres":["tim","maths"]},{"id":"term","nom":"Bac Pro 2","matieres":["tim","maths"]},{"id":"bts1","nom":"BTS 1","matieres":["tim"]},{"id":"bts2","nom":"BTS 2","matieres":["tim"]}]}}
+</script>
+<script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
+    </main>
+    <footer class="site-footer">
+    <p>
+        &copy; 2026
+        Portail pédagogique Technologie | TIM | Mathématiques
+    </p>
+</footer>
+</body>
+</html>

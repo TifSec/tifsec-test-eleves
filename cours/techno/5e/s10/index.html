@@ -1,0 +1,1574 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
+
+    
+    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
+    <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
+    
+
+    <title>
+        
+        Portail pédagogique Technologie | TIM | Mathématiques
+        
+    </title>
+
+    <link rel="icon" href="/tifsec-test-eleves/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/variables.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/base.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/body.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/header.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/main.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/footer.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-message.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-session.css">
+
+    
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    
+    
+
+    
+
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    
+    
+</head>
+
+<body class="student-shell student-course-shell">
+    <a class="student-skip" href="#course-intro">Aller au cours</a>
+    <p id="message" class="auth-message" role="status" aria-live="polite" hidden></p>
+    <header class="student-header" id="course-header">
+    <div class="student-header-inner">
+        <div class="student-topbar">
+            <a class="student-brand" href="/tifsec-test-eleves/eleve/"><img src="/tifsec-test-eleves/images/logo.png" width="44" height="44" alt=""><span>Mon espace<span data-profile-field="matieres"></span></span></a>
+            <div class="student-header-actions"><a class="student-home-link" href="/tifsec-test-eleves/eleve/">Mes séances</a><a id="course-login" href="/tifsec-test-eleves/connexion/">Se connecter</a><details class="student-theme-picker" id="student-theme-picker" hidden>
+    <summary>Apparence</summary>
+    <div class="student-theme-options"><label for="student-theme-select">Les couleurs de mon espace</label><select id="student-theme-select" disabled><option value="ocean">Océan · bleu</option><option value="forest">Forêt · vert</option><option value="plum">Prune · violet</option><option value="terracotta">Terre cuite · orangé</option><option value="ruby">Rubis · rouge</option><option value="slate">Ardoise · gris</option><option value="midnight">Minuit · noir</option><option value="rose">Rosée · rose</option><option value="neon">Néon · RGB sombre</option><option value="cyberpunk">Cyberpunk · cité futuriste</option><option value="minecraft">Minecraft · blocs et pixels</option><option value="farming">Farming · campagne et cultures</option></select><label class="student-theme-motion"><input type="checkbox" id="student-theme-motion"> Mettre les animations en pause</label><p id="student-theme-status" role="status" aria-live="polite">Ce choix te suivra sur les autres ordinateurs.</p><button id="student-theme-retry" type="button" hidden>Réessayer</button></div>
+</details>
+<button type="button" id="course-logout" hidden>Se déconnecter</button></div>
+        </div>
+        <div class="student-welcome-row" id="course-welcome" hidden>
+            <div><p class="student-eyebrow">Une séance à la fois, à ton rythme.</p><p class="student-course-greeting">Bonjour <span id="course-header-identity"></span></p></div>
+            <dl class="student-profile"><div><dt>Établissement</dt><dd data-profile-field="etablissement"></dd></div><div><dt>Classe</dt><dd data-profile-field="classe"></dd></div><div><dt>Inscription</dt><dd data-profile-field="validation"></dd></div></dl>
+        </div>
+    </div>
+</header>
+
+    <main class="student-course-main" id="student-course-main">
+
+<div id="course-work" data-etablissement="college" data-matiere="techno" data-classe="5e" data-seance="S10" data-saving-enabled="true" data-collaboration-enabled="true">
+    <div class="course-save-panel course-toolbar">
+        <p id="course-identity" hidden></p>
+        <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+    </div>
+    <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
+        <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
+        <p id="group-status" role="status">Les groupes sont propres à chaque séance. Connecte-toi avec ton compte élève pour choisir ta copie.</p>
+        <div id="group-controls" hidden>
+            <label for="group-copy">Copie de cette séance</label><select id="group-copy"></select>
+            <button type="button" id="group-refresh">Actualiser les groupes</button>
+            <div id="group-create-panel" hidden>
+                <p>Choisis un ou deux camarades. Chacun doit accepter pour partager les réponses. Le groupe reprend ton travail actuel ; ta copie individuelle reste dans l’historique.</p>
+                <div id="group-classmates" class="collaboration-roster"></div>
+                <button type="button" id="group-create">Envoyer les invitations</button>
+            </div>
+        </div>
+    </section>
+    <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
+    <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
+
+
+
+<div class="course-columns">
+    <aside class="course-navigation" aria-label="Étapes de la séance">
+        <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
+        <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
+        <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a04">1. Avant de programmer : retrouvons notre méthode</a></li><li><a href="#a05">2. Créer notre premier personnage</a></li><li><a href="#a06">3. Permettre au joueur de déplacer le personnage</a></li><li><a href="#a07">4. Une valeur peut modifier le comportement</a></li><li><a href="#a08">5. Ajouter l&#39;objet à récupérer</a></li><li><a href="#a09">6. Que se passe-t-il lorsque le joueur touche l&#39;objet ?</a></li><li><a href="#a10">7. Le programme doit se souvenir</a></li><li><a href="#a11">8. Créer la sortie</a></li><li><a href="#a12">9. La sortie ne doit pas toujours provoquer la victoire</a></li><li><a href="#a13">10. Tester plusieurs situations</a></li><li><a href="#a14">11. Quand un test échoue</a></li><li><a href="#a15">12. Petit défi : maintenant, avec moins d&#39;aide</a></li><li><a href="#a16">13. Conclusion</a></li><li><a href="#a17">Sources et ressources</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+    </aside>
+
+<div class="course-reading">
+<!-- ========== INTRODUCTION DU COURS ========== -->
+
+<header class="cours-intro" id="course-intro">
+    <h1>Comment assembler nos petites solutions pour créer un jeu ?</h1>
+
+    
+    <p class="cours-theme">
+        <strong>Thème :</strong> Structure, fonctionnement, comportement : des objets et des systèmes techniques à comprendre
+    </p>
+    
+
+    
+    <p class="cours-problematique">
+        <strong>Problématique :</strong> Comment construire progressivement un programme en assemblant plusieurs petites solutions ?
+    </p>
+    
+
+    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : Comprendre qu&#39;un programme complexe peut être construit progressivement.</p></section>
+    
+    <section><h2>Dans la vie quotidienne</h2><p>Un test consiste à provoquer volontairement une situation précise puis à comparer :</p></section>
+    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    
+    
+    <section class="cours-objectifs">
+        <h2>Ce que vous allez apprendre</h2>
+        <ul>
+            
+            <li>Comprendre qu&#39;un programme complexe peut être construit progressivement.</li>
+            
+            <li>Comprendre qu&#39;un événement déclenche des instructions lorsqu&#39;une situation particulière se produit.</li>
+            
+            <li>Comprendre qu&#39;une variable permet au programme de conserver une information.</li>
+            
+            <li>Comprendre qu&#39;une condition permet au programme de choisir entre plusieurs actions.</li>
+            
+            <li>Comprendre qu&#39;il est utile de tester chaque petite fonctionnalité avant d&#39;en ajouter une nouvelle.</li>
+            
+            <li>Comprendre qu&#39;une erreur observée fournit des informations utiles pour rechercher ce qui doit être corrigé.</li>
+            
+        </ul>
+
+        <h2>Ce que vous allez apprendre à faire</h2>
+        <ul>
+            
+        </ul>
+    </section>
+    
+<h4>Compétence visée : Compléter et modifier un programme graphique, tester son fonctionnement et corriger progressivement les erreurs observées</h4>
+    
+
+<p>Objectifs d’apprentissage :</p>
+    
+
+<ul><li>Comprendre qu&#39;un programme complexe peut être construit progressivement.</li><li>Comprendre qu&#39;un événement déclenche des instructions lorsqu&#39;une situation particulière se produit.</li><li>Comprendre qu&#39;une variable permet au programme de conserver une information.</li><li>Comprendre qu&#39;une condition permet au programme de choisir entre plusieurs actions.</li><li>Comprendre qu&#39;il est utile de tester chaque petite fonctionnalité avant d&#39;en ajouter une nouvelle.</li><li>Comprendre qu&#39;une erreur observée fournit des informations utiles pour rechercher ce qui doit être corrigé.</li></ul>
+    
+
+<ul><li>Créer un programme simple avec MakeCode Arcade.</li><li>Créer et contrôler un personnage.</li><li>Créer plusieurs sprites ayant des rôles différents.</li><li>Détecter le contact entre deux types de sprites.</li><li>Mémoriser une information avec une variable.</li><li>Utiliser une condition simple.</li><li>Tester plusieurs situations prévues.</li><li>Modifier une petite partie du programme puis tester à nouveau.</li></ul>
+    
+
+<ul><li>Un document LibreOffice Writer nommé 5e_S10_nom1_nom2.odt.</li><li>Les noms et prénoms des élèves du groupe.</li><li>Le titre de la séance.</li><li>Les réponses aux différentes questions.</li><li>Un tableau présentant les tests réalisés.</li><li>Un projet MakeCode Arcade nommé 5e_S10_nom1_nom2.</li></ul>
+    
+
+<p>Le document Writer devra être rendu en fin de séance, même si le programme n&#39;est pas entièrement terminé.</p>
+    
+
+<p>Important : ne cherchez pas à terminer tout le jeu immédiatement. Nous allons construire et tester une fonctionnalité à la fois.</p>
+    
+
+
+    
+    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
+<p>Dans cette page du ministère, retrouve le programme ou le référentiel de ta formation. Les objectifs précis étudiés aujourd’hui sont indiqués dans le cours.</p>
+    
+
+<p><a href="https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4" target="_blank" rel="noopener noreferrer">Consulter les programmes et attendus officiels</a></p>
+
+
+</div></details>
+
+</header>
+
+    <fieldset id="course-answers" class="course-answer-fields" disabled>
+        <legend>Réponses aux activités</legend>
+        <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
+
+<section class="cours-activites">
+    
+    <article class="cours-activite" id="a04">
+        <h2>Activité 1 — 1. Avant de programmer : retrouvons notre méthode</h2>
+        
+        
+        
+
+        
+
+        
+<p>Lors de la séance précédente, nous avons préparé le fonctionnement d&#39;un petit jeu :</p>
+    
+
+<p>Le joueur doit récupérer un objet puis rejoindre la sortie.</p>
+    
+
+<p>Nous avions décomposé le problème « créer un jeu » en plusieurs sous-problèmes.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a04-q01-label">Question 1 — Q1 : Sans regarder votre travail précédent, retrouvez au moins cinq sous-problèmes nécessaires pour réaliser ce jeu.</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Comparez ensuite votre réponse avec votre document de la séance 9.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a05">
+        <h2>Activité 2 — 2. Créer notre premier personnage</h2>
+        
+        
+        
+
+        
+
+        
+<p>Ouvrez MakeCode Arcade puis créez un nouveau projet nommé :</p>
+    
+
+<p>5e_S10_nom1_nom2</p>
+    
+
+<p>Important :</p>
+    
+
+<ul><li>les blocs servant à créer, positionner ou initialiser les éléments du jeu seront placés dans au démarrage, sauf indication contraire ;</li><li>les blocs commençant par « lorsque... » sont des événements : ils restent dans leurs propres blocs.</li></ul>
+    
+
+<p>Notre premier sous-problème est :</p>
+    
+
+<p>Créer le personnage du joueur.</p>
+    
+
+<p>Dans MakeCode Arcade, les personnages et de nombreux objets présents à l&#39;écran sont appelés des sprites.</p>
+    
+
+<p>Documentation : Microsoft MakeCode Arcade – Sprites</p>
+    
+
+<p><a href="https://arcade.makecode.com/reference/sprites" target="_blank" rel="noopener noreferrer">Microsoft MakeCode Arcade – Sprites</a></p>
+
+
+<p>Étape 1 : ouvrez la catégorie Sprites.</p>
+    
+
+<p>Étape 2 : recherchez le bloc qui permet de créer un sprite et de lui attribuer une image et un type.</p>
+    
+
+<p>Placez ce bloc dans au démarrage.</p>
+    
+
+<p>Choisissez une apparence simple pour votre personnage et conservez le type :</p>
+    
+
+<p>Player</p>
+    
+
+<p>Renommez la variable créée automatiquement en :</p>
+    
+
+<p>joueur</p>
+    
+
+<p>Ajoutez ensuite, dans au démarrage, le bloc permettant de définir la position du sprite.</p>
+    
+
+<p>Vous pouvez placer votre joueur où vous le souhaitez. Pour commencer simplement, vous pouvez utiliser :</p>
+    
+
+<p>x = 10 y = 60</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a05-q01-label">Question 1 — Q2 : Pourquoi faut-il créer le sprite joueur avant de pouvoir le positionner ou le déplacer ?</h3>
+            
+
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a06">
+        <h2>Activité 3 — 3. Permettre au joueur de déplacer le personnage</h2>
+        
+        
+        
+
+        
+
+        
+<p>Le sprite apparaît, mais le joueur ne peut pas encore le contrôler.</p>
+    
+
+<p>Nous devons maintenant résoudre :</p>
+    
+
+<p>Comment relier les boutons directionnels au personnage ?</p>
+    
+
+<p>Étape 1 : ouvrez la catégorie Controller.</p>
+    
+
+<p>Étape 2 : recherchez le bloc permettant de :</p>
+    
+
+<p>déplacer joueur avec les boutons</p>
+    
+
+<p>Ce bloc possède deux valeurs de vitesse :</p>
+    
+
+<ul><li>vx : vitesse sur l&#39;axe horizontal ;</li><li>vy : vitesse sur l&#39;axe vertical.</li></ul>
+    
+
+<p>Documentation : Microsoft MakeCode Arcade – Déplacement d&#39;un sprite avec les boutons</p>
+    
+
+<p><a href="https://arcade.makecode.com/reference/controller/move-sprite" target="_blank" rel="noopener noreferrer">Microsoft MakeCode Arcade – Déplacement d&#39;un sprite avec les boutons</a></p>
+
+
+<p>Pour commencer, faites en sorte que le joueur puisse se déplacer uniquement horizontalement.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a06-q01-label">Question 1 — Q3 : Quelle valeur devez-vous mettre à 0 pour empêcher les déplacements verticaux ?</h3>
+            
+
+            
+            
+                <textarea id="a06-q01" data-answer-id="a06_q01" data-required="true" aria-labelledby="a06-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Testez avec le simulateur.</p>
+    
+
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a06-q02-label">Question 2 — Q4 : Que se passerait-il si nous supprimions complètement le bloc de déplacement ?</h3>
+            
+
+            
+            
+                <textarea id="a06-q02" data-answer-id="a06_q02" data-required="true" aria-labelledby="a06-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a07">
+        <h2>Activité 4 — 4. Une valeur peut modifier le comportement</h2>
+        
+        
+        
+
+        
+
+        
+<p>La vitesse du joueur dépend des valeurs indiquées dans le bloc de déplacement.</p>
+    
+
+<p>Avant de modifier les valeurs :</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a07-q01-label">Question 1 — Q5 : Que pensez-vous qu&#39;il se passera si vous doublez la valeur de vx ?</h3>
+            
+
+            
+            
+                <textarea id="a07-q01" data-answer-id="a07_q01" data-required="true" aria-labelledby="a07-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Notez votre hypothèse dans Writer.</p>
+    
+
+<p>Doublez ensuite la valeur et testez le programme.</p>
+    
+
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a07-q02-label">Question 2 — Q6 : Qu&#39;avez-vous observé ? Votre hypothèse était-elle correcte ?</h3>
+            
+
+            
+            
+                <textarea id="a07-q02" data-answer-id="a07_q02" data-required="true" aria-labelledby="a07-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Choisissez ensuite une vitesse qui vous semble adaptée au jeu.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a08">
+        <h2>Activité 5 — 5. Ajouter l&#39;objet à récupérer</h2>
+        
+        
+        
+
+        
+
+        
+<p>Le joueur existe et peut se déplacer.</p>
+    
+
+<p>Résolvons maintenant :</p>
+    
+
+<p>Créer l&#39;objet que le joueur devra récupérer.</p>
+    
+
+<p>Vous avez déjà créé un sprite une fois.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a08-q01-label">Question 1 — Q7 : Dans quelle catégorie devez-vous rechercher le bloc nécessaire ?</h3>
+            
+
+            
+            
+                <textarea id="a08-q01" data-answer-id="a08_q01" data-required="true" aria-labelledby="a08-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Créez un nouveau sprite dans au démarrage.</p>
+    
+
+<p>Renommez sa variable :</p>
+    
+
+<p>objet</p>
+    
+
+<p>Choisissez son apparence.</p>
+    
+
+<p>Cette fois, utilisez le type :</p>
+    
+
+<p>Food</p>
+    
+
+<p>Placez l&#39;objet sur la même ligne horizontale que le joueur afin de pouvoir le tester facilement.</p>
+    
+
+<p>Par exemple :</p>
+    
+
+<p>x = 80 y = 60</p>
+    
+
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a08-q02-label">Question 2 — Q8 : Pourquoi est-il utile que le joueur soit de type Player et l&#39;objet de type Food ?</h3>
+            
+
+            
+            
+                <textarea id="a08-q02" data-answer-id="a08_q02" data-required="true" aria-labelledby="a08-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a09">
+        <h2>Activité 6 — 6. Que se passe-t-il lorsque le joueur touche l&#39;objet ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Lancez le jeu puis déplacez le joueur jusqu&#39;à l&#39;objet.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a09-q01-label">Question 1 — Q9 : Que se passe-t-il actuellement lorsque les deux sprites se touchent ?</h3>
+            
+
+            
+            
+                <textarea id="a09-q01" data-answer-id="a09_q01" data-required="true" aria-labelledby="a09-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Rien de particulier n&#39;a encore été programmé pour cette situation.</p>
+    
+
+<p>Nous allons utiliser un événement.</p>
+    
+
+<p>Documentation : Microsoft MakeCode Arcade – Événement de chevauchement entre sprites</p>
+    
+
+<p><a href="https://arcade.makecode.com/reference/sprites/on-overlap" target="_blank" rel="noopener noreferrer">Microsoft MakeCode Arcade – Événement de chevauchement entre sprites</a></p>
+
+
+<p>Dans la catégorie Sprites, recherchez le bloc qui commence par :</p>
+    
+
+<p>lorsque sprite de type ... chevauche sprite de type ...</p>
+    
+
+<p>Réglez les types pour détecter :</p>
+    
+
+<p>Player + Food</p>
+    
+
+<p>Attention : ce bloc est un événement. Il ne se place pas dans au démarrage.</p>
+    
+
+<p>Les instructions situées à l&#39;intérieur seront exécutées lorsque les deux types de sprites se chevaucheront.</p>
+    
+
+<p>Dans cet événement, ajoutez un bloc de la catégorie Sprites permettant de détruire l&#39;objet récupéré.</p>
+    
+
+<p>Testez.</p>
+    
+
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a09-q02-label">Question 2 — Q10 : Quelle situation déclenche maintenant la disparition de l&#39;objet ?</h3>
+            
+
+            
+            
+                <textarea id="a09-q02" data-answer-id="a09_q02" data-required="true" aria-labelledby="a09-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a09-q03-label">Question 3 — Q11 : Pourquoi le bloc de chevauchement est-il appelé un événement ?</h3>
+            
+
+            
+            
+                <textarea id="a09-q03" data-answer-id="a09_q03" data-required="true" aria-labelledby="a09-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a10">
+        <h2>Activité 7 — 7. Le programme doit se souvenir</h2>
+        
+        
+        
+
+        
+
+        
+<p>L&#39;objet disparaît maintenant lorsque le joueur le récupère.</p>
+    
+
+<p>Mais une difficulté apparaît :</p>
+    
+
+<p>Comment le programme saura-t-il plus tard que l&#39;objet a déjà été récupéré ?</p>
+    
+
+<p>Nous allons conserver cette information dans une variable.</p>
+    
+
+<p>Ouvrez la catégorie Variables et créez :</p>
+    
+
+<p>objetRecupere</p>
+    
+
+<p>Documentation : Microsoft MakeCode Arcade – Variables</p>
+    
+
+<p><a href="https://arcade.makecode.com/blocks/variables" target="_blank" rel="noopener noreferrer">Microsoft MakeCode Arcade – Variables</a></p>
+
+
+<p>Cette variable utilisera deux valeurs simples :</p>
+    
+
+<ul><li>0 : l&#39;objet n&#39;a pas encore été récupéré ;</li><li>1 : l&#39;objet a été récupéré.</li></ul>
+    
+
+<p>Dans au démarrage, ajoutez :</p>
+    
+
+<p>définir objetRecupere à 0</p>
+    
+
+<p>Puis, dans l&#39;événement Player + Food, juste avant ou après la disparition de l&#39;objet, ajoutez :</p>
+    
+
+<p>définir objetRecupere à 1</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a10-q01-label">Question 1 — Q12 : Pourquoi la variable vaut-elle 0 au démarrage ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q01" data-answer-id="a10_q01" data-required="true" aria-labelledby="a10-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a10-q02-label">Question 2 — Q13 : Quel événement fait passer sa valeur à 1 ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q02" data-answer-id="a10_q02" data-required="true" aria-labelledby="a10-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a10-q03-label">Question 3 — Q14 : Pourquoi devons-nous mémoriser cette information alors que l&#39;objet a disparu de l&#39;écran ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q03" data-answer-id="a10_q03" data-required="true" aria-labelledby="a10-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a11">
+        <h2>Activité 8 — 8. Créer la sortie</h2>
+        
+        
+        
+
+        
+
+        
+<p>Nous allons maintenant créer un troisième sprite : la sortie.</p>
+    
+
+<p>Vous connaissez déjà la méthode générale.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a11-q01-label">Question 1 — Q15 : Créez un nouveau sprite représentant la sortie.</h3>
+            
+
+            
+            
+                <textarea id="a11-q01" data-answer-id="a11_q01" data-required="true" aria-labelledby="a11-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Renommez sa variable :</p>
+    
+
+<p>sortie</p>
+    
+
+<p>Donnez-lui un type différent de Player et Food.</p>
+    
+
+<p>Vous pouvez créer un nouveau type nommé :</p>
+    
+
+<p>Exit</p>
+    
+
+<p>Placez ensuite la sortie à un autre endroit de l&#39;écran.</p>
+    
+
+<p>Nous devons détecter lorsque le joueur l&#39;atteint.</p>
+    
+
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a11-q02-label">Question 2 — Q16 : Quel type de bloc déjà utilisé pourrait permettre de détecter cette rencontre ?</h3>
+            
+
+            
+            
+                <textarea id="a11-q02" data-answer-id="a11_q02" data-required="true" aria-labelledby="a11-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Créez l&#39;événement correspondant au chevauchement :</p>
+    
+
+<p>Player + Exit</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a12">
+        <h2>Activité 9 — 9. La sortie ne doit pas toujours provoquer la victoire</h2>
+        
+        
+        
+
+        
+
+        
+<p>Avant de poursuivre : rendez de nouveau le déplacement possible sur les axes x ET y.</p>
+    
+
+<p>Retournez au bloc de déplacement du joueur et remettez une valeur différente de 0 pour vy.</p>
+    
+
+<p>Le joueur peut maintenant rejoindre la sortie.</p>
+    
+
+<p>Mais nous voulons respecter la règle :</p>
+    
+
+<p>Le joueur doit avoir récupéré l&#39;objet avant de pouvoir gagner.</p>
+    
+
+<p>Complétez :</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a12-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
+            
+
+            
+            
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Situation</th>
+                                
+                                <th>Valeur de objetRecupere</th>
+                                
+                                <th>Résultat attendu</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Le joueur n&#39;a pas récupéré l&#39;objet
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a12_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="9. La sortie ne doit pas toujours provoquer la victoire — Valeur de objetRecupere — Le joueur n&#39;a pas récupéré l&#39;objet">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a12_q01_r0_c2" data-required="true" data-row="0" data-col="2" aria-label="9. La sortie ne doit pas toujours provoquer la victoire — Résultat attendu — Le joueur n&#39;a pas récupéré l&#39;objet">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Le joueur a récupéré l&#39;objet
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a12_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="9. La sortie ne doit pas toujours provoquer la victoire — Valeur de objetRecupere — Le joueur a récupéré l&#39;objet">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a12_q01_r1_c2" data-required="true" data-row="1" data-col="2" aria-label="9. La sortie ne doit pas toujours provoquer la victoire — Résultat attendu — Le joueur a récupéré l&#39;objet">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a12-q02-label">Question 2 — Q17 : Complétez le tableau avant de programmer la suite.</h3>
+            
+
+            
+            
+                <textarea id="a12-q02" data-answer-id="a12_q02" data-required="true" aria-labelledby="a12-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Le programme doit maintenant prendre une décision.</p>
+    
+
+<p>Ouvrez la catégorie Logique et recherchez un bloc :</p>
+    
+
+<p>SI ... ALORS ... SINON ...</p>
+    
+
+<p>Documentation : Microsoft MakeCode Arcade – Conditions If / Else</p>
+    
+
+<p><a href="https://arcade.makecode.com/blocks/logic/if" target="_blank" rel="noopener noreferrer">Microsoft MakeCode Arcade – Conditions If / Else</a></p>
+
+
+<p>Placez ce bloc à l&#39;intérieur de l&#39;événement Player + Exit.</p>
+    
+
+<p>Nous voulons obtenir :</p>
+    
+
+<p>SI objetRecupere = 1 ALORS déclencher la victoire SINON continuer la partie</p>
+    
+
+<p>Pour déclencher la victoire, recherchez dans la catégorie Jeu le bloc permettant de terminer la partie en gagnant.</p>
+    
+
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a12-q03-label">Question 3 — Q18 : Pourquoi cette condition doit-elle être vérifiée lorsque le joueur atteint la sortie et non uniquement au démarrage ?</h3>
+            
+
+            
+            
+                <textarea id="a12-q03" data-answer-id="a12_q03" data-required="true" aria-labelledby="a12-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a12-q04-label">Question 4 — Q19 : Quelle donnée permet au programme de choisir entre victoire et poursuite de la partie ?</h3>
+            
+
+            
+            
+                <textarea id="a12-q04" data-answer-id="a12_q04" data-required="true" aria-labelledby="a12-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a13">
+        <h2>Activité 10 — 10. Tester plusieurs situations</h2>
+        
+        
+        
+
+        
+
+        
+<p>Le programme semble maintenant fonctionner.</p>
+    
+
+<p>Mais jouer une fois ne suffit pas pour vérifier un programme.</p>
+    
+
+<p>Un test consiste à provoquer volontairement une situation précise puis à comparer :</p>
+    
+
+<p>résultat attendu ↔ résultat obtenu</p>
+    
+
+<p>Complétez dans Writer :</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a13-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
+            
+
+            
+            
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Test</th>
+                                
+                                <th>Résultat attendu</th>
+                                
+                                <th>Résultat obtenu</th>
+                                
+                                <th>Correct ?</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Déplacer le joueur dans les quatre directions
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Le joueur répond correctement aux commandes
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a13_q01_r0_c2" data-required="true" data-row="0" data-col="2" aria-label="10. Tester plusieurs situations — Résultat obtenu — Déplacer le joueur dans les quatre directions">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Oui / Non
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Toucher l&#39;objet
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    L&#39;objet disparaît
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a13_q01_r1_c2" data-required="true" data-row="1" data-col="2" aria-label="10. Tester plusieurs situations — Résultat obtenu — Toucher l&#39;objet">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Oui / Non
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Atteindre la sortie sans prendre l&#39;objet
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    La partie continue
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a13_q01_r2_c2" data-required="true" data-row="2" data-col="2" aria-label="10. Tester plusieurs situations — Résultat obtenu — Atteindre la sortie sans prendre l&#39;objet">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Oui / Non
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Prendre l&#39;objet puis atteindre la sortie
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Victoire
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a13_q01_r3_c2" data-required="true" data-row="3" data-col="2" aria-label="10. Tester plusieurs situations — Résultat obtenu — Prendre l&#39;objet puis atteindre la sortie">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Oui / Non
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a13-q02-label">Question 2 — Q20 : Pourquoi faut-il tester la sortie avec et sans l&#39;objet ?</h3>
+            
+
+            
+            
+                <textarea id="a13-q02" data-answer-id="a13_q02" data-required="true" aria-labelledby="a13-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a14">
+        <h2>Activité 11 — 11. Quand un test échoue</h2>
+        
+        
+        
+
+        
+
+        
+<p>Si un test échoue, ne recommencez pas immédiatement tout le programme.</p>
+    
+
+<p>Ne modifiez pas non plus plusieurs parties au hasard.</p>
+    
+
+<p>Utilisez la méthode :</p>
+    
+
+<p>Observer → proposer une cause → vérifier → modifier une chose → tester à nouveau</p>
+    
+
+<p>Exemples :</p>
+    
+
+<ul><li>l&#39;objet ne disparaît pas → vérifier d&#39;abord l&#39;événement Player + Food ;</li><li>l&#39;objet disparaît mais la victoire reste impossible → vérifier la valeur de objetRecupere ;</li><li>le joueur gagne même sans récupérer l&#39;objet → vérifier la condition placée dans l&#39;événement de sortie.</li></ul>
+    
+
+<p>Si vous rencontrez une erreur, complétez une ligne :</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a14-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
+            
+
+            
+            
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Problème observé</th>
+                                
+                                <th>Cause possible</th>
+                                
+                                <th>Modification réalisée</th>
+                                
+                                <th>Nouveau résultat</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a14_q01_r0_c0" data-required="true" data-row="0" data-col="0" aria-label="11. Quand un test échoue — Problème observé — ">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a14_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="11. Quand un test échoue — Cause possible — ">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a14_q01_r0_c2" data-required="true" data-row="0" data-col="2" aria-label="11. Quand un test échoue — Modification réalisée — ">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a14_q01_r0_c3" data-required="true" data-row="0" data-col="3" aria-label="11. Quand un test échoue — Nouveau résultat — ">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a14-q02-label">Question 2 — Q21 : Pourquoi vaut-il mieux modifier une seule chose avant de tester à nouveau ?</h3>
+            
+
+            
+            
+                <textarea id="a14-q02" data-answer-id="a14_q02" data-required="true" aria-labelledby="a14-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a15">
+        <h2>Activité 12 — 12. Petit défi : maintenant, avec moins d&#39;aide</h2>
+        
+        
+        
+
+        
+
+        
+<p>Cette partie est facultative. Ne la commencez que si le programme principal fonctionne et si les tests précédents sont terminés.</p>
+    
+
+<p>Choisissez une seule amélioration :</p>
+    
+
+<ul><li>afficher un message lorsque la sortie est atteinte sans l&#39;objet ;</li><li>ajouter un deuxième objet à récupérer ;</li><li>ajouter un compteur de points ;</li><li>ajouter trois vies ;</li><li>ajouter un ennemi qui fait perdre une vie.</li></ul>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a15-q01-label">Question 1 — Q22 : Quelle amélioration choisissez-vous ?</h3>
+            
+
+            
+            
+                <textarea id="a15-q01" data-answer-id="a15_q01" data-required="true" aria-labelledby="a15-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a15-q02-label">Question 2 — Q23 : Avant de programmer, décomposez-la en plusieurs petits problèmes.</h3>
+            
+
+            
+            
+                <textarea id="a15-q02" data-answer-id="a15_q02" data-required="true" aria-labelledby="a15-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a15-q03-label">Question 3 — Q24 : Pour chaque petit problème, indiquez ce dont vous pensez avoir besoin :</h3>
+            
+
+            
+            
+                <textarea id="a15-q03" data-answer-id="a15_q03" data-required="true" aria-labelledby="a15-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<ul><li>un sprite ;</li><li>un événement ;</li><li>une variable ;</li><li>une condition ;</li><li>ou une solution déjà utilisée dans le programme.</li></ul>
+    
+
+<p>Expliquez vos choix avant de rechercher les blocs.</p>
+    
+
+<p>Vous pouvez ensuite essayer de programmer votre amélioration.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a16">
+        <h2>Activité 13 — 13. Conclusion</h2>
+        
+        
+        
+
+        
+
+        
+<p>Répondez avec vos propres mots.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a16-q01-label">Question 1 — Q25 : Qu&#39;est-ce qu&#39;un événement ? Donnez un exemple provenant de votre jeu.</h3>
+            
+
+            
+            
+                <textarea id="a16-q01" data-answer-id="a16_q01" data-required="true" aria-labelledby="a16-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a16-q02-label">Question 2 — Q26 : À quoi sert la variable objetRecupere ?</h3>
+            
+
+            
+            
+                <textarea id="a16-q02" data-answer-id="a16_q02" data-required="true" aria-labelledby="a16-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a16-q03-label">Question 3 — Q27 : Pourquoi avons-nous besoin d&#39;une condition au niveau de la sortie ?</h3>
+            
+
+            
+            
+                <textarea id="a16-q03" data-answer-id="a16_q03" data-required="true" aria-labelledby="a16-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a16-q04-label">Question 4 — Q28 : Pourquoi avons-nous construit et testé le jeu fonctionnalité par fonctionnalité plutôt que de tout programmer en une seule fois ?</h3>
+            
+
+            
+            
+                <textarea id="a16-q04" data-answer-id="a16_q04" data-required="true" aria-labelledby="a16-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            <h3 id="a16-q05-label">Question 5 — Q29 : Un autre élève souhaite créer un jeu mais ne sait pas par où commencer. Expliquez-lui en trois ou quatre phrases la méthode que vous lui conseilleriez.</h3>
+            
+
+            
+            
+                <textarea id="a16-q05" data-answer-id="a16_q05" data-required="true" aria-labelledby="a16-q05-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Votre réponse devra faire apparaître les idées :</p>
+    
+
+<p>décomposer → réaliser une petite partie → tester → corriger → continuer → assembler</p>
+    
+
+<p>Enregistrez votre fichier Writer.</p>
+    
+
+<p>Vérifiez également que votre projet MakeCode Arcade porte le nom :</p>
+    
+
+<p>5e_S10_nom1_nom2</p>
+    
+
+<p>Déposez les fichiers demandés dans l&#39;espace d&#39;échange.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a17">
+        <h2>Activité 14 — Sources et ressources</h2>
+        
+        
+        
+
+        
+
+        
+<ul><li>Ministère de l&#39;Éducation nationale – Programme de technologie du cycle 4 : Programme officiel de technologie</li></ul>
+    
+
+<p><a href="https://www.education.gouv.fr/bo/2024/Hebdo9/MENE2402802A" target="_blank" rel="noopener noreferrer">Programme officiel de technologie</a></p>
+
+
+<p>Cette séance utilise MakeCode Arcade de manière volontairement guidée. Les élèves commencent par identifier le rôle de chaque bloc, le tester et observer son effet. L&#39;aide diminue progressivement lorsque des solutions déjà rencontrées doivent être réutilisées.</p>
+    
+
+
+        
+        
+    </article>
+    
+</section>
+
+    </fieldset>
+    <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
+    <h2 id="course-summary-title">À retenir</h2><ul></ul>
+    <h3>Faire le point</h3><p>Relis tes réponses et vérifie les points demandés dans le bilan du cours. Tu peux revenir sur ton travail tant que le professeur ne l’a pas clôturé.</p>
+</section>
+
+    <div class="course-submit-panel">
+        <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
+        <p id="course-submit-status" role="status" aria-live="polite"></p>
+        <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
+    </div>
+</div></div>
+</div>
+<noscript><p>Active JavaScript pour charger ta copie et enregistrer tes réponses.</p></noscript>
+
+<script id="classes-data" type="application/json">
+{"college":{"nom":"Collège","classes":[{"id":"5e","nom":"5e","matieres":["techno"]},{"id":"4e","nom":"4e","matieres":["techno"]},{"id":"3e","nom":"3e","matieres":["techno"]}]},"mfr":{"nom":"MFR","classes":[{"id":"4e","nom":"4e MFR","matieres":["tim","maths"]},{"id":"3e","nom":"3e MFR","matieres":["tim","maths"]},{"id":"cap1","nom":"CAP 1","matieres":["tim"]},{"id":"cap2","nom":"CAP 2","matieres":["tim"]},{"id":"2de","nom":"2de Pro","matieres":["tim","maths"]},{"id":"1re","nom":"Bac Pro 1","matieres":["tim","maths"]},{"id":"term","nom":"Bac Pro 2","matieres":["tim","maths"]},{"id":"bts1","nom":"BTS 1","matieres":["tim"]},{"id":"bts2","nom":"BTS 2","matieres":["tim"]}]}}
+</script>
+<script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
+    </main>
+    <footer class="site-footer">
+    <p>
+        &copy; 2026
+        Portail pédagogique Technologie | TIM | Mathématiques
+    </p>
+</footer>
+</body>
+</html>

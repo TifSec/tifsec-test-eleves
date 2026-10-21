@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
+
+    
+    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
+    <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
+    
+
+    <title>
+        
+        Portail pédagogique Technologie | TIM | Mathématiques
+        
+    </title>
+
+    <link rel="icon" href="/tifsec-test-eleves/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/variables.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/base.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/body.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/header.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/main.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/footer.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-message.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-session.css">
+
+    
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    
+    
+
+    
+
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    
+    
+</head>
+
+<body class="student-shell student-course-shell">
+    <a class="student-skip" href="#course-intro">Aller au cours</a>
+    <p id="message" class="auth-message" role="status" aria-live="polite" hidden></p>
+    <header class="student-header" id="course-header">
+    <div class="student-header-inner">
+        <div class="student-topbar">
+            <a class="student-brand" href="/tifsec-test-eleves/eleve/"><img src="/tifsec-test-eleves/images/logo.png" width="44" height="44" alt=""><span>Mon espace<span data-profile-field="matieres"></span></span></a>
+            <div class="student-header-actions"><a class="student-home-link" href="/tifsec-test-eleves/eleve/">Mes séances</a><a id="course-login" href="/tifsec-test-eleves/connexion/">Se connecter</a><details class="student-theme-picker" id="student-theme-picker" hidden>
+    <summary>Apparence</summary>
+    <div class="student-theme-options"><label for="student-theme-select">Les couleurs de mon espace</label><select id="student-theme-select" disabled><option value="ocean">Océan · bleu</option><option value="forest">Forêt · vert</option><option value="plum">Prune · violet</option><option value="terracotta">Terre cuite · orangé</option><option value="ruby">Rubis · rouge</option><option value="slate">Ardoise · gris</option><option value="midnight">Minuit · noir</option><option value="rose">Rosée · rose</option><option value="neon">Néon · RGB sombre</option><option value="cyberpunk">Cyberpunk · cité futuriste</option><option value="minecraft">Minecraft · blocs et pixels</option><option value="farming">Farming · campagne et cultures</option></select><label class="student-theme-motion"><input type="checkbox" id="student-theme-motion"> Mettre les animations en pause</label><p id="student-theme-status" role="status" aria-live="polite">Ce choix te suivra sur les autres ordinateurs.</p><button id="student-theme-retry" type="button" hidden>Réessayer</button></div>
+</details>
+<button type="button" id="course-logout" hidden>Se déconnecter</button></div>
+        </div>
+        <div class="student-welcome-row" id="course-welcome" hidden>
+            <div><p class="student-eyebrow">Une séance à la fois, à ton rythme.</p><p class="student-course-greeting">Bonjour <span id="course-header-identity"></span></p></div>
+            <dl class="student-profile"><div><dt>Établissement</dt><dd data-profile-field="etablissement"></dd></div><div><dt>Classe</dt><dd data-profile-field="classe"></dd></div><div><dt>Inscription</dt><dd data-profile-field="validation"></dd></div></dl>
+        </div>
+    </div>
+</header>
+
+    <main class="student-course-main" id="student-course-main">
+
+<div id="course-work" data-etablissement="college" data-matiere="techno" data-classe="5e" data-seance="S04" data-saving-enabled="true" data-collaboration-enabled="true">
+    <div class="course-save-panel course-toolbar">
+        <p id="course-identity" hidden></p>
+        <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+    </div>
+    <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
+        <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
+        <p id="group-status" role="status">Les groupes sont propres à chaque séance. Connecte-toi avec ton compte élève pour choisir ta copie.</p>
+        <div id="group-controls" hidden>
+            <label for="group-copy">Copie de cette séance</label><select id="group-copy"></select>
+            <button type="button" id="group-refresh">Actualiser les groupes</button>
+            <div id="group-create-panel" hidden>
+                <p>Choisis un ou deux camarades. Chacun doit accepter pour partager les réponses. Le groupe reprend ton travail actuel ; ta copie individuelle reste dans l’historique.</p>
+                <div id="group-classmates" class="collaboration-roster"></div>
+                <button type="button" id="group-create">Envoyer les invitations</button>
+            </div>
+        </div>
+    </section>
+    <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
+    <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
+
+
+
+<div class="course-columns">
+    <aside class="course-navigation" aria-label="Étapes de la séance">
+        <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
+        <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
+        <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a04">1. Le vélo a-t-il toujours ressemblé à celui que nous connaissons ?</a></li><li><a href="#a05">2. Remettre les vélos dans l&#39;ordre</a></li><li><a href="#a06">3. Vérifier nos hypothèses avec des données historiques</a></li><li><a href="#a07">4. Qu&#39;est-ce qui a changé ?</a></li><li><a href="#a08">5. Et qu&#39;est-ce qui est resté proche ?</a></li><li><a href="#a09">6. Pourquoi modifier un objet qui fonctionne déjà ?</a></li><li><a href="#a10">7. Relier un problème à une évolution technique</a></li><li><a href="#a11">8. Une famille d&#39;objets techniques</a></li><li><a href="#a12">9. Une lignée d&#39;objets techniques</a></li><li><a href="#a13">10. Petit défi : faire évoluer un vélo</a></li><li><a href="#a14">11. Conclusion du travail</a></li><li><a href="#a15">Sources et ressources</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+    </aside>
+
+<div class="course-reading">
+<!-- ========== INTRODUCTION DU COURS ========== -->
+
+<header class="cours-intro" id="course-intro">
+    <h1>Pourquoi les vélos ont-ils changé au cours du temps ?</h1>
+
+    
+    <p class="cours-theme">
+        <strong>Thème :</strong> Les objets et les systèmes techniques : leurs usages et leurs interactions à découvrir et analyser
+    </p>
+    
+
+    
+    <p class="cours-problematique">
+        <strong>Problématique :</strong> Si le besoin de se déplacer existe depuis longtemps, pourquoi les vélos d&#39;aujourd&#39;hui sont-ils différents des premiers vélos ?
+    </p>
+    
+
+    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Imaginons maintenant qu&#39;un vélo permette déjà de se déplacer correctement.</p></section>
+    
+    <section><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
+    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    
+    
+    <section class="cours-objectifs">
+        <h2>Ce que vous allez apprendre</h2>
+        <ul>
+            
+            <li>Comprendre qu&#39;un objet technique évolue au cours du temps.</li>
+            
+            <li>Comprendre que le besoin principal peut rester proche alors que les usages et les solutions techniques évoluent.</li>
+            
+            <li>Découvrir les notions de famille d&#39;objets techniques et de lignée d&#39;objets techniques.</li>
+            
+            <li>Identifier différentes raisons pouvant expliquer l&#39;évolution d&#39;un objet technique.</li>
+            
+            <li>Comprendre qu&#39;une évolution technique répond généralement à un problème, un usage ou une contrainte.</li>
+            
+        </ul>
+
+        <h2>Ce que vous allez apprendre à faire</h2>
+        <ul>
+            
+        </ul>
+    </section>
+    
+<h4>Compétence visée : Mettre en relation l&#39;évolution des objets techniques avec l&#39;évolution des besoins, des usages, des contraintes et des solutions techniques</h4>
+    
+
+<p>Objectifs d’apprentissage :</p>
+    
+
+<ul><li>Comprendre qu&#39;un objet technique évolue au cours du temps.</li><li>Comprendre que le besoin principal peut rester proche alors que les usages et les solutions techniques évoluent.</li><li>Découvrir les notions de famille d&#39;objets techniques et de lignée d&#39;objets techniques.</li><li>Identifier différentes raisons pouvant expliquer l&#39;évolution d&#39;un objet technique.</li><li>Comprendre qu&#39;une évolution technique répond généralement à un problème, un usage ou une contrainte.</li></ul>
+    
+
+<ul><li>Observer et comparer plusieurs objets techniques.</li><li>Proposer puis vérifier un classement chronologique.</li><li>Repérer ce qui a changé et ce qui est resté similaire.</li><li>Mettre en relation une évolution technique avec un problème, un usage ou une contrainte.</li><li>Organiser des informations dans un tableau.</li><li>Justifier une hypothèse à partir d&#39;indices.</li></ul>
+    
+
+<ul><li>Un document LibreOffice Writer nommé 5e_S4_nom1_nom2.odt.</li><li>Les noms et prénoms des élèves du groupe.</li><li>Le titre de la séance.</li><li>Les réponses aux différentes questions.</li><li>Un classement chronologique des vélos étudiés.</li><li>Un tableau comparatif.</li><li>Une courte conclusion expliquant pourquoi le vélo a évolué.</li></ul>
+    
+
+<p>Le document devra être enregistré puis déposé dans l&#39;espace d&#39;échange à la fin de la séance, même s&#39;il n&#39;est pas entièrement terminé.</p>
+    
+
+
+    
+    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
+<p>Dans cette page du ministère, retrouve le programme ou le référentiel de ta formation. Les objectifs précis étudiés aujourd’hui sont indiqués dans le cours.</p>
+    
+
+<p><a href="https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4" target="_blank" rel="noopener noreferrer">Consulter les programmes et attendus officiels</a></p>
+
+
+</div></details>
+
+</header>
+
+    <fieldset id="course-answers" class="course-answer-fields" disabled>
+        <legend>Réponses aux activités</legend>
+        <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
+
+<section class="cours-activites">
+    
+    <article class="cours-activite" id="a04">
+        <h2>Activité 1 — 1. Le vélo a-t-il toujours ressemblé à celui que nous connaissons ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Lors des séances précédentes, nous avons étudié le vélo actuel.</p>
+    
+
+<p>Nous avons identifié plusieurs fonctions techniques comme :</p>
+    
+
+<ul><li>permettre d&#39;avancer ;</li><li>permettre de changer de direction ;</li><li>permettre de ralentir ou de s&#39;arrêter ;</li><li>supporter l&#39;utilisateur.</li></ul>
+    
+
+<p>Mais les ancêtres du vélo étaient très différents.</p>
+    
+
+<p>Le vélo a-t-il toujours utilisé les mêmes solutions techniques ?</p>
+    
+
+<p>Dans votre document, notez votre première hypothèse en une ou deux phrases.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a05">
+        <h2>Activité 2 — 2. Remettre les vélos dans l&#39;ordre</h2>
+        
+        
+        
+
+        
+
+        
+<p>Observez attentivement les différents vélos représentés sur l&#39;image suivante.</p>
+    
+
+<figure class="cours-document"><img src="https://tifsec.github.io/techno/5/images/classement_velos.jpg" alt="Différents vélos et ancêtres du vélo à classer chronologiquement" loading="lazy" decoding="async"></figure>
+    
+
+<p>Sans effectuer de recherche pour le moment, classez-les du plus ancien au plus récent.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a05-q01-label">Question 1 — Q1 : Notez votre classement dans votre document.</h3>
+            
+
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a05-q02-label">Question 2 — Q2 : Pour chaque objet, indiquez au moins un indice qui vous a aidé à estimer son ancienneté.</h3>
+            
+
+            
+            
+                <textarea id="a05-q02" data-answer-id="a05_q02" data-required="true" aria-labelledby="a05-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Vous pouvez notamment observer :</p>
+    
+
+<ul><li>la taille des roues ;</li><li>la présence ou non de pédales ;</li><li>la présence d&#39;une transmission ;</li><li>la forme du cadre ;</li><li>les systèmes de freinage visibles ;</li><li>les matériaux visibles ;</li><li>la présence d&#39;une batterie ou d&#39;un moteur électrique.</li></ul>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a06">
+        <h2>Activité 3 — 3. Vérifier nos hypothèses avec des données historiques</h2>
+        
+        
+        
+
+        
+
+        
+<p>Comparez maintenant votre classement avec les informations issues de documents historiques et techniques.</p>
+    
+
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Objet ou étape étudiée</th><th scope="col">Repère historique</th><th scope="col">Évolution importante</th></tr></thead><tbody><tr><td>Draisienne</td><td>1817-1818</td><td>Deux roues alignées ; propulsion avec les pieds ; absence de pédales.</td></tr><tr><td>Vélocipède à pédales</td><td>Milieu du XIXe siècle</td><td>Apparition de systèmes de pédalage permettant d&#39;entraîner une roue.</td></tr><tr><td>Grand-bi</td><td>Deuxième moitié du XIXe siècle</td><td>Très grande roue avant permettant de parcourir davantage de distance par tour de pédale.</td></tr><tr><td>Bicyclette dite de sécurité</td><td>Fin du XIXe siècle</td><td>Deux roues de dimensions proches et développement de la transmission vers la roue arrière.</td></tr><tr><td>Vélo tout-terrain</td><td>Développement au XXe siècle</td><td>Adaptation à la pratique sur chemins et terrains accidentés.</td></tr><tr><td>Vélo à assistance électrique</td><td>Développement important à l&#39;époque contemporaine</td><td>Ajout d&#39;une assistance électrique au pédalage.</td></tr></tbody></table></div>
+    
+
+<p>INPI – De la draisienne au vélo sans chaîne : Histoire des inventions et brevets liés au vélo</p>
+    
+
+<p><a href="https://www.inpi.fr/de-la-draisienne-au-velo-sans-chaine" target="_blank" rel="noopener noreferrer">Histoire des inventions et brevets liés au vélo</a></p>
+
+
+<p>INPI – Un vélocipède pour les bipèdes (1818) : Brevet historique de la draisienne</p>
+    
+
+<p><a href="https://www.inpi.fr/un-velocipede-pour-les-bipedes-1818" target="_blank" rel="noopener noreferrer">Brevet historique de la draisienne</a></p>
+
+
+<p>Musée des Arts et Métiers – Bicycle Rudge ou « Grand Bi » : Ressource historique et technique sur la draisienne, le vélocipède et le grand-bi</p>
+    
+
+<p><a href="https://www.arts-et-metiers.net/sites/arts-et-metiers/files/2021-10/field_media_document-324-fo_grand_bi.pdf" target="_blank" rel="noopener noreferrer">Ressource historique et technique sur la draisienne, le vélocipède et le grand-bi</a></p>
+
+
+<p>Musée des Arts et Métiers – Le Dicycle Otto Safety : Ressource sur l&#39;évolution des cycles et la recherche de sécurité</p>
+    
+
+<p><a href="https://www.arts-et-metiers.net/musee/le-dicycle-otto-safety" target="_blank" rel="noopener noreferrer">Ressource sur l&#39;évolution des cycles et la recherche de sécurité</a></p>
+
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a06-q01-label">Question 1 — Q3 : Votre classement était-il correct ? Si nécessaire, indiquez ce que vous avez dû modifier.</h3>
+            
+
+            
+            
+                <textarea id="a06-q01" data-answer-id="a06_q01" data-required="true" aria-labelledby="a06-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a06-q02-label">Question 2 — Q4 : Quelle différence essentielle observez-vous entre la draisienne et les vélocipèdes équipés de pédales ?</h3>
+            
+
+            
+            
+                <textarea id="a06-q02" data-answer-id="a06_q02" data-required="true" aria-labelledby="a06-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a06-q03-label">Question 3 — Q5 : Pourquoi le passage du grand-bi à des bicyclettes possédant deux roues de dimensions proches a-t-il constitué une évolution importante ?</h3>
+            
+
+            
+            
+                <textarea id="a06-q03" data-answer-id="a06_q03" data-required="true" aria-labelledby="a06-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a07">
+        <h2>Activité 4 — 4. Qu&#39;est-ce qui a changé ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Choisissez maintenant trois objets appartenant à trois périodes différentes.</p>
+    
+
+<p>Dans votre document Writer, recopiez puis complétez le tableau suivant :</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a07-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
+            
+
+            
+            
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Critère observé</th>
+                                
+                                <th>Objet 1</th>
+                                
+                                <th>Objet 2</th>
+                                
+                                <th>Objet 3</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Comment l&#39;utilisateur provoque-t-il le déplacement ?
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a07_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="4. Qu&#39;est-ce qui a changé ? — Objet 1 — Comment l&#39;utilisateur provoque-t-il le déplacement ?">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a07_q01_r0_c2" data-required="true" data-row="0" data-col="2" aria-label="4. Qu&#39;est-ce qui a changé ? — Objet 2 — Comment l&#39;utilisateur provoque-t-il le déplacement ?">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a07_q01_r0_c3" data-required="true" data-row="0" data-col="3" aria-label="4. Qu&#39;est-ce qui a changé ? — Objet 3 — Comment l&#39;utilisateur provoque-t-il le déplacement ?">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Comment change-t-il de direction ?
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a07_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="4. Qu&#39;est-ce qui a changé ? — Objet 1 — Comment change-t-il de direction ?">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a07_q01_r1_c2" data-required="true" data-row="1" data-col="2" aria-label="4. Qu&#39;est-ce qui a changé ? — Objet 2 — Comment change-t-il de direction ?">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a07_q01_r1_c3" data-required="true" data-row="1" data-col="3" aria-label="4. Qu&#39;est-ce qui a changé ? — Objet 3 — Comment change-t-il de direction ?">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Comment peut-il ralentir ou s&#39;arrêter ?
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a07_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="4. Qu&#39;est-ce qui a changé ? — Objet 1 — Comment peut-il ralentir ou s&#39;arrêter ?">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a07_q01_r2_c2" data-required="true" data-row="2" data-col="2" aria-label="4. Qu&#39;est-ce qui a changé ? — Objet 2 — Comment peut-il ralentir ou s&#39;arrêter ?">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a07_q01_r2_c3" data-required="true" data-row="2" data-col="3" aria-label="4. Qu&#39;est-ce qui a changé ? — Objet 3 — Comment peut-il ralentir ou s&#39;arrêter ?">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Comment l&#39;utilisateur est-il installé ?
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a07_q01_r3_c1" data-required="true" data-row="3" data-col="1" aria-label="4. Qu&#39;est-ce qui a changé ? — Objet 1 — Comment l&#39;utilisateur est-il installé ?">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a07_q01_r3_c2" data-required="true" data-row="3" data-col="2" aria-label="4. Qu&#39;est-ce qui a changé ? — Objet 2 — Comment l&#39;utilisateur est-il installé ?">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a07_q01_r3_c3" data-required="true" data-row="3" data-col="3" aria-label="4. Qu&#39;est-ce qui a changé ? — Objet 3 — Comment l&#39;utilisateur est-il installé ?">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Quelle énergie est fournie pour le déplacement ?
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a07_q01_r4_c1" data-required="true" data-row="4" data-col="1" aria-label="4. Qu&#39;est-ce qui a changé ? — Objet 1 — Quelle énergie est fournie pour le déplacement ?">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a07_q01_r4_c2" data-required="true" data-row="4" data-col="2" aria-label="4. Qu&#39;est-ce qui a changé ? — Objet 2 — Quelle énergie est fournie pour le déplacement ?">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a07_q01_r4_c3" data-required="true" data-row="4" data-col="3" aria-label="4. Qu&#39;est-ce qui a changé ? — Objet 3 — Quelle énergie est fournie pour le déplacement ?">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a07-q02-label">Question 2 — Q6 : Parmi les éléments comparés, lequel vous semble avoir le plus évolué ? Justifiez avec un exemple précis.</h3>
+            
+
+            
+            
+                <textarea id="a07-q02" data-answer-id="a07_q02" data-required="true" aria-labelledby="a07-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a08">
+        <h2>Activité 5 — 5. Et qu&#39;est-ce qui est resté proche ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Les objets étudiés sont très différents, mais ils ont également des points communs.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a08-q01-label">Question 1 — Q7 : Quel besoin principal est commun à tous ces objets ?</h3>
+            
+
+            
+            
+                <textarea id="a08-q01" data-answer-id="a08_q01" data-required="true" aria-labelledby="a08-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a08-q02-label">Question 2 — Q8 : Retrouvez au moins trois fonctions techniques déjà étudiées que la plupart de ces objets doivent assurer.</h3>
+            
+
+            
+            
+                <textarea id="a08-q02" data-answer-id="a08_q02" data-required="true" aria-labelledby="a08-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a08-q03-label">Question 3 — Q9 : Les solutions techniques utilisées pour réaliser ces fonctions sont-elles toujours identiques ? Donnez un exemple.</h3>
+            
+
+            
+            
+                <textarea id="a08-q03" data-answer-id="a08_q03" data-required="true" aria-labelledby="a08-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a09">
+        <h2>Activité 6 — 6. Pourquoi modifier un objet qui fonctionne déjà ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Imaginons maintenant qu&#39;un vélo permette déjà de se déplacer correctement.</p>
+    
+
+<p>Pourquoi continuer à le modifier ?</p>
+    
+
+<p>Avant de lire les exemples suivants, proposez dans votre document au moins quatre raisons qui pourraient pousser des concepteurs ou fabricants à faire évoluer un vélo.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a09-q01-label">Question 1 — Q10 : Notez vos quatre propositions.</h3>
+            
+
+            
+            
+                <textarea id="a09-q01" data-answer-id="a09_q01" data-required="true" aria-labelledby="a09-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Comparez ensuite vos idées avec les pistes suivantes :</p>
+    
+
+<ul><li>augmenter la sécurité ;</li><li>améliorer le confort ;</li><li>rechercher de meilleures performances ;</li><li>permettre de nouveaux usages ;</li><li>rouler sur d&#39;autres types de terrains ;</li><li>transporter des personnes ou des marchandises ;</li><li>réduire certains efforts de l&#39;utilisateur ;</li><li>utiliser de nouveaux matériaux ou procédés ;</li><li>faciliter l&#39;entretien ou la réparation ;</li><li>répondre à de nouvelles contraintes environnementales ou réglementaires.</li></ul>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a10">
+        <h2>Activité 7 — 7. Relier un problème à une évolution technique</h2>
+        
+        
+        
+
+        
+
+        
+<p>Une évolution technique n&#39;apparaît généralement pas sans raison.</p>
+    
+
+<p>On peut rechercher une relation de la forme :</p>
+    
+
+<p>Problème, usage ou contrainte → évolution technique</p>
+    
+
+<p>Exemples :</p>
+    
+
+<ul><li>rouler sur des chemins accidentés → adaptation des pneus, du cadre et éventuellement des suspensions ;</li><li>réduire l&#39;effort fourni par le cycliste → assistance électrique ;</li><li>transporter des charges importantes → développement de vélos cargo ;</li><li>rechercher davantage de sécurité → évolution de la géométrie et des systèmes de freinage.</li></ul>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a10-q01-label">Question 1 — Q11 : Choisissez une évolution observée sur les vélos et expliquez :</h3>
+            
+
+            
+            
+                <textarea id="a10-q01" data-answer-id="a10_q01" data-required="true" aria-labelledby="a10-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<ol><li>le problème, l&#39;usage ou la contrainte ;</li><li>la solution technique utilisée pour y répondre.</li></ol>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a11">
+        <h2>Activité 8 — 8. Une famille d&#39;objets techniques</h2>
+        
+        
+        
+
+        
+
+        
+<p>Des objets techniques différents peuvent répondre à un même besoin principal.</p>
+    
+
+<p>On peut les regrouper dans une famille d&#39;objets techniques.</p>
+    
+
+<p>Par exemple, différents moyens de transport peuvent répondre au besoin de déplacer une personne, même s&#39;ils utilisent des principes et des solutions techniques très différents.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a11-q01-label">Question 1 — Q12 : Parmi les objets suivants, lesquels peuvent être rapprochés par le besoin de déplacement ?</h3>
+            
+
+            
+            
+                <textarea id="a11-q01" data-answer-id="a11_q01" data-required="true" aria-labelledby="a11-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<ul><li>trottinette ;</li><li>automobile ;</li><li>train ;</li><li>chaussure ;</li><li>motocyclette ;</li><li>skateboard.</li></ul>
+    
+
+<p>Justifiez au moins deux de vos choix.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a12">
+        <h2>Activité 9 — 9. Une lignée d&#39;objets techniques</h2>
+        
+        
+        
+
+        
+
+        
+<p>Nous pouvons aussi nous intéresser à la manière dont un type d&#39;objet évolue au cours du temps.</p>
+    
+
+<p>Une lignée d&#39;objets techniques permet de représenter différentes étapes ou générations d&#39;objets liées par une évolution technique.</p>
+    
+
+<p>Dans le cas étudié aujourd&#39;hui :</p>
+    
+
+<p>draisienne → vélocipède → grand-bi → bicyclette → vélos contemporains</p>
+    
+
+<p>Cette représentation permet d&#39;observer les solutions conservées, remplacées ou ajoutées au fil du temps.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a12-q01-label">Question 1 — Q13 : Avec vos propres mots, expliquez la différence entre une famille et une lignée d&#39;objets techniques.</h3>
+            
+
+            
+            
+                <textarea id="a12-q01" data-answer-id="a12_q01" data-required="true" aria-labelledby="a12-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a13">
+        <h2>Activité 10 — 10. Petit défi : faire évoluer un vélo</h2>
+        
+        
+        
+
+        
+
+        
+<p>Imaginez maintenant un vélo destiné à être utilisé dans environ trente ans.</p>
+    
+
+<p>Vous ne devez pas commencer par inventer une forme futuriste.</p>
+    
+
+<p>Commencez par identifier un problème, un usage ou une contrainte.</p>
+    
+
+<p>Vous pouvez par exemple vous intéresser à :</p>
+    
+
+<ul><li>transporter deux enfants et des courses ;</li><li>circuler facilement sur des routes très pentues ;</li><li>prendre moins de place dans une habitation ;</li><li>être réparé plus facilement ;</li><li>remplacer facilement les pièces d&#39;usure ;</li><li>utiliser moins de matières premières ;</li><li>augmenter la durée d&#39;utilisation du vélo.</li></ul>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a13-q01-label">Question 1 — Q14 : Quel problème, usage ou contrainte avez-vous choisi ?</h3>
+            
+
+            
+            
+                <textarea id="a13-q01" data-answer-id="a13_q01" data-required="true" aria-labelledby="a13-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a13-q02-label">Question 2 — Q15 : Proposez une évolution ou une solution technique permettant d&#39;y répondre.</h3>
+            
+
+            
+            
+                <textarea id="a13-q02" data-answer-id="a13_q02" data-required="true" aria-labelledby="a13-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a13-q03-label">Question 3 — Q16 : Expliquez en deux ou trois phrases pourquoi cette solution répond au problème choisi.</h3>
+            
+
+            
+            
+                <textarea id="a13-q03" data-answer-id="a13_q03" data-required="true" aria-labelledby="a13-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a14">
+        <h2>Activité 11 — 11. Conclusion du travail</h2>
+        
+        
+        
+
+        
+
+        
+<p>Sans retourner lire les parties précédentes, complétez :</p>
+    
+
+<ul><li>Les objets techniques peuvent évoluer lorsque les ................................................, les usages, les contraintes ou les technologies évoluent.</li><li>Des objets techniques pouvant être rapprochés par un même besoin peuvent former une ................................................ d&#39;objets techniques.</li><li>Les différentes étapes de l&#39;évolution d&#39;un type d&#39;objet peuvent être représentées par une ................................................ d&#39;objets techniques.</li><li>Une évolution technique permet généralement de répondre à un ................................................, un usage ou une contrainte.</li></ul>
+    
+
+<p>Dernière question :</p>
+    
+
+<p>Comparez la draisienne à un vélo actuel :</p>
+    
+
+<p>le besoin principal est-il très différent ? Les solutions techniques sont-elles identiques ? Expliquez en deux ou trois phrases.</p>
+    
+
+<p>Enregistrez votre travail puis déposez-le dans l&#39;espace d&#39;échange.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a15">
+        <h2>Activité 12 — Sources et ressources</h2>
+        
+        
+        
+
+        
+
+        
+<ul><li>Ministère de l&#39;Éducation nationale – Programme de technologie du cycle 4 : Programme et compétences de technologie au collège</li><li>Éduscol STI – Technologie au collège : Programmes et ressources d&#39;accompagnement</li></ul>
+    
+
+<p><a href="https://www.education.gouv.fr/les-programmes-du-college-470408" target="_blank" rel="noopener noreferrer">Programme et compétences de technologie au collège</a></p>
+
+
+<p><a href="https://sti.eduscol.education.fr/technologie-college" target="_blank" rel="noopener noreferrer">Programmes et ressources d&#39;accompagnement</a></p>
+
+
+<p>Les repères historiques de cette séance sont volontairement simplifiés pour le niveau 5e. L&#39;histoire du vélo comporte plusieurs inventions, perfectionnements, brevets et attributions parfois discutés. L&#39;objectif de la séance est de comprendre l&#39;évolution des solutions techniques et non de mémoriser une chronologie détaillée de toutes les inventions.</p>
+    
+
+
+        
+        
+    </article>
+    
+</section>
+
+    </fieldset>
+    <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
+    <h2 id="course-summary-title">À retenir</h2><ul></ul>
+    <h3>Faire le point</h3><p>Relis tes réponses et vérifie les points demandés dans le bilan du cours. Tu peux revenir sur ton travail tant que le professeur ne l’a pas clôturé.</p>
+</section>
+
+    <div class="course-submit-panel">
+        <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
+        <p id="course-submit-status" role="status" aria-live="polite"></p>
+        <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
+    </div>
+</div></div>
+</div>
+<noscript><p>Active JavaScript pour charger ta copie et enregistrer tes réponses.</p></noscript>
+
+<script id="classes-data" type="application/json">
+{"college":{"nom":"Collège","classes":[{"id":"5e","nom":"5e","matieres":["techno"]},{"id":"4e","nom":"4e","matieres":["techno"]},{"id":"3e","nom":"3e","matieres":["techno"]}]},"mfr":{"nom":"MFR","classes":[{"id":"4e","nom":"4e MFR","matieres":["tim","maths"]},{"id":"3e","nom":"3e MFR","matieres":["tim","maths"]},{"id":"cap1","nom":"CAP 1","matieres":["tim"]},{"id":"cap2","nom":"CAP 2","matieres":["tim"]},{"id":"2de","nom":"2de Pro","matieres":["tim","maths"]},{"id":"1re","nom":"Bac Pro 1","matieres":["tim","maths"]},{"id":"term","nom":"Bac Pro 2","matieres":["tim","maths"]},{"id":"bts1","nom":"BTS 1","matieres":["tim"]},{"id":"bts2","nom":"BTS 2","matieres":["tim"]}]}}
+</script>
+<script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
+    </main>
+    <footer class="site-footer">
+    <p>
+        &copy; 2026
+        Portail pédagogique Technologie | TIM | Mathématiques
+    </p>
+</footer>
+</body>
+</html>

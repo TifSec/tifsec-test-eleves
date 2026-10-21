@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
+
+    
+    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
+    <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
+    
+
+    <title>
+        
+        Portail pédagogique Technologie | TIM | Mathématiques
+        
+    </title>
+
+    <link rel="icon" href="/tifsec-test-eleves/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/variables.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/base.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/body.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/header.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/main.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/footer.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-message.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-session.css">
+
+    
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    
+    
+
+    
+
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    
+    
+</head>
+
+<body class="student-shell student-course-shell">
+    <a class="student-skip" href="#course-intro">Aller au cours</a>
+    <p id="message" class="auth-message" role="status" aria-live="polite" hidden></p>
+    <header class="student-header" id="course-header">
+    <div class="student-header-inner">
+        <div class="student-topbar">
+            <a class="student-brand" href="/tifsec-test-eleves/eleve/"><img src="/tifsec-test-eleves/images/logo.png" width="44" height="44" alt=""><span>Mon espace<span data-profile-field="matieres"></span></span></a>
+            <div class="student-header-actions"><a class="student-home-link" href="/tifsec-test-eleves/eleve/">Mes séances</a><a id="course-login" href="/tifsec-test-eleves/connexion/">Se connecter</a><details class="student-theme-picker" id="student-theme-picker" hidden>
+    <summary>Apparence</summary>
+    <div class="student-theme-options"><label for="student-theme-select">Les couleurs de mon espace</label><select id="student-theme-select" disabled><option value="ocean">Océan · bleu</option><option value="forest">Forêt · vert</option><option value="plum">Prune · violet</option><option value="terracotta">Terre cuite · orangé</option><option value="ruby">Rubis · rouge</option><option value="slate">Ardoise · gris</option><option value="midnight">Minuit · noir</option><option value="rose">Rosée · rose</option><option value="neon">Néon · RGB sombre</option><option value="cyberpunk">Cyberpunk · cité futuriste</option><option value="minecraft">Minecraft · blocs et pixels</option><option value="farming">Farming · campagne et cultures</option></select><label class="student-theme-motion"><input type="checkbox" id="student-theme-motion"> Mettre les animations en pause</label><p id="student-theme-status" role="status" aria-live="polite">Ce choix te suivra sur les autres ordinateurs.</p><button id="student-theme-retry" type="button" hidden>Réessayer</button></div>
+</details>
+<button type="button" id="course-logout" hidden>Se déconnecter</button></div>
+        </div>
+        <div class="student-welcome-row" id="course-welcome" hidden>
+            <div><p class="student-eyebrow">Une séance à la fois, à ton rythme.</p><p class="student-course-greeting">Bonjour <span id="course-header-identity"></span></p></div>
+            <dl class="student-profile"><div><dt>Établissement</dt><dd data-profile-field="etablissement"></dd></div><div><dt>Classe</dt><dd data-profile-field="classe"></dd></div><div><dt>Inscription</dt><dd data-profile-field="validation"></dd></div></dl>
+        </div>
+    </div>
+</header>
+
+    <main class="student-course-main" id="student-course-main">
+
+<div id="course-work" data-etablissement="mfr" data-matiere="tim" data-classe="term" data-seance="S02" data-saving-enabled="true" data-collaboration-enabled="true">
+    <div class="course-save-panel course-toolbar">
+        <p id="course-identity" hidden></p>
+        <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+    </div>
+    <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
+        <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
+        <p id="group-status" role="status">Les groupes sont propres à chaque séance. Connecte-toi avec ton compte élève pour choisir ta copie.</p>
+        <div id="group-controls" hidden>
+            <label for="group-copy">Copie de cette séance</label><select id="group-copy"></select>
+            <button type="button" id="group-refresh">Actualiser les groupes</button>
+            <div id="group-create-panel" hidden>
+                <p>Choisis un ou deux camarades. Chacun doit accepter pour partager les réponses. Le groupe reprend ton travail actuel ; ta copie individuelle reste dans l’historique.</p>
+                <div id="group-classmates" class="collaboration-roster"></div>
+                <button type="button" id="group-create">Envoyer les invitations</button>
+            </div>
+        </div>
+    </section>
+    <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
+    <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
+
+
+
+<div class="course-columns">
+    <aside class="course-navigation" aria-label="Étapes de la séance">
+        <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
+        <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
+        <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a02">À quoi cela va-t-il servir ?</a></li><li><a href="#a04">1. Mission professionnelle : un stock de foin inquiétant</a></li><li><a href="#a05">2. Créer le fichier de travail</a></li><li><a href="#a06">3. Enquête : quelles données semblent incorrectes ?</a></li><li><a href="#a07">4. Nettoyer les données sans inventer</a></li><li><a href="#a08">5. Mesurer les conséquences d&#39;un mauvais tableau</a></li><li><a href="#a09">6. Rédiger une recommandation professionnelle</a></li><li><a href="#a10">7. À retenir</a></li><li><a href="#a11">8. Fin de séance — Travail à rendre</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+    </aside>
+
+<div class="course-reading">
+<!-- ========== INTRODUCTION DU COURS ========== -->
+
+<header class="cours-intro" id="course-intro">
+    <h1>Peut-on faire confiance aux données d&#39;une écurie ?</h1>
+
+    
+    <p class="cours-theme">
+        <strong>Thème :</strong> TIM — Peut-on faire confiance aux données d&#39;une écurie ?
+    </p>
+    
+
+    
+    <p class="cours-problematique">
+        <strong>Problématique :</strong> Peut-on faire confiance aux données d&#39;une écurie ?
+    </p>
+    
+
+    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : repérer des valeurs inhabituelles dans un tableau ;</p></section>
+    
+    <section><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
+    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    
+    
+    <section class="cours-objectifs">
+        <h2>Ce que vous allez apprendre</h2>
+        <ul>
+            
+        </ul>
+
+        <h2>Ce que vous allez apprendre à faire</h2>
+        <ul>
+            
+            <li>repérer des valeurs inhabituelles dans un tableau ;</li>
+            
+            <li>reconnaître une donnée manquante, un doublon et une erreur de format ;</li>
+            
+            <li>vérifier une donnée avant de la modifier ;</li>
+            
+            <li>corriger les erreurs avec LibreOffice Calc ;</li>
+            
+            <li>comparer des résultats avant et après nettoyage.</li>
+            
+        </ul>
+    </section>
+    
+<h4>Ce que vous allez apprendre</h4>
+    
+
+<p>Aujourd&#39;hui, nous allons travailler sur la qualité des données.</p>
+    
+
+<p>Une donnée peut être absente, mal écrite, enregistrée deux fois ou simplement fausse.</p>
+    
+
+<p>Nettoyer des données consiste à identifier ces problèmes, à vérifier les informations et à préparer un tableau fiable pour pouvoir l&#39;utiliser.</p>
+    
+
+<h4>Ce que vous allez apprendre à faire</h4>
+    
+
+<ul><li>repérer des valeurs inhabituelles dans un tableau ;</li><li>reconnaître une donnée manquante, un doublon et une erreur de format ;</li><li>vérifier une donnée avant de la modifier ;</li><li>corriger les erreurs avec LibreOffice Calc ;</li><li>comparer des résultats avant et après nettoyage.</li></ul>
+    
+
+
+    <section><h2>Ressources du cours</h2>
+<p>Réalise les manipulations dans le logiciel demandé. Conserve tes fichiers sur ton espace habituel. Le site enregistre seulement tes réponses écrites, tes résultats, tes formules et tes démarches ; aucun fichier n’est téléversé.</p>
+    
+
+</section>
+    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
+<p>Dans cette page du ministère, retrouve le programme ou le référentiel de ta formation. Les objectifs précis étudiés aujourd’hui sont indiqués dans le cours.</p>
+    
+
+<p><a href="https://chlorofil.fr/diplomes/secondaire/bac-pro/1re-tle/tronc-commun" target="_blank" rel="noopener noreferrer">Consulter les programmes et attendus officiels</a></p>
+
+
+</div></details>
+
+</header>
+
+    <fieldset id="course-answers" class="course-answer-fields" disabled>
+        <legend>Réponses aux activités</legend>
+        <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
+
+<section class="cours-activites">
+    
+    <article class="cours-activite" id="a02">
+        <h2>Activité 1 — À quoi cela va-t-il servir ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Dans une entreprise hippique, des données incorrectes peuvent entraîner :</p>
+    
+
+<ul><li>une commande de foin trop importante ou insuffisante ;</li><li>un mauvais suivi des dépenses ;</li><li>des erreurs dans les stocks ;</li><li>des décisions reposant sur des informations trompeuses.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a04">
+        <h2>Activité 2 — 1. Mission professionnelle : un stock de foin inquiétant</h2>
+        
+        
+        
+
+        
+
+        
+<p>Vous travaillez dans une écurie accueillant habituellement 20 chevaux.</p>
+    
+
+<p>Le responsable vous transmet un tableau de suivi des quantités de foin distribuées pendant une semaine.</p>
+    
+
+<p>Il souhaite connaître la consommation totale pour préparer sa prochaine commande.</p>
+    
+
+<p>Votre mission : vérifier si les données sont fiables, corriger les erreurs justifiées, puis calculer la quantité réelle de foin distribuée.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a05">
+        <h2>Activité 3 — 2. Créer le fichier de travail</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi ? Pour étudier les erreurs, il nous faut d&#39;abord un tableau de données à analyser.</p>
+    
+
+<ol><li>Ouvrez LibreOffice Calc.</li><li>Enregistrez le fichier sous le nom Term_TIM_S02_NOM_Prenom.ods.</li><li>En A1, écrivez Jour.</li><li>En B1, écrivez Nombre de chevaux.</li><li>En C1, écrivez Foin distribué (kg).</li><li>Recopiez exactement les données ci-dessous, même si certaines vous semblent étranges.</li></ol>
+    
+
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Jour</th><th scope="col">Nombre de chevaux</th><th scope="col">Foin distribué (kg)</th></tr></thead><tbody><tr><td>Lundi</td><td>20</td><td>180</td></tr><tr><td>Mardi</td><td>20</td><td>176 kg</td></tr><tr><td>Mercredi</td><td>20</td><td>185</td></tr><tr><td>Jeudi</td><td>18</td><td>164</td></tr><tr><td>Vendredi</td><td>18</td><td>Cellule vide</td></tr><tr><td>Samedi</td><td>20</td><td>2050</td></tr><tr><td>Dimanche</td><td>20</td><td>182</td></tr><tr><td>Mardi</td><td>20</td><td>176</td></tr></tbody></table></div>
+    
+
+<p>Pour le vendredi, laissez réellement la cellule vide.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a06">
+        <h2>Activité 4 — 3. Enquête : quelles données semblent incorrectes ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi cet exercice ? Avant de corriger un tableau, il faut apprendre à identifier les différentes anomalies.</p>
+    
+
+<p>Nous ne cherchons pas encore à réparer le tableau. Nous cherchons à comprendre les problèmes.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a06-q01-label">Question 1 — Observez les données. Quelles lignes vous semblent problématiques ?</h3>
+            
+
+            
+            
+                <textarea id="a06-q01" data-answer-id="a06_q01" data-required="true" aria-labelledby="a06-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a06-q02-label">Question 2 — Pourquoi la quantité du samedi paraît-elle inhabituelle ?</h3>
+            
+
+            
+            
+                <textarea id="a06-q02" data-answer-id="a06_q02" data-required="true" aria-labelledby="a06-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a06-q03-label">Question 3 — Quel problème pose la cellule du vendredi ?</h3>
+            
+
+            
+            
+                <textarea id="a06-q03" data-answer-id="a06_q03" data-required="true" aria-labelledby="a06-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a06-q04-label">Question 4 — Quel problème pourrait poser l&#39;écriture « 176 kg » dans un calcul ?</h3>
+            
+
+            
+            
+                <textarea id="a06-q04" data-answer-id="a06_q04" data-required="true" aria-labelledby="a06-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            <h3 id="a06-q05-label">Question 5 — Pourquoi faut-il vérifier la dernière ligne ?</h3>
+            
+
+            
+            
+                <textarea id="a06-q05" data-answer-id="a06_q05" data-required="true" aria-labelledby="a06-q05-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>AIDE SI BESOIN — Niveau 1</p>
+    
+
+<p>Comparez les valeurs, cherchez les cases vides et vérifiez si un jour apparaît plusieurs fois.</p>
+    
+
+<p>AIDE SI BESOIN — Niveau 2</p>
+    
+
+<p>Un problème peut concerner la valeur elle-même, son écriture ou sa présence dans le tableau.</p>
+    
+
+<p>AIDE SI BESOIN — Niveau 3</p>
+    
+
+<p>Examinez précisément les deux mardis, le vendredi, le samedi et la manière d&#39;écrire la quantité du premier mardi.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a07">
+        <h2>Activité 5 — 4. Nettoyer les données sans inventer</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi changeons-nous d&#39;activité ? Vous avez repéré des anomalies. Il faut maintenant vérifier les informations avant de les corriger.</p>
+    
+
+<p>Une valeur inhabituelle n&#39;est pas forcément fausse. Un professionnel doit rechercher une source fiable avant toute modification.</p>
+    
+
+<p>Le responsable retrouve son carnet de distribution original :</p>
+    
+
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Information vérifiée</th><th scope="col">Relevé original</th></tr></thead><tbody><tr><td>Quantité de vendredi</td><td>170 kg</td></tr><tr><td>Quantité de samedi</td><td>205 kg</td></tr><tr><td>Premier mardi</td><td>176 kg</td></tr><tr><td>Deuxième mardi</td><td>Copie accidentelle du premier</td></tr></tbody></table></div>
+    
+
+<p>Renommez l&#39;onglet actuel Donnees_brutes.</p>
+    
+
+<p>Faites un clic droit sur cet onglet, choisissez Déplacer ou copier la feuille, cochez Copier, puis validez.</p>
+    
+
+<p>Renommez la nouvelle feuille Donnees_nettoyees.</p>
+    
+
+<p>Sur la feuille nettoyée, remplacez 176 kg par 176.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a07-q01-label">Question 1 — Complétez la quantité du vendredi en utilisant le carnet original.</h3>
+            
+
+            
+            
+                <textarea id="a07-q01" data-answer-id="a07_q01" data-required="true" aria-labelledby="a07-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Corrigez la quantité du samedi.</p>
+    
+
+<p>Supprimez la ligne correspondant au mardi ajouté une deuxième fois.</p>
+    
+
+<p>Enregistrez votre travail avec Ctrl + S.</p>
+    
+
+<p>ATTENDU</p>
+    
+
+<p>Votre fichier contient deux feuilles :</p>
+    
+
+<ul><li>Donnees_brutes : les données initiales, avec leurs erreurs ;</li><li>Donnees_nettoyees : sept journées et des valeurs vérifiées, exploitables dans Calc.</li></ul>
+    
+
+<p>VIGILANCE</p>
+    
+
+<p>Ne corrigez jamais une donnée uniquement parce qu&#39;elle vous semble étrange. Cherchez d&#39;abord une preuve ou une source fiable.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a08">
+        <h2>Activité 6 — 5. Mesurer les conséquences d&#39;un mauvais tableau</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi ce nouvel exercice ? Jusqu&#39;à présent, vous avez nettoyé les données. Nous allons maintenant vérifier si ce nettoyage change réellement les résultats.</p>
+    
+
+<h4>5.1. Calculer le total des données brutes</h4>
+    
+
+<p>Retournez sur la feuille Donnees_brutes.</p>
+    
+
+<p>En A11, écrivez Total brut.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a08-q01-label">Question 1 — En C11, saisissez la formule =SOMME(C2:C9).</h3>
+            
+
+            
+            
+                <textarea id="a08-q01" data-answer-id="a08_q01" data-required="true" aria-labelledby="a08-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Effectue cette manipulation dans Calc ou Excel, puis indique ici la formule, le résultat ou la démarche utilisée.</p></details>
+            
+            
+<p>Notez ce résultat dans une cellule libre ou sur votre espace de réponse.</p>
+    
+
+<h4>5.2. Calculer le total des données nettoyées</h4>
+    
+
+<p>Nous utilisons maintenant la feuille corrigée pour refaire exactement le même calcul.</p>
+    
+
+<ol><li>Ouvrez la feuille Donnees_nettoyees.</li><li>En A10, écrivez Total vérifié.</li><li>En C10, saisissez =SOMME(C2:C8).</li><li>En A11, écrivez Écart constaté.</li><li>En C11, saisissez =Donnees_brutes.C11-C10.</li></ol>
+    
+
+<p>AIDE SI BESOIN — Niveau 1</p>
+    
+
+<p>La fonction SOMME additionne les valeurs numériques d&#39;une plage de cellules.</p>
+    
+
+<p>AIDE SI BESOIN — Niveau 2</p>
+    
+
+<p>Une plage comme C2:C8 contient toutes les cellules de C2 à C8.</p>
+    
+
+<p>AIDE SI BESOIN — Niveau 3</p>
+    
+
+<p>Pour calculer une différence entre deux feuilles, cliquez sur la première valeur pendant la saisie de la formule, tapez le signe moins, puis cliquez sur la seconde valeur.</p>
+    
+
+<h4>5.3. Comprendre les résultats</h4>
+    
+
+<p>Nous avons maintenant deux résultats différents pour une même semaine. Il faut comprendre ce que cela signifie.</p>
+    
+
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a08-q02-label">Question 2 — Quel total est le plus fiable : celui du premier tableau ou celui du tableau nettoyé ? Pourquoi ?</h3>
+            
+
+            
+            
+                <textarea id="a08-q02" data-answer-id="a08_q02" data-required="true" aria-labelledby="a08-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a08-q03-label">Question 3 — Que risquerait le responsable en commandant du foin à partir du premier résultat ?</h3>
+            
+
+            
+            
+                <textarea id="a08-q03" data-answer-id="a08_q03" data-required="true" aria-labelledby="a08-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a08-q04-label">Question 4 — Le tableur a-t-il commis une erreur en calculant le premier total ?</h3>
+            
+
+            
+            
+                <textarea id="a08-q04" data-answer-id="a08_q04" data-required="true" aria-labelledby="a08-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Un calcul exact ne garantit pas une information fiable.</p>
+    
+
+<p>Il faut vérifier la qualité des données avant d&#39;interpréter les résultats.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a09">
+        <h2>Activité 7 — 6. Rédiger une recommandation professionnelle</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi terminons-nous ainsi ? Le but du TIM n&#39;est pas seulement de manipuler un logiciel. Il faut savoir communiquer une information fiable et utile à son responsable.</p>
+    
+
+<p>Le responsable vous demande :</p>
+    
+
+<p>« Quelle quantité de foin avons-nous réellement distribuée cette semaine, et pourquoi avez-vous modifié mon tableau ? »</p>
+    
+
+<p>Rédigez un court message de 3 à 5 phrases dans une cellule de votre feuille nettoyée, ou dans l&#39;espace de réponse prévu sur le site.</p>
+    
+
+<p>Vous devez préciser :</p>
+    
+
+<ul><li>la quantité totale vérifiée ;</li><li>au moins deux erreurs découvertes ;</li><li>pourquoi le nouveau tableau est plus fiable ;</li><li>une précaution à prendre pour les prochains relevés.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a10">
+        <h2>Activité 8 — 7. À retenir</h2>
+        
+        
+        
+
+        
+
+        
+<p>Nettoyer des données signifie les contrôler, vérifier les anomalies et corriger les erreurs confirmées avant de les utiliser.</p>
+    
+
+<p>Les problèmes les plus fréquents sont :</p>
+    
+
+<ul><li>les valeurs manquantes ;</li><li>les doublons ;</li><li>les erreurs de saisie ;</li><li>les formats incompatibles.</li></ul>
+    
+
+<p>Données fiables → calculs exploitables → décisions mieux justifiées.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a11">
+        <h2>Activité 9 — 8. Fin de séance — Travail à rendre</h2>
+        
+        
+        
+
+        
+
+        
+<p>Avant de terminer, vérifiez que votre fichier contient :</p>
+    
+
+<ul><li>une feuille Donnees_brutes conservée intacte ;</li><li>une feuille Donnees_nettoyees avec les sept jours corrects ;</li><li>le total brut et le total vérifié ;</li><li>l&#39;écart entre les deux résultats ;</li><li>votre recommandation professionnelle.</li></ul>
+    
+
+<p>Enregistrez votre fichier :</p>
+    
+
+<p>Term_TIM_S02_NOM_Prenom.ods</p>
+    
+
+
+        
+        
+    </article>
+    
+</section>
+
+    </fieldset>
+    <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
+    <h2 id="course-summary-title">À retenir</h2><ul></ul>
+    <h3>Faire le point</h3><p>Relis tes réponses et vérifie les points demandés dans le bilan du cours. Tu peux revenir sur ton travail tant que le professeur ne l’a pas clôturé.</p>
+</section>
+
+    <div class="course-submit-panel">
+        <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
+        <p id="course-submit-status" role="status" aria-live="polite"></p>
+        <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
+    </div>
+</div></div>
+</div>
+<noscript><p>Active JavaScript pour charger ta copie et enregistrer tes réponses.</p></noscript>
+
+<script id="classes-data" type="application/json">
+{"college":{"nom":"Collège","classes":[{"id":"5e","nom":"5e","matieres":["techno"]},{"id":"4e","nom":"4e","matieres":["techno"]},{"id":"3e","nom":"3e","matieres":["techno"]}]},"mfr":{"nom":"MFR","classes":[{"id":"4e","nom":"4e MFR","matieres":["tim","maths"]},{"id":"3e","nom":"3e MFR","matieres":["tim","maths"]},{"id":"cap1","nom":"CAP 1","matieres":["tim"]},{"id":"cap2","nom":"CAP 2","matieres":["tim"]},{"id":"2de","nom":"2de Pro","matieres":["tim","maths"]},{"id":"1re","nom":"Bac Pro 1","matieres":["tim","maths"]},{"id":"term","nom":"Bac Pro 2","matieres":["tim","maths"]},{"id":"bts1","nom":"BTS 1","matieres":["tim"]},{"id":"bts2","nom":"BTS 2","matieres":["tim"]}]}}
+</script>
+<script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
+    </main>
+    <footer class="site-footer">
+    <p>
+        &copy; 2026
+        Portail pédagogique Technologie | TIM | Mathématiques
+    </p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
+
+    
+    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
+    <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
+    
+
+    <title>
+        
+        Portail pédagogique Technologie | TIM | Mathématiques
+        
+    </title>
+
+    <link rel="icon" href="/tifsec-test-eleves/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/variables.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/base.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/body.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/header.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/main.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/footer.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-message.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-session.css">
+
+    
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    
+    
+
+    
+
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    
+    
+</head>
+
+<body class="student-shell student-course-shell">
+    <a class="student-skip" href="#course-intro">Aller au cours</a>
+    <p id="message" class="auth-message" role="status" aria-live="polite" hidden></p>
+    <header class="student-header" id="course-header">
+    <div class="student-header-inner">
+        <div class="student-topbar">
+            <a class="student-brand" href="/tifsec-test-eleves/eleve/"><img src="/tifsec-test-eleves/images/logo.png" width="44" height="44" alt=""><span>Mon espace<span data-profile-field="matieres"></span></span></a>
+            <div class="student-header-actions"><a class="student-home-link" href="/tifsec-test-eleves/eleve/">Mes séances</a><a id="course-login" href="/tifsec-test-eleves/connexion/">Se connecter</a><details class="student-theme-picker" id="student-theme-picker" hidden>
+    <summary>Apparence</summary>
+    <div class="student-theme-options"><label for="student-theme-select">Les couleurs de mon espace</label><select id="student-theme-select" disabled><option value="ocean">Océan · bleu</option><option value="forest">Forêt · vert</option><option value="plum">Prune · violet</option><option value="terracotta">Terre cuite · orangé</option><option value="ruby">Rubis · rouge</option><option value="slate">Ardoise · gris</option><option value="midnight">Minuit · noir</option><option value="rose">Rosée · rose</option><option value="neon">Néon · RGB sombre</option><option value="cyberpunk">Cyberpunk · cité futuriste</option><option value="minecraft">Minecraft · blocs et pixels</option><option value="farming">Farming · campagne et cultures</option></select><label class="student-theme-motion"><input type="checkbox" id="student-theme-motion"> Mettre les animations en pause</label><p id="student-theme-status" role="status" aria-live="polite">Ce choix te suivra sur les autres ordinateurs.</p><button id="student-theme-retry" type="button" hidden>Réessayer</button></div>
+</details>
+<button type="button" id="course-logout" hidden>Se déconnecter</button></div>
+        </div>
+        <div class="student-welcome-row" id="course-welcome" hidden>
+            <div><p class="student-eyebrow">Une séance à la fois, à ton rythme.</p><p class="student-course-greeting">Bonjour <span id="course-header-identity"></span></p></div>
+            <dl class="student-profile"><div><dt>Établissement</dt><dd data-profile-field="etablissement"></dd></div><div><dt>Classe</dt><dd data-profile-field="classe"></dd></div><div><dt>Inscription</dt><dd data-profile-field="validation"></dd></div></dl>
+        </div>
+    </div>
+</header>
+
+    <main class="student-course-main" id="student-course-main">
+
+<div id="course-work" data-etablissement="college" data-matiere="techno" data-classe="3e" data-seance="S05" data-saving-enabled="true" data-collaboration-enabled="true">
+    <div class="course-save-panel course-toolbar">
+        <p id="course-identity" hidden></p>
+        <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+    </div>
+    <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
+        <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
+        <p id="group-status" role="status">Les groupes sont propres à chaque séance. Connecte-toi avec ton compte élève pour choisir ta copie.</p>
+        <div id="group-controls" hidden>
+            <label for="group-copy">Copie de cette séance</label><select id="group-copy"></select>
+            <button type="button" id="group-refresh">Actualiser les groupes</button>
+            <div id="group-create-panel" hidden>
+                <p>Choisis un ou deux camarades. Chacun doit accepter pour partager les réponses. Le groupe reprend ton travail actuel ; ta copie individuelle reste dans l’historique.</p>
+                <div id="group-classmates" class="collaboration-roster"></div>
+                <button type="button" id="group-create">Envoyer les invitations</button>
+            </div>
+        </div>
+    </section>
+    <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
+    <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
+
+
+
+<div class="course-columns">
+    <aside class="course-navigation" aria-label="Étapes de la séance">
+        <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
+        <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
+        <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a05">Production attendue</a></li><li><a href="#a06">1. Préparez votre document de travail</a></li><li><a href="#a07">2. Comment savoir si une éolienne est suffisamment performante ?</a></li><li><a href="#a08">3. Une seule mesure suffit-elle ?</a></li><li><a href="#a09">4. Les performances respectent-elles les exigences ?</a></li><li><a href="#a10">5. Comment comparer correctement plusieurs rotors ?</a></li><li><a href="#a11">6. Construisez votre protocole expérimental</a></li><li><a href="#a12">7. Une expérience peut-elle donner une conclusion trompeuse ?</a></li><li><a href="#a13">8. Conclusion du travail</a></li><li><a href="#a14">Rendu attendu</a></li><li><a href="#a15">À retenir</a></li><li><a href="#a16">Sources générales</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+    </aside>
+
+<div class="course-reading">
+<!-- ========== INTRODUCTION DU COURS ========== -->
+
+<header class="cours-intro" id="course-intro">
+    <h1>Comment vérifier les performances d&#39;une solution technique ?</h1>
+
+    
+    <p class="cours-theme">
+        <strong>Thème :</strong> Création, conception, réalisation, innovations : des objets à concevoir et à réaliser
+    </p>
+    
+
+    
+    <p class="cours-problematique">
+        <strong>Problématique :</strong> Comment savoir si une solution technique respecte réellement les performances attendues ?
+    </p>
+    
+
+    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : Une performance doit pouvoir être associée à une grandeur mesurable ou vérifiable.</p></section>
+    
+    <section><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
+    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    
+    
+    <section class="cours-objectifs">
+        <h2>Ce que vous allez apprendre</h2>
+        <ul>
+            
+            <li>Une performance doit pouvoir être associée à une grandeur mesurable ou vérifiable.</li>
+            
+            <li>Une exigence permet de déterminer si une performance est suffisante.</li>
+            
+            <li>Une seule mesure peut être insuffisante pour caractériser correctement une performance.</li>
+            
+            <li>Un protocole expérimental précise les conditions dans lesquelles les mesures sont réalisées.</li>
+            
+            <li>Pour comparer plusieurs solutions, les essais doivent être réalisés dans des conditions comparables.</li>
+            
+        </ul>
+
+        <h2>Ce que vous allez apprendre à faire</h2>
+        <ul>
+            
+        </ul>
+    </section>
+    
+<h4>Compétence visée : Mesurer, comparer et interpréter des performances pour valider une solution technique</h4>
+    
+
+<h4>Objectifs d’apprentissage</h4>
+    
+
+<p>Ce que les élèves vont apprendre :</p>
+    
+
+<ul><li>Une performance doit pouvoir être associée à une grandeur mesurable ou vérifiable.</li><li>Une exigence permet de déterminer si une performance est suffisante.</li><li>Une seule mesure peut être insuffisante pour caractériser correctement une performance.</li><li>Un protocole expérimental précise les conditions dans lesquelles les mesures sont réalisées.</li><li>Pour comparer plusieurs solutions, les essais doivent être réalisés dans des conditions comparables.</li></ul>
+    
+
+<p>Ce qu&#39;ils vont apprendre à faire :</p>
+    
+
+<ul><li>Extraire une information d&#39;un dossier technique.</li><li>Calculer et interpréter une moyenne.</li><li>Comparer une mesure à une exigence.</li><li>Justifier la validation ou le refus d&#39;une solution.</li><li>Proposer un protocole expérimental permettant de comparer plusieurs solutions.</li></ul>
+    
+
+
+    
+    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
+<p>Dans cette page du ministère, retrouve le programme ou le référentiel de ta formation. Les objectifs précis étudiés aujourd’hui sont indiqués dans le cours.</p>
+    
+
+<p><a href="https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4" target="_blank" rel="noopener noreferrer">Consulter les programmes et attendus officiels</a></p>
+
+
+</div></details>
+
+</header>
+
+    <fieldset id="course-answers" class="course-answer-fields" disabled>
+        <legend>Réponses aux activités</legend>
+        <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
+
+<section class="cours-activites">
+    
+    <article class="cours-activite" id="a05">
+        <h2>Activité 1 — Production attendue</h2>
+        
+        
+        
+
+        
+
+        
+<ul><li>Un fichier LibreOffice Writer nommé 3e_S05_nom.odt.</li><li>L&#39;analyse des performances de deux prototypes d&#39;éoliennes.</li><li>Les calculs de moyenne.</li><li>Une conclusion sur la validation des prototypes.</li><li>Un protocole expérimental pour comparer plusieurs rotors.</li></ul>
+    
+
+<p>Le fichier devra être déposé en fin de séance, même s&#39;il n&#39;est pas entièrement terminé.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a06">
+        <h2>Activité 2 — 1. Préparez votre document de travail</h2>
+        
+        
+        
+
+        
+
+        
+<p>Ouvrez LibreOffice Writer.</p>
+    
+
+<p>Créez un nouveau document.</p>
+    
+
+<p>Enregistrez-le immédiatement sous le nom : 3e_S05_nom.odt.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a06-q01-label">Question 1 — Écrivez votre nom, votre prénom et le titre : Séance 5 – Comment vérifier les performances d&#39;une solution technique ?</h3>
+            
+
+            
+            
+                <textarea id="a06-q01" data-answer-id="a06_q01" data-required="true" aria-labelledby="a06-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a07">
+        <h2>Activité 3 — 2. Comment savoir si une éolienne est suffisamment performante ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Une entreprise souhaite choisir une petite éolienne destinée à alimenter un dispositif électronique.</p>
+    
+
+<p>Deux prototypes, A et B, sont disponibles.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a07-q01-label">Question 1 — Q1 : Peut-on choisir la meilleure éolienne simplement en la regardant ? Pourquoi ?</h3>
+            
+
+            
+            
+                <textarea id="a07-q01" data-answer-id="a07_q01" data-required="true" aria-labelledby="a07-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<h4>Le cahier des charges</h4>
+    
+
+<p>Pour cet exercice, l&#39;entreprise fixe les exigences suivantes :</p>
+    
+
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Critère</th><th scope="col">Exigence</th></tr></thead><tbody><tr><td>Puissance électrique produite</td><td>Au moins 3 W</td></tr><tr><td>Niveau sonore</td><td>Inférieur à 50 dB</td></tr><tr><td>Masse</td><td>Inférieure à 500 g</td></tr></tbody></table></div>
+    
+
+<p>Important : ces valeurs constituent un cahier des charges fictif créé pour l&#39;activité. Elles ne correspondent pas à des exigences universelles applicables à toutes les éoliennes.</p>
+    
+
+<p>Pour mieux comprendre le fonctionnement général d&#39;une éolienne, vous pouvez consulter :</p>
+    
+
+<p>ADEME – Le défi éolien en 10 questions</p>
+    
+
+<p><a href="https://agirpourlatransition.ademe.fr/acteurs-education/enseigner/catalogue/defi-eolien-10-questions" target="_blank" rel="noopener noreferrer">ADEME – Le défi éolien en 10 questions</a></p>
+
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a08">
+        <h2>Activité 4 — 3. Une seule mesure suffit-elle ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Les deux prototypes sont testés dans les mêmes conditions.</p>
+    
+
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Mesure</th><th scope="col">Éolienne A</th><th scope="col">Éolienne B</th></tr></thead><tbody><tr><td>Puissance - essai 1</td><td>2,6 W</td><td>3,2 W</td></tr><tr><td>Puissance - essai 2</td><td>2,8 W</td><td>3,1 W</td></tr><tr><td>Puissance - essai 3</td><td>2,7 W</td><td>3,3 W</td></tr><tr><td>Niveau sonore</td><td>45 dB</td><td>54 dB</td></tr><tr><td>Masse</td><td>320 g</td><td>410 g</td></tr></tbody></table></div>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a08-q01-label">Question 1 — Q2 : Pourquoi a-t-on réalisé trois mesures de puissance au lieu d&#39;une seule ?</h3>
+            
+
+            
+            
+                <textarea id="a08-q01" data-answer-id="a08_q01" data-required="true" aria-labelledby="a08-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a08-q02-label">Question 2 — Q3 : Les trois mesures d&#39;une même éolienne sont-elles exactement identiques ? Que peut-on faire pour obtenir une valeur représentative ?</h3>
+            
+
+            
+            
+                <textarea id="a08-q02" data-answer-id="a08_q02" data-required="true" aria-labelledby="a08-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<h4>Mise en commun : la moyenne</h4>
+    
+
+<p>Lorsqu&#39;une même grandeur est mesurée plusieurs fois, on peut calculer une moyenne :</p>
+    
+
+<p>Moyenne = somme des mesures ÷ nombre de mesures</p>
+    
+
+<p>Calculez maintenant la puissance moyenne des deux prototypes.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a09">
+        <h2>Activité 5 — 4. Les performances respectent-elles les exigences ?</h2>
+        
+        
+        
+
+        
+
+        
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a09-q01-label">Question 1 — Q4 : Relevez dans le cahier des charges la puissance minimale exigée.</h3>
+            
+
+            
+            
+                <textarea id="a09-q01" data-answer-id="a09_q01" data-required="true" aria-labelledby="a09-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a09-q02-label">Question 2 — Q5 : Pour chaque prototype, comparez la puissance moyenne obtenue à l&#39;exigence.</h3>
+            
+
+            
+            
+                <textarea id="a09-q02" data-answer-id="a09_q02" data-required="true" aria-labelledby="a09-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Utilisez la structure :</p>
+    
+
+<p>Valeur mesurée → comparaison → conclusion</p>
+    
+
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a09-q03-label">Question 3 — Q6 : Vérifiez maintenant les trois exigences pour les deux prototypes.</h3>
+            
+
+            
+            
+                <textarea id="a09-q03" data-answer-id="a09_q03" data-required="true" aria-labelledby="a09-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a09-q04-label">Question 4 — Complète le tableau ci-dessous.</h3>
+            
+
+            
+            
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th></th>
+                                
+                                <th>Puissance</th>
+                                
+                                <th>Bruit</th>
+                                
+                                <th>Masse</th>
+                                
+                                <th>Prototype validé ?</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Éolienne A
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a09_q04_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="4. Les performances respectent-elles les exigences ? — Puissance — Éolienne A">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a09_q04_r0_c2" data-required="true" data-row="0" data-col="2" aria-label="4. Les performances respectent-elles les exigences ? — Bruit — Éolienne A">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a09_q04_r0_c3" data-required="true" data-row="0" data-col="3" aria-label="4. Les performances respectent-elles les exigences ? — Masse — Éolienne A">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a09_q04_r0_c4" data-required="true" data-row="0" data-col="4" aria-label="4. Les performances respectent-elles les exigences ? — Prototype validé ? — Éolienne A">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Éolienne B
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a09_q04_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="4. Les performances respectent-elles les exigences ? — Puissance — Éolienne B">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a09_q04_r1_c2" data-required="true" data-row="1" data-col="2" aria-label="4. Les performances respectent-elles les exigences ? — Bruit — Éolienne B">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a09_q04_r1_c3" data-required="true" data-row="1" data-col="3" aria-label="4. Les performances respectent-elles les exigences ? — Masse — Éolienne B">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a09_q04_r1_c4" data-required="true" data-row="1" data-col="4" aria-label="4. Les performances respectent-elles les exigences ? — Prototype validé ? — Éolienne B">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            
+            
+            
+<h4>Mise en commun : mesurer une performance</h4>
+    
+
+<p>Une solution technique peut être validée lorsque ses performances mesurées respectent les exigences définies.</p>
+    
+
+<p>Une mesure seule n&#39;est donc pas suffisante : il faut savoir quoi mesurer, dans quelles conditions et à quoi comparer le résultat.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a10">
+        <h2>Activité 6 — 5. Comment comparer correctement plusieurs rotors ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>L&#39;entreprise souhaite maintenant étudier l&#39;influence du nombre de pales sur la performance d&#39;une petite éolienne.</p>
+    
+
+<p>Elle dispose :</p>
+    
+
+<ul><li>du même générateur électrique ;</li><li>de rotors comportant 3, 4 et 5 pales identiques ;</li><li>d&#39;un ventilateur ;</li><li>d&#39;un appareil permettant de mesurer la tension ou la puissance produite.</li></ul>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a10-q01-label">Question 1 — Q7 : Quelle est la seule caractéristique du rotor que nous voulons modifier pendant l&#39;expérience ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q01" data-answer-id="a10_q01" data-required="true" aria-labelledby="a10-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a10-q02-label">Question 2 — Q8 : Quelles conditions doivent rester identiques pour que la comparaison soit correcte ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q02" data-answer-id="a10_q02" data-required="true" aria-labelledby="a10-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Proposez au moins quatre conditions.</p>
+    
+
+<p>Si vous avez besoin d&#39;aide, réfléchissez à :</p>
+    
+
+<h4>Indice 1</h4>
+    
+
+<p>Le ventilateur doit-il être placé à la même distance pour tous les essais ?</p>
+    
+
+<h4>Indice 2</h4>
+    
+
+<p>Peut-on changer la vitesse du ventilateur entre deux rotors ?</p>
+    
+
+<h4>Indice 3</h4>
+    
+
+<p>Doit-on utiliser le même moteur/générateur pour tous les essais ?</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a11">
+        <h2>Activité 7 — 6. Construisez votre protocole expérimental</h2>
+        
+        
+        
+
+        
+
+        
+<p>Vous devez maintenant proposer un protocole qui pourra réellement être utilisé lors de la prochaine séance.</p>
+    
+
+<p>Complétez :</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a11-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
+            
+
+            
+            
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Élément du protocole</th>
+                                
+                                <th>Votre proposition</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Paramètre modifié
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a11_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="6. Construisez votre protocole expérimental — Votre proposition — Paramètre modifié">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Grandeur mesurée
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a11_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="6. Construisez votre protocole expérimental — Votre proposition — Grandeur mesurée">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Conditions maintenues identiques
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a11_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="6. Construisez votre protocole expérimental — Votre proposition — Conditions maintenues identiques">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Nombre de mesures par rotor
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a11_q01_r3_c1" data-required="true" data-row="3" data-col="1" aria-label="6. Construisez votre protocole expérimental — Votre proposition — Nombre de mesures par rotor">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Résultat à calculer
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a11_q01_r4_c1" data-required="true" data-row="4" data-col="1" aria-label="6. Construisez votre protocole expérimental — Votre proposition — Résultat à calculer">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            
+            
+            
+<p>Écrivez ensuite votre protocole sous forme d&#39;une liste numérotée.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a12">
+        <h2>Activité 8 — 7. Une expérience peut-elle donner une conclusion trompeuse ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Un groupe réalise les essais suivants :</p>
+    
+
+<ul><li>rotor à 3 pales : ventilateur placé à 30 cm ;</li><li>rotor à 4 pales : ventilateur placé à 50 cm ;</li><li>rotor à 5 pales : ventilateur placé à 1 m.</li></ul>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a12-q01-label">Question 1 — Q9 : Peut-on utiliser les résultats pour déterminer quel nombre de pales est le plus performant ? Justifiez.</h3>
+            
+
+            
+            
+                <textarea id="a12-q01" data-answer-id="a12_q01" data-required="true" aria-labelledby="a12-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a13">
+        <h2>Activité 9 — 8. Conclusion du travail</h2>
+        
+        
+        
+
+        
+
+        
+<p>Complétez :</p>
+    
+
+<ul><li>Pour vérifier une performance, il faut ................................................................................ .</li><li>Une exigence permet de ..................................................................................................... .</li><li>Pour comparer plusieurs solutions, il faut ............................................................................. .</li><li>Répéter une mesure permet de ............................................................................................. .</li><li>Un protocole expérimental sert à .......................................................................................... .</li></ul>
+    
+
+<p>Répondez maintenant à la problématique en 4 à 6 lignes :</p>
+    
+
+<p>Comment savoir si une solution technique respecte réellement les performances attendues ?</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a14">
+        <h2>Activité 10 — Rendu attendu</h2>
+        
+        
+        
+
+        
+
+        
+<p>À la fin de la séance, déposez 3e_S05_nom.odt.</p>
+    
+
+<p>Le fichier doit être rendu même si toutes les activités ne sont pas terminées.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a15">
+        <h2>Activité 11 — À retenir</h2>
+        
+        
+        
+
+        
+
+        
+<p>Une performance doit être mesurée puis comparée à une exigence.</p>
+    
+
+<p>Pour comparer plusieurs solutions, il faut utiliser un protocole commun, conserver les mêmes conditions et ne modifier que le paramètre étudié.</p>
+    
+
+<p>Réaliser plusieurs mesures puis calculer une valeur représentative permet généralement d&#39;obtenir une comparaison plus fiable.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a16">
+        <h2>Activité 12 — Sources générales</h2>
+        
+        
+        
+
+        
+
+        
+<ul><li>Ministère de l&#39;Éducation nationale – Programme de technologie du cycle 4</li><li>Éduscol – Ressources d&#39;accompagnement du programme de technologie</li></ul>
+    
+
+<p><a href="https://www.education.gouv.fr/bo/2024/Hebdo9/MENE2402802A" target="_blank" rel="noopener noreferrer">Programme de technologie du cycle 4</a></p>
+
+
+<p><a href="https://eduscol.education.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4" target="_blank" rel="noopener noreferrer">Ressources d&#39;accompagnement du programme de technologie</a></p>
+
+
+
+        
+        
+    </article>
+    
+</section>
+
+    </fieldset>
+    <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
+    <h2 id="course-summary-title">À retenir</h2><ul></ul>
+    <h3>Faire le point</h3><p>Relis tes réponses et vérifie les points demandés dans le bilan du cours. Tu peux revenir sur ton travail tant que le professeur ne l’a pas clôturé.</p>
+</section>
+
+    <div class="course-submit-panel">
+        <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
+        <p id="course-submit-status" role="status" aria-live="polite"></p>
+        <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
+    </div>
+</div></div>
+</div>
+<noscript><p>Active JavaScript pour charger ta copie et enregistrer tes réponses.</p></noscript>
+
+<script id="classes-data" type="application/json">
+{"college":{"nom":"Collège","classes":[{"id":"5e","nom":"5e","matieres":["techno"]},{"id":"4e","nom":"4e","matieres":["techno"]},{"id":"3e","nom":"3e","matieres":["techno"]}]},"mfr":{"nom":"MFR","classes":[{"id":"4e","nom":"4e MFR","matieres":["tim","maths"]},{"id":"3e","nom":"3e MFR","matieres":["tim","maths"]},{"id":"cap1","nom":"CAP 1","matieres":["tim"]},{"id":"cap2","nom":"CAP 2","matieres":["tim"]},{"id":"2de","nom":"2de Pro","matieres":["tim","maths"]},{"id":"1re","nom":"Bac Pro 1","matieres":["tim","maths"]},{"id":"term","nom":"Bac Pro 2","matieres":["tim","maths"]},{"id":"bts1","nom":"BTS 1","matieres":["tim"]},{"id":"bts2","nom":"BTS 2","matieres":["tim"]}]}}
+</script>
+<script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
+    </main>
+    <footer class="site-footer">
+    <p>
+        &copy; 2026
+        Portail pédagogique Technologie | TIM | Mathématiques
+    </p>
+</footer>
+</body>
+</html>

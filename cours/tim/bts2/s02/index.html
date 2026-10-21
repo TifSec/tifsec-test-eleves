@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
+
+    
+    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
+    <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
+    
+
+    <title>
+        
+        Portail pédagogique Technologie | TIM | Mathématiques
+        
+    </title>
+
+    <link rel="icon" href="/tifsec-test-eleves/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/variables.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/base.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/body.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/header.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/main.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/footer.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-message.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-session.css">
+
+    
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    
+    
+
+    
+
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    
+    
+</head>
+
+<body class="student-shell student-course-shell">
+    <a class="student-skip" href="#course-intro">Aller au cours</a>
+    <p id="message" class="auth-message" role="status" aria-live="polite" hidden></p>
+    <header class="student-header" id="course-header">
+    <div class="student-header-inner">
+        <div class="student-topbar">
+            <a class="student-brand" href="/tifsec-test-eleves/eleve/"><img src="/tifsec-test-eleves/images/logo.png" width="44" height="44" alt=""><span>Mon espace<span data-profile-field="matieres"></span></span></a>
+            <div class="student-header-actions"><a class="student-home-link" href="/tifsec-test-eleves/eleve/">Mes séances</a><a id="course-login" href="/tifsec-test-eleves/connexion/">Se connecter</a><details class="student-theme-picker" id="student-theme-picker" hidden>
+    <summary>Apparence</summary>
+    <div class="student-theme-options"><label for="student-theme-select">Les couleurs de mon espace</label><select id="student-theme-select" disabled><option value="ocean">Océan · bleu</option><option value="forest">Forêt · vert</option><option value="plum">Prune · violet</option><option value="terracotta">Terre cuite · orangé</option><option value="ruby">Rubis · rouge</option><option value="slate">Ardoise · gris</option><option value="midnight">Minuit · noir</option><option value="rose">Rosée · rose</option><option value="neon">Néon · RGB sombre</option><option value="cyberpunk">Cyberpunk · cité futuriste</option><option value="minecraft">Minecraft · blocs et pixels</option><option value="farming">Farming · campagne et cultures</option></select><label class="student-theme-motion"><input type="checkbox" id="student-theme-motion"> Mettre les animations en pause</label><p id="student-theme-status" role="status" aria-live="polite">Ce choix te suivra sur les autres ordinateurs.</p><button id="student-theme-retry" type="button" hidden>Réessayer</button></div>
+</details>
+<button type="button" id="course-logout" hidden>Se déconnecter</button></div>
+        </div>
+        <div class="student-welcome-row" id="course-welcome" hidden>
+            <div><p class="student-eyebrow">Une séance à la fois, à ton rythme.</p><p class="student-course-greeting">Bonjour <span id="course-header-identity"></span></p></div>
+            <dl class="student-profile"><div><dt>Établissement</dt><dd data-profile-field="etablissement"></dd></div><div><dt>Classe</dt><dd data-profile-field="classe"></dd></div><div><dt>Inscription</dt><dd data-profile-field="validation"></dd></div></dl>
+        </div>
+    </div>
+</header>
+
+    <main class="student-course-main" id="student-course-main">
+
+<div id="course-work" data-etablissement="mfr" data-matiere="tim" data-classe="bts2" data-seance="S02" data-saving-enabled="true" data-collaboration-enabled="true">
+    <div class="course-save-panel course-toolbar">
+        <p id="course-identity" hidden></p>
+        <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+    </div>
+    <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
+        <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
+        <p id="group-status" role="status">Les groupes sont propres à chaque séance. Connecte-toi avec ton compte élève pour choisir ta copie.</p>
+        <div id="group-controls" hidden>
+            <label for="group-copy">Copie de cette séance</label><select id="group-copy"></select>
+            <button type="button" id="group-refresh">Actualiser les groupes</button>
+            <div id="group-create-panel" hidden>
+                <p>Choisis un ou deux camarades. Chacun doit accepter pour partager les réponses. Le groupe reprend ton travail actuel ; ta copie individuelle reste dans l’historique.</p>
+                <div id="group-classmates" class="collaboration-roster"></div>
+                <button type="button" id="group-create">Envoyer les invitations</button>
+            </div>
+        </div>
+    </section>
+    <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
+    <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
+
+
+
+<div class="course-columns">
+    <aside class="course-navigation" aria-label="Étapes de la séance">
+        <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
+        <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
+        <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Pour commencer</a></li><li><a href="#a02">Notions et compétences travaillées</a></li><li><a href="#a03">Pourquoi allons-nous travailler cela ?</a></li><li><a href="#a04">À quoi cela va-t-il vous servir ?</a></li><li><a href="#a05">1. Créer votre espace de travail</a></li><li><a href="#a06">2. Une exploitation vous transmet ses données</a></li><li><a href="#a07">3. Avant de calculer : peut-on faire confiance au tableau ?</a></li><li><a href="#a08">4. Pourquoi préparer les données avant de les analyser ?</a></li><li><a href="#a09">5. Une grande parcelle produit plus : est-elle forcément meilleure ?</a></li><li><a href="#a10">6. Pourquoi regarder les résultats maintenant ?</a></li><li><a href="#a11">7. Ce que nous venons de construire</a></li><li><a href="#a12">8. Bilan de la séance</a></li><li><a href="#a13">9. Avant de rendre</a></li><li><a href="#a14">À retenir</a></li><li><a href="#a15">Pour la prochaine séance</a></li><li><a href="#a16">Source institutionnelle</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+    </aside>
+
+<div class="course-reading">
+<!-- ========== INTRODUCTION DU COURS ========== -->
+
+<header class="cours-intro" id="course-intro">
+    <h1>Peut-on faire confiance aux données ?</h1>
+
+    
+    <p class="cours-theme">
+        <strong>Thème :</strong> TIM — Peut-on faire confiance aux données ?
+    </p>
+    
+
+    
+    <p class="cours-problematique">
+        <strong>Problématique :</strong> Peut-on faire confiance aux données ?
+    </p>
+    
+
+    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Dans une exploitation agricole, de nombreuses données peuvent être enregistrées : surfaces, productions, coûts, temps de travail, quantités d&#39;intrants...</p></section>
+    
+    <section><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
+    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    
+    
+    <section class="cours-objectifs">
+        <h2>Ce que vous allez apprendre</h2>
+        <ul>
+            
+        </ul>
+
+        <h2>Ce que vous allez apprendre à faire</h2>
+        <ul>
+            
+        </ul>
+    </section>
+    
+    <section><h2>Ressources du cours</h2>
+<p>Réalise les manipulations dans le logiciel demandé. Conserve tes fichiers sur ton espace habituel. Le site enregistre seulement tes réponses écrites, tes résultats, tes formules et tes démarches ; aucun fichier n’est téléversé.</p>
+    
+
+</section>
+    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
+<p>Dans cette page du ministère, retrouve le programme ou le référentiel de ta formation. Les objectifs précis étudiés aujourd’hui sont indiqués dans le cours.</p>
+    
+
+<p><a href="https://chlorofil.fr/diplomes/secondaire/btsa/acse/acs-agri-2025" target="_blank" rel="noopener noreferrer">Consulter les programmes et attendus officiels</a></p>
+
+
+</div></details>
+
+</header>
+
+    <fieldset id="course-answers" class="course-answer-fields" disabled>
+        <legend>Réponses aux activités</legend>
+        <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
+
+<section class="cours-activites">
+    
+    <article class="cours-activite" id="a01">
+        <h2>Activité 1 — Pour commencer</h2>
+        
+        
+        
+
+        
+
+        
+<p>Durée prévue : environ 1 heure</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a02">
+        <h2>Activité 2 — Notions et compétences travaillées</h2>
+        
+        
+        
+
+        
+
+        
+<ul><li>qualité et fiabilité d&#39;une donnée ;</li><li>donnée manquante, donnée suspecte et donnée incohérente ;</li><li>standardisation des données ;</li><li>construction d&#39;un indicateur ;</li><li>formules simples dans un tableur ;</li><li>comparaison de parcelles de tailles différentes.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a03">
+        <h2>Activité 3 — Pourquoi allons-nous travailler cela ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Dans une exploitation agricole, de nombreuses données peuvent être enregistrées : surfaces, productions, coûts, temps de travail, quantités d&#39;intrants...</p>
+    
+
+<p>Mais un ordinateur ne sait pas automatiquement si une valeur est correcte.</p>
+    
+
+<p>Si une donnée est fausse, une formule parfaitement correcte peut produire un résultat faux.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a04">
+        <h2>Activité 4 — À quoi cela va-t-il vous servir ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Dans votre futur métier, vous pourrez recevoir des données provenant :</p>
+    
+
+<ul><li>d&#39;un logiciel de gestion ;</li><li>d&#39;un salarié ;</li><li>d&#39;un capteur ;</li><li>d&#39;un conseiller ;</li><li>d&#39;un fichier transmis par un partenaire ;</li><li>ou de vos propres relevés.</li></ul>
+    
+
+<p>Avant de prendre une décision à partir de ces données, vous devrez savoir repérer les valeurs douteuses et construire des indicateurs permettant de comparer correctement les situations.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a05">
+        <h2>Activité 5 — 1. Créer votre espace de travail</h2>
+        
+        
+        
+
+        
+
+        
+<p>Lors de la séance précédente, nous avons vérifié vos premières compétences avec Writer et Calc.</p>
+    
+
+<p>Nous allons maintenant utiliser Calc pour une vraie situation professionnelle : analyser des données de parcelles.</p>
+    
+
+<p>Ouvrez LibreOffice Calc et créez un nouveau classeur nommé :</p>
+    
+
+<p>BTS2_ACSAGRI_S02_NOM_Prenom.ods</p>
+    
+
+<p>Créez trois feuilles :</p>
+    
+
+<ul><li>Donnees</li><li>Analyse</li><li>Bilan</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a06">
+        <h2>Activité 6 — 2. Une exploitation vous transmet ses données</h2>
+        
+        
+        
+
+        
+
+        
+<p>Un exploitant souhaite comparer plusieurs parcelles fourragères.</p>
+    
+
+<p>Il vous transmet le tableau suivant :</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a06-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
+            
+
+            
+            
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Parcelle</th>
+                                
+                                <th>Culture</th>
+                                
+                                <th>Surface (ha)</th>
+                                
+                                <th>Production (t MS)</th>
+                                
+                                <th>Coût intrants (€)</th>
+                                
+                                <th>Temps de travail (h)</th>
+                                
+                                <th>Azote total (kg)</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    P01
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Prairie permanente
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    78
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    421
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    1380
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    56
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    320
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    P02
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Maïs ensilage
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    54
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    632
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    3520
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    61
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    790
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    P03
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Prairie temporaire
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    61
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    438
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    1740
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    48
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    410
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    P04
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Méteil
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    47
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    315
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    1960
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    42
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    290
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    P05
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Prairie permanente
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    92
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    469
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    1510
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    63
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    350
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    P06
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Maïs ensilage
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    48
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    530
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    3190
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    58
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    710
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    P07
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Prairie temp.
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    59
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    394
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    1680
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    45
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    390
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    P08
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Méteil
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    38
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    247
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    1580
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    34
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a06_q01_r7_c6" data-required="true" data-row="7" data-col="6" aria-label="2. Une exploitation vous transmet ses données — Azote total (kg) — P08">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    P09
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Prairie permanente
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    86
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    483
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    1460
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    59
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    330
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    P10
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Maïs ensilage
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    51
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    601
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    3380
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    60
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    760
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            
+            
+            
+<p>Copiez ce tableau dans la feuille Donnees.</p>
+    
+
+<p>Ces données sont fictives et ont été créées pour l&#39;activité pédagogique.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a07">
+        <h2>Activité 7 — 3. Avant de calculer : peut-on faire confiance au tableau ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Nous pourrions immédiatement demander à Calc de faire des calculs.</p>
+    
+
+<p>Mais ce serait une mauvaise méthode.</p>
+    
+
+<p>Avant de calculer, nous devons vérifier si les données semblent cohérentes.</p>
+    
+
+<p>Ajoutez à droite du tableau une colonne intitulée Observation.</p>
+    
+
+<p>Repérez au moins trois problèmes dans les données et indiquez-les dans cette colonne.</p>
+    
+
+<h4>Indice 1</h4>
+    
+
+<p>Comparez les valeurs d&#39;une même colonne entre elles. Une valeur semble-t-elle très différente des autres ?</p>
+    
+
+<h4>Indice 2</h4>
+    
+
+<p>Regardez aussi les noms des cultures. Une même catégorie est-elle toujours écrite exactement de la même façon ?</p>
+    
+
+<h4>Indice 3</h4>
+    
+
+<p>Regardez P06, P07 et P08.</p>
+    
+
+<p>Important : lorsqu&#39;une donnée semble incorrecte mais que vous ne connaissez pas la bonne valeur, vous ne devez jamais l&#39;inventer.</p>
+    
+
+<p>Vous devez la signaler puis demander une vérification.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a08">
+        <h2>Activité 8 — 4. Pourquoi préparer les données avant de les analyser ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Nous venons de repérer les problèmes.</p>
+    
+
+<p>Nous allons maintenant préparer une version utilisable dans la feuille Analyse.</p>
+    
+
+<p>Pourquoi changer de feuille ? Parce que la feuille Donnees doit conserver la trace de ce qui nous a été transmis, tandis que la feuille Analyse servira à travailler.</p>
+    
+
+<p>Copiez les colonnes suivantes dans la feuille Analyse :</p>
+    
+
+<ul><li>Parcelle ;</li><li>Culture ;</li><li>Surface (ha) ;</li><li>Production (t MS) ;</li><li>Coût intrants (€) ;</li><li>Temps de travail (h).</li></ul>
+    
+
+<p>Vous pouvez corriger Prairie temp. en Prairie temporaire, car il s&#39;agit ici uniquement d&#39;harmoniser l&#39;écriture d&#39;une catégorie déjà identifiable.</p>
+    
+
+<p>En revanche, conservez provisoirement 530 pour P06 : nous savons que cette valeur est suspecte, mais nous ne connaissons pas encore sa valeur correcte.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a09">
+        <h2>Activité 9 — 5. Une grande parcelle produit plus : est-elle forcément meilleure ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Nous avons maintenant des données mieux organisées.</p>
+    
+
+<p>Mais comparer directement les productions totales peut être trompeur.</p>
+    
+
+<p>Par exemple, une parcelle de 10 ha peut produire davantage qu&#39;une parcelle de 4 ha simplement parce qu&#39;elle est plus grande.</p>
+    
+
+<p>Pour pouvoir comparer les parcelles, nous allons donc calculer des indicateurs ramenés à un hectare.</p>
+    
+
+<p>Ajoutez trois colonnes :</p>
+    
+
+<ul><li>Rendement (t MS/ha)</li><li>Coût intrants (€/ha)</li><li>Temps de travail (h/ha)</li></ul>
+    
+
+<p>Avant d&#39;écrire les formules, complétez mentalement :</p>
+    
+
+<p>« par hectare » signifie que je dois ........................................ par la surface.</p>
+    
+
+<p>Créez ensuite les trois formules pour la première parcelle puis recopiez-les vers le bas.</p>
+    
+
+<h4>Indice 1</h4>
+    
+
+<p>Le rendement correspond à la production obtenue pour un hectare.</p>
+    
+
+<h4>Indice 2</h4>
+    
+
+<p>Pour chaque indicateur, prenez la valeur totale et divisez-la par la surface de la parcelle.</p>
+    
+
+<h4>Indice 3</h4>
+    
+
+<p>Si la surface est en C2, la production en D2, le coût en E2 et le temps en F2 : rendement = =D2/C2, coût/ha = =E2/C2, travail/ha = =F2/C2.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a10">
+        <h2>Activité 10 — 6. Pourquoi regarder les résultats maintenant ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Nous avons d&#39;abord vérifié les données, puis nous les avons transformées en indicateurs comparables.</p>
+    
+
+<p>Nous pouvons maintenant regarder si ces nouveaux résultats nous apprennent quelque chose.</p>
+    
+
+<p>Dans la feuille Bilan, répondez aux questions suivantes.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a10-q01-label">Question 1 — Q1 : Quel rendement obtenez-vous pour P06 ? Ce résultat vous paraît-il cohérent avec les autres parcelles ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q01" data-answer-id="a10_q01" data-required="true" aria-labelledby="a10-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a10-q02-label">Question 2 — Q2 : Quelle parcelle présente le coût d&#39;intrants par hectare le plus faible ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q02" data-answer-id="a10_q02" data-required="true" aria-labelledby="a10-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a10-q03-label">Question 3 — Q3 : Quelles parcelles demandent le plus de temps de travail par hectare ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q03" data-answer-id="a10_q03" data-required="true" aria-labelledby="a10-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a10-q04-label">Question 4 — Q4 : Peut-on utiliser le rendement de P06 pour conseiller immédiatement l&#39;exploitant ? Pourquoi ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q04" data-answer-id="a10_q04" data-required="true" aria-labelledby="a10-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<h4>Indice 1</h4>
+    
+
+<p>Revenez à la donnée utilisée pour calculer ce rendement.</p>
+    
+
+<h4>Indice 2</h4>
+    
+
+<p>La formule peut-elle être correcte si la donnée de départ est douteuse ?</p>
+    
+
+<h4>Indice 3</h4>
+    
+
+<p>Le résultat est mathématiquement correct avec 530, mais la valeur 530 doit être vérifiée avant que le rendement puisse être utilisé pour prendre une décision.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a11">
+        <h2>Activité 11 — 7. Ce que nous venons de construire</h2>
+        
+        
+        
+
+        
+
+        
+<p>Nous sommes partis d&#39;un tableau de valeurs brutes.</p>
+    
+
+<p>Nous avons suivi plusieurs étapes :</p>
+    
+
+<p>données brutes → vérification → préparation → calcul d&#39;indicateurs → première interprétation.</p>
+    
+
+<p>Ces étapes sont liées : si une étape est mauvaise, les suivantes peuvent devenir inutilisables.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a12">
+        <h2>Activité 12 — 8. Bilan de la séance</h2>
+        
+        
+        
+
+        
+
+        
+<p>Dans la feuille Bilan, complétez avec vos propres mots :</p>
+    
+
+<ul><li>Une donnée suspecte est ................................................................................................................</li><li>Une donnée manquante est ................................................................................................................</li><li>Standardiser des données signifie ................................................................................................................</li><li>Un indicateur permet de ................................................................................................................</li></ul>
+    
+
+<p>Dernière question :</p>
+    
+
+<p>Pourquoi faut-il vérifier les données avant de prendre une décision à partir d&#39;un tableur ?</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a13">
+        <h2>Activité 13 — 9. Avant de rendre</h2>
+        
+        
+        
+
+        
+
+        
+<p>Vérifiez que votre fichier contient :</p>
+    
+
+<ul><li>la feuille Donnees avec vos observations ;</li><li>la feuille Analyse avec les trois indicateurs calculés par des formules ;</li><li>la feuille Bilan avec vos réponses.</li></ul>
+    
+
+<p>Enregistrez votre fichier sous le nom :</p>
+    
+
+<p>BTS2_ACSAGRI_S02_NOM_Prenom.ods</p>
+    
+
+<p>Déposez-le ensuite dans l&#39;espace indiqué par le professeur.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a14">
+        <h2>Activité 14 — À retenir</h2>
+        
+        
+        
+
+        
+
+        
+<ul><li>Un ordinateur calcule avec les données qu&#39;on lui donne : il ne sait pas automatiquement si elles sont fiables.</li><li>Une donnée suspecte doit être vérifiée, pas corrigée au hasard.</li><li>Une donnée manquante n&#39;est pas égale à zéro.</li><li>Des catégories écrites différemment peuvent être considérées comme différentes par un logiciel.</li><li>Un indicateur transforme des données en une information plus facile à comparer.</li><li>Ramener une valeur à l&#39;hectare permet de comparer plus justement des parcelles de surfaces différentes.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a15">
+        <h2>Activité 15 — Pour la prochaine séance</h2>
+        
+        
+        
+
+        
+
+        
+<p>Nous savons maintenant construire des indicateurs.</p>
+    
+
+<p>Mais pour l&#39;instant, nous devons encore les lire un par un.</p>
+    
+
+<p>Lors de la prochaine séance, l&#39;exploitant nous confirmera certaines données et nous apprendrons à faire en sorte que le tableur repère automatiquement les situations à surveiller.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a16">
+        <h2>Activité 16 — Source institutionnelle</h2>
+        
+        
+        
+
+        
+
+        
+<ul><li>Chlorofil – BTSA ACS&#39;AGRI – référentiel et documents d&#39;accompagnement.</li></ul>
+    
+
+<p><a href="https://chlorofil.fr/diplomes/secondaire/btsa/acse/acs-agri-2025" target="_blank" rel="noopener noreferrer">BTSA ACS&#39;AGRI – référentiel et documents d&#39;accompagnement</a></p>
+
+
+<p>Les données utilisées dans cette séance sont fictives et adaptées à des fins pédagogiques.</p>
+    
+
+
+        
+        
+    </article>
+    
+</section>
+
+    </fieldset>
+    <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
+    <h2 id="course-summary-title">À retenir</h2><ul></ul>
+    <h3>Faire le point</h3><p>Relis tes réponses et vérifie les points demandés dans le bilan du cours. Tu peux revenir sur ton travail tant que le professeur ne l’a pas clôturé.</p>
+</section>
+
+    <div class="course-submit-panel">
+        <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
+        <p id="course-submit-status" role="status" aria-live="polite"></p>
+        <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
+    </div>
+</div></div>
+</div>
+<noscript><p>Active JavaScript pour charger ta copie et enregistrer tes réponses.</p></noscript>
+
+<script id="classes-data" type="application/json">
+{"college":{"nom":"Collège","classes":[{"id":"5e","nom":"5e","matieres":["techno"]},{"id":"4e","nom":"4e","matieres":["techno"]},{"id":"3e","nom":"3e","matieres":["techno"]}]},"mfr":{"nom":"MFR","classes":[{"id":"4e","nom":"4e MFR","matieres":["tim","maths"]},{"id":"3e","nom":"3e MFR","matieres":["tim","maths"]},{"id":"cap1","nom":"CAP 1","matieres":["tim"]},{"id":"cap2","nom":"CAP 2","matieres":["tim"]},{"id":"2de","nom":"2de Pro","matieres":["tim","maths"]},{"id":"1re","nom":"Bac Pro 1","matieres":["tim","maths"]},{"id":"term","nom":"Bac Pro 2","matieres":["tim","maths"]},{"id":"bts1","nom":"BTS 1","matieres":["tim"]},{"id":"bts2","nom":"BTS 2","matieres":["tim"]}]}}
+</script>
+<script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
+    </main>
+    <footer class="site-footer">
+    <p>
+        &copy; 2026
+        Portail pédagogique Technologie | TIM | Mathématiques
+    </p>
+</footer>
+</body>
+</html>

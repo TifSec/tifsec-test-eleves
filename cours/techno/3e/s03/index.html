@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
+
+    
+    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
+    <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
+    
+
+    <title>
+        
+        Portail pédagogique Technologie | TIM | Mathématiques
+        
+    </title>
+
+    <link rel="icon" href="/tifsec-test-eleves/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/variables.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/base.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/body.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/header.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/main.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/footer.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-message.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-session.css">
+
+    
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    
+    
+
+    
+
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    
+    
+</head>
+
+<body class="student-shell student-course-shell">
+    <a class="student-skip" href="#course-intro">Aller au cours</a>
+    <p id="message" class="auth-message" role="status" aria-live="polite" hidden></p>
+    <header class="student-header" id="course-header">
+    <div class="student-header-inner">
+        <div class="student-topbar">
+            <a class="student-brand" href="/tifsec-test-eleves/eleve/"><img src="/tifsec-test-eleves/images/logo.png" width="44" height="44" alt=""><span>Mon espace<span data-profile-field="matieres"></span></span></a>
+            <div class="student-header-actions"><a class="student-home-link" href="/tifsec-test-eleves/eleve/">Mes séances</a><a id="course-login" href="/tifsec-test-eleves/connexion/">Se connecter</a><details class="student-theme-picker" id="student-theme-picker" hidden>
+    <summary>Apparence</summary>
+    <div class="student-theme-options"><label for="student-theme-select">Les couleurs de mon espace</label><select id="student-theme-select" disabled><option value="ocean">Océan · bleu</option><option value="forest">Forêt · vert</option><option value="plum">Prune · violet</option><option value="terracotta">Terre cuite · orangé</option><option value="ruby">Rubis · rouge</option><option value="slate">Ardoise · gris</option><option value="midnight">Minuit · noir</option><option value="rose">Rosée · rose</option><option value="neon">Néon · RGB sombre</option><option value="cyberpunk">Cyberpunk · cité futuriste</option><option value="minecraft">Minecraft · blocs et pixels</option><option value="farming">Farming · campagne et cultures</option></select><label class="student-theme-motion"><input type="checkbox" id="student-theme-motion"> Mettre les animations en pause</label><p id="student-theme-status" role="status" aria-live="polite">Ce choix te suivra sur les autres ordinateurs.</p><button id="student-theme-retry" type="button" hidden>Réessayer</button></div>
+</details>
+<button type="button" id="course-logout" hidden>Se déconnecter</button></div>
+        </div>
+        <div class="student-welcome-row" id="course-welcome" hidden>
+            <div><p class="student-eyebrow">Une séance à la fois, à ton rythme.</p><p class="student-course-greeting">Bonjour <span id="course-header-identity"></span></p></div>
+            <dl class="student-profile"><div><dt>Établissement</dt><dd data-profile-field="etablissement"></dd></div><div><dt>Classe</dt><dd data-profile-field="classe"></dd></div><div><dt>Inscription</dt><dd data-profile-field="validation"></dd></div></dl>
+        </div>
+    </div>
+</header>
+
+    <main class="student-course-main" id="student-course-main">
+
+<div id="course-work" data-etablissement="college" data-matiere="techno" data-classe="3e" data-seance="S03" data-saving-enabled="true" data-collaboration-enabled="true">
+    <div class="course-save-panel course-toolbar">
+        <p id="course-identity" hidden></p>
+        <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+    </div>
+    <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
+        <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
+        <p id="group-status" role="status">Les groupes sont propres à chaque séance. Connecte-toi avec ton compte élève pour choisir ta copie.</p>
+        <div id="group-controls" hidden>
+            <label for="group-copy">Copie de cette séance</label><select id="group-copy"></select>
+            <button type="button" id="group-refresh">Actualiser les groupes</button>
+            <div id="group-create-panel" hidden>
+                <p>Choisis un ou deux camarades. Chacun doit accepter pour partager les réponses. Le groupe reprend ton travail actuel ; ta copie individuelle reste dans l’historique.</p>
+                <div id="group-classmates" class="collaboration-roster"></div>
+                <button type="button" id="group-create">Envoyer les invitations</button>
+            </div>
+        </div>
+    </section>
+    <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
+    <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
+
+
+
+<div class="course-columns">
+    <aside class="course-navigation" aria-label="Étapes de la séance">
+        <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
+        <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
+        <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a05">Production attendue</a></li><li><a href="#a06">1. Préparez votre document de travail</a></li><li><a href="#a07">2. Une technologie peut-elle réellement changer nos habitudes ?</a></li><li><a href="#a08">3. Toutes les innovations transforment-elles autant la société ?</a></li><li><a href="#a09">4. Où utilise-t-on déjà l&#39;intelligence artificielle ?</a></li><li><a href="#a10">5. Toutes les données se valent-elles ?</a></li><li><a href="#a11">6. Une IA peut-elle donner une réponse convaincante mais fausse ?</a></li><li><a href="#a12">7. Technologie : progrès ou problème ?</a></li><li><a href="#a13">8. Conclusion du travail</a></li><li><a href="#a14">Rendu attendu</a></li><li><a href="#a15">À retenir</a></li><li><a href="#a16">Sources générales</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+    </aside>
+
+<div class="course-reading">
+<!-- ========== INTRODUCTION DU COURS ========== -->
+
+<header class="cours-intro" id="course-intro">
+    <h1>Comment les technologies transforment-elles la société ?</h1>
+
+    
+    <p class="cours-theme">
+        <strong>Thème :</strong> Les objets et les systèmes techniques : leurs usages et leurs interactions à découvrir et analyser
+    </p>
+    
+
+    
+    <p class="cours-problematique">
+        <strong>Problématique :</strong> Une nouvelle technologie améliore-t-elle toujours notre manière de vivre ?
+    </p>
+    
+
+    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : Une innovation technique peut modifier les habitudes, les usages et certains métiers.</p></section>
+    
+    <section><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
+    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    
+    
+    <section class="cours-objectifs">
+        <h2>Ce que vous allez apprendre</h2>
+        <ul>
+            
+            <li>Une innovation technique peut modifier les habitudes, les usages et certains métiers.</li>
+            
+            <li>Une technologie peut apporter des avantages tout en créant de nouvelles contraintes.</li>
+            
+            <li>Certaines innovations modifient profondément la manière de répondre à un besoin.</li>
+            
+            <li>Les systèmes d&#39;intelligence artificielle utilisent des données pour produire des résultats.</li>
+            
+            <li>Une intelligence artificielle peut produire des erreurs ou reproduire des biais présents dans les données utilisées.</li>
+            
+        </ul>
+
+        <h2>Ce que vous allez apprendre à faire</h2>
+        <ul>
+            
+        </ul>
+    </section>
+    
+<h4>Compétence visée : Analyser les effets d&#39;une innovation technique sur les usages, la société et l&#39;environnement</h4>
+    
+
+<h4>Objectifs d’apprentissage</h4>
+    
+
+<p>Ce que les élèves vont apprendre :</p>
+    
+
+<ul><li>Une innovation technique peut modifier les habitudes, les usages et certains métiers.</li><li>Une technologie peut apporter des avantages tout en créant de nouvelles contraintes.</li><li>Certaines innovations modifient profondément la manière de répondre à un besoin.</li><li>Les systèmes d&#39;intelligence artificielle utilisent des données pour produire des résultats.</li><li>Une intelligence artificielle peut produire des erreurs ou reproduire des biais présents dans les données utilisées.</li></ul>
+    
+
+<p>Ce qu&#39;ils vont apprendre à faire :</p>
+    
+
+<ul><li>Comparer une situation avant et après l&#39;apparition d&#39;une technologie.</li><li>Identifier des avantages, des contraintes et des risques.</li><li>Repérer plusieurs usages actuels de l&#39;intelligence artificielle.</li><li>Analyser la qualité de données utilisées pour entraîner un système.</li><li>Construire et justifier une opinion à partir d&#39;exemples précis.</li></ul>
+    
+
+
+    
+    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
+<p>Dans cette page du ministère, retrouve le programme ou le référentiel de ta formation. Les objectifs précis étudiés aujourd’hui sont indiqués dans le cours.</p>
+    
+
+<p><a href="https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4" target="_blank" rel="noopener noreferrer">Consulter les programmes et attendus officiels</a></p>
+
+
+</div></details>
+
+</header>
+
+    <fieldset id="course-answers" class="course-answer-fields" disabled>
+        <legend>Réponses aux activités</legend>
+        <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
+
+<section class="cours-activites">
+    
+    <article class="cours-activite" id="a05">
+        <h2>Activité 1 — Production attendue</h2>
+        
+        
+        
+
+        
+
+        
+<ul><li>Un document LibreOffice Writer nommé 3e_S03_nom.odt.</li><li>Les tableaux et réponses demandés pendant la séance.</li><li>Une analyse d&#39;un exemple d&#39;intelligence artificielle.</li><li>Une réponse argumentée à la problématique.</li></ul>
+    
+
+<p>Le fichier devra être déposé à la fin de la séance, même s&#39;il n&#39;est pas entièrement terminé.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a06">
+        <h2>Activité 2 — 1. Préparez votre document de travail</h2>
+        
+        
+        
+
+        
+
+        
+<p>Ouvrez LibreOffice Writer.</p>
+    
+
+<p>Créez un nouveau document.</p>
+    
+
+<p>Enregistrez-le immédiatement sous le nom : 3e_S03_nom.odt.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a06-q01-label">Question 1 — Écrivez votre nom, votre prénom et le titre : Séance 3 – Comment les technologies transforment-elles la société ?</h3>
+            
+
+            
+            
+                <textarea id="a06-q01" data-answer-id="a06_q01" data-required="true" aria-labelledby="a06-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a07">
+        <h2>Activité 3 — 2. Une technologie peut-elle réellement changer nos habitudes ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Choisissez une seule technologie parmi les suivantes :</p>
+    
+
+<ul><li>smartphone ;</li><li>GPS / géolocalisation ;</li><li>commerce en ligne ;</li><li>plateformes de vidéo à la demande ;</li><li>réseaux sociaux ;</li><li>voiture électrique ;</li><li>impression 3D ;</li><li>intelligence artificielle générative.</li></ul>
+    
+
+<p>Complétez le tableau :</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a07-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
+            
+
+            
+            
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Question</th>
+                                
+                                <th>Votre réponse</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Comment faisait-on avant cette technologie ?
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a07_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="2. Une technologie peut-elle réellement changer nos habitudes ? — Votre réponse — Comment faisait-on avant cette technologie ?">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Que permet-elle de faire aujourd&#39;hui ?
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a07_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="2. Une technologie peut-elle réellement changer nos habitudes ? — Votre réponse — Que permet-elle de faire aujourd&#39;hui ?">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Quel avantage apporte-t-elle ?
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a07_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="2. Une technologie peut-elle réellement changer nos habitudes ? — Votre réponse — Quel avantage apporte-t-elle ?">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Quelle nouvelle contrainte ou quel nouveau problème peut-elle créer ?
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a07_q01_r3_c1" data-required="true" data-row="3" data-col="1" aria-label="2. Une technologie peut-elle réellement changer nos habitudes ? — Votre réponse — Quelle nouvelle contrainte ou quel nouveau problème peut-elle créer ?">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    A-t-elle changé certaines habitudes ou certains métiers ?
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a07_q01_r4_c1" data-required="true" data-row="4" data-col="1" aria-label="2. Une technologie peut-elle réellement changer nos habitudes ? — Votre réponse — A-t-elle changé certaines habitudes ou certains métiers ?">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            
+            
+            
+<p>Quelques ressources fiables :</p>
+    
+
+<ul><li>GPS / géolocalisation : IGN – Comment fonctionne la géolocalisation par satellites ?</li><li>Commerce en ligne : DGCCRF – Commerce en ligne : le consommateur doit redoubler de vigilance</li><li>Vidéo / streaming : ADEME – Impacts des usages numériques</li><li>Réseaux sociaux : CNIL – Bulle de filtre</li><li>Voiture électrique : Ministère de la Transition écologique – 5 idées reçues sur la voiture électrique</li></ul>
+    
+
+<p><a href="https://www.ign.fr/mag/comment-fonctionne-la-geolocalisation-par-satellites" target="_blank" rel="noopener noreferrer">IGN – Comment fonctionne la géolocalisation par satellites ?</a></p>
+
+
+<p><a href="https://www.economie.gouv.fr/dgccrf/laction-de-la-dgccrf/les-enquetes-et-les-controles/commerce-en-ligne-le-consommateur-doit" target="_blank" rel="noopener noreferrer">DGCCRF – Commerce en ligne : le consommateur doit redoubler de vigilance</a></p>
+
+
+<p><a href="https://agirpourlatransition.ademe.fr/particuliers/mieux-consommer/numerique/impacts-lecture-musique-films-jeux-ligne" target="_blank" rel="noopener noreferrer">ADEME – Impacts des usages numériques</a></p>
+
+
+<p><a href="https://www.cnil.fr/fr/definition/bulle-de-filtre" target="_blank" rel="noopener noreferrer">CNIL – Bulle de filtre</a></p>
+
+
+<p><a href="https://www.ecologie.gouv.fr/actualites/5-idees-recues-voiture-electrique" target="_blank" rel="noopener noreferrer">Ministère de la Transition écologique – 5 idées reçues sur la voiture électrique</a></p>
+
+
+<p>Vous n&#39;avez besoin que de la ressource correspondant à votre technologie.</p>
+    
+
+<h4>Mise en commun : technologie et société</h4>
+    
+
+<p>Une innovation technique peut modifier les usages, les habitudes, les métiers et parfois l&#39;organisation de la société.</p>
+    
+
+<p>Une même technologie peut apporter des bénéfices et créer de nouvelles contraintes. Il faut donc analyser ses effets dans plusieurs domaines : usage, sécurité, coût, environnement, emploi ou données personnelles.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a08">
+        <h2>Activité 4 — 3. Toutes les innovations transforment-elles autant la société ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Classez chaque évolution en amélioration progressive ou changement important, puis justifiez.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a08-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
+            
+
+            
+            
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Évolution</th>
+                                
+                                <th>Votre classement</th>
+                                
+                                <th>Justification</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Une batterie de smartphone offrant deux heures d&#39;autonomie supplémentaires
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a08_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="3. Toutes les innovations transforment-elles autant la société ? — Votre classement — Une batterie de smartphone offrant deux heures d&#39;autonomie supplémentaires">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a08_q01_r0_c2" data-required="true" data-row="0" data-col="2" aria-label="3. Toutes les innovations transforment-elles autant la société ? — Justification — Une batterie de smartphone offrant deux heures d&#39;autonomie supplémentaires">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Le passage de la carte routière papier au GPS
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a08_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="3. Toutes les innovations transforment-elles autant la société ? — Votre classement — Le passage de la carte routière papier au GPS">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a08_q01_r1_c2" data-required="true" data-row="1" data-col="2" aria-label="3. Toutes les innovations transforment-elles autant la société ? — Justification — Le passage de la carte routière papier au GPS">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Une imprimante 3D capable d&#39;imprimer plus rapidement
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a08_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="3. Toutes les innovations transforment-elles autant la société ? — Votre classement — Une imprimante 3D capable d&#39;imprimer plus rapidement">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a08_q01_r2_c2" data-required="true" data-row="2" data-col="2" aria-label="3. Toutes les innovations transforment-elles autant la société ? — Justification — Une imprimante 3D capable d&#39;imprimer plus rapidement">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Le passage du courrier papier à la messagerie électronique
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a08_q01_r3_c1" data-required="true" data-row="3" data-col="1" aria-label="3. Toutes les innovations transforment-elles autant la société ? — Votre classement — Le passage du courrier papier à la messagerie électronique">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a08_q01_r3_c2" data-required="true" data-row="3" data-col="2" aria-label="3. Toutes les innovations transforment-elles autant la société ? — Justification — Le passage du courrier papier à la messagerie électronique">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            
+            
+            
+<h4>Mise en commun</h4>
+    
+
+<p>Une amélioration progressive conserve le principe général d&#39;une solution mais améliore certaines performances.</p>
+    
+
+<p>Une innovation de rupture transforme fortement la manière de répondre à un besoin ou les usages associés.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a09">
+        <h2>Activité 5 — 4. Où utilise-t-on déjà l&#39;intelligence artificielle ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>L&#39;intelligence artificielle n&#39;est pas limitée aux outils capables de générer du texte ou des images.</p>
+    
+
+<p>Choisissez deux domaines :</p>
+    
+
+<ul><li>santé ;</li><li>transport ;</li><li>agriculture ;</li><li>réseaux sociaux ;</li><li>commerce ;</li><li>industrie ;</li><li>jeux vidéo ;</li><li>éducation.</li></ul>
+    
+
+<p>Pour chacun, recherchez un exemple d&#39;utilisation de l&#39;IA et complétez :</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a09-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
+            
+
+            
+            
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Domaine</th>
+                                
+                                <th>Ce que fait l&#39;IA</th>
+                                
+                                <th>Données utilisées</th>
+                                
+                                <th>Intérêt</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a09_q01_r0_c0" data-required="true" data-row="0" data-col="0" aria-label="4. Où utilise-t-on déjà l&#39;intelligence artificielle ? — Domaine — ">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a09_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="4. Où utilise-t-on déjà l&#39;intelligence artificielle ? — Ce que fait l&#39;IA — ">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a09_q01_r0_c2" data-required="true" data-row="0" data-col="2" aria-label="4. Où utilise-t-on déjà l&#39;intelligence artificielle ? — Données utilisées — ">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a09_q01_r0_c3" data-required="true" data-row="0" data-col="3" aria-label="4. Où utilise-t-on déjà l&#39;intelligence artificielle ? — Intérêt — ">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a09_q01_r1_c0" data-required="true" data-row="1" data-col="0" aria-label="4. Où utilise-t-on déjà l&#39;intelligence artificielle ? — Domaine — ">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a09_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="4. Où utilise-t-on déjà l&#39;intelligence artificielle ? — Ce que fait l&#39;IA — ">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a09_q01_r1_c2" data-required="true" data-row="1" data-col="2" aria-label="4. Où utilise-t-on déjà l&#39;intelligence artificielle ? — Données utilisées — ">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a09_q01_r1_c3" data-required="true" data-row="1" data-col="3" aria-label="4. Où utilise-t-on déjà l&#39;intelligence artificielle ? — Intérêt — ">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            
+            
+            
+<p>Ressources :</p>
+    
+
+<ul><li>CNIL – Intelligence artificielle : de quoi parle-t-on ?</li><li>Conseil général de l&#39;économie – Baromètre du numérique 2026</li></ul>
+    
+
+<p><a href="https://www.cnil.fr/fr/intelligence-artificielle/intelligence-artificielle-de-quoi-parle-t-on" target="_blank" rel="noopener noreferrer">CNIL – Intelligence artificielle : de quoi parle-t-on ?</a></p>
+
+
+<p><a href="https://www.economie.gouv.fr/cge/barometre-du-numerique-edition-2026" target="_blank" rel="noopener noreferrer">Conseil général de l&#39;économie – Baromètre du numérique 2026</a></p>
+
+
+<h4>Mise en commun : données et intelligence artificielle</h4>
+    
+
+<p>Un système d&#39;intelligence artificielle utilise des données et des méthodes de calcul afin de produire un résultat, une prédiction, une recommandation ou une décision.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a10">
+        <h2>Activité 6 — 5. Toutes les données se valent-elles ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>On entraîne une intelligence artificielle à reconnaître des chats et des chiens.</p>
+    
+
+<p>On lui fournit :</p>
+    
+
+<ul><li>10 000 photographies de chiens de nombreuses races et prises dans des situations différentes ;</li><li>200 photographies de chats, presque toutes montrant des chats noirs à l&#39;intérieur d&#39;une maison.</li></ul>
+    
+
+<p>Répondez :</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a10-q01-label">Question 1 — L&#39;IA dispose-t-elle d&#39;autant d&#39;informations sur les chats que sur les chiens ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q01" data-answer-id="a10_q01" data-required="true" aria-labelledby="a10-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a10-q02-label">Question 2 — Les photographies de chats représentent-elles correctement tous les chats ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q02" data-answer-id="a10_q02" data-required="true" aria-labelledby="a10-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a10-q03-label">Question 3 — Que pourrait-il se passer avec la photographie d&#39;un chat roux dans un jardin ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q03" data-answer-id="a10_q03" data-required="true" aria-labelledby="a10-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a10-q04-label">Question 4 — Comment améliorer les données utilisées pour l&#39;entraînement ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q04" data-answer-id="a10_q04" data-required="true" aria-labelledby="a10-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Pour vérifier : CNIL – Collecter et qualifier les données d&#39;entraînement</p>
+    
+
+<p><a href="https://www.cnil.fr/fr/intelligence-artificielle/guide/collecter-et-qualifier-les-donnees-dentrainement" target="_blank" rel="noopener noreferrer">CNIL – Collecter et qualifier les données d&#39;entraînement</a></p>
+
+
+<h4>Mise en commun : erreurs et biais</h4>
+    
+
+<p>Une intelligence artificielle peut produire des erreurs si les données utilisées sont insuffisantes, peu représentatives, de mauvaise qualité ou si les conditions d&#39;utilisation sont différentes de celles prévues.</p>
+    
+
+<p>La CNIL rappelle notamment qu&#39;un manque de représentativité des données peut conduire à des performances différentes selon les situations.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a11">
+        <h2>Activité 7 — 6. Une IA peut-elle donner une réponse convaincante mais fausse ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Une IA générative produit une réponse très détaillée à une question, mais vous ne connaissez pas sa source.</p>
+    
+
+<p>Que devez-vous faire avant d&#39;utiliser cette information dans un travail scolaire ?</p>
+    
+
+<p>La recopier puisque la réponse semble précise.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a11-q01-label">Question 1 — Vérifier l&#39;information avec une ou plusieurs sources fiables.</h3>
+            
+
+            
+            
+                <textarea id="a11-q01" data-answer-id="a11_q01" data-required="true" aria-labelledby="a11-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Considérer que l&#39;IA ne peut pas inventer une information.</p>
+    
+
+<p>Justifiez votre choix.</p>
+    
+
+<p>Ressource : CNIL – Questions-réponses sur l&#39;utilisation d&#39;un système d&#39;IA générative</p>
+    
+
+<p><a href="https://www.cnil.fr/fr/les-questions-reponses-de-la-cnil-sur-lutilisation-dun-systeme-dia-generative" target="_blank" rel="noopener noreferrer">CNIL – Questions-réponses sur l&#39;utilisation d&#39;un système d&#39;IA générative</a></p>
+
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a12">
+        <h2>Activité 8 — 7. Technologie : progrès ou problème ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Choisissez une affirmation :</p>
+    
+
+<ul><li>« Une nouvelle technologie améliore toujours notre vie. »</li><li>« L&#39;intelligence artificielle remplacera de nombreux métiers. »</li><li>« Si une technologie est pratique, son impact environnemental n&#39;est pas important. »</li><li>« Une machine devrait pouvoir prendre certaines décisions à la place d&#39;un humain. »</li></ul>
+    
+
+<p>Indiquez si vous êtes d&#39;accord, pas d&#39;accord ou partagé.</p>
+    
+
+<p>Rédigez ensuite 4 à 6 lignes comportant :</p>
+    
+
+<ul><li>votre position ;</li><li>un avantage ;</li><li>un risque ou une limite ;</li><li>un exemple précis.</li></ul>
+    
+
+<p>Pour la question sur l&#39;impact du numérique, vous pouvez consulter :</p>
+    
+
+<p>ADEME – Calculer l&#39;empreinte carbone de ses usages numériques</p>
+    
+
+<p><a href="https://agirpourlatransition.ademe.fr/particuliers/evaluer-son-impact/calculer-empreinte-carbone/calculez-empreinte-carbone-usages-numeriques" target="_blank" rel="noopener noreferrer">ADEME – Calculer l&#39;empreinte carbone de ses usages numériques</a></p>
+
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a13">
+        <h2>Activité 9 — 8. Conclusion du travail</h2>
+        
+        
+        
+
+        
+
+        
+<p>Complétez :</p>
+    
+
+<ul><li>Une innovation peut transformer les ................................................ et les ................................................ .</li><li>Une technologie peut apporter des avantages mais aussi créer de nouvelles ................................................ .</li><li>Une intelligence artificielle utilise des ................................................ pour produire des résultats.</li><li>Des données peu nombreuses ou peu représentatives peuvent provoquer des ................................................ ou des biais.</li><li>Une information produite par une IA doit être ................................................ avant d&#39;être utilisée.</li></ul>
+    
+
+<p>Répondez maintenant à la problématique en 4 à 6 lignes :</p>
+    
+
+<p>Une nouvelle technologie améliore-t-elle toujours notre manière de vivre ?</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a14">
+        <h2>Activité 10 — Rendu attendu</h2>
+        
+        
+        
+
+        
+
+        
+<p>À la fin de la séance, déposez votre fichier 3e_S03_nom.odt.</p>
+    
+
+<p>Le fichier doit être rendu même si toutes les activités ne sont pas terminées.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a15">
+        <h2>Activité 11 — À retenir</h2>
+        
+        
+        
+
+        
+
+        
+<p>Une innovation technique peut transformer profondément les usages, les habitudes et certains métiers.</p>
+    
+
+<p>Une technologie apporte généralement des avantages mais peut également créer de nouvelles contraintes.</p>
+    
+
+<p>Les systèmes d&#39;intelligence artificielle dépendent des données utilisées. Des données insuffisantes ou peu représentatives peuvent conduire à des erreurs ou des biais.</p>
+    
+
+<p>Les résultats produits par une intelligence artificielle doivent donc être analysés avec esprit critique et vérifiés lorsqu&#39;ils sont utilisés comme source d&#39;information.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a16">
+        <h2>Activité 12 — Sources générales</h2>
+        
+        
+        
+
+        
+
+        
+<ul><li>Ministère de l&#39;Éducation nationale – Programme de technologie du cycle 4</li><li>Éduscol – Ressources d&#39;accompagnement du programme de technologie</li></ul>
+    
+
+<p><a href="https://www.education.gouv.fr/bo/2024/Hebdo9/MENE2402802A" target="_blank" rel="noopener noreferrer">Programme de technologie du cycle 4</a></p>
+
+
+<p><a href="https://eduscol.education.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4" target="_blank" rel="noopener noreferrer">Ressources d&#39;accompagnement du programme de technologie</a></p>
+
+
+
+        
+        
+    </article>
+    
+</section>
+
+    </fieldset>
+    <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
+    <h2 id="course-summary-title">À retenir</h2><ul></ul>
+    <h3>Faire le point</h3><p>Relis tes réponses et vérifie les points demandés dans le bilan du cours. Tu peux revenir sur ton travail tant que le professeur ne l’a pas clôturé.</p>
+</section>
+
+    <div class="course-submit-panel">
+        <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
+        <p id="course-submit-status" role="status" aria-live="polite"></p>
+        <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
+    </div>
+</div></div>
+</div>
+<noscript><p>Active JavaScript pour charger ta copie et enregistrer tes réponses.</p></noscript>
+
+<script id="classes-data" type="application/json">
+{"college":{"nom":"Collège","classes":[{"id":"5e","nom":"5e","matieres":["techno"]},{"id":"4e","nom":"4e","matieres":["techno"]},{"id":"3e","nom":"3e","matieres":["techno"]}]},"mfr":{"nom":"MFR","classes":[{"id":"4e","nom":"4e MFR","matieres":["tim","maths"]},{"id":"3e","nom":"3e MFR","matieres":["tim","maths"]},{"id":"cap1","nom":"CAP 1","matieres":["tim"]},{"id":"cap2","nom":"CAP 2","matieres":["tim"]},{"id":"2de","nom":"2de Pro","matieres":["tim","maths"]},{"id":"1re","nom":"Bac Pro 1","matieres":["tim","maths"]},{"id":"term","nom":"Bac Pro 2","matieres":["tim","maths"]},{"id":"bts1","nom":"BTS 1","matieres":["tim"]},{"id":"bts2","nom":"BTS 2","matieres":["tim"]}]}}
+</script>
+<script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
+    </main>
+    <footer class="site-footer">
+    <p>
+        &copy; 2026
+        Portail pédagogique Technologie | TIM | Mathématiques
+    </p>
+</footer>
+</body>
+</html>

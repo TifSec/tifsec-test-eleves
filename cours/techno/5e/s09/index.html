@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
+
+    
+    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
+    <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
+    
+
+    <title>
+        
+        Portail pédagogique Technologie | TIM | Mathématiques
+        
+    </title>
+
+    <link rel="icon" href="/tifsec-test-eleves/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/variables.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/base.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/body.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/header.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/main.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/footer.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-message.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-session.css">
+
+    
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    
+    
+
+    
+
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    
+    
+</head>
+
+<body class="student-shell student-course-shell">
+    <a class="student-skip" href="#course-intro">Aller au cours</a>
+    <p id="message" class="auth-message" role="status" aria-live="polite" hidden></p>
+    <header class="student-header" id="course-header">
+    <div class="student-header-inner">
+        <div class="student-topbar">
+            <a class="student-brand" href="/tifsec-test-eleves/eleve/"><img src="/tifsec-test-eleves/images/logo.png" width="44" height="44" alt=""><span>Mon espace<span data-profile-field="matieres"></span></span></a>
+            <div class="student-header-actions"><a class="student-home-link" href="/tifsec-test-eleves/eleve/">Mes séances</a><a id="course-login" href="/tifsec-test-eleves/connexion/">Se connecter</a><details class="student-theme-picker" id="student-theme-picker" hidden>
+    <summary>Apparence</summary>
+    <div class="student-theme-options"><label for="student-theme-select">Les couleurs de mon espace</label><select id="student-theme-select" disabled><option value="ocean">Océan · bleu</option><option value="forest">Forêt · vert</option><option value="plum">Prune · violet</option><option value="terracotta">Terre cuite · orangé</option><option value="ruby">Rubis · rouge</option><option value="slate">Ardoise · gris</option><option value="midnight">Minuit · noir</option><option value="rose">Rosée · rose</option><option value="neon">Néon · RGB sombre</option><option value="cyberpunk">Cyberpunk · cité futuriste</option><option value="minecraft">Minecraft · blocs et pixels</option><option value="farming">Farming · campagne et cultures</option></select><label class="student-theme-motion"><input type="checkbox" id="student-theme-motion"> Mettre les animations en pause</label><p id="student-theme-status" role="status" aria-live="polite">Ce choix te suivra sur les autres ordinateurs.</p><button id="student-theme-retry" type="button" hidden>Réessayer</button></div>
+</details>
+<button type="button" id="course-logout" hidden>Se déconnecter</button></div>
+        </div>
+        <div class="student-welcome-row" id="course-welcome" hidden>
+            <div><p class="student-eyebrow">Une séance à la fois, à ton rythme.</p><p class="student-course-greeting">Bonjour <span id="course-header-identity"></span></p></div>
+            <dl class="student-profile"><div><dt>Établissement</dt><dd data-profile-field="etablissement"></dd></div><div><dt>Classe</dt><dd data-profile-field="classe"></dd></div><div><dt>Inscription</dt><dd data-profile-field="validation"></dd></div></dl>
+        </div>
+    </div>
+</header>
+
+    <main class="student-course-main" id="student-course-main">
+
+<div id="course-work" data-etablissement="college" data-matiere="techno" data-classe="5e" data-seance="S09" data-saving-enabled="true" data-collaboration-enabled="true">
+    <div class="course-save-panel course-toolbar">
+        <p id="course-identity" hidden></p>
+        <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+    </div>
+    <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
+        <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
+        <p id="group-status" role="status">Les groupes sont propres à chaque séance. Connecte-toi avec ton compte élève pour choisir ta copie.</p>
+        <div id="group-controls" hidden>
+            <label for="group-copy">Copie de cette séance</label><select id="group-copy"></select>
+            <button type="button" id="group-refresh">Actualiser les groupes</button>
+            <div id="group-create-panel" hidden>
+                <p>Choisis un ou deux camarades. Chacun doit accepter pour partager les réponses. Le groupe reprend ton travail actuel ; ta copie individuelle reste dans l’historique.</p>
+                <div id="group-classmates" class="collaboration-roster"></div>
+                <button type="button" id="group-create">Envoyer les invitations</button>
+            </div>
+        </div>
+    </section>
+    <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
+    <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
+
+
+
+<div class="course-columns">
+    <aside class="course-navigation" aria-label="Étapes de la séance">
+        <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
+        <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
+        <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a04">1. Une méthode que nous connaissons déjà</a></li><li><a href="#a05">2. Un nouveau problème</a></li><li><a href="#a06">3. Que doit savoir faire notre jeu ?</a></li><li><a href="#a07">4. Regrouper les petits problèmes</a></li><li><a href="#a08">5. Découvrir la décomposition</a></li><li><a href="#a09">6. Représenter la décomposition</a></li><li><a href="#a10">7. Dans quel ordre réaliser les actions ?</a></li><li><a href="#a11">8. Découvrir l&#39;algorithme</a></li><li><a href="#a12">9. Rendre une consigne assez précise pour un programme</a></li><li><a href="#a13">10. Préparer les parties du futur programme</a></li><li><a href="#a14">11. Une information qui doit rester en mémoire</a></li><li><a href="#a15">12. Petit défi : une fonctionnalité supplémentaire</a></li><li><a href="#a16">13. Conclusion du travail</a></li><li><a href="#a17">Sources et ressources</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+    </aside>
+
+<div class="course-reading">
+<!-- ========== INTRODUCTION DU COURS ========== -->
+
+<header class="cours-intro" id="course-intro">
+    <h1>Comment résoudre un problème compliqué ?</h1>
+
+    
+    <p class="cours-theme">
+        <strong>Thème :</strong> Structure, fonctionnement, comportement : des objets et des systèmes techniques à comprendre
+    </p>
+    
+
+    
+    <p class="cours-problematique">
+        <strong>Problématique :</strong> Comment rendre un problème complexe plus simple à comprendre avant de chercher à le programmer ?
+    </p>
+    
+
+    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : Comprendre qu&#39;un problème complexe peut être décomposé en plusieurs problèmes plus simples.</p></section>
+    
+    <section><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
+    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    
+    
+    <section class="cours-objectifs">
+        <h2>Ce que vous allez apprendre</h2>
+        <ul>
+            
+            <li>Comprendre qu&#39;un problème complexe peut être décomposé en plusieurs problèmes plus simples.</li>
+            
+            <li>Comprendre que certaines parties d&#39;un problème peuvent être étudiées séparément avant d&#39;être assemblées.</li>
+            
+            <li>Découvrir la notion d&#39;algorithme.</li>
+            
+            <li>Comprendre qu&#39;un algorithme décrit une suite organisée d&#39;actions.</li>
+            
+            <li>Comprendre que certaines actions sont déclenchées par un événement.</li>
+            
+            <li>Comprendre qu&#39;un programme peut avoir besoin de mémoriser des informations pour les utiliser plus tard.</li>
+            
+        </ul>
+
+        <h2>Ce que vous allez apprendre à faire</h2>
+        <ul>
+            
+        </ul>
+    </section>
+    
+<h4>Compétence visée : Décomposer de manière guidée un problème, organiser une suite d&#39;actions et décrire en langage naturel le comportement attendu d&#39;un programme</h4>
+    
+
+<p>Objectifs d’apprentissage :</p>
+    
+
+<ul><li>Comprendre qu&#39;un problème complexe peut être décomposé en plusieurs problèmes plus simples.</li><li>Comprendre que certaines parties d&#39;un problème peuvent être étudiées séparément avant d&#39;être assemblées.</li><li>Découvrir la notion d&#39;algorithme.</li><li>Comprendre qu&#39;un algorithme décrit une suite organisée d&#39;actions.</li><li>Comprendre que certaines actions sont déclenchées par un événement.</li><li>Comprendre qu&#39;un programme peut avoir besoin de mémoriser des informations pour les utiliser plus tard.</li></ul>
+    
+
+<ul><li>Identifier les principales parties d&#39;un problème.</li><li>Décomposer de manière guidée un objectif en plusieurs sous-problèmes.</li><li>Organiser des actions dans un ordre logique.</li><li>Représenter une décomposition sous la forme d&#39;un schéma simple.</li><li>Décrire avec des phrases précises ce qu&#39;un futur programme devra faire.</li><li>Identifier quelques informations qu&#39;un programme doit utiliser ou mémoriser.</li></ul>
+    
+
+<ul><li>Un document LibreOffice Writer nommé 5e_S9_nom1_nom2.odt.</li><li>Les noms et prénoms des élèves du groupe.</li><li>Le titre de la séance.</li><li>Les réponses aux différentes questions.</li><li>Un schéma présentant la décomposition d&#39;un petit jeu vidéo.</li><li>Des algorithmes simples écrits en langage naturel.</li><li>Un tableau préparant les principales parties du futur programme.</li></ul>
+    
+
+<p>Le document devra être rendu à la fin de la séance, même s&#39;il n&#39;est pas entièrement terminé.</p>
+    
+
+<p>Important : aujourd&#39;hui, vous ne programmez pas encore le jeu. Vous préparez sa logique afin de rendre la programmation de la prochaine séance plus simple.</p>
+    
+
+
+    
+    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
+<p>Dans cette page du ministère, retrouve le programme ou le référentiel de ta formation. Les objectifs précis étudiés aujourd’hui sont indiqués dans le cours.</p>
+    
+
+<p><a href="https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4" target="_blank" rel="noopener noreferrer">Consulter les programmes et attendus officiels</a></p>
+
+
+</div></details>
+
+</header>
+
+    <fieldset id="course-answers" class="course-answer-fields" disabled>
+        <legend>Réponses aux activités</legend>
+        <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
+
+<section class="cours-activites">
+    
+    <article class="cours-activite" id="a04">
+        <h2>Activité 1 — 1. Une méthode que nous connaissons déjà</h2>
+        
+        
+        
+
+        
+
+        
+<p>Lors de la séance précédente, nous avons recherché l&#39;origine de plusieurs dysfonctionnements.</p>
+    
+
+<p>Nous n&#39;avons pas essayé de modifier toutes les pièces au hasard.</p>
+    
+
+<p>Nous avons séparé le problème en plusieurs étapes :</p>
+    
+
+<p>Observer → envisager plusieurs causes → vérifier → écarter ou conserver → intervenir → tester</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a04-q01-label">Question 1 — Q1 : Pourquoi était-il plus simple d&#39;étudier progressivement les différentes causes possibles ?</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a04-q02-label">Question 2 — Q2 : Pensez-vous que cette méthode de découpage puisse être utile pour un problème qui n&#39;est pas une panne ? Donnez un exemple.</h3>
+            
+
+            
+            
+                <textarea id="a04-q02" data-answer-id="a04_q02" data-required="true" aria-labelledby="a04-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a05">
+        <h2>Activité 2 — 2. Un nouveau problème</h2>
+        
+        
+        
+
+        
+
+        
+<p>Vous allez maintenant préparer le fonctionnement d&#39;un petit jeu vidéo.</p>
+    
+
+<p>Le principe est :</p>
+    
+
+<p>Le joueur doit récupérer un objet puis rejoindre la sortie.</p>
+    
+
+<p>Pour le moment, n&#39;ouvrez pas MakeCode Arcade.</p>
+    
+
+<p>Imaginez que quelqu&#39;un vous donne seulement cette consigne :</p>
+    
+
+<p>« Programme ce jeu. »</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a05-q01-label">Question 1 — Q3 : Cette consigne vous semble-t-elle suffisamment précise pour commencer facilement ? Expliquez.</h3>
+            
+
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a06">
+        <h2>Activité 3 — 3. Que doit savoir faire notre jeu ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Plutôt que d&#39;essayer de traiter tout le jeu en une seule fois, cherchons toutes les petites choses nécessaires à son fonctionnement.</p>
+    
+
+<p>Que doit savoir faire le jeu ?</p>
+    
+
+<p>En groupe, trouvez au minimum six éléments.</p>
+    
+
+<p>Vous pouvez réfléchir :</p>
+    
+
+<ul><li>au joueur ;</li><li>à ses déplacements ;</li><li>à l&#39;objet à récupérer ;</li><li>à la sortie ;</li><li>aux contacts entre les différents éléments ;</li><li>aux informations que le jeu doit conserver ;</li><li>à la victoire ou à la défaite.</li></ul>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a06-q01-label">Question 1 — Q4 : Listez les différents petits problèmes que vous pensez devoir résoudre.</h3>
+            
+
+            
+            
+                <textarea id="a06-q01" data-answer-id="a06_q01" data-required="true" aria-labelledby="a06-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a07">
+        <h2>Activité 4 — 4. Regrouper les petits problèmes</h2>
+        
+        
+        
+
+        
+
+        
+<p>Comparez vos propositions.</p>
+    
+
+<p>Plusieurs idées différentes peuvent parfois correspondre à un même grand sous-problème.</p>
+    
+
+<p>Nous pouvons par exemple regrouper ainsi :</p>
+    
+
+<ul><li>créer et contrôler le joueur ;</li><li>créer les éléments du niveau ;</li><li>gérer l&#39;objet à récupérer ;</li><li>gérer la sortie ;</li><li>gérer les événements de contact ;</li><li>gérer la victoire ou la défaite.</li></ul>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a07-q01-label">Question 1 — Q5 : Le problème « créer le jeu » vous semble-t-il maintenant plus facile à comprendre ? Pourquoi ?</h3>
+            
+
+            
+            
+                <textarea id="a07-q01" data-answer-id="a07_q01" data-required="true" aria-labelledby="a07-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a08">
+        <h2>Activité 5 — 5. Découvrir la décomposition</h2>
+        
+        
+        
+
+        
+
+        
+<p>Vous venez de transformer un problème complexe en plusieurs problèmes plus simples.</p>
+    
+
+<p>Cette méthode s&#39;appelle la décomposition.</p>
+    
+
+<p>Décomposer un problème consiste à le séparer en plusieurs sous-problèmes que l&#39;on peut comprendre et traiter plus facilement.</p>
+    
+
+<p>Nous avons déjà utilisé cette méthode :</p>
+    
+
+<ul><li>pour rechercher les fonctions d&#39;un vélo ;</li><li>pour comparer plusieurs solutions ;</li><li>pour organiser une expérience ;</li><li>pour rechercher l&#39;origine d&#39;un dysfonctionnement.</li></ul>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a08-q01-label">Question 1 — Q6 : Choisissez un exemple provenant d&#39;une séance précédente et expliquez comment le problème avait été décomposé.</h3>
+            
+
+            
+            
+                <textarea id="a08-q01" data-answer-id="a08_q01" data-required="true" aria-labelledby="a08-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a09">
+        <h2>Activité 6 — 6. Représenter la décomposition</h2>
+        
+        
+        
+
+        
+
+        
+<p>Dans votre document Writer, réalisez un schéma.</p>
+    
+
+<p>Placez tout en haut ou au centre :</p>
+    
+
+<p>CRÉER LE JEU</p>
+    
+
+<p>Reliez ensuite cet objectif aux principaux sous-problèmes :</p>
+    
+
+<ul><li>créer et contrôler le joueur ;</li><li>créer le niveau ;</li><li>gérer les obstacles ou dangers ;</li><li>gérer l&#39;objet à récupérer ;</li><li>gérer la sortie ;</li><li>gérer la victoire ou la défaite.</li></ul>
+    
+
+<p>Certains sous-problèmes restent encore trop généraux.</p>
+    
+
+<p>Choisissez-en au moins deux et décomposez-les une nouvelle fois.</p>
+    
+
+<p>Exemple 1 : gérer l&#39;objet à récupérer</p>
+    
+
+<ul><li>créer l&#39;objet ;</li><li>détecter lorsque le joueur le touche ;</li><li>mémoriser qu&#39;il a été récupéré ;</li><li>faire disparaître l&#39;objet.</li></ul>
+    
+
+<p>Gérer l&#39;objet → créer → détecter → mémoriser → faire disparaître</p>
+    
+
+<p>Exemple 2 : gérer un danger</p>
+    
+
+<ul><li>créer le danger ;</li><li>détecter le contact avec le joueur ;</li><li>modifier l&#39;état du joueur ;</li><li>décider de la suite de la partie.</li></ul>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a09-q01-label">Question 1 — Q7 : Décomposez deux sous-problèmes de votre schéma en au moins trois actions ou questions plus simples.</h3>
+            
+
+            
+            
+                <textarea id="a09-q01" data-answer-id="a09_q01" data-required="true" aria-labelledby="a09-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a09-q02-label">Question 2 — Q8 : Parmi les petits problèmes obtenus, lequel vous semble le plus simple ? Lequel vous semble le plus difficile ? Expliquez.</h3>
+            
+
+            
+            
+                <textarea id="a09-q02" data-answer-id="a09_q02" data-required="true" aria-labelledby="a09-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a10">
+        <h2>Activité 7 — 7. Dans quel ordre réaliser les actions ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Décomposer permet de savoir quoi résoudre.</p>
+    
+
+<p>Mais certaines actions doivent aussi se produire dans un ordre précis.</p>
+    
+
+<p>Imaginons que notre jeu possède un ennemi et que le joueur commence avec 3 vies.</p>
+    
+
+<p>Lorsque le joueur touche l&#39;ennemi :</p>
+    
+
+<ul><li>il perd une vie ;</li><li>le programme vérifie le nombre de vies restantes ;</li><li>s&#39;il reste au moins une vie, le joueur revient au départ ;</li><li>s&#39;il ne reste aucune vie, la partie se termine.</li></ul>
+    
+
+<p>Voici les actions, volontairement placées dans le désordre :</p>
+    
+
+<p>Replacer le joueur au point de départ.</p>
+    
+
+<p>Détecter le contact entre le joueur et l&#39;ennemi.</p>
+    
+
+<p>Terminer la partie.</p>
+    
+
+<p>Retirer une vie.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a10-q01-label">Question 1 — Vérifier le nombre de vies restantes.</h3>
+            
+
+            
+            
+                <textarea id="a10-q01" data-answer-id="a10_q01" data-required="true" aria-labelledby="a10-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Si le joueur possède encore au moins une vie, continuer la partie.</p>
+    
+
+<p>Si le nombre de vies est égal à zéro, déclencher la défaite.</p>
+    
+
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a10-q02-label">Question 2 — Q9 : Recopiez les lettres dans l&#39;ordre qui vous semble logique.</h3>
+            
+
+            
+            
+                <textarea id="a10-q02" data-answer-id="a10_q02" data-required="true" aria-labelledby="a10-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a10-q03-label">Question 3 — Q10 : Quelles actions ne seront pas exécutées à chaque contact ? De quoi cela dépend-il ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q03" data-answer-id="a10_q03" data-required="true" aria-labelledby="a10-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a10-q04-label">Question 4 — Q11 : Pourquoi faut-il retirer une vie et vérifier le nombre restant avant de décider de la suite ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q04" data-answer-id="a10_q04" data-required="true" aria-labelledby="a10-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a11">
+        <h2>Activité 8 — 8. Découvrir l&#39;algorithme</h2>
+        
+        
+        
+
+        
+
+        
+<p>Vous venez d&#39;organiser des actions pour obtenir le comportement souhaité.</p>
+    
+
+<p>Une suite organisée d&#39;instructions permettant d&#39;obtenir un résultat peut être décrite sous la forme d&#39;un algorithme.</p>
+    
+
+<p>Avant de programmer, on peut écrire cet algorithme avec des phrases simples.</p>
+    
+
+<p>Pour le contact avec l&#39;ennemi :</p>
+    
+
+<p>Attendre que le joueur touche l&#39;ennemi.</p>
+    
+
+<p>Retirer une vie.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a11-q01-label">Question 1 — Vérifier le nombre de vies restantes.</h3>
+            
+
+            
+            
+                <textarea id="a11-q01" data-answer-id="a11_q01" data-required="true" aria-labelledby="a11-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Si aucune vie ne reste, terminer la partie.</p>
+    
+
+<p>Sinon, replacer le joueur au point de départ et continuer.</p>
+    
+
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a11-q02-label">Question 2 — Q12 : Comparez cet algorithme avec votre réponse à la question 9. Qu&#39;aviez-vous correctement organisé ? Qu&#39;avez-vous éventuellement modifié ?</h3>
+            
+
+            
+            
+                <textarea id="a11-q02" data-answer-id="a11_q02" data-required="true" aria-labelledby="a11-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a11-q03-label">Question 3 — Q13 : En vous aidant du modèle précédent, écrivez maintenant un petit algorithme permettant de gérer la récupération de l&#39;objet.</h3>
+            
+
+            
+            
+                <textarea id="a11-q03" data-answer-id="a11_q03" data-required="true" aria-labelledby="a11-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Votre algorithme doit préciser :</p>
+    
+
+<ul><li>ce qui déclenche les actions ;</li><li>l&#39;information qui doit être mémorisée ;</li><li>ce qui arrive ensuite à l&#39;objet.</li></ul>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a12">
+        <h2>Activité 9 — 9. Rendre une consigne assez précise pour un programme</h2>
+        
+        
+        
+
+        
+
+        
+<p>Un ordinateur ne peut pas exécuter une consigne trop vague.</p>
+    
+
+<p>Par exemple :</p>
+    
+
+<p>« Quand le joueur touche un ennemi, il se passe quelque chose. »</p>
+    
+
+<p>Cette phrase ne précise pas suffisamment le comportement attendu.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a12-q01-label">Question 1 — Q14 : Réécrivez-la afin d&#39;indiquer précisément :</h3>
+            
+
+            
+            
+                <textarea id="a12-q01" data-answer-id="a12_q01" data-required="true" aria-labelledby="a12-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<ul><li>ce qui déclenche les actions ;</li><li>ce qui change ;</li><li>ce que le programme doit vérifier ;</li><li>ce qui doit se passer selon le résultat.</li></ul>
+    
+
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a12-q02-label">Question 2 — Q15 : Faites ensuite le même travail avec :</h3>
+            
+
+            
+            
+                <textarea id="a12-q02" data-answer-id="a12_q02" data-required="true" aria-labelledby="a12-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>« Le joueur récupère un objet. »</p>
+    
+
+<p>Votre description doit permettre à une autre personne de comprendre exactement le comportement attendu.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a13">
+        <h2>Activité 10 — 10. Préparer les parties du futur programme</h2>
+        
+        
+        
+
+        
+
+        
+<p>Lors de la prochaine séance, nous traduirons progressivement certaines de ces idées avec MakeCode Arcade.</p>
+    
+
+<p>Pour préparer ce travail, complétez le tableau suivant :</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a13-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
+            
+
+            
+            
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Élément du jeu</th>
+                                
+                                <th>Événement ou information détectée</th>
+                                
+                                <th>Action attendue</th>
+                                
+                                <th>Information à conserver pour plus tard ?</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Déplacement du joueur
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a13_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="10. Préparer les parties du futur programme — Événement ou information détectée — Déplacement du joueur">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a13_q01_r0_c2" data-required="true" data-row="0" data-col="2" aria-label="10. Préparer les parties du futur programme — Action attendue — Déplacement du joueur">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Oui / Non
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Contact avec un ennemi
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a13_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="10. Préparer les parties du futur programme — Événement ou information détectée — Contact avec un ennemi">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a13_q01_r1_c2" data-required="true" data-row="1" data-col="2" aria-label="10. Préparer les parties du futur programme — Action attendue — Contact avec un ennemi">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Oui / Non
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Récupération de l&#39;objet
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a13_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="10. Préparer les parties du futur programme — Événement ou information détectée — Récupération de l&#39;objet">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a13_q01_r2_c2" data-required="true" data-row="2" data-col="2" aria-label="10. Préparer les parties du futur programme — Action attendue — Récupération de l&#39;objet">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Oui / Non
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Arrivée à la sortie
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a13_q01_r3_c1" data-required="true" data-row="3" data-col="1" aria-label="10. Préparer les parties du futur programme — Événement ou information détectée — Arrivée à la sortie">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a13_q01_r3_c2" data-required="true" data-row="3" data-col="2" aria-label="10. Préparer les parties du futur programme — Action attendue — Arrivée à la sortie">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Oui / Non
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            
+            
+            
+<p>Ces comportements seront programmés lors de la prochaine séance avec MakeCode Arcade. Ressource : Microsoft MakeCode Arcade – événements de chevauchement</p>
+    
+
+<p><a href="https://arcade.makecode.com/reference/sprites/on-overlap" target="_blank" rel="noopener noreferrer">Microsoft MakeCode Arcade – événements de chevauchement</a></p>
+
+
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a13-q02-label">Question 2 — Q16 : Dans quelles situations le programme peut-il simplement réagir immédiatement ?</h3>
+            
+
+            
+            
+                <textarea id="a13-q02" data-answer-id="a13_q02" data-required="true" aria-labelledby="a13-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a13-q03-label">Question 3 — Q17 : Dans quelles situations doit-il conserver une information pour l&#39;utiliser plus tard ?</h3>
+            
+
+            
+            
+                <textarea id="a13-q03" data-answer-id="a13_q03" data-required="true" aria-labelledby="a13-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a13-q04-label">Question 4 — Q18 : Donnez deux exemples d&#39;informations que le programme pourrait devoir mémoriser pendant la partie.</h3>
+            
+
+            
+            
+                <textarea id="a13-q04" data-answer-id="a13_q04" data-required="true" aria-labelledby="a13-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a14">
+        <h2>Activité 11 — 11. Une information qui doit rester en mémoire</h2>
+        
+        
+        
+
+        
+
+        
+<p>Lorsque l&#39;objet à récupérer disparaît de l&#39;écran, le programme doit quand même pouvoir savoir qu&#39;il a été récupéré.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a14-q01-label">Question 1 — Q19 : Pourquoi cette information doit-elle être conservée jusqu&#39;à ce que le joueur atteigne la sortie ?</h3>
+            
+
+            
+            
+                <textarea id="a14-q01" data-answer-id="a14_q01" data-required="true" aria-labelledby="a14-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a14-q02-label">Question 2 — Q20 : Quelle information simple pourrait être mémorisée ?</h3>
+            
+
+            
+            
+                <textarea id="a14-q02" data-answer-id="a14_q02" data-required="true" aria-labelledby="a14-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Par exemple :</p>
+    
+
+<p>Objet récupéré : OUI / NON</p>
+    
+
+<p>Cette information constitue une donnée utilisée par le programme.</p>
+    
+
+<p>De la même manière, si le jeu possède plusieurs vies, le nombre de vies restantes est également une donnée qui peut évoluer pendant la partie.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a15">
+        <h2>Activité 12 — 12. Petit défi : une fonctionnalité supplémentaire</h2>
+        
+        
+        
+
+        
+
+        
+<p>Imaginons maintenant que le joueur possède trois vies.</p>
+    
+
+<p>Lorsqu&#39;il touche un danger :</p>
+    
+
+<ul><li>il perd une vie ;</li><li>le jeu vérifie le nombre de vies restantes ;</li><li>s&#39;il reste une vie ou plus, il revient au départ ;</li><li>s&#39;il n&#39;en reste aucune, la partie se termine.</li></ul>
+    
+
+<p>Ne cherchez pas de blocs MakeCode.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a15-q01-label">Question 1 — Q21 : Décomposez cette fonctionnalité en plusieurs actions simples.</h3>
+            
+
+            
+            
+                <textarea id="a15-q01" data-answer-id="a15_q01" data-required="true" aria-labelledby="a15-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a15-q02-label">Question 2 — Q22 : Quelle donnée devra être conservée et modifiée pendant la partie ?</h3>
+            
+
+            
+            
+                <textarea id="a15-q02" data-answer-id="a15_q02" data-required="true" aria-labelledby="a15-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a15-q03-label">Question 3 — Q23 : En vous aidant de l&#39;algorithme fourni dans la partie 8, écrivez l&#39;ordre des actions.</h3>
+            
+
+            
+            
+                <textarea id="a15-q03" data-answer-id="a15_q03" data-required="true" aria-labelledby="a15-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a16">
+        <h2>Activité 13 — 13. Conclusion du travail</h2>
+        
+        
+        
+
+        
+
+        
+<p>Sans retourner lire les parties précédentes, complétez :</p>
+    
+
+<ul><li>Séparer un problème complexe en plusieurs problèmes plus simples s&#39;appelle la ................................................ .</li><li>Une suite organisée d&#39;actions permettant d&#39;obtenir un résultat peut être décrite par un ................................................ .</li><li>Un programme peut utiliser et produire des ................................................ .</li><li>Avant de programmer une solution complexe, il peut être utile de commencer par ................................................ le problème.</li></ul>
+    
+
+<p>Dernière question :</p>
+    
+
+<p>Expliquez en trois ou quatre phrases pourquoi la consigne « programme tout le jeu » est plus difficile à traiter que plusieurs petites consignes comme « créer le joueur », « gérer le déplacement » ou « détecter la récupération d&#39;un objet ».</p>
+    
+
+<p>Enregistrez votre travail puis déposez-le dans l&#39;espace d&#39;échange.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a17">
+        <h2>Activité 14 — Sources et ressources</h2>
+        
+        
+        
+
+        
+
+        
+<ul><li>Ministère de l&#39;Éducation nationale – Programme de technologie du cycle 4 : Programme officiel de technologie</li><li>Ministère de l&#39;Éducation nationale – Repères de progressivité en programmation : Algorithmique, programmation, événements et données</li><li>Microsoft MakeCode Arcade – Events : Ressource officielle sur les événements</li><li>Microsoft MakeCode Arcade – Sprite Overlap Events : Exemple officiel de détection du contact entre deux sprites</li><li>Microsoft MakeCode Arcade – Déplacement d&#39;un sprite : Documentation officielle du contrôle d&#39;un personnage</li></ul>
+    
+
+<p><a href="https://www.education.gouv.fr/bo/2024/Hebdo9/MENE2402802A" target="_blank" rel="noopener noreferrer">Programme officiel de technologie</a></p>
+
+
+<p><a href="https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf" target="_blank" rel="noopener noreferrer">Algorithmique, programmation, événements et données</a></p>
+
+
+<p><a href="https://arcade.makecode.com/courses/csintro3/events" target="_blank" rel="noopener noreferrer">Ressource officielle sur les événements</a></p>
+
+
+<p><a href="https://arcade.makecode.com/courses/csintro3/events/overlap" target="_blank" rel="noopener noreferrer">Exemple officiel de détection du contact entre deux sprites</a></p>
+
+
+<p><a href="https://arcade.makecode.com/reference/controller/move-sprite" target="_blank" rel="noopener noreferrer">Documentation officielle du contrôle d&#39;un personnage</a></p>
+
+
+<p>Cette séance prépare la programmation de la séance suivante. En 5e, l&#39;écriture algorithmique proposée ici est volontairement guidée : les élèves décrivent et organisent des comportements simples en langage naturel avant de les retrouver progressivement sous forme de blocs MakeCode.</p>
+    
+
+
+        
+        
+    </article>
+    
+</section>
+
+    </fieldset>
+    <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
+    <h2 id="course-summary-title">À retenir</h2><ul></ul>
+    <h3>Faire le point</h3><p>Relis tes réponses et vérifie les points demandés dans le bilan du cours. Tu peux revenir sur ton travail tant que le professeur ne l’a pas clôturé.</p>
+</section>
+
+    <div class="course-submit-panel">
+        <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
+        <p id="course-submit-status" role="status" aria-live="polite"></p>
+        <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
+    </div>
+</div></div>
+</div>
+<noscript><p>Active JavaScript pour charger ta copie et enregistrer tes réponses.</p></noscript>
+
+<script id="classes-data" type="application/json">
+{"college":{"nom":"Collège","classes":[{"id":"5e","nom":"5e","matieres":["techno"]},{"id":"4e","nom":"4e","matieres":["techno"]},{"id":"3e","nom":"3e","matieres":["techno"]}]},"mfr":{"nom":"MFR","classes":[{"id":"4e","nom":"4e MFR","matieres":["tim","maths"]},{"id":"3e","nom":"3e MFR","matieres":["tim","maths"]},{"id":"cap1","nom":"CAP 1","matieres":["tim"]},{"id":"cap2","nom":"CAP 2","matieres":["tim"]},{"id":"2de","nom":"2de Pro","matieres":["tim","maths"]},{"id":"1re","nom":"Bac Pro 1","matieres":["tim","maths"]},{"id":"term","nom":"Bac Pro 2","matieres":["tim","maths"]},{"id":"bts1","nom":"BTS 1","matieres":["tim"]},{"id":"bts2","nom":"BTS 2","matieres":["tim"]}]}}
+</script>
+<script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
+    </main>
+    <footer class="site-footer">
+    <p>
+        &copy; 2026
+        Portail pédagogique Technologie | TIM | Mathématiques
+    </p>
+</footer>
+</body>
+</html>

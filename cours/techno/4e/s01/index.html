@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
+
+    
+    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
+    <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
+    
+
+    <title>
+        
+        Portail pédagogique Technologie | TIM | Mathématiques
+        
+    </title>
+
+    <link rel="icon" href="/tifsec-test-eleves/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/variables.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/base.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/body.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/header.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/main.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/footer.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-message.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-session.css">
+
+    
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    
+    
+
+    
+
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    
+    
+</head>
+
+<body class="student-shell student-course-shell">
+    <a class="student-skip" href="#course-intro">Aller au cours</a>
+    <p id="message" class="auth-message" role="status" aria-live="polite" hidden></p>
+    <header class="student-header" id="course-header">
+    <div class="student-header-inner">
+        <div class="student-topbar">
+            <a class="student-brand" href="/tifsec-test-eleves/eleve/"><img src="/tifsec-test-eleves/images/logo.png" width="44" height="44" alt=""><span>Mon espace<span data-profile-field="matieres"></span></span></a>
+            <div class="student-header-actions"><a class="student-home-link" href="/tifsec-test-eleves/eleve/">Mes séances</a><a id="course-login" href="/tifsec-test-eleves/connexion/">Se connecter</a><details class="student-theme-picker" id="student-theme-picker" hidden>
+    <summary>Apparence</summary>
+    <div class="student-theme-options"><label for="student-theme-select">Les couleurs de mon espace</label><select id="student-theme-select" disabled><option value="ocean">Océan · bleu</option><option value="forest">Forêt · vert</option><option value="plum">Prune · violet</option><option value="terracotta">Terre cuite · orangé</option><option value="ruby">Rubis · rouge</option><option value="slate">Ardoise · gris</option><option value="midnight">Minuit · noir</option><option value="rose">Rosée · rose</option><option value="neon">Néon · RGB sombre</option><option value="cyberpunk">Cyberpunk · cité futuriste</option><option value="minecraft">Minecraft · blocs et pixels</option><option value="farming">Farming · campagne et cultures</option></select><label class="student-theme-motion"><input type="checkbox" id="student-theme-motion"> Mettre les animations en pause</label><p id="student-theme-status" role="status" aria-live="polite">Ce choix te suivra sur les autres ordinateurs.</p><button id="student-theme-retry" type="button" hidden>Réessayer</button></div>
+</details>
+<button type="button" id="course-logout" hidden>Se déconnecter</button></div>
+        </div>
+        <div class="student-welcome-row" id="course-welcome" hidden>
+            <div><p class="student-eyebrow">Une séance à la fois, à ton rythme.</p><p class="student-course-greeting">Bonjour <span id="course-header-identity"></span></p></div>
+            <dl class="student-profile"><div><dt>Établissement</dt><dd data-profile-field="etablissement"></dd></div><div><dt>Classe</dt><dd data-profile-field="classe"></dd></div><div><dt>Inscription</dt><dd data-profile-field="validation"></dd></div></dl>
+        </div>
+    </div>
+</header>
+
+    <main class="student-course-main" id="student-course-main">
+
+<div id="course-work" data-etablissement="college" data-matiere="techno" data-classe="4e" data-seance="S01" data-saving-enabled="true" data-collaboration-enabled="true">
+    <div class="course-save-panel course-toolbar">
+        <p id="course-identity" hidden></p>
+        <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+    </div>
+    <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
+        <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
+        <p id="group-status" role="status">Les groupes sont propres à chaque séance. Connecte-toi avec ton compte élève pour choisir ta copie.</p>
+        <div id="group-controls" hidden>
+            <label for="group-copy">Copie de cette séance</label><select id="group-copy"></select>
+            <button type="button" id="group-refresh">Actualiser les groupes</button>
+            <div id="group-create-panel" hidden>
+                <p>Choisis un ou deux camarades. Chacun doit accepter pour partager les réponses. Le groupe reprend ton travail actuel ; ta copie individuelle reste dans l’historique.</p>
+                <div id="group-classmates" class="collaboration-roster"></div>
+                <button type="button" id="group-create">Envoyer les invitations</button>
+            </div>
+        </div>
+    </section>
+    <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
+    <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
+
+
+
+<div class="course-columns">
+    <aside class="course-navigation" aria-label="Étapes de la séance">
+        <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
+        <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
+        <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a02">1. Créer votre premier document de travail</a></li><li><a href="#a03">2. À quoi sert votre fichier ?</a></li><li><a href="#a04">3. Peut-on se tromper ?</a></li><li><a href="#a05">4. Comment demander de l’aide ?</a></li><li><a href="#a06">5. Seul ou avec les autres ?</a></li><li><a href="#a07">6. Ce qui sera évalué cette année</a></li><li><a href="#a08">7. Première activité : qu’est-ce que la technologie ?</a></li><li><a href="#a09">8. Petit défi : améliorer un objet du quotidien</a></li><li><a href="#a10">9. Mise en commun</a></li><li><a href="#a11">10. Avant de rendre votre travail</a></li><li><a href="#a12">11. Rendu de fin de séance</a></li><li><a href="#a13">12. À retenir</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+    </aside>
+
+<div class="course-reading">
+<!-- ========== INTRODUCTION DU COURS ========== -->
+
+<header class="cours-intro" id="course-intro">
+    <h1>Bienvenue en technologie</h1>
+
+    
+    <p class="cours-theme">
+        <strong>Thème :</strong> Technologie — Bienvenue en technologie
+    </p>
+    
+
+    
+    <p class="cours-problematique">
+        <strong>Problématique :</strong> Bienvenue en technologie
+    </p>
+    
+
+    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Cette première séance va permettre de découvrir la manière dont nous allons travailler cette année en technologie.</p></section>
+    
+    <section><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
+    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    
+    
+    <section class="cours-objectifs">
+        <h2>Ce que vous allez apprendre</h2>
+        <ul>
+            
+        </ul>
+
+        <h2>Ce que vous allez apprendre à faire</h2>
+        <ul>
+            
+        </ul>
+    </section>
+    
+<h4>Objectif de la séance</h4>
+    
+
+<p>Cette première séance va permettre de découvrir la manière dont nous allons travailler cette année en technologie.</p>
+    
+
+<p>Vous allez régulièrement devoir :</p>
+    
+
+<ul><li>observer ;</li><li>chercher ;</li><li>faire des hypothèses ;</li><li>tester vos idées ;</li><li>vous tromper parfois ;</li><li>corriger et améliorer votre travail ;</li><li>expliquer vos choix.</li></ul>
+    
+
+<p>Le but n’est pas de connaître immédiatement toutes les bonnes réponses, mais d’apprendre à chercher et à progresser.</p>
+    
+
+
+    
+    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
+<p>Dans cette page du ministère, retrouve le programme ou le référentiel de ta formation. Les objectifs précis étudiés aujourd’hui sont indiqués dans le cours.</p>
+    
+
+<p><a href="https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4" target="_blank" rel="noopener noreferrer">Consulter les programmes et attendus officiels</a></p>
+
+
+</div></details>
+
+</header>
+
+    <fieldset id="course-answers" class="course-answer-fields" disabled>
+        <legend>Réponses aux activités</legend>
+        <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
+
+<section class="cours-activites">
+    
+    <article class="cours-activite" id="a02">
+        <h2>Activité 1 — 1. Créer votre premier document de travail</h2>
+        
+        
+        
+
+        
+
+        
+<p>Cette année, presque chaque séance commencera de la même manière : vous créerez immédiatement votre document de travail.</p>
+    
+
+<p>Créez maintenant un document LibreOffice Writer nommé :</p>
+    
+
+<p>4e_S1_nom.odt</p>
+    
+
+<p>Remplacez nom par votre nom.</p>
+    
+
+<p>Commencez votre document en indiquant :</p>
+    
+
+<ul><li>votre nom et votre prénom ;</li><li>la date ;</li><li>le titre : Séance 1 : Bienvenue en technologie.</li></ul>
+    
+
+<p>Ce document doit être créé dès le début du cours.</p>
+    
+
+<p>Il pourra servir à la fois :</p>
+    
+
+<ul><li>de brouillon ;</li><li>de carnet de recherche ;</li><li>d’espace pour vos essais ;</li><li>de fichier de réponses ;</li><li>de trace de votre travail.</li></ul>
+    
+
+<p>Vous n’avez donc pas besoin d’attendre d’avoir une réponse parfaite avant d’écrire.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a03">
+        <h2>Activité 2 — 2. À quoi sert votre fichier ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>À la fin de presque chaque séance, vous devrez rendre le fichier sur lequel vous avez travaillé.</p>
+    
+
+<p>Le fichier doit être rendu même s’il n’est pas terminé.</p>
+    
+
+<p>Il permettra au professeur de voir :</p>
+    
+
+<ul><li>ce que vous avez essayé ;</li><li>les idées que vous avez proposées ;</li><li>les difficultés rencontrées ;</li><li>les corrections effectuées ;</li><li>votre implication pendant le cours ;</li><li>votre progression au fil de l’année.</li></ul>
+    
+
+<p>Au début de l’année, vos documents pourront être simples et parfois désordonnés.</p>
+    
+
+<p>Au fil des séances, vous devrez apprendre à les rendre progressivement plus clairs, mieux organisés et plus agréables à lire.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a04">
+        <h2>Activité 3 — 3. Peut-on se tromper ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Oui.</p>
+    
+
+<p>En technologie, une réponse incorrecte peut être très intéressante si elle montre une véritable réflexion.</p>
+    
+
+<p>Vous aurez souvent le droit de :</p>
+    
+
+<ul><li>proposer une idée sans être certain qu’elle fonctionne ;</li><li>faire un essai ;</li><li>obtenir un résultat inattendu ;</li><li>modifier votre réponse ;</li><li>recommencer autrement.</li></ul>
+    
+
+<p>Lorsque vous modifiez une réponse après une recherche, une expérience ou une discussion, cela montre que votre réflexion progresse.</p>
+    
+
+<p>Une réponse imparfaite mais expliquée est préférable à une réponse parfaite copiée sans réflexion.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a05">
+        <h2>Activité 4 — 4. Comment demander de l’aide ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Le professeur est là pour vous aider à avancer, mais il ne donnera pas systématiquement la solution.</p>
+    
+
+<p>Avant de demander de l’aide, essayez :</p>
+    
+
+<ol><li>de relire la consigne ;</li><li>d’observer les informations disponibles ;</li><li>de tester une première idée ;</li><li>de rechercher si cela est autorisé ;</li><li>éventuellement d’échanger avec un camarade.</li></ol>
+    
+
+<p>Vous pouvez ensuite expliquer au professeur :</p>
+    
+
+<p>« J’ai essayé ceci, j’ai obtenu cela, mais je bloque ici. »</p>
+    
+
+<p>Cette manière de demander de l’aide est beaucoup plus utile que :</p>
+    
+
+<p>« Je ne comprends rien. »</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a06">
+        <h2>Activité 5 — 5. Seul ou avec les autres ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Vous travaillerez souvent seul sur votre poste informatique.</p>
+    
+
+<p>Certaines activités pourront cependant être réalisées à plusieurs.</p>
+    
+
+<p>Même lorsque vous travaillez seul, vous pourrez parfois :</p>
+    
+
+<ul><li>échanger une idée avec un camarade ;</li><li>comparer vos résultats ;</li><li>demander un avis ;</li><li>expliquer votre raisonnement à quelqu’un.</li></ul>
+    
+
+<p>Ces échanges doivent rester calmes afin de permettre à chacun de travailler.</p>
+    
+
+<p>Les discussions à voix basse sont possibles lorsqu’elles servent le travail.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a07">
+        <h2>Activité 6 — 6. Ce qui sera évalué cette année</h2>
+        
+        
+        
+
+        
+
+        
+<p>Votre travail ne sera pas évalué uniquement sur le nombre de bonnes réponses.</p>
+    
+
+<p>Le professeur observera régulièrement :</p>
+    
+
+<ul><li>votre implication ;</li><li>votre envie de chercher ;</li><li>votre autonomie ;</li><li>votre capacité à tester une idée ;</li><li>votre capacité à expliquer votre raisonnement ;</li><li>votre capacité à corriger et améliorer votre travail ;</li><li>la progression de vos productions numériques ;</li><li>votre comportement pendant le travail.</li></ul>
+    
+
+<p>Les fichiers rendus au fil des séances permettront donc de suivre votre progression sur la durée.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a08">
+        <h2>Activité 7 — 7. Première activité : qu’est-ce que la technologie ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Sans effectuer de recherche sur Internet, écrivez dans votre document ce que signifie pour vous le mot technologie.</p>
+    
+
+<p>Répondez ensuite aux questions suivantes :</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a08-q01-label">Question 1 — À quoi sert la technologie selon vous ?</h3>
+            
+
+            
+            
+                <textarea id="a08-q01" data-answer-id="a08_q01" data-required="true" aria-labelledby="a08-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a08-q02-label">Question 2 — Citez cinq objets ou systèmes que vous considérez comme technologiques.</h3>
+            
+
+            
+            
+                <textarea id="a08-q02" data-answer-id="a08_q02" data-required="true" aria-labelledby="a08-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a08-q03-label">Question 3 — Un objet très ancien peut-il être un objet technique ? Expliquez.</h3>
+            
+
+            
+            
+                <textarea id="a08-q03" data-answer-id="a08_q03" data-required="true" aria-labelledby="a08-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a08-q04-label">Question 4 — Un objet qui ne contient ni écran ni électronique peut-il être technologique ? Expliquez.</h3>
+            
+
+            
+            
+                <textarea id="a08-q04" data-answer-id="a08_q04" data-required="true" aria-labelledby="a08-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            <h3 id="a08-q05-label">Question 5 — Quelle invention ou quel objet technique a, selon vous, le plus changé la vie humaine ? Pourquoi ?</h3>
+            
+
+            
+            
+                <textarea id="a08-q05" data-answer-id="a08_q05" data-required="true" aria-labelledby="a08-q05-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Il n’y a volontairement pas une seule réponse attendue. Ce sont vos idées et vos explications qui sont importantes.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a09">
+        <h2>Activité 8 — 8. Petit défi : améliorer un objet du quotidien</h2>
+        
+        
+        
+
+        
+
+        
+<p>Choisissez un objet que vous utilisez régulièrement.</p>
+    
+
+<p>Dans votre document, indiquez :</p>
+    
+
+<ul><li>le nom de l’objet ;</li><li>à quoi il sert ;</li><li>une chose qui fonctionne bien ;</li><li>un problème ou une limite que vous avez remarqué ;</li><li>une amélioration que vous pourriez imaginer.</li></ul>
+    
+
+<p>Vous pouvez ajouter un petit croquis si cela vous aide à présenter votre idée.</p>
+    
+
+<p>Votre amélioration n’a pas besoin d’exister réellement. Vous devez surtout être capable d’expliquer le problème que vous cherchez à résoudre.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a10">
+        <h2>Activité 9 — 9. Mise en commun</h2>
+        
+        
+        
+
+        
+
+        
+<p>Nous allons comparer quelques réponses et propositions.</p>
+    
+
+<p>Pendant la discussion, vous pouvez compléter ou modifier votre document.</p>
+    
+
+<p>Nous chercherons notamment à comprendre :</p>
+    
+
+<ul><li>pourquoi les objets techniques existent ;</li><li>pourquoi ils évoluent ;</li><li>pourquoi plusieurs solutions peuvent répondre au même problème ;</li><li>pourquoi il est important de réfléchir avant de chercher une solution.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a11">
+        <h2>Activité 10 — 10. Avant de rendre votre travail</h2>
+        
+        
+        
+
+        
+
+        
+<p>Utilisez les dernières minutes de la séance pour relire votre document.</p>
+    
+
+<p>Vérifiez :</p>
+    
+
+<ul><li>que votre nom et votre prénom sont présents ;</li><li>que la date est indiquée ;</li><li>que le titre est présent ;</li><li>que vos réponses sont compréhensibles ;</li><li>que votre fichier possède le bon nom.</li></ul>
+    
+
+<p>Pour cette première séance, il n’est pas demandé d’avoir une mise en page parfaite.</p>
+    
+
+<p>Conservez cependant en mémoire l’aspect de votre premier document : nous pourrons le comparer avec vos productions de fin d’année.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a12">
+        <h2>Activité 11 — 11. Rendu de fin de séance</h2>
+        
+        
+        
+
+        
+
+        
+<p>À la fin du cours, votre fichier doit être rendu.</p>
+    
+
+<p>Déposez le fichier :</p>
+    
+
+<p>4e_S1_nom.odt</p>
+    
+
+<p>dans l’espace indiqué par le professeur.</p>
+    
+
+<p>Rendez-le même si vous n’avez pas terminé toutes les activités.</p>
+    
+
+<p>Ce premier document constitue le point de départ de votre progression cette année.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a13">
+        <h2>Activité 12 — 12. À retenir</h2>
+        
+        
+        
+
+        
+
+        
+<p>En technologie, chercher fait partie du travail.</p>
+    
+
+<p>Vous avez le droit de proposer, tester, vous tromper, corriger et recommencer.</p>
+    
+
+<p>Votre travail sera évalué à travers votre implication, votre raisonnement et votre progression.</p>
+    
+
+<p>À chaque séance, votre document numérique permettra de conserver une trace de votre travail et devra progressivement devenir plus clair et mieux organisé.</p>
+    
+
+
+        
+        
+    </article>
+    
+</section>
+
+    </fieldset>
+    <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
+    <h2 id="course-summary-title">À retenir</h2><ul></ul>
+    <h3>Faire le point</h3><p>Relis tes réponses et vérifie les points demandés dans le bilan du cours. Tu peux revenir sur ton travail tant que le professeur ne l’a pas clôturé.</p>
+</section>
+
+    <div class="course-submit-panel">
+        <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
+        <p id="course-submit-status" role="status" aria-live="polite"></p>
+        <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
+    </div>
+</div></div>
+</div>
+<noscript><p>Active JavaScript pour charger ta copie et enregistrer tes réponses.</p></noscript>
+
+<script id="classes-data" type="application/json">
+{"college":{"nom":"Collège","classes":[{"id":"5e","nom":"5e","matieres":["techno"]},{"id":"4e","nom":"4e","matieres":["techno"]},{"id":"3e","nom":"3e","matieres":["techno"]}]},"mfr":{"nom":"MFR","classes":[{"id":"4e","nom":"4e MFR","matieres":["tim","maths"]},{"id":"3e","nom":"3e MFR","matieres":["tim","maths"]},{"id":"cap1","nom":"CAP 1","matieres":["tim"]},{"id":"cap2","nom":"CAP 2","matieres":["tim"]},{"id":"2de","nom":"2de Pro","matieres":["tim","maths"]},{"id":"1re","nom":"Bac Pro 1","matieres":["tim","maths"]},{"id":"term","nom":"Bac Pro 2","matieres":["tim","maths"]},{"id":"bts1","nom":"BTS 1","matieres":["tim"]},{"id":"bts2","nom":"BTS 2","matieres":["tim"]}]}}
+</script>
+<script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
+    </main>
+    <footer class="site-footer">
+    <p>
+        &copy; 2026
+        Portail pédagogique Technologie | TIM | Mathématiques
+    </p>
+</footer>
+</body>
+</html>

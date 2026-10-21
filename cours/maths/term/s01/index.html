@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
+
+    
+    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
+    <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
+    
+
+    <title>
+        
+        Portail pédagogique Technologie | TIM | Mathématiques
+        
+    </title>
+
+    <link rel="icon" href="/tifsec-test-eleves/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/variables.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/base.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/body.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/header.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/main.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/footer.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-message.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-session.css">
+
+    
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    
+    
+
+    
+
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    
+    
+</head>
+
+<body class="student-shell student-course-shell">
+    <a class="student-skip" href="#course-intro">Aller au cours</a>
+    <p id="message" class="auth-message" role="status" aria-live="polite" hidden></p>
+    <header class="student-header" id="course-header">
+    <div class="student-header-inner">
+        <div class="student-topbar">
+            <a class="student-brand" href="/tifsec-test-eleves/eleve/"><img src="/tifsec-test-eleves/images/logo.png" width="44" height="44" alt=""><span>Mon espace<span data-profile-field="matieres"></span></span></a>
+            <div class="student-header-actions"><a class="student-home-link" href="/tifsec-test-eleves/eleve/">Mes séances</a><a id="course-login" href="/tifsec-test-eleves/connexion/">Se connecter</a><details class="student-theme-picker" id="student-theme-picker" hidden>
+    <summary>Apparence</summary>
+    <div class="student-theme-options"><label for="student-theme-select">Les couleurs de mon espace</label><select id="student-theme-select" disabled><option value="ocean">Océan · bleu</option><option value="forest">Forêt · vert</option><option value="plum">Prune · violet</option><option value="terracotta">Terre cuite · orangé</option><option value="ruby">Rubis · rouge</option><option value="slate">Ardoise · gris</option><option value="midnight">Minuit · noir</option><option value="rose">Rosée · rose</option><option value="neon">Néon · RGB sombre</option><option value="cyberpunk">Cyberpunk · cité futuriste</option><option value="minecraft">Minecraft · blocs et pixels</option><option value="farming">Farming · campagne et cultures</option></select><label class="student-theme-motion"><input type="checkbox" id="student-theme-motion"> Mettre les animations en pause</label><p id="student-theme-status" role="status" aria-live="polite">Ce choix te suivra sur les autres ordinateurs.</p><button id="student-theme-retry" type="button" hidden>Réessayer</button></div>
+</details>
+<button type="button" id="course-logout" hidden>Se déconnecter</button></div>
+        </div>
+        <div class="student-welcome-row" id="course-welcome" hidden>
+            <div><p class="student-eyebrow">Une séance à la fois, à ton rythme.</p><p class="student-course-greeting">Bonjour <span id="course-header-identity"></span></p></div>
+            <dl class="student-profile"><div><dt>Établissement</dt><dd data-profile-field="etablissement"></dd></div><div><dt>Classe</dt><dd data-profile-field="classe"></dd></div><div><dt>Inscription</dt><dd data-profile-field="validation"></dd></div></dl>
+        </div>
+    </div>
+</header>
+
+    <main class="student-course-main" id="student-course-main">
+
+<div id="course-work" data-etablissement="mfr" data-matiere="maths" data-classe="term" data-seance="S01" data-saving-enabled="true" data-collaboration-enabled="true">
+    <div class="course-save-panel course-toolbar">
+        <p id="course-identity" hidden></p>
+        <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+    </div>
+    <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
+        <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
+        <p id="group-status" role="status">Les groupes sont propres à chaque séance. Connecte-toi avec ton compte élève pour choisir ta copie.</p>
+        <div id="group-controls" hidden>
+            <label for="group-copy">Copie de cette séance</label><select id="group-copy"></select>
+            <button type="button" id="group-refresh">Actualiser les groupes</button>
+            <div id="group-create-panel" hidden>
+                <p>Choisis un ou deux camarades. Chacun doit accepter pour partager les réponses. Le groupe reprend ton travail actuel ; ta copie individuelle reste dans l’historique.</p>
+                <div id="group-classmates" class="collaboration-roster"></div>
+                <button type="button" id="group-create">Envoyer les invitations</button>
+            </div>
+        </div>
+    </section>
+    <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
+    <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
+
+
+
+<div class="course-columns">
+    <aside class="course-navigation" aria-label="Étapes de la séance">
+        <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
+        <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
+        <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a03">1. Automatismes : remettre la machine en route</a></li><li><a href="#a04">2. Pourcentages : comprendre une réduction</a></li><li><a href="#a05">Exercice 1 : Retrouver le montant de la réduction</a></li><li><a href="#a06">Exercice 2 : Calculer le prix réellement payé</a></li><li><a href="#a07">Exercice 3 : Retrouver directement le prix final</a></li><li><a href="#a08">3. Pourcentages et fourrage : comprendre une quantité</a></li><li><a href="#a09">Exercice 1 : Calculer la quantité de matière sèche</a></li><li><a href="#a10">Exercice 2 : Comprendre la composition du foin</a></li><li><a href="#a11">Exercice 3 : Déterminer la masse de foin nécessaire</a></li><li><a href="#a12">4. Équations et fonctions : retrouver une valeur inconnue</a></li><li><a href="#a13">Exercice 1 : Retrouver une quantité inconnue</a></li><li><a href="#a14">Exercice 2 : Calculer une image</a></li><li><a href="#a15">Exercice 3 : Retrouver un antécédent</a></li><li><a href="#a16">5. Mon premier bilan</a></li><li><a href="#a17">6. Ce que je dois savoir faire</a></li><li><a href="#a18">À retenir</a></li><li><a href="#a19">Sources et ressources</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+    </aside>
+
+<div class="course-reading">
+<!-- ========== INTRODUCTION DU COURS ========== -->
+
+<header class="cours-intro" id="course-intro">
+    <h1>Remise en route et diagnostic</h1>
+
+    
+    <p class="cours-theme">
+        <strong>Thème :</strong> calcul mental et opérations.
+    </p>
+    
+
+    
+    <p class="cours-problematique">
+        <strong>Problématique :</strong> Remise en route et diagnostic
+    </p>
+    
+
+    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : Effectuer et expliquer des calculs simples.</p></section>
+    
+    <section><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
+    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    
+    
+    <section class="cours-objectifs">
+        <h2>Ce que vous allez apprendre</h2>
+        <ul>
+            
+        </ul>
+
+        <h2>Ce que vous allez apprendre à faire</h2>
+        <ul>
+            
+            <li>Effectuer et expliquer des calculs simples.</li>
+            
+            <li>Calculer une réduction et vérifier un prix.</li>
+            
+            <li>Utiliser des pourcentages dans une situation professionnelle.</li>
+            
+            <li>Retrouver une valeur inconnue à partir d&#39;une relation mathématique.</li>
+            
+            <li>Vérifier un résultat et expliquer notre raisonnement.</li>
+            
+        </ul>
+    </section>
+    
+<h4>Ce que nous allons apprendre</h4>
+    
+
+<p>Aujourd&#39;hui, nous allons retrouver plusieurs outils mathématiques : le calcul mental, les pourcentages, les proportions, les équations et les fonctions.</p>
+    
+
+<h4>Ce que nous allons apprendre à faire</h4>
+    
+
+<ul><li>Effectuer et expliquer des calculs simples.</li><li>Calculer une réduction et vérifier un prix.</li><li>Utiliser des pourcentages dans une situation professionnelle.</li><li>Retrouver une valeur inconnue à partir d&#39;une relation mathématique.</li><li>Vérifier un résultat et expliquer notre raisonnement.</li></ul>
+    
+
+<p>Pourquoi travailler ces notions ?</p>
+    
+
+<p>En entreprise, dans une exploitation agricole ou dans une écurie, les mathématiques permettent de vérifier un prix, prévoir une quantité, comprendre une consommation et prendre des décisions.</p>
+    
+
+<p>Nous commencerons par des calculs simples, puis nous les utiliserons dans des situations professionnelles. Enfin, nous apprendrons à retrouver une valeur inconnue.</p>
+    
+
+<p>Important : cette première séance n&#39;est pas une évaluation notée. Elle permet de retrouver nos connaissances et d&#39;identifier ce que nous devrons retravailler.</p>
+    
+
+
+    
+    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
+<p>Dans cette page du ministère, retrouve le programme ou le référentiel de ta formation. Les objectifs précis étudiés aujourd’hui sont indiqués dans le cours.</p>
+    
+
+<p><a href="https://chlorofil.fr/diplomes/secondaire/bac-pro/1re-tle/tronc-commun" target="_blank" rel="noopener noreferrer">Consulter les programmes et attendus officiels</a></p>
+
+
+</div></details>
+
+</header>
+
+    <fieldset id="course-answers" class="course-answer-fields" disabled>
+        <legend>Réponses aux activités</legend>
+        <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
+
+<section class="cours-activites">
+    
+    <article class="cours-activite" id="a03">
+        <h2>Activité 1 — 1. Automatismes : remettre la machine en route</h2>
+        
+        
+        
+
+        
+
+        
+<p>Notion : calcul mental et opérations.</p>
+    
+
+<p>Concrètement, qu&#39;est-ce que c&#39;est ? Le calcul mental consiste à effectuer des opérations en utilisant les tables, les propriétés des nombres et des décompositions simples.</p>
+    
+
+<p>À quoi ça sert ? À estimer un prix, vérifier une quantité, partager une commande ou repérer une erreur de calcul.</p>
+    
+
+<p>Pourquoi commencer par cet exercice ?</p>
+    
+
+<p>Avant de résoudre des problèmes professionnels, nous devons retrouver quelques automatismes. Cela nous permettra ensuite de nous concentrer sur les situations plutôt que sur chaque opération.</p>
+    
+
+<p>Calculatrice interdite. Effectuez les calculs suivants. Écrivez une étape lorsque vous utilisez une astuce.</p>
+    
+
+<ul><li>7 × 8</li><li>84 ÷ 7</li><li>20 - 3 × 4</li><li>2,5 × 4</li><li>La moitié de 70</li><li>Le quart de 80</li><li>10 % de 250</li><li>25 % de 80</li><li>Compléter : 3/4 = ............ / 20</li><li>Résoudre : x + 7 = 19</li></ul>
+    
+
+<p>Réflexe Bac :</p>
+    
+
+<p>Avant de prendre une calculatrice, demandez-vous si une décomposition simple permet de calculer mentalement. Une démarche expliquée est aussi importante que le résultat.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a04">
+        <h2>Activité 2 — 2. Pourcentages : comprendre une réduction</h2>
+        
+        
+        
+
+        
+
+        
+<p>Notion : pourcentage et coefficient multiplicateur.</p>
+    
+
+<p>Concrètement, qu&#39;est-ce que c&#39;est ? Un pourcentage représente une proportion sur 100. Par exemple, 15 % signifie 15 parts sur 100 parts égales.</p>
+    
+
+<p>À quoi ça sert ? À calculer une réduction, une augmentation de prix, une remise commerciale ou une variation de consommation.</p>
+    
+
+<p>Pourquoi passons-nous à cette activité ?</p>
+    
+
+<p>Nous savons calculer des pourcentages simples. Nous allons maintenant les utiliser pour déterminer combien coûte réellement un équipement après une réduction.</p>
+    
+
+<p>Ce que cela vous apporte : savoir vérifier une remise annoncée et préparer un budget d&#39;achat.</p>
+    
+
+<p>Situation professionnelle : une entreprise souhaite acheter un équipement coûtant 240 €. Le fournisseur propose une réduction de 15 %.</p>
+    
+
+<p>Calculatrice autorisée.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a05">
+        <h2>Activité 3 — Exercice 1 : Retrouver le montant de la réduction</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi cet exercice ? Avant de calculer le prix final, nous devons comprendre combien représente réellement une réduction de 15 %.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a05-q01-label">Question 1 — Calculer 10 % de 240 €.</h3>
+            
+
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a05-q02-label">Question 2 — Calculer 5 % de 240 € en utilisant le résultat précédent.</h3>
+            
+
+            
+            
+                <textarea id="a05-q02" data-answer-id="a05_q02" data-required="true" aria-labelledby="a05-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a05-q03-label">Question 3 — En déduire 15 % de 240 €.</h3>
+            
+
+            
+            
+                <textarea id="a05-q03" data-answer-id="a05_q03" data-required="true" aria-labelledby="a05-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a05-q04-label">Question 4 — Quel est le montant de la réduction proposée ?</h3>
+            
+
+            
+            
+                <textarea id="a05-q04" data-answer-id="a05_q04" data-required="true" aria-labelledby="a05-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a06">
+        <h2>Activité 4 — Exercice 2 : Calculer le prix réellement payé</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi cet exercice ? Connaître une réduction ne suffit pas pour préparer un budget. Il faut déterminer le prix final.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a06-q01-label">Question 1 — Calculer le prix de l&#39;équipement après réduction.</h3>
+            
+
+            
+            
+                <textarea id="a06-q01" data-answer-id="a06_q01" data-required="true" aria-labelledby="a06-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a06-q02-label">Question 2 — Expliquer pourquoi ce résultat est cohérent.</h3>
+            
+
+            
+            
+                <textarea id="a06-q02" data-answer-id="a06_q02" data-required="true" aria-labelledby="a06-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a07">
+        <h2>Activité 5 — Exercice 3 : Retrouver directement le prix final</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi changer de méthode ? Lorsque l&#39;on doit calculer de nombreux prix, une méthode directe permet de gagner du temps sans changer le résultat.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a07-q01-label">Question 1 — Quel pourcentage du prix initial reste-t-il après une réduction de 15 % ?</h3>
+            
+
+            
+            
+                <textarea id="a07-q01" data-answer-id="a07_q01" data-required="true" aria-labelledby="a07-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a07-q02-label">Question 2 — Écrire ce pourcentage sous forme décimale.</h3>
+            
+
+            
+            
+                <textarea id="a07-q02" data-answer-id="a07_q02" data-required="true" aria-labelledby="a07-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a07-q03-label">Question 3 — Multiplier 240 par ce nombre. Que constatez-vous ?</h3>
+            
+
+            
+            
+                <textarea id="a07-q03" data-answer-id="a07_q03" data-required="true" aria-labelledby="a07-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Méthode à retenir :</p>
+    
+
+<p>Pour calculer une diminution de t %, on peut multiplier la valeur initiale par 1 - t/100.</p>
+    
+
+<p>Pour une diminution de 15 %, le coefficient multiplicateur est 0,85.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a08">
+        <h2>Activité 6 — 3. Pourcentages et fourrage : comprendre une quantité</h2>
+        
+        
+        
+
+        
+
+        
+<p>Notion : proportion, pourcentage et conversion entre matière sèche et foin brut.</p>
+    
+
+<p>Concrètement, qu&#39;est-ce que c&#39;est ? Un aliment contient différentes matières, notamment de l&#39;eau. La matière sèche correspond à ce qui reste lorsque l&#39;on retire cette eau.</p>
+    
+
+<p>À quoi ça sert ? À comprendre une donnée alimentaire, calculer une quantité de fourrage et éviter de confondre la masse distribuée avec la quantité de matière sèche apportée.</p>
+    
+
+<p>Pourquoi changeons-nous de situation ?</p>
+    
+
+<p>Nous venons d&#39;utiliser un pourcentage pour calculer un prix. Nous allons maintenant utiliser la même méthode pour comprendre une quantité de fourrage.</p>
+    
+
+<p>Ce que cela vous apporte : savoir réutiliser une méthode mathématique dans une situation professionnelle différente.</p>
+    
+
+<p>Parallèle TIM et mathématiques :</p>
+    
+
+<p>En TIM, nous pouvons organiser les données dans un tableau et automatiser les calculs. En mathématiques, nous cherchons à comprendre les opérations, les unités et la cohérence des résultats.</p>
+    
+
+<p>Même situation professionnelle, compétences différentes.</p>
+    
+
+<p>Dans un exemple présenté par l&#39;IFCE, un cheval de 500 kg reçoit une quantité de matière sèche en fourrages correspondant à 1,5 % de son poids vif.</p>
+    
+
+<p>Le foin utilisé contient 85 % de matière sèche.</p>
+    
+
+<p>Source : IFCE – équipédia – Les besoins alimentaires du cheval.</p>
+    
+
+<p><a href="https://equipedia.ifce.fr/elevage-et-entretien/alimentation/nutrition-et-ration/les-besoins-alimentaires-du-cheval" target="_blank" rel="noopener noreferrer">IFCE – équipédia – Les besoins alimentaires du cheval</a></p>
+
+
+<p>Calculatrice autorisée.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a09">
+        <h2>Activité 7 — Exercice 1 : Calculer la quantité de matière sèche</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi cet exercice ? Nous allons utiliser un pourcentage pour retrouver une quantité en kilogrammes, et non plus une somme en euros.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a09-q01-label">Question 1 — Écrire 1,5 % sous forme décimale.</h3>
+            
+
+            
+            
+                <textarea id="a09-q01" data-answer-id="a09_q01" data-required="true" aria-labelledby="a09-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a09-q02-label">Question 2 — Calculer 1,5 % de 500 kg.</h3>
+            
+
+            
+            
+                <textarea id="a09-q02" data-answer-id="a09_q02" data-required="true" aria-labelledby="a09-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a09-q03-label">Question 3 — Expliquer ce que représente le résultat obtenu.</h3>
+            
+
+            
+            
+                <textarea id="a09-q03" data-answer-id="a09_q03" data-required="true" aria-labelledby="a09-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a10">
+        <h2>Activité 8 — Exercice 2 : Comprendre la composition du foin</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi cet exercice ? Nous devons vérifier qu&#39;une quantité de foin brut apporte réellement la quantité de matière sèche recherchée.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a10-q01-label">Question 1 — Que signifie « un foin contenant 85 % de matière sèche » ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q01" data-answer-id="a10_q01" data-required="true" aria-labelledby="a10-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a10-q02-label">Question 2 — Calculer la masse de matière sèche présente dans 7,5 kg de ce foin.</h3>
+            
+
+            
+            
+                <textarea id="a10-q02" data-answer-id="a10_q02" data-required="true" aria-labelledby="a10-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a10-q03-label">Question 3 — Expliquer pourquoi 7,5 kg de foin brut ne suffisent pas pour apporter 7,5 kg de matière sèche.</h3>
+            
+
+            
+            
+                <textarea id="a10-q03" data-answer-id="a10_q03" data-required="true" aria-labelledby="a10-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a11">
+        <h2>Activité 9 — Exercice 3 : Déterminer la masse de foin nécessaire</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi cet exercice ? Dans une situation professionnelle, nous connaissons parfois le besoin à satisfaire, mais pas encore la quantité de produit à utiliser. Il faut alors retrouver cette quantité.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a11-q01-label">Question 1 — Calculer 7,5 ÷ 0,85.</h3>
+            
+
+            
+            
+                <textarea id="a11-q01" data-answer-id="a11_q01" data-required="true" aria-labelledby="a11-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a11-q02-label">Question 2 — Arrondir le résultat au dixième de kilogramme.</h3>
+            
+
+            
+            
+                <textarea id="a11-q02" data-answer-id="a11_q02" data-required="true" aria-labelledby="a11-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a11-q03-label">Question 3 — Comparer votre résultat avec la valeur de 8,82 kg donnée dans l&#39;exemple de l&#39;IFCE.</h3>
+            
+
+            
+            
+                <textarea id="a11-q03" data-answer-id="a11_q03" data-required="true" aria-labelledby="a11-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a11-q04-label">Question 4 — Expliquer pourquoi le résultat doit être supérieur à 7,5 kg.</h3>
+            
+
+            
+            
+                <textarea id="a11-q04" data-answer-id="a11_q04" data-required="true" aria-labelledby="a11-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Réflexe Bac :</p>
+    
+
+<p>Avant de valider un résultat, vérifiez ce qu&#39;il représente, son unité et sa cohérence avec la situation.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a12">
+        <h2>Activité 10 — 4. Équations et fonctions : retrouver une valeur inconnue</h2>
+        
+        
+        
+
+        
+
+        
+<p>Notions : équation, fonction, image et antécédent.</p>
+    
+
+<p>Concrètement, qu&#39;est-ce que c&#39;est ? Une équation est une égalité contenant une valeur inconnue. Une fonction est une règle qui associe une valeur de sortie à une valeur d&#39;entrée.</p>
+    
+
+<p>À quoi ça sert ? À retrouver une quantité inconnue, calculer un coût à partir d&#39;une formule ou déterminer quelle valeur de départ permet d&#39;obtenir un résultat donné.</p>
+    
+
+<p>Pourquoi passons-nous aux équations ?</p>
+    
+
+<p>Dans l&#39;activité précédente, nous avons recherché une masse de foin inconnue. Nous allons maintenant apprendre à retrouver une valeur inconnue à l&#39;aide d&#39;une égalité.</p>
+    
+
+<p>Ce que cela vous apporte : savoir résoudre un problème même lorsque la valeur recherchée n&#39;est pas directement donnée.</p>
+    
+
+<p>On considère la relation suivante : f(x) = 2x + 5.</p>
+    
+
+<p>Elle peut, par exemple, représenter un coût en euros comprenant 5 € de frais fixes et 2 € par unité achetée.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a13">
+        <h2>Activité 11 — Exercice 1 : Retrouver une quantité inconnue</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi cet exercice ? Nous allons apprendre à retrouver une valeur de départ lorsque nous connaissons le résultat final.</p>
+    
+
+<p>Calculatrice interdite.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a13-q01-label">Question 1 — Résoudre l&#39;équation : 2x + 5 = 17.</h3>
+            
+
+            
+            
+                <textarea id="a13-q01" data-answer-id="a13_q01" data-required="true" aria-labelledby="a13-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a13-q02-label">Question 2 — Vérifier la solution obtenue en remplaçant x par sa valeur.</h3>
+            
+
+            
+            
+                <textarea id="a13-q02" data-answer-id="a13_q02" data-required="true" aria-labelledby="a13-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a14">
+        <h2>Activité 12 — Exercice 2 : Calculer une image</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi cet exercice ? Nous allons utiliser une formule pour calculer un résultat à partir d&#39;une valeur connue.</p>
+    
+
+<p>Calculatrice autorisée.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a14-q01-label">Question 1 — Calculer f(4).</h3>
+            
+
+            
+            
+                <textarea id="a14-q01" data-answer-id="a14_q01" data-required="true" aria-labelledby="a14-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a14-q02-label">Question 2 — Calculer f(10).</h3>
+            
+
+            
+            
+                <textarea id="a14-q02" data-answer-id="a14_q02" data-required="true" aria-labelledby="a14-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Vocabulaire :</p>
+    
+
+<p>Dans f(4) = 13, le nombre 13 est l&#39;image de 4 par la fonction f. Le nombre 4 est un antécédent de 13.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a15">
+        <h2>Activité 13 — Exercice 3 : Retrouver un antécédent</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi cet exercice ? Nous allons relier les fonctions aux équations pour retrouver une valeur de départ à partir du résultat souhaité.</p>
+    
+
+<p>Calculatrice autorisée.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a15-q01-label">Question 1 — Quel nombre possède 17 comme image par la fonction f ? Justifier votre réponse.</h3>
+            
+
+            
+            
+                <textarea id="a15-q01" data-answer-id="a15_q01" data-required="true" aria-labelledby="a15-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a16">
+        <h2>Activité 14 — 5. Mon premier bilan</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi ce bilan ? Il permet de savoir ce que vous maîtrisez déjà et les notions que nous devrons retravailler pendant l&#39;année.</p>
+    
+
+<p>Calculatrice interdite. Aucun calcul n&#39;est nécessaire.</p>
+    
+
+<p>Pour chaque ligne, cochez la case qui vous correspond le mieux.</p>
+    
+
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Je sais...</th><th scope="col">Oui</th><th scope="col">À revoir</th><th scope="col">Je ne sais plus</th></tr></thead><tbody><tr><td>Effectuer des calculs simples mentalement</td><td>☐</td><td>☐</td><td>☐</td></tr><tr><td>Calculer un pourcentage</td><td>☐</td><td>☐</td><td>☐</td></tr><tr><td>Utiliser un coefficient multiplicateur</td><td>☐</td><td>☐</td><td>☐</td></tr><tr><td>Expliquer un calcul de proportion</td><td>☐</td><td>☐</td><td>☐</td></tr><tr><td>Résoudre une équation simple</td><td>☐</td><td>☐</td><td>☐</td></tr><tr><td>Calculer l&#39;image d&#39;un nombre</td><td>☐</td><td>☐</td><td>☐</td></tr><tr><td>Comprendre ce qu&#39;est un antécédent</td><td>☐</td><td>☐</td><td>☐</td></tr></tbody></table></div>
+    
+
+<p>Une notion que je maîtrise plutôt bien : ........................................................</p>
+    
+
+<p>Une notion que je dois retravailler : ........................................................</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a17">
+        <h2>Activité 15 — 6. Ce que je dois savoir faire</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi cette dernière étape ? Elle permet de distinguer les méthodes importantes des exemples utilisés pendant la séance.</p>
+    
+
+<ul><li>Effectuer un calcul simple en respectant les priorités opératoires.</li><li>Utiliser une stratégie de calcul mental.</li><li>Calculer un pourcentage et interpréter son résultat.</li><li>Passer d&#39;un pourcentage à son écriture décimale.</li><li>Utiliser un coefficient multiplicateur pour calculer une réduction.</li><li>Comprendre une proportion dans une situation professionnelle.</li><li>Vérifier les unités et la cohérence d&#39;un résultat.</li><li>Résoudre une équation simple et vérifier sa solution.</li><li>Calculer une image et rechercher un antécédent.</li><li>Expliquer une démarche et conserver les traces de calcul.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a18">
+        <h2>Activité 16 — À retenir</h2>
+        
+        
+        
+
+        
+
+        
+<ul><li>Un pourcentage représente une proportion exprimée sur 100.</li><li>15 % correspond à 0,15 sous forme décimale.</li><li>Une diminution de 15 % correspond à un coefficient multiplicateur de 0,85.</li><li>Un résultat doit toujours être interprété avec son unité et vérifié.</li><li>Une équation permet de rechercher une valeur inconnue.</li><li>Une fonction associe une valeur de sortie à chaque valeur d&#39;entrée de son domaine.</li><li>Une même situation professionnelle peut être étudiée en TIM et en mathématiques avec des objectifs différents.</li><li>Une démarche expliquée est aussi importante que le résultat final.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a19">
+        <h2>Activité 17 — Sources et ressources</h2>
+        
+        
+        
+
+        
+
+        
+<ul><li>Chlorofil – Baccalauréat professionnel : tronc commun – référentiel et documents d&#39;accompagnement.</li><li>Chlorofil – Document d&#39;accompagnement MG1 – attendus et automatismes mathématiques.</li><li>IFCE – équipédia – Les besoins alimentaires du cheval – exemple professionnel utilisé pour le calcul du fourrage.</li></ul>
+    
+
+<p><a href="https://chlorofil.fr/diplomes/secondaire/bac-pro/1re-tle/tronc-commun" target="_blank" rel="noopener noreferrer">Chlorofil – Baccalauréat professionnel : tronc commun</a></p>
+
+
+<p><a href="https://chlorofil.fr/fileadmin/user_upload/02-diplomes/referentiels/secondaire/bacpro/bacpro-tc-da-MG1.pdf" target="_blank" rel="noopener noreferrer">Chlorofil – Document d&#39;accompagnement MG1</a></p>
+
+
+<p><a href="https://equipedia.ifce.fr/elevage-et-entretien/alimentation/nutrition-et-ration/les-besoins-alimentaires-du-cheval" target="_blank" rel="noopener noreferrer">IFCE – équipédia – Les besoins alimentaires du cheval</a></p>
+
+
+
+        
+        
+    </article>
+    
+</section>
+
+    </fieldset>
+    <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
+    <h2 id="course-summary-title">À retenir</h2><ul></ul>
+    <h3>Faire le point</h3><p>Relis tes réponses et vérifie les points demandés dans le bilan du cours. Tu peux revenir sur ton travail tant que le professeur ne l’a pas clôturé.</p>
+</section>
+
+    <div class="course-submit-panel">
+        <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
+        <p id="course-submit-status" role="status" aria-live="polite"></p>
+        <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
+    </div>
+</div></div>
+</div>
+<noscript><p>Active JavaScript pour charger ta copie et enregistrer tes réponses.</p></noscript>
+
+<script id="classes-data" type="application/json">
+{"college":{"nom":"Collège","classes":[{"id":"5e","nom":"5e","matieres":["techno"]},{"id":"4e","nom":"4e","matieres":["techno"]},{"id":"3e","nom":"3e","matieres":["techno"]}]},"mfr":{"nom":"MFR","classes":[{"id":"4e","nom":"4e MFR","matieres":["tim","maths"]},{"id":"3e","nom":"3e MFR","matieres":["tim","maths"]},{"id":"cap1","nom":"CAP 1","matieres":["tim"]},{"id":"cap2","nom":"CAP 2","matieres":["tim"]},{"id":"2de","nom":"2de Pro","matieres":["tim","maths"]},{"id":"1re","nom":"Bac Pro 1","matieres":["tim","maths"]},{"id":"term","nom":"Bac Pro 2","matieres":["tim","maths"]},{"id":"bts1","nom":"BTS 1","matieres":["tim"]},{"id":"bts2","nom":"BTS 2","matieres":["tim"]}]}}
+</script>
+<script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
+    </main>
+    <footer class="site-footer">
+    <p>
+        &copy; 2026
+        Portail pédagogique Technologie | TIM | Mathématiques
+    </p>
+</footer>
+</body>
+</html>

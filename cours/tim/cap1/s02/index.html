@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
+
+    
+    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
+    <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
+    
+
+    <title>
+        
+        Portail pédagogique Technologie | TIM | Mathématiques
+        
+    </title>
+
+    <link rel="icon" href="/tifsec-test-eleves/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/variables.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/base.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/body.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/header.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/main.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/footer.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-message.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-session.css">
+
+    
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    
+    
+
+    
+
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    
+    
+</head>
+
+<body class="student-shell student-course-shell">
+    <a class="student-skip" href="#course-intro">Aller au cours</a>
+    <p id="message" class="auth-message" role="status" aria-live="polite" hidden></p>
+    <header class="student-header" id="course-header">
+    <div class="student-header-inner">
+        <div class="student-topbar">
+            <a class="student-brand" href="/tifsec-test-eleves/eleve/"><img src="/tifsec-test-eleves/images/logo.png" width="44" height="44" alt=""><span>Mon espace<span data-profile-field="matieres"></span></span></a>
+            <div class="student-header-actions"><a class="student-home-link" href="/tifsec-test-eleves/eleve/">Mes séances</a><a id="course-login" href="/tifsec-test-eleves/connexion/">Se connecter</a><details class="student-theme-picker" id="student-theme-picker" hidden>
+    <summary>Apparence</summary>
+    <div class="student-theme-options"><label for="student-theme-select">Les couleurs de mon espace</label><select id="student-theme-select" disabled><option value="ocean">Océan · bleu</option><option value="forest">Forêt · vert</option><option value="plum">Prune · violet</option><option value="terracotta">Terre cuite · orangé</option><option value="ruby">Rubis · rouge</option><option value="slate">Ardoise · gris</option><option value="midnight">Minuit · noir</option><option value="rose">Rosée · rose</option><option value="neon">Néon · RGB sombre</option><option value="cyberpunk">Cyberpunk · cité futuriste</option><option value="minecraft">Minecraft · blocs et pixels</option><option value="farming">Farming · campagne et cultures</option></select><label class="student-theme-motion"><input type="checkbox" id="student-theme-motion"> Mettre les animations en pause</label><p id="student-theme-status" role="status" aria-live="polite">Ce choix te suivra sur les autres ordinateurs.</p><button id="student-theme-retry" type="button" hidden>Réessayer</button></div>
+</details>
+<button type="button" id="course-logout" hidden>Se déconnecter</button></div>
+        </div>
+        <div class="student-welcome-row" id="course-welcome" hidden>
+            <div><p class="student-eyebrow">Une séance à la fois, à ton rythme.</p><p class="student-course-greeting">Bonjour <span id="course-header-identity"></span></p></div>
+            <dl class="student-profile"><div><dt>Établissement</dt><dd data-profile-field="etablissement"></dd></div><div><dt>Classe</dt><dd data-profile-field="classe"></dd></div><div><dt>Inscription</dt><dd data-profile-field="validation"></dd></div></dl>
+        </div>
+    </div>
+</header>
+
+    <main class="student-course-main" id="student-course-main">
+
+<div id="course-work" data-etablissement="mfr" data-matiere="tim" data-classe="cap1" data-seance="S02" data-saving-enabled="true" data-collaboration-enabled="true">
+    <div class="course-save-panel course-toolbar">
+        <p id="course-identity" hidden></p>
+        <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+    </div>
+    <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
+        <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
+        <p id="group-status" role="status">Les groupes sont propres à chaque séance. Connecte-toi avec ton compte élève pour choisir ta copie.</p>
+        <div id="group-controls" hidden>
+            <label for="group-copy">Copie de cette séance</label><select id="group-copy"></select>
+            <button type="button" id="group-refresh">Actualiser les groupes</button>
+            <div id="group-create-panel" hidden>
+                <p>Choisis un ou deux camarades. Chacun doit accepter pour partager les réponses. Le groupe reprend ton travail actuel ; ta copie individuelle reste dans l’historique.</p>
+                <div id="group-classmates" class="collaboration-roster"></div>
+                <button type="button" id="group-create">Envoyer les invitations</button>
+            </div>
+        </div>
+    </section>
+    <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
+    <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
+
+
+
+<div class="course-columns">
+    <aside class="course-navigation" aria-label="Étapes de la séance">
+        <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
+        <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
+        <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Pour commencer</a></li><li><a href="#a02">1. Préparer le document de la séance</a></li><li><a href="#a03">2. Fichier ou dossier ?</a></li><li><a href="#a04">3. Mission : préparer votre espace professionnel</a></li><li><a href="#a05">4. Pourquoi ranger ?</a></li><li><a href="#a06">5. Petite manipulation</a></li><li><a href="#a07">6. Votre arborescence</a></li><li><a href="#a08">7. À retenir</a></li><li><a href="#a09">8. Rendu</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+    </aside>
+
+<div class="course-reading">
+<!-- ========== INTRODUCTION DU COURS ========== -->
+
+<header class="cours-intro" id="course-intro">
+    <h1>Ranger et retrouver ses fichiers</h1>
+
+    
+    <p class="cours-theme">
+        <strong>Thème :</strong> TIM — Ranger et retrouver ses fichiers
+    </p>
+    
+
+    
+    <p class="cours-problematique">
+        <strong>Problématique :</strong> Ranger et retrouver ses fichiers
+    </p>
+    
+
+    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Dans votre document de travail, répondez aux questions suivantes.</p></section>
+    
+    <section><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
+    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    
+    
+    <section class="cours-objectifs">
+        <h2>Ce que vous allez apprendre</h2>
+        <ul>
+            
+        </ul>
+
+        <h2>Ce que vous allez apprendre à faire</h2>
+        <ul>
+            
+        </ul>
+    </section>
+    
+    <section><h2>Ressources du cours</h2>
+<p>Réalise les manipulations dans le logiciel demandé. Conserve tes fichiers sur ton espace habituel. Le site enregistre seulement tes réponses écrites, tes résultats, tes formules et tes démarches ; aucun fichier n’est téléversé.</p>
+    
+
+</section>
+    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
+<p>Dans cette page du ministère, retrouve le programme ou le référentiel de ta formation. Les objectifs précis étudiés aujourd’hui sont indiqués dans le cours.</p>
+    
+
+<p><a href="https://chlorofil.fr/diplomes/secondaire/capa" target="_blank" rel="noopener noreferrer">Consulter les programmes et attendus officiels</a></p>
+
+
+</div></details>
+
+</header>
+
+    <fieldset id="course-answers" class="course-answer-fields" disabled>
+        <legend>Réponses aux activités</legend>
+        <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
+
+<section class="cours-activites">
+    
+    <article class="cours-activite" id="a01">
+        <h2>Activité 1 — Pour commencer</h2>
+        
+        
+        
+
+        
+
+        
+<p>Un ordinateur peut contenir des milliers de fichiers. Aujourd&#39;hui, nous allons apprendre à les ranger pour pouvoir les retrouver facilement.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a02">
+        <h2>Activité 2 — 1. Préparer le document de la séance</h2>
+        
+        
+        
+
+        
+
+        
+<p>Ouvrez votre dossier :</p>
+    
+
+<pre class="cours-code"><code>MG1_INFORMATIQUE</code></pre>
+    
+
+<p>Créez à l&#39;intérieur un nouveau dossier nommé :</p>
+    
+
+<pre class="cours-code"><code>SEANCE_02</code></pre>
+    
+
+<p>Ouvrez LibreOffice Writer puis enregistrez immédiatement votre document dans ce dossier sous le nom :</p>
+    
+
+<pre class="cours-code"><code>CAPA1_S02_nom_prenom.odt</code></pre>
+    
+
+<p>Écrivez ensuite le titre :</p>
+    
+
+<p>Séance 2 — Ranger et retrouver ses fichiers</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a03">
+        <h2>Activité 3 — 2. Fichier ou dossier ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Un dossier sert à ranger et organiser des éléments.</p>
+    
+
+<p>Un fichier contient généralement un travail : texte, image, photographie, vidéo, tableau, PDF...</p>
+    
+
+<p>Dans votre document, recopiez puis complétez :</p>
+    
+
+<ul><li>Un dossier sert à...</li><li>Un fichier sert à...</li><li>Le fichier que je suis en train de modifier s&#39;appelle...</li><li>Il est enregistré dans le dossier...</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a04">
+        <h2>Activité 4 — 3. Mission : préparer votre espace professionnel</h2>
+        
+        
+        
+
+        
+
+        
+<p>Imaginez que vous allez utiliser votre ordinateur pendant toute votre formation et vos périodes de stage.</p>
+    
+
+<p>Dans votre espace personnel, créez un dossier nommé :</p>
+    
+
+<pre class="cours-code"><code>CAPA1</code></pre>
+    
+
+<p>À l&#39;intérieur, créez les trois dossiers suivants :</p>
+    
+
+<pre class="cours-code"><code>01_COURS 02_STAGES 03_DOCUMENTS</code></pre>
+    
+
+<p>Dans le dossier 02_STAGES, créez ensuite :</p>
+    
+
+<pre class="cours-code"><code>ENTREPRISE PHOTOS DOCUMENTS_STAGE</code></pre>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a05">
+        <h2>Activité 5 — 4. Pourquoi ranger ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Dans votre document de travail, répondez aux questions suivantes.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a05-q01-label">Question 1 — Pourquoi est-il utile de créer plusieurs dossiers ?</h3>
+            
+
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a05-q02-label">Question 2 — Pourquoi les noms comme document1, nouveau document ou truc ne sont-ils pas de bons noms de fichiers ?</h3>
+            
+
+            
+            
+                <textarea id="a05-q02" data-answer-id="a05_q02" data-required="true" aria-labelledby="a05-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a05-q03-label">Question 3 — Proposez un bon nom pour un compte-rendu de stage réalisé en octobre 2026.</h3>
+            
+
+            
+            
+                <textarea id="a05-q03" data-answer-id="a05_q03" data-required="true" aria-labelledby="a05-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a06">
+        <h2>Activité 6 — 5. Petite manipulation</h2>
+        
+        
+        
+
+        
+
+        
+<p>Dans le dossier DOCUMENTS_STAGE, créez un nouveau document Writer.</p>
+    
+
+<p>Enregistrez-le sous le nom :</p>
+    
+
+<pre class="cours-code"><code>fiche_stage.odt</code></pre>
+    
+
+<p>Écrivez simplement :</p>
+    
+
+<ul><li>Nom de la structure de stage :</li><li>Commune :</li><li>Activité principale :</li><li>Métier que je souhaite découvrir :</li><li>Une chose que j&#39;aimerais apprendre pendant mon stage :</li></ul>
+    
+
+<p>Si vous ne connaissez pas encore votre lieu de stage, vous pouvez écrire À compléter.</p>
+    
+
+<p>Enregistrez puis fermez le fichier.</p>
+    
+
+<p>Essayez ensuite de le retrouver et de l&#39;ouvrir à nouveau en passant par vos dossiers.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a07">
+        <h2>Activité 7 — 6. Votre arborescence</h2>
+        
+        
+        
+
+        
+
+        
+<p>Dans votre document de séance, reproduisez l&#39;organisation des dossiers que vous venez de créer :</p>
+    
+
+<pre class="cours-code"><code>CAPA1 ├── 01_COURS ├── 02_STAGES │ ├── ENTREPRISE │ ├── PHOTOS │ └── DOCUMENTS_STAGE └── 03_DOCUMENTS</code></pre>
+    
+
+<p>Pour faire une barre verticale, utilisez le caractère pipe (|) avec la combinaison de touches Alt Gr + 6.</p>
+    
+
+<p>Entourez ou mettez en gras le dossier dans lequel se trouve fiche_stage.odt.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a08">
+        <h2>Activité 8 — 7. À retenir</h2>
+        
+        
+        
+
+        
+
+        
+<ul><li>Je donne un nom clair à mes fichiers.</li><li>Je range mes fichiers dans des dossiers adaptés.</li><li>Je vérifie où j&#39;enregistre mon travail.</li><li>J&#39;utilise Ctrl + S régulièrement.</li><li>Je dois être capable de retrouver un fichier après l&#39;avoir fermé.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a09">
+        <h2>Activité 9 — 8. Rendu</h2>
+        
+        
+        
+
+        
+
+        
+<p>Enregistrez une dernière fois votre document :</p>
+    
+
+<pre class="cours-code"><code>CAPA1_S02_nom_prenom.odt</code></pre>
+    
+
+<p>Rendez-le selon la méthode indiquée par le professeur.</p>
+    
+
+<p>Le fichier doit être rendu même s&#39;il est incomplet.</p>
+    
+
+
+        
+        
+    </article>
+    
+</section>
+
+    </fieldset>
+    <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
+    <h2 id="course-summary-title">À retenir</h2><ul></ul>
+    <h3>Faire le point</h3><p>Relis tes réponses et vérifie les points demandés dans le bilan du cours. Tu peux revenir sur ton travail tant que le professeur ne l’a pas clôturé.</p>
+</section>
+
+    <div class="course-submit-panel">
+        <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
+        <p id="course-submit-status" role="status" aria-live="polite"></p>
+        <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
+    </div>
+</div></div>
+</div>
+<noscript><p>Active JavaScript pour charger ta copie et enregistrer tes réponses.</p></noscript>
+
+<script id="classes-data" type="application/json">
+{"college":{"nom":"Collège","classes":[{"id":"5e","nom":"5e","matieres":["techno"]},{"id":"4e","nom":"4e","matieres":["techno"]},{"id":"3e","nom":"3e","matieres":["techno"]}]},"mfr":{"nom":"MFR","classes":[{"id":"4e","nom":"4e MFR","matieres":["tim","maths"]},{"id":"3e","nom":"3e MFR","matieres":["tim","maths"]},{"id":"cap1","nom":"CAP 1","matieres":["tim"]},{"id":"cap2","nom":"CAP 2","matieres":["tim"]},{"id":"2de","nom":"2de Pro","matieres":["tim","maths"]},{"id":"1re","nom":"Bac Pro 1","matieres":["tim","maths"]},{"id":"term","nom":"Bac Pro 2","matieres":["tim","maths"]},{"id":"bts1","nom":"BTS 1","matieres":["tim"]},{"id":"bts2","nom":"BTS 2","matieres":["tim"]}]}}
+</script>
+<script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
+    </main>
+    <footer class="site-footer">
+    <p>
+        &copy; 2026
+        Portail pédagogique Technologie | TIM | Mathématiques
+    </p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
+
+    
+    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
+    <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
+    
+
+    <title>
+        
+        Portail pédagogique Technologie | TIM | Mathématiques
+        
+    </title>
+
+    <link rel="icon" href="/tifsec-test-eleves/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/variables.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/base.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/body.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/header.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/main.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/footer.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-message.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-session.css">
+
+    
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    
+    
+
+    
+
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    
+    
+</head>
+
+<body class="student-shell student-course-shell">
+    <a class="student-skip" href="#course-intro">Aller au cours</a>
+    <p id="message" class="auth-message" role="status" aria-live="polite" hidden></p>
+    <header class="student-header" id="course-header">
+    <div class="student-header-inner">
+        <div class="student-topbar">
+            <a class="student-brand" href="/tifsec-test-eleves/eleve/"><img src="/tifsec-test-eleves/images/logo.png" width="44" height="44" alt=""><span>Mon espace<span data-profile-field="matieres"></span></span></a>
+            <div class="student-header-actions"><a class="student-home-link" href="/tifsec-test-eleves/eleve/">Mes séances</a><a id="course-login" href="/tifsec-test-eleves/connexion/">Se connecter</a><details class="student-theme-picker" id="student-theme-picker" hidden>
+    <summary>Apparence</summary>
+    <div class="student-theme-options"><label for="student-theme-select">Les couleurs de mon espace</label><select id="student-theme-select" disabled><option value="ocean">Océan · bleu</option><option value="forest">Forêt · vert</option><option value="plum">Prune · violet</option><option value="terracotta">Terre cuite · orangé</option><option value="ruby">Rubis · rouge</option><option value="slate">Ardoise · gris</option><option value="midnight">Minuit · noir</option><option value="rose">Rosée · rose</option><option value="neon">Néon · RGB sombre</option><option value="cyberpunk">Cyberpunk · cité futuriste</option><option value="minecraft">Minecraft · blocs et pixels</option><option value="farming">Farming · campagne et cultures</option></select><label class="student-theme-motion"><input type="checkbox" id="student-theme-motion"> Mettre les animations en pause</label><p id="student-theme-status" role="status" aria-live="polite">Ce choix te suivra sur les autres ordinateurs.</p><button id="student-theme-retry" type="button" hidden>Réessayer</button></div>
+</details>
+<button type="button" id="course-logout" hidden>Se déconnecter</button></div>
+        </div>
+        <div class="student-welcome-row" id="course-welcome" hidden>
+            <div><p class="student-eyebrow">Une séance à la fois, à ton rythme.</p><p class="student-course-greeting">Bonjour <span id="course-header-identity"></span></p></div>
+            <dl class="student-profile"><div><dt>Établissement</dt><dd data-profile-field="etablissement"></dd></div><div><dt>Classe</dt><dd data-profile-field="classe"></dd></div><div><dt>Inscription</dt><dd data-profile-field="validation"></dd></div></dl>
+        </div>
+    </div>
+</header>
+
+    <main class="student-course-main" id="student-course-main">
+
+<div id="course-work" data-etablissement="mfr" data-matiere="tim" data-classe="4e" data-seance="S04" data-saving-enabled="true" data-collaboration-enabled="true">
+    <div class="course-save-panel course-toolbar">
+        <p id="course-identity" hidden></p>
+        <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+    </div>
+    <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
+        <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
+        <p id="group-status" role="status">Les groupes sont propres à chaque séance. Connecte-toi avec ton compte élève pour choisir ta copie.</p>
+        <div id="group-controls" hidden>
+            <label for="group-copy">Copie de cette séance</label><select id="group-copy"></select>
+            <button type="button" id="group-refresh">Actualiser les groupes</button>
+            <div id="group-create-panel" hidden>
+                <p>Choisis un ou deux camarades. Chacun doit accepter pour partager les réponses. Le groupe reprend ton travail actuel ; ta copie individuelle reste dans l’historique.</p>
+                <div id="group-classmates" class="collaboration-roster"></div>
+                <button type="button" id="group-create">Envoyer les invitations</button>
+            </div>
+        </div>
+    </section>
+    <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
+    <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
+
+
+
+<div class="course-columns">
+    <aside class="course-navigation" aria-label="Étapes de la séance">
+        <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
+        <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
+        <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Pour commencer</a></li><li><a href="#a04">Production attendue</a></li><li><a href="#a05">1. Qu&#39;est-ce qu&#39;un document facile à lire ? – 5 minutes</a></li><li><a href="#a06">2. Créer le document de travail – 5 minutes</a></li><li><a href="#a07">3. Copier le texte brut – 5 minutes</a></li><li><a href="#a08">4. Donner une structure au document – 10 minutes</a></li><li><a href="#a09">5. Transformer une série d&#39;actions en liste – 5 minutes</a></li><li><a href="#a10">6. Mettre en valeur sans tout mettre en valeur – 5 minutes</a></li><li><a href="#a11">7. Repérer une mauvaise mise en page – 5 minutes</a></li><li><a href="#a12">8. Vérifier et finaliser son document – 5 minutes</a></li><li><a href="#a13">9. Exporter et rendre son travail – 5 minutes</a></li><li><a href="#a14">Pour aller plus loin — facultatif</a></li><li><a href="#a15">À retenir</a></li><li><a href="#a16">Référentiel</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+    </aside>
+
+<div class="course-reading">
+<!-- ========== INTRODUCTION DU COURS ========== -->
+
+<header class="cours-intro" id="course-intro">
+    <h1>Comment créer un document clair et professionnel ?</h1>
+
+    
+    <p class="cours-theme">
+        <strong>Thème :</strong> TIM — Comment créer un document clair et professionnel ?
+    </p>
+    
+
+    
+    <p class="cours-problematique">
+        <strong>Problématique :</strong> Comment créer un document clair et professionnel ?
+    </p>
+    
+
+    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : Comprendre qu&#39;un document doit posséder une organisation visuelle cohérente.</p></section>
+    
+    <section><h2>Dans la vie quotidienne</h2><p>transformer un texte brut en un document structuré, lisible et facile à modifier.</p></section>
+    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    
+    
+    <section class="cours-objectifs">
+        <h2>Ce que vous allez apprendre</h2>
+        <ul>
+            
+            <li>Comprendre qu&#39;un document doit posséder une organisation visuelle cohérente.</li>
+            
+            <li>Différencier un titre, un sous-titre et un paragraphe.</li>
+            
+            <li>Comprendre l&#39;intérêt des styles dans un traitement de texte.</li>
+            
+            <li>Comprendre que la mise en forme doit faciliter la lecture.</li>
+            
+            <li>Comprendre qu&#39;une information importante doit ressortir sans surcharger le document.</li>
+            
+        </ul>
+
+        <h2>Ce que vous allez apprendre à faire</h2>
+        <ul>
+            
+            <li>Créer et enregistrer un document avec LibreOffice Writer.</li>
+            
+            <li>Utiliser les styles Titre et Titre 1.</li>
+            
+            <li>Organiser un document en plusieurs parties.</li>
+            
+            <li>Créer une liste à puces.</li>
+            
+            <li>Mettre en valeur certaines informations.</li>
+            
+            <li>Vérifier la cohérence générale d&#39;une mise en page.</li>
+            
+            <li>Exporter une version PDF.</li>
+            
+        </ul>
+    </section>
+    
+<h4>Ce que vous allez apprendre</h4>
+    
+
+<ul><li>Comprendre qu&#39;un document doit posséder une organisation visuelle cohérente.</li><li>Différencier un titre, un sous-titre et un paragraphe.</li><li>Comprendre l&#39;intérêt des styles dans un traitement de texte.</li><li>Comprendre que la mise en forme doit faciliter la lecture.</li><li>Comprendre qu&#39;une information importante doit ressortir sans surcharger le document.</li></ul>
+    
+
+<h4>Ce que vous allez apprendre à faire</h4>
+    
+
+<ul><li>Créer et enregistrer un document avec LibreOffice Writer.</li><li>Utiliser les styles Titre et Titre 1.</li><li>Organiser un document en plusieurs parties.</li><li>Créer une liste à puces.</li><li>Mettre en valeur certaines informations.</li><li>Vérifier la cohérence générale d&#39;une mise en page.</li><li>Exporter une version PDF.</li></ul>
+    
+
+
+    <section><h2>Ressources du cours</h2>
+<p>Réalise les manipulations dans le logiciel demandé. Conserve tes fichiers sur ton espace habituel. Le site enregistre seulement tes réponses écrites, tes résultats, tes formules et tes démarches ; aucun fichier n’est téléversé.</p>
+    
+
+</section>
+    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
+<p>Dans cette page du ministère, retrouve le programme ou le référentiel de ta formation. Les objectifs précis étudiés aujourd’hui sont indiqués dans le cours.</p>
+    
+
+<p><a href="https://chlorofil.fr/diplomes/secondaire/4e-3e" target="_blank" rel="noopener noreferrer">Consulter les programmes et attendus officiels</a></p>
+
+
+</div></details>
+
+</header>
+
+    <fieldset id="course-answers" class="course-answer-fields" disabled>
+        <legend>Réponses aux activités</legend>
+        <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
+
+<section class="cours-activites">
+    
+    <article class="cours-activite" id="a01">
+        <h2>Activité 1 — Pour commencer</h2>
+        
+        
+        
+
+        
+
+        
+<p>Classe : 4e / 3e MFR</p>
+    
+
+<p>Durée : 50 minutes</p>
+    
+
+<p>Organisation : travail individuel</p>
+    
+
+<p>Logiciel : LibreOffice Writer</p>
+    
+
+<p>Mission : transformer un texte brut en un document structuré, lisible et facile à modifier.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a04">
+        <h2>Activité 2 — Production attendue</h2>
+        
+        
+        
+
+        
+
+        
+<p>Vous allez transformer un texte brut en une fiche claire et structurée concernant la sécurité pendant une activité professionnelle.</p>
+    
+
+<p>À la fin de la séance, vous devrez avoir créé :</p>
+    
+
+<ul><li>4e3e_S04_nom_prenom.odt ;</li><li>4e3e_S04_nom_prenom.pdf.</li></ul>
+    
+
+<p>Le fichier Writer devra être rendu dans l&#39;espace indiqué par le professeur.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a05">
+        <h2>Activité 3 — 1. Qu&#39;est-ce qu&#39;un document facile à lire ? – 5 minutes</h2>
+        
+        
+        
+
+        
+
+        
+<p>Imaginez deux documents contenant exactement les mêmes informations.</p>
+    
+
+<p>Document A :</p>
+    
+
+<ul><li>tout le texte possède la même taille ;</li><li>aucun titre ne ressort ;</li><li>les paragraphes sont peu séparés ;</li><li>aucune information n&#39;est mise en valeur.</li></ul>
+    
+
+<p>Document B :</p>
+    
+
+<ul><li>un titre principal est clairement visible ;</li><li>les différentes parties possèdent des sous-titres ;</li><li>les paragraphes sont séparés ;</li><li>certaines informations importantes ressortent.</li></ul>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a05-q01-label">Question 1 — Question 1 : quel document sera probablement le plus facile à lire ? Expliquez pourquoi.</h3>
+            
+
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<h4>AIDE SI BESOIN – Réfléchir à la lisibilité</h4>
+    
+
+<p>Indice 1/3 : dans quel document retrouvez-vous plus facilement une information précise ?</p>
+    
+
+<p>Indice 2/3 : les titres permettent de séparer les différentes parties.</p>
+    
+
+<p>Indice 3/3 : le document B est plus facile à lire car les informations sont hiérarchisées et organisées.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a06">
+        <h2>Activité 4 — 2. Créer le document de travail – 5 minutes</h2>
+        
+        
+        
+
+        
+
+        
+<p>Ouvrez LibreOffice Writer.</p>
+    
+
+<p>Créez le dossier :</p>
+    
+
+<p>TIM &gt; 4e3e &gt; Travaux &gt; S04</p>
+    
+
+<p>Enregistrez immédiatement votre document sous le nom :</p>
+    
+
+<p>4e3e_S04_nom_prenom.odt</p>
+    
+
+<h4>AIDE SI BESOIN – Créer et enregistrer le fichier</h4>
+    
+
+<p>Indice 1/3 : retrouvez le dossier TIM créé lors de la séance précédente.</p>
+    
+
+<p>Indice 2/3 : ouvrez TIM → 4e3e → Travaux puis créez le dossier S04.</p>
+    
+
+<p>Indice 3/3 : utilisez Fichier → Enregistrer sous puis saisissez le nom demandé.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a07">
+        <h2>Activité 5 — 3. Copier le texte brut – 5 minutes</h2>
+        
+        
+        
+
+        
+
+        
+<p>Recopiez ou copiez le texte suivant dans votre document.</p>
+    
+
+<p>Pour le moment, ne modifiez pas sa mise en forme.</p>
+    
+
+<blockquote>Sécurité pendant une activité professionnelle Avant de commencer Une activité professionnelle peut comporter des risques. Avant de commencer une tâche, il faut prendre connaissance des consignes, identifier les dangers possibles et vérifier que le matériel utilisé est adapté. Les équipements de protection Selon l&#39;activité réalisée, certains équipements de protection peuvent être nécessaires. Il peut par exemple s&#39;agir de chaussures de sécurité, de gants, de lunettes de protection ou de protections auditives. En cas de problème Il ne faut pas essayer de réparer seul une machine ou un équipement que l&#39;on ne connaît pas. En cas de problème, il faut arrêter l&#39;activité si cela peut être fait sans danger puis prévenir le responsable ou le maître de stage. Les bons réflexes respecter les consignes utiliser le matériel prévu porter les protections demandées signaler un problème garder son espace de travail propre</blockquote>
+    
+
+<p>VIGILANCE : ce texte est un support pédagogique général. Les règles réelles de sécurité dépendent toujours de l&#39;activité, de l&#39;entreprise, du matériel utilisé et des consignes données par les responsables.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a08">
+        <h2>Activité 6 — 4. Donner une structure au document – 10 minutes</h2>
+        
+        
+        
+
+        
+
+        
+<p>Un document bien construit doit permettre de comprendre immédiatement :</p>
+    
+
+<ul><li>le sujet général ;</li><li>les différentes parties ;</li><li>les informations importantes.</li></ul>
+    
+
+<p>Dans Writer, les styles permettent de donner un rôle et une présentation cohérente aux différents éléments du document.</p>
+    
+
+<p>Appliquez :</p>
+    
+
+<ul><li>le style Titre à « Sécurité pendant une activité professionnelle » ;</li><li>le style Titre 1 à « Avant de commencer » ;</li><li>le style Titre 1 à « Les équipements de protection » ;</li><li>le style Titre 1 à « En cas de problème » ;</li><li>le style Titre 1 à « Les bons réflexes ».</li></ul>
+    
+
+<p>Les paragraphes explicatifs doivent rester en texte normal ou en Corps de texte.</p>
+    
+
+<h4>AIDE SI BESOIN – Appliquer un style</h4>
+    
+
+<p>Indice 1/3 : placez le curseur dans le titre que vous voulez modifier.</p>
+    
+
+<p>Indice 2/3 : cherchez la liste des styles dans la barre d&#39;outils de Writer.</p>
+    
+
+<p>Indice 3/3 : sélectionnez Titre pour le titre principal et Titre 1 pour les différentes parties.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a09">
+        <h2>Activité 7 — 5. Transformer une série d&#39;actions en liste – 5 minutes</h2>
+        
+        
+        
+
+        
+
+        
+<p>Dans la partie Les bons réflexes, transformez les cinq lignes en une liste à puces.</p>
+    
+
+<p>Vous devez obtenir :</p>
+    
+
+<ul><li>respecter les consignes ;</li><li>utiliser le matériel prévu ;</li><li>porter les protections demandées ;</li><li>signaler un problème ;</li><li>garder son espace de travail propre.</li></ul>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a09-q01-label">Question 1 — Question 2 : pourquoi une liste à puces est-elle plus adaptée qu&#39;un seul long paragraphe dans cette partie ?</h3>
+            
+
+            
+            
+                <textarea id="a09-q01" data-answer-id="a09_q01" data-required="true" aria-labelledby="a09-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<h4>AIDE SI BESOIN – Créer une liste à puces</h4>
+    
+
+<p>Indice 1/3 : sélectionnez les cinq lignes.</p>
+    
+
+<p>Indice 2/3 : cherchez l&#39;outil permettant de créer une liste.</p>
+    
+
+<p>Indice 3/3 : utilisez le bouton Liste à puces de Writer.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a10">
+        <h2>Activité 8 — 6. Mettre en valeur sans tout mettre en valeur – 5 minutes</h2>
+        
+        
+        
+
+        
+
+        
+<p>Dans la partie En cas de problème, mettez uniquement en gras :</p>
+    
+
+<ul><li>arrêter l&#39;activité ;</li><li>prévenir le responsable ou le maître de stage.</li></ul>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a10-q01-label">Question 1 — Question 3 : pourquoi ne faut-il pas mettre tout le paragraphe en gras ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q01" data-answer-id="a10_q01" data-required="true" aria-labelledby="a10-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<h4>AIDE SI BESOIN – Comprendre la mise en valeur</h4>
+    
+
+<p>Indice 1/3 : le gras sert à attirer le regard.</p>
+    
+
+<p>Indice 2/3 : imaginez que tous les mots du paragraphe soient importants de la même manière.</p>
+    
+
+<p>Indice 3/3 : si tout est en gras, plus rien ne ressort réellement.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a11">
+        <h2>Activité 9 — 7. Repérer une mauvaise mise en page – 5 minutes</h2>
+        
+        
+        
+
+        
+
+        
+<p>Imaginez maintenant un document possédant les caractéristiques suivantes :</p>
+    
+
+<ul><li>le titre principal est écrit en taille 12 ;</li><li>un paragraphe entier est en gras ;</li><li>un sous-titre est rouge, un autre bleu et un autre vert ;</li><li>trois polices différentes sont utilisées ;</li><li>certaines lignes sont centrées sans raison ;</li><li>les cinq bons réflexes sont écrits dans un seul paragraphe.</li></ul>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a11-q01-label">Question 1 — Question 4 : proposez trois modifications permettant de rendre ce document plus facile à lire.</h3>
+            
+
+            
+            
+                <textarea id="a11-q01" data-answer-id="a11_q01" data-required="true" aria-labelledby="a11-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<h4>AIDE SI BESOIN – Trouver des améliorations</h4>
+    
+
+<p>Indice 1/3 : commencez par regarder le titre principal.</p>
+    
+
+<p>Indice 2/3 : observez ensuite les couleurs, les polices et le gras.</p>
+    
+
+<p>Indice 3/3 : vous pouvez agrandir le titre, uniformiser les sous-titres, réduire les couleurs, utiliser une liste et limiter le gras.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a12">
+        <h2>Activité 10 — 8. Vérifier et finaliser son document – 5 minutes</h2>
+        
+        
+        
+
+        
+
+        
+<p>Relisez maintenant votre document.</p>
+    
+
+<p>Vérifiez :</p>
+    
+
+<ul><li>Le titre principal est clairement identifiable.</li><li>Les quatre parties utilisent le même style de sous-titre.</li><li>Les paragraphes sont clairement séparés.</li><li>Les bons réflexes sont présentés sous forme de liste.</li><li>Les informations importantes sont mises en valeur sans excès.</li><li>Je n&#39;ai pas utilisé de nombreuses couleurs ou polices sans raison.</li><li>Mon fichier porte le bon nom.</li></ul>
+    
+
+<p>Enregistrez votre travail avec :</p>
+    
+
+<p>Ctrl + S</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a13">
+        <h2>Activité 11 — 9. Exporter et rendre son travail – 5 minutes</h2>
+        
+        
+        
+
+        
+
+        
+<p>Exportez maintenant votre document au format PDF.</p>
+    
+
+<p>Enregistrez-le dans le même dossier :</p>
+    
+
+<p>TIM &gt; 4e3e &gt; Travaux &gt; S04</p>
+    
+
+<p>sous le nom :</p>
+    
+
+<p>4e3e_S04_nom_prenom.pdf</p>
+    
+
+<p>Votre dossier doit donc contenir :</p>
+    
+
+<ul><li>4e3e_S04_nom_prenom.odt ;</li><li>4e3e_S04_nom_prenom.pdf.</li></ul>
+    
+
+<p>Déposez ensuite :</p>
+    
+
+<p>4e3e_S04_nom_prenom.odt</p>
+    
+
+<p>dans l&#39;espace demandé par le professeur.</p>
+    
+
+<p>Le travail doit être rendu même s&#39;il n&#39;est pas totalement terminé.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a14">
+        <h2>Activité 12 — Pour aller plus loin</h2>
+        <p class="course-optional">Pour aller plus loin — activité facultative.</p>
+        
+        
+
+        
+
+        
+<p>Si vous avez terminé, réalisez le défi suivant :</p>
+    
+
+<p>ouvrez le panneau ou la liste des Styles ;</p>
+    
+
+<p>repérez le style Titre 1 ;</p>
+    
+
+<p>observez combien de parties de votre document utilisent ce style ;</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a14-q01-label">Question 1 — expliquez pourquoi l&#39;utilisation d&#39;un même style est intéressante.</h3>
+            
+
+            
+            
+                <textarea id="a14-q01" data-answer-id="a14_q01" data-required="false" aria-labelledby="a14-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a14-q02-label">Question 2 — Question 5 : quel est selon vous le principal avantage des styles ?</h3>
+            
+
+            
+            
+                <textarea id="a14-q02" data-answer-id="a14_q02" data-required="false" aria-labelledby="a14-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a15">
+        <h2>Activité 13 — À retenir</h2>
+        
+        
+        
+
+        
+
+        
+<ul><li>La mise en forme doit aider le lecteur à comprendre le document.</li><li>Un document est organisé avec un titre, des sous-titres et des paragraphes.</li><li>Une liste à puces est adaptée à une série d&#39;éléments de même niveau.</li><li>Le gras doit être utilisé pour faire ressortir seulement certaines informations.</li><li>Les styles permettent de conserver une présentation cohérente.</li><li>Multiplier les couleurs, les polices ou les effets ne rend pas forcément un document plus lisible.</li><li>Le fichier ODT reste le document de travail.</li><li>Le fichier PDF constitue une version exportée adaptée notamment à la consultation.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a16">
+        <h2>Activité 14 — Référentiel</h2>
+        
+        
+        
+
+        
+
+        
+<p>Cette séance participe notamment au travail sur la création, la production, le traitement et l&#39;exploitation de documents numériques.</p>
+    
+
+<p>Source : ChloroFil – Classes de 4e et 3e de l&#39;enseignement agricole .</p>
+    
+
+<p><a href="https://chlorofil.fr/diplomes/secondaire/4e-3e" target="_blank" rel="noopener noreferrer">ChloroFil – Classes de 4e et 3e de l&#39;enseignement agricole</a></p>
+
+
+
+        
+        
+    </article>
+    
+</section>
+
+    </fieldset>
+    <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
+    <h2 id="course-summary-title">À retenir</h2><ul></ul>
+    <h3>Faire le point</h3><p>Relis tes réponses et vérifie les points demandés dans le bilan du cours. Tu peux revenir sur ton travail tant que le professeur ne l’a pas clôturé.</p>
+</section>
+
+    <div class="course-submit-panel">
+        <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
+        <p id="course-submit-status" role="status" aria-live="polite"></p>
+        <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
+    </div>
+</div></div>
+</div>
+<noscript><p>Active JavaScript pour charger ta copie et enregistrer tes réponses.</p></noscript>
+
+<script id="classes-data" type="application/json">
+{"college":{"nom":"Collège","classes":[{"id":"5e","nom":"5e","matieres":["techno"]},{"id":"4e","nom":"4e","matieres":["techno"]},{"id":"3e","nom":"3e","matieres":["techno"]}]},"mfr":{"nom":"MFR","classes":[{"id":"4e","nom":"4e MFR","matieres":["tim","maths"]},{"id":"3e","nom":"3e MFR","matieres":["tim","maths"]},{"id":"cap1","nom":"CAP 1","matieres":["tim"]},{"id":"cap2","nom":"CAP 2","matieres":["tim"]},{"id":"2de","nom":"2de Pro","matieres":["tim","maths"]},{"id":"1re","nom":"Bac Pro 1","matieres":["tim","maths"]},{"id":"term","nom":"Bac Pro 2","matieres":["tim","maths"]},{"id":"bts1","nom":"BTS 1","matieres":["tim"]},{"id":"bts2","nom":"BTS 2","matieres":["tim"]}]}}
+</script>
+<script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
+    </main>
+    <footer class="site-footer">
+    <p>
+        &copy; 2026
+        Portail pédagogique Technologie | TIM | Mathématiques
+    </p>
+</footer>
+</body>
+</html>

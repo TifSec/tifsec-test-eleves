@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
+
+    
+    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
+    <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
+    
+
+    <title>
+        
+        Portail pédagogique Technologie | TIM | Mathématiques
+        
+    </title>
+
+    <link rel="icon" href="/tifsec-test-eleves/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/variables.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/base.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/body.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/header.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/main.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/footer.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-message.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-session.css">
+
+    
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    
+    
+
+    
+
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    
+    
+</head>
+
+<body class="student-shell student-course-shell">
+    <a class="student-skip" href="#course-intro">Aller au cours</a>
+    <p id="message" class="auth-message" role="status" aria-live="polite" hidden></p>
+    <header class="student-header" id="course-header">
+    <div class="student-header-inner">
+        <div class="student-topbar">
+            <a class="student-brand" href="/tifsec-test-eleves/eleve/"><img src="/tifsec-test-eleves/images/logo.png" width="44" height="44" alt=""><span>Mon espace<span data-profile-field="matieres"></span></span></a>
+            <div class="student-header-actions"><a class="student-home-link" href="/tifsec-test-eleves/eleve/">Mes séances</a><a id="course-login" href="/tifsec-test-eleves/connexion/">Se connecter</a><details class="student-theme-picker" id="student-theme-picker" hidden>
+    <summary>Apparence</summary>
+    <div class="student-theme-options"><label for="student-theme-select">Les couleurs de mon espace</label><select id="student-theme-select" disabled><option value="ocean">Océan · bleu</option><option value="forest">Forêt · vert</option><option value="plum">Prune · violet</option><option value="terracotta">Terre cuite · orangé</option><option value="ruby">Rubis · rouge</option><option value="slate">Ardoise · gris</option><option value="midnight">Minuit · noir</option><option value="rose">Rosée · rose</option><option value="neon">Néon · RGB sombre</option><option value="cyberpunk">Cyberpunk · cité futuriste</option><option value="minecraft">Minecraft · blocs et pixels</option><option value="farming">Farming · campagne et cultures</option></select><label class="student-theme-motion"><input type="checkbox" id="student-theme-motion"> Mettre les animations en pause</label><p id="student-theme-status" role="status" aria-live="polite">Ce choix te suivra sur les autres ordinateurs.</p><button id="student-theme-retry" type="button" hidden>Réessayer</button></div>
+</details>
+<button type="button" id="course-logout" hidden>Se déconnecter</button></div>
+        </div>
+        <div class="student-welcome-row" id="course-welcome" hidden>
+            <div><p class="student-eyebrow">Une séance à la fois, à ton rythme.</p><p class="student-course-greeting">Bonjour <span id="course-header-identity"></span></p></div>
+            <dl class="student-profile"><div><dt>Établissement</dt><dd data-profile-field="etablissement"></dd></div><div><dt>Classe</dt><dd data-profile-field="classe"></dd></div><div><dt>Inscription</dt><dd data-profile-field="validation"></dd></div></dl>
+        </div>
+    </div>
+</header>
+
+    <main class="student-course-main" id="student-course-main">
+
+<div id="course-work" data-etablissement="mfr" data-matiere="tim" data-classe="bts2" data-seance="S05" data-saving-enabled="true" data-collaboration-enabled="true">
+    <div class="course-save-panel course-toolbar">
+        <p id="course-identity" hidden></p>
+        <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+    </div>
+    <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
+        <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
+        <p id="group-status" role="status">Les groupes sont propres à chaque séance. Connecte-toi avec ton compte élève pour choisir ta copie.</p>
+        <div id="group-controls" hidden>
+            <label for="group-copy">Copie de cette séance</label><select id="group-copy"></select>
+            <button type="button" id="group-refresh">Actualiser les groupes</button>
+            <div id="group-create-panel" hidden>
+                <p>Choisis un ou deux camarades. Chacun doit accepter pour partager les réponses. Le groupe reprend ton travail actuel ; ta copie individuelle reste dans l’historique.</p>
+                <div id="group-classmates" class="collaboration-roster"></div>
+                <button type="button" id="group-create">Envoyer les invitations</button>
+            </div>
+        </div>
+    </section>
+    <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
+    <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
+
+
+
+<div class="course-columns">
+    <aside class="course-navigation" aria-label="Étapes de la séance">
+        <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
+        <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
+        <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Pour commencer</a></li><li><a href="#a02">Notions et compétences travaillées</a></li><li><a href="#a03">Pourquoi allons-nous travailler cela ?</a></li><li><a href="#a04">À quoi cela va-t-il vous servir ?</a></li><li><a href="#a05">1. Reprendre le tableau de bord</a></li><li><a href="#a06">2. Créer une vraie feuille de synthèse</a></li><li><a href="#a07">3. Compter selon un critère avec NB.SI</a></li><li><a href="#a08">4. Pourquoi passer de NB.SI à SOMME.SI ?</a></li><li><a href="#a09">5. Additionner selon un critère avec SOMME.SI</a></li><li><a href="#a10">6. Pourquoi passer maintenant à une moyenne ?</a></li><li><a href="#a11">7. Calculer une moyenne selon un critère avec MOYENNE.SI</a></li><li><a href="#a12">8. Comparer les trois fonctions</a></li><li><a href="#a13">9. Lire la synthèse comme un professionnel</a></li><li><a href="#a14">10. Une moyenne peut-elle cacher des différences ?</a></li><li><a href="#a15">11. Tester les formules</a></li><li><a href="#a16">12. Faire le lien avec les séances précédentes</a></li><li><a href="#a17">13. Bilan de la séance</a></li><li><a href="#a18">14. Avant de rendre</a></li><li><a href="#a19">À retenir</a></li><li><a href="#a20">Pour la prochaine séance</a></li><li><a href="#a21">Sources et ressources</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+    </aside>
+
+<div class="course-reading">
+<!-- ========== INTRODUCTION DU COURS ========== -->
+
+<header class="cours-intro" id="course-intro">
+    <h1>Résumer automatiquement un ensemble de données</h1>
+
+    
+    <p class="cours-theme">
+        <strong>Thème :</strong> TIM — Résumer automatiquement un ensemble de données
+    </p>
+    
+
+    
+    <p class="cours-problematique">
+        <strong>Problématique :</strong> Résumer automatiquement un ensemble de données
+    </p>
+    
+
+    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Notre fichier sait maintenant analyser chaque parcelle et lui attribuer automatiquement un niveau de priorité.</p></section>
+    
+    <section><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
+    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    
+    
+    <section class="cours-objectifs">
+        <h2>Ce que vous allez apprendre</h2>
+        <ul>
+            
+        </ul>
+
+        <h2>Ce que vous allez apprendre à faire</h2>
+        <ul>
+            
+        </ul>
+    </section>
+    
+    <section><h2>Ressources du cours</h2>
+<p>Réalise les manipulations dans le logiciel demandé. Conserve tes fichiers sur ton espace habituel. Le site enregistre seulement tes réponses écrites, tes résultats, tes formules et tes démarches ; aucun fichier n’est téléversé.</p>
+    
+
+</section>
+    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
+<p>Dans cette page du ministère, retrouve le programme ou le référentiel de ta formation. Les objectifs précis étudiés aujourd’hui sont indiqués dans le cours.</p>
+    
+
+<p><a href="https://chlorofil.fr/diplomes/secondaire/btsa/acse/acs-agri-2025" target="_blank" rel="noopener noreferrer">Consulter les programmes et attendus officiels</a></p>
+
+
+</div></details>
+
+</header>
+
+    <fieldset id="course-answers" class="course-answer-fields" disabled>
+        <legend>Réponses aux activités</legend>
+        <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
+
+<section class="cours-activites">
+    
+    <article class="cours-activite" id="a01">
+        <h2>Activité 1 — Pour commencer</h2>
+        
+        
+        
+
+        
+
+        
+<p>Durée prévue : environ 1 heure</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a02">
+        <h2>Activité 2 — Notions et compétences travaillées</h2>
+        
+        
+        
+
+        
+
+        
+<ul><li>fonction NB.SI ;</li><li>fonction SOMME.SI ;</li><li>fonction MOYENNE.SI ;</li><li>critère de sélection ;</li><li>plage de données ;</li><li>synthèse automatique de données ;</li><li>lecture et interprétation d&#39;indicateurs globaux.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a03">
+        <h2>Activité 3 — Pourquoi allons-nous travailler cela ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Notre fichier sait maintenant analyser chaque parcelle et lui attribuer automatiquement un niveau de priorité.</p>
+    
+
+<p>Mais si l&#39;exploitation possède de nombreuses parcelles, lire les lignes une par une devient peu pratique.</p>
+    
+
+<p>Nous voulons maintenant pouvoir répondre rapidement à des questions comme :</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a03-q01-label">Question 1 — combien de parcelles sont prioritaires ?</h3>
+            
+
+            
+            
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a03-q02-label">Question 2 — quelle surface totale est consacrée au maïs ensilage ?</h3>
+            
+
+            
+            
+                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a03-q03-label">Question 3 — quel est le rendement moyen du maïs ensilage ?</h3>
+            
+
+            
+            
+                <textarea id="a03-q03" data-answer-id="a03_q03" data-required="true" aria-labelledby="a03-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a04">
+        <h2>Activité 4 — À quoi cela va-t-il vous servir ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Dans une situation professionnelle, ces fonctions permettent par exemple de :</p>
+    
+
+<ul><li>compter automatiquement des interventions d&#39;un certain type ;</li><li>calculer une surface totale pour une culture ;</li><li>calculer un coût moyen pour une catégorie ;</li><li>compter des alertes ou anomalies ;</li><li>produire rapidement des indicateurs de synthèse ;</li><li>préparer un tableau de bord sans refaire manuellement les calculs.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a05">
+        <h2>Activité 5 — 1. Reprendre le tableau de bord</h2>
+        
+        
+        
+
+        
+
+        
+<p>Ouvrez :</p>
+    
+
+<p>BTS2_ACSAGRI_S04_NOM_Prenom.ods</p>
+    
+
+<p>Enregistrez immédiatement une copie sous :</p>
+    
+
+<p>BTS2_ACSAGRI_S05_NOM_Prenom.ods</p>
+    
+
+<p>Vérifiez que la feuille Analyse contient toujours :</p>
+    
+
+<ul><li>la parcelle ;</li><li>la culture ;</li><li>la surface ;</li><li>le rendement ;</li><li>le coût des intrants par hectare ;</li><li>le temps de travail par hectare ;</li><li>la priorité.</li></ul>
+    
+
+<p>Vérifiez également que votre colonne Priorité contient bien les trois états :</p>
+    
+
+<ul><li>Prioritaire ;</li><li>À surveiller ;</li><li>OK.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a06">
+        <h2>Activité 6 — 2. Créer une vraie feuille de synthèse</h2>
+        
+        
+        
+
+        
+
+        
+<p>Jusqu&#39;ici, la feuille Analyse contient beaucoup de détails.</p>
+    
+
+<p>Nous allons maintenant créer une feuille destinée à répondre rapidement à quelques questions importantes.</p>
+    
+
+<p>Créez une nouvelle feuille nommée :</p>
+    
+
+<p>Synthese</p>
+    
+
+<p>Créez le tableau suivant :</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a06-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
+            
+
+            
+            
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Indicateur</th>
+                                
+                                <th>Résultat</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Nombre de parcelles prioritaires
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a06_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="2. Créer une vraie feuille de synthèse — Résultat — Nombre de parcelles prioritaires">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Nombre de parcelles à surveiller
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a06_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="2. Créer une vraie feuille de synthèse — Résultat — Nombre de parcelles à surveiller">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Surface totale en maïs ensilage
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a06_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="2. Créer une vraie feuille de synthèse — Résultat — Surface totale en maïs ensilage">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Rendement moyen du maïs ensilage
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a06_q01_r3_c1" data-required="true" data-row="3" data-col="1" aria-label="2. Créer une vraie feuille de synthèse — Résultat — Rendement moyen du maïs ensilage">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a07">
+        <h2>Activité 7 — 3. Compter selon un critère avec NB.SI</h2>
+        
+        
+        
+
+        
+
+        
+<p>Commençons par répondre à la question :</p>
+    
+
+<p>Combien de parcelles sont classées Prioritaire ?</p>
+    
+
+<p>Nous pourrions compter les lignes à la main.</p>
+    
+
+<p>Mais si le classement change, il faudrait recompter.</p>
+    
+
+<p>La fonction NB.SI permet de compter automatiquement le nombre de cellules correspondant à un critère.</p>
+    
+
+<p>Sa structure générale est :</p>
+    
+
+<p>=NB.SI(plage;critère)</p>
+    
+
+<p>Dans notre cas :</p>
+    
+
+<ul><li>la plage est la colonne contenant les niveaux de priorité ;</li><li>le critère est le texte Prioritaire.</li></ul>
+    
+
+<p>Créez la formule permettant de compter les parcelles prioritaires.</p>
+    
+
+<h4>Indice 1</h4>
+    
+
+<p>Identifiez d&#39;abord la colonne dans laquelle apparaissent les mots Prioritaire, À surveiller et OK.</p>
+    
+
+<h4>Indice 2</h4>
+    
+
+<p>La fonction doit compter dans cette colonne les cellules contenant exactement le mot Prioritaire.</p>
+    
+
+<h4>Indice 3</h4>
+    
+
+<p>Si la priorité se trouve en N2:N11 : =NB.SI(Analyse.N2:N11;&quot;Prioritaire&quot;).</p>
+    
+
+<p>Utilisez maintenant la même fonction pour calculer le nombre de parcelles À surveiller.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a08">
+        <h2>Activité 8 — 4. Pourquoi passer de NB.SI à SOMME.SI ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Nous savons maintenant compter les lignes correspondant à un critère.</p>
+    
+
+<p>Mais imaginons que nous voulions connaître la surface totale consacrée au maïs ensilage.</p>
+    
+
+<p>Compter les parcelles ne suffit pas :</p>
+    
+
+<p>une parcelle de 3 ha et une parcelle de 9 ha comptent chacune pour une parcelle, mais elles n&#39;ont pas la même surface.</p>
+    
+
+<p>Nous devons donc :</p>
+    
+
+<ol><li>repérer les lignes où la culture est Maïs ensilage ;</li><li>additionner uniquement les surfaces de ces lignes.</li></ol>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a09">
+        <h2>Activité 9 — 5. Additionner selon un critère avec SOMME.SI</h2>
+        
+        
+        
+
+        
+
+        
+<p>La fonction SOMME.SI permet d&#39;additionner uniquement les valeurs correspondant à un critère.</p>
+    
+
+<p>Sa structure générale est :</p>
+    
+
+<p>=SOMME.SI(plage_du_critère;critère;plage_à_additionner)</p>
+    
+
+<p>Dans notre situation :</p>
+    
+
+<ul><li>nous regardons la colonne Culture ;</li><li>nous recherchons Maïs ensilage ;</li><li>nous additionnons les valeurs de la colonne Surface.</li></ul>
+    
+
+<p>Créez la formule permettant de calculer la surface totale en maïs ensilage.</p>
+    
+
+<h4>Indice 1</h4>
+    
+
+<p>Posez-vous trois questions : où est écrit le type de culture ? Quelle culture cherchez-vous ? Quelle colonne faut-il additionner ?</p>
+    
+
+<h4>Indice 2</h4>
+    
+
+<p>La plage du critère est la colonne Culture et la plage à additionner est la colonne Surface.</p>
+    
+
+<h4>Indice 3</h4>
+    
+
+<p>Si Culture est en B et Surface en C : =SOMME.SI(Analyse.B2:B11;&quot;Maïs ensilage&quot;;Analyse.C2:C11).</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a10">
+        <h2>Activité 10 — 6. Pourquoi passer maintenant à une moyenne ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Nous connaissons maintenant la surface totale de maïs.</p>
+    
+
+<p>Mais si nous voulons caractériser les performances de ces parcelles, nous pouvons aussi demander :</p>
+    
+
+<p>Quel est leur rendement moyen ?</p>
+    
+
+<p>Le principe est presque identique à SOMME.SI :</p>
+    
+
+<ul><li>repérer les lignes où la culture est Maïs ensilage ;</li><li>prendre le rendement de ces lignes ;</li><li>calculer leur moyenne au lieu de leur somme.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a11">
+        <h2>Activité 11 — 7. Calculer une moyenne selon un critère avec MOYENNE.SI</h2>
+        
+        
+        
+
+        
+
+        
+<p>La fonction MOYENNE.SI suit la structure :</p>
+    
+
+<p>=MOYENNE.SI(plage_du_critère;critère;plage_à_moyenner)</p>
+    
+
+<p>Calculez le rendement moyen des parcelles de maïs ensilage.</p>
+    
+
+<h4>Indice 1</h4>
+    
+
+<p>Le critère est exactement le même que dans l&#39;exercice précédent.</p>
+    
+
+<h4>Indice 2</h4>
+    
+
+<p>Cette fois, la colonne utilisée pour le calcul n&#39;est plus Surface mais Rendement.</p>
+    
+
+<h4>Indice 3</h4>
+    
+
+<p>Si Culture est en B et Rendement en H : =MOYENNE.SI(Analyse.B2:B11;&quot;Maïs ensilage&quot;;Analyse.H2:H11).</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a12">
+        <h2>Activité 12 — 8. Comparer les trois fonctions</h2>
+        
+        
+        
+
+        
+
+        
+<p>Nous venons d&#39;utiliser trois fonctions différentes, mais elles reposent sur la même idée.</p>
+    
+
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Fonction</th><th scope="col">Question posée</th><th scope="col">Action réalisée</th></tr></thead><tbody><tr><td>NB.SI</td><td>Combien de lignes respectent le critère ?</td><td>Compter</td></tr><tr><td>SOMME.SI</td><td>Quel est le total pour les lignes respectant le critère ?</td><td>Additionner</td></tr><tr><td>MOYENNE.SI</td><td>Quelle est la moyenne pour les lignes respectant le critère ?</td><td>Calculer une moyenne</td></tr></tbody></table></div>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a12-q01-label">Question 1 — Q1 : Quel élément est commun aux trois fonctions ?</h3>
+            
+
+            
+            
+                <textarea id="a12-q01" data-answer-id="a12_q01" data-required="true" aria-labelledby="a12-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a12-q02-label">Question 2 — Q2 : Quelle fonction choisiriez-vous pour connaître le nombre de parcelles en prairie permanente ?</h3>
+            
+
+            
+            
+                <textarea id="a12-q02" data-answer-id="a12_q02" data-required="true" aria-labelledby="a12-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a12-q03-label">Question 3 — Q3 : Quelle fonction choisiriez-vous pour connaître la surface totale en prairie permanente ?</h3>
+            
+
+            
+            
+                <textarea id="a12-q03" data-answer-id="a12_q03" data-required="true" aria-labelledby="a12-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a12-q04-label">Question 4 — Q4 : Quelle fonction choisiriez-vous pour connaître le coût moyen par hectare des prairies permanentes ?</h3>
+            
+
+            
+            
+                <textarea id="a12-q04" data-answer-id="a12_q04" data-required="true" aria-labelledby="a12-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a13">
+        <h2>Activité 13 — 9. Lire la synthèse comme un professionnel</h2>
+        
+        
+        
+
+        
+
+        
+<p>Votre feuille Synthese doit maintenant indiquer environ :</p>
+    
+
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Indicateur</th><th scope="col">Résultat attendu</th></tr></thead><tbody><tr><td>Nombre de parcelles prioritaires</td><td>3</td></tr><tr><td>Nombre de parcelles à surveiller</td><td>2</td></tr><tr><td>Surface totale en maïs ensilage</td><td>15,3 ha</td></tr><tr><td>Rendement moyen du maïs ensilage</td><td>≈ 11,51 t MS/ha</td></tr></tbody></table></div>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a13-q01-label">Question 1 — Q5 : Qu&#39;est-ce que ces quatre valeurs permettent de comprendre plus rapidement que le tableau détaillé ?</h3>
+            
+
+            
+            
+                <textarea id="a13-q01" data-answer-id="a13_q01" data-required="true" aria-labelledby="a13-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<h4>Indice 1</h4>
+    
+
+<p>Comparez le temps nécessaire pour lire ces quatre résultats avec celui nécessaire pour lire les dix lignes une par une.</p>
+    
+
+<h4>Indice 2</h4>
+    
+
+<p>Une synthèse permet de faire ressortir quelques informations importantes sans supprimer les données détaillées.</p>
+    
+
+<h4>Indice 3</h4>
+    
+
+<p>Elle permet de voir immédiatement combien de parcelles demandent une attention particulière et de caractériser rapidement une culture.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a14">
+        <h2>Activité 14 — 10. Une moyenne peut-elle cacher des différences ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Le rendement moyen du maïs ensilage est d&#39;environ 11,51 t MS/ha.</p>
+    
+
+<p>Mais les trois parcelles n&#39;ont pas exactement le même rendement :</p>
+    
+
+<ul><li>P02 ≈ 11,70 t MS/ha ;</li><li>P06 ≈ 11,04 t MS/ha ;</li><li>P10 ≈ 11,78 t MS/ha.</li></ul>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a14-q01-label">Question 1 — Q6 : Pourquoi faut-il conserver le tableau détaillé même lorsque nous disposons d&#39;une moyenne ?</h3>
+            
+
+            
+            
+                <textarea id="a14-q01" data-answer-id="a14_q01" data-required="true" aria-labelledby="a14-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a15">
+        <h2>Activité 15 — 11. Tester les formules</h2>
+        
+        
+        
+
+        
+
+        
+<p>Nous allons vérifier que notre synthèse est réellement automatique.</p>
+    
+
+<p>Dans la feuille Analyse, modifiez temporairement la culture de P10 :</p>
+    
+
+<p>Maïs ensilage → Prairie temporaire</p>
+    
+
+<p>Observez dans Synthese :</p>
+    
+
+<ul><li>la surface totale en maïs ;</li><li>le rendement moyen du maïs.</li></ul>
+    
+
+<p>Remettez ensuite P10 en Maïs ensilage.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a15-q01-label">Question 1 — Q7 : Pourquoi les résultats ont-ils changé automatiquement ?</h3>
+            
+
+            
+            
+                <textarea id="a15-q01" data-answer-id="a15_q01" data-required="true" aria-labelledby="a15-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a16">
+        <h2>Activité 16 — 12. Faire le lien avec les séances précédentes</h2>
+        
+        
+        
+
+        
+
+        
+<p>Notre outil s&#39;est construit étape par étape :</p>
+    
+
+<p>S02 : données → vérification → indicateurs</p>
+    
+
+<p>S03 : indicateurs → règles → alertes</p>
+    
+
+<p>S04 : plusieurs règles → niveaux de priorité</p>
+    
+
+<p>S05 : données détaillées → indicateurs de synthèse</p>
+    
+
+<p>Nous sommes donc en train de transformer progressivement un simple tableau de données en un véritable outil d&#39;analyse.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a17">
+        <h2>Activité 17 — 13. Bilan de la séance</h2>
+        
+        
+        
+
+        
+
+        
+<p>Dans la feuille Bilan, complétez :</p>
+    
+
+<ul><li>NB.SI permet de ................................................................................................................</li><li>SOMME.SI permet de ................................................................................................................</li><li>MOYENNE.SI permet de ................................................................................................................</li><li>Un critère sert à ................................................................................................................</li><li>Une synthèse permet de ................................................................................................................</li></ul>
+    
+
+<p>Dernière question :</p>
+    
+
+<p>Pourquoi une valeur de synthèse ne doit-elle pas remplacer complètement les données détaillées ?</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a18">
+        <h2>Activité 18 — 14. Avant de rendre</h2>
+        
+        
+        
+
+        
+
+        
+<p>Vérifiez que votre feuille Synthese contient :</p>
+    
+
+<ul><li>le nombre de parcelles prioritaires ;</li><li>le nombre de parcelles à surveiller ;</li><li>la surface totale en maïs ensilage ;</li><li>le rendement moyen du maïs ensilage.</li></ul>
+    
+
+<p>Vérifiez que ces quatre résultats sont obtenus avec des formules et non saisis manuellement.</p>
+    
+
+<p>Vérifiez également que P10 est bien revenue en Maïs ensilage.</p>
+    
+
+<p>Enregistrez :</p>
+    
+
+<p>BTS2_ACSAGRI_S05_NOM_Prenom.ods</p>
+    
+
+<p>Déposez le fichier dans l&#39;espace indiqué par le professeur.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a19">
+        <h2>Activité 19 — À retenir</h2>
+        
+        
+        
+
+        
+
+        
+<ul><li>NB.SI compte les données correspondant à un critère.</li><li>SOMME.SI additionne les valeurs correspondant à un critère.</li><li>MOYENNE.SI calcule une moyenne pour les données correspondant à un critère.</li><li>Le critère indique quelles lignes doivent être prises en compte.</li><li>Une synthèse permet de lire rapidement les informations importantes d&#39;un ensemble de données.</li><li>Une synthèse ne remplace pas les données détaillées : elle les complète.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a20">
+        <h2>Activité 20 — Pour la prochaine séance</h2>
+        
+        
+        
+
+        
+
+        
+<p>Nous savons maintenant construire plusieurs indicateurs de synthèse avec des formules.</p>
+    
+
+<p>Mais si nous voulons comparer rapidement toutes les cultures, il faudrait créer beaucoup de formules différentes.</p>
+    
+
+<p>Lors de la prochaine séance, nous découvrirons un outil capable de regrouper et synthétiser automatiquement tout le tableau :</p>
+    
+
+<p>la table dynamique.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a21">
+        <h2>Activité 21 — Sources et ressources</h2>
+        
+        
+        
+
+        
+
+        
+<ul><li>Chlorofil – BTSA ACS&#39;AGRI – référentiel et documents d&#39;accompagnement.</li><li>Inspection de l&#39;enseignement agricole – Exemples d&#39;utilisation des TIM dans des situations favorisant l&#39;acquisition de capacités.</li></ul>
+    
+
+<p><a href="https://chlorofil.fr/diplomes/secondaire/btsa/acse/acs-agri-2025" target="_blank" rel="noopener noreferrer">BTSA ACS&#39;AGRI – référentiel et documents d&#39;accompagnement</a></p>
+
+
+<p><a href="https://chlorofil.fr/fileadmin/user_upload/02-diplomes/referentiels/secondaire/btsa/acsagri-2025/btsa-acsagri-da-tim.pdf" target="_blank" rel="noopener noreferrer">Exemples d&#39;utilisation des TIM dans des situations favorisant l&#39;acquisition de capacités</a></p>
+
+
+<p>Les données utilisées dans cette séance sont fictives et adaptées à des fins pédagogiques.</p>
+    
+
+
+        
+        
+    </article>
+    
+</section>
+
+    </fieldset>
+    <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
+    <h2 id="course-summary-title">À retenir</h2><ul></ul>
+    <h3>Faire le point</h3><p>Relis tes réponses et vérifie les points demandés dans le bilan du cours. Tu peux revenir sur ton travail tant que le professeur ne l’a pas clôturé.</p>
+</section>
+
+    <div class="course-submit-panel">
+        <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
+        <p id="course-submit-status" role="status" aria-live="polite"></p>
+        <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
+    </div>
+</div></div>
+</div>
+<noscript><p>Active JavaScript pour charger ta copie et enregistrer tes réponses.</p></noscript>
+
+<script id="classes-data" type="application/json">
+{"college":{"nom":"Collège","classes":[{"id":"5e","nom":"5e","matieres":["techno"]},{"id":"4e","nom":"4e","matieres":["techno"]},{"id":"3e","nom":"3e","matieres":["techno"]}]},"mfr":{"nom":"MFR","classes":[{"id":"4e","nom":"4e MFR","matieres":["tim","maths"]},{"id":"3e","nom":"3e MFR","matieres":["tim","maths"]},{"id":"cap1","nom":"CAP 1","matieres":["tim"]},{"id":"cap2","nom":"CAP 2","matieres":["tim"]},{"id":"2de","nom":"2de Pro","matieres":["tim","maths"]},{"id":"1re","nom":"Bac Pro 1","matieres":["tim","maths"]},{"id":"term","nom":"Bac Pro 2","matieres":["tim","maths"]},{"id":"bts1","nom":"BTS 1","matieres":["tim"]},{"id":"bts2","nom":"BTS 2","matieres":["tim"]}]}}
+</script>
+<script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
+    </main>
+    <footer class="site-footer">
+    <p>
+        &copy; 2026
+        Portail pédagogique Technologie | TIM | Mathématiques
+    </p>
+</footer>
+</body>
+</html>

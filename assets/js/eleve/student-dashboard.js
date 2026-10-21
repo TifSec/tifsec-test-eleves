@@ -21,6 +21,7 @@ export function initDashboard() {
     if (!lessons || !stats || !status || !refreshButton) return;
     let generation = 0;
     let timer;
+    let lastLoaded = 0;
     let view = 'all', viewState = null;
     const text = (tag, value, className) => {
         const node = document.createElement(tag);
@@ -139,6 +140,7 @@ export function initDashboard() {
             const model = dashboardModel({ catalogue, profile: verified.profile, userId: session.user.id, ...data });
             const progressions = JSON.parse(document.getElementById('progressions-data')?.textContent || '[]');
             viewState = { model, progressions, profile: verified.profile, userId: verified.user.id };
+            lastLoaded = Date.now();
             if (nextPanel?.dataset.enabled === 'true' && nextContent) {
                 const progression = nextLessons(progressions, verified.profile, model.lessons);
                 nextPanel.hidden = false;
@@ -201,7 +203,9 @@ export function initDashboard() {
         } else timer = setTimeout(refresh, 0);
     });
     window.addEventListener('pageshow', event => { if (event.persisted) refresh(); });
-    document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') refresh(); });
+    document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible' && !refreshButton.disabled && Date.now() - lastLoaded >= 60000) refresh();
+    });
     refresh();
 }
 

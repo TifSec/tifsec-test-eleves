@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
+
+    
+    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
+    <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
+    
+
+    <title>
+        
+        Portail pédagogique Technologie | TIM | Mathématiques
+        
+    </title>
+
+    <link rel="icon" href="/tifsec-test-eleves/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/variables.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/base.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/body.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/header.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/main.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/footer.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-message.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-session.css">
+
+    
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    
+    
+
+    
+
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    
+    
+</head>
+
+<body class="student-shell student-course-shell">
+    <a class="student-skip" href="#course-intro">Aller au cours</a>
+    <p id="message" class="auth-message" role="status" aria-live="polite" hidden></p>
+    <header class="student-header" id="course-header">
+    <div class="student-header-inner">
+        <div class="student-topbar">
+            <a class="student-brand" href="/tifsec-test-eleves/eleve/"><img src="/tifsec-test-eleves/images/logo.png" width="44" height="44" alt=""><span>Mon espace<span data-profile-field="matieres"></span></span></a>
+            <div class="student-header-actions"><a class="student-home-link" href="/tifsec-test-eleves/eleve/">Mes séances</a><a id="course-login" href="/tifsec-test-eleves/connexion/">Se connecter</a><details class="student-theme-picker" id="student-theme-picker" hidden>
+    <summary>Apparence</summary>
+    <div class="student-theme-options"><label for="student-theme-select">Les couleurs de mon espace</label><select id="student-theme-select" disabled><option value="ocean">Océan · bleu</option><option value="forest">Forêt · vert</option><option value="plum">Prune · violet</option><option value="terracotta">Terre cuite · orangé</option><option value="ruby">Rubis · rouge</option><option value="slate">Ardoise · gris</option><option value="midnight">Minuit · noir</option><option value="rose">Rosée · rose</option><option value="neon">Néon · RGB sombre</option><option value="cyberpunk">Cyberpunk · cité futuriste</option><option value="minecraft">Minecraft · blocs et pixels</option><option value="farming">Farming · campagne et cultures</option></select><label class="student-theme-motion"><input type="checkbox" id="student-theme-motion"> Mettre les animations en pause</label><p id="student-theme-status" role="status" aria-live="polite">Ce choix te suivra sur les autres ordinateurs.</p><button id="student-theme-retry" type="button" hidden>Réessayer</button></div>
+</details>
+<button type="button" id="course-logout" hidden>Se déconnecter</button></div>
+        </div>
+        <div class="student-welcome-row" id="course-welcome" hidden>
+            <div><p class="student-eyebrow">Une séance à la fois, à ton rythme.</p><p class="student-course-greeting">Bonjour <span id="course-header-identity"></span></p></div>
+            <dl class="student-profile"><div><dt>Établissement</dt><dd data-profile-field="etablissement"></dd></div><div><dt>Classe</dt><dd data-profile-field="classe"></dd></div><div><dt>Inscription</dt><dd data-profile-field="validation"></dd></div></dl>
+        </div>
+    </div>
+</header>
+
+    <main class="student-course-main" id="student-course-main">
+
+<div id="course-work" data-etablissement="mfr" data-matiere="tim" data-classe="term" data-seance="S04" data-saving-enabled="true" data-collaboration-enabled="true">
+    <div class="course-save-panel course-toolbar">
+        <p id="course-identity" hidden></p>
+        <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+    </div>
+    <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
+        <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
+        <p id="group-status" role="status">Les groupes sont propres à chaque séance. Connecte-toi avec ton compte élève pour choisir ta copie.</p>
+        <div id="group-controls" hidden>
+            <label for="group-copy">Copie de cette séance</label><select id="group-copy"></select>
+            <button type="button" id="group-refresh">Actualiser les groupes</button>
+            <div id="group-create-panel" hidden>
+                <p>Choisis un ou deux camarades. Chacun doit accepter pour partager les réponses. Le groupe reprend ton travail actuel ; ta copie individuelle reste dans l’historique.</p>
+                <div id="group-classmates" class="collaboration-roster"></div>
+                <button type="button" id="group-create">Envoyer les invitations</button>
+            </div>
+        </div>
+    </section>
+    <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
+    <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
+
+
+
+<div class="course-columns">
+    <aside class="course-navigation" aria-label="Étapes de la séance">
+        <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
+        <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
+        <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a02">À quoi cela va-t-il servir ?</a></li><li><a href="#a04">1. Situation professionnelle : préparer le bilan mensuel</a></li><li><a href="#a05">2. Retrouver et préparer le fichier</a></li><li><a href="#a06">3. Calculer automatiquement les dépenses d&#39;alimentation</a></li><li><a href="#a07">4. Construire le bilan des quatre catégories</a></li><li><a href="#a08">5. Compter automatiquement les achats</a></li><li><a href="#a09">6. Calculer uniquement les lignes visibles</a></li><li><a href="#a10">7. Mission finale : interpréter le bilan</a></li><li><a href="#a11">8. À retenir</a></li><li><a href="#a12">9. Fin de séance — Travail à rendre</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+    </aside>
+
+<div class="course-reading">
+<!-- ========== INTRODUCTION DU COURS ========== -->
+
+<header class="cours-intro" id="course-intro">
+    <h1>Créer un bilan automatique des dépenses d&#39;une écurie</h1>
+
+    
+    <p class="cours-theme">
+        <strong>Thème :</strong> TIM — Créer un bilan automatique des dépenses d&#39;une écurie
+    </p>
+    
+
+    
+    <p class="cours-problematique">
+        <strong>Problématique :</strong> Créer un bilan automatique des dépenses d&#39;une écurie
+    </p>
+    
+
+    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : utiliser la fonction SOMME.SI ;</p></section>
+    
+    <section><h2>Dans la vie quotidienne</h2><p>Lors de la séance précédente, vous avez créé un registre des dépenses de septembre pour une écurie.</p></section>
+    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    
+    
+    <section class="cours-objectifs">
+        <h2>Ce que vous allez apprendre</h2>
+        <ul>
+            
+        </ul>
+
+        <h2>Ce que vous allez apprendre à faire</h2>
+        <ul>
+            
+            <li>utiliser la fonction SOMME.SI ;</li>
+            
+            <li>utiliser la fonction NB.SI ;</li>
+            
+            <li>utiliser la fonction SOUS.TOTAL ;</li>
+            
+            <li>construire un bilan automatique des dépenses ;</li>
+            
+            <li>interpréter des résultats pour conseiller un responsable.</li>
+            
+        </ul>
+    </section>
+    
+<h4>Ce que vous allez apprendre</h4>
+    
+
+<p>Aujourd&#39;hui, nous allons apprendre à réaliser des calculs conditionnels dans un tableur.</p>
+    
+
+<p>Un calcul conditionnel est un calcul réalisé uniquement sur les données qui respectent une condition précise.</p>
+    
+
+<p>Par exemple, nous pouvons demander à Calc d&#39;additionner uniquement les dépenses d&#39;alimentation, sans additionner les autres dépenses.</p>
+    
+
+<h4>Ce que vous allez apprendre à faire</h4>
+    
+
+<ul><li>utiliser la fonction SOMME.SI ;</li><li>utiliser la fonction NB.SI ;</li><li>utiliser la fonction SOUS.TOTAL ;</li><li>construire un bilan automatique des dépenses ;</li><li>interpréter des résultats pour conseiller un responsable.</li></ul>
+    
+
+
+    <section><h2>Ressources du cours</h2>
+<p>Réalise les manipulations dans le logiciel demandé. Conserve tes fichiers sur ton espace habituel. Le site enregistre seulement tes réponses écrites, tes résultats, tes formules et tes démarches ; aucun fichier n’est téléversé.</p>
+    
+
+</section>
+    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
+<p>Dans cette page du ministère, retrouve le programme ou le référentiel de ta formation. Les objectifs précis étudiés aujourd’hui sont indiqués dans le cours.</p>
+    
+
+<p><a href="https://chlorofil.fr/diplomes/secondaire/bac-pro/1re-tle/tronc-commun" target="_blank" rel="noopener noreferrer">Consulter les programmes et attendus officiels</a></p>
+
+
+</div></details>
+
+</header>
+
+    <fieldset id="course-answers" class="course-answer-fields" disabled>
+        <legend>Réponses aux activités</legend>
+        <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
+
+<section class="cours-activites">
+    
+    <article class="cours-activite" id="a02">
+        <h2>Activité 1 — À quoi cela va-t-il servir ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Dans une entreprise hippique, ces calculs permettent de :</p>
+    
+
+<ul><li>connaître les dépenses totales par catégorie ;</li><li>compter les achats réalisés ;</li><li>mettre automatiquement à jour des résultats ;</li><li>comparer plusieurs postes de dépenses ;</li><li>préparer un budget ou un tableau de bord.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a04">
+        <h2>Activité 2 — 1. Situation professionnelle : préparer le bilan mensuel</h2>
+        
+        
+        
+
+        
+
+        
+<p>Lors de la séance précédente, vous avez créé un registre des dépenses de septembre pour une écurie.</p>
+    
+
+<p>Vous avez appris à trier les achats et à filtrer les différentes catégories.</p>
+    
+
+<p>Mais le responsable souhaite désormais obtenir un bilan complet sans devoir refaire les calculs manuellement.</p>
+    
+
+<p>Votre mission : construire un tableau qui calcule automatiquement le total et le nombre d&#39;achats de chaque catégorie.</p>
+    
+
+<p>Le responsable vous pose une question :</p>
+    
+
+<p>« Si j&#39;ajoute une nouvelle facture dans mon tableau, faudra-t-il recommencer tous les calculs ? »</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a05">
+        <h2>Activité 3 — 2. Retrouver et préparer le fichier</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi ? Nous allons reprendre un tableau déjà connu pour nous concentrer sur les nouvelles méthodes de calcul, plutôt que sur la saisie de données.</p>
+    
+
+<p>Ouvrez votre fichier Term_TIM_S03_NOM_Prenom.ods.</p>
+    
+
+<p>Enregistrez une nouvelle copie sous Term_TIM_S04_NOM_Prenom.ods avec Fichier &gt; Enregistrer sous.</p>
+    
+
+<p>Retirez tous les filtres actifs pour faire réapparaître les 12 achats.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a05-q01-label">Question 1 — Vérifiez que votre tableau comporte les six colonnes et que tous les montants sont calculés.</h3>
+            
+
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<h4>Je n&#39;ai pas mon fichier précédent — Données de secours</h4>
+    
+
+<p>Créez un nouveau fichier Calc, reproduisez ce tableau et calculez les montants avec la formule =D2*E2, recopiée jusqu&#39;à F13.</p>
+    
+
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Date</th><th scope="col">Catégorie</th><th scope="col">Désignation</th><th scope="col">Quantité</th><th scope="col">Prix unitaire</th></tr></thead><tbody><tr><td>02/09/2026</td><td>Alimentation</td><td>Granulés</td><td>20</td><td>18</td></tr><tr><td>03/09/2026</td><td>Litière</td><td>Copeaux</td><td>30</td><td>12</td></tr><tr><td>04/09/2026</td><td>Entretien</td><td>Fourche</td><td>3</td><td>25</td></tr><tr><td>05/09/2026</td><td>Foin</td><td>Bottes de foin</td><td>40</td><td>8</td></tr><tr><td>08/09/2026</td><td>Entretien</td><td>Balai</td><td>4</td><td>14</td></tr><tr><td>10/09/2026</td><td>Alimentation</td><td>Complément minéral</td><td>10</td><td>32</td></tr><tr><td>12/09/2026</td><td>Litière</td><td>Paille</td><td>25</td><td>9</td></tr><tr><td>15/09/2026</td><td>Entretien</td><td>Réparation abreuvoir</td><td>1</td><td>185</td></tr><tr><td>17/09/2026</td><td>Foin</td><td>Bottes de foin</td><td>50</td><td>8</td></tr><tr><td>20/09/2026</td><td>Entretien</td><td>Produit désinfectant</td><td>6</td><td>22</td></tr><tr><td>23/09/2026</td><td>Alimentation</td><td>Granulés</td><td>25</td><td>18</td></tr><tr><td>25/09/2026</td><td>Litière</td><td>Copeaux</td><td>35</td><td>12</td></tr></tbody></table></div>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a06">
+        <h2>Activité 4 — 3. Calculer automatiquement les dépenses d&#39;alimentation</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi cet exercice ? En séance 3, nous devions filtrer les achats puis additionner leurs montants. Nous allons maintenant demander au tableur de faire directement ce travail.</p>
+    
+
+<p>Pour cela, nous découvrons une nouvelle fonction : SOMME.SI.</p>
+    
+
+<p>Elle signifie : « Additionne les montants uniquement si la condition est respectée. »</p>
+    
+
+<h4>3.1. Créer une zone de bilan</h4>
+    
+
+<p>En H1, écrivez Catégorie.</p>
+    
+
+<p>En I1, écrivez Total (€).</p>
+    
+
+<p>En H2, écrivez Alimentation.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a06-q01-label">Question 1 — En I2, saisissez la formule =SOMME.SI(B2:B13;H2;F2:F13).</h3>
+            
+
+            
+            
+                <textarea id="a06-q01" data-answer-id="a06_q01" data-required="true" aria-labelledby="a06-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Effectue cette manipulation dans Calc ou Excel, puis indique ici la formule, le résultat ou la démarche utilisée.</p></details>
+            
+            
+<p>AIDE SI BESOIN — Niveau 1</p>
+    
+
+<p>La fonction a besoin de savoir où chercher, quoi chercher et quels montants additionner.</p>
+    
+
+<p>AIDE SI BESOIN — Niveau 2</p>
+    
+
+<p>Les catégories sont en colonne B. Les montants sont en colonne F. Le critère est écrit en H2.</p>
+    
+
+<p>AIDE SI BESOIN — Niveau 3</p>
+    
+
+<p>Cliquez sur I2, saisissez =SOMME.SI(B2:B13;H2;F2:F13), puis validez avec Entrée.</p>
+    
+
+<h4>3.2. Comprendre ce que fait la formule</h4>
+    
+
+<p>Avant de continuer, vérifions que nous comprenons le résultat.</p>
+    
+
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a06-q02-label">Question 2 — Pourquoi la fonction n&#39;ajoute-t-elle pas les dépenses de foin ou d&#39;entretien ?</h3>
+            
+
+            
+            
+                <textarea id="a06-q02" data-answer-id="a06_q02" data-required="true" aria-labelledby="a06-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a06-q03-label">Question 3 — Si nous remplaçons Alimentation par Entretien dans H2, que devrait-il se passer ?</h3>
+            
+
+            
+            
+                <textarea id="a06-q03" data-answer-id="a06_q03" data-required="true" aria-labelledby="a06-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a06-q04-label">Question 4 — Quel avantage présente cette méthode par rapport à une addition écrite manuellement ?</h3>
+            
+
+            
+            
+                <textarea id="a06-q04" data-answer-id="a06_q04" data-required="true" aria-labelledby="a06-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a07">
+        <h2>Activité 5 — 4. Construire le bilan des quatre catégories</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi passons-nous à cet exercice ? Nous savons calculer le total d&#39;une catégorie. Le responsable a maintenant besoin de comparer toutes les catégories.</p>
+    
+
+<p>Nous allons réutiliser la même méthode, sans apprendre une nouvelle fonction.</p>
+    
+
+<p>En H3, H4 et H5, écrivez respectivement Litière, Entretien et Foin.</p>
+    
+
+<p>En I3, saisissez =SOMME.SI($B$2:$B$13;H3;$F$2:$F$13).</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a07-q01-label">Question 1 — Modifiez également la formule de I2 pour utiliser $B$2:$B$13 et $F$2:$F$13.</h3>
+            
+
+            
+            
+                <textarea id="a07-q01" data-answer-id="a07_q01" data-required="true" aria-labelledby="a07-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Effectue cette manipulation dans Calc ou Excel, puis indique ici la formule, le résultat ou la démarche utilisée.</p></details>
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a07-q02-label">Question 2 — Recopiez la formule de I3 jusqu&#39;en I5 avec la poignée de recopie.</h3>
+            
+
+            
+            
+                <textarea id="a07-q02" data-answer-id="a07_q02" data-required="true" aria-labelledby="a07-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Effectue cette manipulation dans Calc ou Excel, puis indique ici la formule, le résultat ou la démarche utilisée.</p></details>
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a07-q03-label">Question 3 — En H6, écrivez Total général, puis calculez ce total en I6 avec =SOMME(I2:I5).</h3>
+            
+
+            
+            
+                <textarea id="a07-q03" data-answer-id="a07_q03" data-required="true" aria-labelledby="a07-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Effectue cette manipulation dans Calc ou Excel, puis indique ici la formule, le résultat ou la démarche utilisée.</p></details>
+            
+            
+<p>ATTENDU — Bilan des dépenses</p>
+    
+
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Catégorie</th><th scope="col">Total (€)</th></tr></thead><tbody><tr><td>Alimentation</td><td>1 130</td></tr><tr><td>Litière</td><td>1 005</td></tr><tr><td>Entretien</td><td>448</td></tr><tr><td>Foin</td><td>720</td></tr><tr><td>Total général</td><td>3 303</td></tr></tbody></table></div>
+    
+
+
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a07-q04-label">Question 4 — Quelle catégorie représente la dépense totale la plus importante ?</h3>
+            
+
+            
+            
+                <textarea id="a07-q04" data-answer-id="a07_q04" data-required="true" aria-labelledby="a07-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            <h3 id="a07-q05-label">Question 5 — Pourquoi est-il utile de comparer les totaux par catégorie plutôt que les achats individuellement ?</h3>
+            
+
+            
+            
+                <textarea id="a07-q05" data-answer-id="a07_q05" data-required="true" aria-labelledby="a07-q05-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a08">
+        <h2>Activité 6 — 5. Compter automatiquement les achats</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi apprendre une nouvelle fonction ? Nous connaissons maintenant le montant dépensé dans chaque catégorie. Mais nous ne savons pas encore combien d&#39;achats ont été réalisés.</p>
+    
+
+<p>Pour répondre à cette question, nous découvrons NB.SI.</p>
+    
+
+<p>Cette fonction signifie : « Compte les cellules qui respectent une condition. »</p>
+    
+
+<p>En J1, écrivez Nombre d&#39;achats.</p>
+    
+
+<p>En J2, saisissez =NB.SI($B$2:$B$13;H2).</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a08-q01-label">Question 1 — Recopiez cette formule jusqu&#39;en J5.</h3>
+            
+
+            
+            
+                <textarea id="a08-q01" data-answer-id="a08_q01" data-required="true" aria-labelledby="a08-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Effectue cette manipulation dans Calc ou Excel, puis indique ici la formule, le résultat ou la démarche utilisée.</p></details>
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a08-q02-label">Question 2 — En J6, calculez le nombre total d&#39;achats avec =SOMME(J2:J5).</h3>
+            
+
+            
+            
+                <textarea id="a08-q02" data-answer-id="a08_q02" data-required="true" aria-labelledby="a08-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Effectue cette manipulation dans Calc ou Excel, puis indique ici la formule, le résultat ou la démarche utilisée.</p></details>
+            
+            
+<h4>5.1. Interpréter le bilan</h4>
+    
+
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a08-q03-label">Question 3 — Quelle catégorie contient le plus grand nombre d&#39;achats ?</h3>
+            
+
+            
+            
+                <textarea id="a08-q03" data-answer-id="a08_q03" data-required="true" aria-labelledby="a08-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a08-q04-label">Question 4 — Est-ce également la catégorie qui coûte le plus cher ?</h3>
+            
+
+            
+            
+                <textarea id="a08-q04" data-answer-id="a08_q04" data-required="true" aria-labelledby="a08-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            <h3 id="a08-q05-label">Question 5 — Pourquoi ces deux indicateurs peuvent-ils être intéressants pour le responsable ?</h3>
+            
+
+            
+            
+                <textarea id="a08-q05" data-answer-id="a08_q05" data-required="true" aria-labelledby="a08-q05-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a09">
+        <h2>Activité 7 — 6. Calculer uniquement les lignes visibles</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi découvrir encore une fonction ? Lors de la séance 3, vous avez utilisé des filtres. Mais la fonction SOMME classique peut continuer à compter des lignes masquées.</p>
+    
+
+<p>Pour calculer un total qui suit le filtre actif, nous allons utiliser SOUS.TOTAL.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a09-q01-label">Question 1 — Vérifiez que les 12 achats sont visibles et que le filtre automatique est activé sur A1:F13.</h3>
+            
+
+            
+            
+                <textarea id="a09-q01" data-answer-id="a09_q01" data-required="true" aria-labelledby="a09-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>En H8, écrivez Total affiché.</p>
+    
+
+<p>En I8, saisissez =SOUS.TOTAL(9;F2:F13).</p>
+    
+
+<p>Filtrez la colonne Catégorie pour conserver uniquement Foin.</p>
+    
+
+<p>Remplacez le filtre Foin par Entretien.</p>
+    
+
+<p>Retirez tous les filtres pour retrouver le total général.</p>
+    
+
+<p>AIDE SI BESOIN — Niveau 1</p>
+    
+
+<p>SOUS.TOTAL permet de calculer une somme adaptée aux lignes affichées après filtrage.</p>
+    
+
+<p>AIDE SI BESOIN — Niveau 2</p>
+    
+
+<p>Dans la fonction, le nombre 9 signifie « calculer une somme ».</p>
+    
+
+<p>AIDE SI BESOIN — Niveau 3</p>
+    
+
+<p>Saisissez =SOUS.TOTAL(9;F2:F13) dans I8, puis filtrez la colonne B par catégorie.</p>
+    
+
+<p>VIGILANCE</p>
+    
+
+<p>SOMME.SI suit un critère défini dans la formule. SOUS.TOTAL suit les lignes affichées par le filtre. Ce ne sont donc pas deux outils interchangeables.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a10">
+        <h2>Activité 8 — 7. Mission finale : interpréter le bilan</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi terminons-nous ainsi ? Un responsable n&#39;a pas seulement besoin de calculs. Il doit comprendre ses dépenses pour prendre des décisions adaptées.</p>
+    
+
+<p>Le responsable vous demande : « Quelle catégorie représente notre plus grande dépense ? Quel poste contient le plus d&#39;achats ? Que me conseillez-vous pour améliorer le suivi de nos dépenses ? »</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a10-q01-label">Question 1 — Identifiez la catégorie dont le montant total est le plus important.</h3>
+            
+
+            
+            
+                <textarea id="a10-q01" data-answer-id="a10_q01" data-required="true" aria-labelledby="a10-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a10-q02-label">Question 2 — Identifiez celle qui contient le plus d&#39;achats.</h3>
+            
+
+            
+            
+                <textarea id="a10-q02" data-answer-id="a10_q02" data-required="true" aria-labelledby="a10-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a10-q03-label">Question 3 — Expliquez pourquoi ces deux réponses sont différentes.</h3>
+            
+
+            
+            
+                <textarea id="a10-q03" data-answer-id="a10_q03" data-required="true" aria-labelledby="a10-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a10-q04-label">Question 4 — Proposez une action concrète permettant au responsable de mieux suivre ses dépenses.</h3>
+            
+
+            
+            
+                <textarea id="a10-q04" data-answer-id="a10_q04" data-required="true" aria-labelledby="a10-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Rédigez votre conclusion dans une zone libre de votre fichier Calc, par exemple à partir de H11.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a11">
+        <h2>Activité 9 — 8. À retenir</h2>
+        
+        
+        
+
+        
+
+        
+<p>SOMME.SI additionne les montants qui respectent une condition.</p>
+    
+
+<p>NB.SI compte les cellules qui respectent une condition.</p>
+    
+
+<p>SOUS.TOTAL permet notamment d&#39;additionner les lignes visibles après un filtrage.</p>
+    
+
+<p>Ces fonctions permettent de construire des indicateurs utiles à la gestion d&#39;une entreprise.</p>
+    
+
+<p>Une donnée bien organisée peut devenir une information automatiquement actualisée.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a12">
+        <h2>Activité 10 — 9. Fin de séance — Travail à rendre</h2>
+        
+        
+        
+
+        
+
+        
+<p>Vérifiez que votre fichier contient :</p>
+    
+
+<ul><li>les 12 achats de septembre ;</li><li>les montants calculés avec des formules ;</li><li>un bilan comprenant les quatre catégories ;</li><li>le total et le nombre d&#39;achats de chaque catégorie ;</li><li>une formule SOUS.TOTAL fonctionnelle ;</li><li>votre conclusion professionnelle.</li></ul>
+    
+
+<p>Retirez tous les filtres actifs, puis enregistrez votre fichier sous :</p>
+    
+
+<p>Term_TIM_S04_NOM_Prenom.ods</p>
+    
+
+
+        
+        
+    </article>
+    
+</section>
+
+    </fieldset>
+    <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
+    <h2 id="course-summary-title">À retenir</h2><ul></ul>
+    <h3>Faire le point</h3><p>Relis tes réponses et vérifie les points demandés dans le bilan du cours. Tu peux revenir sur ton travail tant que le professeur ne l’a pas clôturé.</p>
+</section>
+
+    <div class="course-submit-panel">
+        <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
+        <p id="course-submit-status" role="status" aria-live="polite"></p>
+        <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
+    </div>
+</div></div>
+</div>
+<noscript><p>Active JavaScript pour charger ta copie et enregistrer tes réponses.</p></noscript>
+
+<script id="classes-data" type="application/json">
+{"college":{"nom":"Collège","classes":[{"id":"5e","nom":"5e","matieres":["techno"]},{"id":"4e","nom":"4e","matieres":["techno"]},{"id":"3e","nom":"3e","matieres":["techno"]}]},"mfr":{"nom":"MFR","classes":[{"id":"4e","nom":"4e MFR","matieres":["tim","maths"]},{"id":"3e","nom":"3e MFR","matieres":["tim","maths"]},{"id":"cap1","nom":"CAP 1","matieres":["tim"]},{"id":"cap2","nom":"CAP 2","matieres":["tim"]},{"id":"2de","nom":"2de Pro","matieres":["tim","maths"]},{"id":"1re","nom":"Bac Pro 1","matieres":["tim","maths"]},{"id":"term","nom":"Bac Pro 2","matieres":["tim","maths"]},{"id":"bts1","nom":"BTS 1","matieres":["tim"]},{"id":"bts2","nom":"BTS 2","matieres":["tim"]}]}}
+</script>
+<script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
+    </main>
+    <footer class="site-footer">
+    <p>
+        &copy; 2026
+        Portail pédagogique Technologie | TIM | Mathématiques
+    </p>
+</footer>
+</body>
+</html>

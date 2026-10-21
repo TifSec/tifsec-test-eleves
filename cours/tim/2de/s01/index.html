@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
+
+    
+    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
+    <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
+    
+
+    <title>
+        
+        Portail pédagogique Technologie | TIM | Mathématiques
+        
+    </title>
+
+    <link rel="icon" href="/tifsec-test-eleves/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/variables.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/base.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/body.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/header.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/main.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/footer.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-message.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-session.css">
+
+    
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    
+    
+
+    
+
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    
+    
+</head>
+
+<body class="student-shell student-course-shell">
+    <a class="student-skip" href="#course-intro">Aller au cours</a>
+    <p id="message" class="auth-message" role="status" aria-live="polite" hidden></p>
+    <header class="student-header" id="course-header">
+    <div class="student-header-inner">
+        <div class="student-topbar">
+            <a class="student-brand" href="/tifsec-test-eleves/eleve/"><img src="/tifsec-test-eleves/images/logo.png" width="44" height="44" alt=""><span>Mon espace<span data-profile-field="matieres"></span></span></a>
+            <div class="student-header-actions"><a class="student-home-link" href="/tifsec-test-eleves/eleve/">Mes séances</a><a id="course-login" href="/tifsec-test-eleves/connexion/">Se connecter</a><details class="student-theme-picker" id="student-theme-picker" hidden>
+    <summary>Apparence</summary>
+    <div class="student-theme-options"><label for="student-theme-select">Les couleurs de mon espace</label><select id="student-theme-select" disabled><option value="ocean">Océan · bleu</option><option value="forest">Forêt · vert</option><option value="plum">Prune · violet</option><option value="terracotta">Terre cuite · orangé</option><option value="ruby">Rubis · rouge</option><option value="slate">Ardoise · gris</option><option value="midnight">Minuit · noir</option><option value="rose">Rosée · rose</option><option value="neon">Néon · RGB sombre</option><option value="cyberpunk">Cyberpunk · cité futuriste</option><option value="minecraft">Minecraft · blocs et pixels</option><option value="farming">Farming · campagne et cultures</option></select><label class="student-theme-motion"><input type="checkbox" id="student-theme-motion"> Mettre les animations en pause</label><p id="student-theme-status" role="status" aria-live="polite">Ce choix te suivra sur les autres ordinateurs.</p><button id="student-theme-retry" type="button" hidden>Réessayer</button></div>
+</details>
+<button type="button" id="course-logout" hidden>Se déconnecter</button></div>
+        </div>
+        <div class="student-welcome-row" id="course-welcome" hidden>
+            <div><p class="student-eyebrow">Une séance à la fois, à ton rythme.</p><p class="student-course-greeting">Bonjour <span id="course-header-identity"></span></p></div>
+            <dl class="student-profile"><div><dt>Établissement</dt><dd data-profile-field="etablissement"></dd></div><div><dt>Classe</dt><dd data-profile-field="classe"></dd></div><div><dt>Inscription</dt><dd data-profile-field="validation"></dd></div></dl>
+        </div>
+    </div>
+</header>
+
+    <main class="student-course-main" id="student-course-main">
+
+<div id="course-work" data-etablissement="mfr" data-matiere="tim" data-classe="2de" data-seance="S01" data-saving-enabled="true" data-collaboration-enabled="true">
+    <div class="course-save-panel course-toolbar">
+        <p id="course-identity" hidden></p>
+        <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+    </div>
+    <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
+        <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
+        <p id="group-status" role="status">Les groupes sont propres à chaque séance. Connecte-toi avec ton compte élève pour choisir ta copie.</p>
+        <div id="group-controls" hidden>
+            <label for="group-copy">Copie de cette séance</label><select id="group-copy"></select>
+            <button type="button" id="group-refresh">Actualiser les groupes</button>
+            <div id="group-create-panel" hidden>
+                <p>Choisis un ou deux camarades. Chacun doit accepter pour partager les réponses. Le groupe reprend ton travail actuel ; ta copie individuelle reste dans l’historique.</p>
+                <div id="group-classmates" class="collaboration-roster"></div>
+                <button type="button" id="group-create">Envoyer les invitations</button>
+            </div>
+        </div>
+    </section>
+    <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
+    <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
+
+
+
+<div class="course-columns">
+    <aside class="course-navigation" aria-label="Étapes de la séance">
+        <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
+        <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
+        <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a03">1. Créer le document de la séance</a></li><li><a href="#a04">2. Faisons connaissance</a></li><li><a href="#a05">3. Comment allons-nous travailler en TIM ?</a></li><li><a href="#a06">4. Mon parcours</a></li><li><a href="#a07">5. Moi et l&#39;informatique</a></li><li><a href="#a08">6. Première mission informatique</a></li><li><a href="#a09">À retenir</a></li><li><a href="#a10">Travail à rendre</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+    </aside>
+
+<div class="course-reading">
+<!-- ========== INTRODUCTION DU COURS ========== -->
+
+<header class="cours-intro" id="course-intro">
+    <h1>Faire connaissance et découvrir le fonctionnement du cours</h1>
+
+    
+    <p class="cours-theme">
+        <strong>Thème :</strong> TIM — Faire connaissance et découvrir le fonctionnement du cours
+    </p>
+    
+
+    
+    <p class="cours-problematique">
+        <strong>Problématique :</strong> Faire connaissance et découvrir le fonctionnement du cours
+    </p>
+    
+
+    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : En TIM, l&#39;ordinateur est avant tout un outil permettant de chercher, réfléchir, tester, créer et communiquer.</p></section>
+    
+    <section><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
+    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    
+    
+    <section class="cours-objectifs">
+        <h2>Ce que vous allez apprendre</h2>
+        <ul>
+            
+            <li>En TIM, l&#39;ordinateur est avant tout un outil permettant de chercher, réfléchir, tester, créer et communiquer.</li>
+            
+            <li>Un fichier doit être enregistré à un emplacement connu et avec un nom permettant de l&#39;identifier facilement.</li>
+            
+            <li>Il est normal de ne pas tout savoir faire : essayer, se tromper puis améliorer sa solution fait partie de l&#39;apprentissage.</li>
+            
+            <li>Chaque séance donnera lieu à la création d&#39;un document de travail qui servira à la fois de cours, de brouillon, d&#39;espace de test et de compte rendu.</li>
+            
+        </ul>
+
+        <h2>Ce que vous allez apprendre à faire</h2>
+        <ul>
+            
+        </ul>
+    </section>
+    
+<h4>Compétence visée : Prendre en main son environnement numérique et commencer à travailler de manière autonome</h4>
+    
+
+<p>Objectifs d’apprentissage</p>
+    
+
+<ul><li>En TIM, l&#39;ordinateur est avant tout un outil permettant de chercher, réfléchir, tester, créer et communiquer.</li><li>Un fichier doit être enregistré à un emplacement connu et avec un nom permettant de l&#39;identifier facilement.</li><li>Il est normal de ne pas tout savoir faire : essayer, se tromper puis améliorer sa solution fait partie de l&#39;apprentissage.</li><li>Chaque séance donnera lieu à la création d&#39;un document de travail qui servira à la fois de cours, de brouillon, d&#39;espace de test et de compte rendu.</li></ul>
+    
+
+<p>Ce que les élèves vont savoir faire :</p>
+    
+
+<ul><li>Créer un document avec un traitement de texte.</li><li>Enregistrer un fichier dans un dossier précis.</li><li>Donner un nom correct à un fichier.</li><li>Présenter simplement leur parcours, leurs projets et leurs compétences numériques actuelles.</li></ul>
+    
+
+
+    <section><h2>Ressources du cours</h2>
+<p>Réalise les manipulations dans le logiciel demandé. Conserve tes fichiers sur ton espace habituel. Le site enregistre seulement tes réponses écrites, tes résultats, tes formules et tes démarches ; aucun fichier n’est téléversé.</p>
+    
+
+</section>
+    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
+<p>Dans cette page du ministère, retrouve le programme ou le référentiel de ta formation. Les objectifs précis étudiés aujourd’hui sont indiqués dans le cours.</p>
+    
+
+<p><a href="https://chlorofil.fr/diplomes/secondaire/bac-pro/2nde-pro" target="_blank" rel="noopener noreferrer">Consulter les programmes et attendus officiels</a></p>
+
+
+</div></details>
+
+</header>
+
+    <fieldset id="course-answers" class="course-answer-fields" disabled>
+        <legend>Réponses aux activités</legend>
+        <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
+
+<section class="cours-activites">
+    
+    <article class="cours-activite" id="a03">
+        <h2>Activité 1 — 1. Créer le document de la séance</h2>
+        
+        
+        
+
+        
+
+        
+<p>Ouvrez votre traitement de texte et créez immédiatement un nouveau document.</p>
+    
+
+<p>Enregistrez-le sous le nom :</p>
+    
+
+<p>2nde_S01_NOM_Prenom</p>
+    
+
+<p>Ce document sera utilisé pendant toute la séance. Vous devez donc l&#39;enregistrer régulièrement.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a04">
+        <h2>Activité 2 — 2. Faisons connaissance</h2>
+        
+        
+        
+
+        
+
+        
+<p>Avant de commencer réellement le travail informatique, nous allons prendre quelques minutes pour faire connaissance.</p>
+    
+
+<p>Nous allons notamment discuter de :</p>
+    
+
+<ul><li>votre parcours ;</li><li>ce qui vous a amené à choisir cette formation ;</li><li>votre expérience avec les chevaux et le milieu hippique ;</li><li>vos stages ;</li><li>ce que vous aimeriez faire plus tard ;</li><li>ce que vous attendez de cette année.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a05">
+        <h2>Activité 3 — 3. Comment allons-nous travailler en TIM ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Nous travaillerons très régulièrement sur ordinateur et nous chercherons à réaliser le plus possible des activités concrètes en lien avec votre formation.</p>
+    
+
+<p>Vous aurez le droit de chercher, de tester et de vous tromper.</p>
+    
+
+<p>Une erreur n&#39;est pas forcément un échec : elle peut permettre de comprendre pourquoi une solution ne fonctionne pas et comment l&#39;améliorer.</p>
+    
+
+<p>Avant de demander directement la solution au professeur :</p>
+    
+
+<ol><li>Je lis attentivement la consigne.</li><li>Je réfléchis à ce que je pourrais essayer.</li><li>Je teste une solution.</li><li>J&#39;observe le résultat.</li><li>Je demande de l&#39;aide si je reste bloqué.</li></ol>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a06">
+        <h2>Activité 4 — 4. Mon parcours</h2>
+        
+        
+        
+
+        
+
+        
+<p>Dans votre document, créez le titre Mon parcours, puis répondez aux questions suivantes avec des phrases courtes.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a06-q01-label">Question 1 — Pourquoi as-tu choisi cette formation ?</h3>
+            
+
+            
+            
+                <textarea id="a06-q01" data-answer-id="a06_q01" data-required="true" aria-labelledby="a06-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a06-q02-label">Question 2 — Quelle expérience as-tu déjà avec les chevaux ?</h3>
+            
+
+            
+            
+                <textarea id="a06-q02" data-answer-id="a06_q02" data-required="true" aria-labelledby="a06-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a06-q03-label">Question 3 — As-tu déjà une structure de stage ? Si oui, quel type de structure ?</h3>
+            
+
+            
+            
+                <textarea id="a06-q03" data-answer-id="a06_q03" data-required="true" aria-labelledby="a06-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a06-q04-label">Question 4 — Qu&#39;est-ce qui t&#39;intéresse le plus dans le milieu hippique ?</h3>
+            
+
+            
+            
+                <textarea id="a06-q04" data-answer-id="a06_q04" data-required="true" aria-labelledby="a06-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            <h3 id="a06-q05-label">Question 5 — Quel métier aimerais-tu exercer plus tard ?</h3>
+            
+
+            
+            
+                <textarea id="a06-q05" data-answer-id="a06_q05" data-required="true" aria-labelledby="a06-q05-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            <h3 id="a06-q06-label">Question 6 — Qu&#39;aimerais-tu apprendre cette année ?</h3>
+            
+
+            
+            
+                <textarea id="a06-q06" data-answer-id="a06_q06" data-required="true" aria-labelledby="a06-q06-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a07">
+        <h2>Activité 5 — 5. Moi et l&#39;informatique</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pour chacune des tâches suivantes, indiquez :</p>
+    
+
+<ul><li>Vert : je sais le faire seul ;</li><li>Orange : je pense savoir le faire mais j&#39;hésite parfois ;</li><li>Rouge : je ne sais pas encore le faire.</li></ul>
+    
+
+<p>Vous pouvez utiliser des mots, des symboles ou des couleurs dans votre document.</p>
+    
+
+<ul><li>Créer un dossier.</li><li>Créer un document.</li><li>Enregistrer un fichier.</li><li>Retrouver un fichier enregistré.</li><li>Télécharger un fichier.</li><li>Envoyer une pièce jointe.</li><li>Utiliser Word ou LibreOffice Writer.</li><li>Utiliser Excel ou LibreOffice Calc.</li><li>Créer un diaporama.</li><li>Insérer une image dans un document.</li><li>Faire une capture d&#39;écran.</li><li>Rechercher une information sur Internet.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a08">
+        <h2>Activité 6 — 6. Première mission informatique</h2>
+        
+        
+        
+
+        
+
+        
+<p>Dans votre espace personnel, créez un dossier nommé :</p>
+    
+
+<p>nom_prenom</p>
+    
+
+<p>À l&#39;intérieur de ce dossier, créez un sous-dossier nommé :</p>
+    
+
+<p>TIM</p>
+    
+
+<p>À l&#39;intérieur, créez les quatre dossiers suivants :</p>
+    
+
+<ul><li>Cours</li><li>Travaux</li><li>Documents</li><li>Images</li></ul>
+    
+
+<p>Déplacez ensuite le document de cette séance dans le dossier Travaux.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a09">
+        <h2>Activité 7 — À retenir</h2>
+        
+        
+        
+
+        
+
+        
+<p>En TIM, nous chercherons avant tout à devenir autonomes avec les outils numériques.</p>
+    
+
+<p>Pour apprendre, nous allons régulièrement suivre cette démarche :</p>
+    
+
+<p>Réfléchir → essayer → observer → corriger → améliorer.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a10">
+        <h2>Activité 8 — Travail à rendre</h2>
+        
+        
+        
+
+        
+
+        
+<p>Enregistrez une dernière fois votre document et vérifiez son emplacement.</p>
+    
+
+<p>Nom du fichier à rendre : 2nde_S01_NOM_Prenom</p>
+    
+
+<p>Le document doit être rendu même s&#39;il n&#39;est pas terminé.</p>
+    
+
+
+        
+        
+    </article>
+    
+</section>
+
+    </fieldset>
+    <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
+    <h2 id="course-summary-title">À retenir</h2><ul></ul>
+    <h3>Faire le point</h3><p>Relis tes réponses et vérifie les points demandés dans le bilan du cours. Tu peux revenir sur ton travail tant que le professeur ne l’a pas clôturé.</p>
+</section>
+
+    <div class="course-submit-panel">
+        <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
+        <p id="course-submit-status" role="status" aria-live="polite"></p>
+        <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
+    </div>
+</div></div>
+</div>
+<noscript><p>Active JavaScript pour charger ta copie et enregistrer tes réponses.</p></noscript>
+
+<script id="classes-data" type="application/json">
+{"college":{"nom":"Collège","classes":[{"id":"5e","nom":"5e","matieres":["techno"]},{"id":"4e","nom":"4e","matieres":["techno"]},{"id":"3e","nom":"3e","matieres":["techno"]}]},"mfr":{"nom":"MFR","classes":[{"id":"4e","nom":"4e MFR","matieres":["tim","maths"]},{"id":"3e","nom":"3e MFR","matieres":["tim","maths"]},{"id":"cap1","nom":"CAP 1","matieres":["tim"]},{"id":"cap2","nom":"CAP 2","matieres":["tim"]},{"id":"2de","nom":"2de Pro","matieres":["tim","maths"]},{"id":"1re","nom":"Bac Pro 1","matieres":["tim","maths"]},{"id":"term","nom":"Bac Pro 2","matieres":["tim","maths"]},{"id":"bts1","nom":"BTS 1","matieres":["tim"]},{"id":"bts2","nom":"BTS 2","matieres":["tim"]}]}}
+</script>
+<script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
+    </main>
+    <footer class="site-footer">
+    <p>
+        &copy; 2026
+        Portail pédagogique Technologie | TIM | Mathématiques
+    </p>
+</footer>
+</body>
+</html>

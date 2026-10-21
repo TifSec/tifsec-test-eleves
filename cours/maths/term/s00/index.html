@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
+
+    
+    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
+    <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
+    
+
+    <title>
+        
+        Portail pédagogique Technologie | TIM | Mathématiques
+        
+    </title>
+
+    <link rel="icon" href="/tifsec-test-eleves/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/variables.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/base.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/body.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/header.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/main.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/footer.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-message.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-session.css">
+
+    
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    
+    
+
+    
+
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    
+    
+</head>
+
+<body class="student-shell student-course-shell">
+    <a class="student-skip" href="#course-intro">Aller au cours</a>
+    <p id="message" class="auth-message" role="status" aria-live="polite" hidden></p>
+    <header class="student-header" id="course-header">
+    <div class="student-header-inner">
+        <div class="student-topbar">
+            <a class="student-brand" href="/tifsec-test-eleves/eleve/"><img src="/tifsec-test-eleves/images/logo.png" width="44" height="44" alt=""><span>Mon espace<span data-profile-field="matieres"></span></span></a>
+            <div class="student-header-actions"><a class="student-home-link" href="/tifsec-test-eleves/eleve/">Mes séances</a><a id="course-login" href="/tifsec-test-eleves/connexion/">Se connecter</a><details class="student-theme-picker" id="student-theme-picker" hidden>
+    <summary>Apparence</summary>
+    <div class="student-theme-options"><label for="student-theme-select">Les couleurs de mon espace</label><select id="student-theme-select" disabled><option value="ocean">Océan · bleu</option><option value="forest">Forêt · vert</option><option value="plum">Prune · violet</option><option value="terracotta">Terre cuite · orangé</option><option value="ruby">Rubis · rouge</option><option value="slate">Ardoise · gris</option><option value="midnight">Minuit · noir</option><option value="rose">Rosée · rose</option><option value="neon">Néon · RGB sombre</option><option value="cyberpunk">Cyberpunk · cité futuriste</option><option value="minecraft">Minecraft · blocs et pixels</option><option value="farming">Farming · campagne et cultures</option></select><label class="student-theme-motion"><input type="checkbox" id="student-theme-motion"> Mettre les animations en pause</label><p id="student-theme-status" role="status" aria-live="polite">Ce choix te suivra sur les autres ordinateurs.</p><button id="student-theme-retry" type="button" hidden>Réessayer</button></div>
+</details>
+<button type="button" id="course-logout" hidden>Se déconnecter</button></div>
+        </div>
+        <div class="student-welcome-row" id="course-welcome" hidden>
+            <div><p class="student-eyebrow">Une séance à la fois, à ton rythme.</p><p class="student-course-greeting">Bonjour <span id="course-header-identity"></span></p></div>
+            <dl class="student-profile"><div><dt>Établissement</dt><dd data-profile-field="etablissement"></dd></div><div><dt>Classe</dt><dd data-profile-field="classe"></dd></div><div><dt>Inscription</dt><dd data-profile-field="validation"></dd></div></dl>
+        </div>
+    </div>
+</header>
+
+    <main class="student-course-main" id="student-course-main">
+
+<div id="course-work" data-etablissement="mfr" data-matiere="maths" data-classe="term" data-seance="S00" data-saving-enabled="true" data-collaboration-enabled="true">
+    <div class="course-save-panel course-toolbar">
+        <p id="course-identity" hidden></p>
+        <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+    </div>
+    <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
+        <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
+        <p id="group-status" role="status">Les groupes sont propres à chaque séance. Connecte-toi avec ton compte élève pour choisir ta copie.</p>
+        <div id="group-controls" hidden>
+            <label for="group-copy">Copie de cette séance</label><select id="group-copy"></select>
+            <button type="button" id="group-refresh">Actualiser les groupes</button>
+            <div id="group-create-panel" hidden>
+                <p>Choisis un ou deux camarades. Chacun doit accepter pour partager les réponses. Le groupe reprend ton travail actuel ; ta copie individuelle reste dans l’historique.</p>
+                <div id="group-classmates" class="collaboration-roster"></div>
+                <button type="button" id="group-create">Envoyer les invitations</button>
+            </div>
+        </div>
+    </section>
+    <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
+    <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
+
+
+
+<div class="course-columns">
+    <aside class="course-navigation" aria-label="Étapes de la séance">
+        <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
+        <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
+        <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a03">Préparation — Votre document de travail</a></li><li><a href="#a04">1. Automatismes — Pourcentages et calcul mental 15 min</a></li><li><a href="#a05">2. Retour de stage — Comment gérer le foin ? 20 min</a></li><li><a href="#a06">Le problème à résoudre</a></li><li><a href="#a07">3. Recherche — Prévoir l&#39;évolution du stock 40 min</a></li><li><a href="#a08">A. Traduire la situation en calcul</a></li><li><a href="#a09">B. Calculer les trois premiers mois</a></li><li><a href="#a10">C. Quand le stock devient-il insuffisant ?</a></li><li><a href="#a11">4. Comprendre la suite — Vers quel stock se dirige-t-on ? 20 min</a></li><li><a href="#a12">A. Trouver le stock d&#39;équilibre</a></li><li><a href="#a13">B. Comprendre ce qu&#39;est une suite géométrique</a></li><li><a href="#a14">C. Faire apparaître une véritable suite géométrique</a></li><li><a href="#a15">À retenir</a></li><li><a href="#a16">5. Application numérique — Simuler les stocks avec un tableur 20 min</a></li><li><a href="#a17">A. Construire le tableau</a></li><li><a href="#a18">B. Représenter graphiquement l&#39;évolution</a></li><li><a href="#a19">C. Prendre en compte l&#39;inflation</a></li><li><a href="#a20">6. Bilan — Conseiller le responsable de l&#39;écurie 5 min</a></li><li><a href="#a21">Pour le prochain retour de stage</a></li><li><a href="#a22">À retenir</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+    </aside>
+
+<div class="course-reading">
+<!-- ========== INTRODUCTION DU COURS ========== -->
+
+<header class="cours-intro" id="course-intro">
+    <h1>Gérer le stock de foin d&#39;une écurie avec les suites</h1>
+
+    
+    <p class="cours-theme">
+        <strong>Thème :</strong> Mathématiques — Gérer le stock de foin d&#39;une écurie avec les suites
+    </p>
+    
+
+    
+    <p class="cours-problematique">
+        <strong>Problématique :</strong> Gérer le stock de foin d&#39;une écurie avec les suites
+    </p>
+    
+
+    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : Comprendre comment les pourcentages permettent de décrire une évolution.</p></section>
+    
+    <section><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
+    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    
+    
+    <section class="cours-objectifs">
+        <h2>Ce que vous allez apprendre</h2>
+        <ul>
+            
+            <li>Comprendre comment les pourcentages permettent de décrire une évolution.</li>
+            
+            <li>Reconnaître une suite numérique et son mode de calcul.</li>
+            
+            <li>Comprendre la différence entre une suite géométrique et une suite arithmético-géométrique.</li>
+            
+            <li>Déterminer vers quelle valeur un stock semble se stabiliser.</li>
+            
+            <li>Comprendre les limites d&#39;un modèle mathématique appliqué à une entreprise.</li>
+            
+        </ul>
+
+        <h2>Ce que vous allez apprendre à faire</h2>
+        <ul>
+            
+            <li>Calculer une augmentation ou une diminution en pourcentage.</li>
+            
+            <li>Traduire une situation professionnelle par une relation mathématique.</li>
+            
+            <li>Calculer et interpréter les termes d&#39;une suite.</li>
+            
+            <li>Utiliser une calculatrice et un tableur pour effectuer une simulation.</li>
+            
+            <li>Comparer des résultats à un seuil de sécurité.</li>
+            
+            <li>Justifier une décision de gestion.</li>
+            
+        </ul>
+    </section>
+    
+<h4>Ce que vous allez apprendre</h4>
+    
+
+<ul><li>Comprendre comment les pourcentages permettent de décrire une évolution.</li><li>Reconnaître une suite numérique et son mode de calcul.</li><li>Comprendre la différence entre une suite géométrique et une suite arithmético-géométrique.</li><li>Déterminer vers quelle valeur un stock semble se stabiliser.</li><li>Comprendre les limites d&#39;un modèle mathématique appliqué à une entreprise.</li></ul>
+    
+
+<h4>Ce que vous allez apprendre à faire</h4>
+    
+
+<ul><li>Calculer une augmentation ou une diminution en pourcentage.</li><li>Traduire une situation professionnelle par une relation mathématique.</li><li>Calculer et interpréter les termes d&#39;une suite.</li><li>Utiliser une calculatrice et un tableur pour effectuer une simulation.</li><li>Comparer des résultats à un seuil de sécurité.</li><li>Justifier une décision de gestion.</li></ul>
+    
+
+
+    
+    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
+<p>Dans cette page du ministère, retrouve le programme ou le référentiel de ta formation. Les objectifs précis étudiés aujourd’hui sont indiqués dans le cours.</p>
+    
+
+<p><a href="https://chlorofil.fr/diplomes/secondaire/bac-pro/1re-tle/tronc-commun" target="_blank" rel="noopener noreferrer">Consulter les programmes et attendus officiels</a></p>
+
+
+</div></details>
+
+</header>
+
+    <fieldset id="course-answers" class="course-answer-fields" disabled>
+        <legend>Réponses aux activités</legend>
+        <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
+
+<section class="cours-activites">
+    
+    <article class="cours-activite" id="a03">
+        <h2>Activité 1 — Préparation — Votre document de travail</h2>
+        
+        
+        
+
+        
+
+        
+<p>Travaillez en binôme. Chacun doit être capable d&#39;expliquer les calculs réalisés.</p>
+    
+
+<p>Vos réponses doivent être enregistrées dans votre espace de travail habituel.</p>
+    
+
+<p>Lorsque vous calculez un résultat, indiquez autant que possible le calcul utilisé, et pas seulement le nombre obtenu.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a04">
+        <h2>Activité 2 — 1. Automatismes — Pourcentages et calcul mental 15 min</h2>
+        
+        
+        
+
+        
+
+        
+<p>Calculatrice : interdite.</p>
+    
+
+<p>Répondez en utilisant vos connaissances et des calculs simples.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a04-q01-label">Question 1 — 1. Une tonne de granulés coûte 450 €. Son prix augmente de 4 %. Quel est son nouveau prix ?</h3>
+            
+
+            
+<p>Calcul :</p>
+    
+
+<p>Nouveau prix : €</p>
+    
+
+
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris ici les calculs, la réponse et la justification demandés dans cette question. Indice 1 Commencez par chercher combien représentent 4 % de 450 €. Indice 2 1 % de 450 € représente 4,50 €. Donc 4 % représente quatre fois cette somme. Indice 3 Une hausse de 4 % correspond également à multiplier le prix par 1,04.</p></details>
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a04-q02-label">Question 2 — 2. Une quantité est multipliée par 0,92 chaque mois. Quel est son pourcentage d&#39;évolution ?</h3>
+            
+
+            
+<p>Évolution : %</p>
+    
+
+
+            
+                <textarea id="a04-q02" data-answer-id="a04_q02" data-required="true" aria-labelledby="a04-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris ici les calculs, la réponse et la justification demandés dans cette question. Indice 1 Multiplier par 1 signifie conserver 100 % de la quantité. Indice 2 0,92 correspond à 92 %. Indice 3 Comparez 92 % aux 100 % de départ.</p></details>
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a04-q03-label">Question 3 — 3. Un stock de 50 tonnes diminue de 12 %. Quelle quantité reste-t-il ?</h3>
+            
+
+            
+<p>Calcul :</p>
+    
+
+<p>Stock restant : tonnes</p>
+    
+
+
+            
+                <textarea id="a04-q03" data-answer-id="a04_q03" data-required="true" aria-labelledby="a04-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris ici les calculs, la réponse et la justification demandés dans cette question. Indice 1 Calculez d&#39;abord 10 % puis 2 % de 50 tonnes. Indice 2 10 % de 50 = 5 et 2 % de 50 = 1. Indice 3 Il reste 100 % - 12 % = 88 % du stock.</p></details>
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a04-q04-label">Question 4 — 4. Quel coefficient multiplicateur correspond à une diminution de 12 % ?</h3>
+            
+
+            
+<p>Coefficient :</p>
+    
+
+
+            
+                <textarea id="a04-q04" data-answer-id="a04_q04" data-required="true" aria-labelledby="a04-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris ici les calculs, la réponse et la justification demandés dans cette question.</p></details>
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a05">
+        <h2>Activité 3 — 2. Retour de stage — Comment gérer le foin ? 20 min</h2>
+        
+        
+        
+
+        
+
+        
+<p>Calculatrice : non nécessaire.</p>
+    
+
+<p>Discutez avec votre binôme de la gestion du foin dans les structures où vous avez effectué vos stages.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a05-q01-label">Question 1 — 1. Comment le responsable de votre structure surveille-t-il les quantités de foin disponibles ?</h3>
+            
+
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris ici les calculs, la réponse et la justification demandés dans cette question.</p></details>
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a05-q02-label">Question 2 — 2. Les achats se font-ils à dates fixes, en une grande livraison, ou seulement lorsque le stock diminue ?</h3>
+            
+
+            
+            
+                <textarea id="a05-q02" data-answer-id="a05_q02" data-required="true" aria-labelledby="a05-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris ici les calculs, la réponse et la justification demandés dans cette question.</p></details>
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a05-q03-label">Question 3 — 3. Quels problèmes peut provoquer un stock de foin trop faible ? Et un stock beaucoup trop important ?</h3>
+            
+
+            
+            
+                <textarea id="a05-q03" data-answer-id="a05_q03" data-required="true" aria-labelledby="a05-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris ici les calculs, la réponse et la justification demandés dans cette question.</p></details>
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a05-q04-label">Question 4 — 4. Quels éléments peuvent modifier la consommation de foin ?</h3>
+            
+
+            
+<p>Choix proposés : Le nombre de chevaux / La météo / L&#39;accès au pâturage / La ration distribuée / Les pertes lors de la distribution</p>
+    
+
+
+            
+                <textarea id="a05-q04" data-answer-id="a05_q04" data-required="true" aria-labelledby="a05-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris ici les calculs, la réponse et la justification demandés dans cette question.</p></details>
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a06">
+        <h2>Activité 4 — Le problème à résoudre</h2>
+        
+        
+        
+
+        
+
+        
+<p>Une écurie héberge 20 chevaux. Au 1er novembre, elle possède 60 tonnes de foin.</p>
+    
+
+<p>Pour étudier une stratégie simplifiée, on suppose qu&#39;à chaque période d&#39;un mois :</p>
+    
+
+<ul><li>l&#39;écurie utilise 12 % du stock présent au début du mois ;</li><li>après cette consommation, elle achète 2 tonnes de foin ;</li><li>le stock disponible est mesuré à nouveau au début du mois suivant.</li></ul>
+    
+
+<p>Le responsable considère qu&#39;un stock inférieur à 25 tonnes constitue un signal d&#39;alerte.</p>
+    
+
+<p>Notre mission : prévoir l&#39;évolution du stock et déterminer si cette stratégie est suffisante.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a07">
+        <h2>Activité 5 — 3. Recherche — Prévoir l&#39;évolution du stock 40 min</h2>
+        
+        
+        
+
+        
+
+        
+<p>Travail en binôme.</p>
+    
+
+<p>Calculatrice : interdite pour la première étape, puis autorisée.</p>
+    
+
+<p>On appelle un la quantité de foin, en tonnes, au début du mois numéro n.</p>
+    
+
+<p>Le mois numéro 0 correspond au 1er novembre de départ.</p>
+    
+
+<p>u₀ = 60</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a08">
+        <h2>Activité 6 — A. Traduire la situation en calcul</h2>
+        
+        
+        
+
+        
+
+        
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a08-q01-label">Question 1 — 1. Après une consommation de 12 %, quel pourcentage du stock reste-t-il ?</h3>
+            
+
+            
+<p>Réponse : %</p>
+    
+
+
+            
+                <textarea id="a08-q01" data-answer-id="a08_q01" data-required="true" aria-labelledby="a08-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris ici les calculs, la réponse et la justification demandés dans cette question.</p></details>
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a08-q02-label">Question 2 — 2. Complétez le calcul du stock restant après consommation :</h3>
+            
+
+            
+<p>Stock restant = un ×</p>
+    
+
+
+            
+                <textarea id="a08-q02" data-answer-id="a08_q02" data-required="true" aria-labelledby="a08-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris ici les calculs, la réponse et la justification demandés dans cette question.</p></details>
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a08-q03-label">Question 3 — 3. Le responsable achète ensuite 2 tonnes. Complétez la relation :</h3>
+            
+
+            
+<p>un+₁ = × un +</p>
+    
+
+
+            
+                <textarea id="a08-q03" data-answer-id="a08_q03" data-required="true" aria-labelledby="a08-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris ici les calculs, la réponse et la justification demandés dans cette question. Indice 1 Le stock suivant est égal au stock restant après consommation, auquel on ajoute les achats. Indice 2 Le stock restant vaut 0,88 fois le stock précédent. Indice 3 La relation attendue est un+₁ = 0,88un + 2.</p></details>
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a09">
+        <h2>Activité 7 — B. Calculer les trois premiers mois</h2>
+        
+        
+        
+
+        
+
+        
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a09-q01-label">Question 1 — 4. Calculez u₁, le stock disponible après un mois.</h3>
+            
+
+            
+<p>Calcul :</p>
+    
+
+<p>u₁ = tonnes</p>
+    
+
+
+            
+                <textarea id="a09-q01" data-answer-id="a09_q01" data-required="true" aria-labelledby="a09-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris ici les calculs, la réponse et la justification demandés dans cette question. Indice 1 Dans la formule, remplacez u₀ par 60. Indice 2 Calculez 60 × 0,88, puis ajoutez 2. Indice 3 60 × 0,88 = 52,8 tonnes avant livraison.</p></details>
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a09-q02-label">Question 2 — 5. Calculez u₂, le stock disponible après deux mois.</h3>
+            
+
+            
+<p>Calcul :</p>
+    
+
+<p>u₂ = tonnes</p>
+    
+
+
+            
+                <textarea id="a09-q02" data-answer-id="a09_q02" data-required="true" aria-labelledby="a09-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris ici les calculs, la réponse et la justification demandés dans cette question.</p></details>
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a09-q03-label">Question 3 — 6. Calculez u₃, le stock disponible après trois mois.</h3>
+            
+
+            
+<p>Calcul :</p>
+    
+
+<p>u₃ ≈ tonnes</p>
+    
+
+
+            
+                <textarea id="a09-q03" data-answer-id="a09_q03" data-required="true" aria-labelledby="a09-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris ici les calculs, la réponse et la justification demandés dans cette question.</p></details>
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a10">
+        <h2>Activité 8 — C. Quand le stock devient-il insuffisant ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Le responsable souhaite conserver au moins 25 tonnes de foin.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a10-q01-label">Question 1 — 7. Poursuivez les calculs à l&#39;aide de la calculatrice. Complétez le tableau jusqu&#39;au mois où le stock passe sous 25 tonnes.</h3>
+            
+
+            
+<p>Premier mois où le stock devient inférieur à 25 tonnes :</p>
+    
+
+
+            
+                <textarea id="a10-q01" data-answer-id="a10_q01" data-required="true" aria-labelledby="a10-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris ici les calculs, la réponse et la justification demandés dans cette question. Indice 1 Calculez chaque nouvelle valeur à partir de la précédente. Indice 2 Pour chaque ligne, multipliez par 0,88 puis ajoutez 2. Indice 3 Examinez particulièrement les résultats des mois 12 et 13.</p></details>
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a10-q02-label">Question 2 — 8. Le responsable peut-il conserver durablement un stock supérieur à 25 tonnes en achetant seulement 2 tonnes par mois ? Justifiez avec vos résultats.</h3>
+            
+
+            
+            
+                <textarea id="a10-q02" data-answer-id="a10_q02" data-required="true" aria-labelledby="a10-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris ici les calculs, la réponse et la justification demandés dans cette question.</p></details>
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a11">
+        <h2>Activité 9 — 4. Comprendre la suite — Vers quel stock se dirige-t-on ? 20 min</h2>
+        
+        
+        
+
+        
+
+        
+<p>Calculatrice : autorisée.</p>
+    
+
+<p>Le stock diminue. Mais cela signifie-t-il qu&#39;il va nécessairement atteindre zéro ?</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a12">
+        <h2>Activité 10 — A. Trouver le stock d&#39;équilibre</h2>
+        
+        
+        
+
+        
+
+        
+<p>On cherche une quantité L qui resterait identique d&#39;un mois à l&#39;autre dans notre modèle.</p>
+    
+
+<p>Si le stock ne change plus :</p>
+    
+
+<p>L = 0,88L + 2</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a12-q01-label">Question 1 — 1. Résolvez cette équation.</h3>
+            
+
+            
+            
+                <textarea id="a12-q01" data-answer-id="a12_q01" data-required="true" aria-labelledby="a12-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris ici les calculs, la réponse et la justification demandés dans cette question. Indice 1 Regroupez les termes contenant L d&#39;un seul côté de l&#39;égalité. Indice 2 Soustrayez 0,88L des deux côtés. Indice 3 Vous devez obtenir 0,12L = 2, puis isoler L.</p></details>
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a12-q02-label">Question 2 — 2. Quelle est la valeur du stock d&#39;équilibre, arrondie au centième ?</h3>
+            
+
+            
+<p>L ≈ tonnes</p>
+    
+
+
+            
+                <textarea id="a12-q02" data-answer-id="a12_q02" data-required="true" aria-labelledby="a12-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris ici les calculs, la réponse et la justification demandés dans cette question.</p></details>
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a12-q03-label">Question 3 — 3. Ce stock d&#39;équilibre est-il supérieur ou inférieur au seuil de 25 tonnes ? Que peut-on en conclure ?</h3>
+            
+
+            
+            
+                <textarea id="a12-q03" data-answer-id="a12_q03" data-required="true" aria-labelledby="a12-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris ici les calculs, la réponse et la justification demandés dans cette question.</p></details>
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a13">
+        <h2>Activité 11 — B. Comprendre ce qu&#39;est une suite géométrique</h2>
+        
+        
+        
+
+        
+
+        
+<p>Une suite géométrique est une suite dans laquelle chaque terme s&#39;obtient en multipliant le précédent par un même nombre, appelé raison.</p>
+    
+
+<p>vn+₁ = q × vn</p>
+    
+
+<p>Pour connaître directement le terme numéro n :</p>
+    
+
+<p>vn = v₀ × qn</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a13-q01-label">Question 1 — 4. Notre suite un+₁ = 0,88un + 2 est-elle directement géométrique ?</h3>
+            
+
+            
+<p>Pourquoi ?</p>
+    
+
+<p>Choix proposés : Oui / Non</p>
+    
+
+
+            
+                <textarea id="a13-q01" data-answer-id="a13_q01" data-required="true" aria-labelledby="a13-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris ici les calculs, la réponse et la justification demandés dans cette question.</p></details>
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a14">
+        <h2>Activité 12 — C. Faire apparaître une véritable suite géométrique</h2>
+        
+        
+        
+
+        
+
+        
+<p>On décide d&#39;étudier l&#39;écart entre le stock du mois n et le stock d&#39;équilibre.</p>
+    
+
+<p>On définit :</p>
+    
+
+<p>vn = un - 50/3</p>
+    
+
+<p>On peut démontrer que :</p>
+    
+
+<p>vn+₁ = 0,88vn</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a14-q01-label">Question 1 — 5. La suite v est-elle géométrique ? Si oui, quelle est sa raison ?</h3>
+            
+
+            
+<p>Réponse :</p>
+    
+
+
+            
+                <textarea id="a14-q01" data-answer-id="a14_q01" data-required="true" aria-labelledby="a14-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris ici les calculs, la réponse et la justification demandés dans cette question.</p></details>
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a15">
+        <h2>Activité 13 — À retenir</h2>
+        
+        
+        
+
+        
+
+        
+<p>Une suite géométrique de premier terme v₀ et de raison q vérifie :</p>
+    
+
+<p>vn = v₀ × qn</p>
+    
+
+<p>Dans notre situation :</p>
+    
+
+<p>un = 50/3 + (130/3) × 0,88n</p>
+    
+
+<p>Le stock se rapproche progressivement de 16,67 tonnes, une valeur inférieure au seuil d&#39;alerte.</p>
+    
+
+<p>Cette conclusion est valable dans le modèle étudié.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a16">
+        <h2>Activité 14 — 5. Application numérique — Simuler les stocks avec un tableur 20 min</h2>
+        
+        
+        
+
+        
+
+        
+<p>Calculatrice et ordinateur : autorisés.</p>
+    
+
+<p>Nous allons maintenant utiliser Excel ou LibreOffice Calc pour simuler la gestion du stock sur 24 mois.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a17">
+        <h2>Activité 15 — A. Construire le tableau</h2>
+        
+        
+        
+
+        
+
+        
+<p>Ouvrez un nouveau classeur.</p>
+    
+
+<p>Dans la cellule A1, écrivez Mois.</p>
+    
+
+<p>Dans la cellule B1, écrivez Stock de foin (t).</p>
+    
+
+<p>Dans la cellule A2, saisissez 0.</p>
+    
+
+<p>Dans la cellule A3, saisissez 1.</p>
+    
+
+<p>Sélectionnez A2 et A3, puis étirez la série jusqu&#39;au mois 24, en ligne 26.</p>
+    
+
+<p>Dans B2, saisissez 60.</p>
+    
+
+<p>Dans B3, saisissez la formule =B2*0,88+2.</p>
+    
+
+<p>Validez puis recopiez la formule jusqu&#39;en B26.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a17-q01-label">Question 1 — 1. Quel stock obtient-on au mois 24 ? Arrondissez au centième.</h3>
+            
+
+            
+<p>Stock : tonnes</p>
+    
+
+
+            
+                <textarea id="a17-q01" data-answer-id="a17_q01" data-required="true" aria-labelledby="a17-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris ici les calculs, la réponse et la justification demandés dans cette question. Indice 1 Repérez la ligne correspondant au mois 24. Indice 2 Le mois 24 se trouve sur la ligne 26. Indice 3 La valeur recherchée est contenue dans la cellule B26.</p></details>
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a18">
+        <h2>Activité 16 — B. Représenter graphiquement l&#39;évolution</h2>
+        
+        
+        
+
+        
+
+        
+<p>Sélectionnez les cellules A1 à B26.</p>
+    
+
+<p>Dans le menu Insertion, choisissez un graphique.</p>
+    
+
+<p>Choisissez un graphique de type XY (dispersion) avec points reliés par des lignes.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a18-q01-label">Question 1 — Vérifiez que les mois sont sur l&#39;axe horizontal et le stock sur l&#39;axe vertical.</h3>
+            
+
+            
+            
+                <textarea id="a18-q01" data-answer-id="a18_q01" data-required="true" aria-labelledby="a18-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Ajoutez le titre : Évolution du stock de foin sur 24 mois.</p>
+    
+
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a18-q02-label">Question 2 — Indiquez les unités des deux axes.</h3>
+            
+
+            
+            
+                <textarea id="a18-q02" data-answer-id="a18_q02" data-required="true" aria-labelledby="a18-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a18-q03-label">Question 3 — 2. Comment évolue le stock ? Sa diminution semble-t-elle ralentir, accélérer ou rester identique chaque mois ?</h3>
+            
+
+            
+            
+                <textarea id="a18-q03" data-answer-id="a18_q03" data-required="true" aria-labelledby="a18-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris ici les calculs, la réponse et la justification demandés dans cette question.</p></details>
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a18-q04-label">Question 4 — 3. La courbe paraît se rapprocher d&#39;une valeur. Laquelle ? Retrouvez-vous le résultat calculé précédemment ?</h3>
+            
+
+            
+            
+                <textarea id="a18-q04" data-answer-id="a18_q04" data-required="true" aria-labelledby="a18-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris ici les calculs, la réponse et la justification demandés dans cette question.</p></details>
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a19">
+        <h2>Activité 17 — C. Prendre en compte l&#39;inflation</h2>
+        
+        
+        
+
+        
+
+        
+<p>Le stock n&#39;est pas la seule donnée qui intéresse le responsable. Le coût d&#39;achat peut également évoluer.</p>
+    
+
+<p>On suppose, pour un deuxième modèle simplifié, que le prix du foin augmente de 3 % par an.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a19-q01-label">Question 1 — 4. Quel coefficient multiplicateur représente cette hausse annuelle de 3 % ?</h3>
+            
+
+            
+<p>Coefficient :</p>
+    
+
+
+            
+                <textarea id="a19-q01" data-answer-id="a19_q01" data-required="true" aria-labelledby="a19-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris ici les calculs, la réponse et la justification demandés dans cette question.</p></details>
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a19-q02-label">Question 2 — 5. Si P₀ représente le prix initial d&#39;une tonne de foin, écrivez le prix Pa après a années.</h3>
+            
+
+            
+<p>Pa = P₀ × a</p>
+    
+
+
+            
+                <textarea id="a19-q02" data-answer-id="a19_q02" data-required="true" aria-labelledby="a19-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris ici les calculs, la réponse et la justification demandés dans cette question.</p></details>
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a19-q03-label">Question 3 — 6. Expliquez pourquoi attendre le dernier moment pour acheter du foin peut être risqué lorsque les prix augmentent.</h3>
+            
+
+            
+            
+                <textarea id="a19-q03" data-answer-id="a19_q03" data-required="true" aria-labelledby="a19-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris ici les calculs, la réponse et la justification demandés dans cette question.</p></details>
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a20">
+        <h2>Activité 18 — 6. Bilan — Conseiller le responsable de l&#39;écurie 5 min</h2>
+        
+        
+        
+
+        
+
+        
+<p>Calculatrice : non nécessaire.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a20-q01-label">Question 1 — Rédigez votre conclusion :</h3>
+            
+
+            
+<p>La stratégie « consommer 12 % du stock puis acheter 2 tonnes chaque mois » est-elle suffisante pour conserver durablement au moins 25 tonnes ? Justifiez en utilisant deux résultats de la séance.</p>
+    
+
+
+            
+                <textarea id="a20-q01" data-answer-id="a20_q01" data-required="true" aria-labelledby="a20-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris ici les calculs, la réponse et la justification demandés dans cette question.</p></details>
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a21">
+        <h2>Activité 19 — Pour le prochain retour de stage</h2>
+        
+        
+        
+
+        
+
+        
+<p>Recherchez, si ces informations sont accessibles dans votre structure :</p>
+    
+
+<ul><li>le prix d&#39;une botte ou d&#39;une balle de foin ;</li><li>sa masse approximative ;</li><li>la consommation moyenne de foin par cheval et par jour ;</li><li>le nombre de chevaux de la structure ;</li><li>la quantité de foin achetée ou produite pour l&#39;hiver.</li></ul>
+    
+
+<p>Des estimations suffisent. Ne communiquez aucune information confidentielle.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a22">
+        <h2>Activité 20 — À retenir</h2>
+        
+        
+        
+
+        
+
+        
+<ul><li>Une baisse de 12 % correspond à multiplier par 0,88.</li><li>Une suite permet de représenter l&#39;évolution d&#39;une quantité au cours du temps.</li><li>Dans notre modèle : un+₁ = 0,88un + 2.</li><li>Cette suite est arithmético-géométrique, et non directement géométrique.</li><li>Une suite géométrique vérifie vn+₁ = q × vn.</li><li>Son terme général est vn = v₀ × qn.</li><li>Le stock étudié tend vers 16,67 tonnes.</li><li>Le seuil des 25 tonnes est franchi au mois 13.</li><li>Une simulation doit toujours être interprétée à partir des contraintes réelles de l&#39;entreprise.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+</section>
+
+    </fieldset>
+    <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
+    <h2 id="course-summary-title">À retenir</h2><ul></ul>
+    <h3>Faire le point</h3><p>Relis tes réponses et vérifie les points demandés dans le bilan du cours. Tu peux revenir sur ton travail tant que le professeur ne l’a pas clôturé.</p>
+</section>
+
+    <div class="course-submit-panel">
+        <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
+        <p id="course-submit-status" role="status" aria-live="polite"></p>
+        <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
+    </div>
+</div></div>
+</div>
+<noscript><p>Active JavaScript pour charger ta copie et enregistrer tes réponses.</p></noscript>
+
+<script id="classes-data" type="application/json">
+{"college":{"nom":"Collège","classes":[{"id":"5e","nom":"5e","matieres":["techno"]},{"id":"4e","nom":"4e","matieres":["techno"]},{"id":"3e","nom":"3e","matieres":["techno"]}]},"mfr":{"nom":"MFR","classes":[{"id":"4e","nom":"4e MFR","matieres":["tim","maths"]},{"id":"3e","nom":"3e MFR","matieres":["tim","maths"]},{"id":"cap1","nom":"CAP 1","matieres":["tim"]},{"id":"cap2","nom":"CAP 2","matieres":["tim"]},{"id":"2de","nom":"2de Pro","matieres":["tim","maths"]},{"id":"1re","nom":"Bac Pro 1","matieres":["tim","maths"]},{"id":"term","nom":"Bac Pro 2","matieres":["tim","maths"]},{"id":"bts1","nom":"BTS 1","matieres":["tim"]},{"id":"bts2","nom":"BTS 2","matieres":["tim"]}]}}
+</script>
+<script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
+    </main>
+    <footer class="site-footer">
+    <p>
+        &copy; 2026
+        Portail pédagogique Technologie | TIM | Mathématiques
+    </p>
+</footer>
+</body>
+</html>

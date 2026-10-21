@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
+
+    
+    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
+    <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
+    
+
+    <title>
+        
+        Portail pédagogique Technologie | TIM | Mathématiques
+        
+    </title>
+
+    <link rel="icon" href="/tifsec-test-eleves/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/variables.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/base.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/body.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/header.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/main.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/footer.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-message.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-session.css">
+
+    
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    
+    
+
+    
+
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    
+    
+</head>
+
+<body class="student-shell student-course-shell">
+    <a class="student-skip" href="#course-intro">Aller au cours</a>
+    <p id="message" class="auth-message" role="status" aria-live="polite" hidden></p>
+    <header class="student-header" id="course-header">
+    <div class="student-header-inner">
+        <div class="student-topbar">
+            <a class="student-brand" href="/tifsec-test-eleves/eleve/"><img src="/tifsec-test-eleves/images/logo.png" width="44" height="44" alt=""><span>Mon espace<span data-profile-field="matieres"></span></span></a>
+            <div class="student-header-actions"><a class="student-home-link" href="/tifsec-test-eleves/eleve/">Mes séances</a><a id="course-login" href="/tifsec-test-eleves/connexion/">Se connecter</a><details class="student-theme-picker" id="student-theme-picker" hidden>
+    <summary>Apparence</summary>
+    <div class="student-theme-options"><label for="student-theme-select">Les couleurs de mon espace</label><select id="student-theme-select" disabled><option value="ocean">Océan · bleu</option><option value="forest">Forêt · vert</option><option value="plum">Prune · violet</option><option value="terracotta">Terre cuite · orangé</option><option value="ruby">Rubis · rouge</option><option value="slate">Ardoise · gris</option><option value="midnight">Minuit · noir</option><option value="rose">Rosée · rose</option><option value="neon">Néon · RGB sombre</option><option value="cyberpunk">Cyberpunk · cité futuriste</option><option value="minecraft">Minecraft · blocs et pixels</option><option value="farming">Farming · campagne et cultures</option></select><label class="student-theme-motion"><input type="checkbox" id="student-theme-motion"> Mettre les animations en pause</label><p id="student-theme-status" role="status" aria-live="polite">Ce choix te suivra sur les autres ordinateurs.</p><button id="student-theme-retry" type="button" hidden>Réessayer</button></div>
+</details>
+<button type="button" id="course-logout" hidden>Se déconnecter</button></div>
+        </div>
+        <div class="student-welcome-row" id="course-welcome" hidden>
+            <div><p class="student-eyebrow">Une séance à la fois, à ton rythme.</p><p class="student-course-greeting">Bonjour <span id="course-header-identity"></span></p></div>
+            <dl class="student-profile"><div><dt>Établissement</dt><dd data-profile-field="etablissement"></dd></div><div><dt>Classe</dt><dd data-profile-field="classe"></dd></div><div><dt>Inscription</dt><dd data-profile-field="validation"></dd></div></dl>
+        </div>
+    </div>
+</header>
+
+    <main class="student-course-main" id="student-course-main">
+
+<div id="course-work" data-etablissement="mfr" data-matiere="tim" data-classe="4e" data-seance="S02" data-saving-enabled="true" data-collaboration-enabled="true">
+    <div class="course-save-panel course-toolbar">
+        <p id="course-identity" hidden></p>
+        <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+    </div>
+    <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
+        <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
+        <p id="group-status" role="status">Les groupes sont propres à chaque séance. Connecte-toi avec ton compte élève pour choisir ta copie.</p>
+        <div id="group-controls" hidden>
+            <label for="group-copy">Copie de cette séance</label><select id="group-copy"></select>
+            <button type="button" id="group-refresh">Actualiser les groupes</button>
+            <div id="group-create-panel" hidden>
+                <p>Choisis un ou deux camarades. Chacun doit accepter pour partager les réponses. Le groupe reprend ton travail actuel ; ta copie individuelle reste dans l’historique.</p>
+                <div id="group-classmates" class="collaboration-roster"></div>
+                <button type="button" id="group-create">Envoyer les invitations</button>
+            </div>
+        </div>
+    </section>
+    <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
+    <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
+
+
+
+<div class="course-columns">
+    <aside class="course-navigation" aria-label="Étapes de la séance">
+        <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
+        <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
+        <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Pour commencer</a></li><li><a href="#a04">Production attendue</a></li><li><a href="#a05">1. Comprendre notre mission – 10 minutes</a></li><li><a href="#a06">2. Organiser notre groupe – 5 minutes</a></li><li><a href="#a07">3. Choisir le titre de la rencontre – 10 minutes</a></li><li><a href="#a08">4. Établir le cahier des charges – 15 minutes</a></li><li><a href="#a09">5. Préparer notre mise en page – 10 minutes</a></li><li><a href="#a10">6. Réaliser notre invitation dans Writer – 50 minutes</a></li><li><a href="#a11">7. Tester notre invitation – 15 minutes</a></li><li><a href="#a12">8. Trois modèles de cartons d&#39;invitation</a></li><li><a href="#a13">9. Exporter et rendre le travail – 5 minutes</a></li><li><a href="#a14">Pour aller plus loin — facultatif</a></li><li><a href="#a15">À retenir</a></li><li><a href="#a16">Sources</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+    </aside>
+
+<div class="course-reading">
+<!-- ========== INTRODUCTION DU COURS ========== -->
+
+<header class="cours-intro" id="course-intro">
+    <h1>Créons les invitations de notre rencontre</h1>
+
+    
+    <p class="cours-theme">
+        <strong>Thème :</strong> TIM — Créons les invitations de notre rencontre
+    </p>
+    
+
+    
+    <p class="cours-problematique">
+        <strong>Problématique :</strong> Créons les invitations de notre rencontre
+    </p>
+    
+
+    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : Comprendre le rôle d&#39;un document de communication.</p></section>
+    
+    <section><h2>Dans la vie quotidienne</h2><p>concevoir un véritable carton d&#39;invitation pour la rencontre organisée par les apprenants de 3e de la MFR.</p></section>
+    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    
+    
+    <section class="cours-objectifs">
+        <h2>Ce que vous allez apprendre</h2>
+        <ul>
+            
+            <li>Comprendre le rôle d&#39;un document de communication.</li>
+            
+            <li>Identifier les informations indispensables dans une invitation.</li>
+            
+            <li>Adapter un document à ses destinataires.</li>
+            
+            <li>Hiérarchiser des informations pour faciliter leur lecture.</li>
+            
+            <li>Comprendre l&#39;intérêt d&#39;un cahier des charges.</li>
+            
+            <li>Comprendre la différence entre le contenu d&#39;un document et sa présentation.</li>
+            
+            <li>Comprendre l&#39;intérêt d&#39;un fichier modifiable et d&#39;une version PDF destinée à être diffusée.</li>
+            
+        </ul>
+
+        <h2>Ce que vous allez apprendre à faire</h2>
+        <ul>
+            
+            <li>Vous organiser dans un groupe.</li>
+            
+            <li>Créer et enregistrer un document correctement nommé.</li>
+            
+            <li>Régler une page au format A5.</li>
+            
+            <li>Organiser les informations dans LibreOffice Writer.</li>
+            
+            <li>Mettre en valeur les informations importantes.</li>
+            
+            <li>Insérer et dimensionner une image.</li>
+            
+            <li>Respecter un cahier des charges.</li>
+            
+            <li>Évaluer et améliorer une production numérique.</li>
+            
+            <li>Exporter une version finale au format PDF.</li>
+            
+        </ul>
+    </section>
+    
+<h4>Ce que vous allez apprendre</h4>
+    
+
+<ul><li>Comprendre le rôle d&#39;un document de communication.</li><li>Identifier les informations indispensables dans une invitation.</li><li>Adapter un document à ses destinataires.</li><li>Hiérarchiser des informations pour faciliter leur lecture.</li><li>Comprendre l&#39;intérêt d&#39;un cahier des charges.</li><li>Comprendre la différence entre le contenu d&#39;un document et sa présentation.</li><li>Comprendre l&#39;intérêt d&#39;un fichier modifiable et d&#39;une version PDF destinée à être diffusée.</li></ul>
+    
+
+<h4>Ce que vous allez apprendre à faire</h4>
+    
+
+<ul><li>Vous organiser dans un groupe.</li><li>Créer et enregistrer un document correctement nommé.</li><li>Régler une page au format A5.</li><li>Organiser les informations dans LibreOffice Writer.</li><li>Mettre en valeur les informations importantes.</li><li>Insérer et dimensionner une image.</li><li>Respecter un cahier des charges.</li><li>Évaluer et améliorer une production numérique.</li><li>Exporter une version finale au format PDF.</li></ul>
+    
+
+
+    <section><h2>Ressources du cours</h2>
+<p>Réalise les manipulations dans le logiciel demandé. Conserve tes fichiers sur ton espace habituel. Le site enregistre seulement tes réponses écrites, tes résultats, tes formules et tes démarches ; aucun fichier n’est téléversé.</p>
+    
+
+</section>
+    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
+<p>Dans cette page du ministère, retrouve le programme ou le référentiel de ta formation. Les objectifs précis étudiés aujourd’hui sont indiqués dans le cours.</p>
+    
+
+<p><a href="https://chlorofil.fr/diplomes/secondaire/4e-3e" target="_blank" rel="noopener noreferrer">Consulter les programmes et attendus officiels</a></p>
+
+
+</div></details>
+
+</header>
+
+    <fieldset id="course-answers" class="course-answer-fields" disabled>
+        <legend>Réponses aux activités</legend>
+        <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
+
+<section class="cours-activites">
+    
+    <article class="cours-activite" id="a01">
+        <h2>Activité 1 — Pour commencer</h2>
+        
+        
+        
+
+        
+
+        
+<p>Classe : 4e / 3e MFR</p>
+    
+
+<p>Durée exceptionnelle : 2 heures</p>
+    
+
+<p>Organisation : groupes de 4 élèves</p>
+    
+
+<p>Logiciel : LibreOffice Writer</p>
+    
+
+<p>Mission : concevoir un véritable carton d&#39;invitation pour la rencontre organisée par les apprenants de 3e de la MFR.</p>
+    
+
+<p>Commentaire professeur – Préparation</p>
+    
+
+<p>Cette séance est volontairement exceptionnelle : prévoir 2 heures consécutives. Les séances TIM suivantes reviennent au format habituel de 50 minutes.</p>
+    
+
+<p>La rencontre aura lieu le vendredi 4 décembre 2026 à 11 h à la MFR de Saint-Flour.</p>
+    
+
+<p>Les invitations sont destinées aux familles, maîtres de stage, membres du conseil d&#39;administration et équipes pédagogiques.</p>
+    
+
+<p>Prévoir un ordinateur par groupe et LibreOffice Writer.</p>
+    
+
+<p>Si des photographies sont utilisées, préparer auparavant un dossier contenant uniquement des photographies dont l&#39;utilisation dans ce projet est autorisée : établissement, activités, réalisations ou stages.</p>
+    
+
+<p>Si le logo officiel de la MFR doit être utilisé, le placer également dans ce dossier.</p>
+    
+
+<p>Ne pas laisser les élèves récupérer au hasard des images sur Internet : l&#39;objectif est de travailler avec des visuels réellement liés à l&#39;établissement et dont l&#39;utilisation est maîtrisée.</p>
+    
+
+<p>Le projet concerne une rencontre réelle. Les informations obligatoires ne doivent donc pas être inventées ou modifiées par les élèves.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a04">
+        <h2>Activité 2 — Production attendue</h2>
+        
+        
+        
+
+        
+
+        
+<p>Chaque groupe doit produire un carton d&#39;invitation A5.</p>
+    
+
+<p>À la fin de la séance, vous devrez rendre :</p>
+    
+
+<ul><li>4e3e_S02_Groupe01.odt : le fichier modifiable ;</li><li>4e3e_S02_Groupe01.pdf : la version destinée à être consultée ou imprimée.</li></ul>
+    
+
+<p>Remplacez 01 par le numéro donné à votre groupe.</p>
+    
+
+<p>Commentaire professeur – Évaluation</p>
+    
+
+<p>Comme pour les autres séances, la production finale sert de support à l&#39;évaluation.</p>
+    
+
+<p>Prendre principalement en compte : l&#39;implication, la progression, la participation au groupe, le respect du cahier des charges, la qualité du rendu et la capacité à améliorer la production après un retour.</p>
+    
+
+<p>Ne pas évaluer uniquement l&#39;esthétique du carton.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a05">
+        <h2>Activité 3 — 1. Comprendre notre mission – 10 minutes</h2>
+        
+        
+        
+
+        
+
+        
+<p>Le vendredi 4 décembre 2026 à 11 h, les apprenants de 3e organiseront une rencontre à la MFR.</p>
+    
+
+<p>Cette rencontre permettra de présenter :</p>
+    
+
+<ul><li>des apprentissages réalisés à la MFR ;</li><li>des projets et activités ;</li><li>des expériences vécues pendant les stages ;</li><li>des métiers découverts ;</li><li>des compétences acquises ;</li><li>des réussites et des progrès.</li></ul>
+    
+
+<p>Les personnes invitées pourront notamment être :</p>
+    
+
+<ul><li>les familles ;</li><li>les maîtres de stage ;</li><li>les membres du conseil d&#39;administration ;</li><li>les équipes pédagogiques.</li></ul>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a05-q01-label">Question 1 — Question 1 : à quoi va servir le carton que vous allez créer ?</h3>
+            
+
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a05-q02-label">Question 2 — Question 2 : quelles sont, selon vous, les quatre informations qu&#39;un invité doit pouvoir trouver le plus rapidement possible ?</h3>
+            
+
+            
+            
+                <textarea id="a05-q02" data-answer-id="a05_q02" data-required="true" aria-labelledby="a05-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<h4>AIDE SI BESOIN – Comprendre le rôle de l&#39;invitation</h4>
+    
+
+<p>Indice 1/3 : imaginez que vous recevez l&#39;invitation sans aucune autre explication.</p>
+    
+
+<p>Indice 2/3 : vous devez comprendre ce qui va se passer et savoir quand venir.</p>
+    
+
+<p>Indice 3/3 : pensez au titre, à la date, à l&#39;heure et au lieu.</p>
+    
+
+<p>Commentaire professeur – Attendu</p>
+    
+
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a05-q03-label">Question 3 — Q1 : informer les destinataires de l&#39;événement et leur donner les informations nécessaires pour y participer.</h3>
+            
+
+            
+            
+                <textarea id="a05-q03" data-answer-id="a05_q03" data-required="true" aria-labelledby="a05-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a05-q04-label">Question 4 — Q2 : titre ou nature de l&#39;événement, date, heure et lieu. Accepter également organisateurs ou objectif si la réponse est argumentée.</h3>
+            
+
+            
+            
+                <textarea id="a05-q04" data-answer-id="a05_q04" data-required="true" aria-labelledby="a05-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Ne pas passer plus de dix minutes sur cette introduction.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a06">
+        <h2>Activité 4 — 2. Organiser notre groupe – 5 minutes</h2>
+        
+        
+        
+
+        
+
+        
+<p>Vous travaillez par groupes de quatre et réalisez une seule production commune.</p>
+    
+
+<p>Répartissez-vous quatre responsabilités :</p>
+    
+
+<ul><li>Rédaction : vérifie les textes et les informations.</li><li>Mise en page : surveille l&#39;organisation générale dans Writer.</li><li>Illustrations : choisit les visuels parmi ceux autorisés.</li><li>Qualité : vérifie le cahier des charges et la lisibilité.</li></ul>
+    
+
+<p>Attention : une responsabilité ne signifie pas qu&#39;une seule personne effectue tout le travail correspondant.</p>
+    
+
+<p>Chaque membre doit participer aux décisions et aux manipulations.</p>
+    
+
+<p>Numéro du groupe :</p>
+    
+
+<p>Responsable rédaction :</p>
+    
+
+<p>Responsable mise en page :</p>
+    
+
+<p>Responsable illustrations :</p>
+    
+
+<p>Responsable qualité :</p>
+    
+
+<p>Commentaire professeur – Travail collectif</p>
+    
+
+<p>Former idéalement des groupes de quatre. Un groupe de trois ou cinq peut être accepté si l&#39;effectif l&#39;impose.</p>
+    
+
+<p>Un seul ordinateur peut être utilisé pour le document final, mais demander aux élèves de se relayer au clavier et à la souris.</p>
+    
+
+<p>Dans une classe mixte, mélanger éventuellement les niveaux lorsque cela favorise l&#39;entraide, sans transformer systématiquement les 3e en tuteurs des 4e.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a07">
+        <h2>Activité 5 — 3. Choisir le titre de la rencontre – 10 minutes</h2>
+        
+        
+        
+
+        
+
+        
+<p>Une invitation doit annoncer clairement l&#39;événement.</p>
+    
+
+<p>Voici quatre propositions :</p>
+    
+
+<ol><li>Nos apprentissages, nos projets, nos réussites</li><li>Une année pour apprendre, des expériences à partager</li><li>Regards croisés sur notre année en alternance</li><li>Une rencontre pour valoriser nos expériences et nos apprentissages</li></ol>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a07-q01-label">Question 1 — Question 3 : quel titre votre groupe préfère-t-il et pourquoi ?</h3>
+            
+
+            
+            
+                <textarea id="a07-q01" data-answer-id="a07_q01" data-required="true" aria-labelledby="a07-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Le professeur organise ensuite un vote.</p>
+    
+
+<p>Titre retenu :</p>
+    
+
+<p>VIGILANCE : tous les groupes utilisent ensuite le même titre, même si leurs mises en page sont différentes.</p>
+    
+
+<p>Commentaire professeur – Vote</p>
+    
+
+<p>Faire voter les élèves rapidement et annoncer le résultat.</p>
+    
+
+<p>En cas d&#39;égalité, organiser un second vote entre les propositions concernées.</p>
+    
+
+<p>Si plusieurs groupes de 3e doivent participer au choix définitif à des moments différents, annoncer que le titre est provisoire et conserver les fichiers ODT pour pouvoir le modifier ensuite.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a08">
+        <h2>Activité 6 — 4. Établir le cahier des charges – 15 minutes</h2>
+        
+        
+        
+
+        
+
+        
+<p>Imaginez que vous receviez uniquement le message suivant :</p>
+    
+
+<blockquote>Nous organisons une rencontre pour présenter nos travaux. Nous espérons vous voir nombreux !</blockquote>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a08-q01-label">Question 1 — Question 4 : quelles informations manquent pour pouvoir réellement participer à l&#39;événement ?</h3>
+            
+
+            
+            
+                <textarea id="a08-q01" data-answer-id="a08_q01" data-required="true" aria-labelledby="a08-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Votre invitation devra obligatoirement contenir :</p>
+    
+
+<ul><li>le titre retenu lors du vote ;</li><li>la mention des apprenants de 3e de la MFR ;</li><li>une courte phrase expliquant l&#39;objectif de la rencontre ;</li><li>la date : vendredi 4 décembre 2026 ;</li><li>l&#39;heure : 11 h ;</li><li>le lieu : MFR Saint-Flour, 10 Rte de Massales, 15100 Saint-Flour ;</li><li>au moins un visuel autorisé en rapport avec la MFR, une activité ou une réalisation ;</li><li>une présentation claire et lisible ;</li><li>un document tenant sur une seule page au format A5.</li></ul>
+    
+
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a08-q02-label">Question 2 — Question 5 : parmi ces informations, lesquelles doivent être vues en premier ? Pourquoi ?</h3>
+            
+
+            
+            
+                <textarea id="a08-q02" data-answer-id="a08_q02" data-required="true" aria-labelledby="a08-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<h4>AIDE SI BESOIN – Hiérarchiser les informations</h4>
+    
+
+<p>Indice 1/3 : imaginez que quelqu&#39;un ne regarde le carton que cinq secondes.</p>
+    
+
+<p>Indice 2/3 : il doit comprendre immédiatement de quoi il s&#39;agit et quand cela aura lieu.</p>
+    
+
+<p>Indice 3/3 : le titre, la date, l&#39;heure et le lieu doivent être particulièrement faciles à retrouver.</p>
+    
+
+<p>Commentaire professeur – Attendus et vigilance</p>
+    
+
+<p>Faire distinguer les informations obligatoires des éléments décoratifs.</p>
+    
+
+<p>Ne pas laisser les élèves inventer de téléphone, d&#39;adresse électronique, de formulaire d&#39;inscription ou d&#39;autres modalités qui n&#39;ont pas été validées.</p>
+    
+
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a08-q03-label">Question 3 — Q4 : au minimum date, heure, lieu, organisateurs et nature ou objectif de l&#39;événement.</h3>
+            
+
+            
+            
+                <textarea id="a08-q03" data-answer-id="a08_q03" data-required="true" aria-labelledby="a08-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a08-q04-label">Question 4 — Q5 : titre, date, heure et lieu doivent être rapidement repérables.</h3>
+            
+
+            
+            
+                <textarea id="a08-q04" data-answer-id="a08_q04" data-required="true" aria-labelledby="a08-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a09">
+        <h2>Activité 7 — 5. Préparer notre mise en page – 10 minutes</h2>
+        
+        
+        
+
+        
+
+        
+<p>Avant d&#39;ouvrir Writer, votre groupe doit décider comment organiser son invitation.</p>
+    
+
+<p>Vous pouvez choisir :</p>
+    
+
+<ul><li>une présentation classique : sobre, centrée et facile à réaliser ;</li><li>une présentation moderne : utilisant quelques blocs bien séparés ;</li><li>une présentation créative : mettant davantage en avant les activités et les visuels ;</li><li>une proposition originale : à condition de respecter le cahier des charges.</li></ul>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a09-q01-label">Question 1 — Question 6 : décrivez rapidement votre organisation.</h3>
+            
+
+            
+            
+                <textarea id="a09-q01" data-answer-id="a09_q01" data-required="true" aria-labelledby="a09-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<h4>Quelques règles simples</h4>
+    
+
+<ul><li>Utilisez au maximum deux polices différentes.</li><li>Limitez le nombre de couleurs.</li><li>Gardez un contraste suffisant entre texte et fond.</li><li>Ne remplissez pas tous les espaces.</li><li>Ne transformez pas l&#39;invitation en affiche surchargée.</li><li>Une ou deux images pertinentes valent mieux que de nombreuses images inutiles.</li></ul>
+    
+
+<p>Commentaire professeur</p>
+    
+
+<p>Laisser les élèves faire de vrais choix mais ne pas laisser cette phase dépasser dix minutes.</p>
+    
+
+<p>Les groupes les moins à l&#39;aise peuvent retenir une présentation simple. La difficulté informatique ne doit pas empêcher de réussir la mission.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a10">
+        <h2>Activité 8 — 6. Réaliser notre invitation dans Writer – 50 minutes</h2>
+        
+        
+        
+
+        
+
+        
+<h4>Étape 1 – Créer immédiatement le document</h4>
+    
+
+<p>Ouvrez LibreOffice Writer.</p>
+    
+
+<p>Créez un nouveau document texte.</p>
+    
+
+<p>Choisissez Fichier → Enregistrer sous.</p>
+    
+
+<p>Enregistrez le document dans l&#39;emplacement indiqué par le professeur.</p>
+    
+
+<p>Nommez-le 4e3e_S02_Groupe01.odt.</p>
+    
+
+<p>Remplacez 01 par votre numéro de groupe.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a10-q01-label">Question 1 — Vérifiez que le fichier est au format Document texte ODF (.odt).</h3>
+            
+
+            
+            
+                <textarea id="a10-q01" data-answer-id="a10_q01" data-required="true" aria-labelledby="a10-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>VIGILANCE : enregistrez régulièrement votre travail avec Ctrl + S.</p>
+    
+
+<p>Commentaire professeur – Réinvestissement</p>
+    
+
+<p>La création et le nommage du fichier réinvestissent les acquis de la séance 1.</p>
+    
+
+<p>Ne pas effectuer l&#39;enregistrement à la place du groupe. Faire verbaliser le problème en cas de blocage.</p>
+    
+
+<h4>Étape 2 – Régler le format A5</h4>
+    
+
+<p>Votre carton doit occuper une seule page A5.</p>
+    
+
+<ol><li>Ouvrez les réglages de la page ou du style de page.</li><li>Repérez la rubrique permettant de modifier le format du papier.</li><li>Choisissez A5.</li><li>Choisissez Portrait ou Paysage selon votre projet.</li><li>Adaptez les marges si nécessaire, sans placer le contenu trop près du bord.</li><li>Validez.</li></ol>
+    
+
+<h4>AIDE SI BESOIN – Je ne trouve pas le format A5</h4>
+    
+
+<p>Indice 1/3 : ne cherchez pas dans les réglages de la police : vous devez modifier la page.</p>
+    
+
+<p>Indice 2/3 : recherchez le panneau ou la boîte de dialogue Style de page.</p>
+    
+
+<p>Indice 3/3 : dans les propriétés de la page, repérez Format / Taille puis sélectionnez A5.</p>
+    
+
+<p>Source : LibreOffice – Réglages de la page dans Writer .</p>
+    
+
+<p><a href="https://help.libreoffice.org/latest/fr/text/swriter/01/page.html?DbPAR=WRITER" target="_blank" rel="noopener noreferrer">LibreOffice – Réglages de la page dans Writer</a></p>
+
+
+<h4>Étape 3 – Saisir d&#39;abord le contenu</h4>
+    
+
+<p>Avant de décorer votre carton, saisissez toutes les informations obligatoires.</p>
+    
+
+<p>Vous pouvez partir de cette base :</p>
+    
+
+<blockquote>LES APPRENANTS DE 3e DE LA MFR VOUS INVITENT [TITRE CHOISI] Nous avons le plaisir de vous inviter à une rencontre consacrée à nos apprentissages, nos projets et nos expériences en alternance. Nous partagerons avec vous des réalisations et des découvertes effectuées à la MFR et pendant nos périodes de stage. Vendredi 4 décembre 2026 11 h MFR Saint-Flour, 10 Rte de Massales, 15100 Saint-Flour Nous serons heureux de vous accueillir pour partager ce moment. Les apprenants de 3e de la MFR.</blockquote>
+    
+
+<p>Vous pouvez reformuler certaines phrases, mais vous ne devez pas modifier les informations factuelles de l&#39;événement.</p>
+    
+
+<h4>Étape 4 – Créer une hiérarchie visuelle</h4>
+    
+
+<p>Votre lecteur doit comprendre très rapidement ce qui est important.</p>
+    
+
+<p>Faites ressortir au minimum :</p>
+    
+
+<ul><li>le titre de la rencontre ;</li><li>la date ;</li><li>l&#39;heure ;</li><li>le lieu.</li></ul>
+    
+
+<p>Vous pouvez utiliser :</p>
+    
+
+<ul><li>la taille du texte ;</li><li>le gras ;</li><li>l&#39;alignement ;</li><li>une couleur contrastée ;</li><li>les espaces entre les éléments.</li></ul>
+    
+
+<p>VIGILANCE : si tout est gros, gras et coloré, plus rien ne ressort réellement.</p>
+    
+
+<h4>AIDE SI BESOIN – Mon carton ressemble encore à une page de texte</h4>
+    
+
+<p>Indice 1/3 : commencez uniquement par le titre.</p>
+    
+
+<p>Indice 2/3 : rendez ensuite la date et l&#39;heure faciles à repérer.</p>
+    
+
+<p>Indice 3/3 : conservez les phrases explicatives plus petites et plus discrètes que le titre.</p>
+    
+
+<h4>Étape 5 – Organiser les espaces</h4>
+    
+
+<p>Évitez d&#39;utiliser de nombreuses lignes vides uniquement pour déplacer le texte.</p>
+    
+
+<p>Utilisez plutôt les réglages d&#39;espacement des paragraphes lorsque cela est nécessaire.</p>
+    
+
+<p>Votre carton doit :</p>
+    
+
+<ul><li>rester lisible ;</li><li>ne comporter qu&#39;une seule page ;</li><li>ne contenir aucun texte coupé ;</li><li>laisser suffisamment d&#39;espace autour des informations.</li></ul>
+    
+
+<h4>Étape 6 – Choisir une illustration</h4>
+    
+
+<p>Choisissez une ou deux images parmi celles mises à disposition par le professeur.</p>
+    
+
+<p>Elles doivent avoir un rapport direct avec :</p>
+    
+
+<ul><li>la MFR ;</li><li>ses activités ;</li><li>les projets réalisés ;</li><li>les expériences professionnelles présentées lors de la rencontre.</li></ul>
+    
+
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a10-q02-label">Question 2 — Question 7 : quelle image avez-vous choisie et pourquoi est-elle pertinente ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q02" data-answer-id="a10_q02" data-required="true" aria-labelledby="a10-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>VIGILANCE : n&#39;utilisez aucune photographie extérieure au dossier prévu sans validation du professeur.</p>
+    
+
+<h4>Étape 7 – Insérer et dimensionner l&#39;image</h4>
+    
+
+<p>Placez le curseur à l&#39;endroit souhaité.</p>
+    
+
+<p>Choisissez Insertion → Image.</p>
+    
+
+<p>Sélectionnez le fichier autorisé.</p>
+    
+
+<p>Insérez l&#39;image.</p>
+    
+
+<p>Redimensionnez-la avec une poignée située dans un angle.</p>
+    
+
+<p>Conservez ses proportions.</p>
+    
+
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a10-q03-label">Question 3 — Vérifiez qu&#39;elle ne masque aucun texte.</h3>
+            
+
+            
+            
+                <textarea id="a10-q03" data-answer-id="a10_q03" data-required="true" aria-labelledby="a10-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<h4>AIDE SI BESOIN – Mon image prend toute la page</h4>
+    
+
+<p>Indice 1/3 : cliquez une fois sur l&#39;image.</p>
+    
+
+<p>Indice 2/3 : utilisez une poignée placée dans un angle.</p>
+    
+
+<p>Indice 3/3 : réduisez-la progressivement jusqu&#39;à ce qu&#39;elle accompagne le texte sans devenir l&#39;élément principal du carton.</p>
+    
+
+<h4>Étape 8 – Ajouter éventuellement le logo</h4>
+    
+
+<p>Si le professeur a fourni le logo officiel de la MFR, vous pouvez l&#39;insérer.</p>
+    
+
+<p>VIGILANCE :</p>
+    
+
+<ul><li>ne déformez pas le logo ;</li><li>ne changez pas ses couleurs ;</li><li>ne le placez pas sur une zone qui le rend difficile à lire.</li></ul>
+    
+
+<h4>Étape 9 – Finaliser votre proposition</h4>
+    
+
+<p>Vous pouvez ajouter une ligne, un cadre ou un élément graphique simple si cela améliore réellement la lecture.</p>
+    
+
+<p>Avant de poursuivre, demandez-vous :</p>
+    
+
+
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a10-q04-label">Question 4 — Est-ce utile ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q04" data-answer-id="a10_q04" data-required="true" aria-labelledby="a10-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            <h3 id="a10-q05-label">Question 5 — Est-ce lisible ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q05" data-answer-id="a10_q05" data-required="true" aria-labelledby="a10-q05-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            <h3 id="a10-q06-label">Question 6 — Est-ce cohérent avec le reste ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q06" data-answer-id="a10_q06" data-required="true" aria-labelledby="a10-q06-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Commentaire professeur – Réalisation</p>
+    
+
+<p>C&#39;est la partie principale de la séance. Préserver environ 50 minutes.</p>
+    
+
+<p>Priorités dans l&#39;ordre : informations correctes → fichier enregistré → lisibilité → respect du format A5 → illustrations → décoration.</p>
+    
+
+<p>Pour les élèves en difficulté, réduire la complexité graphique plutôt que faire les manipulations à leur place.</p>
+    
+
+<p>Pour les élèves rapides, autoriser une deuxième proposition de mise en page ou demander une justification plus poussée des choix graphiques.</p>
+    
+
+<p>Faire tourner la personne qui utilise l&#39;ordinateur si un élève monopolise les manipulations.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a11">
+        <h2>Activité 9 — 7. Tester notre invitation – 15 minutes</h2>
+        
+        
+        
+
+        
+
+        
+<h4>Contrôle qualité</h4>
+    
+
+<ul><li>Le titre retenu est présent.</li><li>Les apprenants de 3e sont identifiés comme organisateurs.</li><li>L&#39;objectif de la rencontre est expliqué.</li><li>La date du vendredi 4 décembre 2026 est correcte.</li><li>L&#39;heure de 11 h est visible.</li><li>Le lieu est correct.</li><li>Le carton tient sur une seule page A5.</li><li>Les informations importantes ressortent immédiatement.</li><li>Le texte est lisible.</li><li>Les images utilisées ont été autorisées.</li><li>Les images ne sont pas déformées.</li><li>Aucun élément ne masque une information.</li><li>Le fichier possède le bon nom.</li></ul>
+    
+
+<h4>Le test des dix secondes</h4>
+    
+
+<p>Montrez votre invitation à un autre groupe pendant seulement dix secondes.</p>
+    
+
+<p>Sans regarder de nouveau le carton, ce groupe doit pouvoir indiquer :</p>
+    
+
+<ul><li>ce qui est organisé ;</li><li>la date ;</li><li>l&#39;heure ;</li><li>le lieu ;</li><li>qui organise l&#39;événement.</li></ul>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a11-q01-label">Question 1 — Question 8 : quel point positif l&#39;autre groupe a-t-il relevé ?</h3>
+            
+
+            
+            
+                <textarea id="a11-q01" data-answer-id="a11_q01" data-required="true" aria-labelledby="a11-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a11-q02-label">Question 2 — Question 9 : quelle amélioration vous a-t-il proposée ?</h3>
+            
+
+            
+            
+                <textarea id="a11-q02" data-answer-id="a11_q02" data-required="true" aria-labelledby="a11-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a11-q03-label">Question 3 — Question 10 : qu&#39;avez-vous modifié après ce retour ?</h3>
+            
+
+            
+            
+                <textarea id="a11-q03" data-answer-id="a11_q03" data-required="true" aria-labelledby="a11-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<h4>AIDE SI BESOIN – Notre invitation n&#39;est pas comprise rapidement</h4>
+    
+
+<p>Indice 1/3 : regardez d&#39;abord la taille du titre.</p>
+    
+
+<p>Indice 2/3 : vérifiez ensuite la visibilité de la date et de l&#39;heure.</p>
+    
+
+<p>Indice 3/3 : supprimez éventuellement un élément décoratif et donnez davantage de place aux informations importantes.</p>
+    
+
+<p>Commentaire professeur – Retour entre pairs</p>
+    
+
+<p>Demander un retour constructif : un élément réussi et une proposition d&#39;amélioration.</p>
+    
+
+<p>Le retour n&#39;a d&#39;intérêt que si le groupe examine ensuite sa production et effectue au moins une modification lorsque cela est pertinent.</p>
+    
+
+<p>Valoriser la capacité à corriger et améliorer, pas uniquement la première version obtenue.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a12">
+        <h2>Activité 10 — 8. Trois modèles de cartons d&#39;invitation</h2>
+        
+        
+        
+
+        
+
+        
+<p>Ces exemples présentent trois manières différentes d&#39;organiser les informations. Ils sont conçus pour être réalisables dans Writer.</p>
+    
+
+<p>Important : les titres sont illustratifs. Utilisez le titre retenu par l&#39;ensemble des apprenants de 3e.</p>
+    
+
+<p>MFR – CLASSES DE 3e</p>
+    
+
+<p>Les apprenants ont le plaisir de vous inviter à leur rencontre</p>
+    
+
+<h4>Nos apprentissages, nos projets, nos réussites</h4>
+    
+
+<p>Photographie autorisée de la MFR ou logo officiel</p>
+    
+
+<p>Un moment pour partager nos expériences à la MFR et en stage.</p>
+    
+
+<p>04 DÉCEMBRE 2026</p>
+    
+
+<p>11 h</p>
+    
+
+<p>Lieu : MFR Saint-Flour, 10 Rte de Massales, 15100 Saint-Flour</p>
+    
+
+<p>Au plaisir de vous accueillir</p>
+    
+
+<p>Modèle A – Classique et élégant</p>
+    
+
+<p>Une présentation sobre, avec une photographie de la MFR ou son logo. Adaptée aux familles, maîtres de stage, équipes pédagogiques et membres du CA.</p>
+    
+
+<p>UNE RENCONTRE ORGANISÉE PAR LES 3e</p>
+    
+
+<p>Photographie d&#39;une activité ou réalisation effectuée à la MFR</p>
+    
+
+<h4>Une année pour apprendre, des expériences à partager</h4>
+    
+
+<p>Découvrez nos projets et nos expériences professionnelles.</p>
+    
+
+<p>VENDREDI 04/12/2026</p>
+    
+
+<p>11 H</p>
+    
+
+<p>Les apprenants de 3e de la MFR</p>
+    
+
+<p>Lieu : MFR Saint-Flour, 10 Rte de Massales, 15100 Saint-Flour</p>
+    
+
+<p>Nous serons heureux de partager nos réalisations avec vous.</p>
+    
+
+<p>Modèle B – Moderne et dynamique</p>
+    
+
+<p>Une présentation avec une photographie représentative des activités de la MFR et un bandeau mettant en évidence la date et l&#39;heure.</p>
+    
+
+<p>APPRENDRE • DÉCOUVRIR • PARTAGER</p>
+    
+
+<h4>Regards croisés sur notre année en alternance</h4>
+    
+
+<p>Nos stages</p>
+    
+
+<p>Nos métiers</p>
+    
+
+<p>Nos projets</p>
+    
+
+<p>Nos réussites</p>
+    
+
+<p>Photographies autorisées de plusieurs activités et métiers</p>
+    
+
+<p>Les apprenants de 3e vous invitent à découvrir leurs expériences et leurs réalisations.</p>
+    
+
+<p>04.12.2026</p>
+    
+
+<p>À 11 h</p>
+    
+
+<p>Lieu : MFR Saint-Flour, 10 Rte de Massales, 15100 Saint-Flour</p>
+    
+
+<p>UNE RENCONTRE PRÉPARÉE PAR LES APPRENANTS</p>
+    
+
+<p>Modèle C – Créatif et professionnel</p>
+    
+
+<p>Une invitation qui met en valeur la diversité des métiers, les projets et les expériences à travers plusieurs photographies de la MFR.</p>
+    
+
+<p>Commentaire professeur – Utilisation des modèles</p>
+    
+
+<p>Les trois modèles sont des exemples de composition. Les rectangles en pointillés indiquent les emplacements où les élèves peuvent ajouter leurs propres photographies autorisées.</p>
+    
+
+<p>Éviter les illustrations génériques sans rapport avec l&#39;établissement. Les visuels doivent montrer la MFR, ses activités ou des réalisations effectivement liées à la formation.</p>
+    
+
+<p>Le modèle A convient aux groupes débutants. Le modèle B demande un peu plus de travail sur la mise en page. Le modèle C est adapté aux groupes qui souhaitent valoriser plusieurs activités.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a13">
+        <h2>Activité 11 — 9. Exporter et rendre le travail – 5 minutes</h2>
+        
+        
+        
+
+        
+
+        
+<p>Enregistrez d&#39;abord une dernière fois votre fichier Writer avec Ctrl + S.</p>
+    
+
+<p>Vous devez conserver :</p>
+    
+
+<p>4e3e_S02_Groupe01.odt</p>
+    
+
+<p>Créez ensuite la version PDF.</p>
+    
+
+<p>Utilisez la fonction d&#39;export au format PDF de LibreOffice Writer.</p>
+    
+
+<p>Enregistrez le PDF dans le même dossier.</p>
+    
+
+<p>Nommez-le 4e3e_S02_Groupe01.pdf.</p>
+    
+
+<p>Ouvrez le PDF.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a13-q01-label">Question 1 — Vérifiez qu&#39;il ne comporte qu&#39;une seule page.</h3>
+            
+
+            
+            
+                <textarea id="a13-q01" data-answer-id="a13_q01" data-required="true" aria-labelledby="a13-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a13-q02-label">Question 2 — Vérifiez qu&#39;aucun texte ou visuel n&#39;a disparu.</h3>
+            
+
+            
+            
+                <textarea id="a13-q02" data-answer-id="a13_q02" data-required="true" aria-labelledby="a13-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Source : LibreOffice – Menu Fichier et export PDF .</p>
+    
+
+<p><a href="https://help.libreoffice.org/latest/fr/text/shared/menu/PickList.html?DbPAR=WRITER" target="_blank" rel="noopener noreferrer">LibreOffice – Menu Fichier et export PDF</a></p>
+
+
+<h4>Rendu obligatoire</h4>
+    
+
+<p>Chaque groupe remet au professeur :</p>
+    
+
+<ul><li>4e3e_S02_Groupe01.odt ;</li><li>4e3e_S02_Groupe01.pdf.</li></ul>
+    
+
+<p>Le travail doit être rendu même si vous estimez qu&#39;il n&#39;est pas totalement terminé.</p>
+    
+
+<p>Commentaire professeur – Rendu</p>
+    
+
+<p>Récupérer impérativement le fichier ODT et le PDF.</p>
+    
+
+<p>Le fichier ODT doit être conservé pour permettre une correction ultérieure du titre, d&#39;une date, d&#39;une formulation ou d&#39;un élément graphique avant une éventuelle diffusion réelle.</p>
+    
+
+<p>Ne jamais diffuser directement les productions élèves sans validation finale du contenu, des informations factuelles et des droits relatifs aux photographies utilisées.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a14">
+        <h2>Activité 12 — Pour aller plus loin</h2>
+        <p class="course-optional">Pour aller plus loin — activité facultative.</p>
+        
+        
+
+        
+
+        
+<p>Si votre groupe termine en avance, réalisez l&#39;un des défis suivants :</p>
+    
+
+<p>Créez une deuxième version de votre invitation avec une organisation visuelle différente.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a14-q01-label">Question 1 — Comparez les deux versions et indiquez laquelle communique le mieux les informations importantes.</h3>
+            
+
+            
+            
+                <textarea id="a14-q01" data-answer-id="a14_q01" data-required="false" aria-labelledby="a14-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Demandez à un élève qui n&#39;a pas participé à votre groupe laquelle il comprend le plus rapidement.</p>
+    
+
+<p>Commentaire professeur – Différenciation</p>
+    
+
+<p>Pour les élèves de 4e ou les groupes fragiles : réussite attendue = carton complet, lisible, enregistré correctement et contenant une image pertinente.</p>
+    
+
+<p>Pour les 3e ou groupes autonomes : demander davantage de justification sur la hiérarchie visuelle, le choix des images et l&#39;adaptation aux différents destinataires.</p>
+    
+
+<p>La différenciation porte ici sur le degré d&#39;autonomie et de justification, pas sur la réalisation d&#39;un projet complètement différent.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a15">
+        <h2>Activité 13 — À retenir</h2>
+        
+        
+        
+
+        
+
+        
+<ul><li>Un document de communication est conçu pour un destinataire et un objectif.</li><li>Les informations importantes doivent être hiérarchisées et faciles à retrouver.</li><li>Un cahier des charges indique les éléments que la production doit respecter.</li><li>La mise en forme et les images doivent aider à transmettre le message, pas gêner sa lecture.</li><li>Une production numérique peut être testée, critiquée puis améliorée.</li><li>Le fichier ODT permet de continuer à modifier le document.</li><li>Le fichier PDF permet notamment de transmettre une version dont la présentation reste stable.</li><li>Avant de diffuser un document réel, il faut vérifier son contenu et les droits concernant les images utilisées.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a16">
+        <h2>Activité 14 — Sources</h2>
+        
+        
+        
+
+        
+
+        
+<ul><li>LibreOffice – Réglages de la page dans Writer : documentation officielle LibreOffice .</li><li>LibreOffice – Export et export PDF : documentation officielle LibreOffice .</li><li>ChloroFil – Classes de 4e et 3e de l&#39;enseignement agricole : référentiel et documents officiels .</li></ul>
+    
+
+<p><a href="https://help.libreoffice.org/latest/fr/text/swriter/01/page.html?DbPAR=WRITER" target="_blank" rel="noopener noreferrer">documentation officielle LibreOffice</a></p>
+
+
+<p><a href="https://help.libreoffice.org/latest/fr/text/shared/menu/PickList.html?DbPAR=WRITER" target="_blank" rel="noopener noreferrer">documentation officielle LibreOffice</a></p>
+
+
+<p><a href="https://chlorofil.fr/diplomes/secondaire/4e-3e" target="_blank" rel="noopener noreferrer">référentiel et documents officiels</a></p>
+
+
+
+        
+        
+    </article>
+    
+</section>
+
+    </fieldset>
+    <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
+    <h2 id="course-summary-title">À retenir</h2><ul></ul>
+    <h3>Faire le point</h3><p>Relis tes réponses et vérifie les points demandés dans le bilan du cours. Tu peux revenir sur ton travail tant que le professeur ne l’a pas clôturé.</p>
+</section>
+
+    <div class="course-submit-panel">
+        <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
+        <p id="course-submit-status" role="status" aria-live="polite"></p>
+        <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
+    </div>
+</div></div>
+</div>
+<noscript><p>Active JavaScript pour charger ta copie et enregistrer tes réponses.</p></noscript>
+
+<script id="classes-data" type="application/json">
+{"college":{"nom":"Collège","classes":[{"id":"5e","nom":"5e","matieres":["techno"]},{"id":"4e","nom":"4e","matieres":["techno"]},{"id":"3e","nom":"3e","matieres":["techno"]}]},"mfr":{"nom":"MFR","classes":[{"id":"4e","nom":"4e MFR","matieres":["tim","maths"]},{"id":"3e","nom":"3e MFR","matieres":["tim","maths"]},{"id":"cap1","nom":"CAP 1","matieres":["tim"]},{"id":"cap2","nom":"CAP 2","matieres":["tim"]},{"id":"2de","nom":"2de Pro","matieres":["tim","maths"]},{"id":"1re","nom":"Bac Pro 1","matieres":["tim","maths"]},{"id":"term","nom":"Bac Pro 2","matieres":["tim","maths"]},{"id":"bts1","nom":"BTS 1","matieres":["tim"]},{"id":"bts2","nom":"BTS 2","matieres":["tim"]}]}}
+</script>
+<script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
+    </main>
+    <footer class="site-footer">
+    <p>
+        &copy; 2026
+        Portail pédagogique Technologie | TIM | Mathématiques
+    </p>
+</footer>
+</body>
+</html>

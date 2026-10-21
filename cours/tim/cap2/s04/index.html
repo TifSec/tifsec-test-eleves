@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
+
+    
+    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
+    <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
+    
+
+    <title>
+        
+        Portail pédagogique Technologie | TIM | Mathématiques
+        
+    </title>
+
+    <link rel="icon" href="/tifsec-test-eleves/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/variables.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/base.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/body.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/header.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/main.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/footer.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-message.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-session.css">
+
+    
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    
+    
+
+    
+
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    
+    
+</head>
+
+<body class="student-shell student-course-shell">
+    <a class="student-skip" href="#course-intro">Aller au cours</a>
+    <p id="message" class="auth-message" role="status" aria-live="polite" hidden></p>
+    <header class="student-header" id="course-header">
+    <div class="student-header-inner">
+        <div class="student-topbar">
+            <a class="student-brand" href="/tifsec-test-eleves/eleve/"><img src="/tifsec-test-eleves/images/logo.png" width="44" height="44" alt=""><span>Mon espace<span data-profile-field="matieres"></span></span></a>
+            <div class="student-header-actions"><a class="student-home-link" href="/tifsec-test-eleves/eleve/">Mes séances</a><a id="course-login" href="/tifsec-test-eleves/connexion/">Se connecter</a><details class="student-theme-picker" id="student-theme-picker" hidden>
+    <summary>Apparence</summary>
+    <div class="student-theme-options"><label for="student-theme-select">Les couleurs de mon espace</label><select id="student-theme-select" disabled><option value="ocean">Océan · bleu</option><option value="forest">Forêt · vert</option><option value="plum">Prune · violet</option><option value="terracotta">Terre cuite · orangé</option><option value="ruby">Rubis · rouge</option><option value="slate">Ardoise · gris</option><option value="midnight">Minuit · noir</option><option value="rose">Rosée · rose</option><option value="neon">Néon · RGB sombre</option><option value="cyberpunk">Cyberpunk · cité futuriste</option><option value="minecraft">Minecraft · blocs et pixels</option><option value="farming">Farming · campagne et cultures</option></select><label class="student-theme-motion"><input type="checkbox" id="student-theme-motion"> Mettre les animations en pause</label><p id="student-theme-status" role="status" aria-live="polite">Ce choix te suivra sur les autres ordinateurs.</p><button id="student-theme-retry" type="button" hidden>Réessayer</button></div>
+</details>
+<button type="button" id="course-logout" hidden>Se déconnecter</button></div>
+        </div>
+        <div class="student-welcome-row" id="course-welcome" hidden>
+            <div><p class="student-eyebrow">Une séance à la fois, à ton rythme.</p><p class="student-course-greeting">Bonjour <span id="course-header-identity"></span></p></div>
+            <dl class="student-profile"><div><dt>Établissement</dt><dd data-profile-field="etablissement"></dd></div><div><dt>Classe</dt><dd data-profile-field="classe"></dd></div><div><dt>Inscription</dt><dd data-profile-field="validation"></dd></div></dl>
+        </div>
+    </div>
+</header>
+
+    <main class="student-course-main" id="student-course-main">
+
+<div id="course-work" data-etablissement="mfr" data-matiere="tim" data-classe="cap2" data-seance="S04" data-saving-enabled="true" data-collaboration-enabled="true">
+    <div class="course-save-panel course-toolbar">
+        <p id="course-identity" hidden></p>
+        <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+    </div>
+    <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
+        <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
+        <p id="group-status" role="status">Les groupes sont propres à chaque séance. Connecte-toi avec ton compte élève pour choisir ta copie.</p>
+        <div id="group-controls" hidden>
+            <label for="group-copy">Copie de cette séance</label><select id="group-copy"></select>
+            <button type="button" id="group-refresh">Actualiser les groupes</button>
+            <div id="group-create-panel" hidden>
+                <p>Choisis un ou deux camarades. Chacun doit accepter pour partager les réponses. Le groupe reprend ton travail actuel ; ta copie individuelle reste dans l’historique.</p>
+                <div id="group-classmates" class="collaboration-roster"></div>
+                <button type="button" id="group-create">Envoyer les invitations</button>
+            </div>
+        </div>
+    </section>
+    <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
+    <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
+
+
+
+<div class="course-columns">
+    <aside class="course-navigation" aria-label="Étapes de la séance">
+        <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
+        <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
+        <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a03">1. Créez votre document de travail</a></li><li><a href="#a04">2. Situation professionnelle</a></li><li><a href="#a05">3. Première source : l&#39;identification des équidés</a></li><li><a href="#a06">4. Une source, mais laquelle ?</a></li><li><a href="#a07">5. Deuxième source : le registre d&#39;élevage</a></li><li><a href="#a08">6. Le dossier de Mistral</a></li><li><a href="#a09">7. Mission : repérer les problèmes</a></li><li><a href="#a10">8. Mission principale : créer la fiche d&#39;accueil de Mistral</a></li><li><a href="#a11">9. Ne pas confondre obligation et organisation interne</a></li><li><a href="#a12">10. Indiquer ses sources</a></li><li><a href="#a13">11. Mission : informer le responsable</a></li><li><a href="#a14">12. Transformer la fiche en modèle professionnel</a></li><li><a href="#a15">13. Défi — Créer une fiche réutilisable</a></li><li><a href="#a16">14. Exporter le document</a></li><li><a href="#a17">15. Rendu du travail</a></li><li><a href="#a18">À retenir</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+    </aside>
+
+<div class="course-reading">
+<!-- ========== INTRODUCTION DU COURS ========== -->
+
+<header class="cours-intro" id="course-intro">
+    <h1>Accueillir un nouvel équidé : vérifier et organiser les informations</h1>
+
+    
+    <p class="cours-theme">
+        <strong>Thème :</strong> TIM — Accueillir un nouvel équidé : vérifier et organiser les informations
+    </p>
+    
+
+    
+    <p class="cours-problematique">
+        <strong>Problématique :</strong> Accueillir un nouvel équidé : vérifier et organiser les informations
+    </p>
+    
+
+    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : Comprendre pourquoi l&#39;identification et la traçabilité des équidés sont importantes.</p></section>
+    
+    <section><h2>Dans la vie quotidienne</h2><p>Le responsable vous demande de préparer son dossier d&#39;arrivée et de vérifier que les informations importantes ont bien été transmises.</p></section>
+    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    
+    
+    <section class="cours-objectifs">
+        <h2>Ce que vous allez apprendre</h2>
+        <ul>
+            
+            <li>Comprendre pourquoi l&#39;identification et la traçabilité des équidés sont importantes.</li>
+            
+            <li>Distinguer une obligation réglementaire d&#39;une bonne pratique professionnelle.</li>
+            
+            <li>Identifier une source professionnelle fiable sur Internet.</li>
+            
+            <li>Comprendre l&#39;intérêt d&#39;un document standardisé lors de l&#39;arrivée d&#39;un cheval.</li>
+            
+        </ul>
+
+        <h2>Ce que vous allez apprendre à faire</h2>
+        <ul>
+            
+            <li>Rechercher une information dans une source professionnelle.</li>
+            
+            <li>Extraire les informations importantes d&#39;une page Internet.</li>
+            
+            <li>Créer une fiche professionnelle avec LibreOffice Writer.</li>
+            
+            <li>Organiser des informations dans des tableaux.</li>
+            
+            <li>Insérer des liens vers les sources utilisées.</li>
+            
+            <li>Exporter un document professionnel au format PDF.</li>
+            
+        </ul>
+    </section>
+    
+<h4>Ce que vous allez apprendre</h4>
+    
+
+<ul><li>Comprendre pourquoi l&#39;identification et la traçabilité des équidés sont importantes.</li><li>Distinguer une obligation réglementaire d&#39;une bonne pratique professionnelle.</li><li>Identifier une source professionnelle fiable sur Internet.</li><li>Comprendre l&#39;intérêt d&#39;un document standardisé lors de l&#39;arrivée d&#39;un cheval.</li></ul>
+    
+
+<h4>Ce que vous allez apprendre à faire</h4>
+    
+
+<ul><li>Rechercher une information dans une source professionnelle.</li><li>Extraire les informations importantes d&#39;une page Internet.</li><li>Créer une fiche professionnelle avec LibreOffice Writer.</li><li>Organiser des informations dans des tableaux.</li><li>Insérer des liens vers les sources utilisées.</li><li>Exporter un document professionnel au format PDF.</li></ul>
+    
+
+
+    <section><h2>Ressources du cours</h2>
+<p>Réalise les manipulations dans le logiciel demandé. Conserve tes fichiers sur ton espace habituel. Le site enregistre seulement tes réponses écrites, tes résultats, tes formules et tes démarches ; aucun fichier n’est téléversé.</p>
+    
+
+</section>
+    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
+<p>Dans cette page du ministère, retrouve le programme ou le référentiel de ta formation. Les objectifs précis étudiés aujourd’hui sont indiqués dans le cours.</p>
+    
+
+<p><a href="https://chlorofil.fr/diplomes/secondaire/capa" target="_blank" rel="noopener noreferrer">Consulter les programmes et attendus officiels</a></p>
+
+
+</div></details>
+
+</header>
+
+    <fieldset id="course-answers" class="course-answer-fields" disabled>
+        <legend>Réponses aux activités</legend>
+        <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
+
+<section class="cours-activites">
+    
+    <article class="cours-activite" id="a03">
+        <h2>Activité 1 — 1. Créez votre document de travail</h2>
+        
+        
+        
+
+        
+
+        
+<p>Dans votre dossier CAPA2_TIM/02_Travaux, créez un dossier :</p>
+    
+
+<p>S04</p>
+    
+
+<p>Ouvrez ensuite LibreOffice Writer et enregistrez immédiatement votre document sous le nom :</p>
+    
+
+<p>CAPA2_S04_NOM_Prenom.odt</p>
+    
+
+<p>Ce document deviendra progressivement une véritable fiche d&#39;accueil d&#39;un équidé.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a04">
+        <h2>Activité 2 — 2. Situation professionnelle</h2>
+        
+        
+        
+
+        
+
+        
+<p>Vous travaillez dans une écurie de pension.</p>
+    
+
+<p>Un nouveau cheval, Mistral, arrive aujourd&#39;hui pour plusieurs mois.</p>
+    
+
+<p>Le responsable vous demande de préparer son dossier d&#39;arrivée et de vérifier que les informations importantes ont bien été transmises.</p>
+    
+
+<p>Mais avant de créer la fiche, vous devez savoir :</p>
+    
+
+<ul><li>quels documents accompagnent normalement un équidé ;</li><li>comment son identification peut être vérifiée ;</li><li>quelles informations concernant son arrivée doivent être conservées.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a05">
+        <h2>Activité 3 — 3. Première source : l&#39;identification des équidés</h2>
+        
+        
+        
+
+        
+
+        
+<p>Consultez la page suivante de l&#39;IFCE – Institut français du cheval et de l&#39;équitation :</p>
+    
+
+<p>Source professionnelle : IFCE – SIRE, Identification des équidés .</p>
+    
+
+<p><a href="https://www.ifce.fr/ifce/sire-demarches/sanitaire-detention/identification-des-equides-ifce/" target="_blank" rel="noopener noreferrer">Identification des équidés</a></p>
+
+
+<p>Recherchez dans cette page les informations permettant de compléter les phrases suivantes dans votre document :</p>
+    
+
+<p>Tout équidé présent en France doit être __________.</p>
+    
+
+<p>Il doit être équipé d&#39;un __________ électronique.</p>
+    
+
+<p>Il doit posséder un document d&#39;identification appelé également __________ ou __________.</p>
+    
+
+<p>Il doit disposer d&#39;un numéro __________ attestant son enregistrement dans le fichier central.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a05-q01-label">Question 1 — Le document d&#39;identification doit-il rester avec le cheval lors de ses déplacements ?</h3>
+            
+
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a06">
+        <h2>Activité 4 — 4. Une source, mais laquelle ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Observez l&#39;adresse du site que vous venez d&#39;utiliser puis répondez dans votre document :</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a06-q01-label">Question 1 — Quel organisme publie cette information ?</h3>
+            
+
+            
+            
+                <textarea id="a06-q01" data-answer-id="a06_q01" data-required="true" aria-labelledby="a06-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a06-q02-label">Question 2 — S&#39;agit-il d&#39;un forum, d&#39;un réseau social, d&#39;un site commercial ou d&#39;un organisme professionnel officiel ?</h3>
+            
+
+            
+            
+                <textarea id="a06-q02" data-answer-id="a06_q02" data-required="true" aria-labelledby="a06-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a06-q03-label">Question 3 — Pourquoi cette source est-elle préférable à une réponse trouvée au hasard sur un forum ?</h3>
+            
+
+            
+            
+                <textarea id="a06-q03" data-answer-id="a06_q03" data-required="true" aria-labelledby="a06-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a07">
+        <h2>Activité 5 — 5. Deuxième source : le registre d&#39;élevage</h2>
+        
+        
+        
+
+        
+
+        
+<p>Lorsqu&#39;un cheval arrive ou quitte une structure, son mouvement doit également pouvoir être retrouvé.</p>
+    
+
+<p>Consultez maintenant :</p>
+    
+
+<p>Source professionnelle : IFCE – SIRE, Registre d&#39;élevage .</p>
+    
+
+<p><a href="https://www.ifce.fr/ifce/sire-demarches/sanitaire-detention/registre-delevage/" target="_blank" rel="noopener noreferrer">Registre d&#39;élevage</a></p>
+
+
+<p>À partir de cette page, répondez aux questions suivantes :</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a07-q01-label">Question 1 — À quoi sert notamment le registre d&#39;élevage ?</h3>
+            
+
+            
+            
+                <textarea id="a07-q01" data-answer-id="a07_q01" data-required="true" aria-labelledby="a07-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a07-q02-label">Question 2 — Est-il réservé aux grandes structures possédant beaucoup de chevaux ?</h3>
+            
+
+            
+            
+                <textarea id="a07-q02" data-answer-id="a07_q02" data-required="true" aria-labelledby="a07-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a07-q03-label">Question 3 — Quels types d&#39;informations peuvent y être enregistrés ?</h3>
+            
+
+            
+            
+                <textarea id="a07-q03" data-answer-id="a07_q03" data-required="true" aria-labelledby="a07-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a07-q04-label">Question 4 — Combien de temps le registre doit-il être conservé ?</h3>
+            
+
+            
+            
+                <textarea id="a07-q04" data-answer-id="a07_q04" data-required="true" aria-labelledby="a07-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a08">
+        <h2>Activité 6 — 6. Le dossier de Mistral</h2>
+        
+        
+        
+
+        
+
+        
+<p>Voici les informations transmises lors de son arrivée :</p>
+    
+
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Information</th><th scope="col">Donnée transmise</th></tr></thead><tbody><tr><td>Nom</td><td>Mistral</td></tr><tr><td>Sexe</td><td>Hongre</td></tr><tr><td>Âge</td><td>9 ans</td></tr><tr><td>Propriétaire</td><td>Claire Martin</td></tr><tr><td>Date d&#39;arrivée</td><td>25/09/2026</td></tr><tr><td>Départ prévu</td><td>20/12/2026</td></tr><tr><td>Document présenté</td><td>Photocopie du document d&#39;identification</td></tr><tr><td>Numéro SIRE</td><td>Présent sur la photocopie</td></tr><tr><td>Entrée dans le registre d&#39;élevage</td><td>Pas encore réalisée</td></tr><tr><td>Contact en cas de problème</td><td>Claire Martin – coordonnées transmises à l&#39;écurie</td></tr></tbody></table></div>
+    
+
+<p>Mistral, Claire Martin et les informations du dossier sont fictifs. Les obligations et informations réglementaires utilisées dans l&#39;activité proviennent de l&#39;IFCE.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a09">
+        <h2>Activité 7 — 7. Mission : repérer les problèmes</h2>
+        
+        
+        
+
+        
+
+        
+<p>À partir des deux sources IFCE, trouvez au moins deux éléments du dossier qui doivent attirer l&#39;attention du responsable.</p>
+    
+
+<p>Expliquez pourquoi dans votre document.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a10">
+        <h2>Activité 8 — 8. Mission principale : créer la fiche d&#39;accueil de Mistral</h2>
+        
+        
+        
+
+        
+
+        
+<p>Transformez maintenant votre document Writer en une fiche professionnelle utilisable par l&#39;écurie.</p>
+    
+
+<p>Ajoutez un titre :</p>
+    
+
+<p>FICHE D&#39;ACCUEIL D&#39;UN ÉQUIDÉ</p>
+    
+
+<p>Ajoutez ensuite plusieurs parties clairement identifiables.</p>
+    
+
+<h4>A. Identification de l&#39;équidé</h4>
+    
+
+<p>Créez un tableau contenant au minimum :</p>
+    
+
+<ul><li>nom ;</li><li>sexe ;</li><li>âge ;</li><li>numéro SIRE ;</li><li>nom du propriétaire.</li></ul>
+    
+
+<h4>B. Arrivée dans la structure</h4>
+    
+
+<p>Ajoutez :</p>
+    
+
+<ul><li>date d&#39;arrivée ;</li><li>date de départ prévue ;</li><li>type de séjour : pension temporaire.</li></ul>
+    
+
+<h4>C. Vérifications lors de l&#39;arrivée</h4>
+    
+
+<p>Créez un tableau de contrôle ressemblant à celui-ci :</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a10-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
+            
+
+            
+            
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Élément à vérifier</th>
+                                
+                                <th>Oui</th>
+                                
+                                <th>Non</th>
+                                
+                                <th>Observation</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Document d&#39;identification original présent
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a10_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="8. Mission principale : créer la fiche d&#39;accueil de Mistral — Oui — Document d&#39;identification original présent">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a10_q01_r0_c2" data-required="true" data-row="0" data-col="2" aria-label="8. Mission principale : créer la fiche d&#39;accueil de Mistral — Non — Document d&#39;identification original présent">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a10_q01_r0_c3" data-required="true" data-row="0" data-col="3" aria-label="8. Mission principale : créer la fiche d&#39;accueil de Mistral — Observation — Document d&#39;identification original présent">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Numéro SIRE disponible
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a10_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="8. Mission principale : créer la fiche d&#39;accueil de Mistral — Oui — Numéro SIRE disponible">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a10_q01_r1_c2" data-required="true" data-row="1" data-col="2" aria-label="8. Mission principale : créer la fiche d&#39;accueil de Mistral — Non — Numéro SIRE disponible">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a10_q01_r1_c3" data-required="true" data-row="1" data-col="3" aria-label="8. Mission principale : créer la fiche d&#39;accueil de Mistral — Observation — Numéro SIRE disponible">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Coordonnées du propriétaire disponibles
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a10_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="8. Mission principale : créer la fiche d&#39;accueil de Mistral — Oui — Coordonnées du propriétaire disponibles">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a10_q01_r2_c2" data-required="true" data-row="2" data-col="2" aria-label="8. Mission principale : créer la fiche d&#39;accueil de Mistral — Non — Coordonnées du propriétaire disponibles">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a10_q01_r2_c3" data-required="true" data-row="2" data-col="3" aria-label="8. Mission principale : créer la fiche d&#39;accueil de Mistral — Observation — Coordonnées du propriétaire disponibles">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Contact en cas de problème disponible
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a10_q01_r3_c1" data-required="true" data-row="3" data-col="1" aria-label="8. Mission principale : créer la fiche d&#39;accueil de Mistral — Oui — Contact en cas de problème disponible">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a10_q01_r3_c2" data-required="true" data-row="3" data-col="2" aria-label="8. Mission principale : créer la fiche d&#39;accueil de Mistral — Non — Contact en cas de problème disponible">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a10_q01_r3_c3" data-required="true" data-row="3" data-col="3" aria-label="8. Mission principale : créer la fiche d&#39;accueil de Mistral — Observation — Contact en cas de problème disponible">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Entrée enregistrée dans le registre d&#39;élevage
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a10_q01_r4_c1" data-required="true" data-row="4" data-col="1" aria-label="8. Mission principale : créer la fiche d&#39;accueil de Mistral — Oui — Entrée enregistrée dans le registre d&#39;élevage">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a10_q01_r4_c2" data-required="true" data-row="4" data-col="2" aria-label="8. Mission principale : créer la fiche d&#39;accueil de Mistral — Non — Entrée enregistrée dans le registre d&#39;élevage">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a10_q01_r4_c3" data-required="true" data-row="4" data-col="3" aria-label="8. Mission principale : créer la fiche d&#39;accueil de Mistral — Observation — Entrée enregistrée dans le registre d&#39;élevage">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            
+            
+            
+<p>Complétez ce tableau avec les informations disponibles concernant Mistral.</p>
+    
+
+<h4>D. Observations</h4>
+    
+
+<p>Ajoutez une zone suffisamment grande pour permettre à un salarié de noter des informations utiles lors de l&#39;arrivée.</p>
+    
+
+<p>Pour cette activité, indiquez :</p>
+    
+
+<p>Document d&#39;identification original à demander au propriétaire. Entrée de Mistral à enregistrer dans le registre.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a11">
+        <h2>Activité 9 — 9. Ne pas confondre obligation et organisation interne</h2>
+        
+        
+        
+
+        
+
+        
+<p>Dans votre document, ajoutez un petit encadré :</p>
+    
+
+<p>Obligations / bonnes pratiques</p>
+    
+
+<p>Classez les éléments suivants :</p>
+    
+
+<ul><li>équidé identifié ;</li><li>document d&#39;identification accompagnant le cheval ;</li><li>enregistrement des mouvements dans le registre ;</li><li>utilisation d&#39;une fiche d&#39;accueil créée par l&#39;écurie ;</li><li>mise en page avec le logo de l&#39;écurie.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a12">
+        <h2>Activité 10 — 10. Indiquer ses sources</h2>
+        
+        
+        
+
+        
+
+        
+<p>En bas de votre document, ajoutez :</p>
+    
+
+<p>Sources consultées :</p>
+    
+
+<ul><li>IFCE – Identification des équidés ;</li><li>IFCE – Registre d&#39;élevage.</li></ul>
+    
+
+<p>Transformez les titres des deux ressources en liens cliquables vers les pages consultées.</p>
+    
+
+<h4>Besoin d&#39;aide pour créer un lien dans Writer ?</h4>
+    
+
+<p>Sélectionnez le texte puis utilisez le menu Insertion → Hyperlien.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a13">
+        <h2>Activité 11 — 11. Mission : informer le responsable</h2>
+        
+        
+        
+
+        
+
+        
+<p>Sous votre fiche, rédigez un court message professionnel de 3 à 5 lignes destiné au responsable de l&#39;écurie.</p>
+    
+
+<p>Votre message doit expliquer :</p>
+    
+
+<ul><li>ce qui manque actuellement dans le dossier de Mistral ;</li><li>ce qui doit être mis à jour dans le registre ;</li><li>pourquoi il est important de corriger ces éléments.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a14">
+        <h2>Activité 12 — 12. Transformer la fiche en modèle professionnel</h2>
+        
+        
+        
+
+        
+
+        
+<p>Améliorez la présentation de votre document :</p>
+    
+
+<ul><li>titre clairement identifiable ;</li><li>sous-titres cohérents ;</li><li>tableaux lisibles ;</li><li>marges régulières ;</li><li>police facile à lire ;</li><li>aucun élément décoratif inutile.</li></ul>
+    
+
+<p>Votre objectif est qu&#39;un salarié puisse retrouver une information en quelques secondes.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a15">
+        <h2>Activité 13 — 13. Défi — Créer une fiche réutilisable</h2>
+        
+        
+        
+
+        
+
+        
+<p>Si vous avez terminé, créez une deuxième page contenant la même fiche mais sans les informations concernant Mistral.</p>
+    
+
+<p>Elle doit pouvoir être imprimée et utilisée lors de l&#39;arrivée de n&#39;importe quel nouvel équidé.</p>
+    
+
+<p>Remplacez les informations par des zones à compléter :</p>
+    
+
+<ul><li>Nom : ____________________</li><li>N° SIRE : ____________________</li><li>Date d&#39;arrivée : ____________________</li></ul>
+    
+
+<p>Vous venez ainsi de créer un modèle de document professionnel.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a16">
+        <h2>Activité 14 — 14. Exporter le document</h2>
+        
+        
+        
+
+        
+
+        
+<p>Lorsque votre fiche est terminée :</p>
+    
+
+<p>enregistrez votre fichier Writer ;</p>
+    
+
+<p>exportez-le au format PDF ;</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a16-q01-label">Question 1 — vérifiez le PDF avant de le rendre.</h3>
+            
+
+            
+            
+                <textarea id="a16-q01" data-answer-id="a16_q01" data-required="true" aria-labelledby="a16-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Vous devez obtenir :</p>
+    
+
+<ul><li>CAPA2_S04_NOM_Prenom.odt</li><li>CAPA2_S04_NOM_Prenom.pdf</li></ul>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a17">
+        <h2>Activité 15 — 15. Rendu du travail</h2>
+        
+        
+        
+
+        
+
+        
+<p>Avant de rendre votre fichier, vérifiez que :</p>
+    
+
+<ul><li>la fiche permet d&#39;identifier clairement Mistral ;</li><li>les informations d&#39;arrivée sont présentes ;</li><li>le tableau de vérification est complété ;</li><li>les deux problèmes du dossier ont été repérés ;</li><li>vous distinguez obligations et organisation interne ;</li><li>les sources IFCE apparaissent avec des liens cliquables ;</li><li>le message destiné au responsable est rédigé ;</li><li>le document reste lisible et professionnel.</li></ul>
+    
+
+<p>Rendez :</p>
+    
+
+<p>CAPA2_S04_NOM_Prenom.pdf</p>
+    
+
+<p>Même si votre travail n&#39;est pas terminé, il doit être rendu.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a18">
+        <h2>Activité 16 — À retenir</h2>
+        
+        
+        
+
+        
+
+        
+<ul><li>Une information professionnelle doit provenir d&#39;une source identifiable et fiable.</li><li>Tout équidé doit être correctement identifié et enregistré.</li><li>Le document d&#39;identification accompagne le cheval lors de ses déplacements.</li><li>Les mouvements des équidés doivent pouvoir être retrouvés dans le registre d&#39;élevage.</li><li>Un document numérique professionnel doit permettre de retrouver rapidement les informations utiles.</li><li>Une source utilisée dans un travail doit être indiquée et, lorsque cela est possible, reliée à la ressource originale.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+</section>
+
+    </fieldset>
+    <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
+    <h2 id="course-summary-title">À retenir</h2><ul></ul>
+    <h3>Faire le point</h3><p>Relis tes réponses et vérifie les points demandés dans le bilan du cours. Tu peux revenir sur ton travail tant que le professeur ne l’a pas clôturé.</p>
+</section>
+
+    <div class="course-submit-panel">
+        <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
+        <p id="course-submit-status" role="status" aria-live="polite"></p>
+        <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
+    </div>
+</div></div>
+</div>
+<noscript><p>Active JavaScript pour charger ta copie et enregistrer tes réponses.</p></noscript>
+
+<script id="classes-data" type="application/json">
+{"college":{"nom":"Collège","classes":[{"id":"5e","nom":"5e","matieres":["techno"]},{"id":"4e","nom":"4e","matieres":["techno"]},{"id":"3e","nom":"3e","matieres":["techno"]}]},"mfr":{"nom":"MFR","classes":[{"id":"4e","nom":"4e MFR","matieres":["tim","maths"]},{"id":"3e","nom":"3e MFR","matieres":["tim","maths"]},{"id":"cap1","nom":"CAP 1","matieres":["tim"]},{"id":"cap2","nom":"CAP 2","matieres":["tim"]},{"id":"2de","nom":"2de Pro","matieres":["tim","maths"]},{"id":"1re","nom":"Bac Pro 1","matieres":["tim","maths"]},{"id":"term","nom":"Bac Pro 2","matieres":["tim","maths"]},{"id":"bts1","nom":"BTS 1","matieres":["tim"]},{"id":"bts2","nom":"BTS 2","matieres":["tim"]}]}}
+</script>
+<script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
+    </main>
+    <footer class="site-footer">
+    <p>
+        &copy; 2026
+        Portail pédagogique Technologie | TIM | Mathématiques
+    </p>
+</footer>
+</body>
+</html>

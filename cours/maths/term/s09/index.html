@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
+
+    
+    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
+    <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
+    
+
+    <title>
+        
+        Portail pédagogique Technologie | TIM | Mathématiques
+        
+    </title>
+
+    <link rel="icon" href="/tifsec-test-eleves/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/variables.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/base.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/body.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/header.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/main.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/footer.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-message.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-session.css">
+
+    
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    
+    
+
+    
+
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    
+    
+</head>
+
+<body class="student-shell student-course-shell">
+    <a class="student-skip" href="#course-intro">Aller au cours</a>
+    <p id="message" class="auth-message" role="status" aria-live="polite" hidden></p>
+    <header class="student-header" id="course-header">
+    <div class="student-header-inner">
+        <div class="student-topbar">
+            <a class="student-brand" href="/tifsec-test-eleves/eleve/"><img src="/tifsec-test-eleves/images/logo.png" width="44" height="44" alt=""><span>Mon espace<span data-profile-field="matieres"></span></span></a>
+            <div class="student-header-actions"><a class="student-home-link" href="/tifsec-test-eleves/eleve/">Mes séances</a><a id="course-login" href="/tifsec-test-eleves/connexion/">Se connecter</a><details class="student-theme-picker" id="student-theme-picker" hidden>
+    <summary>Apparence</summary>
+    <div class="student-theme-options"><label for="student-theme-select">Les couleurs de mon espace</label><select id="student-theme-select" disabled><option value="ocean">Océan · bleu</option><option value="forest">Forêt · vert</option><option value="plum">Prune · violet</option><option value="terracotta">Terre cuite · orangé</option><option value="ruby">Rubis · rouge</option><option value="slate">Ardoise · gris</option><option value="midnight">Minuit · noir</option><option value="rose">Rosée · rose</option><option value="neon">Néon · RGB sombre</option><option value="cyberpunk">Cyberpunk · cité futuriste</option><option value="minecraft">Minecraft · blocs et pixels</option><option value="farming">Farming · campagne et cultures</option></select><label class="student-theme-motion"><input type="checkbox" id="student-theme-motion"> Mettre les animations en pause</label><p id="student-theme-status" role="status" aria-live="polite">Ce choix te suivra sur les autres ordinateurs.</p><button id="student-theme-retry" type="button" hidden>Réessayer</button></div>
+</details>
+<button type="button" id="course-logout" hidden>Se déconnecter</button></div>
+        </div>
+        <div class="student-welcome-row" id="course-welcome" hidden>
+            <div><p class="student-eyebrow">Une séance à la fois, à ton rythme.</p><p class="student-course-greeting">Bonjour <span id="course-header-identity"></span></p></div>
+            <dl class="student-profile"><div><dt>Établissement</dt><dd data-profile-field="etablissement"></dd></div><div><dt>Classe</dt><dd data-profile-field="classe"></dd></div><div><dt>Inscription</dt><dd data-profile-field="validation"></dd></div></dl>
+        </div>
+    </div>
+</header>
+
+    <main class="student-course-main" id="student-course-main">
+
+<div id="course-work" data-etablissement="mfr" data-matiere="maths" data-classe="term" data-seance="S09" data-saving-enabled="true" data-collaboration-enabled="true">
+    <div class="course-save-panel course-toolbar">
+        <p id="course-identity" hidden></p>
+        <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+    </div>
+    <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
+        <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
+        <p id="group-status" role="status">Les groupes sont propres à chaque séance. Connecte-toi avec ton compte élève pour choisir ta copie.</p>
+        <div id="group-controls" hidden>
+            <label for="group-copy">Copie de cette séance</label><select id="group-copy"></select>
+            <button type="button" id="group-refresh">Actualiser les groupes</button>
+            <div id="group-create-panel" hidden>
+                <p>Choisis un ou deux camarades. Chacun doit accepter pour partager les réponses. Le groupe reprend ton travail actuel ; ta copie individuelle reste dans l’historique.</p>
+                <div id="group-classmates" class="collaboration-roster"></div>
+                <button type="button" id="group-create">Envoyer les invitations</button>
+            </div>
+        </div>
+    </section>
+    <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
+    <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
+
+
+
+<div class="course-columns">
+    <aside class="course-navigation" aria-label="Étapes de la séance">
+        <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
+        <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
+        <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a03">1. Retour rapide sur l&#39;évaluation</a></li><li><a href="#a04">2. Comprendre une variation</a></li><li><a href="#a05">Exercice : Comparer deux fréquences</a></li><li><a href="#a06">3. Découvrir le nombre dérivé</a></li><li><a href="#a07">Observer une parabole et sa tangente</a></li><li><a href="#a08">Exercice : Observer une évolution locale</a></li><li><a href="#a09">4. Calculer une dérivée</a></li><li><a href="#a10">Exercice : Appliquer les règles</a></li><li><a href="#a11">5. Utiliser la dérivée pour rechercher un minimum</a></li><li><a href="#a12">Exercice : Étudier le signe de la dérivée</a></li><li><a href="#a13">Exercice : Conclure professionnellement</a></li><li><a href="#a14">6. Bilan de la séance</a></li><li><a href="#a15">À retenir</a></li><li><a href="#a16">Pour aller plus loin : défi facultatif — facultatif</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+    </aside>
+
+<div class="course-reading">
+<!-- ========== INTRODUCTION DU COURS ========== -->
+
+<header class="cours-intro" id="course-intro">
+    <h1>Découvrir la dérivation – Comment évolue un coût ?</h1>
+
+    
+    <p class="cours-theme">
+        <strong>Thème :</strong> variation et taux de variation.
+    </p>
+    
+
+    
+    <p class="cours-problematique">
+        <strong>Problématique :</strong> Découvrir la dérivation – Comment évolue un coût ?
+    </p>
+    
+
+    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : Comprendre ce qu&#39;est une dérivée et à quoi elle sert.</p></section>
+    
+    <section><h2>Dans la vie quotidienne</h2><p>Déplace le curseur pour observer comment évoluent le coût et la pente de la tangente. C(x) = 5x² - 40x + 260</p></section>
+    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    
+    
+    <section class="cours-objectifs">
+        <h2>Ce que vous allez apprendre</h2>
+        <ul>
+            
+            <li>Comprendre ce qu&#39;est une dérivée et à quoi elle sert.</li>
+            
+            <li>Faire la différence entre un coût et son évolution.</li>
+            
+            <li>Calculer la dérivée d&#39;une fonction simple.</li>
+            
+            <li>Utiliser la dérivée pour déterminer si une fonction augmente ou diminue.</li>
+            
+            <li>Retrouver et justifier un coût minimal.</li>
+            
+        </ul>
+
+        <h2>Ce que vous allez apprendre à faire</h2>
+        <ul>
+            
+            <li>Calculer un taux de variation.</li>
+            
+            <li>Interpréter le signe d&#39;une dérivée.</li>
+            
+            <li>Dériver une fonction du type ax² + bx + c.</li>
+            
+            <li>Résoudre une équation du type f&#39;(x) = 0.</li>
+            
+            <li>Lire et compléter un tableau de variations.</li>
+            
+        </ul>
+    </section>
+    
+<h4>Ce que vous allez apprendre</h4>
+    
+
+<ul><li>Comprendre ce qu&#39;est une dérivée et à quoi elle sert.</li><li>Faire la différence entre un coût et son évolution.</li><li>Calculer la dérivée d&#39;une fonction simple.</li><li>Utiliser la dérivée pour déterminer si une fonction augmente ou diminue.</li><li>Retrouver et justifier un coût minimal.</li></ul>
+    
+
+<h4>Ce que vous allez apprendre à faire</h4>
+    
+
+<ul><li>Calculer un taux de variation.</li><li>Interpréter le signe d&#39;une dérivée.</li><li>Dériver une fonction du type ax² + bx + c.</li><li>Résoudre une équation du type f&#39;(x) = 0.</li><li>Lire et compléter un tableau de variations.</li></ul>
+    
+
+<p>La notion du jour : la dérivée</p>
+    
+
+<p>Qu&#39;est-ce que c&#39;est ? La dérivée permet de décrire comment une grandeur évolue localement lorsque la variable change.</p>
+    
+
+<p>À quoi ça sert ? À savoir si un coût augmente ou diminue, et à repérer un minimum ou un maximum.</p>
+    
+
+<p>Exemple professionnel : dans un centre équestre, un modèle de coût peut diminuer lorsque l&#39;organisation s&#39;améliore, puis augmenter lorsque les interventions deviennent trop nombreuses.</p>
+    
+
+<p>La dérivée permet d&#39;étudier ce changement sans calculer tous les coûts un par un.</p>
+    
+
+
+    
+    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
+<p>Dans cette page du ministère, retrouve le programme ou le référentiel de ta formation. Les objectifs précis étudiés aujourd’hui sont indiqués dans le cours.</p>
+    
+
+<p><a href="https://chlorofil.fr/diplomes/secondaire/bac-pro/1re-tle/tronc-commun" target="_blank" rel="noopener noreferrer">Consulter les programmes et attendus officiels</a></p>
+
+
+</div></details>
+
+</header>
+
+    <fieldset id="course-answers" class="course-answer-fields" disabled>
+        <legend>Réponses aux activités</legend>
+        <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
+
+<section class="cours-activites">
+    
+    <article class="cours-activite" id="a03">
+        <h2>Activité 1 — 1. Retour rapide sur l&#39;évaluation</h2>
+        
+        
+        
+
+        
+
+        
+<p>Durée indicative : 4 minutes. Calculatrice interdite.</p>
+    
+
+<p>Pourquoi ce rappel ? Nous allons retrouver les méthodes nécessaires pour comprendre la nouvelle notion.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a03-q01-label">Question 1 — Calculer T(8) lorsque T(x) = 15x + 80.</h3>
+            
+
+            
+            
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a03-q02-label">Question 2 — Quel est le minimum de C(x) = 4(x - 5)² + 160 ?</h3>
+            
+
+            
+            
+                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a03-q03-label">Question 3 — Que signifie l&#39;inégalité C(x) ≤ 176 ?</h3>
+            
+
+            
+            
+                <textarea id="a03-q03" data-answer-id="a03_q03" data-required="true" aria-labelledby="a03-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a04">
+        <h2>Activité 2 — 2. Comprendre une variation</h2>
+        
+        
+        
+
+        
+
+        
+<p>Durée indicative : 9 minutes. Calculatrice autorisée.</p>
+    
+
+<p>Notion : variation et taux de variation.</p>
+    
+
+<p>Qu&#39;est-ce que c&#39;est ? Une variation mesure la différence entre deux valeurs. Le taux de variation mesure cette différence par unité de x.</p>
+    
+
+<p>À quoi ça sert ? À comparer la façon dont un coût évolue entre deux niveaux d&#39;activité.</p>
+    
+
+<p>Un centre équestre utilise le modèle fictif suivant pour prévoir le coût mensuel d&#39;entretien de sa carrière :</p>
+    
+
+<p>C(x) = 5x² - 40x + 260</p>
+    
+
+<p>x représente le nombre d&#39;interventions mensuelles et C(x) le coût estimé en euros.</p>
+    
+
+<p>Le modèle est étudié mathématiquement sur l&#39;intervalle [1 ; 8]. En pratique, le nombre d&#39;interventions doit être entier.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a05">
+        <h2>Activité 3 — Exercice : Comparer deux fréquences</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi cet exercice ? Nous allons calculer des coûts, puis mesurer comment ils changent.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a05-q01-label">Question 1 — Calculer C(2) et C(3).</h3>
+            
+
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a05-q02-label">Question 2 — De combien le coût varie-t-il lorsque l&#39;on passe de deux à trois interventions ?</h3>
+            
+
+            
+            
+                <textarea id="a05-q02" data-answer-id="a05_q02" data-required="true" aria-labelledby="a05-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a05-q03-label">Question 3 — Calculer le taux de variation entre deux et trois interventions.</h3>
+            
+
+            
+            
+                <textarea id="a05-q03" data-answer-id="a05_q03" data-required="true" aria-labelledby="a05-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>À comprendre</p>
+    
+
+<p>Le taux de variation entre deux valeurs a et b est :</p>
+    
+
+<p>(f(b) - f(a)) / (b - a)</p>
+    
+
+<p>Il décrit une évolution moyenne entre deux valeurs.</p>
+    
+
+<p>Un taux négatif signifie une diminution moyenne ; un taux positif signifie une augmentation moyenne.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a06">
+        <h2>Activité 4 — 3. Découvrir le nombre dérivé</h2>
+        
+        
+        
+
+        
+
+        
+<p>Durée indicative : 10 minutes. Calculatrice autorisée.</p>
+    
+
+<p>Notion : nombre dérivé.</p>
+    
+
+<p>Qu&#39;est-ce que c&#39;est ? Le nombre dérivé décrit l&#39;évolution locale d&#39;une fonction autour d&#39;une valeur précise.</p>
+    
+
+<p>À quoi ça sert ? Il permet de connaître la pente de la courbe à un endroit donné.</p>
+    
+
+<p>Graphiquement, le nombre dérivé est le coefficient directeur de la tangente à la courbe.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a07">
+        <h2>Activité 5 — Observer une parabole et sa tangente</h2>
+        
+        
+        
+
+        
+
+        
+<p>Déplace le curseur pour observer comment évoluent le coût et la pente de la tangente. C(x) = 5x² - 40x + 260</p>
+    
+
+<p>Nombre d&#39;interventions</p>
+    
+
+<p>Coût en €</p>
+    
+
+<p>● Courbe du coût</p>
+    
+
+<p>— Tangente</p>
+    
+
+<p>● Minimum</p>
+    
+
+<p>Nombre d&#39;interventions : 3</p>
+    
+
+<p>Coût C(x)</p>
+    
+
+<p>185 €</p>
+    
+
+<p>Dérivée C&#39;(x)</p>
+    
+
+<p>−10</p>
+    
+
+<p>Évolution locale</p>
+    
+
+<p>Décroissante</p>
+    
+
+<p>La tangente descend : la dérivée est négative.</p>
+    
+
+<p>Le modèle est étudié sur un intervalle continu pour comprendre la dérivée. Dans la réalité, les interventions sont comptées en nombres entiers.</p>
+    
+
+<p>Nous conservons notre fonction :</p>
+    
+
+<p>C(x) = 5x² - 40x + 260</p>
+    
+
+<p>Nous allons regarder ce qui se passe au voisinage de x = 3.</p>
+    
+
+<p>Pour cela, on compare C(3) et C(3 + h), où h représente un petit écart non nul.</p>
+    
+
+<p>Le taux de variation obtenu est :</p>
+    
+
+<p>(C(3 + h) - C(3)) / h = -10 + 5h</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a08">
+        <h2>Activité 6 — Exercice : Observer une évolution locale</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi cet exercice ? Nous allons observer ce qui arrive au taux de variation lorsque les deux valeurs étudiées deviennent très proches.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a08-q01-label">Question 1 — Calculer -10 + 5h pour h = 1 puis h = 0,1.</h3>
+            
+
+            
+            
+                <textarea id="a08-q01" data-answer-id="a08_q01" data-required="true" aria-labelledby="a08-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a08-q02-label">Question 2 — Vers quelle valeur se rapproche le taux lorsque h se rapproche de zéro ?</h3>
+            
+
+            
+            
+                <textarea id="a08-q02" data-answer-id="a08_q02" data-required="true" aria-labelledby="a08-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a08-q03-label">Question 3 — Que signifie le signe négatif de C&#39;(3) ?</h3>
+            
+
+            
+            
+                <textarea id="a08-q03" data-answer-id="a08_q03" data-required="true" aria-labelledby="a08-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>La différence à retenir</p>
+    
+
+<p>f(x) : valeur de la fonction, par exemple un coût en euros.</p>
+    
+
+<p>f&#39;(x) : dérivée de la fonction, par exemple une évolution locale en euros par intervention.</p>
+    
+
+<p>f&#39;(3) : nombre dérivé, c&#39;est-à-dire la pente de la courbe au voisinage de x = 3.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a09">
+        <h2>Activité 7 — 4. Calculer une dérivée</h2>
+        
+        
+        
+
+        
+
+        
+<p>Durée indicative : 10 minutes. Calculatrice interdite.</p>
+    
+
+<p>Notion : règles de dérivation.</p>
+    
+
+<p>Qu&#39;est-ce que c&#39;est ? Ce sont des règles permettant de calculer directement la dérivée d&#39;une fonction.</p>
+    
+
+<p>À quoi ça sert ? Elles évitent de recommencer tous les calculs de taux de variation.</p>
+    
+
+<p>Les trois règles du jour</p>
+    
+
+<ul><li>La dérivée d&#39;une constante est 0.</li><li>La dérivée de ax est a.</li><li>La dérivée de ax² est 2ax.</li></ul>
+    
+
+<p>Donc, si f(x) = ax² + bx + c, alors :</p>
+    
+
+<p>f&#39;(x) = 2ax + b</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a10">
+        <h2>Activité 8 — Exercice : Appliquer les règles</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi cet exercice ? Nous allons apprendre à utiliser ces règles avant de les appliquer à notre situation professionnelle.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a10-q01-label">Question 1 — Déterminer la dérivée de f(x) = 7x + 12.</h3>
+            
+
+            
+            
+                <textarea id="a10-q01" data-answer-id="a10_q01" data-required="true" aria-labelledby="a10-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a10-q02-label">Question 2 — Déterminer la dérivée de g(x) = 3x².</h3>
+            
+
+            
+            
+                <textarea id="a10-q02" data-answer-id="a10_q02" data-required="true" aria-labelledby="a10-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a10-q03-label">Question 3 — Déterminer la dérivée de h(x) = 4x² - 6x + 9.</h3>
+            
+
+            
+            
+                <textarea id="a10-q03" data-answer-id="a10_q03" data-required="true" aria-labelledby="a10-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a10-q04-label">Question 4 — Déterminer la dérivée de C(x) = 5x² - 40x + 260.</h3>
+            
+
+            
+            
+                <textarea id="a10-q04" data-answer-id="a10_q04" data-required="true" aria-labelledby="a10-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            <h3 id="a10-q05-label">Question 5 — Calculer C&#39;(3). Retrouve-t-on le résultat de l&#39;activité précédente ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q05" data-answer-id="a10_q05" data-required="true" aria-labelledby="a10-q05-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a11">
+        <h2>Activité 9 — 5. Utiliser la dérivée pour rechercher un minimum</h2>
+        
+        
+        
+
+        
+
+        
+<p>Durée indicative : 12 minutes. Calculatrice autorisée.</p>
+    
+
+<p>Notion : signe de la dérivée et variations d&#39;une fonction.</p>
+    
+
+<p>Qu&#39;est-ce que c&#39;est ? Le signe de la dérivée indique si une fonction augmente ou diminue.</p>
+    
+
+<p>À quoi ça sert ? À repérer les périodes où un coût diminue, augmente ou atteint un minimum.</p>
+    
+
+<p>La règle à comprendre</p>
+    
+
+<ul><li>Si la dérivée est négative sur un intervalle, la fonction y est décroissante.</li><li>Si la dérivée est positive sur un intervalle, la fonction y est croissante.</li><li>Si la dérivée passe de négative à positive, la fonction atteint un minimum au point de changement.</li></ul>
+    
+
+<p>Une dérivée nulle indique une pente horizontale, mais ne suffit pas à elle seule pour affirmer qu&#39;il existe un minimum.</p>
+    
+
+<p>Nous conservons :</p>
+    
+
+<p>C(x) = 5x² - 40x + 260</p>
+    
+
+<p>Nous avons trouvé :</p>
+    
+
+<p>C&#39;(x) = 10x - 40</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a12">
+        <h2>Activité 10 — Exercice : Étudier le signe de la dérivée</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi cet exercice ? Nous allons déterminer où la pente devient nulle et comment elle change de signe.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a12-q01-label">Question 1 — Résoudre l&#39;équation C&#39;(x) = 0.</h3>
+            
+
+            
+            
+                <textarea id="a12-q01" data-answer-id="a12_q01" data-required="true" aria-labelledby="a12-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a12-q02-label">Question 2 — Calculer C&#39;(3) et C&#39;(5). Que constatez-vous ?</h3>
+            
+
+            
+            
+                <textarea id="a12-q02" data-answer-id="a12_q02" data-required="true" aria-labelledby="a12-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a12-q03-label">Question 3 — Compléter le tableau de variations et expliquer le sens des flèches.</h3>
+            
+
+            
+            
+                <textarea id="a12-q03" data-answer-id="a12_q03" data-required="true" aria-labelledby="a12-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">x</th><th scope="col">1</th><th scope="col">4</th><th scope="col">8</th></tr></thead><tbody><tr><td>Signe de C&#39;(x)</td><td>−</td><td>0</td><td>+</td></tr><tr><td>Variation de C</td><td>↘</td><td>Minimum</td><td>↗</td></tr><tr><td>Valeur de C</td><td>225 €</td><td>180 €</td><td>260 €</td></tr></tbody></table></div>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a13">
+        <h2>Activité 11 — Exercice : Conclure professionnellement</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pourquoi cet exercice ? Nous allons transformer le résultat mathématique en une recommandation utilisable par le responsable du centre équestre.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a13-q01-label">Question 1 — Quel est le coût minimal ? Pour combien d&#39;interventions ? Justifier à l&#39;aide de la dérivée.</h3>
+            
+
+            
+            
+                <textarea id="a13-q01" data-answer-id="a13_q01" data-required="true" aria-labelledby="a13-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a13-q02-label">Question 2 — Rédiger une recommandation de deux ou trois phrases au responsable.</h3>
+            
+
+            
+            
+                <textarea id="a13-q02" data-answer-id="a13_q02" data-required="true" aria-labelledby="a13-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Réflexe Bac : rechercher un minimum avec la dérivée</p>
+    
+
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a13-q03-label">Question 3 — Calculer la dérivée f&#39;(x).</h3>
+            
+
+            
+            
+                <textarea id="a13-q03" data-answer-id="a13_q03" data-required="true" aria-labelledby="a13-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a13-q04-label">Question 4 — Résoudre f&#39;(x) = 0.</h3>
+            
+
+            
+            
+                <textarea id="a13-q04" data-answer-id="a13_q04" data-required="true" aria-labelledby="a13-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            <h3 id="a13-q05-label">Question 5 — Étudier le signe de f&#39;(x).</h3>
+            
+
+            
+            
+                <textarea id="a13-q05" data-answer-id="a13_q05" data-required="true" aria-labelledby="a13-q05-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            <h3 id="a13-q06-label">Question 6 — En déduire les variations de f.</h3>
+            
+
+            
+            
+                <textarea id="a13-q06" data-answer-id="a13_q06" data-required="true" aria-labelledby="a13-q06-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q07">
+            
+            <h3 id="a13-q07-label">Question 7 — Calculer le minimum et l&#39;interpréter.</h3>
+            
+
+            
+            
+                <textarea id="a13-q07" data-answer-id="a13_q07" data-required="true" aria-labelledby="a13-q07-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a14">
+        <h2>Activité 12 — 6. Bilan de la séance</h2>
+        
+        
+        
+
+        
+
+        
+<p>Durée indicative : 4 minutes. Calculatrice interdite.</p>
+    
+
+<p>Pourquoi ce bilan ? Nous allons vérifier que les idées essentielles sont comprises avant de passer à des fonctions plus complexes.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a14-q01-label">Question 1 — Quelle différence existe-t-il entre C(x) et C&#39;(x) ?</h3>
+            
+
+            
+            
+                <textarea id="a14-q01" data-answer-id="a14_q01" data-required="true" aria-labelledby="a14-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a14-q02-label">Question 2 — Déterminer la dérivée de f(x) = 3x² - 8x + 5.</h3>
+            
+
+            
+            
+                <textarea id="a14-q02" data-answer-id="a14_q02" data-required="true" aria-labelledby="a14-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a14-q03-label">Question 3 — Que signifie une dérivée négative sur un intervalle ?</h3>
+            
+
+            
+            
+                <textarea id="a14-q03" data-answer-id="a14_q03" data-required="true" aria-labelledby="a14-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a15">
+        <h2>Activité 13 — À retenir</h2>
+        
+        
+        
+
+        
+
+        
+<ul><li>Le taux de variation mesure une évolution moyenne entre deux valeurs.</li><li>La dérivée décrit l&#39;évolution locale d&#39;une fonction.</li><li>Le nombre dérivé f&#39;(a) est la pente de la tangente au point d&#39;abscisse a.</li><li>Si f(x) = ax² + bx + c, alors f&#39;(x) = 2ax + b.</li><li>Une dérivée négative indique une fonction décroissante ; une dérivée positive indique une fonction croissante.</li><li>Lorsque la dérivée passe de négative à positive, la fonction atteint un minimum.</li><li>Le résultat mathématique doit toujours être interprété dans le contexte professionnel.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a16">
+        <h2>Activité 14 — Pour aller plus loin : défi facultatif</h2>
+        <p class="course-optional">Pour aller plus loin — activité facultative.</p>
+        
+        
+
+        
+
+        
+<p>Calculatrice autorisée. À réaliser uniquement si les activités précédentes sont terminées.</p>
+    
+
+<p>Une autre structure utilise le modèle fictif :</p>
+    
+
+<p>F(x) = 2x³ - 15x² + 24x + 100</p>
+    
+
+<p>x est un niveau d&#39;activité réel compris entre 0 et 6 et F(x) un coût estimé en euros.</p>
+    
+
+<p>Nouvelle règle : la dérivée de ax³ est 3ax².</p>
+    
+
+<p>Pourquoi ce défi ? Nous allons découvrir que la dérivation permet aussi d&#39;étudier une fonction du troisième degré, qui peut posséder plusieurs changements de variation.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a16-q01-label">Question 1 — Déterminer F&#39;(x).</h3>
+            
+
+            
+            
+                <textarea id="a16-q01" data-answer-id="a16_q01" data-required="false" aria-labelledby="a16-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a16-q02-label">Question 2 — Vérifier que F&#39;(x) = 6(x - 1)(x - 4).</h3>
+            
+
+            
+            
+                <textarea id="a16-q02" data-answer-id="a16_q02" data-required="false" aria-labelledby="a16-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a16-q03-label">Question 3 — Déterminer le signe de F&#39;(x) sur [0 ; 6].</h3>
+            
+
+            
+            
+                <textarea id="a16-q03" data-answer-id="a16_q03" data-required="false" aria-labelledby="a16-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>En déduire les variations de F.</p>
+    
+
+
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a16-q04-label">Question 4 — Calculer F(0), F(1), F(4) et F(6), puis déterminer le minimum global.</h3>
+            
+
+            
+            
+                <textarea id="a16-q04" data-answer-id="a16_q04" data-required="false" aria-labelledby="a16-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+    </article>
+    
+</section>
+
+    </fieldset>
+    <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
+    <h2 id="course-summary-title">À retenir</h2><ul></ul>
+    <h3>Faire le point</h3><p>Relis tes réponses et vérifie les points demandés dans le bilan du cours. Tu peux revenir sur ton travail tant que le professeur ne l’a pas clôturé.</p>
+</section>
+
+    <div class="course-submit-panel">
+        <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
+        <p id="course-submit-status" role="status" aria-live="polite"></p>
+        <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
+    </div>
+</div></div>
+</div>
+<noscript><p>Active JavaScript pour charger ta copie et enregistrer tes réponses.</p></noscript>
+
+<script id="classes-data" type="application/json">
+{"college":{"nom":"Collège","classes":[{"id":"5e","nom":"5e","matieres":["techno"]},{"id":"4e","nom":"4e","matieres":["techno"]},{"id":"3e","nom":"3e","matieres":["techno"]}]},"mfr":{"nom":"MFR","classes":[{"id":"4e","nom":"4e MFR","matieres":["tim","maths"]},{"id":"3e","nom":"3e MFR","matieres":["tim","maths"]},{"id":"cap1","nom":"CAP 1","matieres":["tim"]},{"id":"cap2","nom":"CAP 2","matieres":["tim"]},{"id":"2de","nom":"2de Pro","matieres":["tim","maths"]},{"id":"1re","nom":"Bac Pro 1","matieres":["tim","maths"]},{"id":"term","nom":"Bac Pro 2","matieres":["tim","maths"]},{"id":"bts1","nom":"BTS 1","matieres":["tim"]},{"id":"bts2","nom":"BTS 2","matieres":["tim"]}]}}
+</script>
+<script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
+    </main>
+    <footer class="site-footer">
+    <p>
+        &copy; 2026
+        Portail pédagogique Technologie | TIM | Mathématiques
+    </p>
+</footer>
+</body>
+</html>

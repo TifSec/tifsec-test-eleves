@@ -1,14 +1,26 @@
+const publicCourses = new Map();
+const maximumCourses = 6;
+const freshness = 5 * 60 * 1000;
+
 export async function loadCoursePreview(root, lesson, signal, isCurrent) {
     if (!lesson.url?.startsWith('/') || lesson.url.startsWith('//') || /[\\\s]/.test(lesson.url)) throw new Error('invalid_url');
-    const response = await fetch(lesson.url, { credentials: 'same-origin', cache: 'no-cache', signal });
-    if (!response.ok) throw new Error('course_unavailable');
-    const html = await response.text();
+    const key = lesson.url + '|' + (lesson.version || '');
+    let entry = publicCourses.get(key);
+    if (!entry || Date.now() - entry.time >= freshness) {
+        const response = await fetch(lesson.url, { credentials: 'same-origin', cache: 'no-cache', signal });
+        if (!response.ok) throw new Error('course_unavailable');
+        entry = { html: await response.text(), time: Date.now() };
+    }
+    const html = entry.html;
     if (!isCurrent()) return false;
     const course = new DOMParser().parseFromString(html, 'text/html');
     const identity = course.getElementById('course-work')?.dataset;
     if (!identity || !['etablissement', 'matiere', 'classe', 'seance'].every(key => identity[key] === lesson[key])) throw new Error('course_mismatch');
     const sections = course.querySelectorAll('.cours-intro, .cours-activites, .cours-synthese');
     if (!sections.length) throw new Error('course_unavailable');
+    // Uniquement le HTML public original : jamais les notes privées ni les réponses.
+    publicCourses.delete(key); publicCourses.set(key, entry);
+    if (publicCourses.size > maximumCourses) publicCourses.delete(publicCourses.keys().next().value);
     const columns = document.createElement('div'); columns.className = 'course-columns';
     const navigation = document.createElement('aside'); navigation.className = 'course-navigation';
     const heading = document.createElement('h2'); heading.textContent = 'Étapes de la séance';

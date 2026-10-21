@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
+
+    
+    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
+    <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
+    
+
+    <title>
+        
+        Portail pédagogique Technologie | TIM | Mathématiques
+        
+    </title>
+
+    <link rel="icon" href="/tifsec-test-eleves/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/variables.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/base.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/body.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/header.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/main.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/footer.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-message.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-session.css">
+
+    
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    
+    
+
+    
+
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    
+    
+</head>
+
+<body class="student-shell student-course-shell">
+    <a class="student-skip" href="#course-intro">Aller au cours</a>
+    <p id="message" class="auth-message" role="status" aria-live="polite" hidden></p>
+    <header class="student-header" id="course-header">
+    <div class="student-header-inner">
+        <div class="student-topbar">
+            <a class="student-brand" href="/tifsec-test-eleves/eleve/"><img src="/tifsec-test-eleves/images/logo.png" width="44" height="44" alt=""><span>Mon espace<span data-profile-field="matieres"></span></span></a>
+            <div class="student-header-actions"><a class="student-home-link" href="/tifsec-test-eleves/eleve/">Mes séances</a><a id="course-login" href="/tifsec-test-eleves/connexion/">Se connecter</a><details class="student-theme-picker" id="student-theme-picker" hidden>
+    <summary>Apparence</summary>
+    <div class="student-theme-options"><label for="student-theme-select">Les couleurs de mon espace</label><select id="student-theme-select" disabled><option value="ocean">Océan · bleu</option><option value="forest">Forêt · vert</option><option value="plum">Prune · violet</option><option value="terracotta">Terre cuite · orangé</option><option value="ruby">Rubis · rouge</option><option value="slate">Ardoise · gris</option><option value="midnight">Minuit · noir</option><option value="rose">Rosée · rose</option><option value="neon">Néon · RGB sombre</option><option value="cyberpunk">Cyberpunk · cité futuriste</option><option value="minecraft">Minecraft · blocs et pixels</option><option value="farming">Farming · campagne et cultures</option></select><label class="student-theme-motion"><input type="checkbox" id="student-theme-motion"> Mettre les animations en pause</label><p id="student-theme-status" role="status" aria-live="polite">Ce choix te suivra sur les autres ordinateurs.</p><button id="student-theme-retry" type="button" hidden>Réessayer</button></div>
+</details>
+<button type="button" id="course-logout" hidden>Se déconnecter</button></div>
+        </div>
+        <div class="student-welcome-row" id="course-welcome" hidden>
+            <div><p class="student-eyebrow">Une séance à la fois, à ton rythme.</p><p class="student-course-greeting">Bonjour <span id="course-header-identity"></span></p></div>
+            <dl class="student-profile"><div><dt>Établissement</dt><dd data-profile-field="etablissement"></dd></div><div><dt>Classe</dt><dd data-profile-field="classe"></dd></div><div><dt>Inscription</dt><dd data-profile-field="validation"></dd></div></dl>
+        </div>
+    </div>
+</header>
+
+    <main class="student-course-main" id="student-course-main">
+
+<div id="course-work" data-etablissement="college" data-matiere="techno" data-classe="5e" data-seance="S01" data-saving-enabled="true" data-collaboration-enabled="true">
+    <div class="course-save-panel course-toolbar">
+        <p id="course-identity" hidden></p>
+        <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+    </div>
+    <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
+        <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
+        <p id="group-status" role="status">Les groupes sont propres à chaque séance. Connecte-toi avec ton compte élève pour choisir ta copie.</p>
+        <div id="group-controls" hidden>
+            <label for="group-copy">Copie de cette séance</label><select id="group-copy"></select>
+            <button type="button" id="group-refresh">Actualiser les groupes</button>
+            <div id="group-create-panel" hidden>
+                <p>Choisis un ou deux camarades. Chacun doit accepter pour partager les réponses. Le groupe reprend ton travail actuel ; ta copie individuelle reste dans l’historique.</p>
+                <div id="group-classmates" class="collaboration-roster"></div>
+                <button type="button" id="group-create">Envoyer les invitations</button>
+            </div>
+        </div>
+    </section>
+    <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
+    <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
+
+
+
+<div class="course-columns">
+    <aside class="course-navigation" aria-label="Étapes de la séance">
+        <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
+        <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
+        <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a02">1. Une année pour apprendre à réfléchir</a></li><li><a href="#a03">2. Peut-on donner une mauvaise réponse ?</a></li><li><a href="#a04">3. Le rôle du professeur</a></li><li><a href="#a05">4. Que faire lorsque je suis bloqué ?</a></li><li><a href="#a06">5. Travailler ensemble, mais dans le calme</a></li><li><a href="#a07">6. Comment serez-vous évalués ?</a></li><li><a href="#a08">7. Votre travail à chaque séance</a></li><li><a href="#a09">8. Premier défi : faire tenir une feuille debout</a></li><li><a href="#a10">9. Ce qui compte dans le défi</a></li><li><a href="#a11">10. Ce petit défi ressemble beaucoup au cours de Technologie</a></li><li><a href="#a12">11. Les règles essentielles du cours</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+    </aside>
+
+<div class="course-reading">
+<!-- ========== INTRODUCTION DU COURS ========== -->
+
+<header class="cours-intro" id="course-intro">
+    <h1>Comment allons-nous travailler en Technologie cette année ?</h1>
+
+    
+    <p class="cours-theme">
+        <strong>Thème :</strong> Technologie — Comment allons-nous travailler en Technologie cette année ?
+    </p>
+    
+
+    
+    <p class="cours-problematique">
+        <strong>Problématique :</strong> Comment allons-nous travailler en Technologie cette année ?
+    </p>
+    
+
+    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Cette année, nous allons observer, démonter, comparer, mesurer, expérimenter, réparer, programmer et surtout essayer de comprendre comment et pourquoi les objets et les systèmes qui nous entourent fonctionnent.</p></section>
+    
+    <section><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
+    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    
+    
+    <section class="cours-objectifs">
+        <h2>Ce que vous allez apprendre</h2>
+        <ul>
+            
+        </ul>
+
+        <h2>Ce que vous allez apprendre à faire</h2>
+        <ul>
+            
+        </ul>
+    </section>
+    
+<h4>Objectif : Découvrir le fonctionnement du cours de Technologie, les méthodes de travail et la manière dont votre travail sera évalué tout au long de l&#39;année</h4>
+    
+
+<p>Bienvenue en Technologie !</p>
+    
+
+<p>Cette année, nous allons observer, démonter, comparer, mesurer, expérimenter, réparer, programmer et surtout essayer de comprendre comment et pourquoi les objets et les systèmes qui nous entourent fonctionnent.</p>
+    
+
+<p>Mais avant de commencer, il faut comprendre une chose importante :</p>
+    
+
+<p>En Technologie, le professeur ne vous demandera pas seulement de connaître des réponses. Il vous demandera surtout d&#39;apprendre à les chercher.</p>
+    
+
+
+    
+    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
+<p>Dans cette page du ministère, retrouve le programme ou le référentiel de ta formation. Les objectifs précis étudiés aujourd’hui sont indiqués dans le cours.</p>
+    
+
+<p><a href="https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4" target="_blank" rel="noopener noreferrer">Consulter les programmes et attendus officiels</a></p>
+
+
+</div></details>
+
+</header>
+
+    <fieldset id="course-answers" class="course-answer-fields" disabled>
+        <legend>Réponses aux activités</legend>
+        <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
+
+<section class="cours-activites">
+    
+    <article class="cours-activite" id="a02">
+        <h2>Activité 1 — 1. Une année pour apprendre à réfléchir</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pendant les cours, vous rencontrerez régulièrement des problèmes pour lesquels la solution ne sera pas donnée immédiatement.</p>
+    
+
+<p>Vous devrez :</p>
+    
+
+<ul><li>observer ;</li><li>vous poser des questions ;</li><li>proposer des idées ;</li><li>essayer ;</li><li>vous tromper parfois ;</li><li>comprendre pourquoi cela ne fonctionne pas ;</li><li>modifier votre idée ;</li><li>essayer à nouveau ;</li><li>expliquer finalement ce que vous avez compris.</li></ul>
+    
+
+<p>Il n&#39;est donc pas nécessaire de trouver la bonne solution immédiatement.</p>
+    
+
+<p>Une réponse qui ne fonctionne pas peut être très utile si elle vous permet de comprendre quelque chose et d&#39;imaginer une nouvelle solution.</p>
+    
+
+<p>Je préfère un élève qui cherche, se trompe, réfléchit et recommence plutôt qu&#39;un élève qui attend simplement qu&#39;on lui donne la réponse.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a03">
+        <h2>Activité 2 — 2. Peut-on donner une mauvaise réponse ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Lorsque vous réfléchissez à un problème, vous avez le droit de proposer une idée dont vous n&#39;êtes pas certain.</p>
+    
+
+<p>Le plus important est de pouvoir expliquer :</p>
+    
+
+<ul><li>ce que vous avez pensé ;</li><li>pourquoi vous avez essayé cette solution ;</li><li>ce que vous avez observé ;</li><li>et ce que vous pourriez changer si elle ne fonctionne pas.</li></ul>
+    
+
+<p>Une proposition peut être incomplète, mal formulée ou finalement ne pas fonctionner. Ce n&#39;est pas grave si elle permet de poursuivre la réflexion.</p>
+    
+
+<p>En revanche, une réponse copiée sans être comprise ne montre pas votre raisonnement.</p>
+    
+
+<p>Dans ce cours, ce n&#39;est donc pas seulement la réponse finale qui compte : le chemin utilisé pour y arriver est important.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a04">
+        <h2>Activité 3 — 3. Le rôle du professeur</h2>
+        
+        
+        
+
+        
+
+        
+<p>Le professeur sera présent pour vous guider, mais il ne donnera pas directement les solutions aux problèmes proposés.</p>
+    
+
+<p>Il pourra :</p>
+    
+
+<ul><li>reformuler une consigne ;</li><li>vous poser une nouvelle question ;</li><li>vous aider à observer un élément que vous n&#39;aviez pas remarqué ;</li><li>vous rappeler une information déjà présente dans le cours ;</li><li>vous aider à découper un problème trop compliqué en plusieurs problèmes plus simples.</li></ul>
+    
+
+<p>Mais si la réponse peut être trouvée grâce aux informations du cours, aux documents fournis, à vos observations ou à votre réflexion, le professeur ne vous donnera pas directement cette réponse.</p>
+    
+
+<p>Il pourra par exemple répondre à une question par une autre question :</p>
+    
+
+<p>« Qu&#39;est-ce que tu as déjà essayé ? » « Qu&#39;est-ce que tu observes ? » « Qu&#39;est-ce qui pourrait expliquer ce résultat ? » « Peux-tu découper ton problème en plusieurs parties ? »</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a05">
+        <h2>Activité 4 — 4. Que faire lorsque je suis bloqué ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Être bloqué fait partie du travail.</p>
+    
+
+<p>Avant de demander directement de l&#39;aide au professeur, essayez cette méthode :</p>
+    
+
+<p>Relire la question ou la consigne.</p>
+    
+
+<p>Observer les documents, l&#39;objet ou le programme.</p>
+    
+
+<p>Discuter doucement avec votre binôme.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a05-q01-label">Question 1 — Proposer une première hypothèse, même si vous n&#39;êtes pas certain.</h3>
+            
+
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Essayer ou vérifier cette hypothèse lorsque c&#39;est possible.</p>
+    
+
+<p>Si vous êtes toujours bloqués, appeler le professeur en expliquant ce que vous avez déjà essayé.</p>
+    
+
+<p>Dire simplement « Je ne sais pas » n&#39;aide pas beaucoup.</p>
+    
+
+<p>Dire « Nous avons essayé ceci, nous avons obtenu cela et nous ne comprenons pas pourquoi » permet au contraire de continuer à avancer.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a06">
+        <h2>Activité 5 — 5. Travailler ensemble, mais dans le calme</h2>
+        
+        
+        
+
+        
+
+        
+<p>La plupart du temps, vous travaillerez par groupes de deux.</p>
+    
+
+<p>Vous avez le droit de parler avec votre binôme pour :</p>
+    
+
+<ul><li>comparer vos idées ;</li><li>vous poser des questions ;</li><li>expliquer votre raisonnement ;</li><li>vous mettre d&#39;accord sur une solution à essayer.</li></ul>
+    
+
+<p>Ces échanges doivent cependant rester suffisamment calmes pour que tous les groupes puissent réfléchir.</p>
+    
+
+<p>On peut discuter, mais on chuchote.</p>
+    
+
+<p>Si toute la classe parle fort, il devient difficile de réfléchir, de se concentrer et d&#39;écouter son propre binôme.</p>
+    
+
+<p>Le calme n&#39;empêche donc pas le travail en groupe : il permet au contraire à chacun de travailler correctement.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a07">
+        <h2>Activité 6 — 6. Comment serez-vous évalués ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Il n&#39;y aura pas de contrôle ponctuel destiné à vérifier en une heure tout ce que vous avez mémorisé.</p>
+    
+
+<p>Votre travail sera évalué régulièrement tout au long de l&#39;année, principalement à partir de ce que vous produirez et rendrez pendant les séances.</p>
+    
+
+<p>Le professeur regardera notamment :</p>
+    
+
+<ul><li>si le travail demandé a été réalisé ;</li><li>si vous avez réellement cherché des solutions ;</li><li>si vous avez essayé de justifier vos réponses ;</li><li>si vous savez revenir sur une réponse lorsque vous découvrez qu&#39;elle ne fonctionne pas ;</li><li>si votre travail progresse au cours de la séance ;</li><li>si vous êtes capables de travailler de plus en plus par vous-mêmes ;</li><li>si le document rendu permet de comprendre votre démarche et ce que vous avez appris.</li></ul>
+    
+
+<p>Une erreur ne vous pénalise donc pas simplement parce qu&#39;elle existe.</p>
+    
+
+<p>Ce qui compte particulièrement est ce que vous en faites ensuite.</p>
+    
+
+<p>La note doit montrer votre travail, votre progression, votre autonomie et votre détermination, pas seulement votre capacité à trouver immédiatement une bonne réponse.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a08">
+        <h2>Activité 7 — 7. Votre travail à chaque séance</h2>
+        
+        
+        
+
+        
+
+        
+<p>Au cours de nombreuses séances, vous réaliserez un document numérique par binôme.</p>
+    
+
+<p>Les fichiers seront nommés de la manière suivante :</p>
+    
+
+<p>5e_S[numéro de séance]_nom1_nom2</p>
+    
+
+<p>Par exemple :</p>
+    
+
+<p>5e_S3_dupont_martin.odt</p>
+    
+
+<p>Ce document permettra de conserver :</p>
+    
+
+<ul><li>vos hypothèses ;</li><li>vos réponses ;</li><li>vos tableaux ou schémas ;</li><li>vos observations ;</li><li>vos essais ;</li><li>vos conclusions.</li></ul>
+    
+
+<p>Il sera enregistré puis déposé dans l&#39;espace d&#39;échange demandé par le professeur.</p>
+    
+
+<p>Important : votre document n&#39;a pas besoin d&#39;être parfait dès le début. Il doit montrer votre travail et évoluer pendant la séance.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a09">
+        <h2>Activité 8 — 8. Premier défi : faire tenir une feuille debout</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pour découvrir immédiatement la manière dont nous allons travailler cette année, voici votre premier problème.</p>
+    
+
+<p>Chaque binôme dispose d&#39;une simple feuille de papier A4.</p>
+    
+
+<p>Défi : faire tenir la feuille debout sur la table pendant au moins 10 secondes sans la maintenir avec les mains.</p>
+    
+
+<p>Vous pouvez :</p>
+    
+
+<ul><li>plier la feuille ;</li><li>la courber ;</li><li>essayer plusieurs formes.</li></ul>
+    
+
+<p>Vous ne pouvez pas :</p>
+    
+
+<ul><li>utiliser de colle ou de ruban adhésif ;</li><li>utiliser un autre objet pour la maintenir ;</li><li>demander directement au professeur comment faire.</li></ul>
+    
+
+<p>Vous disposez de quelques minutes pour chercher une solution.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a10">
+        <h2>Activité 9 — 9. Ce qui compte dans le défi</h2>
+        
+        
+        
+
+        
+
+        
+<p>La première solution que vous essayez ne fonctionnera peut-être pas.</p>
+    
+
+<p>Dans ce cas :</p>
+    
+
+<p>observez → cherchez pourquoi → modifiez quelque chose → testez à nouveau.</p>
+    
+
+<p>Si votre feuille tient debout, essayez de comprendre pourquoi.</p>
+    
+
+<p>Regardez ensuite discrètement autour de vous.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a10-q01-label">Question 1 — Q1 : Tous les groupes ont-ils utilisé exactement la même solution ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q01" data-answer-id="a10_q01" data-required="true" aria-labelledby="a10-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a10-q02-label">Question 2 — Q2 : Plusieurs solutions différentes peuvent-elles fonctionner ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q02" data-answer-id="a10_q02" data-required="true" aria-labelledby="a10-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a10-q03-label">Question 3 — Q3 : Votre première idée a-t-elle fonctionné immédiatement ? Si non, qu&#39;avez-vous changé ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q03" data-answer-id="a10_q03" data-required="true" aria-labelledby="a10-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a10-q04-label">Question 4 — Q4 : Qu&#39;est-ce qui vous a aidés à trouver une solution : une observation, votre binôme, un essai précédent, une autre idée ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q04" data-answer-id="a10_q04" data-required="true" aria-labelledby="a10-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a11">
+        <h2>Activité 10 — 10. Ce petit défi ressemble beaucoup au cours de Technologie</h2>
+        
+        
+        
+
+        
+
+        
+<p>Le professeur ne vous a pas montré comment plier la feuille.</p>
+    
+
+<p>Il vous a donné :</p>
+    
+
+<ul><li>un problème ;</li><li>des contraintes ;</li><li>du matériel ;</li><li>du temps pour réfléchir.</li></ul>
+    
+
+<p>Vous avez ensuite dû :</p>
+    
+
+<p>comprendre → imaginer → essayer → observer → modifier → tester.</p>
+    
+
+<p>Cette démarche sera utilisée très souvent pendant l&#39;année.</p>
+    
+
+<p>Il n&#39;existait pas forcément une seule manière correcte de faire tenir la feuille. Plusieurs solutions pouvaient répondre au même problème.</p>
+    
+
+<p>Dans les prochaines séances, nous appliquerons progressivement la même manière de réfléchir à des objets techniques, des expériences, des réparations puis des programmes informatiques.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a12">
+        <h2>Activité 11 — 11. Les règles essentielles du cours</h2>
+        
+        
+        
+
+        
+
+        
+<p>Pour que cette manière de travailler fonctionne, retenez quelques règles simples :</p>
+    
+
+<ul><li>Je cherche avant de demander la réponse.</li><li>J&#39;ai le droit de me tromper.</li><li>Lorsque je me trompe, j&#39;essaie de comprendre pourquoi.</li><li>J&#39;écoute les idées de mon binôme.</li><li>Je peux discuter, mais je parle doucement.</li><li>Je respecte le matériel et les consignes de sécurité.</li><li>Je garde une trace de mon travail.</li><li>Je rends le travail demandé à la fin de la séance.</li></ul>
+    
+
+<p>En Technologie, je vais apprendre à chercher des solutions et pas seulement à mémoriser des réponses. J&#39;ai le droit de proposer une idée, de l&#39;essayer et de me tromper. Une erreur peut m&#39;aider à comprendre le problème et à trouver une meilleure solution. Le professeur est là pour me guider, mais il ne donnera pas directement une réponse que je peux trouver par ma réflexion, mes observations ou les documents disponibles. Je peux travailler et échanger avec mon binôme, mais je dois le faire dans le calme pour permettre à toute la classe de réfléchir.</p>
+    
+
+<p>Méthode : Face à un problème : je lis → j&#39;observe → je réfléchis → je propose → j&#39;essaie → je teste → je corrige → j&#39;explique.</p>
+    
+
+
+        
+        
+    </article>
+    
+</section>
+
+    </fieldset>
+    <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
+    <h2 id="course-summary-title">À retenir</h2><ul></ul>
+    <h3>Faire le point</h3><p>Relis tes réponses et vérifie les points demandés dans le bilan du cours. Tu peux revenir sur ton travail tant que le professeur ne l’a pas clôturé.</p>
+</section>
+
+    <div class="course-submit-panel">
+        <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
+        <p id="course-submit-status" role="status" aria-live="polite"></p>
+        <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
+    </div>
+</div></div>
+</div>
+<noscript><p>Active JavaScript pour charger ta copie et enregistrer tes réponses.</p></noscript>
+
+<script id="classes-data" type="application/json">
+{"college":{"nom":"Collège","classes":[{"id":"5e","nom":"5e","matieres":["techno"]},{"id":"4e","nom":"4e","matieres":["techno"]},{"id":"3e","nom":"3e","matieres":["techno"]}]},"mfr":{"nom":"MFR","classes":[{"id":"4e","nom":"4e MFR","matieres":["tim","maths"]},{"id":"3e","nom":"3e MFR","matieres":["tim","maths"]},{"id":"cap1","nom":"CAP 1","matieres":["tim"]},{"id":"cap2","nom":"CAP 2","matieres":["tim"]},{"id":"2de","nom":"2de Pro","matieres":["tim","maths"]},{"id":"1re","nom":"Bac Pro 1","matieres":["tim","maths"]},{"id":"term","nom":"Bac Pro 2","matieres":["tim","maths"]},{"id":"bts1","nom":"BTS 1","matieres":["tim"]},{"id":"bts2","nom":"BTS 2","matieres":["tim"]}]}}
+</script>
+<script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
+    </main>
+    <footer class="site-footer">
+    <p>
+        &copy; 2026
+        Portail pédagogique Technologie | TIM | Mathématiques
+    </p>
+</footer>
+</body>
+</html>

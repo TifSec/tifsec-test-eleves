@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
+
+    
+    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
+    <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
+    
+
+    <title>
+        
+        Portail pédagogique Technologie | TIM | Mathématiques
+        
+    </title>
+
+    <link rel="icon" href="/tifsec-test-eleves/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/variables.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/base.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/body.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/header.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/main.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/footer.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-message.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-session.css">
+
+    
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    
+    
+
+    
+
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    
+    
+</head>
+
+<body class="student-shell student-course-shell">
+    <a class="student-skip" href="#course-intro">Aller au cours</a>
+    <p id="message" class="auth-message" role="status" aria-live="polite" hidden></p>
+    <header class="student-header" id="course-header">
+    <div class="student-header-inner">
+        <div class="student-topbar">
+            <a class="student-brand" href="/tifsec-test-eleves/eleve/"><img src="/tifsec-test-eleves/images/logo.png" width="44" height="44" alt=""><span>Mon espace<span data-profile-field="matieres"></span></span></a>
+            <div class="student-header-actions"><a class="student-home-link" href="/tifsec-test-eleves/eleve/">Mes séances</a><a id="course-login" href="/tifsec-test-eleves/connexion/">Se connecter</a><details class="student-theme-picker" id="student-theme-picker" hidden>
+    <summary>Apparence</summary>
+    <div class="student-theme-options"><label for="student-theme-select">Les couleurs de mon espace</label><select id="student-theme-select" disabled><option value="ocean">Océan · bleu</option><option value="forest">Forêt · vert</option><option value="plum">Prune · violet</option><option value="terracotta">Terre cuite · orangé</option><option value="ruby">Rubis · rouge</option><option value="slate">Ardoise · gris</option><option value="midnight">Minuit · noir</option><option value="rose">Rosée · rose</option><option value="neon">Néon · RGB sombre</option><option value="cyberpunk">Cyberpunk · cité futuriste</option><option value="minecraft">Minecraft · blocs et pixels</option><option value="farming">Farming · campagne et cultures</option></select><label class="student-theme-motion"><input type="checkbox" id="student-theme-motion"> Mettre les animations en pause</label><p id="student-theme-status" role="status" aria-live="polite">Ce choix te suivra sur les autres ordinateurs.</p><button id="student-theme-retry" type="button" hidden>Réessayer</button></div>
+</details>
+<button type="button" id="course-logout" hidden>Se déconnecter</button></div>
+        </div>
+        <div class="student-welcome-row" id="course-welcome" hidden>
+            <div><p class="student-eyebrow">Une séance à la fois, à ton rythme.</p><p class="student-course-greeting">Bonjour <span id="course-header-identity"></span></p></div>
+            <dl class="student-profile"><div><dt>Établissement</dt><dd data-profile-field="etablissement"></dd></div><div><dt>Classe</dt><dd data-profile-field="classe"></dd></div><div><dt>Inscription</dt><dd data-profile-field="validation"></dd></div></dl>
+        </div>
+    </div>
+</header>
+
+    <main class="student-course-main" id="student-course-main">
+
+<div id="course-work" data-etablissement="mfr" data-matiere="tim" data-classe="1re" data-seance="S02" data-saving-enabled="true" data-collaboration-enabled="true">
+    <div class="course-save-panel course-toolbar">
+        <p id="course-identity" hidden></p>
+        <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+    </div>
+    <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
+        <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
+        <p id="group-status" role="status">Les groupes sont propres à chaque séance. Connecte-toi avec ton compte élève pour choisir ta copie.</p>
+        <div id="group-controls" hidden>
+            <label for="group-copy">Copie de cette séance</label><select id="group-copy"></select>
+            <button type="button" id="group-refresh">Actualiser les groupes</button>
+            <div id="group-create-panel" hidden>
+                <p>Choisis un ou deux camarades. Chacun doit accepter pour partager les réponses. Le groupe reprend ton travail actuel ; ta copie individuelle reste dans l’historique.</p>
+                <div id="group-classmates" class="collaboration-roster"></div>
+                <button type="button" id="group-create">Envoyer les invitations</button>
+            </div>
+        </div>
+    </section>
+    <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
+    <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
+
+
+
+<div class="course-columns">
+    <aside class="course-navigation" aria-label="Étapes de la séance">
+        <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
+        <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
+        <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a03">1. Créez votre document de travail</a></li><li><a href="#a04">2. Une structure équestre produit-elle des données ?</a></li><li><a href="#a05">3. Une donnée sans contexte est-elle vraiment utile ?</a></li><li><a href="#a06">4. Donnée ou information ?</a></li><li><a href="#a07">5. Première mission : créez le tableau de données</a></li><li><a href="#a08">6. Rendez le tableau facile à lire</a></li><li><a href="#a09">7. Que peut-on apprendre grâce aux données ?</a></li><li><a href="#a10">8. Une question un peu plus difficile</a></li><li><a href="#a11">9. À quoi sert réellement le tableur ?</a></li><li><a href="#a12">10. Toutes les données se ressemblent-elles ?</a></li><li><a href="#a13">11. Données, traitement, information</a></li><li><a href="#a14">12. Peut-on toujours interpréter une donnée sans précaution ?</a></li><li><a href="#a15">13. Votre conclusion</a></li><li><a href="#a16">À retenir</a></li><li><a href="#a17">Travail à rendre</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+    </aside>
+
+<div class="course-reading">
+<!-- ========== INTRODUCTION DU COURS ========== -->
+
+<header class="cours-intro" id="course-intro">
+    <h1>Comprendre ce que racontent les données</h1>
+
+    
+    <p class="cours-theme">
+        <strong>Thème :</strong> TIM — Comprendre ce que racontent les données
+    </p>
+    
+
+    
+    <p class="cours-problematique">
+        <strong>Problématique :</strong> Comprendre ce que racontent les données
+    </p>
+    
+
+    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Avec seulement huit chevaux, il est encore possible d&#39;observer le tableau et de réaliser certains calculs manuellement.</p></section>
+    
+    <section><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
+    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    
+    
+    <section class="cours-objectifs">
+        <h2>Ce que vous allez apprendre</h2>
+        <ul>
+            
+            <li>Une donnée est une valeur brute que l&#39;on observe, mesure ou enregistre.</li>
+            
+            <li>Une information est obtenue lorsque l&#39;on donne du sens à une ou plusieurs données.</li>
+            
+            <li>Une donnée doit être accompagnée de son contexte pour être correctement comprise.</li>
+            
+            <li>Un tableau permet d&#39;organiser plusieurs données pour pouvoir les comparer et les analyser.</li>
+            
+            <li>Les données peuvent être de différentes natures : texte, nombre, date, catégorie, etc.</li>
+            
+            <li>Un tableur comme Calc permet de traiter rapidement une grande quantité de données.</li>
+            
+        </ul>
+
+        <h2>Ce que vous allez apprendre à faire</h2>
+        <ul>
+            
+        </ul>
+    </section>
+    
+<h4>Compétence visée : Étudier un phénomène à l&#39;aide de données</h4>
+    
+
+<p>Objectifs d’apprentissage</p>
+    
+
+<ul><li>Une donnée est une valeur brute que l&#39;on observe, mesure ou enregistre.</li><li>Une information est obtenue lorsque l&#39;on donne du sens à une ou plusieurs données.</li><li>Une donnée doit être accompagnée de son contexte pour être correctement comprise.</li><li>Un tableau permet d&#39;organiser plusieurs données pour pouvoir les comparer et les analyser.</li><li>Les données peuvent être de différentes natures : texte, nombre, date, catégorie, etc.</li><li>Un tableur comme Calc permet de traiter rapidement une grande quantité de données.</li></ul>
+    
+
+<ul><li>Créer et enregistrer correctement un classeur Calc.</li><li>Identifier les différentes données présentes dans un tableau.</li><li>Retrouver une information à partir de plusieurs données.</li><li>Effectuer quelques calculs simples dans un tableur.</li><li>Utiliser des données pour répondre à une question professionnelle.</li></ul>
+    
+
+
+    <section><h2>Ressources du cours</h2>
+<p>Réalise les manipulations dans le logiciel demandé. Conserve tes fichiers sur ton espace habituel. Le site enregistre seulement tes réponses écrites, tes résultats, tes formules et tes démarches ; aucun fichier n’est téléversé.</p>
+    
+
+</section>
+    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
+<p>Dans cette page du ministère, retrouve le programme ou le référentiel de ta formation. Les objectifs précis étudiés aujourd’hui sont indiqués dans le cours.</p>
+    
+
+<p><a href="https://chlorofil.fr/diplomes/secondaire/bac-pro/1re-tle/tronc-commun" target="_blank" rel="noopener noreferrer">Consulter les programmes et attendus officiels</a></p>
+
+
+</div></details>
+
+</header>
+
+    <fieldset id="course-answers" class="course-answer-fields" disabled>
+        <legend>Réponses aux activités</legend>
+        <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
+
+<section class="cours-activites">
+    
+    <article class="cours-activite" id="a03">
+        <h2>Activité 1 — 1. Créez votre document de travail</h2>
+        
+        
+        
+
+        
+
+        
+<p>Ouvrez LibreOffice Calc et créez un nouveau classeur.</p>
+    
+
+<p>Enregistrez immédiatement votre fichier dans votre dossier MG1_INFORMATIQUE sous le nom :</p>
+    
+
+<p>BACPRO1_S02_nom_prenom.ods</p>
+    
+
+<p>Pensez ensuite à enregistrer régulièrement avec Ctrl + S.</p>
+    
+
+<p>Ce classeur sera votre document de travail pendant toute la séance : vous pourrez y écrire, essayer, vous tromper, modifier et recommencer.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a04">
+        <h2>Activité 2 — 2. Une structure équestre produit-elle des données ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Une structure équestre produit et utilise chaque jour de nombreuses données.</p>
+    
+
+<p>Par exemple :</p>
+    
+
+<ul><li>le nom des chevaux ;</li><li>leur âge ;</li><li>leur poids estimé ;</li><li>la quantité de fourrage distribuée ;</li><li>leur activité ;</li><li>les dates de soins ou d&#39;interventions ;</li><li>le nombre de cavaliers ;</li><li>les stocks disponibles ;</li><li>les dépenses et recettes de la structure.</li></ul>
+    
+
+<p>Tous ces éléments peuvent devenir des données lorsqu&#39;ils sont enregistrés.</p>
+    
+
+<p>L&#39;IFCE (Institut Français du Cheval et de l&#39;Équitation) rappelle par exemple que connaître le poids vif d&#39;un cheval (son poids sur pied, animal vivant) est utile pour établir une ration, suivre sa croissance ou son état et adapter certains traitements.</p>
+    
+
+<p>Les données ont donc une utilité concrète dans le fonctionnement d&#39;une entreprise.</p>
+    
+
+<p>Sources professionnelles :</p>
+    
+
+<ul><li>IFCE – équipédia : Estimation du poids.</li><li>IFCE – équipédia : Les besoins alimentaires du cheval.</li><li>Chlorofil – Document d&#39;accompagnement du module MG1 du Bac professionnel.</li></ul>
+    
+
+<p><a href="https://equipedia.ifce.fr/elevage-et-entretien/alimentation/nutrition-et-ration/estimation-du-poids" target="_blank" rel="noopener noreferrer">IFCE – équipédia : Estimation du poids.</a></p>
+
+
+<p><a href="https://equipedia.ifce.fr/elevage-et-entretien/alimentation/nutrition-et-ration/les-besoins-alimentaires-du-cheval" target="_blank" rel="noopener noreferrer">IFCE – équipédia : Les besoins alimentaires du cheval.</a></p>
+
+
+<p><a href="https://chlorofil.fr/fileadmin/user_upload/02-diplomes/referentiels/secondaire/bacpro/bacpro-tc-da-MG1.pdf" target="_blank" rel="noopener noreferrer">Chlorofil – Document d&#39;accompagnement du module MG1 du Bac professionnel.</a></p>
+
+
+<p>Les chevaux et les relevés utilisés dans cette activité sont fictifs. Les valeurs ont été adaptées pédagogiquement à partir de références professionnelles afin de proposer une situation réaliste. Elles ne constituent pas des recommandations individuelles d&#39;alimentation.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a05">
+        <h2>Activité 3 — 3. Une donnée sans contexte est-elle vraiment utile ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Observez la donnée suivante :</p>
+    
+
+<p>520</p>
+    
+
+<p>Que signifie ce nombre ?</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a05-q01-label">Question 1 — 520 € ?</h3>
+            
+
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a05-q02-label">Question 2 — 520 kg ?</h3>
+            
+
+            
+            
+                <textarea id="a05-q02" data-answer-id="a05_q02" data-required="true" aria-labelledby="a05-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a05-q03-label">Question 3 — 520 chevaux ?</h3>
+            
+
+            
+            
+                <textarea id="a05-q03" data-answer-id="a05_q03" data-required="true" aria-labelledby="a05-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a05-q04-label">Question 4 — 520 heures ?</h3>
+            
+
+            
+            
+                <textarea id="a05-q04" data-answer-id="a05_q04" data-required="true" aria-labelledby="a05-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            <h3 id="a05-q05-label">Question 5 — 520 litres ?</h3>
+            
+
+            
+            
+                <textarea id="a05-q05" data-answer-id="a05_q05" data-required="true" aria-labelledby="a05-q05-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Sans contexte, il est impossible de savoir ce que cette valeur représente réellement.</p>
+    
+
+<p>Si nous écrivons maintenant :</p>
+    
+
+<p>Volcan – poids estimé : 520 kg</p>
+    
+
+<p>la donnée devient compréhensible.</p>
+    
+
+<p>Nous connaissons :</p>
+    
+
+<ul><li>ce qui est mesuré : le poids ;</li><li>l&#39;animal concerné : Volcan ;</li><li>la valeur : 520 ;</li><li>l&#39;unité : kg.</li></ul>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a06">
+        <h2>Activité 4 — 4. Donnée ou information ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Retenez cette différence importante :</p>
+    
+
+<ul><li>Donnée : valeur brute observée, mesurée ou enregistrée.</li><li>Information : résultat obtenu lorsque l&#39;on interprète une ou plusieurs données dans un contexte.</li></ul>
+    
+
+<p>Exemple :</p>
+    
+
+<p>Donnée : 15</p>
+    
+
+<p>Donnée avec son contexte : Java a 15 ans.</p>
+    
+
+<p>Si nous comparons maintenant cette donnée avec l&#39;âge de tous les autres chevaux :</p>
+    
+
+<p>Information : Java est le cheval le plus âgé du groupe.</p>
+    
+
+<p>Pour produire cette information, il a fallu réaliser un traitement : comparer plusieurs données.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a07">
+        <h2>Activité 5 — 5. Première mission : créez le tableau de données</h2>
+        
+        
+        
+
+        
+
+        
+<p>Renommez la première feuille de votre classeur :</p>
+    
+
+<p>DONNEES</p>
+    
+
+<p>Reproduisez le tableau suivant :</p>
+    
+
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Cheval</th><th scope="col">Âge (ans)</th><th scope="col">Poids estimé (kg)</th><th scope="col">Travail par semaine (h)</th><th scope="col">Foin distribué (kg/jour)</th></tr></thead><tbody><tr><td>Volcan</td><td>12</td><td>520</td><td>5</td><td>92</td></tr><tr><td>Oslo</td><td>8</td><td>480</td><td>3</td><td>85</td></tr><tr><td>Java</td><td>15</td><td>540</td><td>2</td><td>95</td></tr><tr><td>Nestor</td><td>7</td><td>505</td><td>6</td><td>9</td></tr><tr><td>Praline</td><td>10</td><td>455</td><td>4</td><td>8</td></tr><tr><td>Quartz</td><td>6</td><td>510</td><td>5</td><td>9</td></tr><tr><td>Rivage</td><td>13</td><td>565</td><td>3</td><td>10</td></tr><tr><td>Salsa</td><td>9</td><td>470</td><td>6</td><td>83</td></tr></tbody></table></div>
+    
+
+<p>Les quantités de foin ont été adaptées pour être cohérentes avec les ordres de grandeur présentés par l&#39;IFCE.</p>
+    
+
+<p>L&#39;IFCE indique notamment que la quantité de fourrage dépend du poids vif, de l&#39;activité, de l&#39;état corporel et des caractéristiques du fourrage.</p>
+    
+
+<p>Un exemple donné par l&#39;IFCE montre qu&#39;un cheval de 500 kg consommant l&#39;équivalent de 1,5 % de son poids vif en matière sèche représente environ 9 kg brut de foin avec un foin à 85 % de matière sèche.</p>
+    
+
+<p>Les valeurs du tableau sont des données pédagogiques fictives et simplifiées. Elles ne doivent pas être utilisées pour établir la ration réelle d&#39;un cheval.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a08">
+        <h2>Activité 6 — 6. Rendez le tableau facile à lire</h2>
+        
+        
+        
+
+        
+
+        
+<p>Avant de commencer l&#39;analyse, améliorez la présentation du tableau.</p>
+    
+
+<p>Vous devez essayer de :</p>
+    
+
+<ul><li>mettre les titres des colonnes en évidence ;</li><li>adapter la largeur des colonnes ;</li><li>aligner correctement les données ;</li><li>afficher correctement les nombres décimaux ;</li><li>rendre le tableau facile à lire.</li></ul>
+    
+
+<p>Vous êtes libre de choisir la présentation.</p>
+    
+
+<p>Le but n&#39;est pas de faire le tableau le plus décoré possible mais le plus lisible possible.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a09">
+        <h2>Activité 7 — 7. Que peut-on apprendre grâce aux données ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Ajoutez une nouvelle feuille et nommez-la :</p>
+    
+
+<p>ANALYSE</p>
+    
+
+<p>Recopiez les questions suivantes puis répondez-y.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a09-q01-label">Question 1 — Combien de chevaux sont présents dans le tableau ?</h3>
+            
+
+            
+            
+                <textarea id="a09-q01" data-answer-id="a09_q01" data-required="true" aria-labelledby="a09-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a09-q02-label">Question 2 — Quel est le cheval le plus âgé ?</h3>
+            
+
+            
+            
+                <textarea id="a09-q02" data-answer-id="a09_q02" data-required="true" aria-labelledby="a09-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a09-q03-label">Question 3 — Quel est le cheval le plus jeune ?</h3>
+            
+
+            
+            
+                <textarea id="a09-q03" data-answer-id="a09_q03" data-required="true" aria-labelledby="a09-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a09-q04-label">Question 4 — Quel cheval possède le poids estimé le plus élevé ?</h3>
+            
+
+            
+            
+                <textarea id="a09-q04" data-answer-id="a09_q04" data-required="true" aria-labelledby="a09-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            <h3 id="a09-q05-label">Question 5 — Quel cheval possède le poids estimé le plus faible ?</h3>
+            
+
+            
+            
+                <textarea id="a09-q05" data-answer-id="a09_q05" data-required="true" aria-labelledby="a09-q05-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            <h3 id="a09-q06-label">Question 6 — Quel ou quels chevaux travaillent le plus d&#39;heures par semaine ?</h3>
+            
+
+            
+            
+                <textarea id="a09-q06" data-answer-id="a09_q06" data-required="true" aria-labelledby="a09-q06-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q07">
+            
+            <h3 id="a09-q07-label">Question 7 — Quel cheval reçoit la plus grande quantité de foin chaque jour ?</h3>
+            
+
+            
+            
+                <textarea id="a09-q07" data-answer-id="a09_q07" data-required="true" aria-labelledby="a09-q07-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q08">
+            
+            <h3 id="a09-q08-label">Question 8 — Quel cheval reçoit la plus petite quantité de foin chaque jour ?</h3>
+            
+
+            
+            
+                <textarea id="a09-q08" data-answer-id="a09_q08" data-required="true" aria-labelledby="a09-q08-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Pour l&#39;instant, utilisez la méthode de votre choix.</p>
+    
+
+<p>Vous pouvez :</p>
+    
+
+<ul><li>observer le tableau ;</li><li>comparer les valeurs ;</li><li>faire un calcul ;</li><li>utiliser une fonction de Calc si vous en connaissez déjà ;</li><li>chercher une méthode par vous-même.</li></ul>
+    
+
+<p>Vous n&#39;avez pas besoin de connaître toutes les fonctions de Calc pour réussir.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a10">
+        <h2>Activité 8 — 8. Une question un peu plus difficile</h2>
+        
+        
+        
+
+        
+
+        
+<p>Répondez maintenant aux questions suivantes :</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a10-q01-label">Question 1 — Quelle quantité totale de foin est distribuée chaque jour aux huit chevaux ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q01" data-answer-id="a10_q01" data-required="true" aria-labelledby="a10-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a10-q02-label">Question 2 — Quelle quantité cela représente-t-il sur 30 jours si les quantités restent identiques ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q02" data-answer-id="a10_q02" data-required="true" aria-labelledby="a10-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a10-q03-label">Question 3 — Quel est l&#39;âge moyen des huit chevaux ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q03" data-answer-id="a10_q03" data-required="true" aria-labelledby="a10-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            <h3 id="a10-q04-label">Question 4 — Quel est leur poids estimé moyen ?</h3>
+            
+
+            
+            
+                <textarea id="a10-q04" data-answer-id="a10_q04" data-required="true" aria-labelledby="a10-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+<p>Vous pouvez réaliser les calculs comme vous le souhaitez.</p>
+    
+
+<p>Si vous connaissez déjà certaines fonctions de Calc, vous pouvez les utiliser.</p>
+    
+
+<p>Sinon, cherchez une méthode permettant d&#39;obtenir le résultat.</p>
+    
+
+
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a11">
+        <h2>Activité 9 — 9. À quoi sert réellement le tableur ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Avec seulement huit chevaux, il est encore possible d&#39;observer le tableau et de réaliser certains calculs manuellement.</p>
+    
+
+<p>Imaginez maintenant un fichier comportant :</p>
+    
+
+<ul><li>80 chevaux ;</li><li>500 clients ;</li><li>365 jours de relevés ;</li><li>plusieurs milliers de lignes de données.</li></ul>
+    
+
+<p>Effectuer tous les calculs manuellement deviendrait beaucoup plus difficile.</p>
+    
+
+<p>C&#39;est l&#39;un des rôles d&#39;un tableur.</p>
+    
+
+<p>Un tableur permet notamment de :</p>
+    
+
+<ul><li>stocker des données ;</li><li>les organiser ;</li><li>effectuer automatiquement des calculs ;</li><li>trier et filtrer les données ;</li><li>rechercher certaines valeurs ;</li><li>créer des graphiques ;</li><li>comparer des résultats ;</li><li>aider à prendre une décision.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a12">
+        <h2>Activité 10 — 10. Toutes les données se ressemblent-elles ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Observez les différentes colonnes du tableau.</p>
+    
+
+<p>Elles ne contiennent pas toutes le même type de données.</p>
+    
+
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Exemple</th><th scope="col">Ce que représente la donnée</th><th scope="col">Type</th></tr></thead><tbody><tr><td>Volcan</td><td>Nom du cheval</td><td>Texte</td></tr><tr><td>12</td><td>Âge</td><td>Nombre entier</td></tr><tr><td>520</td><td>Poids estimé</td><td>Nombre</td></tr><tr><td>92</td><td>Quantité de foin</td><td>Nombre décimal</td></tr><tr><td>01/09/2026</td><td>Date d&#39;un relevé</td><td>Date</td></tr><tr><td>Actif / Repos / Soins</td><td>État ou situation</td><td>Catégorie</td></tr></tbody></table></div>
+    
+
+<p>Le type d&#39;une donnée est important car il détermine les traitements que l&#39;ordinateur pourra effectuer.</p>
+    
+
+<p>Par exemple :</p>
+    
+
+<ul><li>on peut calculer la moyenne des poids ;</li><li>on peut classer des dates dans l&#39;ordre chronologique ;</li><li>on peut compter le nombre de chevaux appartenant à une catégorie ;</li><li>mais calculer la moyenne des noms des chevaux n&#39;aurait aucun sens.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a13">
+        <h2>Activité 11 — 11. Données, traitement, information</h2>
+        
+        
+        
+
+        
+
+        
+<p>Le travail réalisé aujourd&#39;hui peut être résumé par trois étapes :</p>
+    
+
+<p>DONNÉES → TRAITEMENT → INFORMATION</p>
+    
+
+<p>Exemple 1 :</p>
+    
+
+<ul><li>Données : les âges des huit chevaux.</li><li>Traitement : comparer les âges.</li><li>Information : Java est le cheval le plus âgé.</li></ul>
+    
+
+<p>Exemple 2 :</p>
+    
+
+<ul><li>Données : les quantités de foin distribuées aux huit chevaux.</li><li>Traitement : additionner les valeurs.</li><li>Information : 71,5 kg de foin sont distribués chaque jour.</li></ul>
+    
+
+<p>Exemple 3 :</p>
+    
+
+<ul><li>Données : les poids estimés des huit chevaux.</li><li>Traitement : calculer leur moyenne.</li><li>Information : le poids estimé moyen du groupe est d&#39;environ 505,6 kg.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a14">
+        <h2>Activité 12 — 12. Peut-on toujours interpréter une donnée sans précaution ?</h2>
+        
+        
+        
+
+        
+
+        
+<p>Nous avons calculé que les huit chevaux reçoivent ensemble 71,5 kg de foin par jour.</p>
+    
+
+<p>Peut-on conclure uniquement grâce à ce nombre que leur alimentation est parfaitement adaptée ?</p>
+    
+
+<p>Justifiez votre réponse dans la feuille ANALYSE.</p>
+    
+
+<p>Pour vous aider, relisez les informations données par l&#39;IFCE : la quantité de fourrage dépend notamment du poids, de l&#39;activité, de l&#39;état corporel et des caractéristiques du fourrage.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a15">
+        <h2>Activité 13 — 13. Votre conclusion</h2>
+        
+        
+        
+
+        
+
+        
+<p>Dans la feuille ANALYSE, ajoutez le titre :</p>
+    
+
+<p>Ce que j&#39;ai compris aujourd&#39;hui</p>
+    
+
+<p>Complétez avec vos propres mots :</p>
+    
+
+<ol><li>Une donnée est...</li><li>Une information est...</li><li>Un traitement de données sert à...</li><li>Le contexte d&#39;une donnée est important parce que...</li><li>Un tableur peut être utile dans une entreprise parce que...</li></ol>
+    
+
+<p>Il n&#39;est pas nécessaire de recopier exactement le cours.</p>
+    
+
+<p>Expliquez ce que vous avez compris avec vos propres mots.</p>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a16">
+        <h2>Activité 14 — À retenir</h2>
+        
+        
+        
+
+        
+
+        
+<ul><li>Une donnée est une valeur brute observée, mesurée ou enregistrée.</li><li>Une donnée doit être accompagnée de son contexte pour pouvoir être correctement interprétée.</li><li>Une information est obtenue après avoir traité et interprété une ou plusieurs données.</li><li>Les données peuvent être du texte, des nombres, des dates ou des catégories.</li><li>Un tableur permet d&#39;organiser et de traiter rapidement de nombreuses données.</li><li>Un résultat numérique ne suffit pas toujours pour prendre une décision : il faut l&#39;interpréter dans son contexte.</li><li>Des données professionnelles doivent provenir de sources fiables ou être clairement identifiées comme des données simulées.</li></ul>
+    
+
+
+        
+        
+    </article>
+    
+    <article class="cours-activite" id="a17">
+        <h2>Activité 15 — Travail à rendre</h2>
+        
+        
+        
+
+        
+
+        
+<p>À la fin de la séance, déposez le fichier :</p>
+    
+
+<p>BACPRO1_S02_nom_prenom.ods</p>
+    
+
+<p>Votre fichier doit contenir au minimum :</p>
+    
+
+<ul><li>une feuille DONNEES avec le tableau correctement reproduit et présenté ;</li><li>une feuille ANALYSE avec vos réponses ;</li><li>les quatre calculs demandés ;</li><li>votre réponse à la question sur l&#39;interprétation des données ;</li><li>votre conclusion personnelle.</li></ul>
+    
+
+<p>Le fichier doit être rendu même si tout n&#39;est pas terminé.</p>
+    
+
+
+        
+        
+    </article>
+    
+</section>
+
+    </fieldset>
+    <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
+    <h2 id="course-summary-title">À retenir</h2><ul></ul>
+    <h3>Faire le point</h3><p>Relis tes réponses et vérifie les points demandés dans le bilan du cours. Tu peux revenir sur ton travail tant que le professeur ne l’a pas clôturé.</p>
+</section>
+
+    <div class="course-submit-panel">
+        <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
+        <p id="course-submit-status" role="status" aria-live="polite"></p>
+        <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
+    </div>
+</div></div>
+</div>
+<noscript><p>Active JavaScript pour charger ta copie et enregistrer tes réponses.</p></noscript>
+
+<script id="classes-data" type="application/json">
+{"college":{"nom":"Collège","classes":[{"id":"5e","nom":"5e","matieres":["techno"]},{"id":"4e","nom":"4e","matieres":["techno"]},{"id":"3e","nom":"3e","matieres":["techno"]}]},"mfr":{"nom":"MFR","classes":[{"id":"4e","nom":"4e MFR","matieres":["tim","maths"]},{"id":"3e","nom":"3e MFR","matieres":["tim","maths"]},{"id":"cap1","nom":"CAP 1","matieres":["tim"]},{"id":"cap2","nom":"CAP 2","matieres":["tim"]},{"id":"2de","nom":"2de Pro","matieres":["tim","maths"]},{"id":"1re","nom":"Bac Pro 1","matieres":["tim","maths"]},{"id":"term","nom":"Bac Pro 2","matieres":["tim","maths"]},{"id":"bts1","nom":"BTS 1","matieres":["tim"]},{"id":"bts2","nom":"BTS 2","matieres":["tim"]}]}}
+</script>
+<script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
+    </main>
+    <footer class="site-footer">
+    <p>
+        &copy; 2026
+        Portail pédagogique Technologie | TIM | Mathématiques
+    </p>
+</footer>
+</body>
+</html>
