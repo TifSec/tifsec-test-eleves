@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
+
+    
+    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
+    <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
+    
+
+    <title>
+        
+        Portail pédagogique Technologie | TIM | Mathématiques
+        
+    </title>
+
+    <link rel="icon" href="/tifsec-test-eleves/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/variables.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/base.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/body.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/header.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/main.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/footer.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-message.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-session.css">
+
+    
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    
+    
+
+    
+
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    
+    
+</head>
+
+<body class="student-shell student-course-shell">
+    <a class="student-skip" href="#course-intro">Aller au cours</a>
+    <p id="message" class="auth-message" role="status" aria-live="polite" hidden></p>
+    <header class="student-header" id="course-header">
+    <div class="student-header-inner">
+        <div class="student-topbar">
+            <a class="student-brand" href="/tifsec-test-eleves/eleve/"><img src="/tifsec-test-eleves/images/logo.png" width="44" height="44" alt=""><span>Mon espace<span data-profile-field="matieres"></span></span></a>
+            <div class="student-header-actions"><a class="student-home-link" href="/tifsec-test-eleves/eleve/">Mes séances</a><a id="course-login" href="/tifsec-test-eleves/connexion/">Se connecter</a><details class="student-theme-picker" id="student-theme-picker" hidden>
+    <summary>Apparence</summary>
+    <div class="student-theme-options"><label for="student-theme-select">Les couleurs de mon espace</label><select id="student-theme-select" disabled><option value="ocean">Océan · bleu</option><option value="forest">Forêt · vert</option><option value="plum">Prune · violet</option><option value="terracotta">Terre cuite · orangé</option><option value="ruby">Rubis · rouge</option><option value="slate">Ardoise · gris</option><option value="midnight">Minuit · noir</option><option value="rose">Rosée · rose</option><option value="neon">Néon · RGB sombre</option><option value="cyberpunk">Cyberpunk · cité futuriste</option><option value="minecraft">Minecraft · blocs et pixels</option><option value="farming">Farming · campagne et cultures</option></select><label class="student-theme-motion"><input type="checkbox" id="student-theme-motion"> Mettre les animations en pause</label><p id="student-theme-status" role="status" aria-live="polite">Ce choix te suivra sur les autres ordinateurs.</p><button id="student-theme-retry" type="button" hidden>Réessayer</button></div>
+</details>
+<button type="button" id="course-logout" hidden>Se déconnecter</button></div>
+        </div>
+        <div class="student-welcome-row" id="course-welcome" hidden>
+            <div><p class="student-eyebrow">Une séance à la fois, à ton rythme.</p><p class="student-course-greeting">Bonjour <span id="course-header-identity"></span></p></div>
+            <dl class="student-profile"><div><dt>Établissement</dt><dd data-profile-field="etablissement"></dd></div><div><dt>Classe</dt><dd data-profile-field="classe"></dd></div><div><dt>Inscription</dt><dd data-profile-field="validation"></dd></div></dl>
+        </div>
+    </div>
+</header>
+
+    <main class="student-course-main" id="student-course-main">
+
+<div id="course-work" data-etablissement="mfr" data-matiere="tim" data-classe="cap2" data-seance="S03" data-saving-enabled="true" data-collaboration-enabled="true">
+    <div class="course-save-panel course-toolbar">
+        <p id="course-identity" hidden></p>
+        <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+    </div>
+    <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
+        <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
+        <p id="group-status" role="status">Les groupes sont propres à chaque séance. Connecte-toi avec ton compte élève pour choisir ta copie.</p>
+        <div id="group-controls" hidden>
+            <label for="group-copy">Copie de cette séance</label><select id="group-copy"></select>
+            <button type="button" id="group-refresh">Actualiser les groupes</button>
+            <div id="group-create-panel" hidden>
+                <p>Choisis un ou deux camarades. Chacun doit accepter pour partager les réponses. Le groupe reprend ton travail actuel ; ta copie individuelle reste dans l’historique.</p>
+                <div id="group-classmates" class="collaboration-roster"></div>
+                <button type="button" id="group-create">Envoyer les invitations</button>
+            </div>
+        </div>
+    </section>
+    <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
+    <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
+
+
+
+<div class="course-columns">
+    <aside class="course-navigation" aria-label="Étapes de la séance">
+        <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
+        <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
+        <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Créer et enregistrer le fichier</a></li><li><a href="#a02">Construire le tableau de suivi</a></li><li><a href="#a03">Repérer les interventions à organiser</a></li><li><a href="#a04">Trier, filtrer et proposer un planning</a></li><li><a href="#a05">Corriger une donnée et observer</a></li><li><a href="#a06">Défi : automatiser la situation — facultatif</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+    </aside>
+
+<div class="course-reading">
+<!-- ========== INTRODUCTION DU COURS ========== -->
+
+<header class="cours-intro" id="course-intro">
+    <h1>Organiser le suivi de maréchalerie d’une écurie</h1>
+
+    
+    <p class="cours-theme">
+        <strong>Thème :</strong> TIM — Organiser des données avec un tableur
+    </p>
+    
+
+    
+    <p class="cours-problematique">
+        <strong>Problématique :</strong> Quels chevaux proposer en priorité pour le prochain passage du maréchal-ferrant ?
+    </p>
+    
+
+    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Un tableau bien construit aide à repérer les prochaines échéances et se met à jour quand une date change.</p></section>
+    
+    <section><h2>Dans la vie quotidienne</h2><p>Préparer un planning à partir des informations de suivi d’une écurie.</p></section>
+    <section><h2>Pour commencer</h2><p>En séance 2, tu utilisais Calc pour suivre le stock de foin. Tu vas maintenant calculer des dates, trier et filtrer un planning.</p></section>
+    <section><h2>Ce qui va nous servir</h2><ul><li>Saisir des informations dans des cellules.</li><li>Commencer une formule par = et enregistrer son fichier.</li></ul></section>
+    <section class="cours-notions"><h2>Les repères pour comprendre</h2><h3>Deux lieux de travail</h3><p>Le vrai tableau est à créer dans Calc ou Excel, dans ton fichier .ods ou .xlsx. Ici, écris les formules utilisées, ta démarche et quelques résultats. Le site sauvegarde ces réponses ; il ne sauvegarde pas ton fichier de tableur.</p><h3>Une date peut se calculer</h3><p>Une semaine compte 7 jours. Ajouter un nombre de jours à une cellule contenant une date donne une nouvelle date. Si un nombre s’affiche à la place d’une date, applique le format Date.</p><h3>Un exercice, pas une prescription</h3><p>Toutes les dates et les règles de ce planning sont fictives. Pour cet exercice, nous utiliserons une fenêtre de 4 à 6 semaines. Le suivi réel se décide avec les professionnels, selon le cheval et son activité.</p></section>
+    <section class="cours-objectifs">
+        <h2>Ce que vous allez apprendre</h2>
+        <ul>
+            
+            <li>Un tableur peut calculer une date à partir d’une autre date.</li>
+            
+        </ul>
+
+        <h2>Ce que vous allez apprendre à faire</h2>
+        <ul>
+            
+            <li>Créer et enregistrer un tableau exploitable.</li>
+            
+            <li>Recopier des formules, trier et filtrer les données.</li>
+            
+            <li>Expliquer un choix à partir des résultats.</li>
+            
+        </ul>
+    </section>
+    
+    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
+<p>Repères CAP agricole : mobiliser des outils numériques et organiser des informations dans une situation professionnelle. La page ministérielle permet de retrouver les référentiels de la formation.</p>
+    
+
+<p><a href="https://chlorofil.fr/diplomes/secondaire/capa" target="_blank" rel="noopener noreferrer">Chlorofil — référentiels du CAP agricole</a></p>
+
+
+</div></details>
+
+</header>
+
+    <fieldset id="course-answers" class="course-answer-fields" disabled>
+        <legend>Réponses aux activités</legend>
+        <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
+
+<section class="cours-activites">
+    
+    <article class="cours-activite" id="a01">
+        <h2>Activité 1 — Créer et enregistrer le fichier</h2>
+        
+        <p><strong>Pourquoi cette activité ?</strong> Retrouver ton travail à la prochaine séance.</p>
+        <h3>Comment procéder ?</h3><ol><li>Ouvre Calc ou Excel et crée un classeur.</li><li>Dans CAPA2_TIM/02_Travaux/S03, enregistre-le sous CAPA2_S03_NOM_Prenom.ods (ou .xlsx dans Excel).</li><li>Enregistre régulièrement pendant la séance.</li></ol>
+
+        
+
+        
+<p>Garde le tableur ouvert à côté du site. Tu ne dois pas refaire ici tout le tableau.</p>
+    
+
+
+        <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
+</div></details>
+
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a01-q01-label">Question 1 — Quel est le nom de ton fichier et dans quel dossier l’as-tu enregistré ?</h3>
+            
+
+            
+            
+                <textarea id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a02">
+        <h2>Activité 2 — Construire le tableau de suivi</h2>
+        
+        <p><strong>Pourquoi cette activité ?</strong> Calculer une fois, puis recopier la formule pour les autres chevaux.</p>
+        <h3>Comment procéder ?</h3><ol><li>Dans A1:F1, saisis les titres : Cheval ; Dernière intervention ; Type ; Début à 4 semaines ; Fin à 6 semaines ; Situation au 25/09/2026.</li><li>Recopie les six lignes du dossier dans A2:C7. Vérifie que les dates sont reconnues comme des dates.</li><li>Dans D2, calcule la date 4 semaines après B2. Recopie jusqu’à D7.</li><li>Dans E2, calcule la date 6 semaines après B2. Recopie jusqu’à E7. Enregistre.</li></ol>
+
+        
+
+        
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Dossier fictif de l’écurie</caption><thead><tr><th scope="col">Cheval</th><th scope="col">Dernière intervention</th><th scope="col">Type</th></tr></thead><tbody><tr><td>Apache</td><td>20/08/2026</td><td>Parage</td></tr><tr><td>Baya</td><td>28/08/2026</td><td>Ferrure</td></tr><tr><td>Calypso</td><td>03/09/2026</td><td>Ferrure</td></tr><tr><td>Django</td><td>14/08/2026</td><td>Ferrure</td></tr><tr><td>Étoile</td><td>31/08/2026</td><td>Parage</td></tr><tr><td>Flash</td><td>07/09/2026</td><td>Ferrure</td></tr></tbody></table></div>
+    
+
+<p>Pour commencer : dans D2, =B2+28 ajoute 28 jours à la date de B2. La poignée en bas à droite de la cellule permet de recopier la formule. Vérifie que B2 devient B3 sur la ligne suivante.</p>
+    
+
+
+        <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
+<p>Dans l’aide LibreOffice, repère comment calculer avec une date et choisir le format d’affichage. Le principe d’ajout de jours fonctionne aussi dans Excel.</p>
+    
+
+<p><a href="https://help.libreoffice.org/latest/fr/text/scalc/guide/calc_date.html" target="_blank" rel="noopener noreferrer">LibreOffice — calculs avec les dates</a></p>
+
+
+</div></details>
+
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a02-q01-label">Question 1 — Quelle formule as-tu saisie en E2 pour calculer la fin à 6 semaines ?</h3>
+            
+
+            
+            
+                <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a02-q02-label">Question 2 — Après recopie, quelle formule lis-tu dans E4 ? Clique sur E4 et regarde la barre de formule.</h3>
+            
+
+            
+            
+                <textarea id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a02-q03-label">Question 3 — Avant de modifier les dates, recopie ces quatre résultats de ton fichier.</h3>
+            
+
+            
+            
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Cheval</th>
+                                
+                                <th>Début à 4 semaines</th>
+                                
+                                <th>Fin à 6 semaines</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Apache
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q03_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Construire le tableau de suivi — Début à 4 semaines — Apache">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q03_r0_c2" data-required="true" data-row="0" data-col="2" aria-label="Construire le tableau de suivi — Fin à 6 semaines — Apache">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Django
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q03_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Construire le tableau de suivi — Début à 4 semaines — Django">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q03_r1_c2" data-required="true" data-row="1" data-col="2" aria-label="Construire le tableau de suivi — Fin à 6 semaines — Django">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a03">
+        <h2>Activité 3 — Repérer les interventions à organiser</h2>
+        
+        <p><strong>Pourquoi cette activité ?</strong> Distinguer ce qui est à prévoir de ce qui devient prioritaire.</p>
+        <h3>Comment procéder ?</h3><ol><li>Pour tout l’exercice, place-toi au 25/09/2026, même si nous sommes un autre jour.</li><li>Complète F2:F7 avec les règles du dossier.</li><li>Tu peux écrire les situations à la main. L’automatisation est un défi facultatif.</li></ol>
+
+        
+
+        
+<ul><li>Avant le début à 4 semaines : À venir.</li><li>Du début à 4 semaines jusqu’à la veille de la fin à 6 semaines : À organiser maintenant.</li><li>Le jour de la fin à 6 semaines ou après : Prioritaire.</li></ul>
+    
+
+
+        <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
+<p>Dans la page IFCE, cherche le passage consacré à la maréchalerie. Repère pourquoi la fréquence doit être adaptée au cheval. Utilise ensuite uniquement les règles fictives du dossier pour les calculs.</p>
+    
+
+<p><a href="https://equipedia.ifce.fr/sante-et-bien-etre-animal/soin-prevention-et-medication/soin/soins-courants" target="_blank" rel="noopener noreferrer">IFCE — soins courants</a></p>
+
+
+</div></details>
+
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a03-q01-label">Question 1 — Quelle situation as-tu attribuée à ces chevaux au 25/09/2026 ?</h3>
+            
+
+            
+            
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Cheval</th>
+                                
+                                <th>Situation</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Apache
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a03_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Repérer les interventions à organiser — Situation — Apache">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Calypso
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a03_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Repérer les interventions à organiser — Situation — Calypso">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Django
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a03_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Repérer les interventions à organiser — Situation — Django">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a04">
+        <h2>Activité 4 — Trier, filtrer et proposer un planning</h2>
+        
+        <p><strong>Pourquoi cette activité ?</strong> Lire les priorités sans perdre les informations d’un cheval.</p>
+        <h3>Comment procéder ?</h3><ol><li>Sélectionne tout le tableau A1:F7 : les informations d’un cheval doivent rester sur la même ligne.</li><li>Trie sur Fin à 6 semaines, de la date la plus ancienne à la plus récente.</li><li>Active un filtre et affiche À organiser maintenant et Prioritaire. Si ton logiciel ne permet pas les deux à la fois, consulte les deux situations successivement.</li><li>Le maréchal peut prendre trois chevaux le 30/09/2026. Propose un ordre en tenant compte des échéances. Puis réaffiche toutes les lignes.</li></ol>
+
+        
+
+        
+<p>Trier range les lignes ; filtrer en masque certaines temporairement. Aucune ligne ne doit être supprimée.</p>
+    
+
+
+        <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
+</div></details>
+
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a04-q01-label">Question 1 — Quel cheval apparaît en premier après le tri ? Explique aussi comment tu as évité de mélanger ses informations avec celles d’un autre cheval.</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a04-q02-label">Question 2 — Quels trois chevaux proposes-tu pour le 30/09 ? Justifie l’ordre avec les dates de ton tableau.</h3>
+            
+
+            
+            
+                <textarea id="a04-q02" data-answer-id="a04_q02" data-required="true" aria-labelledby="a04-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a05">
+        <h2>Activité 5 — Corriger une donnée et observer</h2>
+        
+        <p><strong>Pourquoi cette activité ?</strong> Comprendre l’intérêt des formules lorsqu’une information change.</p>
+        <h3>Comment procéder ?</h3><ol><li>Réaffiche toutes les lignes et retrouve Apache par son nom : après le tri, il n’est plus forcément ligne 2.</li><li>Sa dernière intervention a en réalité eu lieu le 10/09/2026. Modifie uniquement sa date en colonne B.</li><li>Observe D et E. Mets sa situation à jour, puis revois ton planning. Enregistre le fichier.</li></ol>
+
+        
+
+        
+
+        <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
+</div></details>
+
+        
+        <div class="cours-question" data-question="q01">
+            
+            <h3 id="a05-q01-label">Question 1 — Quels sont maintenant les résultats pour Apache ?</h3>
+            
+
+            
+            
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Cheval</th>
+                                
+                                <th>Début à 4 semaines</th>
+                                
+                                <th>Fin à 6 semaines</th>
+                                
+                                <th>Situation au 25/09</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Apache
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a05_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Corriger une donnée et observer — Début à 4 semaines — Apache">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a05_q01_r0_c2" data-required="true" data-row="0" data-col="2" aria-label="Corriger une donnée et observer — Fin à 6 semaines — Apache">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a05_q01_r0_c3" data-required="true" data-row="0" data-col="3" aria-label="Corriger une donnée et observer — Situation au 25/09 — Apache">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a05-q02-label">Question 2 — Qu’est-ce qui s’est recalculé tout seul ? Qu’as-tu dû modifier à la main ?</h3>
+            
+
+            
+            
+                <textarea id="a05-q02" data-answer-id="a05_q02" data-required="true" aria-labelledby="a05-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a05-q03-label">Question 3 — Pourquoi faut-il vérifier les informations du tableau avant de transmettre le planning ? Donne un exemple à partir d’Apache.</h3>
+            
+
+            
+            
+                <textarea id="a05-q03" data-answer-id="a05_q03" data-required="true" aria-labelledby="a05-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+    <article class="cours-activite" id="a06">
+        <h2>Activité 6 — Défi : automatiser la situation</h2>
+        <p class="course-optional">Pour aller plus loin — activité facultative.</p>
+        <p><strong>Pourquoi cette activité ?</strong> Éviter de ressaisir une situation à chaque mise à jour.</p>
+        <h3>Comment procéder ?</h3><ol><li>Ajoute une cellule contenant la date de référence 25/09/2026.</li><li>Cherche comment utiliser SI pour comparer cette date aux deux échéances.</li><li>Teste la formule sur Django, puis Apache. Fais expliquer un résultat à un camarade.</li></ol>
+
+        
+
+        
+<p>Défi facultatif : il ne conditionne ni la fin de la séance ni la note. Garde ta version fonctionnelle avant d’essayer.</p>
+    
+
+
+        <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
+</div></details>
+
+        
+    </article>
+    
+</section>
+
+    </fieldset>
+    <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
+    <h2 id="course-summary-title">À retenir</h2><ul></ul>
+    <h3>Faire le point</h3><p>Une formule relie les données : quand la date de départ change, les échéances se recalculent. Un tri organise les lignes ; un filtre aide à lire les priorités. Vérifie ton fichier enregistré et tes réponses sur le site avant d’indiquer que tu as terminé.</p>
+</section>
+
+    <div class="course-submit-panel">
+        <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
+        <p id="course-submit-status" role="status" aria-live="polite"></p>
+        <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
+    </div>
+</div></div>
+</div>
+<noscript><p>Active JavaScript pour charger ta copie et enregistrer tes réponses.</p></noscript>
+
+<script id="classes-data" type="application/json">
+{"college":{"nom":"Collège","classes":[{"id":"5e","nom":"5e","matieres":["techno"]},{"id":"4e","nom":"4e","matieres":["techno"]},{"id":"3e","nom":"3e","matieres":["techno"]}]},"mfr":{"nom":"MFR","classes":[{"id":"4e","nom":"4e MFR","matieres":["tim","maths"]},{"id":"3e","nom":"3e MFR","matieres":["tim","maths"]},{"id":"cap1","nom":"CAP 1","matieres":["tim"]},{"id":"cap2","nom":"CAP 2","matieres":["tim"]},{"id":"2de","nom":"2de Pro","matieres":["tim","maths"]},{"id":"1re","nom":"Bac Pro 1","matieres":["tim","maths"]},{"id":"term","nom":"Bac Pro 2","matieres":["tim","maths"]},{"id":"bts1","nom":"BTS 1","matieres":["tim"]},{"id":"bts2","nom":"BTS 2","matieres":["tim"]}]}}
+</script>
+<script id="seances-data" type="application/json">
+[
+    
+    
+    
+    
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"3e","seance":"S02","version":"v1","titre":"Pourquoi les objets techniques évoluent-ils ?","url":"/tifsec-test-eleves/cours/techno/3e/s02/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"3e","seance":"S10","version":"v1","titre":"Ancien essai court — protéger l’accès à ses comptes","url":"/tifsec-test-eleves/cours/techno/3e/s10/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"3e","seance":"S10R","version":"v1","titre":"Comment protéger ses données et ses comptes ?","url":"/tifsec-test-eleves/cours/techno/3e/s10-original/"}
+    
+    
+    
+    
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"cap2","seance":"S03","version":"v1","titre":"Organiser le suivi de maréchalerie d’une écurie","url":"/tifsec-test-eleves/cours/tim/cap2/s03/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"maths","classe":"term","seance":"S05","version":"v1","titre":"Découvrir les fonctions du second degré","url":"/tifsec-test-eleves/cours/maths/term/s05/"}
+    
+    
+]
+</script>
+
+<script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
+    </main>
+    <footer class="site-footer">
+    <p>
+        &copy; 2026
+        Portail pédagogique Technologie | TIM | Mathématiques
+    </p>
+</footer>
+</body>
+</html>

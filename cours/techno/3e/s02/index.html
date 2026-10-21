@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
+
+    
+    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
+    <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
+    
+
+    <title>
+        
+        Séance pilote de Technologie | Portail pédagogique Technologie | TIM | Mathématiques
+        
+    </title>
+
+    <link rel="icon" href="/tifsec-test-eleves/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/variables.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/base.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/body.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/header.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/main.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/footer.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-message.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-session.css">
+
+    
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    
+    
+
+    
+
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    
+    
+</head>
+
+<body class="student-shell student-course-shell">
+    <a class="student-skip" href="#course-intro">Aller au cours</a>
+    <p id="message" class="auth-message" role="status" aria-live="polite" hidden></p>
+    <header class="student-header" id="course-header">
+    <div class="student-header-inner">
+        <div class="student-topbar">
+            <a class="student-brand" href="/tifsec-test-eleves/eleve/"><img src="/tifsec-test-eleves/images/logo.png" width="44" height="44" alt=""><span>Mon espace<span data-profile-field="matieres"></span></span></a>
+            <div class="student-header-actions"><a class="student-home-link" href="/tifsec-test-eleves/eleve/">Mes séances</a><a id="course-login" href="/tifsec-test-eleves/connexion/">Se connecter</a><details class="student-theme-picker" id="student-theme-picker" hidden>
+    <summary>Apparence</summary>
+    <div class="student-theme-options"><label for="student-theme-select">Les couleurs de mon espace</label><select id="student-theme-select" disabled><option value="ocean">Océan · bleu</option><option value="forest">Forêt · vert</option><option value="plum">Prune · violet</option><option value="terracotta">Terre cuite · orangé</option><option value="ruby">Rubis · rouge</option><option value="slate">Ardoise · gris</option><option value="midnight">Minuit · noir</option><option value="rose">Rosée · rose</option><option value="neon">Néon · RGB sombre</option><option value="cyberpunk">Cyberpunk · cité futuriste</option><option value="minecraft">Minecraft · blocs et pixels</option><option value="farming">Farming · campagne et cultures</option></select><label class="student-theme-motion"><input type="checkbox" id="student-theme-motion"> Mettre les animations en pause</label><p id="student-theme-status" role="status" aria-live="polite">Ce choix te suivra sur les autres ordinateurs.</p><button id="student-theme-retry" type="button" hidden>Réessayer</button></div>
+</details>
+<button type="button" id="course-logout" hidden>Se déconnecter</button></div>
+        </div>
+        <div class="student-welcome-row" id="course-welcome" hidden>
+            <div><p class="student-eyebrow">Une séance à la fois, à ton rythme.</p><p class="student-course-greeting">Bonjour <span id="course-header-identity"></span></p></div>
+            <dl class="student-profile"><div><dt>Établissement</dt><dd data-profile-field="etablissement"></dd></div><div><dt>Classe</dt><dd data-profile-field="classe"></dd></div><div><dt>Inscription</dt><dd data-profile-field="validation"></dd></div></dl>
+        </div>
+    </div>
+</header>
+
+    <main class="student-course-main" id="student-course-main">
+
+<div id="course-work" data-etablissement="college" data-matiere="techno" data-classe="3e" data-seance="S02" data-saving-enabled="true" data-collaboration-enabled="true">
+    <div class="course-save-panel course-toolbar">
+        <p id="course-identity" hidden></p>
+        <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+    </div>
+    <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
+        <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
+        <p id="group-status" role="status">Les groupes sont propres à chaque séance. Connecte-toi avec ton compte élève pour choisir ta copie.</p>
+        <div id="group-controls" hidden>
+            <label for="group-copy">Copie de cette séance</label><select id="group-copy"></select>
+            <button type="button" id="group-refresh">Actualiser les groupes</button>
+            <div id="group-create-panel" hidden>
+                <p>Choisis un ou deux camarades. Chacun doit accepter pour partager les réponses. Le groupe reprend ton travail actuel ; ta copie individuelle reste dans l’historique.</p>
+                <div id="group-classmates" class="collaboration-roster"></div>
+                <button type="button" id="group-create">Envoyer les invitations</button>
+            </div>
+        </div>
+    </section>
+    <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
+    <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
+
+
+
+<div class="course-columns">
+    <aside class="course-navigation" aria-label="Étapes de la séance">
+        <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
+        <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
+        <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Un même problème, des solutions différentes</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+    </aside>
+
+<div class="course-reading">
+<!-- ========== INTRODUCTION DU COURS ========== -->
+
+<header class="cours-intro" id="course-intro">
+    <h1>Pourquoi les objets techniques évoluent-ils ?</h1>
+
+    
+    <p class="cours-theme">
+        <strong>Thème :</strong> Les objets et les systèmes techniques : leurs usages et leurs interactions
+    </p>
+    
+
+    
+    <p class="cours-problematique">
+        <strong>Problématique :</strong> Pourquoi les objets techniques changent-ils alors qu&#39;ils répondent parfois au même besoin ?
+    </p>
+    
+
+    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Comparer des objets de différentes époques aide à comprendre ce qui change dans les solutions techniques et ce qui reste nécessaire aux utilisateurs.</p></section>
+    
+    <section><h2>Dans la vie quotidienne</h2><p>Quand on remplace un téléphone ou un moyen d’éclairage, on peut comparer les services rendus et les améliorations utiles, au-delà de leur apparence.</p></section>
+    <section><h2>Pour commencer</h2><p>Pour démarrer, rappelle comment garder une trace de tes essais et de tes recherches. Ici, tes réponses se rédigent directement dans le cours.</p></section>
+    
+    <section class="cours-notions"><h2>Les repères pour comprendre</h2><h3>Repérer le besoin</h3><p>Le besoin exprime ce qu’une personne cherche à faire ou à obtenir. Avant de nommer un objet, demande-toi quel service est recherché dans la situation étudiée.</p><h3>Observer la solution technique</h3><p>La solution technique est le moyen choisi pour rendre ce service. Pour comparer deux objets, observe leur fonctionnement et leur usage, sans t’arrêter à leur forme ou à leur couleur.</p><h3>Expliquer une évolution</h3><p>Une évolution peut être liée à de nouvelles connaissances, à des inventions ou à des attentes différentes. On examine des critères précis : efficacité, sécurité, coût, confort, consommation de ressources ou possibilités de réparation. Un objet récent n’est pas automatiquement meilleur sur tous ces critères.</p></section>
+    <section class="cours-objectifs">
+        <h2>Ce que vous allez apprendre</h2>
+        <ul>
+            
+            <li>Un objet technique répond à un besoin.</li>
+            
+            <li>Plusieurs objets peuvent répondre au même besoin avec des solutions différentes.</li>
+            
+            <li>Les solutions techniques évoluent au cours du temps.</li>
+            
+        </ul>
+
+        <h2>Ce que vous allez apprendre à faire</h2>
+        <ul>
+            
+            <li>Comparer plusieurs objets techniques.</li>
+            
+            <li>Identifier les évolutions des solutions techniques.</li>
+            
+            <li>Justifier une réponse à partir d&#39;exemples.</li>
+            
+        </ul>
+    </section>
+    
+    
+</header>
+
+    <fieldset id="course-answers" class="course-answer-fields" disabled>
+        <legend>Réponses aux activités</legend>
+        <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
+
+<section class="cours-activites">
+    
+    <article class="cours-activite" id="a01">
+        <h2>Activité 1 — Un même problème, des solutions différentes</h2>
+        
+        <p><strong>Pourquoi cette activité ?</strong> Distinguer ce dont les personnes ont besoin et les moyens qu’elles utilisent pour y répondre.</p>
+        <h3>Comment procéder ?</h3><ol><li>Lis les repères du cours et reformule les mots que tu ne comprends pas avec ton professeur ou ton groupe.</li><li>Pour chacun des trois besoins du tableau, propose un exemple ancien et un exemple actuel.</li><li>Si un exemple te manque, fais une recherche courte dans une ressource proposée par ton professeur. Vérifie qu’elle répond bien à ta question, puis reformule avec tes mots.</li><li>Compare tes exemples avant de rédiger ta justification. Si vous travaillez ensemble, chacun doit pouvoir expliquer le choix du groupe.</li></ol>
+
+        
+        <p>Pour chaque besoin, propose une solution utilisée autrefois et une solution actuelle.</p>
+        
+
+        
+        
+        
+        <div class="cours-question" data-question="q01">
+            
+
+            
+            
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Besoin</th>
+                                
+                                <th>Ancienne solution</th>
+                                
+                                <th>Solution actuelle</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Communiquer à distance
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Un même problème, des solutions différentes — Ancienne solution — Communiquer à distance">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r0_c2" data-required="true" data-row="0" data-col="2" aria-label="Un même problème, des solutions différentes — Solution actuelle — Communiquer à distance">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    S&#39;éclairer
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Un même problème, des solutions différentes — Ancienne solution — S&#39;éclairer">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r1_c2" data-required="true" data-row="1" data-col="2" aria-label="Un même problème, des solutions différentes — Solution actuelle — S&#39;éclairer">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Se déplacer
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Un même problème, des solutions différentes — Ancienne solution — Se déplacer">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r2_c2" data-required="true" data-row="2" data-col="2" aria-label="Un même problème, des solutions différentes — Solution actuelle — Se déplacer">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            <h3 id="a01-q02-label">Question 2 — Qu&#39;est-ce qui a surtout changé : le besoin ou la manière d&#39;y répondre ? Justifie avec un exemple.</h3>
+            
+
+            
+            
+                <textarea id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            <h3 id="a01-q03-label">Question 3 — Pour vérifier que tu distingues besoin et solution technique, choisis une seule proposition : une lampe à huile et une lampe à DEL permettent toutes deux de s’éclairer. Qu’est-ce qui change entre ces deux objets ?</h3>
+            
+
+            
+            
+                <select id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label"><option value="">Choisis une réponse</option><option value="besoin">Le besoin : les utilisateurs ne cherchent plus à s’éclairer.</option><option value="solution">La solution technique utilisée pour répondre au besoin de s’éclairer.</option><option value="aucun">Rien : ces deux objets fonctionnent exactement de la même manière.</option></select>
+
+                
+            
+            
+            
+        </div>
+        
+    </article>
+    
+</section>
+
+    </fieldset>
+    <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Un même besoin peut être satisfait par différentes solutions techniques.</li><li>Les solutions techniques évoluent pour répondre aux besoins et améliorer les performances.</li></ul>
+    <h3>Faire le point</h3><p>Choisis un exemple du tableau et explique avec tes mots la différence entre le besoin et la solution technique. Relis ensuite ta justification.</p>
+</section>
+
+    <div class="course-submit-panel">
+        <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
+        <p id="course-submit-status" role="status" aria-live="polite"></p>
+        <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
+    </div>
+</div></div>
+</div>
+<noscript><p>Active JavaScript pour charger ta copie et enregistrer tes réponses.</p></noscript>
+
+<script id="classes-data" type="application/json">
+{"college":{"nom":"Collège","classes":[{"id":"5e","nom":"5e","matieres":["techno"]},{"id":"4e","nom":"4e","matieres":["techno"]},{"id":"3e","nom":"3e","matieres":["techno"]}]},"mfr":{"nom":"MFR","classes":[{"id":"4e","nom":"4e MFR","matieres":["tim","maths"]},{"id":"3e","nom":"3e MFR","matieres":["tim","maths"]},{"id":"cap1","nom":"CAP 1","matieres":["tim"]},{"id":"cap2","nom":"CAP 2","matieres":["tim"]},{"id":"2de","nom":"2de Pro","matieres":["tim","maths"]},{"id":"1re","nom":"Bac Pro 1","matieres":["tim","maths"]},{"id":"term","nom":"Bac Pro 2","matieres":["tim","maths"]},{"id":"bts1","nom":"BTS 1","matieres":["tim"]},{"id":"bts2","nom":"BTS 2","matieres":["tim"]}]}}
+</script>
+<script id="seances-data" type="application/json">
+[
+    
+    
+    
+    
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"3e","seance":"S02","version":"v1","titre":"Pourquoi les objets techniques évoluent-ils ?","url":"/tifsec-test-eleves/cours/techno/3e/s02/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"3e","seance":"S10","version":"v1","titre":"Ancien essai court — protéger l’accès à ses comptes","url":"/tifsec-test-eleves/cours/techno/3e/s10/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"3e","seance":"S10R","version":"v1","titre":"Comment protéger ses données et ses comptes ?","url":"/tifsec-test-eleves/cours/techno/3e/s10-original/"}
+    
+    
+    
+    
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"cap2","seance":"S03","version":"v1","titre":"Organiser le suivi de maréchalerie d’une écurie","url":"/tifsec-test-eleves/cours/tim/cap2/s03/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"maths","classe":"term","seance":"S05","version":"v1","titre":"Découvrir les fonctions du second degré","url":"/tifsec-test-eleves/cours/maths/term/s05/"}
+    
+    
+]
+</script>
+
+<script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
+    </main>
+    <footer class="site-footer">
+    <p>
+        &copy; 2026
+        Portail pédagogique Technologie | TIM | Mathématiques
+    </p>
+</footer>
+</body>
+</html>

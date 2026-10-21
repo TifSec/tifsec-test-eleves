@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
+
+    
+    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
+    <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
+    
+
+    <title>
+        
+        Espace élève | Portail pédagogique Technologie | TIM | Mathématiques
+        
+    </title>
+
+    <link rel="icon" href="/tifsec-test-eleves/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/variables.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/base.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/body.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/header.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/main.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/footer.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-message.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-session.css">
+
+    
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-dashboard.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-cards.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-competencies.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
+    
+
+    
+
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    
+    
+</head>
+
+<body class="student-shell">
+    <a class="student-skip" href="#student-main">Aller à mes séances</a>
+    <p id="message" class="auth-message" role="status" aria-live="polite" hidden></p>
+    <p id="eleve-loading" class="session-panel" role="status">Chargement de ton profil…</p>
+    <section id="eleve-access-denied" class="session-panel" hidden>
+        <h1>Accès à ton espace</h1><p id="eleve-access-message"></p><a href="/tifsec-test-eleves/connexion/">Se connecter</a>
+        <div class="session-actions"><button type="button" id="eleve-retry">Réessayer</button><button type="button" id="eleve-denied-logout">Se déconnecter</button></div>
+    </section>
+    <div id="eleve-content" hidden>
+        <header class="student-header">
+    <div class="student-header-inner">
+        <div class="student-topbar">
+            <a class="student-brand" href="/tifsec-test-eleves/eleve/"><img src="/tifsec-test-eleves/images/logo.png" width="44" height="44" alt=""><span>Mon espace<span data-profile-field="matieres"></span></span></a>
+            <div class="student-header-actions"><details class="student-theme-picker" id="student-theme-picker" hidden>
+    <summary>Apparence</summary>
+    <div class="student-theme-options"><label for="student-theme-select">Les couleurs de mon espace</label><select id="student-theme-select" disabled><option value="ocean">Océan · bleu</option><option value="forest">Forêt · vert</option><option value="plum">Prune · violet</option><option value="terracotta">Terre cuite · orangé</option><option value="ruby">Rubis · rouge</option><option value="slate">Ardoise · gris</option><option value="midnight">Minuit · noir</option><option value="rose">Rosée · rose</option><option value="neon">Néon · RGB sombre</option><option value="cyberpunk">Cyberpunk · cité futuriste</option><option value="minecraft">Minecraft · blocs et pixels</option><option value="farming">Farming · campagne et cultures</option></select><label class="student-theme-motion"><input type="checkbox" id="student-theme-motion"> Mettre les animations en pause</label><p id="student-theme-status" role="status" aria-live="polite">Ce choix te suivra sur les autres ordinateurs.</p><button id="student-theme-retry" type="button" hidden>Réessayer</button></div>
+</details>
+<button type="button" id="eleve-logout">Se déconnecter</button></div>
+        </div>
+        <div class="student-welcome-row">
+            <div><p class="student-eyebrow">Une séance à la fois, à ton rythme.</p><h1>Bonjour <span id="eleve-identity"></span></h1></div>
+            <dl class="student-profile"><div><dt>Établissement</dt><dd data-profile-field="etablissement"></dd></div><div><dt>Classe</dt><dd data-profile-field="classe"></dd></div><div><dt>Inscription</dt><dd data-profile-field="validation"></dd></div></dl>
+        </div>
+    </div>
+</header>
+
+        <main id="student-main" class="student-main" tabindex="-1"><div class="student-grid">
+    <div class="student-sidebar">
+        <aside class="student-panel student-statistics" aria-labelledby="student-stats-title">
+            <p class="student-section-kicker">Mon parcours</p><h2 id="student-stats-title">Mes repères</h2><p class="student-muted">Un aperçu de mon travail.</p><dl id="student-stats"></dl>
+            <details id="student-help" class="student-help"><summary>Comment ça marche ?</summary>
+                <p>Tes réponses s’enregistrent automatiquement. Tu les retrouves à ta prochaine connexion.</p>
+                <p>« J’ai terminé » permet de passer à la suite. Tu peux encore compléter ta copie jusqu’à sa clôture par ton professeur. La note peut arriver plus tard.</p>
+                <p>Ces repères montrent ton avancement, pas ce que tu maîtrises. Une note de groupe est commune aux participants.</p>
+            </details>
+        </aside>
+
+    </div>
+    <div class="student-content student-card-board" aria-label="Mon espace en quatre cartes">
+        <details class="student-expand-card" id="student-card-next">
+            <summary><span class="student-card-icon" aria-hidden="true">→</span><span class="student-card-title">Le prochain pas</span><span class="student-card-preview">Retrouver la prochaine séance.</span><span class="student-card-hint">Ouvrir <span class="student-card-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></span></span></summary>
+            <div class="student-card-body"><div class="student-card-toolbar"><strong>Le prochain pas</strong><button type="button" data-card-close aria-label="Refermer la carte" title="Refermer la carte"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></button></div><p class="student-card-placeholder">Les informations s’afficheront après leur chargement.</p>
+        <section id="student-next-panel" class="student-panel student-next-panel" data-enabled="true" hidden aria-labelledby="student-next-title">
+            <p class="student-section-kicker">Le prochain pas</p><h2 id="student-next-title">Ma prochaine séance</h2>
+            <svg class="student-next-art" viewBox="0 0 200 190" aria-hidden="true" focusable="false"><circle cx="105" cy="95" r="76" fill="none" stroke="currentColor" stroke-dasharray="4 9"/><circle cx="164" cy="39" r="10" fill="#b9ecd8"/><circle cx="31" cy="129" r="6" fill="#f2cdb2"/><path d="M42 65Q70 52 98 69V139Q70 122 42 133Z" fill="#d7e7f8"/><path d="M98 69Q127 52 155 65V133Q127 122 98 139Z" fill="#b9ecd8"/><path d="M98 72V139M54 79Q72 72 86 81M54 94Q72 87 86 96M111 81Q127 73 143 79M111 96Q127 88 143 94" fill="none" stroke="#244b68" stroke-width="3" stroke-linecap="round"/><path d="M130 131L160 101L171 112L141 142L127 146Z" fill="#f2cdb2"/></svg>
+            <div id="student-next"></div>
+        </section>
+            </div>
+        </details>
+        <details class="student-expand-card" id="student-card-work">
+            <summary><span class="student-card-icon" aria-hidden="true">▤</span><span class="student-card-title">Mon espace de travail</span><span class="student-card-preview">Ouvrir ou reprendre mes séances.</span><span class="student-card-hint">Ouvrir <span class="student-card-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></span></span></summary>
+            <div class="student-card-body"><div class="student-card-toolbar"><strong>Mon espace de travail</strong><button type="button" data-card-close aria-label="Refermer la carte" title="Refermer la carte"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></button></div><p class="student-card-placeholder">Les informations s’afficheront après leur chargement.</p>
+        <section class="student-panel student-lessons-panel" aria-labelledby="student-lessons-title">
+            <div class="student-section-heading"><div><p class="student-section-kicker">Mon espace de travail</p><h2 id="student-lessons-title" tabindex="-1">Mes séances</h2><p>Reprendre, relire, comprendre mes retours.</p></div><button type="button" id="student-refresh" class="student-refresh">Actualiser</button></div>
+            <div id="student-filters" class="student-filters" role="group" aria-label="Afficher mes séances">
+                <button type="button" data-view="all" aria-pressed="true" disabled>Toutes</button><button type="button" data-view="started" aria-pressed="false" disabled>En cours</button><button type="button" data-view="finished" aria-pressed="false" disabled>Terminées</button><button type="button" data-view="feedback" aria-pressed="false" disabled>Retours et notes</button>
+            </div>
+            <p id="student-dashboard-status" role="status" aria-live="polite">Chargement de tes séances…</p>
+            <div id="student-lessons" class="student-lessons" data-grades="true" data-submission="true"></div>
+            <details id="student-history-panel" class="student-history" hidden><summary>Autres séances et anciens travaux <span id="student-history-count"></span></summary><div id="student-history" class="student-lessons"></div></details>
+        </section>
+            </div>
+        </details>
+        <details class="student-expand-card" id="student-card-followup">
+            <summary><span class="student-card-icon" aria-hidden="true">✓</span><span class="student-card-title">Comprendre et progresser</span><span class="student-card-preview">Relire mes retours et corrections.</span><span class="student-card-hint">Ouvrir <span class="student-card-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></span></span></summary>
+            <div class="student-card-body"><div class="student-card-toolbar"><strong>Comprendre et progresser</strong><button type="button" data-card-close aria-label="Refermer la carte" title="Refermer la carte"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></button></div><p class="student-card-placeholder">Les informations s’afficheront après leur chargement.</p>
+        <section id="student-followup-panel" class="student-panel student-followup-panel" hidden aria-labelledby="student-followup-title">
+            <p class="student-section-kicker">Comprendre et progresser</p><h2 id="student-followup-title">Mes retours</h2>
+            <div id="student-followup"></div>
+        </section>
+            </div>
+        </details>
+        <details class="student-expand-card" id="student-card-invitations">
+            <summary><span class="student-card-icon" aria-hidden="true">＋</span><span class="student-card-title">Invitations à collaborer</span><span class="student-card-preview">Voir les demandes de mes camarades.</span><span class="student-card-hint">Ouvrir <span class="student-card-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></span></span></summary>
+            <div class="student-card-body"><div class="student-card-toolbar"><strong>Invitations à collaborer</strong><button type="button" data-card-close aria-label="Refermer la carte" title="Refermer la carte"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></button></div><p class="student-card-placeholder">Les informations s’afficheront après leur chargement.</p>
+        <section id="student-invitations" class="collaboration-panel" data-enabled="true" hidden></section>
+            </div>
+        </details>
+    </div>
+</div>
+</main>
+        <footer class="site-footer">
+    <p>
+        &copy; 2026
+        Portail pédagogique Technologie | TIM | Mathématiques
+    </p>
+</footer>
+    </div>
+    <noscript><p>Active JavaScript pour te connecter et retrouver ton travail.</p></noscript>
+    <script id="classes-data" type="application/json">
+{"college":{"nom":"Collège","classes":[{"id":"5e","nom":"5e","matieres":["techno"]},{"id":"4e","nom":"4e","matieres":["techno"]},{"id":"3e","nom":"3e","matieres":["techno"]}]},"mfr":{"nom":"MFR","classes":[{"id":"4e","nom":"4e MFR","matieres":["tim","maths"]},{"id":"3e","nom":"3e MFR","matieres":["tim","maths"]},{"id":"cap1","nom":"CAP 1","matieres":["tim"]},{"id":"cap2","nom":"CAP 2","matieres":["tim"]},{"id":"2de","nom":"2de Pro","matieres":["tim","maths"]},{"id":"1re","nom":"Bac Pro 1","matieres":["tim","maths"]},{"id":"term","nom":"Bac Pro 2","matieres":["tim","maths"]},{"id":"bts1","nom":"BTS 1","matieres":["tim"]},{"id":"bts2","nom":"BTS 2","matieres":["tim"]}]}}
+</script>
+    <script id="seances-data" type="application/json">
+[
+    
+    
+    
+    
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"3e","seance":"S02","version":"v1","titre":"Pourquoi les objets techniques évoluent-ils ?","url":"/tifsec-test-eleves/cours/techno/3e/s02/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"3e","seance":"S10","version":"v1","titre":"Ancien essai court — protéger l’accès à ses comptes","url":"/tifsec-test-eleves/cours/techno/3e/s10/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"3e","seance":"S10R","version":"v1","titre":"Comment protéger ses données et ses comptes ?","url":"/tifsec-test-eleves/cours/techno/3e/s10-original/"}
+    
+    
+    
+    
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"cap2","seance":"S03","version":"v1","titre":"Organiser le suivi de maréchalerie d’une écurie","url":"/tifsec-test-eleves/cours/tim/cap2/s03/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"maths","classe":"term","seance":"S05","version":"v1","titre":"Découvrir les fonctions du second degré","url":"/tifsec-test-eleves/cours/maths/term/s05/"}
+    
+    
+]
+</script>
+
+    <script id="progressions-data" type="application/json">[{"etablissement":"college","matiere":"techno","classe":"3e","derniere_seance_en_classe":"S09","seances":[{"id":"S10R","numero":"S10","titre":"Comment protéger ses données et ses comptes ?"},{"id":"S11","numero":"S11","titre":"Comment circulent l’énergie et l’information dans un système automatisé ?"},{"id":"S12","numero":"S12","titre":"Comment décrire précisément le comportement d’un système automatisé ?"},{"id":"S13","numero":"S13","titre":"Pix : où en suis-je et que dois-je travailler ?"}]},{"etablissement":"mfr","matiere":"tim","classe":"cap2","derniere_seance_en_classe":"S02","seances":[{"id":"S03","numero":"S03","titre":"Organiser le suivi de maréchalerie d’une écurie"}]},{"etablissement":"mfr","matiere":"maths","classe":"term","derniere_seance_en_classe":"S04","seances":[{"id":"S05","numero":"S05","titre":"Découvrir les fonctions du second degré"}]}]</script>
+
+    <script id="referentiels-data" type="application/json">[{"id":"techno-cycle4-2024","etablissement":"college","classes":["5e","4e","3e"],"matiere":"techno","titre":"Technologie · cycle 4","source":"https://www.education.gouv.fr/bo/2024/Hebdo9/MENE2402802A","source_annexe":"https://www.education.gouv.fr/media/160782/download","synthese":true,"description":"Les neuf compétences de fin de cycle sont reformulées pour faciliter la lecture. Les attendus évoluent de la 5e à la 3e.","themes":[{"titre":"Usages, société et choix","competences":[{"id":"usages-evolution","titre":"Relier besoins, usages et changements techniques"},{"id":"interactions","titre":"Expliquer les relations entre objet, utilisateur et environnement"},{"id":"choix","titre":"Comparer des objets et justifier un choix"}]},{"titre":"Comprendre le fonctionnement","competences":[{"id":"fonctionnement","titre":"Expliquer composants, énergie et circulation des données"},{"id":"depannage","titre":"Trouver une panne et vérifier sa réparation"},{"id":"modifier-programme","titre":"Lire un programme et adapter son comportement"}]},{"titre":"Imaginer, réaliser et vérifier","competences":[{"id":"concevoir","titre":"Proposer puis fabriquer une solution adaptée"},{"id":"tester","titre":"Vérifier une solution par essais ou simulation"},{"id":"programmer","titre":"Construire un programme et le mettre au point"}]}],"seances":{"S02":["usages-evolution"],"S10":["usages-evolution"],"S10R":["usages-evolution"],"S11":["fonctionnement"],"S12":["fonctionnement","modifier-programme"]}},{"id":"maths-ea-cycle4-2025","etablissement":"mfr","classes":["4e","3e"],"matiere":"maths","titre":"Mathématiques · 4e et 3e agricoles","source":"https://chlorofil.fr/fileadmin/user_upload/02-diplomes/referentiels/secondaire/4e3e/4e3e-EA-ref-2025.pdf","synthese":true,"description":"Les objectifs du référentiel agricole sont reformulés pour faciliter la lecture. Les attendus détaillés dépendent de la classe.","themes":[{"titre":"Objectifs de la formation","competences":[{"id":"calcul","titre":"Calculer avec nombres et lettres"},{"id":"donnees","titre":"Lire des données, statistiques et relations de proportionnalité"},{"id":"mesures","titre":"Calculer des mesures avec les bonnes unités"},{"id":"geometrie","titre":"Justifier une démarche géométrique"},{"id":"algorithmes","titre":"Construire et vérifier un petit programme"}]}],"seances":{}},{"id":"tim-ea-cycle4-2025","etablissement":"mfr","classes":["4e","3e"],"matiere":"tim","titre":"TIM · 4e et 3e agricoles","source":"https://chlorofil.fr/fileadmin/user_upload/02-diplomes/referentiels/secondaire/4e3e/4e3e-EA-ref-2025.pdf","synthese":true,"description":"Les objectifs du référentiel agricole sont reformulés pour faciliter la lecture. Les attendus détaillés dépendent de la classe.","themes":[{"titre":"Objectifs de la formation","competences":[{"id":"outils","titre":"Organiser ses fichiers et choisir ses outils"},{"id":"produire","titre":"Créer et transformer des documents numériques"},{"id":"information","titre":"Chercher, vérifier et partager une information"},{"id":"responsabilite","titre":"Agir en ligne en respectant les personnes et les droits"},{"id":"coder","titre":"Analyser une tâche puis la programmer"},{"id":"evolutions","titre":"Comprendre comment les outils numériques changent"}]}],"seances":{}}]</script>
+
+    <script id="competences-evaluees-data" type="application/json">[{"etablissement":"college","matiere":"techno","classe":"3e","seance":"S11","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Organisation interne et échanges entre commande et énergie","questions":{"a01_q01":["fonctionnement"],"a01_q02":["fonctionnement"],"a02_q01":["fonctionnement"],"a02_q02":["fonctionnement"],"a03_q01":["fonctionnement"],"a03_q02":["fonctionnement"]}},{"etablissement":"college","matiere":"techno","classe":"3e","seance":"S12","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Interprétation des entrées, conditions et modification d’un algorithme","questions":{"a01_q01":["fonctionnement"],"a01_q02":["modifier-programme"],"a02_q01":["modifier-programme"],"a02_q02":["modifier-programme"],"a03_q01":["modifier-programme"],"a03_q02":["modifier-programme"]}},{"etablissement":"college","matiere":"techno","classe":"3e","seance":"S02","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Besoins, usages et évolution des solutions","questions":{"a01_q01":["usages-evolution"],"a01_q02":["usages-evolution"],"a01_q03":["usages-evolution"]}},{"etablissement":"college","matiere":"techno","classe":"3e","seance":"S10","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Usages responsables du numérique et cybersécurité","questions":{"a01_q01":["usages-evolution"],"a01_q02":["usages-evolution"],"a02_q01":["usages-evolution"],"a02_q02":["usages-evolution"],"a03_q01":["usages-evolution"]}},{"etablissement":"college","matiere":"techno","classe":"3e","seance":"S10R","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Usages responsables du numérique et cybersécurité","questions":{"a01_q01":["usages-evolution"],"a01_q02":["usages-evolution"],"a02_q01":["usages-evolution"],"a02_q02":["usages-evolution"],"a02_q03":["usages-evolution"],"a03_q01":["usages-evolution"],"a03_q02":["usages-evolution"],"a04_q01":["usages-evolution"],"a04_q02":["usages-evolution"],"a05_q01":["usages-evolution"],"a06_q01":["usages-evolution"],"a06_q02":["usages-evolution"],"a07_q01":["usages-evolution"],"a08_q01":["usages-evolution"],"a09_q01":["usages-evolution"],"a09_q02":["usages-evolution"]}}]</script>
+
+    <script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
+
+    <script type="module" src="/tifsec-test-eleves/assets/js/auth/eleve-guard.js"></script>
+    <script type="module" src="/tifsec-test-eleves/assets/js/cours/student-collaboration.js"></script>
+    <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-dashboard.js"></script>
+    <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+    <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-cards.js"></script>
+</body>
+</html>
