@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
+
+    
+    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
+    <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
+    
+
+    <title>
+        
+        Portail pédagogique Technologie | TIM | Mathématiques
+        
+    </title>
+
+    <link rel="icon" href="/tifsec-test-eleves/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/variables.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/base.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/body.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/header.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/main.css">
+
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/footer.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-message.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/auth/auth-session.css">
+
+    
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css?v=20261022-shop-effects-2">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-learning-sequence.css">
+    
+    
+
+    
+
+
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261022-quest-ui-2">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
+    
+</head>
+
+<body class="student-shell student-course-shell">
+    <a class="student-skip" href="#course-intro">Aller au cours</a>
+    <p id="message" class="auth-message" role="status" aria-live="polite" hidden></p>
+    <header class="student-header" id="course-header">
+    <div class="student-header-inner">
+        <div class="student-topbar">
+            <a class="student-brand" href="/tifsec-test-eleves/eleve/"><img src="/tifsec-test-eleves/images/logo.png" width="44" height="44" alt=""><span>Mon espace<span data-profile-field="matieres"></span></span></a>
+            <div class="student-header-actions"><a class="student-home-link" href="/tifsec-test-eleves/eleve/">Mes séances</a><a id="course-login" href="/tifsec-test-eleves/connexion/">Se connecter</a><details class="student-theme-picker" id="student-theme-picker" hidden>
+    <summary>Apparence</summary>
+    <div class="student-theme-options"><label for="student-theme-select">Les couleurs de mon espace</label><select id="student-theme-select" disabled><option value="ocean">Océan · bleu</option><option value="forest">Forêt · vert</option><option value="plum">Prune · violet</option><option value="terracotta">Terre cuite · orangé</option><option value="ruby">Rubis · rouge</option><option value="slate">Ardoise · gris</option><option value="midnight">Minuit · noir</option><option value="rose">Rosée · rose</option><option value="neon">Néon · RGB sombre</option><option value="cyberpunk">Cyberpunk · cité futuriste</option><option value="minecraft">Minecraft · blocs et pixels</option><option value="farming">Farming · campagne et cultures</option></select><label class="student-theme-motion"><input type="checkbox" id="student-theme-motion"> Mettre les animations en pause</label><p id="student-theme-status" role="status" aria-live="polite">Ce choix te suivra sur les autres ordinateurs.</p><button id="student-theme-retry" type="button" hidden>Réessayer</button></div>
+</details>
+<button type="button" id="course-logout" hidden>Se déconnecter</button></div>
+        </div>
+        <div class="student-welcome-row" id="course-welcome" hidden>
+            <div><p class="student-eyebrow">Une séance à la fois, à ton rythme.</p><p class="student-course-greeting">Bonjour <span id="course-header-identity"></span></p></div>
+            <dl class="student-profile"><div><dt>Établissement</dt><dd data-profile-field="etablissement"></dd></div><div><dt>Classe</dt><dd data-profile-field="classe"></dd></div><div><dt>Inscription</dt><dd data-profile-field="validation"></dd></div></dl>
+        </div>
+    </div>
+</header>
+
+    <main class="student-course-main" id="student-course-main">
+
+
+<div id="course-work" data-etablissement="mfr" data-matiere="maths" data-classe="term" data-seance="S06" data-saving-enabled="true" data-collaboration-enabled="true">
+    <div class="course-save-panel course-toolbar">
+        <p id="course-identity" hidden></p>
+        <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-paper-toggle" aria-expanded="false" aria-controls="course-paper-version">Version papier</button><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+    </div>
+    <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
+        <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
+        <p id="group-status" role="status">Les groupes sont propres à chaque séance. Connecte-toi avec ton compte élève pour choisir ta copie.</p>
+        <div id="group-controls" hidden>
+            <label for="group-copy">Copie de cette séance</label><select id="group-copy"></select>
+            <button type="button" id="group-refresh">Actualiser les groupes</button>
+            <div id="group-create-panel" hidden>
+                <p>Choisis un ou deux camarades. Chacun doit accepter pour partager les réponses. Le groupe reprend ton travail actuel ; ta copie individuelle reste dans l’historique.</p>
+                <div id="group-classmates" class="collaboration-roster"></div>
+                <button type="button" id="group-create">Envoyer les invitations</button>
+            </div>
+        </div>
+    </section>
+    <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
+    <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
+
+<div class="course-columns">
+    <aside class="course-navigation" aria-label="Étapes de la séance">
+        <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
+        <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
+        <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Automatismes — Les carrés</a></li><li><a href="#a02">Rappel de cours — Image, minimum et symétrie</a></li><li><a href="#a03">Lecture graphique — Retrouver une information</a></li><li><a href="#a04">Méthode — Résoudre une équation</a></li><li><a href="#a05">Application — Ne pas dépasser un budget</a></li><li><a href="#a06">Exercice de transfert — Un autre contrat</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+    </aside>
+
+<div class="course-reading">
+<!-- ========== INTRODUCTION DU COURS ========== -->
+
+<header class="cours-intro" id="course-intro">
+    
+    
+    
+    <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Mathématiques · Bac Pro 2 · S06</span></div>
+    <h1>Second degré — Résoudre une équation et respecter un budget</h1>
+    <aside class="course-learning-sequence" aria-label="Comment avancer dans le cours">
+        <strong>Pour avancer</strong>
+        <ol>
+            <li>Lis les repères et les étapes.</li>
+            <li>Observe l’exemple s’il y en a un.</li>
+            <li>Essaie à ton tour avec les questions.</li>
+            <li>Réutilise une méthode déjà rencontrée.</li>
+        </ol>
+        <p>Tu peux garder le cours ouvert et utiliser les aides si tu bloques.</p>
+    </aside>
+
+    
+    <p class="cours-theme">
+        <strong>Thème :</strong> Mathématiques — Fonctions du second degré, équations et inéquations
+    </p>
+    
+
+    
+    <p class="cours-problematique">
+        <strong>Problématique :</strong> Quelles fréquences d’entretien permettent de ne pas dépasser un budget de 200 € ?
+    </p>
+    
+
+    <section class="course-info-card course-info-why"><h2>Pourquoi étudier ce sujet ?</h2><p>Après avoir trouvé le coût minimal en S05, nous cherchons maintenant toutes les solutions qui respectent un budget.</p></section>
+    
+    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Un centre équestre organise l’entretien de sa carrière. Les coûts sont fictifs : le modèle sert à apprendre à calculer et à décider.</p></section>
+    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>En S05, nous avons étudié C(x) = 5x² − 40x + 260 = 5(x − 4)² + 180. Son minimum vaut 180 €, pour quatre interventions par mois.</p></section>
+    
+    
+    <section class="course-info-card cours-objectifs">
+        <h2>Ce que vous allez apprendre</h2>
+        <ul>
+            
+            <li>Distinguer image et antécédent.</li>
+            
+            <li>Distinguer une équation et une inéquation.</li>
+            
+            <li>Relier un carré, une parabole et les solutions d’un problème.</li>
+            
+        </ul>
+
+        <h2>Ce que vous allez apprendre à faire</h2>
+        <ul>
+            
+            <li>Calculer une image et lire un graphique.</li>
+            
+            <li>Résoudre une équation simple à partir de la forme canonique.</li>
+            
+            <li>Interpréter les solutions en tenant compte des contraintes.</li>
+            
+        </ul>
+    </section>
+    
+<p>Séance de 55 minutes. Papier, crayon et calculatrice : les essais peuvent être faits au brouillon ; les réponses finales et les démarches sont saisies ici.</p>
+    
+
+<p>Dans toute la première partie, x est un entier de 1 à 8 : le nombre d’interventions mensuelles. C(x) est le coût mensuel estimé, en euros. La courbe représente aussi les valeurs intermédiaires du modèle mathématique.</p>
+    
+
+
+    
+    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
+<p>Cadre du bac professionnel agricole : module MG1, construction d’un raisonnement scientifique. Chercher les passages sur les fonctions, la résolution de problèmes et l’usage d’outils numériques dans le document d’accompagnement.</p>
+    
+
+<p><a href="https://chlorofil.fr/diplomes/secondaire/bac-pro/1re-tle/tronc-commun" target="_blank" rel="noopener noreferrer">Chlorofil — Référentiels et documents d’accompagnement du tronc commun</a></p>
+
+
+</div></details>
+
+</header>
+
+<section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
+    <div class="course-paper-actions"><p>Fiche de synthèse à consulter ou à imprimer.</p><button type="button" id="course-paper-print">Imprimer cette fiche</button></div>
+    <article class="course-paper-sheet">
+        <header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fonctions du second degré — comprendre, calculer, décider</h2><p>En S05, le sommet indiquait le coût minimal. Ici, on apprend à lire la formule et à trouver toutes les valeurs qui respectent un budget.</p></header>
+        
+        <section class="course-paper-section">
+            <h3>1. Lire la forme canonique</h3>
+            
+<p>Dans C(x) = a(x − α)² + β, le sommet est S(α ; β). Si a est positif, la parabole est tournée vers le haut et β est le coût minimal, atteint pour x = α.</p>
+    
+
+<pre class="cours-code"><code>C(x) = 5(x − 4)² + 180
+Sommet : S(4 ; 180)
+Coût minimal : 180 €, pour 4 interventions</code></pre>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>2. Calculer une image et résoudre une équation</h3>
+            
+<p>Pour calculer C(3), on remplace chaque x par 3. Pour résoudre C(x) = 185, on cherche les valeurs de x qui donnent exactement 185.</p>
+    
+
+<pre class="cours-code"><code>C(3) = 5(3 − 4)² + 180 = 185
+C(x) = 185
+(x − 4)² = 1
+x − 4 = −1 ou x − 4 = 1
+x = 3 ou x = 5</code></pre>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>3. Respecter un budget maximal</h3>
+            
+<p>« Ne pas dépasser 200 € » se traduit par C(x) ≤ 200. On garde les bornes, car le budget de 200 € est autorisé. Dans le problème, x doit aussi être un nombre entier entre 1 et 8.</p>
+    
+
+<pre class="cours-code"><code>5(x − 4)² + 180 ≤ 200
+(x − 4)² ≤ 4
+2 ≤ x ≤ 6
+Interventions entières possibles : 2, 3, 4, 5 ou 6</code></pre>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>4. Exercices d’entraînement</h3>
+            
+
+            <ol class="course-paper-questions"><li><span>Calculer C(2) et C(6). Expliquer pourquoi les résultats sont égaux.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Lire sur le graphique le sommet et les solutions de C(x) = 200.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Résoudre C(x) = 225, puis vérifier les solutions dans le modèle.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Le budget est de 200 € et il faut au moins cinq interventions. Que peut choisir le responsable ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Avec B(x) = 4(x − 5)² + 160, quelles valeurs entières respectent un budget de 176 € ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>À retenir</h3>
+            
+<ul><li>Image : résultat obtenu pour une valeur de x. Antécédent : valeur de x qui donne un résultat fixé.</li><li>Une équation cherche une égalité exacte ; une inéquation cherche toutes les valeurs qui respectent une limite.</li><li>Après avoir résolu, vérifier le domaine et les contraintes concrètes du problème.</li></ul>
+    
+
+
+            
+        </section>
+        
+    </article>
+</section>
+
+    <fieldset id="course-answers" class="course-answer-fields" disabled>
+        <legend>Réponses aux activités</legend>
+        <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
+
+<section class="cours-activites">
+    
+    <article class="cours-activite" id="a01">
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Automatismes — Les carrés</h2>
+        
+        <p><strong>Pourquoi cette activité ?</strong> Réactiver les calculs utiles pour la suite.</p>
+        <h3>Comment procéder ?</h3><ol><li>Sans calculatrice, effectuer les calculs.</li><li>Pour l’équation, vérifier chaque solution par remplacement.</li></ol>
+
+        
+
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
+        
+<p>Un carré signifie multiplier un nombre par lui-même. Les parenthèses précisent le nombre concerné par le carré.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a01-q01-label">Question 1 — Calculer (−3)².</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Réécris le carré sous la forme d’un produit.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a01-q02-label">Question 2 — Calculer −3², sans parenthèses.</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Le carré porte sur 3, puis on prend l’opposé.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a01-q03-label">Question 3 — Résoudre x² = 16 dans les nombres réels. Vérifier les solutions.</h3>
+            
+
+            
+            
+                <textarea id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Un nombre positif et un nombre négatif peuvent avoir le même carré.</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            
+            <a class="course-mission-next" href="#a02">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a02">
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Rappel de cours — Image, minimum et symétrie</h2>
+        
+        <p><strong>Pourquoi cette activité ?</strong> Retrouver le modèle étudié en S05.</p>
+        <h3>Comment procéder ?</h3><ol><li>Utiliser C(x) = 5(x − 4)² + 180.</li><li>Remplacer x par le nombre demandé, puis respecter les priorités.</li></ol>
+
+        
+
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
+        
+<p>Pourquoi changer de forme ? Le graphique de S05 indique un sommet S(4 ; 180). Nous voulons retrouver directement ces deux nombres dans la formule, puis comprendre pourquoi ils donnent le minimum.</p>
+    
+
+<p>On choisit de sortir le coefficient 5 des deux premiers termes. 5x² ÷ 5 = x² et −40x ÷ 5 = −8x. Le nombre 260 reste à l’extérieur.</p>
+    
+
+<pre class="cours-code"><code>C(x) = 5x² − 40x + 260
+     = 5(x² − 8x) + 260</code></pre>
+    
+
+<p>Quel carré pourrait donner x² − 8x ? Dans (x − 4)², les deux produits croisés donnent −4x − 4x = −8x. Le 4 est la moitié de 8.</p>
+    
+
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">×</th><th scope="col">x</th><th scope="col">−4</th></tr></thead><tbody><tr><td>x</td><td>x²</td><td>−4x</td></tr><tr><td>−4</td><td>−4x</td><td>+16</td></tr></tbody></table></div>
+    
+
+<pre class="cours-code"><code>(x − 4)² = x² − 8x + 16
+x² − 8x = (x − 4)² − 16</code></pre>
+    
+
+<p>Le carré contient 16 de plus que l’expression de départ : on retire donc 16. On conserve une égalité, pas une nouvelle fonction.</p>
+    
+
+<pre class="cours-code"><code>C(x) = 5[(x − 4)² − 16] + 260
+     = 5(x − 4)² − 80 + 260
+     = 5(x − 4)² + 180</code></pre>
+    
+
+<p>Attention : le 5 multiplie tout ce qui est entre crochets. Ainsi 5 × (−16) = −80. Puis −80 + 260 = 180.</p>
+    
+
+<p>Nous retrouvons les deux nombres attendus : x = 4 annule le carré ; comme 5 est positif, le coût ne peut pas être inférieur à 180 €. Le sommet est S(4 ; 180).</p>
+    
+
+<p>Vérification pour x = 3 : la forme développée donne 185 ; la forme canonique donne 5 × (−1)² + 180 = 185. Cet exemple vérifie un calcul ; c’est la transformation par égalités qui justifie l’équivalence pour tout x.</p>
+    
+
+<p>L’image de x est le nombre C(x). Pour calculer C(3), on remplace chaque x par 3 :</p>
+    
+
+<pre class="cours-code"><code>C(3) = 5 × (3 − 4)² + 180
+     = 5 × 1 + 180 = 185.</code></pre>
+    
+
+<p>Un carré est positif ou nul. Ainsi C(x) ≥ 180. Le minimum est atteint pour x = 4 et vaut 180 €.</p>
+    
+
+<p>Deux nombres à la même distance de 4 donnent le même coût : la parabole est symétrique par rapport à la droite x = 4.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a02-q01-label">Question 1 — Calculer C(2). Saisir le montant en euros, sans écrire l’unité.</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Commence par calculer 2 − 4.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a02-q02-label">Question 2 — Calculer C(6). Saisir le montant en euros, sans écrire l’unité.</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Commence par calculer 6 − 4.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a02-q03-label">Question 3 — Expliquer pourquoi C(2) et C(6) sont égaux.</h3>
+            
+
+            
+            
+                <textarea id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Compare les écarts de 2 et de 6 par rapport à 4.</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a01">← Étape précédente</a>
+            <a class="course-mission-next" href="#a03">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a03">
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Lecture graphique — Retrouver une information</h2>
+        
+        <p><strong>Pourquoi cette activité ?</strong> Lire une courbe avant de vérifier par le calcul.</p>
+        <h3>Comment procéder ?</h3><ol><li>Sur l’axe horizontal, lire x : le nombre d’interventions.</li><li>Sur l’axe vertical, lire le coût en euros.</li><li>Pour chercher un coût donné, partir de l’axe vertical, rejoindre la courbe, puis redescendre sur l’axe horizontal.</li></ol>
+
+        
+
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
+        
+<figure class="cours-document"><img src="/tifsec-test-eleves/assets/images/cours/maths-term-s06-parabole.svg" alt="Courbe de C(x) = 5(x − 4)² + 180 sur [1 ; 8]. Axe horizontal : interventions mensuelles. Axe vertical : coût en euros. Droite horizontale en pointillés à 200 euros." loading="lazy" decoding="async"><figcaption>Le modèle est tracé pour 1 ≤ x ≤ 8. Dans le problème, on garde uniquement les nombres entiers.</figcaption></figure>
+    
+
+<p>Un antécédent de 200 est une valeur de x pour laquelle C(x) = 200. Une même image peut avoir plusieurs antécédents.</p>
+    
+
+
+        <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
+<p>Si besoin, dans GeoGebra, saisir C(x)=5*(x-4)^2+180 et y=200. Chercher les intersections puis vérifier leur abscisse.</p>
+    
+
+<p><a href="https://www.geogebra.org/graphing" target="_blank" rel="noopener noreferrer">GeoGebra — Tracer la fonction et la droite</a></p>
+
+
+</div></details>
+
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a03-q01-label">Question 1 — Lire les coordonnées du sommet et expliquer ce que représentent ses deux coordonnées.</h3>
+            
+
+            
+            
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Repère le point le plus bas de la courbe.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a03-q02-label">Question 2 — Sur quel intervalle C est-elle décroissante ? Sur quel intervalle est-elle croissante ?</h3>
+            
+
+            
+            
+                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Une courbe qui descend correspond à une fonction décroissante.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a03-q03-label">Question 3 — Lire les antécédents de 200 : pour quelles valeurs de x a-t-on C(x) = 200 ?</h3>
+            
+
+            
+            
+                <textarea id="a03-q03" data-answer-id="a03_q03" data-required="true" aria-labelledby="a03-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Repère les intersections avec la droite horizontale en pointillés.</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a02">← Étape précédente</a>
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a04">
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Méthode — Résoudre une équation</h2>
+        
+        <p><strong>Pourquoi cette activité ?</strong> Obtenir des solutions exactes grâce au calcul.</p>
+        <h3>Comment procéder ?</h3><ol><li>Lire l’exemple résolu.</li><li>Pour chaque exercice, isoler le carré puis envisager les deux signes.</li><li>Vérifier les solutions et les contraintes 1 ≤ x ≤ 8.</li></ol>
+
+        
+
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
+        
+<p>Une équation impose une égalité exacte. Exemple résolu : chercher un coût de 185 €.</p>
+    
+
+<pre class="cours-code"><code>C(x) = 185
+5(x − 4)² + 180 = 185
+5(x − 4)² = 5
+(x − 4)² = 1
+x − 4 = −1 ou x − 4 = 1
+x = 3 ou x = 5.</code></pre>
+    
+
+<p>On effectue la même opération des deux côtés de l’égalité. Si A² = k avec k &gt; 0, alors A = −√k ou A = √k. Si k = 0, A = 0. Si k &lt; 0, aucune solution réelle : un carré ne peut pas être négatif.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Résoudre C(x) = 225. Écrire les étapes et conclure en nombre d’interventions.</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Après soustraction de 180 puis division par 5, cherche les deux nombres dont le carré vaut le résultat obtenu.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a04-q02-label">Question 2 — Peut-on obtenir un coût de 175 € avec ce modèle ? Justifier.</h3>
+            
+
+            
+            
+                <textarea id="a04-q02" data-answer-id="a04_q02" data-required="true" aria-labelledby="a04-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Compare 175 au minimum, ou commence à résoudre C(x) = 175.</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a05">
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 5</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Application — Ne pas dépasser un budget</h2>
+        
+        <p><strong>Pourquoi cette activité ?</strong> Distinguer un coût exact et un plafond à respecter.</p>
+        <h3>Comment procéder ?</h3><ol><li>Traduire « au maximum » par une inégalité.</li><li>Lire la partie de la courbe située sous le plafond.</li><li>Garder les valeurs entières autorisées, puis appliquer la contrainte supplémentaire.</li></ol>
+
+        
+
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
+        
+<p>Une inéquation contient une inégalité. « Au maximum 200 € » signifie C(x) ≤ 200. Le signe ≤ se lit « inférieur ou égal à » : le budget lui-même est accepté.</p>
+    
+
+<p>Avec a &gt; 0, l’inégalité (x − α)² ≤ a² signifie que x est à une distance d’au plus a de α : α − a ≤ x ≤ α + a. Les bornes sont incluses.</p>
+    
+
+<p>Sur un graphique, on cherche toute la portion de la courbe située en dessous de la droite de budget, ou sur cette droite.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a05-q01-label">Question 1 — Traduire le budget maximal de 200 € par une inéquation, puis la transformer pour obtenir un carré seul à gauche.</h3>
+            
+
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Soustrais 180 des deux côtés, puis divise par 5.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a05-q02-label">Question 2 — En déduire l’intervalle des solutions réelles, puis la liste des nombres entiers d’interventions qui respectent ce budget.</h3>
+            
+
+            
+            
+                <textarea id="a05-q02" data-answer-id="a05_q02" data-required="true" aria-labelledby="a05-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Le carré doit être inférieur ou égal à 2² : x reste à une distance d’au plus 2 de 4.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a05-q03-label">Question 3 — Le responsable demande au moins cinq interventions. Quelles possibilités restent dans le budget ? S’il veut le plus d’interventions possible, que choisir et à quel coût ?</h3>
+            
+
+            
+            
+                <textarea id="a05-q03" data-answer-id="a05_q03" data-required="true" aria-labelledby="a05-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Croise la liste précédente avec x ≥ 5, puis relis l’objectif du responsable.</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
+            <a class="course-mission-next" href="#a06">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a06">
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 6</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice de transfert — Un autre contrat</h2>
+        
+        <p><strong>Pourquoi cette activité ?</strong> Réutiliser la méthode sans suivre exactement le même exemple.</p>
+        <h3>Comment procéder ?</h3><ol><li>Travailler seul, puis comparer la démarche avec le bilan.</li><li>Justifier les réponses qui ne sont pas de simples calculs.</li></ol>
+
+        
+
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
+        
+<p>Un autre prestataire propose le modèle fictif B(x) = 4(x − 5)² + 160, pour un nombre entier x compris entre 1 et 8. Le budget maximal est cette fois de 176 €.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a06-q01-label">Question 1 — Quel est le coût minimal donné par B ? Saisir le montant en euros.</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a06-q01" data-answer-id="a06_q01" data-required="true" aria-labelledby="a06-q01-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Observe la forme canonique.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a06-q02-label">Question 2 — Résoudre B(x) ≤ 176. Donner l’intervalle des solutions, puis les nombres entiers possibles.</h3>
+            
+
+            
+            
+                <textarea id="a06-q02" data-answer-id="a06_q02" data-required="true" aria-labelledby="a06-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Reprends la méthode de l’activité précédente avec le nouveau centre, 5.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a06-q03-label">Question 3 — Le responsable impose au moins six interventions. Que reste-t-il ? Quelle fréquence donne le plus d’interventions sans dépasser 176 € ?</h3>
+            
+
+            
+            
+                <textarea id="a06-q03" data-answer-id="a06_q03" data-required="true" aria-labelledby="a06-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Croise la liste obtenue avec la contrainte x ≥ 6.</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a05">← Étape précédente</a>
+            <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+</section>
+
+    </fieldset>
+    <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Une image est le résultat C(x) ; un antécédent est une valeur de x donnant un résultat fixé.</li><li>Résoudre C(x) = b : chercher un coût exactement égal à b. Résoudre C(x) ≤ b : chercher tous les coûts qui ne dépassent pas b.</li><li>Pour A² = k &gt; 0, penser aux deux signes : A = −√k ou A = √k.</li><li>Un carré est positif ou nul : une équation A² = k &lt; 0 n’a pas de solution réelle.</li><li>Les solutions mathématiques doivent respecter le domaine du modèle et les contraintes du problème.</li></ul>
+    <h3>Faire le point</h3><p>Je sais lire une parabole, résoudre une équation simple à partir d’un carré et distinguer un coût exact d’un budget maximal. Je vérifie les unités, les bornes et les contraintes avant de conclure.</p>
+</section>
+
+    <div class="course-submit-panel">
+        <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
+        <p id="course-submit-status" role="status" aria-live="polite"></p>
+        <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
+    </div>
+</div></div>
+</div>
+<noscript><p>Active JavaScript pour charger ta copie et enregistrer tes réponses.</p></noscript>
+
+<script id="classes-data" type="application/json">
+{"college":{"nom":"Collège","classes":[{"id":"5e","nom":"5e","matieres":["techno"]},{"id":"4e","nom":"4e","matieres":["techno"]},{"id":"3e","nom":"3e","matieres":["techno"]}]},"mfr":{"nom":"MFR","classes":[{"id":"4e","nom":"4e MFR","matieres":["tim","maths"]},{"id":"3e","nom":"3e MFR","matieres":["tim","maths"]},{"id":"cap1","nom":"CAP 1","matieres":["tim"]},{"id":"cap2","nom":"CAP 2","matieres":["tim"]},{"id":"2de","nom":"2de Pro","matieres":["tim","maths"]},{"id":"1re","nom":"Bac Pro 1","matieres":["tim","maths"]},{"id":"term","nom":"Bac Pro 2","matieres":["tim","maths"]},{"id":"bts1","nom":"BTS 1","matieres":["tim"]},{"id":"bts2","nom":"BTS 2","matieres":["tim"]}]}}
+</script>
+<script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
+
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js"></script>
+
+
+<script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
+    </main>
+    <footer class="site-footer">
+    <p>
+        &copy; 2026
+        Portail pédagogique Technologie | TIM | Mathématiques
+    </p>
+</footer>
+</body>
+</html>
