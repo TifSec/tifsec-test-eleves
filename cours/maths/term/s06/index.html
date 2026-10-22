@@ -94,7 +94,7 @@
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
         <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
-        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-paper-toggle" aria-expanded="false" aria-controls="course-paper-version">Version papier</button><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-paper-toggle">Version papier</button><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
     </div>
     <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
         <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
@@ -202,36 +202,20 @@
 </header>
 
 <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
-    <div class="course-paper-actions"><p>Fiche de synthèse à consulter ou à imprimer.</p><button type="button" id="course-paper-print">Imprimer cette fiche</button></div>
     <article class="course-paper-sheet">
         <header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fonctions du second degré — comprendre, calculer, décider</h2><p>En S05, le sommet indiquait le coût minimal. Ici, on apprend à lire la formule et à trouver toutes les valeurs qui respectent un budget.</p></header>
         
         <section class="course-paper-section">
-            <h3>1. Lire la forme canonique</h3>
+            <h3>1. À quoi sert la forme canonique ?</h3>
             
-<p>Dans C(x) = a(x − α)² + β, le sommet est S(α ; β). Si a est positif, la parabole est tournée vers le haut et β est le coût minimal, atteint pour x = α.</p>
+<p>Nous partons du coût C(x) = 5x² − 40x + 260. Cette écriture permet de calculer un coût, mais le minimum n’apparaît pas directement. Nous allons transformer l’écriture pour faire apparaître le carré (x − 4)².</p>
     
 
-<pre class="cours-code"><code>C(x) = 5(x − 4)² + 180
-Sommet : S(4 ; 180)
-Coût minimal : 180 €, pour 4 interventions</code></pre>
+<pre class="cours-code"><code>Forme développée : C(x) = 5x² − 40x + 260
+Forme canonique : C(x) = 5(x − 4)² + 180</code></pre>
     
 
-
-            
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>2. Calculer une image et résoudre une équation</h3>
-            
-<p>Pour calculer C(3), on remplace chaque x par 3. Pour résoudre C(x) = 185, on cherche les valeurs de x qui donnent exactement 185.</p>
-    
-
-<pre class="cours-code"><code>C(3) = 5(3 − 4)² + 180 = 185
-C(x) = 185
-(x − 4)² = 1
-x − 4 = −1 ou x − 4 = 1
-x = 3 ou x = 5</code></pre>
+<p>La forme canonique ressemble à a(x − α)² + β. Elle fait apparaître le sommet S(α ; β). Ici, nous pourrons lire le sommet S(4 ; 180), puis expliquer pourquoi 180 € est le coût minimal.</p>
     
 
 
@@ -239,15 +223,112 @@ x = 3 ou x = 5</code></pre>
         </section>
         
         <section class="course-paper-section">
-            <h3>3. Respecter un budget maximal</h3>
+            <h3>2. Transformer la formule ligne par ligne</h3>
             
-<p>« Ne pas dépasser 200 € » se traduit par C(x) ≤ 200. On garde les bornes, car le budget de 200 € est autorisé. Dans le problème, x doit aussi être un nombre entier entre 1 et 8.</p>
+<h4>Étape A — Mettre 5 en facteur devant les deux premiers termes</h4>
+    
+
+<p>Dans 5x² − 40x, les deux termes contiennent le facteur 5. Diviser chacun par 5 donne x² et −8x. Le nombre 260 n’est pas dans ces deux termes : il reste donc à l’extérieur des parenthèses.</p>
+    
+
+<ol><li>Départ : C(x) = 5x² − 40x + 260.</li><li>Je réécris 5x² comme 5 × x² et −40x comme 5 × (−8x), car 5 × (−8x) = −40x.</li><li>Je peux donc mettre 5 en facteur : C(x) = 5(x² − 8x) + 260.</li></ol>
+    
+
+<h4>Étape B — Fabriquer un carré à partir de x² − 8x</h4>
+    
+
+<p>Pour obtenir un carré de la forme (x − nombre)², je prends la moitié du nombre devant x. La moitié de 8 est 4 : j’essaie donc (x − 4)². Je vérifie en multipliant chaque terme de la première parenthèse par chaque terme de la seconde.</p>
+    
+
+<ol><li>J’écris le carré comme une multiplication : (x − 4)² = (x − 4) × (x − 4).</li><li>Je multiplie x par chaque terme de la deuxième parenthèse : x × x = x² et x × (−4) = −4x.</li><li>Je multiplie −4 par chaque terme de la deuxième parenthèse : (−4) × x = −4x et (−4) × (−4) = +16. Deux nombres négatifs multipliés donnent un résultat positif.</li><li>Je rassemble les quatre produits : (x − 4)² = x² − 4x − 4x + 16.</li><li>Je regroupe les deux termes en x : −4x − 4x = −8x. Donc (x − 4)² = x² − 8x + 16.</li></ol>
+    
+
+<h4>Étape C — Garder exactement x² − 8x</h4>
+    
+
+<p>Le carré obtenu contient +16 en trop : nous cherchions x² − 8x, sans le +16. Pour retrouver exactement l’expression de départ, je retire 16.</p>
+    
+
+<pre class="cours-code"><code>(x − 4)² = x² − 8x + 16
+Je retire 16 des deux côtés :
+x² − 8x = (x − 4)² − 16</code></pre>
+    
+
+<h4>Étape D — Remplacer puis simplifier</h4>
+    
+
+<p>Je remplace x² − 8x par son écriture équivalente (x − 4)² − 16 dans la formule de départ. Le 5 placé devant les crochets multiplie tout ce qui est à l’intérieur.</p>
+    
+
+<ol><li>Je pars de C(x) = 5(x² − 8x) + 260.</li><li>Je remplace x² − 8x : C(x) = 5((x − 4)² − 16) + 260.</li><li>Je distribue le 5 : 5 × (x − 4)² = 5(x − 4)² et 5 × (−16) = −80. J’obtiens C(x) = 5(x − 4)² − 80 + 260.</li><li>Je calcule les nombres seuls : −80 + 260 = 180. Donc C(x) = 5(x − 4)² + 180.</li></ol>
+    
+
+<pre class="cours-code"><code>C(x) = 5x² − 40x + 260
+     = 5(x² − 8x) + 260
+     = 5((x − 4)² − 16) + 260
+     = 5(x − 4)² − 80 + 260
+     = 5(x − 4)² + 180</code></pre>
+    
+
+<h4>Je vérifie en développant dans l’autre sens</h4>
+    
+
+<p>Pour vérifier que les deux formules donnent bien le même coût, je développe la forme canonique. Je refais les multiplications et je regroupe les nombres.</p>
+    
+
+<ol><li>Je développe le carré : (x − 4)² = x² − 8x + 16.</li><li>Je remplace dans C(x) : 5(x − 4)² + 180 = 5(x² − 8x + 16) + 180.</li><li>Je distribue 5 à chacun des trois termes : 5x² − 40x + 80 + 180.</li><li>Je calcule 80 + 180 = 260 : je retrouve 5x² − 40x + 260, la formule de départ.</li></ol>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>3. Lire le minimum et calculer un coût</h3>
+            
+<p>Dans C(x) = 5(x − 4)² + 180, un carré est toujours positif ou nul. Le plus petit carré possible vaut 0 ; il est obtenu quand x − 4 = 0, donc quand x = 4. Le coût minimal est alors 180 €. Le sommet est S(4 ; 180).</p>
+    
+
+<pre class="cours-code"><code>Exemple : calculer C(3)
+C(3) = 5(3 − 4)² + 180
+     = 5 × (−1)² + 180
+     = 5 × 1 + 180
+     = 5 + 180
+     = 185 €</code></pre>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>4. Résoudre une équation pas à pas</h3>
+            
+<p>Résoudre C(x) = 185 signifie chercher les nombres d’interventions qui donnent exactement 185 €. Je garde une égalité à chaque ligne et j’effectue la même opération des deux côtés.</p>
+    
+
+<ol><li>Formule de départ : 5(x − 4)² + 180 = 185.</li><li>Je retire 180 des deux côtés : 5(x − 4)² = 5.</li><li>Je divise les deux côtés par 5 : (x − 4)² = 1.</li><li>Les nombres dont le carré vaut 1 sont −1 et 1 : x − 4 = −1 ou x − 4 = 1.</li><li>Dans le premier cas, j’ajoute 4 : x = 3. Dans le second cas, j’ajoute 4 : x = 5.</li><li>Je vérifie : C(3) = 185 et C(5) = 185. Les deux solutions sont x = 3 et x = 5 interventions.</li></ol>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>5. Respecter un budget maximal</h3>
+            
+<p>« Ne pas dépasser 200 € » signifie que le coût peut être inférieur à 200 € ou égal à 200 €. J’écris donc C(x) ≤ 200. Je transforme ensuite l’inégalité comme une équation, en faisant la même opération des deux côtés.</p>
     
 
 <pre class="cours-code"><code>5(x − 4)² + 180 ≤ 200
-(x − 4)² ≤ 4
-2 ≤ x ≤ 6
-Interventions entières possibles : 2, 3, 4, 5 ou 6</code></pre>
+5(x − 4)² ≤ 20        je retire 180
+(x − 4)² ≤ 4           je divise par 5
+(x − 4)² ≤ 2²         j’écris 4 comme un carré
+−2 ≤ x − 4 ≤ 2        le nombre x − 4 est entre −2 et 2
+2 ≤ x ≤ 6             j’ajoute 4 partout</code></pre>
+    
+
+<p>La dernière ligne donne les valeurs réelles possibles. Dans le problème, x est un nombre entier de 1 à 8 : je garde donc 2, 3, 4, 5 et 6 interventions. Les bornes 2 et 6 sont gardées, car un coût égal à 200 € respecte le budget maximal.</p>
     
 
 
@@ -255,7 +336,7 @@ Interventions entières possibles : 2, 3, 4, 5 ou 6</code></pre>
         </section>
         
         <section class="course-paper-section">
-            <h3>4. Exercices d’entraînement</h3>
+            <h3>6. Exercices d’entraînement</h3>
             
 
             <ol class="course-paper-questions"><li><span>Calculer C(2) et C(6). Expliquer pourquoi les résultats sont égaux.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Lire sur le graphique le sommet et les solutions de C(x) = 200.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Résoudre C(x) = 225, puis vérifier les solutions dans le modèle.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Le budget est de 200 € et il faut au moins cinq interventions. Que peut choisir le responsable ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Avec B(x) = 4(x − 5)² + 160, quelles valeurs entières respectent un budget de 176 € ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
@@ -374,20 +455,20 @@ Interventions entières possibles : 2, 3, 4, 5 ou 6</code></pre>
     
 
 <p>Nous voulons fabriquer le terme −8x. On partage −8x en deux parts égales : −4x et −4x. C’est pour cela que nous essayons le carré (x − 4)².</p>
+    
 
 <p>Un carré signifie que l’on multiplie l’expression par elle-même : (x − 4)² = (x − 4) × (x − 4). Nous allons multiplier chaque terme de la première parenthèse par chaque terme de la deuxième.</p>
+    
 
-<ol>
-<li>Je commence par x : x × x = x², puis x × (−4) = −4x.</li>
-<li>Je continue avec −4 : (−4) × x = −4x, puis (−4) × (−4) = +16. Deux signes négatifs donnent un résultat positif.</li>
-<li>Je rassemble les quatre résultats : x² − 4x − 4x + 16.</li>
-<li>Je regroupe les deux termes en x : −4x − 4x = −8x.</li>
-</ol>
+<ol><li>Je commence par x : x × x = x², puis x × (−4) = −4x.</li><li>Je continue avec −4 : (−4) × x = −4x, puis (−4) × (−4) = +16. Deux signes négatifs donnent un résultat positif.</li><li>Je rassemble les quatre résultats : x² − 4x − 4x + 16.</li><li>Je regroupe les deux termes en x : −4x − 4x = −8x.</li></ol>
+    
 
 <pre class="cours-code"><code>(x − 4)² = x² − 8x + 16
 x² − 8x = (x − 4)² − 16</code></pre>
+    
 
 <p>Attention : (x − 4)² ajoute 16. Pour retrouver exactement x² − 8x, j’enlève donc 16.</p>
+    
 
 <pre class="cours-code"><code>C(x) = 5[(x − 4)² − 16] + 260
      = 5(x − 4)² − 80 + 260
@@ -814,3 +895,4 @@ x = 3 ou x = 5.</code></pre>
 </footer>
 </body>
 </html>
+
