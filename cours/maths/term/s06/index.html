@@ -206,7 +206,7 @@
         <header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fonctions du second degré — comprendre, calculer, décider</h2><p>En S05, le sommet indiquait le coût minimal. Ici, on apprend à lire la formule et à trouver toutes les valeurs qui respectent un budget.</p></header>
         
         <section class="course-paper-section">
-            <h3>1. À quoi sert la forme canonique ?</h3>
+            <h3>1. Quel sommet cherche-t-on à lire ?</h3>
             
 <p>Nous partons du coût C(x) = 5x² − 40x + 260. Cette écriture permet de calculer un coût, mais le minimum n’apparaît pas directement. Nous allons transformer l’écriture pour faire apparaître le carré (x − 4)².</p>
     
@@ -215,7 +215,7 @@
 Forme canonique : C(x) = 5(x − 4)² + 180</code></pre>
     
 
-<p>La forme canonique ressemble à a(x − α)² + β. Elle fait apparaître le sommet S(α ; β). Ici, nous pourrons lire le sommet S(4 ; 180), puis expliquer pourquoi 180 € est le coût minimal.</p>
+<p>Le sommet est le point le plus bas de la courbe du coût. Dans C(x) = 5(x − 4)² + 180, je regarde la valeur qui annule le carré : x = 4. À cette valeur, le coût vaut 180. Le sommet de la courbe est donc S(4 ; 180) : 4 indique le nombre d’interventions, 180 indique le coût en euros. Comme 5 est positif et qu’un carré est toujours positif ou nul, aucun coût ne peut être inférieur à 180 €.</p>
     
 
 
@@ -234,10 +234,10 @@ Forme canonique : C(x) = 5(x − 4)² + 180</code></pre>
 <ol><li>Départ : C(x) = 5x² − 40x + 260.</li><li>Je réécris 5x² comme 5 × x² et −40x comme 5 × (−8x), car 5 × (−8x) = −40x.</li><li>Je peux donc mettre 5 en facteur : C(x) = 5(x² − 8x) + 260.</li></ol>
     
 
-<h4>Étape B — Fabriquer un carré à partir de x² − 8x</h4>
+<h4>Étape B — Pourquoi transformer x² − 8x en carré ?</h4>
     
 
-<p>Pour obtenir un carré de la forme (x − nombre)², je prends la moitié du nombre devant x. La moitié de 8 est 4 : j’essaie donc (x − 4)². Je vérifie en multipliant chaque terme de la première parenthèse par chaque terme de la seconde.</p>
+<p>Nous voulons connaître le coût minimal. Une formule avec un carré nous aide, car un carré ne peut pas être négatif : on repère le minimum quand le carré vaut 0. Il faut donc réécrire x² − 8x en utilisant un carré. Dans (x − 4)², les deux produits croisés seront −4x et −4x : ensemble, ils font −8x. Le 4 est la moitié de 8. Je vérifie maintenant cette idée en effectuant les multiplications.</p>
     
 
 <ol><li>J’écris le carré comme une multiplication : (x − 4)² = (x − 4) × (x − 4).</li><li>Je multiplie x par chaque terme de la deuxième parenthèse : x × x = x² et x × (−4) = −4x.</li><li>Je multiplie −4 par chaque terme de la deuxième parenthèse : (−4) × x = −4x et (−4) × (−4) = +16. Deux nombres négatifs multipliés donnent un résultat positif.</li><li>Je rassemble les quatre produits : (x − 4)² = x² − 4x − 4x + 16.</li><li>Je regroupe les deux termes en x : −4x − 4x = −8x. Donc (x − 4)² = x² − 8x + 16.</li></ol>
@@ -246,7 +246,12 @@ Forme canonique : C(x) = 5(x − 4)² + 180</code></pre>
 <h4>Étape C — Garder exactement x² − 8x</h4>
     
 
-<p>Le carré obtenu contient +16 en trop : nous cherchions x² − 8x, sans le +16. Pour retrouver exactement l’expression de départ, je retire 16.</p>
+<p>Pourquoi retirer 16 ? En développant (x − 4)², nous avons fabriqué x² − 8x + 16. Le +16 n’était pas dans l’expression de départ. Je le retire donc pour annuler ce que le carré a ajouté et retrouver exactement x² − 8x.</p>
+    
+
+<pre class="cours-code"><code>(x − 4)² − 16
+= x² − 8x + 16 − 16
+= x² − 8x</code></pre>
     
 
 <pre class="cours-code"><code>(x − 4)² = x² − 8x + 16
@@ -439,7 +444,7 @@ C(3) = 5(3 − 4)² + 180
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Pourquoi changer de forme ? Le graphique de S05 indique un sommet S(4 ; 180). Nous voulons retrouver directement ces deux nombres dans la formule, puis comprendre pourquoi ils donnent le minimum.</p>
+<p>Le sommet est le point le plus bas de la courbe qui représente le coût C. Dans une formule comme C(x) = 5(x − 4)² + 180, si x = 4, alors x − 4 = 0 : le carré vaut 0 et le coût vaut 180. Le point S(4 ; 180) est donc le sommet de cette courbe. Comme 5 est positif et qu’un carré ne peut pas être négatif, 180 € est le coût minimal.</p>
     
 
 <p>On choisit de sortir le coefficient 5 des deux premiers termes. 5x² ÷ 5 = x² et −40x ÷ 5 = −8x. Le nombre 260 reste à l’extérieur.</p>
@@ -449,7 +454,7 @@ C(3) = 5(3 − 4)² + 180
      = 5(x² − 8x) + 260</code></pre>
     
 
-<p>Nous voulons fabriquer le terme −8x. On partage −8x en deux parts égales : −4x et −4x. C’est pour cela que nous essayons le carré (x − 4)².</p>
+<p>Pourquoi chercher un carré ? Parce qu’un carré est toujours positif ou nul. Une formule écrite avec un carré permet donc de repérer facilement le coût minimal : il est atteint quand le carré vaut 0. Pour transformer x² − 8x, je partage le terme −8x en deux parts égales : −4x et −4x. Les deux produits croisés de (x − 4)² donneront justement −4x − 4x. Le nombre 4 est la moitié de 8.</p>
     
 
 <p>Un carré signifie que l’on multiplie l’expression par elle-même : (x − 4)² = (x − 4) × (x − 4). Nous allons multiplier chaque terme de la première parenthèse par chaque terme de la deuxième.</p>
@@ -462,7 +467,12 @@ C(3) = 5(3 − 4)² + 180
 x² − 8x = (x − 4)² − 16</code></pre>
     
 
-<p>Attention : (x − 4)² ajoute 16. Pour retrouver exactement x² − 8x, j’enlève donc 16.</p>
+<p>Pourquoi retirer 16 ? En développant le carré, nous avons obtenu x² − 8x + 16. Le +16 a été ajouté quand nous avons fabriqué le carré. Pour revenir exactement à x² − 8x, je retire ce même 16 : +16 − 16 = 0.</p>
+    
+
+<pre class="cours-code"><code>(x − 4)² − 16
+= x² − 8x + 16 − 16
+= x² − 8x</code></pre>
     
 
 <pre class="cours-code"><code>C(x) = 5[(x − 4)² − 16] + 260
