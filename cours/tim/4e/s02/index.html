@@ -2,20 +2,23 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="supabase-url" content="https://evbfflwfyiitrkgzjhwt.supabase.co">
+    <meta name="supabase-publishable-key" content="sb_publishable__aRCAzLQv4TmSL0Z1yvcZQ_Nbwd2Ah6">
 
     <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
 
     
-    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preconnect" href="https://evbfflwfyiitrkgzjhwt.supabase.co" crossorigin>
     <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
     <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
     
 
     <title>
         
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
         
     </title>
 
@@ -38,15 +41,17 @@
     
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css?v=20261022-shop-effects-2">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-learning-sequence.css">
     
     
 
@@ -54,9 +59,13 @@
 
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
     
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261022-quest-ui-2">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
     
 </head>
 
@@ -82,6 +91,9 @@
 
     <main class="student-course-main" id="student-course-main">
 
+
+
+
 <div id="course-work" data-etablissement="mfr" data-matiere="tim" data-classe="4e" data-seance="S02" data-saving-enabled="true" data-collaboration-enabled="true">
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
@@ -104,8 +116,6 @@
     <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
     <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
 
-
-
 <div class="course-columns">
     <aside class="course-navigation" aria-label="Étapes de la séance">
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
@@ -118,7 +128,21 @@
 <!-- ========== INTRODUCTION DU COURS ========== -->
 
 <header class="cours-intro" id="course-intro">
+    
+    
+    
+    <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">TIM · 4e MFR · S02</span></div>
     <h1>Créons les invitations de notre rencontre</h1>
+    <aside class="course-learning-sequence" aria-label="Comment avancer dans le cours">
+        <strong>Pour avancer</strong>
+        <ol>
+            <li>Lis les repères et les étapes.</li>
+            <li>Observe l’exemple s’il y en a un.</li>
+            <li>Essaie à ton tour avec les questions.</li>
+            <li>Réutilise une méthode déjà rencontrée.</li>
+        </ol>
+        <p>Tu peux garder le cours ouvert et utiliser les aides si tu bloques.</p>
+    </aside>
 
     
     <p class="cours-theme">
@@ -132,13 +156,13 @@
     </p>
     
 
-    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : Comprendre le rôle d&#39;un document de communication.</p></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : Comprendre le rôle d&#39;un document de communication.</p></section>
     
-    <section><h2>Dans la vie quotidienne</h2><p>concevoir un véritable carton d&#39;invitation pour la rencontre organisée par les apprenants de 3e de la MFR.</p></section>
-    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>concevoir un véritable carton d&#39;invitation pour la rencontre organisée par les apprenants de 3e de la MFR.</p></section>
+    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
     
     
-    <section class="cours-objectifs">
+    <section class="course-info-card cours-objectifs">
         <h2>Ce que vous allez apprendre</h2>
         <ul>
             
@@ -211,6 +235,7 @@
 
 </header>
 
+
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
         <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
@@ -218,13 +243,15 @@
 <section class="cours-activites">
     
     <article class="cours-activite" id="a01">
-        <h2>Activité 1 — Pour commencer</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span></div>
+        <h2>Pour commencer</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Classe : 4e / 3e MFR</p>
     
@@ -271,16 +298,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a04">
-        <h2>Activité 2 — Production attendue</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span></div>
+        <h2>Production attendue</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Chaque groupe doit produire un carton d&#39;invitation A5.</p>
     
@@ -309,16 +343,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a01">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a05">
-        <h2>Activité 3 — 1. Comprendre notre mission – 10 minutes</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>1. Comprendre notre mission – 10 minutes</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Le vendredi 4 décembre 2026 à 11 h, les apprenants de 3e organiseront une rencontre à la MFR.</p>
     
@@ -339,6 +380,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a05-q01-label">Question 1 — Question 1 : à quoi va servir le carton que vous allez créer ?</h3>
             
@@ -354,6 +396,7 @@
         </div>
         
         <div class="cours-question" data-question="q02">
+            
             
             <h3 id="a05-q02-label">Question 2 — Question 2 : quelles sont, selon vous, les quatre informations qu&#39;un invité doit pouvoir trouver le plus rapidement possible ?</h3>
             
@@ -386,6 +429,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a05-q03-label">Question 3 — Q1 : informer les destinataires de l&#39;événement et leur donner les informations nécessaires pour y participer.</h3>
             
 
@@ -400,6 +444,7 @@
         </div>
         
         <div class="cours-question" data-question="q04">
+            
             
             <h3 id="a05-q04-label">Question 4 — Q2 : titre ou nature de l&#39;événement, date, heure et lieu. Accepter également organisateurs ou objectif si la réponse est argumentée.</h3>
             
@@ -418,16 +463,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
+            <a class="course-mission-next" href="#a06">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a06">
-        <h2>Activité 4 — 2. Organiser notre groupe – 5 minutes</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span></div>
+        <h2>2. Organiser notre groupe – 5 minutes</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Vous travaillez par groupes de quatre et réalisez une seule production commune.</p>
     
@@ -474,16 +526,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a05">← Étape précédente</a>
+            <a class="course-mission-next" href="#a07">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a07">
-        <h2>Activité 5 — 3. Choisir le titre de la rencontre – 10 minutes</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 5</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>3. Choisir le titre de la rencontre – 10 minutes</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Une invitation doit annoncer clairement l&#39;événement.</p>
     
@@ -498,6 +557,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a07-q01-label">Question 1 — Question 3 : quel titre votre groupe préfère-t-il et pourquoi ?</h3>
             
@@ -534,16 +594,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a06">← Étape précédente</a>
+            <a class="course-mission-next" href="#a08">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a08">
-        <h2>Activité 6 — 4. Établir le cahier des charges – 15 minutes</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 6</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>4. Établir le cahier des charges – 15 minutes</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Imaginez que vous receviez uniquement le message suivant :</p>
     
@@ -555,6 +622,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a08-q01-label">Question 1 — Question 4 : quelles informations manquent pour pouvoir réellement participer à l&#39;événement ?</h3>
             
@@ -577,6 +645,7 @@
         </div>
         
         <div class="cours-question" data-question="q02">
+            
             
             <h3 id="a08-q02-label">Question 2 — Question 5 : parmi ces informations, lesquelles doivent être vues en premier ? Pourquoi ?</h3>
             
@@ -615,6 +684,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a08-q03-label">Question 3 — Q4 : au minimum date, heure, lieu, organisateurs et nature ou objectif de l&#39;événement.</h3>
             
 
@@ -630,6 +700,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a08-q04-label">Question 4 — Q5 : titre, date, heure et lieu doivent être rapidement repérables.</h3>
             
 
@@ -643,16 +714,23 @@
             
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a07">← Étape précédente</a>
+            <a class="course-mission-next" href="#a09">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a09">
-        <h2>Activité 7 — 5. Préparer notre mise en page – 10 minutes</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 7</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>5. Préparer notre mise en page – 10 minutes</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Avant d&#39;ouvrir Writer, votre groupe doit décider comment organiser son invitation.</p>
     
@@ -667,6 +745,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a09-q01-label">Question 1 — Question 6 : décrivez rapidement votre organisation.</h3>
             
@@ -697,16 +776,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a08">← Étape précédente</a>
+            <a class="course-mission-next" href="#a10">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a10">
-        <h2>Activité 8 — 6. Réaliser notre invitation dans Writer – 50 minutes</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 8</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>6. Réaliser notre invitation dans Writer – 50 minutes</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <h4>Étape 1 – Créer immédiatement le document</h4>
     
@@ -733,6 +819,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a10-q01-label">Question 1 — Vérifiez que le fichier est au format Document texte ODF (.odt).</h3>
             
@@ -864,6 +951,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a10-q02-label">Question 2 — Question 7 : quelle image avez-vous choisie et pourquoi est-elle pertinente ?</h3>
             
 
@@ -903,6 +991,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a10-q03-label">Question 3 — Vérifiez qu&#39;elle ne masque aucun texte.</h3>
             
@@ -953,6 +1042,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a10-q04-label">Question 4 — Est-ce utile ?</h3>
             
 
@@ -968,6 +1058,7 @@
         
         <div class="cours-question" data-question="q05">
             
+            
             <h3 id="a10-q05-label">Question 5 — Est-ce lisible ?</h3>
             
 
@@ -982,6 +1073,7 @@
         </div>
         
         <div class="cours-question" data-question="q06">
+            
             
             <h3 id="a10-q06-label">Question 6 — Est-ce cohérent avec le reste ?</h3>
             
@@ -1015,16 +1107,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a09">← Étape précédente</a>
+            <a class="course-mission-next" href="#a11">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a11">
-        <h2>Activité 9 — 7. Tester notre invitation – 15 minutes</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 9</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>7. Tester notre invitation – 15 minutes</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <h4>Contrôle qualité</h4>
     
@@ -1048,6 +1147,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a11-q01-label">Question 1 — Question 8 : quel point positif l&#39;autre groupe a-t-il relevé ?</h3>
             
@@ -1064,6 +1164,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a11-q02-label">Question 2 — Question 9 : quelle amélioration vous a-t-il proposée ?</h3>
             
 
@@ -1078,6 +1179,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a11-q03-label">Question 3 — Question 10 : qu&#39;avez-vous modifié après ce retour ?</h3>
             
@@ -1117,16 +1219,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a10">← Étape précédente</a>
+            <a class="course-mission-next" href="#a12">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a12">
-        <h2>Activité 10 — 8. Trois modèles de cartons d&#39;invitation</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 10</span></div>
+        <h2>8. Trois modèles de cartons d&#39;invitation</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Ces exemples présentent trois manières différentes d&#39;organiser les informations. Ils sont conçus pour être réalisables dans Writer.</p>
     
@@ -1257,16 +1366,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a11">← Étape précédente</a>
+            <a class="course-mission-next" href="#a13">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a13">
-        <h2>Activité 11 — 9. Exporter et rendre le travail – 5 minutes</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 11</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>9. Exporter et rendre le travail – 5 minutes</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Enregistrez d&#39;abord une dernière fois votre fichier Writer avec Ctrl + S.</p>
     
@@ -1296,6 +1412,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a13-q01-label">Question 1 — Vérifiez qu&#39;il ne comporte qu&#39;une seule page.</h3>
             
@@ -1312,6 +1429,7 @@
         </div>
         
         <div class="cours-question" data-question="q02">
+            
             
             <h3 id="a13-q02-label">Question 2 — Vérifiez qu&#39;aucun texte ou visuel n&#39;a disparu.</h3>
             
@@ -1357,16 +1475,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a12">← Étape précédente</a>
+            <a class="course-mission-next" href="#a14">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a14">
-        <h2>Activité 12 — Pour aller plus loin</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 12</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Pour aller plus loin</h2>
         <p class="course-optional">Pour aller plus loin — activité facultative.</p>
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Si votre groupe termine en avance, réalisez l&#39;un des défis suivants :</p>
     
@@ -1378,6 +1503,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a14-q01-label">Question 1 — Comparez les deux versions et indiquez laquelle communique le mieux les informations importantes.</h3>
             
@@ -1408,16 +1534,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a13">← Étape précédente</a>
+            <a class="course-mission-next" href="#a15">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a15">
-        <h2>Activité 13 — À retenir</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 13</span></div>
+        <h2>À retenir</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <ul><li>Un document de communication est conçu pour un destinataire et un objectif.</li><li>Les informations importantes doivent être hiérarchisées et faciles à retrouver.</li><li>Un cahier des charges indique les éléments que la production doit respecter.</li><li>La mise en forme et les images doivent aider à transmettre le message, pas gêner sa lecture.</li><li>Une production numérique peut être testée, critiquée puis améliorée.</li><li>Le fichier ODT permet de continuer à modifier le document.</li><li>Le fichier PDF permet notamment de transmettre une version dont la présentation reste stable.</li><li>Avant de diffuser un document réel, il faut vérifier son contenu et les droits concernant les images utilisées.</li></ul>
     
@@ -1425,16 +1558,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a14">← Étape précédente</a>
+            <a class="course-mission-next" href="#a16">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a16">
-        <h2>Activité 14 — Sources</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 14</span></div>
+        <h2>Sources</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <ul><li>LibreOffice – Réglages de la page dans Writer : documentation officielle LibreOffice .</li><li>LibreOffice – Export et export PDF : documentation officielle LibreOffice .</li><li>ChloroFil – Classes de 4e et 3e de l&#39;enseignement agricole : référentiel et documents officiels .</li></ul>
     
@@ -1451,6 +1591,11 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a15">← Étape précédente</a>
+            <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
 </section>
@@ -1480,13 +1625,16 @@
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
 
+
+
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
 
     </main>
     <footer class="site-footer">
     <p>
         &copy; 2026
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
     </p>
 </footer>
 </body>

@@ -2,20 +2,23 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="supabase-url" content="https://evbfflwfyiitrkgzjhwt.supabase.co">
+    <meta name="supabase-publishable-key" content="sb_publishable__aRCAzLQv4TmSL0Z1yvcZQ_Nbwd2Ah6">
 
     <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
 
     
-    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preconnect" href="https://evbfflwfyiitrkgzjhwt.supabase.co" crossorigin>
     <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
     <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
     
 
     <title>
         
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
         
     </title>
 
@@ -38,15 +41,17 @@
     
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css?v=20261022-shop-effects-2">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-learning-sequence.css">
     
     
 
@@ -54,11 +59,14 @@
 
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261022-quest-ui-2">
     
     
-<link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
+    
 </head>
 
 <body class="student-shell student-course-shell">
@@ -83,6 +91,9 @@
 
     <main class="student-course-main" id="student-course-main">
 
+
+
+
 <div id="course-work" data-etablissement="mfr" data-matiere="maths" data-classe="3e" data-seance="S06" data-saving-enabled="true" data-collaboration-enabled="true">
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
@@ -105,8 +116,6 @@
     <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
     <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
 
-
-
 <div class="course-columns">
     <aside class="course-navigation" aria-label="Étapes de la séance">
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
@@ -119,7 +128,21 @@
 <!-- ========== INTRODUCTION DU COURS ========== -->
 
 <header class="cours-intro" id="course-intro">
+    
+    
+    
+    <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Mathématiques · 3e MFR · S06</span></div>
     <h1>Multiplier et diviser des fractions</h1>
+    <aside class="course-learning-sequence" aria-label="Comment avancer dans le cours">
+        <strong>Pour avancer</strong>
+        <ol>
+            <li>Lis les repères et les étapes.</li>
+            <li>Observe l’exemple s’il y en a un.</li>
+            <li>Essaie à ton tour avec les questions.</li>
+            <li>Réutilise une méthode déjà rencontrée.</li>
+        </ol>
+        <p>Tu peux garder le cours ouvert et utiliser les aides si tu bloques.</p>
+    </aside>
 
     
     <p class="cours-theme">
@@ -133,13 +156,13 @@
     </p>
     
 
-    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Dans un exercice mathématique simplifié, un stock contient 24 kg d&#39;un aliment.</p></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi étudier ce sujet ?</h2><p>Dans un exercice mathématique simplifié, un stock contient 24 kg d&#39;un aliment.</p></section>
     
-    <section><h2>Dans la vie quotidienne</h2><p>Dans un exercice mathématique simplifié, une structure dispose de 24 kg d&#39;un produit.</p></section>
-    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Dans un exercice mathématique simplifié, une structure dispose de 24 kg d&#39;un produit.</p></section>
+    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
     
     
-    <section class="cours-objectifs">
+    <section class="course-info-card cours-objectifs">
         <h2>Ce que vous allez apprendre</h2>
         <ul>
             
@@ -170,7 +193,82 @@
 
 </header>
 
-    <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title"><article class="course-paper-sheet"><header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Multiplier et diviser des fractions</h2><p>Multiplier une fraction par une quantité permet de prendre une part. Diviser par une fraction permet de compter combien de parts de cette taille tiennent dans la quantité. Au brevet, montre ta méthode et vérifie tes réponses.</p></header><section class="course-paper-section"><h3>1. Prendre une fraction d’une quantité</h3><p>Pour calculer 3/5 de 25, partage d’abord 25 en 5 parts, puis prends-en 3.</p><ol><li>25 ÷ 5 = 5.</li><li>5 × 3 = 15.</li><li>Donc 3/5 de 25 = 15.</li></ol></section><section class="course-paper-section"><h3>2. Multiplier deux fractions</h3><p>Multiplie les numérateurs entre eux et les dénominateurs entre eux, puis simplifie.</p><ol><li>1/2 × 3/4 = (1 × 3)/(2 × 4).</li><li>= 3/8.</li></ol></section><section class="course-paper-section"><h3>3. Diviser par une fraction</h3><p>Diviser par 1/2 revient à compter combien de moitiés entrent dans le nombre. On multiplie donc par l’inverse de la deuxième fraction.</p><ol><li>3/4 ÷ 1/2.</li><li>L’inverse de 1/2 est 2/1.</li><li>3/4 × 2/1 = 6/4 = 3/2.</li></ol></section><section class="course-paper-section"><h3>4. Ne pas confondre</h3><p>L’opposé change le signe : l’opposé de 3/5 est −3/5. L’inverse échange haut et bas : l’inverse de 3/5 est 5/3. Leur produit vaut 1.</p><ol class="course-paper-questions"><li><span>Indique si chaque situation demande une multiplication ou une division.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Écris la ligne de calcul puis simplifie le résultat.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je m’entraîne — même méthode que dans le cours</h3><p>Reprends les étapes de l’exemple juste au-dessus. Écris une ligne par étape et garde les unités.</p><ol class="course-paper-questions"><li><span>Calcule 3/5 de 25 en partageant d’abord en 5 parts.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Calcule 1/2 × 3/4.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Calcule 3/4 ÷ 1/2 en écrivant l’inverse.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je transfère — une situation nouvelle</h3><p>Cette fois, les nombres ou le contexte changent. Commence par identifier ce que l’on cherche, puis choisis la méthode qui convient.</p><ol class="course-paper-questions"><li><span>Une réserve de 18 kg fournit des sacs de 3/4 kg. Combien de sacs complets peut-on remplir ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Explique avec une phrase pourquoi cette situation demande une division.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section></article></section>
+<section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
+    <article class="course-paper-sheet">
+        <header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Multiplier et diviser des fractions</h2><p>Multiplier une fraction par une quantité permet de prendre une part. Diviser par une fraction permet de compter combien de parts de cette taille tiennent dans la quantité. Au brevet, montre ta méthode et vérifie tes réponses.</p></header>
+        
+        <section class="course-paper-section">
+            <h3>1. Prendre une fraction d’une quantité</h3>
+            
+<p>Pour calculer 3/5 de 25, partage d’abord 25 en 5 parts, puis prends-en 3.</p>
+    
+
+<ol><li>25 ÷ 5 = 5.</li><li>5 × 3 = 15.</li><li>Donc 3/5 de 25 = 15.</li></ol>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>2. Multiplier deux fractions</h3>
+            
+<p>Multiplie les numérateurs entre eux et les dénominateurs entre eux, puis simplifie.</p>
+    
+
+<ol><li>1/2 × 3/4 = (1 × 3)/(2 × 4).</li><li>= 3/8.</li></ol>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>3. Diviser par une fraction</h3>
+            
+<p>Diviser par 1/2 revient à compter combien de moitiés entrent dans le nombre. On multiplie donc par l’inverse de la deuxième fraction.</p>
+    
+
+<ol><li>3/4 ÷ 1/2.</li><li>L’inverse de 1/2 est 2/1.</li><li>3/4 × 2/1 = 6/4 = 3/2.</li></ol>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>4. Ne pas confondre</h3>
+            
+<p>L’opposé change le signe : l’opposé de 3/5 est −3/5. L’inverse échange haut et bas : l’inverse de 3/5 est 5/3. Leur produit vaut 1.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Indique si chaque situation demande une multiplication ou une division.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Écris la ligne de calcul puis simplifie le résultat.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Je m’entraîne — même méthode que dans le cours</h3>
+            
+<p>Reprends les étapes de l’exemple juste au-dessus. Écris une ligne par étape et garde les unités.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Calcule 3/5 de 25 en partageant d’abord en 5 parts.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Calcule 1/2 × 3/4.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Calcule 3/4 ÷ 1/2 en écrivant l’inverse.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Je transfère — une situation nouvelle</h3>
+            
+<p>Cette fois, les nombres ou le contexte changent. Commence par identifier ce que l’on cherche, puis choisis la méthode qui convient.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Une réserve de 18 kg fournit des sacs de 3/4 kg. Combien de sacs complets peut-on remplir ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Explique avec une phrase pourquoi cette situation demande une division.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+    </article>
+</section>
+
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
         <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
@@ -178,13 +276,15 @@
 <section class="cours-activites">
     
     <article class="cours-activite" id="a02">
-        <h2>Activité 1 — Qu&#39;est-ce que cela signifie ?</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span></div>
+        <h2>Qu&#39;est-ce que cela signifie ?</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Multiplier par une fraction permet notamment de prendre une partie d&#39;une autre quantité.</p>
     
@@ -195,16 +295,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            
+            <a class="course-mission-next" href="#a03">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a03">
-        <h2>Activité 2 — À quoi ça sert ?</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span></div>
+        <h2>À quoi ça sert ?</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Ces opérations permettent par exemple :</p>
     
@@ -239,16 +346,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a02">← Étape précédente</a>
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a04">
-        <h2>Activité 3 — 1. Automatismes : retrouver une fraction d&#39;une quantité</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>1. Automatismes : retrouver une fraction d&#39;une quantité</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi commencer par cet exercice ? Vous savez déjà calculer une moitié, un quart ou quelques fractions simples d&#39;une quantité.</p>
     
@@ -263,6 +377,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a04-q01-label">Question 1 — 1. La moitié de 18 =</h3>
             
@@ -280,6 +395,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a04-q02-label">Question 2 — 2. Le quart de 28 =</h3>
             
 
@@ -296,6 +412,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a04-q03-label">Question 3 — 3. Les 3/4 de 20 =</h3>
             
 
@@ -311,6 +428,7 @@
         </div>
         
         <div class="cours-question" data-question="q04">
+            
             
             <h3 id="a04-q04-label">Question 4 — 4. Les 2/3 de 18 =</h3>
             
@@ -332,16 +450,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a05">
-        <h2>Activité 4 — 2. Multiplier une fraction par un nombre</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>2. Multiplier une fraction par un nombre</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notion : produit d&#39;une fraction par un nombre.</p>
     
@@ -362,6 +487,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a05-q01-label">Question 1 — Écrivez puis calculez : 3/5 de 25.</h3>
             
@@ -378,6 +504,7 @@
         </div>
         
         <div class="cours-question" data-question="q02">
+            
             
             <h3 id="a05-q02-label">Question 2 — Calculez : 5/6 × 18.</h3>
             
@@ -402,16 +529,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
+            <a class="course-mission-next" href="#a06">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a06">
-        <h2>Activité 5 — 3. Multiplier deux fractions</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 5</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>3. Multiplier deux fractions</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notion : produit de deux fractions.</p>
     
@@ -435,6 +569,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a06-q01-label">Question 1 — Calculez : 1/2 × 3/4. Indice 1 Multipliez les nombres du haut ensemble puis les nombres du bas ensemble. Indice 2 Numérateur : 1 × 3. Indice 3 Dénominateur : 2 × 4.</h3>
             
@@ -462,16 +597,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a05">← Étape précédente</a>
+            <a class="course-mission-next" href="#a07">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a07">
-        <h2>Activité 6 — Exercice : appliquer la méthode</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 6</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice : appliquer la méthode</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Il faut maintenant vérifier que vous savez appliquer la règle et simplifier le résultat.</p>
     
@@ -480,6 +622,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a07-q01-label">Question 1 — Calculez et simplifiez : 2/3 × 3/5 ; 4/7 × 1/2 ; 3/4 × 2/9.</h3>
             
@@ -495,16 +638,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a06">← Étape précédente</a>
+            <a class="course-mission-next" href="#a08">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a08">
-        <h2>Activité 7 — 4. Comprendre ce que signifie diviser par une fraction</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 7</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>4. Comprendre ce que signifie diviser par une fraction</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notion : division par une fraction.</p>
     
@@ -522,6 +672,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a08-q01-label">Question 1 — Combien de quarts y a-t-il dans 1 unité entière ? Écrivez ensuite le calcul : 1 ÷ 1/4.</h3>
             
@@ -538,6 +689,7 @@
         </div>
         
         <div class="cours-question" data-question="q02">
+            
             
             <h3 id="a08-q02-label">Question 2 — Combien de moitiés y a-t-il dans 3 unités ? Écrivez ensuite : 3 ÷ 1/2.</h3>
             
@@ -562,16 +714,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a07">← Étape précédente</a>
+            <a class="course-mission-next" href="#a09">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a09">
-        <h2>Activité 8 — 5. L&#39;inverse d&#39;un nombre</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 8</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>5. L&#39;inverse d&#39;un nombre</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notion : inverse.</p>
     
@@ -595,6 +754,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a09-q01-label">Question 1 — Donnez l&#39;inverse de : 3/5 ; 7/2 ; 4.</h3>
             
@@ -611,6 +771,7 @@
         </div>
         
         <div class="cours-question" data-question="q02">
+            
             
             <h3 id="a09-q02-label">Question 2 — Vérifiez que 5/3 est bien l&#39;inverse de 3/5.</h3>
             
@@ -632,16 +793,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a08">← Étape précédente</a>
+            <a class="course-mission-next" href="#a10">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a10">
-        <h2>Activité 9 — 6. Diviser deux fractions</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 9</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>6. Diviser deux fractions</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notion : quotient de fractions.</p>
     
@@ -668,6 +836,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a10-q01-label">Question 1 — Calculez : 3/4 ÷ 1/2. Indice 1 Cherchez l&#39;inverse de 1/2. Indice 2 L&#39;inverse de 1/2 est 2/1. Indice 3 Calculez : 3/4 × 2/1.</h3>
             
@@ -685,6 +854,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a10-q02-label">Question 2 — Calculez et simplifiez : 2/3 ÷ 4/5 ; 5/6 ÷ 5/12.</h3>
             
 
@@ -699,16 +869,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a09">← Étape précédente</a>
+            <a class="course-mission-next" href="#a11">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a11">
-        <h2>Activité 10 — 7. Situation professionnelle : utiliser un stock</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 10</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>7. Situation professionnelle : utiliser un stock</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Calculatrice autorisée.</p>
     
@@ -741,6 +918,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a11-q01-label">Question 1 — 1. Quelle masse représente 3/4 de 24 kg ?</h3>
             
@@ -758,6 +936,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a11-q02-label">Question 2 — 2. Combien de portions de 3/2 kg peut-on préparer avec les 18 kg utilisés ? Indice 1 Écrivez 18 sous la forme 18/1. Indice 2 L&#39;inverse de 3/2 est 2/3. Indice 3 18/1 × 2/3.</h3>
             
 
@@ -774,6 +953,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a11-q03-label">Question 3 — 3. Expliquez pourquoi la première question utilise une multiplication alors que la deuxième utilise une division.</h3>
             
 
@@ -788,16 +968,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a10">← Étape précédente</a>
+            <a class="course-mission-next" href="#a12">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a12">
-        <h2>Activité 11 — 8. Défi DNB : une réserve d&#39;eau</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 11</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>8. Défi DNB : une réserve d&#39;eau</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Calculatrice autorisée.</p>
     
@@ -815,6 +1002,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a12-q01-label">Question 1 — 1. Quelle quantité d&#39;eau est utilisée ?</h3>
             
@@ -832,6 +1020,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a12-q02-label">Question 2 — 2. Combien de récipients de 3/4 L peut-on remplir complètement ? Indice 1 Écrivez la division correspondant au nombre de récipients. Indice 2 Diviser par 3/4 revient à multiplier par 4/3. Indice 3 12 × 4/3.</h3>
             
 
@@ -848,6 +1037,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a12-q03-label">Question 3 — 3. Combien de litres restent dans le réservoir ?</h3>
             
 
@@ -863,6 +1053,7 @@
         </div>
         
         <div class="cours-question" data-question="q04">
+            
             
             <h3 id="a12-q04-label">Question 4 — 4. Vérifiez votre résultat de la question 2 par un calcul différent.</h3>
             
@@ -884,16 +1075,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a11">← Étape précédente</a>
+            <a class="course-mission-next" href="#a13">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a13">
-        <h2>Activité 12 — 9. Mon bilan</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 12</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>9. Mon bilan</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cette dernière étape ? Pour vérifier que vous savez distinguer les deux nouvelles opérations et expliquer les règles.</p>
     
@@ -902,6 +1100,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a13-q01-label">Question 1 — Expliquez comment multiplier deux fractions.</h3>
             
@@ -919,6 +1118,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a13-q02-label">Question 2 — Expliquez comment diviser par une fraction.</h3>
             
 
@@ -935,6 +1135,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a13-q03-label">Question 3 — Quelle différence faites-vous entre l&#39;opposé et l&#39;inverse d&#39;un nombre ?</h3>
             
 
@@ -949,16 +1150,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a12">← Étape précédente</a>
+            <a class="course-mission-next" href="#a14">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a14">
-        <h2>Activité 13 — À retenir</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 13</span></div>
+        <h2>À retenir</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <ul><li>Calculer une fraction d&#39;une quantité peut s&#39;écrire comme une multiplication.</li><li>Pour multiplier deux fractions, on multiplie les numérateurs entre eux et les dénominateurs entre eux.</li><li>On simplifie le résultat lorsque c&#39;est possible.</li><li>Deux nombres inverses ont un produit égal à 1.</li><li>L&#39;inverse de a/b est b/a, lorsque a et b sont non nuls.</li><li>Diviser par une fraction revient à multiplier par son inverse.</li><li>L&#39;inverse et l&#39;opposé sont deux notions différentes.</li><li>Avant de calculer, il faut déterminer si la situation demande une multiplication ou une division.</li></ul>
     
@@ -966,16 +1174,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a13">← Étape précédente</a>
+            <a class="course-mission-next" href="#a15">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a15">
-        <h2>Activité 14 — Finir la séance</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 14</span></div>
+        <h2>Finir la séance</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Vérifiez vos calculs, vos simplifications et les inverses utilisés.</p>
     
@@ -983,16 +1198,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a14">← Étape précédente</a>
+            <a class="course-mission-next" href="#a16">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a16">
-        <h2>Activité 15 — Références générales</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 15</span></div>
+        <h2>Références générales</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <ul><li>Chlorofil – Classes de 4e et 3e de l&#39;enseignement agricole</li><li>Éduscol – Les épreuves du DNB</li></ul>
     
@@ -1006,6 +1228,11 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a15">← Étape précédente</a>
+            <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
 </section>
@@ -1034,16 +1261,18 @@
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
+
 
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
 
     </main>
     <footer class="site-footer">
     <p>
         &copy; 2026
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
     </p>
 </footer>
-<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
 </body>
 </html>

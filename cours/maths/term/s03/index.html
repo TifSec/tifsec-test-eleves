@@ -2,20 +2,23 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="supabase-url" content="https://evbfflwfyiitrkgzjhwt.supabase.co">
+    <meta name="supabase-publishable-key" content="sb_publishable__aRCAzLQv4TmSL0Z1yvcZQ_Nbwd2Ah6">
 
     <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
 
     
-    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preconnect" href="https://evbfflwfyiitrkgzjhwt.supabase.co" crossorigin>
     <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
     <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
     
 
     <title>
         
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
         
     </title>
 
@@ -38,15 +41,17 @@
     
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css?v=20261022-shop-effects-2">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-learning-sequence.css">
     
     
 
@@ -54,11 +59,14 @@
 
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261022-quest-ui-2">
     
     
-<link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
+    
 </head>
 
 <body class="student-shell student-course-shell">
@@ -83,6 +91,9 @@
 
     <main class="student-course-main" id="student-course-main">
 
+
+
+
 <div id="course-work" data-etablissement="mfr" data-matiere="maths" data-classe="term" data-seance="S03" data-saving-enabled="true" data-collaboration-enabled="true">
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
@@ -105,8 +116,6 @@
     <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
     <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
 
-
-
 <div class="course-columns">
     <aside class="course-navigation" aria-label="Étapes de la séance">
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
@@ -119,7 +128,21 @@
 <!-- ========== INTRODUCTION DU COURS ========== -->
 
 <header class="cours-intro" id="course-intro">
+    
+    
+    
+    <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Mathématiques · Bac Pro 2 · S03</span></div>
     <h1>Calcul littéral et équations – Étudier la rentabilité d&#39;une activité équestre</h1>
+    <aside class="course-learning-sequence" aria-label="Comment avancer dans le cours">
+        <strong>Pour avancer</strong>
+        <ol>
+            <li>Lis les repères et les étapes.</li>
+            <li>Observe l’exemple s’il y en a un.</li>
+            <li>Essaie à ton tour avec les questions.</li>
+            <li>Réutilise une méthode déjà rencontrée.</li>
+        </ol>
+        <p>Tu peux garder le cours ouvert et utiliser les aides si tu bloques.</p>
+    </aside>
 
     
     <p class="cours-theme">
@@ -133,13 +156,13 @@
     </p>
     
 
-    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : Comprendre ce que sont les recettes, les charges et le résultat financier.</p></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : Comprendre ce que sont les recettes, les charges et le résultat financier.</p></section>
     
-    <section><h2>Dans la vie quotidienne</h2><p>Notions : recettes, charges fixes, charges variables et résultat financier.</p></section>
-    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Notions : recettes, charges fixes, charges variables et résultat financier.</p></section>
+    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
     
     
-    <section class="cours-objectifs">
+    <section class="course-info-card cours-objectifs">
         <h2>Ce que vous allez apprendre</h2>
         <ul>
             
@@ -224,7 +247,82 @@
 
 </header>
 
-    <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title"><article class="course-paper-sheet"><header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Calculer un résultat et un seuil de rentabilité</h2><p>En gestion, on compare l’argent qui entre et l’argent qui sort. Les lettres permettent de faire le calcul pour plusieurs nombres de participants.</p></header><section class="course-paper-section"><h3>1. Recettes, charges et résultat</h3><p>La recette est l’argent reçu. Les charges sont les dépenses. Le résultat indique ce qu’il reste après avoir payé les charges.</p><ol><li>Exemple : 10 participants paient 30 € chacun.</li><li>Recettes : 30 × 10 = 300 €.</li><li>Charges : 120 € de frais fixes et 8 € par participant.</li><li>Charges totales : 120 + 8 × 10 = 200 €.</li><li>Résultat : 300 − 200 = 100 €.</li></ol></section><section class="course-paper-section"><h3>2. Écrire une formule</h3><p>On note x le nombre de participants. Une formule permet de refaire le calcul sans remplacer tout de suite x.</p><ol><li>Recettes : R(x) = 30x.</li><li>Charges : C(x) = 120 + 8x.</li><li>Résultat : G(x) = R(x) − C(x).</li><li>G(x) = 30x − (120 + 8x).</li><li>G(x) = 30x − 120 − 8x = 22x − 120.</li></ol></section><section class="course-paper-section"><h3>3. Trouver le seuil de rentabilité</h3><p>Le seuil est atteint quand recettes et charges sont égales : le résultat est alors zéro. C’est comme le point où le compteur passe de perte à bénéfice.</p><ol><li>On résout 22x − 120 = 0.</li><li>On ajoute 120 des deux côtés : 22x = 120.</li><li>On divise par 22 : x = 120 ÷ 22 ≈ 5,45.</li><li>On ne peut pas accueillir 5,45 personnes. Il faut donc au moins 6 participants.</li><li>Vérifie le résultat avec x = 5 puis x = 6.</li></ol></section><section class="course-paper-section"><h3>4. Comparer deux tarifs</h3><p>Pour comparer deux offres, calcule les deux coûts avec le même nombre de participants, puis regarde à partir de quel effectif l’une devient moins chère.</p><ol class="course-paper-questions"><li><span>Note les deux formules de coût.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Choisis un nombre de participants et calcule chaque coût.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Écris une égalité si tu cherches le point où les deux coûts sont égaux.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Conclue avec le nombre de participants et l’offre conseillée.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je m’entraîne — même méthode que dans le cours</h3><p>Reprends les étapes de l’exemple juste au-dessus. Écris une ligne par étape et garde les unités.</p><ol class="course-paper-questions"><li><span>Pour 12 participants à 30 € chacun, calcule les recettes.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Les charges sont 120 € fixes et 8 € par participant. Calcule les charges pour 12 participants.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Calcule le résultat : recettes − charges.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je transfère — une situation nouvelle</h3><p>Cette fois, les nombres ou le contexte changent. Commence par identifier ce que l’on cherche, puis choisis la méthode qui convient.</p><ol class="course-paper-questions"><li><span>Une activité rapporte 28 € par participant et coûte 150 € fixes plus 10 € par personne. Écris la formule du résultat.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Résous l’équation qui donne le seuil de rentabilité.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Le résultat est-il positif pour 8 participants ? Montre les étapes.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section></article></section>
+<section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
+    <article class="course-paper-sheet">
+        <header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Calculer un résultat et un seuil de rentabilité</h2><p>En gestion, on compare l’argent qui entre et l’argent qui sort. Les lettres permettent de faire le calcul pour plusieurs nombres de participants.</p></header>
+        
+        <section class="course-paper-section">
+            <h3>1. Recettes, charges et résultat</h3>
+            
+<p>La recette est l’argent reçu. Les charges sont les dépenses. Le résultat indique ce qu’il reste après avoir payé les charges.</p>
+    
+
+<ol><li>Exemple : 10 participants paient 30 € chacun.</li><li>Recettes : 30 × 10 = 300 €.</li><li>Charges : 120 € de frais fixes et 8 € par participant.</li><li>Charges totales : 120 + 8 × 10 = 200 €.</li><li>Résultat : 300 − 200 = 100 €.</li></ol>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>2. Écrire une formule</h3>
+            
+<p>On note x le nombre de participants. Une formule permet de refaire le calcul sans remplacer tout de suite x.</p>
+    
+
+<ol><li>Recettes : R(x) = 30x.</li><li>Charges : C(x) = 120 + 8x.</li><li>Résultat : G(x) = R(x) − C(x).</li><li>G(x) = 30x − (120 + 8x).</li><li>G(x) = 30x − 120 − 8x = 22x − 120.</li></ol>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>3. Trouver le seuil de rentabilité</h3>
+            
+<p>Le seuil est atteint quand recettes et charges sont égales : le résultat est alors zéro. C’est comme le point où le compteur passe de perte à bénéfice.</p>
+    
+
+<ol><li>On résout 22x − 120 = 0.</li><li>On ajoute 120 des deux côtés : 22x = 120.</li><li>On divise par 22 : x = 120 ÷ 22 ≈ 5,45.</li><li>On ne peut pas accueillir 5,45 personnes. Il faut donc au moins 6 participants.</li><li>Vérifie le résultat avec x = 5 puis x = 6.</li></ol>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>4. Comparer deux tarifs</h3>
+            
+<p>Pour comparer deux offres, calcule les deux coûts avec le même nombre de participants, puis regarde à partir de quel effectif l’une devient moins chère.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Note les deux formules de coût.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Choisis un nombre de participants et calcule chaque coût.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Écris une égalité si tu cherches le point où les deux coûts sont égaux.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Conclue avec le nombre de participants et l’offre conseillée.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Je m’entraîne — même méthode que dans le cours</h3>
+            
+<p>Reprends les étapes de l’exemple juste au-dessus. Écris une ligne par étape et garde les unités.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Pour 12 participants à 30 € chacun, calcule les recettes.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Les charges sont 120 € fixes et 8 € par participant. Calcule les charges pour 12 participants.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Calcule le résultat : recettes − charges.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Je transfère — une situation nouvelle</h3>
+            
+<p>Cette fois, les nombres ou le contexte changent. Commence par identifier ce que l’on cherche, puis choisis la méthode qui convient.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Une activité rapporte 28 € par participant et coûte 150 € fixes plus 10 € par personne. Écris la formule du résultat.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Résous l’équation qui donne le seuil de rentabilité.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Le résultat est-il positif pour 8 participants ? Montre les étapes.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+    </article>
+</section>
+
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
         <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
@@ -232,13 +330,15 @@
 <section class="cours-activites">
     
     <article class="cours-activite" id="a03">
-        <h2>Activité 1 — 1. Automatismes : retrouver les outils nécessaires</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>1. Automatismes : retrouver les outils nécessaires</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notions : pourcentages, réduction, développement et équations simples.</p>
     
@@ -265,6 +365,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a03-q01-label">Question 1 — Calculer 15 % de 200 €.</h3>
             
@@ -282,6 +383,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a03-q02-label">Question 2 — Réduire : 12x + 8x - 5x.</h3>
             
 
@@ -297,6 +399,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a03-q03-label">Question 3 — Développer : 25(x + 4).</h3>
             
@@ -314,6 +417,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a03-q04-label">Question 4 — Résoudre : 20x = 300.</h3>
             
 
@@ -329,6 +433,7 @@
         </div>
         
         <div class="cours-question" data-question="q05">
+            
             
             <h3 id="a03-q05-label">Question 5 — Résoudre : 30x - 120 = 0.</h3>
             
@@ -350,16 +455,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a04">
-        <h2>Activité 2 — 2. Comprendre la situation professionnelle</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span></div>
+        <h2>2. Comprendre la situation professionnelle</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notions : recettes, charges fixes, charges variables et résultat financier.</p>
     
@@ -397,16 +509,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a05">
-        <h2>Activité 3 — Exercice 1 : Comprendre les charges</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 1 : Comprendre les charges</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Toutes les dépenses n&#39;évoluent pas de la même façon. Nous devons les distinguer pour prévoir le coût de la journée.</p>
     
@@ -415,6 +534,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a05-q01-label">Question 1 — Expliquer la différence entre une charge fixe et une charge variable.</h3>
             
@@ -430,16 +550,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
+            <a class="course-mission-next" href="#a06">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a06">
-        <h2>Activité 4 — Exercice 2 : Calculer le résultat pour 10 participants</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 2 : Calculer le résultat pour 10 participants</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Nous allons vérifier si une journée accueillant dix participants couvre les dépenses prévues.</p>
     
@@ -448,6 +575,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a06-q01-label">Question 1 — Calculer les recettes pour 10 participants.</h3>
             
@@ -465,6 +593,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a06-q02-label">Question 2 — Calculer les charges totales pour 10 participants.</h3>
             
 
@@ -481,6 +610,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a06-q03-label">Question 3 — La journée est-elle rentable avec 10 participants ? Justifier.</h3>
             
 
@@ -495,16 +625,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a05">← Étape précédente</a>
+            <a class="course-mission-next" href="#a07">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a07">
-        <h2>Activité 5 — 3. Construire un modèle mathématique</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 5</span></div>
+        <h2>3. Construire un modèle mathématique</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notion : expression littérale et fonction affine.</p>
     
@@ -536,16 +673,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a06">← Étape précédente</a>
+            <a class="course-mission-next" href="#a08">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a08">
-        <h2>Activité 6 — Exercice 1 : Construire les formules</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 6</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 1 : Construire les formules</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Nous allons traduire les données du tableau en expressions mathématiques.</p>
     
@@ -554,6 +698,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a08-q01-label">Question 1 — Exprimer les recettes R(x) en fonction de x.</h3>
             
@@ -571,6 +716,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a08-q02-label">Question 2 — Exprimer les charges totales C(x) en fonction de x.</h3>
             
 
@@ -587,6 +733,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a08-q03-label">Question 3 — Exprimer le résultat financier B(x) en fonction de x.</h3>
             
 
@@ -601,16 +748,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a07">← Étape précédente</a>
+            <a class="course-mission-next" href="#a09">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a09">
-        <h2>Activité 7 — Exercice 2 : Simplifier et comprendre la formule</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 7</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 2 : Simplifier et comprendre la formule</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Une formule simplifiée est plus rapide à utiliser et permet de mieux comprendre ce qui fait varier le résultat financier.</p>
     
@@ -619,6 +773,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a09-q01-label">Question 1 — Développer et réduire l&#39;expression B(x).</h3>
             
@@ -636,6 +791,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a09-q02-label">Question 2 — Expliquer la signification de 33 et de -396 dans cette expression.</h3>
             
 
@@ -651,6 +807,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a09-q03-label">Question 3 — Vérifier que la formule donne bien une perte de 66 € pour 10 participants.</h3>
             
@@ -681,16 +838,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a08">← Étape précédente</a>
+            <a class="course-mission-next" href="#a10">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a10">
-        <h2>Activité 8 — 4. Déterminer le seuil de rentabilité</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 8</span></div>
+        <h2>4. Déterminer le seuil de rentabilité</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notion : équation du premier degré et seuil de rentabilité.</p>
     
@@ -719,16 +883,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a09">← Étape précédente</a>
+            <a class="course-mission-next" href="#a11">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a11">
-        <h2>Activité 9 — Exercice 1 : Résoudre l&#39;équation</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 9</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 1 : Résoudre l&#39;équation</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Nous allons déterminer le nombre exact de participants qui permet de couvrir toutes les charges.</p>
     
@@ -737,6 +908,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a11-q01-label">Question 1 — Écrire l&#39;équation correspondant à un résultat financier nul.</h3>
             
@@ -754,6 +926,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a11-q02-label">Question 2 — Résoudre cette équation en détaillant les étapes.</h3>
             
 
@@ -770,6 +943,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a11-q03-label">Question 3 — Interpréter le résultat obtenu dans le contexte professionnel.</h3>
             
 
@@ -784,16 +958,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a10">← Étape précédente</a>
+            <a class="course-mission-next" href="#a12">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a12">
-        <h2>Activité 10 — Exercice 2 : Vérifier le seuil de rentabilité</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 10</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 2 : Vérifier le seuil de rentabilité</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Nous allons vérifier que notre résultat correspond réellement au passage d&#39;une perte à un résultat nul, puis à un bénéfice.</p>
     
@@ -802,6 +983,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a12-q01-label">Question 1 — Calculer B(11), B(12) et B(13).</h3>
             
@@ -819,6 +1001,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a12-q02-label">Question 2 — Déterminer le nombre minimal de participants permettant d&#39;éviter une perte.</h3>
             
 
@@ -834,6 +1017,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a12-q03-label">Question 3 — Calculer le résultat financier maximal possible si le centre accueille 20 participants.</h3>
             
@@ -855,16 +1039,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a11">← Étape précédente</a>
+            <a class="course-mission-next" href="#a13">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a13">
-        <h2>Activité 11 — 5. Comparer deux tarifs</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 11</span></div>
+        <h2>5. Comparer deux tarifs</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notion : modification d&#39;un modèle et comparaison de résultats.</p>
     
@@ -896,16 +1087,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a12">← Étape précédente</a>
+            <a class="course-mission-next" href="#a14">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a14">
-        <h2>Activité 12 — Exercice 1 : Construire le nouveau modèle</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 12</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 1 : Construire le nouveau modèle</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Nous allons réutiliser la méthode précédente avec un prix différent pour voir ce qui change dans la formule.</p>
     
@@ -914,6 +1112,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a14-q01-label">Question 1 — Exprimer le nouveau résultat financier B₂(x), puis développer et réduire.</h3>
             
@@ -931,6 +1130,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a14-q02-label">Question 2 — Résoudre l&#39;équation B₂(x) = 0.</h3>
             
 
@@ -947,6 +1147,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a14-q03-label">Question 3 — Déterminer le nombre minimal entier de participants permettant d&#39;éviter une perte.</h3>
             
 
@@ -961,16 +1162,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a13">← Étape précédente</a>
+            <a class="course-mission-next" href="#a15">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a15">
-        <h2>Activité 13 — Exercice 2 : Comparer et prendre une décision</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 13</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 2 : Comparer et prendre une décision</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Nous allons comparer les deux tarifs, puis expliquer pourquoi un résultat mathématique ne suffit pas toujours pour choisir une stratégie commerciale.</p>
     
@@ -979,6 +1187,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a15-q01-label">Question 1 — Comparer les résultats financiers des deux tarifs pour 15 participants.</h3>
             
@@ -996,6 +1205,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a15-q02-label">Question 2 — Expliquer pourquoi augmenter le tarif n&#39;est pas nécessairement la meilleure décision commerciale.</h3>
             
 
@@ -1010,16 +1220,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a14">← Étape précédente</a>
+            <a class="course-mission-next" href="#a16">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a16">
-        <h2>Activité 14 — 6. Bilan de la séance</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 14</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>6. Bilan de la séance</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi ce bilan ? Il permet de retrouver les étapes de la démarche et de comprendre ce que nous avons réellement appris à faire.</p>
     
@@ -1031,6 +1248,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a16-q01-label">Question 1 — Pourquoi le seuil de rentabilité est-il de 12 participants au tarif de 45 € ?</h3>
             
@@ -1048,6 +1266,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a16-q02-label">Question 2 — Pourquoi une équation est-elle plus pratique que de tester tous les nombres de participants ?</h3>
             
 
@@ -1064,6 +1283,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a16-q03-label">Question 3 — Pourquoi faut-il vérifier les hypothèses d&#39;un modèle avant de prendre une décision ?</h3>
             
 
@@ -1078,16 +1298,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a15">← Étape précédente</a>
+            <a class="course-mission-next" href="#a18">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a18">
-        <h2>Activité 15 — À retenir</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 15</span></div>
+        <h2>À retenir</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <ul><li>Les recettes correspondent à l&#39;argent reçu et les charges aux dépenses prises en compte.</li><li>Le résultat financier se calcule en soustrayant les charges aux recettes.</li><li>Une expression littérale permet de représenter une situation avec une valeur variable.</li><li>Le seuil de rentabilité correspond à un résultat financier nul dans notre modèle.</li><li>Une équation permet de déterminer ce seuil.</li><li>Une solution doit être vérifiée et interprétée dans son contexte.</li><li>Un tarif plus élevé ne garantit pas un meilleur résultat si la fréquentation change.</li></ul>
     
@@ -1095,16 +1322,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a16">← Étape précédente</a>
+            <a class="course-mission-next" href="#a19">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a19">
-        <h2>Activité 16 — Pour aller plus loin : défi facultatif</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 16</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Pour aller plus loin : défi facultatif</h2>
         <p class="course-optional">Pour aller plus loin — activité facultative.</p>
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi ce défi ? Nous avons comparé deux tarifs en supposant la même fréquentation. Nous allons maintenant comparer trois tarifs avec des nombres d&#39;inscriptions prévus différents.</p>
     
@@ -1125,6 +1359,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a19-q01-label">Question 1 — Calculer le résultat financier pour chacun des trois tarifs.</h3>
             
@@ -1142,6 +1377,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a19-q02-label">Question 2 — Combien de participants faudrait-il accueillir au tarif B pour obtenir un résultat au moins égal à celui du tarif A ?</h3>
             
 
@@ -1157,6 +1393,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a19-q03-label">Question 3 — Le responsable souhaite au moins 200 € de bénéfice et au moins 15 participants. Quels tarifs respectent ces deux objectifs avec les prévisions actuelles ?</h3>
             
@@ -1174,6 +1411,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a19-q04-label">Question 4 — Proposer une modification d&#39;un seul paramètre permettant au tarif B de respecter les deux objectifs. Justifier par le calcul.</h3>
             
 
@@ -1190,6 +1428,7 @@
         
         <div class="cours-question" data-question="q05">
             
+            
             <h3 id="a19-q05-label">Question 5 — Rédiger une recommandation finale en précisant l&#39;avantage et le risque de votre solution.</h3>
             
 
@@ -1204,16 +1443,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a18">← Étape précédente</a>
+            <a class="course-mission-next" href="#a20">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a20">
-        <h2>Activité 17 — Sources et ressources</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 17</span></div>
+        <h2>Sources et ressources</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <ul><li>Chlorofil – Baccalauréat professionnel : tronc commun – référentiel et ressources officielles.</li><li>Chlorofil – Document d&#39;accompagnement MG1 – pratique algébrique, fonctions, modélisation et résolution de problèmes.</li><li>Chlorofil – Bac professionnel CGEH – contexte de la filière hippique.</li></ul>
     
@@ -1230,6 +1476,11 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a19">← Étape précédente</a>
+            <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
 </section>
@@ -1258,16 +1509,18 @@
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
+
 
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
 
     </main>
     <footer class="site-footer">
     <p>
         &copy; 2026
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
     </p>
 </footer>
-<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
 </body>
 </html>

@@ -2,20 +2,23 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="supabase-url" content="https://evbfflwfyiitrkgzjhwt.supabase.co">
+    <meta name="supabase-publishable-key" content="sb_publishable__aRCAzLQv4TmSL0Z1yvcZQ_Nbwd2Ah6">
 
     <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
 
     
-    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preconnect" href="https://evbfflwfyiitrkgzjhwt.supabase.co" crossorigin>
     <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
     <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
     
 
     <title>
         
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
         
     </title>
 
@@ -38,15 +41,17 @@
     
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css?v=20261022-shop-effects-2">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-learning-sequence.css">
     
     
 
@@ -54,9 +59,13 @@
 
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
     
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261022-quest-ui-2">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
     
 </head>
 
@@ -82,6 +91,9 @@
 
     <main class="student-course-main" id="student-course-main">
 
+
+
+
 <div id="course-work" data-etablissement="mfr" data-matiere="tim" data-classe="1re" data-seance="S02" data-saving-enabled="true" data-collaboration-enabled="true">
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
@@ -104,8 +116,6 @@
     <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
     <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
 
-
-
 <div class="course-columns">
     <aside class="course-navigation" aria-label="Étapes de la séance">
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
@@ -118,7 +128,21 @@
 <!-- ========== INTRODUCTION DU COURS ========== -->
 
 <header class="cours-intro" id="course-intro">
+    
+    
+    
+    <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">TIM · Bac Pro 1 · S02</span></div>
     <h1>Comprendre ce que racontent les données</h1>
+    <aside class="course-learning-sequence" aria-label="Comment avancer dans le cours">
+        <strong>Pour avancer</strong>
+        <ol>
+            <li>Lis les repères et les étapes.</li>
+            <li>Observe l’exemple s’il y en a un.</li>
+            <li>Essaie à ton tour avec les questions.</li>
+            <li>Réutilise une méthode déjà rencontrée.</li>
+        </ol>
+        <p>Tu peux garder le cours ouvert et utiliser les aides si tu bloques.</p>
+    </aside>
 
     
     <p class="cours-theme">
@@ -132,13 +156,13 @@
     </p>
     
 
-    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Avec seulement huit chevaux, il est encore possible d&#39;observer le tableau et de réaliser certains calculs manuellement.</p></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi étudier ce sujet ?</h2><p>Avec seulement huit chevaux, il est encore possible d&#39;observer le tableau et de réaliser certains calculs manuellement.</p></section>
     
-    <section><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
-    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
+    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
     
     
-    <section class="cours-objectifs">
+    <section class="course-info-card cours-objectifs">
         <h2>Ce que vous allez apprendre</h2>
         <ul>
             
@@ -191,6 +215,7 @@
 
 </header>
 
+
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
         <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
@@ -198,13 +223,15 @@
 <section class="cours-activites">
     
     <article class="cours-activite" id="a03">
-        <h2>Activité 1 — 1. Créez votre document de travail</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span></div>
+        <h2>1. Créez votre document de travail</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Ouvrez LibreOffice Calc et créez un nouveau classeur.</p>
     
@@ -224,16 +251,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a04">
-        <h2>Activité 2 — 2. Une structure équestre produit-elle des données ?</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span></div>
+        <h2>2. Une structure équestre produit-elle des données ?</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Une structure équestre produit et utilise chaque jour de nombreuses données.</p>
     
@@ -274,16 +308,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a05">
-        <h2>Activité 3 — 3. Une donnée sans contexte est-elle vraiment utile ?</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>3. Une donnée sans contexte est-elle vraiment utile ?</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Observez la donnée suivante :</p>
     
@@ -298,6 +339,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a05-q01-label">Question 1 — 520 € ?</h3>
             
@@ -314,6 +356,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a05-q02-label">Question 2 — 520 kg ?</h3>
             
 
@@ -328,6 +371,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a05-q03-label">Question 3 — 520 chevaux ?</h3>
             
@@ -344,6 +388,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a05-q04-label">Question 4 — 520 heures ?</h3>
             
 
@@ -358,6 +403,7 @@
         </div>
         
         <div class="cours-question" data-question="q05">
+            
             
             <h3 id="a05-q05-label">Question 5 — 520 litres ?</h3>
             
@@ -391,16 +437,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
+            <a class="course-mission-next" href="#a06">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a06">
-        <h2>Activité 4 — 4. Donnée ou information ?</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span></div>
+        <h2>4. Donnée ou information ?</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Retenez cette différence importante :</p>
     
@@ -429,16 +482,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a05">← Étape précédente</a>
+            <a class="course-mission-next" href="#a07">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a07">
-        <h2>Activité 5 — 5. Première mission : créez le tableau de données</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 5</span></div>
+        <h2>5. Première mission : créez le tableau de données</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Renommez la première feuille de votre classeur :</p>
     
@@ -467,16 +527,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a06">← Étape précédente</a>
+            <a class="course-mission-next" href="#a08">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a08">
-        <h2>Activité 6 — 6. Rendez le tableau facile à lire</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 6</span></div>
+        <h2>6. Rendez le tableau facile à lire</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Avant de commencer l&#39;analyse, améliorez la présentation du tableau.</p>
     
@@ -496,16 +563,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a07">← Étape précédente</a>
+            <a class="course-mission-next" href="#a09">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a09">
-        <h2>Activité 7 — 7. Que peut-on apprendre grâce aux données ?</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 7</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>7. Que peut-on apprendre grâce aux données ?</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Ajoutez une nouvelle feuille et nommez-la :</p>
     
@@ -520,6 +594,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a09-q01-label">Question 1 — Combien de chevaux sont présents dans le tableau ?</h3>
             
@@ -537,6 +612,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a09-q02-label">Question 2 — Quel est le cheval le plus âgé ?</h3>
             
 
@@ -552,6 +628,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a09-q03-label">Question 3 — Quel est le cheval le plus jeune ?</h3>
             
@@ -569,6 +646,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a09-q04-label">Question 4 — Quel cheval possède le poids estimé le plus élevé ?</h3>
             
 
@@ -584,6 +662,7 @@
         </div>
         
         <div class="cours-question" data-question="q05">
+            
             
             <h3 id="a09-q05-label">Question 5 — Quel cheval possède le poids estimé le plus faible ?</h3>
             
@@ -601,6 +680,7 @@
         
         <div class="cours-question" data-question="q06">
             
+            
             <h3 id="a09-q06-label">Question 6 — Quel ou quels chevaux travaillent le plus d&#39;heures par semaine ?</h3>
             
 
@@ -617,6 +697,7 @@
         
         <div class="cours-question" data-question="q07">
             
+            
             <h3 id="a09-q07-label">Question 7 — Quel cheval reçoit la plus grande quantité de foin chaque jour ?</h3>
             
 
@@ -632,6 +713,7 @@
         </div>
         
         <div class="cours-question" data-question="q08">
+            
             
             <h3 id="a09-q08-label">Question 8 — Quel cheval reçoit la plus petite quantité de foin chaque jour ?</h3>
             
@@ -659,16 +741,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a08">← Étape précédente</a>
+            <a class="course-mission-next" href="#a10">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a10">
-        <h2>Activité 8 — 8. Une question un peu plus difficile</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 8</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>8. Une question un peu plus difficile</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Répondez maintenant aux questions suivantes :</p>
     
@@ -677,6 +766,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a10-q01-label">Question 1 — Quelle quantité totale de foin est distribuée chaque jour aux huit chevaux ?</h3>
             
@@ -694,6 +784,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a10-q02-label">Question 2 — Quelle quantité cela représente-t-il sur 30 jours si les quantités restent identiques ?</h3>
             
 
@@ -710,6 +801,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a10-q03-label">Question 3 — Quel est l&#39;âge moyen des huit chevaux ?</h3>
             
 
@@ -725,6 +817,7 @@
         </div>
         
         <div class="cours-question" data-question="q04">
+            
             
             <h3 id="a10-q04-label">Question 4 — Quel est leur poids estimé moyen ?</h3>
             
@@ -749,16 +842,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a09">← Étape précédente</a>
+            <a class="course-mission-next" href="#a11">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a11">
-        <h2>Activité 9 — 9. À quoi sert réellement le tableur ?</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 9</span></div>
+        <h2>9. À quoi sert réellement le tableur ?</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Avec seulement huit chevaux, il est encore possible d&#39;observer le tableau et de réaliser certains calculs manuellement.</p>
     
@@ -784,16 +884,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a10">← Étape précédente</a>
+            <a class="course-mission-next" href="#a12">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a12">
-        <h2>Activité 10 — 10. Toutes les données se ressemblent-elles ?</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 10</span></div>
+        <h2>10. Toutes les données se ressemblent-elles ?</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Observez les différentes colonnes du tableau.</p>
     
@@ -816,16 +923,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a11">← Étape précédente</a>
+            <a class="course-mission-next" href="#a13">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a13">
-        <h2>Activité 11 — 11. Données, traitement, information</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 11</span></div>
+        <h2>11. Données, traitement, information</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Le travail réalisé aujourd&#39;hui peut être résumé par trois étapes :</p>
     
@@ -854,16 +968,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a12">← Étape précédente</a>
+            <a class="course-mission-next" href="#a14">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a14">
-        <h2>Activité 12 — 12. Peut-on toujours interpréter une donnée sans précaution ?</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 12</span></div>
+        <h2>12. Peut-on toujours interpréter une donnée sans précaution ?</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Nous avons calculé que les huit chevaux reçoivent ensemble 71,5 kg de foin par jour.</p>
     
@@ -880,16 +1001,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a13">← Étape précédente</a>
+            <a class="course-mission-next" href="#a15">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a15">
-        <h2>Activité 13 — 13. Votre conclusion</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 13</span></div>
+        <h2>13. Votre conclusion</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Dans la feuille ANALYSE, ajoutez le titre :</p>
     
@@ -912,16 +1040,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a14">← Étape précédente</a>
+            <a class="course-mission-next" href="#a16">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a16">
-        <h2>Activité 14 — À retenir</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 14</span></div>
+        <h2>À retenir</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <ul><li>Une donnée est une valeur brute observée, mesurée ou enregistrée.</li><li>Une donnée doit être accompagnée de son contexte pour pouvoir être correctement interprétée.</li><li>Une information est obtenue après avoir traité et interprété une ou plusieurs données.</li><li>Les données peuvent être du texte, des nombres, des dates ou des catégories.</li><li>Un tableur permet d&#39;organiser et de traiter rapidement de nombreuses données.</li><li>Un résultat numérique ne suffit pas toujours pour prendre une décision : il faut l&#39;interpréter dans son contexte.</li><li>Des données professionnelles doivent provenir de sources fiables ou être clairement identifiées comme des données simulées.</li></ul>
     
@@ -929,16 +1064,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a15">← Étape précédente</a>
+            <a class="course-mission-next" href="#a17">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a17">
-        <h2>Activité 15 — Travail à rendre</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 15</span></div>
+        <h2>Travail à rendre</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>À la fin de la séance, déposez le fichier :</p>
     
@@ -958,6 +1100,11 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a16">← Étape précédente</a>
+            <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
 </section>
@@ -987,13 +1134,16 @@
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
 
+
+
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
 
     </main>
     <footer class="site-footer">
     <p>
         &copy; 2026
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
     </p>
 </footer>
 </body>

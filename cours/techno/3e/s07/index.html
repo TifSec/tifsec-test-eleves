@@ -2,20 +2,23 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="supabase-url" content="https://evbfflwfyiitrkgzjhwt.supabase.co">
+    <meta name="supabase-publishable-key" content="sb_publishable__aRCAzLQv4TmSL0Z1yvcZQ_Nbwd2Ah6">
 
     <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
 
     
-    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preconnect" href="https://evbfflwfyiitrkgzjhwt.supabase.co" crossorigin>
     <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
     <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
     
 
     <title>
         
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
         
     </title>
 
@@ -38,15 +41,17 @@
     
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css?v=20261022-shop-effects-2">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-learning-sequence.css">
     
     
 
@@ -54,9 +59,13 @@
 
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
     
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261022-quest-ui-2">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
     
 </head>
 
@@ -82,6 +91,9 @@
 
     <main class="student-course-main" id="student-course-main">
 
+
+
+
 <div id="course-work" data-etablissement="college" data-matiere="techno" data-classe="3e" data-seance="S07" data-saving-enabled="true" data-collaboration-enabled="true">
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
@@ -104,8 +116,6 @@
     <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
     <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
 
-
-
 <div class="course-columns">
     <aside class="course-navigation" aria-label="Étapes de la séance">
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
@@ -118,7 +128,21 @@
 <!-- ========== INTRODUCTION DU COURS ========== -->
 
 <header class="cours-intro" id="course-intro">
+    
+    
+    
+    <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Technologie · 3e · S07</span></div>
     <h1>Comment une machine utilise-t-elle des données ?</h1>
+    <aside class="course-learning-sequence" aria-label="Comment avancer dans le cours">
+        <strong>Pour avancer</strong>
+        <ol>
+            <li>Lis les repères et les étapes.</li>
+            <li>Observe l’exemple s’il y en a un.</li>
+            <li>Essaie à ton tour avec les questions.</li>
+            <li>Réutilise une méthode déjà rencontrée.</li>
+        </ol>
+        <p>Tu peux garder le cours ouvert et utiliser les aides si tu bloques.</p>
+    </aside>
 
     
     <p class="cours-theme">
@@ -132,13 +156,13 @@
     </p>
     
 
-    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Un système numérique doit finalement représenter ses informations à l&#39;aide de deux états élémentaires.</p></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi étudier ce sujet ?</h2><p>Un système numérique doit finalement représenter ses informations à l&#39;aide de deux états élémentaires.</p></section>
     
-    <section><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
-    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
+    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
     
     
-    <section class="cours-objectifs">
+    <section class="course-info-card cours-objectifs">
         <h2>Ce que vous allez apprendre</h2>
         <ul>
             
@@ -195,6 +219,7 @@
 
 </header>
 
+
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
         <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
@@ -202,13 +227,15 @@
 <section class="cours-activites">
     
     <article class="cours-activite" id="a05">
-        <h2>Activité 1 — Production attendue</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span></div>
+        <h2>Production attendue</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <ul><li>Un fichier LibreOffice Writer nommé 3e_S07_nom.odt.</li><li>L&#39;identification des données utilisées par une cuve automatisée.</li><li>Un classement de plusieurs données selon leur type.</li><li>Quelques conversions simples entre bits et octets.</li><li>L&#39;analyse du déclenchement automatique d&#39;une pompe.</li></ul>
     
@@ -219,16 +246,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            
+            <a class="course-mission-next" href="#a06">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a06">
-        <h2>Activité 2 — 1. Préparez votre document de travail</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>1. Préparez votre document de travail</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Ouvrez LibreOffice Writer.</p>
     
@@ -243,6 +277,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a06-q01-label">Question 1 — Écrivez votre nom, votre prénom et le titre : Séance 7 – Comment une machine utilise-t-elle des données ?</h3>
             
@@ -258,16 +293,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a05">← Étape précédente</a>
+            <a class="course-mission-next" href="#a07">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a07">
-        <h2>Activité 3 — 2. De quoi une cuve automatisée a-t-elle besoin pour fonctionner ?</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>2. De quoi une cuve automatisée a-t-elle besoin pour fonctionner ?</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>On souhaite automatiser une cuve de récupération d&#39;eau.</p>
     
@@ -282,6 +324,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a07-q01-label">Question 1 — Q1 : Quelles informations la machine doit-elle connaître pour pouvoir réaliser ces actions ?</h3>
             
@@ -307,6 +350,7 @@
         </div>
         
         <div class="cours-question" data-question="q02">
+            
             
             <h3 id="a07-q02-label">Question 2 — Q2 : Ces trois valeurs sont-elles de même nature ? Expliquez.</h3>
             
@@ -334,16 +378,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a06">← Étape précédente</a>
+            <a class="course-mission-next" href="#a08">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a08">
-        <h2>Activité 4 — 3. Quel type de donnée choisir ?</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>3. Quel type de donnée choisir ?</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Classez les données suivantes.</p>
     
@@ -352,6 +403,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a08-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
             
@@ -520,16 +572,23 @@
             
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a07">← Étape précédente</a>
+            <a class="course-mission-next" href="#a09">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a09">
-        <h2>Activité 5 — 4. D&#39;où viennent les données et à quoi servent-elles ?</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 5</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>4. D&#39;où viennent les données et à quoi servent-elles ?</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Une donnée n&#39;existe pas seule : elle a une origine et une utilisation.</p>
     
@@ -541,6 +600,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a09-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
             
@@ -650,16 +710,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a08">← Étape précédente</a>
+            <a class="course-mission-next" href="#a10">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a10">
-        <h2>Activité 6 — 5. Pourquoi seulement des 0 et des 1 ?</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 6</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>5. Pourquoi seulement des 0 et des 1 ?</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Un système numérique doit finalement représenter ses informations à l&#39;aide de deux états élémentaires.</p>
     
@@ -686,6 +753,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a10-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
             
@@ -786,16 +854,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a09">← Étape précédente</a>
+            <a class="course-mission-next" href="#a11">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a11">
-        <h2>Activité 7 — 6. Un seul bit suffit-il pour tout représenter ?</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 7</span></div>
+        <h2>6. Un seul bit suffit-il pour tout représenter ?</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Un bit ne possède que deux valeurs possibles.</p>
     
@@ -821,16 +896,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a10">← Étape précédente</a>
+            <a class="course-mission-next" href="#a12">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a12">
-        <h2>Activité 8 — 7. Une donnée peut-elle déclencher une action ?</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 8</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>7. Une donnée peut-elle déclencher une action ?</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Le programme de la cuve utilise la règle suivante :</p>
     
@@ -845,6 +927,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a12-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
             
@@ -969,6 +1052,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a12-q02-label">Question 2 — Q3 : À partir de quelle mesure la pompe doit-elle démarrer ?</h3>
             
 
@@ -984,6 +1068,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a12-q03-label">Question 3 — Q4 : Justifiez en utilisant la valeur mesurée et le seuil.</h3>
             
 
@@ -997,16 +1082,23 @@
             
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a11">← Étape précédente</a>
+            <a class="course-mission-next" href="#a13">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a13">
-        <h2>Activité 9 — 8. Attention aux données mal interprétées</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 9</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>8. Attention aux données mal interprétées</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Un programme reçoit la valeur 18 du capteur.</p>
     
@@ -1021,6 +1113,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a13-q01-label">Question 1 — Q5 : Peut-on en être certain ? Pourquoi ?</h3>
             
@@ -1044,6 +1137,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a13-q02-label">Question 2 — Q6 : Que signifie alors la donnée 18 ?</h3>
             
 
@@ -1057,16 +1151,23 @@
             
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a12">← Étape précédente</a>
+            <a class="course-mission-next" href="#a14">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a14">
-        <h2>Activité 10 — 9. Conclusion du travail</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 10</span></div>
+        <h2>9. Conclusion du travail</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Complétez :</p>
     
@@ -1083,16 +1184,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a13">← Étape précédente</a>
+            <a class="course-mission-next" href="#a15">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a15">
-        <h2>Activité 11 — Rendu attendu</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 11</span></div>
+        <h2>Rendu attendu</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>À la fin de la séance, déposez votre fichier 3e_S07_nom.odt.</p>
     
@@ -1103,16 +1211,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a14">← Étape précédente</a>
+            <a class="course-mission-next" href="#a16">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a16">
-        <h2>Activité 12 — À retenir</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 12</span></div>
+        <h2>À retenir</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Un système numérique utilise des données pour représenter les informations dont il a besoin.</p>
     
@@ -1132,16 +1247,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a15">← Étape précédente</a>
+            <a class="course-mission-next" href="#a17">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a17">
-        <h2>Activité 13 — Sources générales</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 13</span></div>
+        <h2>Sources générales</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <ul><li>Ministère de l&#39;Éducation nationale – Programme de technologie du cycle 4</li><li>Éduscol – Ressources d&#39;accompagnement du programme de technologie</li></ul>
     
@@ -1155,6 +1277,11 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a16">← Étape précédente</a>
+            <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
 </section>
@@ -1184,13 +1311,16 @@
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
 
+
+
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
 
     </main>
     <footer class="site-footer">
     <p>
         &copy; 2026
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
     </p>
 </footer>
 </body>

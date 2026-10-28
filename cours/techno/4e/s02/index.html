@@ -2,20 +2,23 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="supabase-url" content="https://evbfflwfyiitrkgzjhwt.supabase.co">
+    <meta name="supabase-publishable-key" content="sb_publishable__aRCAzLQv4TmSL0Z1yvcZQ_Nbwd2Ah6">
 
     <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
 
     
-    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preconnect" href="https://evbfflwfyiitrkgzjhwt.supabase.co" crossorigin>
     <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
     <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
     
 
     <title>
         
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
         
     </title>
 
@@ -38,15 +41,17 @@
     
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css?v=20261022-shop-effects-2">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-learning-sequence.css">
     
     
 
@@ -54,9 +59,13 @@
 
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
     
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261022-quest-ui-2">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
     
 </head>
 
@@ -82,6 +91,9 @@
 
     <main class="student-course-main" id="student-course-main">
 
+
+
+
 <div id="course-work" data-etablissement="college" data-matiere="techno" data-classe="4e" data-seance="S02" data-saving-enabled="true" data-collaboration-enabled="true">
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
@@ -104,8 +116,6 @@
     <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
     <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
 
-
-
 <div class="course-columns">
     <aside class="course-navigation" aria-label="Étapes de la séance">
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
@@ -118,7 +128,21 @@
 <!-- ========== INTRODUCTION DU COURS ========== -->
 
 <header class="cours-intro" id="course-intro">
+    
+    
+    
+    <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Technologie · 4e · S02</span></div>
     <h1>Pourquoi avons-nous inventé le robot aspirateur ?</h1>
+    <aside class="course-learning-sequence" aria-label="Comment avancer dans le cours">
+        <strong>Pour avancer</strong>
+        <ol>
+            <li>Lis les repères et les étapes.</li>
+            <li>Observe l’exemple s’il y en a un.</li>
+            <li>Essaie à ton tour avec les questions.</li>
+            <li>Réutilise une méthode déjà rencontrée.</li>
+        </ol>
+        <p>Tu peux garder le cours ouvert et utiliser les aides si tu bloques.</p>
+    </aside>
 
     
     <p class="cours-theme">
@@ -132,13 +156,13 @@
     </p>
     
 
-    <section><h2>Pourquoi étudier ce sujet ?</h2><p>À partir de toutes vos observations, complétez dans votre document :</p></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi étudier ce sujet ?</h2><p>À partir de toutes vos observations, complétez dans votre document :</p></section>
     
-    <section><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
-    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
+    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
     
     
-    <section class="cours-objectifs">
+    <section class="course-info-card cours-objectifs">
         <h2>Ce que vous allez apprendre</h2>
         <ul>
             
@@ -197,6 +221,7 @@
 
 </header>
 
+
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
         <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
@@ -204,13 +229,15 @@
 <section class="cours-activites">
     
     <article class="cours-activite" id="a02">
-        <h2>Activité 1 — Compétence visée</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span></div>
+        <h2>Compétence visée</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Décrire les liens entre usages et évolutions technologiques des objets et des systèmes techniques.</p>
     
@@ -218,16 +245,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a04">
-        <h2>Activité 2 — Production attendue</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span></div>
+        <h2>Production attendue</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Vous devez produire un document LibreOffice Writer contenant vos premières hypothèses, un tableau de comparaison, une vérification documentaire, vos réponses argumentées et une courte conclusion.</p>
     
@@ -235,16 +269,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a02">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a05">
-        <h2>Activité 3 — 1. Créer votre document de travail</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span></div>
+        <h2>1. Créer votre document de travail</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Créez dès maintenant un document LibreOffice Writer nommé :</p>
     
@@ -270,16 +311,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
+            <a class="course-mission-next" href="#a06">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a06">
-        <h2>Activité 4 — 2. Plusieurs solutions pour le même problème</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>2. Plusieurs solutions pour le même problème</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Voici quatre objets utilisés pour nettoyer les sols :</p>
     
@@ -303,6 +351,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a06-q01-label">Question 1 — Si le balai permet déjà de nettoyer un sol, pourquoi a-t-on inventé les autres solutions ?</h3>
             
@@ -319,6 +368,7 @@
         </div>
         
         <div class="cours-question" data-question="q02">
+            
             
             <h3 id="a06-q02-label">Question 2 — Qu’est-ce qui a progressivement changé dans le travail réalisé par l’utilisateur ?</h3>
             
@@ -342,6 +392,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a06-q03-label">Question 3 — Qui produit le mouvement ?</h3>
             
 
@@ -356,6 +407,7 @@
         </div>
         
         <div class="cours-question" data-question="q04">
+            
             
             <h3 id="a06-q04-label">Question 4 — Qui doit déplacer l’objet ?</h3>
             
@@ -372,6 +424,7 @@
         
         <div class="cours-question" data-question="q05">
             
+            
             <h3 id="a06-q05-label">Question 5 — Qui produit l’aspiration ?</h3>
             
 
@@ -387,6 +440,7 @@
         
         <div class="cours-question" data-question="q06">
             
+            
             <h3 id="a06-q06-label">Question 6 — L’utilisateur doit-il être présent pendant tout le nettoyage ?</h3>
             
 
@@ -400,16 +454,23 @@
             
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a05">← Étape précédente</a>
+            <a class="course-mission-next" href="#a07">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a07">
-        <h2>Activité 5 — 3. Comparer les solutions</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 5</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>3. Comparer les solutions</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Créez dans votre document le tableau suivant et complétez-le.</p>
     
@@ -418,6 +479,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a07-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
             
@@ -602,16 +664,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a06">← Étape précédente</a>
+            <a class="course-mission-next" href="#a08">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a08">
-        <h2>Activité 6 — 4. Décomposer l’évolution</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 6</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>4. Décomposer l’évolution</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Le passage du balai au robot aspirateur ne s’est pas fait en une seule étape.</p>
     
@@ -623,6 +692,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a08-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
             
@@ -726,16 +796,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a07">← Étape précédente</a>
+            <a class="course-mission-next" href="#a09">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a09">
-        <h2>Activité 7 — 5. Vérifier ce que peut réellement faire un robot</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 7</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>5. Vérifier ce que peut réellement faire un robot</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Jusqu’ici, vous avez travaillé à partir de vos connaissances et de vos hypothèses.</p>
     
@@ -762,6 +839,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a09-q01-label">Question 1 — Le robot peut-il éviter de tomber dans un escalier ?</h3>
             
@@ -778,6 +856,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a09-q02-label">Question 2 — Peut-il détecter certains obstacles ?</h3>
             
 
@@ -793,6 +872,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a09-q03-label">Question 3 — Peut-il revenir se recharger sans intervention de l’utilisateur ?</h3>
             
 
@@ -807,6 +887,7 @@
         </div>
         
         <div class="cours-question" data-question="q04">
+            
             
             <h3 id="a09-q04-label">Question 4 — Peut-il fonctionner sur plusieurs types de sols ?</h3>
             
@@ -831,16 +912,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a08">← Étape précédente</a>
+            <a class="course-mission-next" href="#a10">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a10">
-        <h2>Activité 8 — 6. L’utilisateur fait-il vraiment moins de travail ?</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 8</span></div>
+        <h2>6. L’utilisateur fait-il vraiment moins de travail ?</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Un robot aspirateur peut réaliser certaines tâches automatiquement.</p>
     
@@ -878,16 +966,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a09">← Étape précédente</a>
+            <a class="course-mission-next" href="#a11">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a11">
-        <h2>Activité 9 — 7. Pourquoi les objets évoluent-ils ?</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 9</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>7. Pourquoi les objets évoluent-ils ?</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>À partir de toutes vos observations, complétez dans votre document :</p>
     
@@ -905,6 +1000,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a11-q01-label">Question 1 — Les besoins des utilisateurs peuvent-ils évoluer ?</h3>
             
@@ -921,6 +1017,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a11-q02-label">Question 2 — Les utilisateurs peuvent-ils rechercher davantage de confort ?</h3>
             
 
@@ -935,6 +1032,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a11-q03-label">Question 3 — De nouvelles technologies peuvent-elles apparaître ?</h3>
             
@@ -951,6 +1049,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a11-q04-label">Question 4 — De nouvelles contraintes peuvent-elles apparaître ?</h3>
             
 
@@ -964,16 +1063,23 @@
             
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a10">← Étape précédente</a>
+            <a class="course-mission-next" href="#a12">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a12">
-        <h2>Activité 10 — 8. Mettons des mots sur ce que nous avons découvert</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 10</span></div>
+        <h2>8. Mettons des mots sur ce que nous avons découvert</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Les différents objets étudiés répondent globalement au même besoin : nettoyer un sol.</p>
     
@@ -993,16 +1099,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a11">← Étape précédente</a>
+            <a class="course-mission-next" href="#a13">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a13">
-        <h2>Activité 11 — 9. Réinvestir : imaginer l’évolution suivante</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 11</span></div>
+        <h2>9. Réinvestir : imaginer l’évolution suivante</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Identifiez d’abord une limite actuelle d’un robot aspirateur.</p>
     
@@ -1019,16 +1132,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a12">← Étape précédente</a>
+            <a class="course-mission-next" href="#a14">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a14">
-        <h2>Activité 12 — 10. Conclusion</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 12</span></div>
+        <h2>10. Conclusion</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Rédigez quelques phrases pour répondre à la problématique :</p>
     
@@ -1048,16 +1168,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a13">← Étape précédente</a>
+            <a class="course-mission-next" href="#a15">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a15">
-        <h2>Activité 13 — 11. Rendu de fin de séance</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 13</span></div>
+        <h2>11. Rendu de fin de séance</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>À la fin du cours, votre fichier doit être rendu, même s’il n’est pas terminé.</p>
     
@@ -1077,16 +1204,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a14">← Étape précédente</a>
+            <a class="course-mission-next" href="#a16">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a16">
-        <h2>Activité 14 — Références pédagogiques</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 14</span></div>
+        <h2>Références pédagogiques</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <ul><li>Ministère de l’Éducation nationale – Programme de technologie du cycle 4, BO n°9 du 29 février 2024</li><li>Ministère de l’Éducation nationale – Annexe du programme de technologie du cycle 4</li></ul>
     
@@ -1100,6 +1234,11 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a15">← Étape précédente</a>
+            <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
 </section>
@@ -1129,13 +1268,16 @@
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
 
+
+
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
 
     </main>
     <footer class="site-footer">
     <p>
         &copy; 2026
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
     </p>
 </footer>
 </body>

@@ -88,6 +88,7 @@ export function initPrivateCourse() {
         clearNotes();
         const current = generation, lesson = lessons[Number(select.value)], actor = userId;
         if (!lesson || !actor || (privateMode && root.dataset.enabled !== 'true')) return;
+        let courseLoaded = false;
         controller = new AbortController();
         open.disabled = true; loadPrivate.disabled = true;
         status.textContent = privateMode ? 'Vérification et chargement des notes privées…' : 'Chargement du cours…';
@@ -96,12 +97,14 @@ export function initPrivateCourse() {
             if (current !== generation) return;
             if (verified.status !== 'authenticated' || verified.user.id !== actor || verified.profile.role !== 'teacher') { reset(); status.textContent = 'Votre connexion a changé. Rechargez la page.'; return; }
             const body = Object.fromEntries(['etablissement', 'matiere', 'classe', 'seance', 'version'].map(key => [key, lesson[key]]));
-            const [shown, response] = await Promise.all([
-                loadCoursePreview(preview, lesson, controller.signal, () => current === generation),
-                privateMode ? db.functions.invoke('teacher-course', { body, signal: controller.signal }) : Promise.resolve(null)
-            ]);
+            const shown = await loadCoursePreview(preview, lesson, controller.signal, () => current === generation);
             if (current !== generation || !shown) return;
+            courseLoaded = true;
             if (privateMode) {
+                status.textContent = 'Cours chargé. Vérification et chargement des corrections privées…';
+                const response = await db.functions.invoke('teacher-course', { body, signal: controller.signal });
+                // Réponse arrivée après un changement de classe, de séance ou de compte : ne rien afficher.
+                if (current !== generation) return;
                 if (response.error || !response.data?.content) throw new Error('private_unavailable');
                 renderTeacherNotes(preview, notes, response.data.content, lesson);
                 root.dataset.mode = 'private';
@@ -109,7 +112,7 @@ export function initPrivateCourse() {
             } else {
                 status.textContent = 'Version élève affichée : les notes privées ont été effacées.';
             }
-        } catch { if (current === generation) { clearTeacherNotes(preview, notes); root.dataset.mode = 'student'; status.textContent = 'Chargement impossible. Vérifiez votre connexion ou la correspondance entre le cours et ses notes privées.'; } }
+        } catch { if (current === generation) { clearTeacherNotes(preview, notes); root.dataset.mode = 'student'; status.textContent = courseLoaded ? 'Le cours est affiché, mais ses corrections privées n’ont pas pu être chargées. Vérifiez votre connexion professeur et réessayez.' : 'Le cours n’a pas pu être chargé. Vérifiez votre connexion et réessayez.'; } }
         finally { if (current === generation) { open.disabled = false; loadPrivate.disabled = root.dataset.enabled !== 'true'; } }
     }
     select.addEventListener('change', () => {

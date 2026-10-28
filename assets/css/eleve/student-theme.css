@@ -58,8 +58,8 @@
 :root[data-student-theme] .student-next-panel > .student-section-kicker { color: var(--student-accent); }
 :root[data-student-theme] :is(.student-statistics dl div, .cours-question, .student-feedback) { background: var(--student-soft); color: var(--student-text); border-color: var(--student-border); }
 :root[data-student-theme] :is(.student-feedback summary, .student-feedback p, .cours-question h3) { color: var(--student-text); }
-:root[data-student-theme] :is(:where(.student-shell) button, :where(#course-work) button, .student-theme-picker > summary) { background: var(--student-hero); color: white; border: 1px solid var(--student-border); border-radius: 9px; min-height: 44px; padding: 8px 12px; font: inherit; font-size: .85rem; cursor: pointer; }
-:root[data-student-theme] :is(:where(.student-shell) button:hover, :where(#course-work) button:hover, .student-theme-picker > summary:hover) { filter: brightness(1.12); }
+:root[data-student-theme] :is(:where(.student-shell) button:not(.shop-effect-card):not(.avatar-palette-swatch), :where(#course-work) button, .student-theme-picker > summary) { background: var(--student-hero); color: white; border: 1px solid var(--student-border); border-radius: 9px; min-height: 44px; padding: 8px 12px; font: inherit; font-size: .85rem; cursor: pointer; }
+:root[data-student-theme] :is(:where(.student-shell) button:not(.shop-effect-card):not(.avatar-palette-swatch):hover, :where(#course-work) button:hover, .student-theme-picker > summary:hover) { filter: brightness(1.12); }
 :root[data-student-theme] .student-filters button[aria-pressed="true"] { background: var(--student-accent); color: var(--student-ink); border-color: var(--student-accent); }
 :root[data-student-theme] :is(.student-lesson a, #course-work a) { color: var(--student-link); }
 :root[data-student-theme] .student-theme-options { background: var(--student-surface); color: var(--student-text); border-color: var(--student-border); }
@@ -86,7 +86,7 @@
 @keyframes student-rgb-orbit {
     to { --student-rgb-angle: 360deg; }
 }
-:root[data-student-theme="neon"] :is(.student-panel, .student-lesson, .cours-activite, .course-navigation, .student-shell button, #course-work button, .student-next-lesson a, .student-theme-picker > summary) {
+:root[data-student-theme="neon"] :is(.student-panel, .student-lesson, .cours-activite, .course-navigation, .student-shell button:not(.shop-effect-card):not(.avatar-palette-swatch), #course-work button, .student-next-lesson a, .student-theme-picker > summary) {
     border: 2px solid transparent;
     background: linear-gradient(var(--student-surface), var(--student-surface)) padding-box, conic-gradient(from var(--student-rgb-angle), #ff4b93, #9e72ff, #4ea5ff, #56f4dd, #ff4b93) border-box;
     animation: student-rgb-orbit 7s linear infinite;

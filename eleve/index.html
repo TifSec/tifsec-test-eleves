@@ -2,20 +2,23 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="supabase-url" content="https://evbfflwfyiitrkgzjhwt.supabase.co">
+    <meta name="supabase-publishable-key" content="sb_publishable__aRCAzLQv4TmSL0Z1yvcZQ_Nbwd2Ah6">
 
     <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
 
     
-    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preconnect" href="https://evbfflwfyiitrkgzjhwt.supabase.co" crossorigin>
     <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
     <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
     
 
     <title>
         
-        Espace élève | Portail pédagogique Technologie | TIM | Mathématiques
+        Espace élève | BAC À SABLE — Portail pédagogique (comptes fictifs)
         
     </title>
 
@@ -38,13 +41,14 @@
     
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css?v=20261022-shop-effects-2">
     
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-dashboard.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-cards.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-competencies.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-shop.css?v=20261022-shop-preview-3">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
     
 
@@ -52,9 +56,13 @@
 
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
     
+    
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
     
 </head>
 
@@ -96,7 +104,7 @@
         </aside>
 
     </div>
-    <div class="student-content student-card-board" aria-label="Mon espace en quatre cartes">
+    <div class="student-content student-card-board" aria-label="Mon espace élève">
         <details class="student-expand-card" id="student-card-next">
             <summary><span class="student-card-icon" aria-hidden="true">→</span><span class="student-card-title">Le prochain pas</span><span class="student-card-preview">Retrouver la prochaine séance.</span><span class="student-card-hint">Ouvrir <span class="student-card-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></span></span></summary>
             <div class="student-card-body"><div class="student-card-toolbar"><strong>Le prochain pas</strong><button type="button" data-card-close aria-label="Refermer la carte" title="Refermer la carte"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></button></div><p class="student-card-placeholder">Les informations s’afficheront après leur chargement.</p>
@@ -130,6 +138,135 @@
         </section>
             </div>
         </details>
+        <details class="student-expand-card student-shop-card" id="student-card-shop" hidden>
+    <summary><span class="student-card-icon" aria-hidden="true">✦</span><span class="student-card-title">Boutique de récompenses</span><span class="student-card-preview">Personnaliser ton espace et découvrir les coups de pouce.</span><span class="student-card-hint">Découvrir <span class="student-card-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></span></span></summary>
+    <div class="student-card-body"><div class="student-card-toolbar"><strong>Boutique de récompenses</strong><button type="button" data-card-close aria-label="Refermer la carte" title="Refermer la carte"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></button></div>
+        <section class="student-panel student-shop" aria-labelledby="student-shop-title">
+            <p class="student-section-kicker">Maquette — aucune récompense n’est encore activée</p><h2 id="student-shop-title">Choisis tes récompenses</h2>
+            <p class="student-shop-intro">Tes XP montreront ta progression. Cette boutique te présente les idées de récompenses ; les prix et les achats seront définis plus tard.</p>
+            <div class="student-shop-balance" role="status"><span aria-hidden="true">✦</span><p><strong>Ton expérience</strong><br><span>Le compteur apparaîtra ici quand les XP seront activés.</span></p><span class="student-shop-balance-value">— XP</span></div>
+
+            <h3 class="student-shop-category">Personnaliser mon espace</h3>
+            <div class="student-shop-grid">
+                <article class="student-reward-card">
+                    <div class="student-reward-heading"><span class="student-reward-type">Déblocage permanent</span><span class="student-reward-cost">Palier à définir</span></div>
+                    <h4>Couleurs des encadrés</h4><p>Choisis la couleur des bordures qui entourent tes cours.</p>
+                    <div class="shop-border-preview" aria-label="Aperçu de trois couleurs de bordure"><span></span><span></span><span></span></div>
+                    <details class="student-reward-preview"><summary>Voir l’aperçu</summary><div class="shop-preview-panel"><strong>À toi de choisir</strong><p>Une bordure bleue, verte ou violette : le texte reste contrasté et facile à lire.</p></div></details>
+                </article>
+                <article class="student-reward-card">
+                    <div class="student-reward-heading"><span class="student-reward-type">Déblocage permanent</span><span class="student-reward-cost">Palier à définir</span></div>
+                    <h4>Bordures animées</h4><p>Ajoute un contour lumineux ou coloré à tes cartes.</p>
+                    <div class="shop-border-preview shop-border-preview--animated" role="group" aria-label="Trois aperçus de bordures animées"><span role="img" aria-label="Aurore verte pulsante"></span><span role="img" aria-label="Vague bleue"></span><span role="img" aria-label="Arc-en-ciel animé"></span></div>
+                    <details class="student-reward-preview"><summary>Voir l’aperçu</summary><div class="shop-preview-panel shop-preview-panel--glow"><strong>Un contour qui bouge</strong><p>Effet lumineux autour de la carte ; le fond et le texte ne clignotent pas.</p></div></details>
+                </article>
+                <article class="student-reward-card">
+                    <div class="student-reward-heading"><span class="student-reward-type">Déblocage permanent</span><span class="student-reward-cost">Palier à définir</span></div>
+                    <h4>Liens et boutons personnalisés</h4><p>Choisis leurs couleurs et leur réaction au survol.</p>
+                    <div class="shop-hover-demo"><a href="#shop-preview-note">Lien à essayer</a><button type="button" class="shop-demo-button shop-demo-button--lift">Survole-moi</button><button type="button" class="shop-demo-button shop-demo-button--glow">Halo</button><button type="button" class="shop-demo-button shop-demo-button--press">Pression</button></div>
+                    <details class="student-reward-preview"><summary>Voir l’aperçu</summary><div class="shop-preview-panel"><strong>Survole ou sélectionne au clavier</strong><p>Le lien change de couleur ; les boutons peuvent se soulever, s’illuminer ou s’enfoncer.</p></div></details>
+                </article>
+                <article class="student-reward-card">
+                    <div class="student-reward-heading"><span class="student-reward-type">Déblocage permanent</span><span class="student-reward-cost">Palier à définir</span></div>
+                    <h4>Effets de validation</h4><p>Une petite animation quand tu termines une séance.</p>
+                    <details class="student-reward-preview student-reward-preview--celebrate"><summary>Voir l’aperçu</summary><div class="shop-preview-panel shop-validation-demo"><span aria-hidden="true">✓</span><strong>Séance terminée !</strong><p>Bien joué, tu peux être fier de ton travail.</p></div></details>
+                </article>
+                <article class="student-reward-card">
+                    <div class="student-reward-heading"><span class="student-reward-type">Déblocage permanent</span><span class="student-reward-cost">Palier à définir</span></div>
+                    <h4>Fond galaxie</h4><p>Transforme doucement le fond de ton espace en ciel étoilé.</p>
+                    <div class="shop-galaxy-preview" role="img" aria-label="Aperçu d’un ciel spatial animé"><span class="shop-galaxy-nebula"></span><span class="shop-galaxy-star shop-galaxy-star--one">✦</span><span class="shop-galaxy-star shop-galaxy-star--two">✧</span><strong>Cap sur tes missions</strong></div>
+                    <details class="student-reward-preview"><summary>Voir l’aperçu</summary><div class="shop-preview-panel"><strong>Une galaxie en arrière-plan</strong><p>Des étoiles discrètes et un nuage coloré bougent lentement derrière les cartes.</p></div></details>
+                </article>
+                <article class="student-reward-card">
+                    <div class="student-reward-heading"><span class="student-reward-type">Déblocage permanent</span><span class="student-reward-cost">Palier à définir</span></div>
+                    <h4>Cartes en relief</h4><p>Au survol, une carte s’incline légèrement comme un objet en 3D.</p>
+                    <div class="shop-effect-stage"><button type="button" class="shop-effect-card shop-effect-card--tilt"><strong>Ma prochaine mission</strong><span>Survole ou sélectionne-moi</span></button></div>
+                    <details class="student-reward-preview"><summary>Voir l’aperçu</summary><div class="shop-preview-panel"><strong>Un petit effet de profondeur</strong><p>La carte penche doucement à la souris ou au clavier, sans gêner la lecture.</p></div></details>
+                </article>
+                <article class="student-reward-card">
+                    <div class="student-reward-heading"><span class="student-reward-type">Déblocage permanent</span><span class="student-reward-cost">Palier à définir</span></div>
+                    <h4>Projecteur lumineux</h4><p>Un halo apparaît sur la carte que tu explores.</p>
+                    <div class="shop-effect-stage"><button type="button" class="shop-effect-card shop-effect-card--spotlight"><strong>Zone éclairée</strong><span>Un halo doux au survol</span></button></div>
+                    <details class="student-reward-preview"><summary>Voir l’aperçu</summary><div class="shop-preview-panel"><strong>Une lumière qui guide le regard</strong><p>Le halo reste léger : il ne cache ni le texte ni les boutons.</p></div></details>
+                </article>
+                <article class="student-reward-card">
+                    <div class="student-reward-heading"><span class="student-reward-type">Déblocage permanent</span><span class="student-reward-cost">Palier à définir</span></div>
+                    <h4>Carte holographique</h4><p>Un reflet arc-en-ciel glisse sur les cartes importantes.</p>
+                    <div class="shop-effect-stage"><button type="button" class="shop-effect-card shop-effect-card--holo"><strong>Carte brillante</strong><span>Un reflet coloré au survol</span></button></div>
+                    <details class="student-reward-preview"><summary>Voir l’aperçu</summary><div class="shop-preview-panel"><strong>Un effet holographique</strong><p>Le reflet reste sur le fond de la carte ; le texte garde un contraste fort.</p></div></details>
+                </article>
+                <article class="student-reward-card">
+                    <div class="student-reward-heading"><span class="student-reward-type">Déblocage permanent</span><span class="student-reward-cost">Palier à définir</span></div>
+                    <h4>Aurore animée</h4><p>Choisis un ciel coloré qui ondule doucement derrière ton espace.</p>
+                    <div class="shop-aurora-preview" role="img" aria-label="Aperçu d’une aurore colorée en mouvement"><span>Une nouvelle journée commence</span></div>
+                    <details class="student-reward-preview"><summary>Voir l’aperçu</summary><div class="shop-preview-panel"><strong>Un ciel différent de la galaxie</strong><p>Des rubans de lumière se déplacent lentement, sans passer derrière les textes.</p></div></details>
+                </article>
+                <article class="student-reward-card">
+                    <div class="student-reward-heading"><span class="student-reward-type">Déblocage permanent</span><span class="student-reward-cost">Palier à définir</span></div>
+                    <h4>Relief en couches</h4><p>Les éléments d’une carte bougent un peu à des vitesses différentes.</p>
+                    <div class="shop-effect-stage"><button type="button" class="shop-effect-card shop-effect-card--layers"><span class="shop-layer shop-layer--back" aria-hidden="true">✦</span><strong>Mission découverte</strong><span>Comme un décor de jeu</span></button></div>
+                    <details class="student-reward-preview"><summary>Voir l’aperçu</summary><div class="shop-preview-panel"><strong>Une carte avec de la profondeur</strong><p>Le fond, l’icône et le titre se décalent légèrement au survol ou au clavier.</p></div></details>
+                </article>
+                <article class="student-reward-card">
+                    <div class="student-reward-heading"><span class="student-reward-type">Déblocage permanent</span><span class="student-reward-cost">Palier à définir</span></div>
+                    <h4>Barre d’XP vivante</h4><p>Ta progression devient plus visible avec un éclat discret.</p>
+                    <div class="shop-xp-demo" role="img" aria-label="Aperçu d’une barre d’expérience lumineuse"><span><i></i></span><strong>60 / 100 XP</strong></div>
+                    <details class="student-reward-preview"><summary>Voir l’aperçu</summary><div class="shop-preview-panel"><strong>Voir le chemin parcouru</strong><p>La barre s’illumine quand elle progresse ; elle reste fixe si les animations sont réduites.</p></div></details>
+                </article>
+                <article class="student-reward-card">
+                    <div class="student-reward-heading"><span class="student-reward-type">Déblocage permanent</span><span class="student-reward-cost">Palier à définir</span></div>
+                    <h4>Cadre d’avatar</h4><p>Ajoute un contour spécial autour de l’image de ton personnage.</p>
+                    <div class="shop-avatar-demo" role="img" aria-label="Aperçu d’un avatar avec cadre brillant"><span aria-hidden="true">🧑‍🚀</span><strong>Explorateur niveau 3</strong></div>
+                    <details class="student-reward-preview"><summary>Voir l’aperçu</summary><div class="shop-preview-panel"><strong>Ton personnage à ton image</strong><p>Un cadre de couleur ou lumineux entoure l’avatar généré par le site ; aucune image n’est à téléverser.</p></div></details>
+                </article>
+            </div>
+
+            <section class="avatar-workshop" aria-labelledby="avatar-workshop-title">
+                <div><p class="student-section-kicker">Atelier — aperçu local</p><h3 id="avatar-workshop-title">Crée ton personnage</h3><p>Choisis un style, une tenue et un accessoire. Ton avatar est dessiné par le site : aucune image n’est envoyée.</p></div>
+                <div class="avatar-builder">
+                    <div id="student-avatar-preview" class="avatar-stage" data-avatar-style="explorateur" data-avatar-palette="lagon" data-avatar-accessory="false" role="img" aria-label="Avatar explorateur, tenue lagon">
+                        <span class="avatar-character" aria-hidden="true"><span class="avatar-backpack"></span><span class="avatar-antenna"></span><span class="avatar-cap"></span><span class="avatar-face"><span class="avatar-eyes"></span><span class="avatar-mouth"></span><span class="avatar-glasses"></span><span class="avatar-visor"></span></span><span class="avatar-body"></span><span class="avatar-badge" aria-hidden="true">✦</span></span>
+                    </div>
+                    <div class="avatar-controls">
+                        <fieldset><legend>Choisis un personnage</legend><div class="avatar-choice-grid"><button type="button" data-avatar-style="explorateur" aria-pressed="true">Explorateur</button><button type="button" data-avatar-style="astronaute" aria-pressed="false">Astronaute</button><button type="button" data-avatar-style="inventeur" aria-pressed="false">Inventeur</button><button type="button" data-avatar-style="robot" aria-pressed="false">Robot</button></div></fieldset>
+                        <fieldset><legend>Choisis ses couleurs</legend><div class="avatar-palette-grid"><button type="button" class="avatar-palette-swatch" data-avatar-palette="lagon" aria-label="Tenue lagon" aria-pressed="true"></button><button type="button" class="avatar-palette-swatch" data-avatar-palette="soleil" aria-label="Tenue soleil" aria-pressed="false"></button><button type="button" class="avatar-palette-swatch" data-avatar-palette="foret" aria-label="Tenue forêt" aria-pressed="false"></button><button type="button" class="avatar-palette-swatch" data-avatar-palette="nebuleuse" aria-label="Tenue nébuleuse" aria-pressed="false"></button></div></fieldset>
+                        <div class="avatar-actions"><button type="button" data-avatar-accessory aria-pressed="false">Ajouter un badge ✦</button><button type="button" data-avatar-random>Surprise-moi !</button></div>
+                        <p id="avatar-preview-status" class="avatar-preview-status" role="status" aria-live="polite">Explorateur — tenue lagon. Cet aperçu ne sera pas sauvegardé.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="shop-xp-challenge" aria-labelledby="shop-xp-challenge-title">
+                <div><p class="student-section-kicker">Mini défi — points fictifs</p><h3 id="shop-xp-challenge-title">À quoi servent les XP ?</h3><p>Simule cinq missions pour voir une récompense apparaître. Ces points de démonstration ne sont pas enregistrés.</p></div>
+                <div id="shop-demo-progress" class="shop-demo-progress" role="progressbar" aria-label="Progression fictive vers une récompense" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span data-xp-demo-fill></span></div>
+                <div class="shop-demo-actions"><strong id="shop-demo-xp-count">0 / 100 XP fictifs</strong><button type="button" data-xp-demo-add>Simuler une mission (+20)</button><button type="button" data-xp-demo-reset>Recommencer</button></div>
+                <p id="shop-demo-xp-status" role="status" aria-live="polite">Encore 100 XP fictifs avant le cadre d’avatar.</p>
+            </section>
+
+            <h3 class="student-shop-category">M’aider quand je bloque</h3>
+            <p class="student-shop-note">Ces aides concernent uniquement les questions déterministes. Elles ne donnent pas directement la réponse.</p>
+            <div class="student-shop-grid">
+                <article class="student-reward-card">
+                    <div class="student-reward-heading"><span class="student-reward-type">Aide à débloquer</span><span class="student-reward-cost">Coût à définir</span></div>
+                    <h4>Un indice de plus</h4><p>Débloque des indices supplémentaires pour t’aider à trouver la méthode.</p>
+                    <details class="student-reward-preview"><summary>Voir l’aperçu</summary><div class="shop-preview-panel shop-hint-demo"><strong>Indice supplémentaire</strong><p>Commence par repérer l’opération à faire. Ensuite, avance une étape à la fois.</p></div></details>
+                </article>
+                <article class="student-reward-card">
+                    <div class="student-reward-heading"><span class="student-reward-type">Déblocage permanent</span><span class="student-reward-cost">Coût à définir</span></div>
+                    <h4>Éliminer une mauvaise réponse</h4><p>Débloque cette aide une fois et utilise-la autant que tu veux.</p>
+                    <details class="student-reward-preview"><summary>Voir l’aperçu</summary><div class="shop-preview-panel shop-answer-demo"><strong>Quelle réponse est correcte ?</strong><span>◯ 12</span><span class="shop-answer-removed">◯ 15 <small>éliminée</small></span><span>◯ 18</span><p>Une proposition incorrecte est barrée ; tu choisis parmi les autres.</p></div></details>
+                </article>
+                <article class="student-reward-card">
+                    <div class="student-reward-heading"><span class="student-reward-type">À chaque utilisation</span><span class="student-reward-cost">Coût à définir</span></div>
+                    <h4>Éliminer deux mauvaises réponses</h4><p>Cette aide sert une seule fois. Pour la réutiliser, il faudra la débloquer à nouveau.</p>
+                    <details class="student-reward-preview"><summary>Voir l’aperçu</summary><div class="shop-preview-panel shop-answer-demo"><strong>Quelle réponse est correcte ?</strong><span class="shop-answer-removed">◯ 12 <small>éliminée</small></span><span>◯ 15</span><span class="shop-answer-removed">◯ 18 <small>éliminée</small></span><p>Deux propositions incorrectes sont barrées pour cette question.</p></div></details>
+                </article>
+            </div>
+            <p id="shop-preview-note" class="student-shop-footnote">Les prix, les XP et les jetons d’aide restent à définir. Cet aperçu ne modifie pas ton compte et ne dépense aucun point.</p>
+        </section>
+    </div>
+</details>
+
         <details class="student-expand-card" id="student-card-invitations">
             <summary><span class="student-card-icon" aria-hidden="true">＋</span><span class="student-card-title">Invitations à collaborer</span><span class="student-card-preview">Voir les demandes de mes camarades.</span><span class="student-card-hint">Ouvrir <span class="student-card-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></span></span></summary>
             <div class="student-card-body"><div class="student-card-toolbar"><strong>Invitations à collaborer</strong><button type="button" data-card-close aria-label="Refermer la carte" title="Refermer la carte"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></button></div><p class="student-card-placeholder">Les informations s’afficheront après leur chargement.</p>
@@ -142,7 +279,7 @@
         <footer class="site-footer">
     <p>
         &copy; 2026
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
     </p>
 </footer>
     </div>
@@ -151,16 +288,990 @@
 {"college":{"nom":"Collège","classes":[{"id":"5e","nom":"5e","matieres":["techno"]},{"id":"4e","nom":"4e","matieres":["techno"]},{"id":"3e","nom":"3e","matieres":["techno"]}]},"mfr":{"nom":"MFR","classes":[{"id":"4e","nom":"4e MFR","matieres":["tim","maths"]},{"id":"3e","nom":"3e MFR","matieres":["tim","maths"]},{"id":"cap1","nom":"CAP 1","matieres":["tim"]},{"id":"cap2","nom":"CAP 2","matieres":["tim"]},{"id":"2de","nom":"2de Pro","matieres":["tim","maths"]},{"id":"1re","nom":"Bac Pro 1","matieres":["tim","maths"]},{"id":"term","nom":"Bac Pro 2","matieres":["tim","maths"]},{"id":"bts1","nom":"BTS 1","matieres":["tim"]},{"id":"bts2","nom":"BTS 2","matieres":["tim"]}]}}
 </script>
     <script id="seances-data" type="application/json">
-[{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S01","version":"v1","titre":"Comment allons-nous travailler en Technologie cette année ?","url":"/tifsec-test-eleves/cours/techno/5e/s01/"},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S02","version":"v1","titre":"Ancienne S02 — Pourquoi fabrique-t-on des objets techniques ?","url":"/tifsec-test-eleves/cours/techno/5e/s02/"},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S02V2","version":"v2","numero":"S02","titre":"S02 — Pourquoi fabrique-t-on des objets techniques ?","url":"/tifsec-test-eleves/cours/techno/5e/s02-v2/"},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S03","version":"v1","titre":"Comment un vélo peut-il remplir toutes ses fonctions ?","url":"/tifsec-test-eleves/cours/techno/5e/s03/"},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S04","version":"v1","titre":"Pourquoi les vélos ont-ils changé au cours du temps ?","url":"/tifsec-test-eleves/cours/techno/5e/s04/"},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S05","version":"v1","titre":"Existe-t-il un meilleur vélo ?","url":"/tifsec-test-eleves/cours/techno/5e/s05/"},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S06","version":"v1","titre":"Comment prouver qu'une situation est différente d'une autre ?","url":"/tifsec-test-eleves/cours/techno/5e/s06/"},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S07","version":"v1","titre":"Que devient un objet avant et après son utilisation ?","url":"/tifsec-test-eleves/cours/techno/5e/s07/"},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S08","version":"v1","titre":"Un objet qui ne fonctionne plus est-il forcément à jeter ?","url":"/tifsec-test-eleves/cours/techno/5e/s08/"},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S09","version":"v1","titre":"Comment résoudre un problème compliqué ?","url":"/tifsec-test-eleves/cours/techno/5e/s09/"},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S10","version":"v1","titre":"Comment assembler nos petites solutions pour créer un jeu ?","url":"/tifsec-test-eleves/cours/techno/5e/s10/"},{"etablissement":"college","matiere":"techno","classe":"4e","seance":"S01","version":"v1","titre":"Bienvenue en technologie","url":"/tifsec-test-eleves/cours/techno/4e/s01/"},{"etablissement":"college","matiere":"techno","classe":"4e","seance":"S02","version":"v1","titre":"Pourquoi avons-nous inventé le robot aspirateur ?","url":"/tifsec-test-eleves/cours/techno/4e/s02/"},{"etablissement":"college","matiere":"techno","classe":"4e","seance":"S03","version":"v1","titre":"Un robot aspirateur convient-il à tout le monde ?","url":"/tifsec-test-eleves/cours/techno/4e/s03/"},{"etablissement":"college","matiere":"techno","classe":"4e","seance":"S04","version":"v1","titre":"Pourquoi les aspirateurs ont-ils autant évolué ?","url":"/tifsec-test-eleves/cours/techno/4e/s04/"},{"etablissement":"college","matiere":"techno","classe":"4e","seance":"S05","version":"v1","titre":"Quel robot aspirateur choisir ?","url":"/tifsec-test-eleves/cours/techno/4e/s05/"},{"etablissement":"college","matiere":"techno","classe":"4e","seance":"S06","version":"v1","titre":"Peut-on vérifier les performances d’un robot ?","url":"/tifsec-test-eleves/cours/techno/4e/s06/"},{"etablissement":"college","matiere":"techno","classe":"4e","seance":"S07","version":"v1","titre":"Un robot aspirateur est-il vraiment écologique ?","url":"/tifsec-test-eleves/cours/techno/4e/s07/"},{"etablissement":"college","matiere":"techno","classe":"4e","seance":"S08","version":"v1","titre":"Faut-il réparer ou remplacer ?","url":"/tifsec-test-eleves/cours/techno/4e/s08/"},{"etablissement":"college","matiere":"techno","classe":"4e","seance":"S09","version":"v1","titre":"Qu’est-ce qui rend une pièce plus rigide ?","url":"/tifsec-test-eleves/cours/techno/4e/s09/"},{"etablissement":"college","matiere":"techno","classe":"4e","seance":"S10","version":"v1","titre":"Le robot aspirateur parfait existe-t-il ?","url":"/tifsec-test-eleves/cours/techno/4e/s10/"},{"etablissement":"college","matiere":"techno","classe":"3e","seance":"S01","version":"v1","titre":"Comment travailler en technologie cette année ?","url":"/tifsec-test-eleves/cours/techno/3e/s01/"},{"etablissement":"college","matiere":"techno","classe":"3e","seance":"S02","version":"v1","titre":"Pourquoi les objets techniques évoluent-ils ?","url":"/tifsec-test-eleves/cours/techno/3e/s02/"},{"etablissement":"college","matiere":"techno","classe":"3e","seance":"S02R","version":"v1","titre":"Pourquoi les objets techniques évoluent-ils ?","url":"/tifsec-test-eleves/cours/techno/3e/s02r/"},{"etablissement":"college","matiere":"techno","classe":"3e","seance":"S03","version":"v1","titre":"Comment les technologies transforment-elles la société ?","url":"/tifsec-test-eleves/cours/techno/3e/s03/"},{"etablissement":"college","matiere":"techno","classe":"3e","seance":"S04","version":"v1","titre":"Comment choisir entre plusieurs solutions techniques ?","url":"/tifsec-test-eleves/cours/techno/3e/s04/"},{"etablissement":"college","matiere":"techno","classe":"3e","seance":"S05","version":"v1","titre":"Comment vérifier les performances d'une solution technique ?","url":"/tifsec-test-eleves/cours/techno/3e/s05/"},{"etablissement":"college","matiere":"techno","classe":"3e","seance":"S06","version":"v1","titre":"Comment comparer expérimentalement plusieurs solutions ?","url":"/tifsec-test-eleves/cours/techno/3e/s06/"},{"etablissement":"college","matiere":"techno","classe":"3e","seance":"S07","version":"v1","titre":"Comment une machine utilise-t-elle des données ?","url":"/tifsec-test-eleves/cours/techno/3e/s07/"},{"etablissement":"college","matiere":"techno","classe":"3e","seance":"S08","version":"v1","titre":"Comment une information circule-t-elle dans un réseau ?","url":"/tifsec-test-eleves/cours/techno/3e/s08/"},{"etablissement":"college","matiere":"techno","classe":"3e","seance":"S09","version":"v1","titre":"Comment faire communiquer plusieurs réseaux ?","url":"/tifsec-test-eleves/cours/techno/3e/s09/"},{"etablissement":"college","matiere":"techno","classe":"3e","seance":"S10","version":"v1","titre":"Ancien essai court — protéger l’accès à ses comptes","url":"/tifsec-test-eleves/cours/techno/3e/s10/"},{"etablissement":"college","matiere":"techno","classe":"3e","seance":"S10R","version":"v1","titre":"Comment protéger ses données et ses comptes ?","url":"/tifsec-test-eleves/cours/techno/3e/s10-original/"},{"etablissement":"mfr","matiere":"tim","classe":"cap2","seance":"S01","version":"v1","titre":"Découverte du cours de TIM et prise en main","url":"/tifsec-test-eleves/cours/tim/cap2/s01/"},{"etablissement":"mfr","matiere":"tim","classe":"cap2","seance":"S02","version":"v1","titre":"Prévoir le stock de foin d'une écurie avec Calc","url":"/tifsec-test-eleves/cours/tim/cap2/s02/"},{"etablissement":"mfr","matiere":"tim","classe":"cap2","seance":"S03","version":"v1","titre":"Organiser le suivi de maréchalerie d’une écurie","url":"/tifsec-test-eleves/cours/tim/cap2/s03/"},{"etablissement":"mfr","matiere":"tim","classe":"cap2","seance":"S04","version":"v1","titre":"Accueillir un nouvel équidé : vérifier et organiser les informations","url":"/tifsec-test-eleves/cours/tim/cap2/s04/"},{"etablissement":"mfr","matiere":"tim","classe":"cap2","seance":"S05","version":"v1","titre":"Communiquer avec un professionnel par courriel","url":"/tifsec-test-eleves/cours/tim/cap2/s05/"},{"etablissement":"mfr","matiere":"tim","classe":"4e","seance":"S01","version":"v1","titre":"Découvrons le fonctionnement du TIM","url":"/tifsec-test-eleves/cours/tim/4e/s01/"},{"etablissement":"mfr","matiere":"tim","classe":"4e","seance":"S02","version":"v1","titre":"Créons les invitations de notre rencontre","url":"/tifsec-test-eleves/cours/tim/4e/s02/"},{"etablissement":"mfr","matiere":"tim","classe":"4e","seance":"S03","version":"v1","titre":"Comment organiser ses fichiers pour ne plus les perdre ?","url":"/tifsec-test-eleves/cours/tim/4e/s03/"},{"etablissement":"mfr","matiere":"tim","classe":"4e","seance":"S04","version":"v1","titre":"Comment créer un document clair et professionnel ?","url":"/tifsec-test-eleves/cours/tim/4e/s04/"},{"etablissement":"mfr","matiere":"tim","classe":"4e","seance":"S05","version":"v1","titre":"Quel format choisir pour transmettre un document ?","url":"/tifsec-test-eleves/cours/tim/4e/s05/"},{"etablissement":"mfr","matiere":"tim","classe":"3e","seance":"S01","version":"v1","titre":"Découvrons le fonctionnement du TIM","url":"/tifsec-test-eleves/cours/tim/3e/s01/"},{"etablissement":"mfr","matiere":"tim","classe":"3e","seance":"S02","version":"v1","titre":"Créons les invitations de notre rencontre","url":"/tifsec-test-eleves/cours/tim/3e/s02/"},{"etablissement":"mfr","matiere":"tim","classe":"3e","seance":"S03","version":"v1","titre":"Comment organiser ses fichiers pour ne plus les perdre ?","url":"/tifsec-test-eleves/cours/tim/3e/s03/"},{"etablissement":"mfr","matiere":"tim","classe":"3e","seance":"S04","version":"v1","titre":"Comment créer un document clair et professionnel ?","url":"/tifsec-test-eleves/cours/tim/3e/s04/"},{"etablissement":"mfr","matiere":"tim","classe":"3e","seance":"S05","version":"v1","titre":"Quel format choisir pour transmettre un document ?","url":"/tifsec-test-eleves/cours/tim/3e/s05/"},{"etablissement":"mfr","matiere":"tim","classe":"2de","seance":"S01","version":"v1","titre":"Faire connaissance et découvrir le fonctionnement du cours","url":"/tifsec-test-eleves/cours/tim/2de/s01/"},{"etablissement":"mfr","matiere":"tim","classe":"2de","seance":"S02","version":"v1","titre":"Organiser ses fichiers et ses dossiers","url":"/tifsec-test-eleves/cours/tim/2de/s02/"},{"etablissement":"mfr","matiere":"tim","classe":"2de","seance":"S03","version":"v1","titre":"Protéger ses données et son environnement numérique","url":"/tifsec-test-eleves/cours/tim/2de/s03/"},{"etablissement":"mfr","matiere":"tim","classe":"2de","seance":"S04","version":"v1","titre":"Créer un document professionnel clair et lisible","url":"/tifsec-test-eleves/cours/tim/2de/s04/"},{"etablissement":"mfr","matiere":"tim","classe":"1re","seance":"S01","version":"v1","titre":"Bien démarrer en MG1 Informatique","url":"/tifsec-test-eleves/cours/tim/1re/s01/"},{"etablissement":"mfr","matiere":"tim","classe":"1re","seance":"S02","version":"v1","titre":"Comprendre ce que racontent les données","url":"/tifsec-test-eleves/cours/tim/1re/s02/"},{"etablissement":"mfr","matiere":"tim","classe":"1re","seance":"S03","version":"v1","titre":"Peut-on faire confiance à toutes les données ?","url":"/tifsec-test-eleves/cours/tim/1re/s03/"},{"etablissement":"mfr","matiere":"tim","classe":"term","seance":"S01","version":"v1","titre":"Des données brutes à une décision professionnelle","url":"/tifsec-test-eleves/cours/tim/term/s01/"},{"etablissement":"mfr","matiere":"tim","classe":"term","seance":"S02","version":"v1","titre":"Peut-on faire confiance aux données d'une écurie ?","url":"/tifsec-test-eleves/cours/tim/term/s02/"},{"etablissement":"mfr","matiere":"tim","classe":"term","seance":"S03","version":"v1","titre":"Retrouver les informations utiles dans les dépenses d'une écurie","url":"/tifsec-test-eleves/cours/tim/term/s03/"},{"etablissement":"mfr","matiere":"tim","classe":"term","seance":"S04","version":"v1","titre":"Créer un bilan automatique des dépenses d'une écurie","url":"/tifsec-test-eleves/cours/tim/term/s04/"},{"etablissement":"mfr","matiere":"tim","classe":"cap1","seance":"S01","version":"v1","titre":"Faire connaissance et prendre ses repères","url":"/tifsec-test-eleves/cours/tim/cap1/s01/"},{"etablissement":"mfr","matiere":"tim","classe":"cap1","seance":"S02","version":"v1","titre":"Ranger et retrouver ses fichiers","url":"/tifsec-test-eleves/cours/tim/cap1/s02/"},{"etablissement":"mfr","matiere":"tim","classe":"bts2","seance":"S01","version":"v1","titre":"Bienvenue en TIM – Faire le point pour mieux progresser","url":"/tifsec-test-eleves/cours/tim/bts2/s01/"},{"etablissement":"mfr","matiere":"tim","classe":"bts2","seance":"S02","version":"v1","titre":"Peut-on faire confiance aux données ?","url":"/tifsec-test-eleves/cours/tim/bts2/s02/"},{"etablissement":"mfr","matiere":"tim","classe":"bts2","seance":"S03","version":"v1","titre":"Faire repérer automatiquement les situations à surveiller","url":"/tifsec-test-eleves/cours/tim/bts2/s03/"},{"etablissement":"mfr","matiere":"tim","classe":"bts2","seance":"S04","version":"v1","titre":"Croiser plusieurs critères pour définir une priorité","url":"/tifsec-test-eleves/cours/tim/bts2/s04/"},{"etablissement":"mfr","matiere":"tim","classe":"bts2","seance":"S05","version":"v1","titre":"Résumer automatiquement un ensemble de données","url":"/tifsec-test-eleves/cours/tim/bts2/s05/"},{"etablissement":"mfr","matiere":"tim","classe":"bts2","seance":"S06","version":"v1","titre":"Synthétiser automatiquement tout un tableau","url":"/tifsec-test-eleves/cours/tim/bts2/s06/"},{"etablissement":"mfr","matiere":"tim","classe":"bts2","seance":"S07","version":"v1","titre":"Présenter un résultat et l'interpréter sans aller trop vite","url":"/tifsec-test-eleves/cours/tim/bts2/s07/"},{"etablissement":"mfr","matiere":"tim","classe":"bts2","seance":"S08","version":"v1","titre":"Évaluation – Exploiter des données pour aider à la décision","url":"/tifsec-test-eleves/cours/tim/bts2/s08/"},{"etablissement":"mfr","matiere":"maths","classe":"term","seance":"S00","version":"v1","titre":"Gérer le stock de foin d'une écurie avec les suites","url":"/tifsec-test-eleves/cours/maths/term/s00/"},{"etablissement":"mfr","matiere":"maths","classe":"term","seance":"S01","version":"v1","titre":"Remise en route et diagnostic","url":"/tifsec-test-eleves/cours/maths/term/s01/"},{"etablissement":"mfr","matiere":"maths","classe":"term","seance":"S02","version":"v1","titre":"Poursuivre le diagnostic – données, probabilités et calcul littéral","url":"/tifsec-test-eleves/cours/maths/term/s02/"},{"etablissement":"mfr","matiere":"maths","classe":"term","seance":"S03","version":"v1","titre":"Calcul littéral et équations – Étudier la rentabilité d'une activité équestre","url":"/tifsec-test-eleves/cours/maths/term/s03/"},{"etablissement":"mfr","matiere":"maths","classe":"term","seance":"S04","version":"v1","titre":"Fonctions affines – Comparer deux organisations d'une journée équestre","url":"/tifsec-test-eleves/cours/maths/term/s04/"},{"etablissement":"mfr","matiere":"maths","classe":"term","seance":"S05","version":"v1","titre":"Fonction du second degré – Rechercher un coût minimal","url":"/tifsec-test-eleves/cours/maths/term/s05/"},{"etablissement":"mfr","matiere":"maths","classe":"term","seance":"S06","version":"v1","titre":"Second degré — Résoudre une équation et respecter un budget","url":"/tifsec-test-eleves/cours/maths/term/s06/"},{"etablissement":"mfr","matiere":"maths","classe":"term","seance":"S07","version":"v1","titre":"Comparer deux prestations et justifier une décision","url":"/tifsec-test-eleves/cours/maths/term/s07/"},{"etablissement":"mfr","matiere":"maths","classe":"term","seance":"S08","version":"v1","titre":"Bilan de compétences – Calculer, modéliser et décider","url":"/tifsec-test-eleves/cours/maths/term/s08/"},{"etablissement":"mfr","matiere":"maths","classe":"term","seance":"S09","version":"v1","titre":"Découvrir la dérivation – Comment évolue un coût ?","url":"/tifsec-test-eleves/cours/maths/term/s09/"},{"etablissement":"mfr","matiere":"maths","classe":"4e","seance":"S01","version":"v1","titre":"Remise en route et diagnostic","url":"/tifsec-test-eleves/cours/maths/4e/s01/"},{"etablissement":"mfr","matiere":"maths","classe":"4e","seance":"S02","version":"v1","titre":"Multiples, diviseurs et critères de divisibilité","url":"/tifsec-test-eleves/cours/maths/4e/s02/"},{"etablissement":"mfr","matiere":"maths","classe":"4e","seance":"S03","version":"v1","titre":"Nombres premiers et décomposition en facteurs premiers","url":"/tifsec-test-eleves/cours/maths/4e/s03/"},{"etablissement":"mfr","matiere":"maths","classe":"4e","seance":"S04","version":"v1","titre":"Comprendre, simplifier et comparer des fractions","url":"/tifsec-test-eleves/cours/maths/4e/s04/"},{"etablissement":"mfr","matiere":"maths","classe":"4e","seance":"S05","version":"v1","titre":"Additionner et soustraire des fractions","url":"/tifsec-test-eleves/cours/maths/4e/s05/"},{"etablissement":"mfr","matiere":"maths","classe":"4e","seance":"S06","version":"v1","titre":"Multiplier et diviser des fractions","url":"/tifsec-test-eleves/cours/maths/4e/s06/"},{"etablissement":"mfr","matiere":"maths","classe":"4e","seance":"S07","version":"v1","titre":"Évaluation 1 : Nombres et fractions","url":"/tifsec-test-eleves/cours/maths/4e/s07/"},{"etablissement":"mfr","matiere":"maths","classe":"4e","seance":"S08","version":"v1","titre":"Découvrir et reconnaître la proportionnalité","url":"/tifsec-test-eleves/cours/maths/4e/s08/"},{"etablissement":"mfr","matiere":"maths","classe":"3e","seance":"S01","version":"v1","titre":"Remise en route et diagnostic","url":"/tifsec-test-eleves/cours/maths/3e/s01/"},{"etablissement":"mfr","matiere":"maths","classe":"3e","seance":"S02","version":"v1","titre":"Multiples, diviseurs et critères de divisibilité","url":"/tifsec-test-eleves/cours/maths/3e/s02/"},{"etablissement":"mfr","matiere":"maths","classe":"3e","seance":"S03","version":"v1","titre":"Nombres premiers et décomposition en facteurs premiers","url":"/tifsec-test-eleves/cours/maths/3e/s03/"},{"etablissement":"mfr","matiere":"maths","classe":"3e","seance":"S04","version":"v1","titre":"Comprendre, simplifier et comparer des fractions","url":"/tifsec-test-eleves/cours/maths/3e/s04/"},{"etablissement":"mfr","matiere":"maths","classe":"3e","seance":"S05","version":"v1","titre":"Additionner et soustraire des fractions","url":"/tifsec-test-eleves/cours/maths/3e/s05/"},{"etablissement":"mfr","matiere":"maths","classe":"3e","seance":"S06","version":"v1","titre":"Multiplier et diviser des fractions","url":"/tifsec-test-eleves/cours/maths/3e/s06/"},{"etablissement":"mfr","matiere":"maths","classe":"3e","seance":"S07","version":"v1","titre":"Évaluation 1 : Nombres et fractions","url":"/tifsec-test-eleves/cours/maths/3e/s07/"},{"etablissement":"mfr","matiere":"maths","classe":"3e","seance":"S08","version":"v1","titre":"Découvrir et reconnaître la proportionnalité","url":"/tifsec-test-eleves/cours/maths/3e/s08/"},{"etablissement":"mfr","matiere":"maths","classe":"1re","seance":"S01","version":"v1","titre":"Reprendre les bons réflexes","url":"/tifsec-test-eleves/cours/maths/1re/s01/"},{"etablissement":"mfr","matiere":"maths","classe":"1re","seance":"S02","version":"v1","titre":"Comprendre les fractions et les pourcentages","url":"/tifsec-test-eleves/cours/maths/1re/s02/"}]
+[
+    
+    
+    
+    
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S01","version":"v1","titre":"Comment allons-nous travailler en Technologie cette année ?","url":"/tifsec-test-eleves/cours/techno/5e/s01/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S02","version":"v1","titre":"Pourquoi fabrique-t-on des objets techniques ?","url":"/tifsec-test-eleves/cours/techno/5e/s02/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S02V2","version":"v2","titre":"Pourquoi fabrique-t-on des objets techniques ?","url":"/tifsec-test-eleves/cours/techno/5e/s02-v2/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S03","version":"v1","titre":"Comment un vélo peut-il remplir toutes ses fonctions ?","url":"/tifsec-test-eleves/cours/techno/5e/s03/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S04","version":"v1","titre":"Pourquoi les vélos ont-ils changé au cours du temps ?","url":"/tifsec-test-eleves/cours/techno/5e/s04/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S05","version":"v1","titre":"Existe-t-il un meilleur vélo ?","url":"/tifsec-test-eleves/cours/techno/5e/s05/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S06","version":"v1","titre":"Comment prouver qu'une situation est différente d'une autre ?","url":"/tifsec-test-eleves/cours/techno/5e/s06/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S07","version":"v1","titre":"Que devient un objet avant et après son utilisation ?","url":"/tifsec-test-eleves/cours/techno/5e/s07/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S08","version":"v1","titre":"Un objet qui ne fonctionne plus est-il forcément à jeter ?","url":"/tifsec-test-eleves/cours/techno/5e/s08/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S09","version":"v1","titre":"Comment résoudre un problème compliqué ?","url":"/tifsec-test-eleves/cours/techno/5e/s09/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S10","version":"v1","titre":"Comment assembler nos petites solutions pour créer un jeu ?","url":"/tifsec-test-eleves/cours/techno/5e/s10/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S11","version":"v1","titre":"À quoi sert notre monte-charge ?","url":"/tifsec-test-eleves/cours/techno/5e/s11/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S12","version":"v1","titre":"Qu’est-ce qui agit, qu’est-ce qui informe ?","url":"/tifsec-test-eleves/cours/techno/5e/s12/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S13","version":"v1","titre":"Comment un bouton déclenche-t-il une action ?","url":"/tifsec-test-eleves/cours/techno/5e/s13/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S14","version":"v1","titre":"Comment mémoriser une position ?","url":"/tifsec-test-eleves/cours/techno/5e/s14/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S15","version":"v1","titre":"Comment arrêter une montée au bon moment ?","url":"/tifsec-test-eleves/cours/techno/5e/s15/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S16","version":"v1","titre":"Une simulation suffit-elle à valider la maquette ?","url":"/tifsec-test-eleves/cours/techno/5e/s16/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S17","version":"v1","titre":"Expliquer et tester un monte-charge : premier entraînement","url":"/tifsec-test-eleves/cours/techno/5e/s17/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S18","version":"v1","titre":"Comment le vent peut-il produire de l’électricité ?","url":"/tifsec-test-eleves/cours/techno/5e/s18/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S19","version":"v1","titre":"Comment comparer deux essais d’éolienne ?","url":"/tifsec-test-eleves/cours/techno/5e/s19/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S20","version":"v1","titre":"Quelles pales choisir pour notre besoin ?","url":"/tifsec-test-eleves/cours/techno/5e/s20/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S21","version":"v1","titre":"Éolienne ou panneau : est-ce toujours le même choix ?","url":"/tifsec-test-eleves/cours/techno/5e/s21/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S22","version":"v1","titre":"Pourquoi orienter un panneau vers la lumière ?","url":"/tifsec-test-eleves/cours/techno/5e/s22/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S23","version":"v1","titre":"Comment une mesure peut-elle déclencher un affichage ?","url":"/tifsec-test-eleves/cours/techno/5e/s23/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S24","version":"v1","titre":"Choisir et justifier : dossier énergie","url":"/tifsec-test-eleves/cours/techno/5e/s24/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S25","version":"v1","titre":"PIX : retrouver mon parcours et ma méthode","url":"/tifsec-test-eleves/cours/techno/5e/s25/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S26","version":"v1","titre":"Comment retrouver une information et sa source ?","url":"/tifsec-test-eleves/cours/techno/5e/s26/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S27","version":"v1","titre":"Comment partager sans exposer les autres ?","url":"/tifsec-test-eleves/cours/techno/5e/s27/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S28","version":"v1","titre":"Arcade : créer une mission de collecte","url":"/tifsec-test-eleves/cours/techno/5e/s28/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S29","version":"v1","titre":"Arcade : à quoi sert un compteur ?","url":"/tifsec-test-eleves/cours/techno/5e/s29/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S30","version":"v1","titre":"Arcade : gagner seulement si les conditions sont réunies","url":"/tifsec-test-eleves/cours/techno/5e/s30/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S31","version":"v1","titre":"Arcade : un jeu compréhensible pour quelqu’un d’autre","url":"/tifsec-test-eleves/cours/techno/5e/s31/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S32","version":"v1","titre":"Arcade : expliquer son programme et ses tests","url":"/tifsec-test-eleves/cours/techno/5e/s32/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S33","version":"v1","titre":"Une cuve intelligente : pour quel besoin ?","url":"/tifsec-test-eleves/cours/techno/5e/s33/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S34","version":"v1","titre":"Quelles informations faut-il à la cuve ?","url":"/tifsec-test-eleves/cours/techno/5e/s34/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S35","version":"v1","titre":"Quand faut-il arrêter de remplir ?","url":"/tifsec-test-eleves/cours/techno/5e/s35/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S36","version":"v1","titre":"Une eau claire est-elle forcément utilisable ?","url":"/tifsec-test-eleves/cours/techno/5e/s36/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S37","version":"v1","titre":"Comment donner priorité à une alerte ?","url":"/tifsec-test-eleves/cours/techno/5e/s37/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S38","version":"v1","titre":"Décanter et filtrer : que peut-on attendre ?","url":"/tifsec-test-eleves/cours/techno/5e/s38/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S39","version":"v1","titre":"Que décider si une information manque ?","url":"/tifsec-test-eleves/cours/techno/5e/s39/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S40","version":"v1","titre":"Comment suivre les volumes de la cuve ?","url":"/tifsec-test-eleves/cours/techno/5e/s40/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S41","version":"v1","titre":"Réparer la cuve plutôt que tout remplacer ?","url":"/tifsec-test-eleves/cours/techno/5e/s41/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S42","version":"v1","titre":"Une notice claire pour une cuve non potable","url":"/tifsec-test-eleves/cours/techno/5e/s42/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S43","version":"v1","titre":"Cuve intelligente : peut-on valider notre modèle ?","url":"/tifsec-test-eleves/cours/techno/5e/s43/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S44","version":"v1","titre":"Quel problème allons-nous améliorer ?","url":"/tifsec-test-eleves/cours/techno/5e/s44/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S45","version":"v1","titre":"Comment préparer un prototype testable ?","url":"/tifsec-test-eleves/cours/techno/5e/s45/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S46","version":"v1","titre":"Réaliser puis chercher un défaut","url":"/tifsec-test-eleves/cours/techno/5e/s46/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S47","version":"v1","titre":"Présenter une amélioration avec des preuves","url":"/tifsec-test-eleves/cours/techno/5e/s47/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S48","version":"v1","titre":"Entraînement DNB : un arrosage raisonné","url":"/tifsec-test-eleves/cours/techno/5e/s48/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S49","version":"v1","titre":"Reprendre une difficulté avec une méthode précise","url":"/tifsec-test-eleves/cours/techno/5e/s49/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"5e","seance":"S50","version":"v1","titre":"Mon bilan de l’année : expliquer, tester et progresser","url":"/tifsec-test-eleves/cours/techno/5e/s50/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"4e","seance":"S01","version":"v1","titre":"Bienvenue en technologie","url":"/tifsec-test-eleves/cours/techno/4e/s01/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"4e","seance":"S02","version":"v1","titre":"Pourquoi avons-nous inventé le robot aspirateur ?","url":"/tifsec-test-eleves/cours/techno/4e/s02/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"4e","seance":"S03","version":"v1","titre":"Un robot aspirateur convient-il à tout le monde ?","url":"/tifsec-test-eleves/cours/techno/4e/s03/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"4e","seance":"S04","version":"v1","titre":"Pourquoi les aspirateurs ont-ils autant évolué ?","url":"/tifsec-test-eleves/cours/techno/4e/s04/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"4e","seance":"S05","version":"v1","titre":"Quel robot aspirateur choisir ?","url":"/tifsec-test-eleves/cours/techno/4e/s05/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"4e","seance":"S06","version":"v1","titre":"Peut-on vérifier les performances d’un robot ?","url":"/tifsec-test-eleves/cours/techno/4e/s06/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"4e","seance":"S07","version":"v1","titre":"Un robot aspirateur est-il vraiment écologique ?","url":"/tifsec-test-eleves/cours/techno/4e/s07/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"4e","seance":"S08","version":"v1","titre":"Faut-il réparer ou remplacer ?","url":"/tifsec-test-eleves/cours/techno/4e/s08/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"4e","seance":"S09","version":"v1","titre":"Qu’est-ce qui rend une pièce plus rigide ?","url":"/tifsec-test-eleves/cours/techno/4e/s09/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"4e","seance":"S10","version":"v1","titre":"Le robot aspirateur parfait existe-t-il ?","url":"/tifsec-test-eleves/cours/techno/4e/s10/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"3e","seance":"S01","version":"v1","titre":"Comment travailler en technologie cette année ?","url":"/tifsec-test-eleves/cours/techno/3e/s01/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"3e","seance":"S02","version":"v1","titre":"Pourquoi les objets techniques évoluent-ils ?","url":"/tifsec-test-eleves/cours/techno/3e/s02/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"3e","seance":"S02R","version":"v1","titre":"Pourquoi les objets techniques évoluent-ils ?","url":"/tifsec-test-eleves/cours/techno/3e/s02r/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"3e","seance":"S03","version":"v1","titre":"Comment les technologies transforment-elles la société ?","url":"/tifsec-test-eleves/cours/techno/3e/s03/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"3e","seance":"S04","version":"v1","titre":"Comment choisir entre plusieurs solutions techniques ?","url":"/tifsec-test-eleves/cours/techno/3e/s04/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"3e","seance":"S05","version":"v1","titre":"Comment vérifier les performances d'une solution technique ?","url":"/tifsec-test-eleves/cours/techno/3e/s05/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"3e","seance":"S06","version":"v1","titre":"Comment comparer expérimentalement plusieurs solutions ?","url":"/tifsec-test-eleves/cours/techno/3e/s06/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"3e","seance":"S07","version":"v1","titre":"Comment une machine utilise-t-elle des données ?","url":"/tifsec-test-eleves/cours/techno/3e/s07/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"3e","seance":"S08","version":"v1","titre":"Comment une information circule-t-elle dans un réseau ?","url":"/tifsec-test-eleves/cours/techno/3e/s08/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"3e","seance":"S09","version":"v1","titre":"Comment faire communiquer plusieurs réseaux ?","url":"/tifsec-test-eleves/cours/techno/3e/s09/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"3e","seance":"S10","version":"v1","titre":"Ancien essai court — protéger l’accès à ses comptes","url":"/tifsec-test-eleves/cours/techno/3e/s10/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"3e","seance":"S10R","version":"v1","titre":"Comment protéger ses données et ses comptes ?","url":"/tifsec-test-eleves/cours/techno/3e/s10-original/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"3e","seance":"S11","version":"v1","titre":"Comment circulent l’énergie et l’information dans un système automatisé ?","url":"/tifsec-test-eleves/cours/techno/3e/s11/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"college","matiere":"techno","classe":"3e","seance":"S12","version":"v1","titre":"Comment décrire précisément le comportement d’un système automatisé ?","url":"/tifsec-test-eleves/cours/techno/3e/s12/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"cap2","seance":"S01","version":"v1","titre":"Découverte du cours de TIM et prise en main","url":"/tifsec-test-eleves/cours/tim/cap2/s01/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"cap2","seance":"S02","version":"v1","titre":"Prévoir le stock de foin d'une écurie avec Calc","url":"/tifsec-test-eleves/cours/tim/cap2/s02/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"cap2","seance":"S03","version":"v1","titre":"Organiser le suivi de maréchalerie d’une écurie","url":"/tifsec-test-eleves/cours/tim/cap2/s03/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"cap2","seance":"S04","version":"v1","titre":"Accueillir un nouvel équidé : vérifier et organiser les informations","url":"/tifsec-test-eleves/cours/tim/cap2/s04/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"cap2","seance":"S05","version":"v1","titre":"Communiquer avec un professionnel par courriel","url":"/tifsec-test-eleves/cours/tim/cap2/s05/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"4e","seance":"S01","version":"v1","titre":"Découvrons le fonctionnement du TIM","url":"/tifsec-test-eleves/cours/tim/4e/s01/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"4e","seance":"S02","version":"v1","titre":"Créons les invitations de notre rencontre","url":"/tifsec-test-eleves/cours/tim/4e/s02/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"4e","seance":"S03","version":"v1","titre":"Comment organiser ses fichiers pour ne plus les perdre ?","url":"/tifsec-test-eleves/cours/tim/4e/s03/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"4e","seance":"S04","version":"v1","titre":"Comment créer un document clair et professionnel ?","url":"/tifsec-test-eleves/cours/tim/4e/s04/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"4e","seance":"S05","version":"v1","titre":"Quel format choisir pour transmettre un document ?","url":"/tifsec-test-eleves/cours/tim/4e/s05/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"3e","seance":"S01","version":"v1","titre":"Découvrons le fonctionnement du TIM","url":"/tifsec-test-eleves/cours/tim/3e/s01/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"3e","seance":"S02","version":"v1","titre":"Créons les invitations de notre rencontre","url":"/tifsec-test-eleves/cours/tim/3e/s02/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"3e","seance":"S03","version":"v1","titre":"Comment organiser ses fichiers pour ne plus les perdre ?","url":"/tifsec-test-eleves/cours/tim/3e/s03/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"3e","seance":"S04","version":"v1","titre":"Comment créer un document clair et professionnel ?","url":"/tifsec-test-eleves/cours/tim/3e/s04/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"3e","seance":"S05","version":"v1","titre":"Quel format choisir pour transmettre un document ?","url":"/tifsec-test-eleves/cours/tim/3e/s05/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"2de","seance":"S01","version":"v1","titre":"Faire connaissance et découvrir le fonctionnement du cours","url":"/tifsec-test-eleves/cours/tim/2de/s01/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"2de","seance":"S02","version":"v1","titre":"Organiser ses fichiers et ses dossiers","url":"/tifsec-test-eleves/cours/tim/2de/s02/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"2de","seance":"S03","version":"v1","titre":"Protéger ses données et son environnement numérique","url":"/tifsec-test-eleves/cours/tim/2de/s03/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"2de","seance":"S04","version":"v1","titre":"Créer un document professionnel clair et lisible","url":"/tifsec-test-eleves/cours/tim/2de/s04/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"1re","seance":"S01","version":"v1","titre":"Bien démarrer en MG1 Informatique","url":"/tifsec-test-eleves/cours/tim/1re/s01/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"1re","seance":"S02","version":"v1","titre":"Comprendre ce que racontent les données","url":"/tifsec-test-eleves/cours/tim/1re/s02/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"1re","seance":"S03","version":"v1","titre":"Peut-on faire confiance à toutes les données ?","url":"/tifsec-test-eleves/cours/tim/1re/s03/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"term","seance":"S01","version":"v1","titre":"Des données brutes à une décision professionnelle","url":"/tifsec-test-eleves/cours/tim/term/s01/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"term","seance":"S02","version":"v1","titre":"Peut-on faire confiance aux données d'une écurie ?","url":"/tifsec-test-eleves/cours/tim/term/s02/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"term","seance":"S03","version":"v1","titre":"Retrouver les informations utiles dans les dépenses d'une écurie","url":"/tifsec-test-eleves/cours/tim/term/s03/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"term","seance":"S04","version":"v1","titre":"Créer un bilan automatique des dépenses d'une écurie","url":"/tifsec-test-eleves/cours/tim/term/s04/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"cap1","seance":"S01","version":"v1","titre":"Faire connaissance et prendre ses repères","url":"/tifsec-test-eleves/cours/tim/cap1/s01/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"cap1","seance":"S02","version":"v1","titre":"Ranger et retrouver ses fichiers","url":"/tifsec-test-eleves/cours/tim/cap1/s02/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"bts2","seance":"S01","version":"v1","titre":"Bienvenue en TIM – Faire le point pour mieux progresser","url":"/tifsec-test-eleves/cours/tim/bts2/s01/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"bts2","seance":"S02","version":"v1","titre":"Peut-on faire confiance aux données ?","url":"/tifsec-test-eleves/cours/tim/bts2/s02/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"bts2","seance":"S03","version":"v1","titre":"Faire repérer automatiquement les situations à surveiller","url":"/tifsec-test-eleves/cours/tim/bts2/s03/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"bts2","seance":"S04","version":"v1","titre":"Croiser plusieurs critères pour définir une priorité","url":"/tifsec-test-eleves/cours/tim/bts2/s04/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"bts2","seance":"S05","version":"v1","titre":"Résumer automatiquement un ensemble de données","url":"/tifsec-test-eleves/cours/tim/bts2/s05/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"bts2","seance":"S06","version":"v1","titre":"Synthétiser automatiquement tout un tableau","url":"/tifsec-test-eleves/cours/tim/bts2/s06/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"bts2","seance":"S07","version":"v1","titre":"Présenter un résultat et l'interpréter sans aller trop vite","url":"/tifsec-test-eleves/cours/tim/bts2/s07/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"tim","classe":"bts2","seance":"S08","version":"v1","titre":"Évaluation – Exploiter des données pour aider à la décision","url":"/tifsec-test-eleves/cours/tim/bts2/s08/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"maths","classe":"term","seance":"S00","version":"v1","titre":"Gérer le stock de foin d'une écurie avec les suites","url":"/tifsec-test-eleves/cours/maths/term/s00/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"maths","classe":"term","seance":"S01","version":"v1","titre":"Remise en route et diagnostic","url":"/tifsec-test-eleves/cours/maths/term/s01/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"maths","classe":"term","seance":"S02","version":"v1","titre":"Poursuivre le diagnostic – données, probabilités et calcul littéral","url":"/tifsec-test-eleves/cours/maths/term/s02/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"maths","classe":"term","seance":"S03","version":"v1","titre":"Calcul littéral et équations – Étudier la rentabilité d'une activité équestre","url":"/tifsec-test-eleves/cours/maths/term/s03/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"maths","classe":"term","seance":"S04","version":"v1","titre":"Fonctions affines – Comparer deux organisations d'une journée équestre","url":"/tifsec-test-eleves/cours/maths/term/s04/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"maths","classe":"term","seance":"S05","version":"v1","titre":"Fonction du second degré – Rechercher un coût minimal","url":"/tifsec-test-eleves/cours/maths/term/s05/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"maths","classe":"term","seance":"S06","version":"v1","titre":"Second degré — Résoudre une équation et respecter un budget","url":"/tifsec-test-eleves/cours/maths/term/s06/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"maths","classe":"term","seance":"S07","version":"v1","titre":"Comparer deux prestations et justifier une décision","url":"/tifsec-test-eleves/cours/maths/term/s07/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"maths","classe":"term","seance":"S08","version":"v1","titre":"Bilan de compétences – Calculer, modéliser et décider","url":"/tifsec-test-eleves/cours/maths/term/s08/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"maths","classe":"term","seance":"S09","version":"v1","titre":"Découvrir la dérivation – Comment évolue un coût ?","url":"/tifsec-test-eleves/cours/maths/term/s09/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"maths","classe":"4e","seance":"S01","version":"v1","titre":"Remise en route et diagnostic","url":"/tifsec-test-eleves/cours/maths/4e/s01/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"maths","classe":"4e","seance":"S02","version":"v1","titre":"Multiples, diviseurs et critères de divisibilité","url":"/tifsec-test-eleves/cours/maths/4e/s02/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"maths","classe":"4e","seance":"S03","version":"v1","titre":"Nombres premiers et décomposition en facteurs premiers","url":"/tifsec-test-eleves/cours/maths/4e/s03/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"maths","classe":"4e","seance":"S04","version":"v1","titre":"Comprendre, simplifier et comparer des fractions","url":"/tifsec-test-eleves/cours/maths/4e/s04/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"maths","classe":"4e","seance":"S05","version":"v1","titre":"Additionner et soustraire des fractions","url":"/tifsec-test-eleves/cours/maths/4e/s05/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"maths","classe":"4e","seance":"S06","version":"v1","titre":"Multiplier et diviser des fractions","url":"/tifsec-test-eleves/cours/maths/4e/s06/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"maths","classe":"4e","seance":"S07","version":"v1","titre":"Évaluation 1 : Nombres et fractions","url":"/tifsec-test-eleves/cours/maths/4e/s07/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"maths","classe":"4e","seance":"S08","version":"v1","titre":"Découvrir et reconnaître la proportionnalité","url":"/tifsec-test-eleves/cours/maths/4e/s08/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"maths","classe":"3e","seance":"S01","version":"v1","titre":"Remise en route et diagnostic","url":"/tifsec-test-eleves/cours/maths/3e/s01/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"maths","classe":"3e","seance":"S02","version":"v1","titre":"Multiples, diviseurs et critères de divisibilité","url":"/tifsec-test-eleves/cours/maths/3e/s02/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"maths","classe":"3e","seance":"S03","version":"v1","titre":"Nombres premiers et décomposition en facteurs premiers","url":"/tifsec-test-eleves/cours/maths/3e/s03/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"maths","classe":"3e","seance":"S04","version":"v1","titre":"Comprendre, simplifier et comparer des fractions","url":"/tifsec-test-eleves/cours/maths/3e/s04/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"maths","classe":"3e","seance":"S05","version":"v1","titre":"Additionner et soustraire des fractions","url":"/tifsec-test-eleves/cours/maths/3e/s05/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"maths","classe":"3e","seance":"S06","version":"v1","titre":"Multiplier et diviser des fractions","url":"/tifsec-test-eleves/cours/maths/3e/s06/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"maths","classe":"3e","seance":"S07","version":"v1","titre":"Évaluation 1 : Nombres et fractions","url":"/tifsec-test-eleves/cours/maths/3e/s07/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"maths","classe":"3e","seance":"S08","version":"v1","titre":"Découvrir et reconnaître la proportionnalité","url":"/tifsec-test-eleves/cours/maths/3e/s08/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"maths","classe":"1re","seance":"S01","version":"v1","titre":"Reprendre les bons réflexes","url":"/tifsec-test-eleves/cours/maths/1re/s01/"}
+    
+    
+    
+    ,
+    
+    
+    {"etablissement":"mfr","matiere":"maths","classe":"1re","seance":"S02","version":"v1","titre":"Comprendre les fractions et les pourcentages","url":"/tifsec-test-eleves/cours/maths/1re/s02/"}
+    
+    
+]
 </script>
 
-    <script id="progressions-data" type="application/json">
-[{"etablissement":"college","matiere":"techno","classe":"3e","derniere_seance_en_classe":"S09","seances":[{"id":"S01","numero":"S01","titre":"Comment travailler en technologie cette année ?"},{"id":"S02R","numero":"S02","titre":"Pourquoi les objets techniques évoluent-ils ?"},{"id":"S03","numero":"S03","titre":"Comment les technologies transforment-elles la société ?"},{"id":"S04","numero":"S04","titre":"Comment choisir entre plusieurs solutions techniques ?"},{"id":"S05","numero":"S05","titre":"Comment vérifier les performances d'une solution technique ?"},{"id":"S06","numero":"S06","titre":"Comment comparer expérimentalement plusieurs solutions ?"},{"id":"S07","numero":"S07","titre":"Comment une machine utilise-t-elle des données ?"},{"id":"S08","numero":"S08","titre":"Comment une information circule-t-elle dans un réseau ?"},{"id":"S09","numero":"S09","titre":"Comment faire communiquer plusieurs réseaux ?"},{"id":"S10R","numero":"S10","titre":"Comment protéger ses données et ses comptes ?"},{"id":"S11","numero":"S11","titre":"Comment circulent l’énergie et l’information dans un système automatisé ?"},{"id":"S12","numero":"S12","titre":"Comment décrire précisément le comportement d’un système automatisé ?"},{"id":"S13","numero":"S13","titre":"Pix : où en suis-je et que dois-je travailler ?"}]},{"etablissement":"mfr","matiere":"tim","classe":"cap2","derniere_seance_en_classe":"S02","seances":[{"id":"S01","numero":"S01","titre":"Découverte du cours de TIM et prise en main"},{"id":"S02","numero":"S02","titre":"Prévoir le stock de foin d'une écurie avec Calc"},{"id":"S03","numero":"S03","titre":"Organiser le suivi de maréchalerie d’une écurie"},{"id":"S04","numero":"S04","titre":"Accueillir un nouvel équidé : vérifier et organiser les informations"},{"id":"S05","numero":"S05","titre":"Communiquer avec un professionnel par courriel"}]},{"etablissement":"mfr","matiere":"maths","classe":"term","derniere_seance_en_classe":"S04","seances":[{"id":"S00","numero":"S00","titre":"Gérer le stock de foin d'une écurie avec les suites"},{"id":"S01","numero":"S01","titre":"Remise en route et diagnostic"},{"id":"S02","numero":"S02","titre":"Poursuivre le diagnostic – données, probabilités et calcul littéral"},{"id":"S03","numero":"S03","titre":"Calcul littéral et équations – Étudier la rentabilité d'une activité équestre"},{"id":"S04","numero":"S04","titre":"Fonctions affines – Comparer deux organisations d'une journée équestre"},{"id":"S05","numero":"S05","titre":"Fonction du second degré – Rechercher un coût minimal"},{"id":"S06","numero":"S06","titre":"Exploiter une parabole pour prendre une décision"},{"id":"S07","numero":"S07","titre":"Comparer deux prestations et justifier une décision"},{"id":"S08","numero":"S08","titre":"Bilan de compétences – Calculer, modéliser et décider"},{"id":"S09","numero":"S09","titre":"Découvrir la dérivation – Comment évolue un coût ?"}]},{"etablissement":"college","matiere":"techno","classe":"5e","seances":[{"id":"S01","numero":"S01","titre":"Comment allons-nous travailler en Technologie cette année ?"},{"id":"S02V2","numero":"S02","titre":"Pourquoi fabrique-t-on des objets techniques ?"},{"id":"S03","numero":"S03","titre":"Comment un vélo peut-il remplir toutes ses fonctions ?"},{"id":"S04","numero":"S04","titre":"Pourquoi les vélos ont-ils changé au cours du temps ?"},{"id":"S05","numero":"S05","titre":"Existe-t-il un meilleur vélo ?"},{"id":"S06","numero":"S06","titre":"Comment prouver qu'une situation est différente d'une autre ?"},{"id":"S07","numero":"S07","titre":"Que devient un objet avant et après son utilisation ?"},{"id":"S08","numero":"S08","titre":"Un objet qui ne fonctionne plus est-il forcément à jeter ?"},{"id":"S09","numero":"S09","titre":"Comment résoudre un problème compliqué ?"},{"id":"S10","numero":"S10","titre":"Comment assembler nos petites solutions pour créer un jeu ?"}],"derniere_seance_en_classe":"S10"},{"etablissement":"college","matiere":"techno","classe":"4e","seances":[{"id":"S01","numero":"S01","titre":"Bienvenue en technologie"},{"id":"S02","numero":"S02","titre":"Pourquoi avons-nous inventé le robot aspirateur ?"},{"id":"S03","numero":"S03","titre":"Un robot aspirateur convient-il à tout le monde ?"},{"id":"S04","numero":"S04","titre":"Pourquoi les aspirateurs ont-ils autant évolué ?"},{"id":"S05","numero":"S05","titre":"Quel robot aspirateur choisir ?"},{"id":"S06","numero":"S06","titre":"Peut-on vérifier les performances d’un robot ?"},{"id":"S07","numero":"S07","titre":"Un robot aspirateur est-il vraiment écologique ?"},{"id":"S08","numero":"S08","titre":"Faut-il réparer ou remplacer ?"},{"id":"S09","numero":"S09","titre":"Qu’est-ce qui rend une pièce plus rigide ?"},{"id":"S10","numero":"S10","titre":"Le robot aspirateur parfait existe-t-il ?"}],"derniere_seance_en_classe":"S08"},{"etablissement":"mfr","matiere":"tim","classe":"4e","seances":[{"id":"S01","numero":"S01","titre":"Découvrons le fonctionnement du TIM"},{"id":"S02","numero":"S02","titre":"Créons les invitations de notre rencontre"},{"id":"S03","numero":"S03","titre":"Comment organiser ses fichiers pour ne plus les perdre ?"},{"id":"S04","numero":"S04","titre":"Comment créer un document clair et professionnel ?"},{"id":"S05","numero":"S05","titre":"Quel format choisir pour transmettre un document ?"}]},{"etablissement":"mfr","matiere":"tim","classe":"3e","seances":[{"id":"S01","numero":"S01","titre":"Découvrons le fonctionnement du TIM"},{"id":"S02","numero":"S02","titre":"Créons les invitations de notre rencontre"},{"id":"S03","numero":"S03","titre":"Comment organiser ses fichiers pour ne plus les perdre ?"},{"id":"S04","numero":"S04","titre":"Comment créer un document clair et professionnel ?"},{"id":"S05","numero":"S05","titre":"Quel format choisir pour transmettre un document ?"}]},{"etablissement":"mfr","matiere":"tim","classe":"2de","seances":[{"id":"S01","numero":"S01","titre":"Faire connaissance et découvrir le fonctionnement du cours"},{"id":"S02","numero":"S02","titre":"Organiser ses fichiers et ses dossiers"},{"id":"S03","numero":"S03","titre":"Protéger ses données et son environnement numérique"},{"id":"S04","numero":"S04","titre":"Créer un document professionnel clair et lisible"}]},{"etablissement":"mfr","matiere":"tim","classe":"1re","seances":[{"id":"S01","numero":"S01","titre":"Bien démarrer en MG1 Informatique"},{"id":"S02","numero":"S02","titre":"Comprendre ce que racontent les données"},{"id":"S03","numero":"S03","titre":"Peut-on faire confiance à toutes les données ?"}]},{"etablissement":"mfr","matiere":"tim","classe":"term","seances":[{"id":"S01","numero":"S01","titre":"Des données brutes à une décision professionnelle"},{"id":"S02","numero":"S02","titre":"Peut-on faire confiance aux données d'une écurie ?"},{"id":"S03","numero":"S03","titre":"Retrouver les informations utiles dans les dépenses d'une écurie"},{"id":"S04","numero":"S04","titre":"Créer un bilan automatique des dépenses d'une écurie"}]},{"etablissement":"mfr","matiere":"tim","classe":"cap1","seances":[{"id":"S01","numero":"S01","titre":"Faire connaissance et prendre ses repères"},{"id":"S02","numero":"S02","titre":"Ranger et retrouver ses fichiers"}]},{"etablissement":"mfr","matiere":"tim","classe":"bts2","seances":[{"id":"S01","numero":"S01","titre":"Bienvenue en TIM – Faire le point pour mieux progresser"},{"id":"S02","numero":"S02","titre":"Peut-on faire confiance aux données ?"},{"id":"S03","numero":"S03","titre":"Faire repérer automatiquement les situations à surveiller"},{"id":"S04","numero":"S04","titre":"Croiser plusieurs critères pour définir une priorité"},{"id":"S05","numero":"S05","titre":"Résumer automatiquement un ensemble de données"},{"id":"S06","numero":"S06","titre":"Synthétiser automatiquement tout un tableau"},{"id":"S07","numero":"S07","titre":"Présenter un résultat et l'interpréter sans aller trop vite"},{"id":"S08","numero":"S08","titre":"Évaluation – Exploiter des données pour aider à la décision"}]},{"etablissement":"mfr","matiere":"maths","classe":"4e","seances":[{"id":"S01","numero":"S01","titre":"Remise en route et diagnostic"},{"id":"S02","numero":"S02","titre":"Multiples, diviseurs et critères de divisibilité"},{"id":"S03","numero":"S03","titre":"Nombres premiers et décomposition en facteurs premiers"},{"id":"S04","numero":"S04","titre":"Comprendre, simplifier et comparer des fractions"},{"id":"S05","numero":"S05","titre":"Additionner et soustraire des fractions"},{"id":"S06","numero":"S06","titre":"Multiplier et diviser des fractions"},{"id":"S07","numero":"S07","titre":"Évaluation 1 : Nombres et fractions"},{"id":"S08","numero":"S08","titre":"Découvrir et reconnaître la proportionnalité"}]},{"etablissement":"mfr","matiere":"maths","classe":"3e","seances":[{"id":"S01","numero":"S01","titre":"Remise en route et diagnostic"},{"id":"S02","numero":"S02","titre":"Multiples, diviseurs et critères de divisibilité"},{"id":"S03","numero":"S03","titre":"Nombres premiers et décomposition en facteurs premiers"},{"id":"S04","numero":"S04","titre":"Comprendre, simplifier et comparer des fractions"},{"id":"S05","numero":"S05","titre":"Additionner et soustraire des fractions"},{"id":"S06","numero":"S06","titre":"Multiplier et diviser des fractions"},{"id":"S07","numero":"S07","titre":"Évaluation 1 : Nombres et fractions"},{"id":"S08","numero":"S08","titre":"Découvrir et reconnaître la proportionnalité"}]},{"etablissement":"mfr","matiere":"maths","classe":"1re","seances":[{"id":"S01","numero":"S01","titre":"Reprendre les bons réflexes"},{"id":"S02","numero":"S02","titre":"Comprendre les fractions et les pourcentages"}]}]
-</script>
+    <script id="progressions-data" type="application/json">[{"etablissement":"college","matiere":"techno","classe":"3e","derniere_seance_en_classe":"S09","seances":[{"id":"S01","numero":"S01","titre":"Comment travailler en technologie cette année ?"},{"id":"S02R","numero":"S02","titre":"Pourquoi les objets techniques évoluent-ils ?"},{"id":"S03","numero":"S03","titre":"Comment les technologies transforment-elles la société ?"},{"id":"S04","numero":"S04","titre":"Comment choisir entre plusieurs solutions techniques ?"},{"id":"S05","numero":"S05","titre":"Comment vérifier les performances d'une solution technique ?"},{"id":"S06","numero":"S06","titre":"Comment comparer expérimentalement plusieurs solutions ?"},{"id":"S07","numero":"S07","titre":"Comment une machine utilise-t-elle des données ?"},{"id":"S08","numero":"S08","titre":"Comment une information circule-t-elle dans un réseau ?"},{"id":"S09","numero":"S09","titre":"Comment faire communiquer plusieurs réseaux ?"},{"id":"S10R","numero":"S10","titre":"Comment protéger ses données et ses comptes ?"},{"id":"S11","numero":"S11","titre":"Comment circulent l’énergie et l’information dans un système automatisé ?"},{"id":"S12","numero":"S12","titre":"Comment décrire précisément le comportement d’un système automatisé ?"},{"id":"S13","numero":"S13","titre":"Pix : où en suis-je et que dois-je travailler ?"}]},{"etablissement":"mfr","matiere":"tim","classe":"cap2","derniere_seance_en_classe":"S02","seances":[{"id":"S01","numero":"S01","titre":"Découverte du cours de TIM et prise en main"},{"id":"S02","numero":"S02","titre":"Prévoir le stock de foin d'une écurie avec Calc"},{"id":"S03","numero":"S03","titre":"Organiser le suivi de maréchalerie d’une écurie"},{"id":"S04","numero":"S04","titre":"Accueillir un nouvel équidé : vérifier et organiser les informations"},{"id":"S05","numero":"S05","titre":"Communiquer avec un professionnel par courriel"}]},{"etablissement":"mfr","matiere":"maths","classe":"term","derniere_seance_en_classe":"S04","seances":[{"id":"S00","numero":"S00","titre":"Gérer le stock de foin d'une écurie avec les suites"},{"id":"S01","numero":"S01","titre":"Remise en route et diagnostic"},{"id":"S02","numero":"S02","titre":"Poursuivre le diagnostic – données, probabilités et calcul littéral"},{"id":"S03","numero":"S03","titre":"Calcul littéral et équations – Étudier la rentabilité d'une activité équestre"},{"id":"S04","numero":"S04","titre":"Fonctions affines – Comparer deux organisations d'une journée équestre"},{"id":"S05","numero":"S05","titre":"Fonction du second degré – Rechercher un coût minimal"},{"id":"S06","numero":"S06","titre":"Exploiter une parabole pour prendre une décision"},{"id":"S07","numero":"S07","titre":"Comparer deux prestations et justifier une décision"},{"id":"S08","numero":"S08","titre":"Bilan de compétences – Calculer, modéliser et décider"},{"id":"S09","numero":"S09","titre":"Découvrir la dérivation – Comment évolue un coût ?"}]},{"etablissement":"college","matiere":"techno","classe":"5e","seances":[{"id":"S01","numero":"S01","titre":"Comment allons-nous travailler en Technologie cette année ?"},{"id":"S02V2","numero":"S02","titre":"Pourquoi fabrique-t-on des objets techniques ?"},{"id":"S03","numero":"S03","titre":"Comment un vélo peut-il remplir toutes ses fonctions ?"},{"id":"S04","numero":"S04","titre":"Pourquoi les vélos ont-ils changé au cours du temps ?"},{"id":"S05","numero":"S05","titre":"Existe-t-il un meilleur vélo ?"},{"id":"S06","numero":"S06","titre":"Comment prouver qu'une situation est différente d'une autre ?"},{"id":"S07","numero":"S07","titre":"Que devient un objet avant et après son utilisation ?"},{"id":"S08","numero":"S08","titre":"Un objet qui ne fonctionne plus est-il forcément à jeter ?"},{"id":"S09","numero":"S09","titre":"Comment résoudre un problème compliqué ?"},{"id":"S10","numero":"S10","titre":"Comment assembler nos petites solutions pour créer un jeu ?"},{"id":"S11","numero":"S11","titre":"À quoi sert notre monte-charge ?"},{"id":"S12","numero":"S12","titre":"Qu’est-ce qui agit, qu’est-ce qui informe ?"},{"id":"S13","numero":"S13","titre":"Comment un bouton déclenche-t-il une action ?"},{"id":"S14","numero":"S14","titre":"Comment mémoriser une position ?"},{"id":"S15","numero":"S15","titre":"Comment arrêter une montée au bon moment ?"},{"id":"S16","numero":"S16","titre":"Une simulation suffit-elle à valider la maquette ?"},{"id":"S17","numero":"S17","titre":"Expliquer et tester un monte-charge : premier entraînement"},{"id":"S18","numero":"S18","titre":"Comment le vent peut-il produire de l’électricité ?"},{"id":"S19","numero":"S19","titre":"Comment comparer deux essais d’éolienne ?"},{"id":"S20","numero":"S20","titre":"Quelles pales choisir pour notre besoin ?"},{"id":"S21","numero":"S21","titre":"Éolienne ou panneau : est-ce toujours le même choix ?"},{"id":"S22","numero":"S22","titre":"Pourquoi orienter un panneau vers la lumière ?"},{"id":"S23","numero":"S23","titre":"Comment une mesure peut-elle déclencher un affichage ?"},{"id":"S24","numero":"S24","titre":"Choisir et justifier : dossier énergie"},{"id":"S25","numero":"S25","titre":"PIX : retrouver mon parcours et ma méthode"},{"id":"S26","numero":"S26","titre":"Comment retrouver une information et sa source ?"},{"id":"S27","numero":"S27","titre":"Comment partager sans exposer les autres ?"},{"id":"S28","numero":"S28","titre":"Arcade : créer une mission de collecte"},{"id":"S29","numero":"S29","titre":"Arcade : à quoi sert un compteur ?"},{"id":"S30","numero":"S30","titre":"Arcade : gagner seulement si les conditions sont réunies"},{"id":"S31","numero":"S31","titre":"Arcade : un jeu compréhensible pour quelqu’un d’autre"},{"id":"S32","numero":"S32","titre":"Arcade : expliquer son programme et ses tests"},{"id":"S33","numero":"S33","titre":"Une cuve intelligente : pour quel besoin ?"},{"id":"S34","numero":"S34","titre":"Quelles informations faut-il à la cuve ?"},{"id":"S35","numero":"S35","titre":"Quand faut-il arrêter de remplir ?"},{"id":"S36","numero":"S36","titre":"Une eau claire est-elle forcément utilisable ?"},{"id":"S37","numero":"S37","titre":"Comment donner priorité à une alerte ?"},{"id":"S38","numero":"S38","titre":"Décanter et filtrer : que peut-on attendre ?"},{"id":"S39","numero":"S39","titre":"Que décider si une information manque ?"},{"id":"S40","numero":"S40","titre":"Comment suivre les volumes de la cuve ?"},{"id":"S41","numero":"S41","titre":"Réparer la cuve plutôt que tout remplacer ?"},{"id":"S42","numero":"S42","titre":"Une notice claire pour une cuve non potable"},{"id":"S43","numero":"S43","titre":"Cuve intelligente : peut-on valider notre modèle ?"},{"id":"S44","numero":"S44","titre":"Quel problème allons-nous améliorer ?"},{"id":"S45","numero":"S45","titre":"Comment préparer un prototype testable ?"},{"id":"S46","numero":"S46","titre":"Réaliser puis chercher un défaut"},{"id":"S47","numero":"S47","titre":"Présenter une amélioration avec des preuves"},{"id":"S48","numero":"S48","titre":"Entraînement DNB : un arrosage raisonné"},{"id":"S49","numero":"S49","titre":"Reprendre une difficulté avec une méthode précise"},{"id":"S50","numero":"S50","titre":"Mon bilan de l’année : expliquer, tester et progresser"}],"derniere_seance_en_classe":"S10"},{"etablissement":"college","matiere":"techno","classe":"4e","seances":[{"id":"S01","numero":"S01","titre":"Bienvenue en technologie"},{"id":"S02","numero":"S02","titre":"Pourquoi avons-nous inventé le robot aspirateur ?"},{"id":"S03","numero":"S03","titre":"Un robot aspirateur convient-il à tout le monde ?"},{"id":"S04","numero":"S04","titre":"Pourquoi les aspirateurs ont-ils autant évolué ?"},{"id":"S05","numero":"S05","titre":"Quel robot aspirateur choisir ?"},{"id":"S06","numero":"S06","titre":"Peut-on vérifier les performances d’un robot ?"},{"id":"S07","numero":"S07","titre":"Un robot aspirateur est-il vraiment écologique ?"},{"id":"S08","numero":"S08","titre":"Faut-il réparer ou remplacer ?"},{"id":"S09","numero":"S09","titre":"Qu’est-ce qui rend une pièce plus rigide ?"},{"id":"S10","numero":"S10","titre":"Le robot aspirateur parfait existe-t-il ?"}],"derniere_seance_en_classe":"S08"},{"etablissement":"mfr","matiere":"tim","classe":"4e","seances":[{"id":"S01","numero":"S01","titre":"Découvrons le fonctionnement du TIM"},{"id":"S02","numero":"S02","titre":"Créons les invitations de notre rencontre"},{"id":"S03","numero":"S03","titre":"Comment organiser ses fichiers pour ne plus les perdre ?"},{"id":"S04","numero":"S04","titre":"Comment créer un document clair et professionnel ?"},{"id":"S05","numero":"S05","titre":"Quel format choisir pour transmettre un document ?"}]},{"etablissement":"mfr","matiere":"tim","classe":"3e","seances":[{"id":"S01","numero":"S01","titre":"Découvrons le fonctionnement du TIM"},{"id":"S02","numero":"S02","titre":"Créons les invitations de notre rencontre"},{"id":"S03","numero":"S03","titre":"Comment organiser ses fichiers pour ne plus les perdre ?"},{"id":"S04","numero":"S04","titre":"Comment créer un document clair et professionnel ?"},{"id":"S05","numero":"S05","titre":"Quel format choisir pour transmettre un document ?"}]},{"etablissement":"mfr","matiere":"tim","classe":"2de","seances":[{"id":"S01","numero":"S01","titre":"Faire connaissance et découvrir le fonctionnement du cours"},{"id":"S02","numero":"S02","titre":"Organiser ses fichiers et ses dossiers"},{"id":"S03","numero":"S03","titre":"Protéger ses données et son environnement numérique"},{"id":"S04","numero":"S04","titre":"Créer un document professionnel clair et lisible"}]},{"etablissement":"mfr","matiere":"tim","classe":"1re","seances":[{"id":"S01","numero":"S01","titre":"Bien démarrer en MG1 Informatique"},{"id":"S02","numero":"S02","titre":"Comprendre ce que racontent les données"},{"id":"S03","numero":"S03","titre":"Peut-on faire confiance à toutes les données ?"}]},{"etablissement":"mfr","matiere":"tim","classe":"term","seances":[{"id":"S01","numero":"S01","titre":"Des données brutes à une décision professionnelle"},{"id":"S02","numero":"S02","titre":"Peut-on faire confiance aux données d'une écurie ?"},{"id":"S03","numero":"S03","titre":"Retrouver les informations utiles dans les dépenses d'une écurie"},{"id":"S04","numero":"S04","titre":"Créer un bilan automatique des dépenses d'une écurie"}]},{"etablissement":"mfr","matiere":"tim","classe":"cap1","seances":[{"id":"S01","numero":"S01","titre":"Faire connaissance et prendre ses repères"},{"id":"S02","numero":"S02","titre":"Ranger et retrouver ses fichiers"}]},{"etablissement":"mfr","matiere":"tim","classe":"bts2","seances":[{"id":"S01","numero":"S01","titre":"Bienvenue en TIM – Faire le point pour mieux progresser"},{"id":"S02","numero":"S02","titre":"Peut-on faire confiance aux données ?"},{"id":"S03","numero":"S03","titre":"Faire repérer automatiquement les situations à surveiller"},{"id":"S04","numero":"S04","titre":"Croiser plusieurs critères pour définir une priorité"},{"id":"S05","numero":"S05","titre":"Résumer automatiquement un ensemble de données"},{"id":"S06","numero":"S06","titre":"Synthétiser automatiquement tout un tableau"},{"id":"S07","numero":"S07","titre":"Présenter un résultat et l'interpréter sans aller trop vite"},{"id":"S08","numero":"S08","titre":"Évaluation – Exploiter des données pour aider à la décision"}]},{"etablissement":"mfr","matiere":"maths","classe":"4e","seances":[{"id":"S01","numero":"S01","titre":"Remise en route et diagnostic"},{"id":"S02","numero":"S02","titre":"Multiples, diviseurs et critères de divisibilité"},{"id":"S03","numero":"S03","titre":"Nombres premiers et décomposition en facteurs premiers"},{"id":"S04","numero":"S04","titre":"Comprendre, simplifier et comparer des fractions"},{"id":"S05","numero":"S05","titre":"Additionner et soustraire des fractions"},{"id":"S06","numero":"S06","titre":"Multiplier et diviser des fractions"},{"id":"S07","numero":"S07","titre":"Évaluation 1 : Nombres et fractions"},{"id":"S08","numero":"S08","titre":"Découvrir et reconnaître la proportionnalité"}]},{"etablissement":"mfr","matiere":"maths","classe":"3e","seances":[{"id":"S01","numero":"S01","titre":"Remise en route et diagnostic"},{"id":"S02","numero":"S02","titre":"Multiples, diviseurs et critères de divisibilité"},{"id":"S03","numero":"S03","titre":"Nombres premiers et décomposition en facteurs premiers"},{"id":"S04","numero":"S04","titre":"Comprendre, simplifier et comparer des fractions"},{"id":"S05","numero":"S05","titre":"Additionner et soustraire des fractions"},{"id":"S06","numero":"S06","titre":"Multiplier et diviser des fractions"},{"id":"S07","numero":"S07","titre":"Évaluation 1 : Nombres et fractions"},{"id":"S08","numero":"S08","titre":"Découvrir et reconnaître la proportionnalité"}]},{"etablissement":"mfr","matiere":"maths","classe":"1re","seances":[{"id":"S01","numero":"S01","titre":"Reprendre les bons réflexes"},{"id":"S02","numero":"S02","titre":"Comprendre les fractions et les pourcentages"}]}]</script>
 
     <script id="referentiels-data" type="application/json">[{"id":"techno-cycle4-2024","etablissement":"college","classes":["5e","4e","3e"],"matiere":"techno","titre":"Technologie · cycle 4","source":"https://www.education.gouv.fr/bo/2024/Hebdo9/MENE2402802A","source_annexe":"https://www.education.gouv.fr/media/160782/download","synthese":true,"description":"Les neuf compétences de fin de cycle sont reformulées pour faciliter la lecture. Les attendus évoluent de la 5e à la 3e.","themes":[{"titre":"Usages, société et choix","competences":[{"id":"usages-evolution","titre":"Relier besoins, usages et changements techniques"},{"id":"interactions","titre":"Expliquer les relations entre objet, utilisateur et environnement"},{"id":"choix","titre":"Comparer des objets et justifier un choix"}]},{"titre":"Comprendre le fonctionnement","competences":[{"id":"fonctionnement","titre":"Expliquer composants, énergie et circulation des données"},{"id":"depannage","titre":"Trouver une panne et vérifier sa réparation"},{"id":"modifier-programme","titre":"Lire un programme et adapter son comportement"}]},{"titre":"Imaginer, réaliser et vérifier","competences":[{"id":"concevoir","titre":"Proposer puis fabriquer une solution adaptée"},{"id":"tester","titre":"Vérifier une solution par essais ou simulation"},{"id":"programmer","titre":"Construire un programme et le mettre au point"}]}],"seances":{"S02":["usages-evolution"],"S10":["usages-evolution"],"S10R":["usages-evolution"],"S11":["fonctionnement"],"S12":["fonctionnement","modifier-programme"]}},{"id":"maths-ea-cycle4-2025","etablissement":"mfr","classes":["4e","3e"],"matiere":"maths","titre":"Mathématiques · 4e et 3e agricoles","source":"https://chlorofil.fr/fileadmin/user_upload/02-diplomes/referentiels/secondaire/4e3e/4e3e-EA-ref-2025.pdf","synthese":true,"description":"Les objectifs du référentiel agricole sont reformulés pour faciliter la lecture. Les attendus détaillés dépendent de la classe.","themes":[{"titre":"Objectifs de la formation","competences":[{"id":"calcul","titre":"Calculer avec nombres et lettres"},{"id":"donnees","titre":"Lire des données, statistiques et relations de proportionnalité"},{"id":"mesures","titre":"Calculer des mesures avec les bonnes unités"},{"id":"geometrie","titre":"Justifier une démarche géométrique"},{"id":"algorithmes","titre":"Construire et vérifier un petit programme"}]}],"seances":{}},{"id":"tim-ea-cycle4-2025","etablissement":"mfr","classes":["4e","3e"],"matiere":"tim","titre":"TIM · 4e et 3e agricoles","source":"https://chlorofil.fr/fileadmin/user_upload/02-diplomes/referentiels/secondaire/4e3e/4e3e-EA-ref-2025.pdf","synthese":true,"description":"Les objectifs du référentiel agricole sont reformulés pour faciliter la lecture. Les attendus détaillés dépendent de la classe.","themes":[{"titre":"Objectifs de la formation","competences":[{"id":"outils","titre":"Organiser ses fichiers et choisir ses outils"},{"id":"produire","titre":"Créer et transformer des documents numériques"},{"id":"information","titre":"Chercher, vérifier et partager une information"},{"id":"responsabilite","titre":"Agir en ligne en respectant les personnes et les droits"},{"id":"coder","titre":"Analyser une tâche puis la programmer"},{"id":"evolutions","titre":"Comprendre comment les outils numériques changent"}]}],"seances":{}}]</script>
 
-    <script id="competences-evaluees-data" type="application/json">[{"etablissement":"college","matiere":"techno","classe":"3e","seance":"S11","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Organisation interne et échanges entre commande et énergie","questions":{"a01_q01":["fonctionnement"],"a01_q02":["fonctionnement"],"a02_q01":["fonctionnement"],"a02_q02":["fonctionnement"],"a03_q01":["fonctionnement"],"a03_q02":["fonctionnement"]}},{"etablissement":"college","matiere":"techno","classe":"3e","seance":"S12","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Interprétation des entrées, conditions et modification d’un algorithme","questions":{"a01_q01":["fonctionnement"],"a01_q02":["modifier-programme"],"a02_q01":["modifier-programme"],"a02_q02":["modifier-programme"],"a03_q01":["modifier-programme"],"a03_q02":["modifier-programme"]}},{"etablissement":"college","matiere":"techno","classe":"3e","seance":"S02","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Besoins, usages et évolution des solutions","questions":{"a01_q01":["usages-evolution"],"a01_q02":["usages-evolution"],"a01_q03":["usages-evolution"]}},{"etablissement":"college","matiere":"techno","classe":"3e","seance":"S10","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Usages responsables du numérique et cybersécurité","questions":{"a01_q01":["usages-evolution"],"a01_q02":["usages-evolution"],"a02_q01":["usages-evolution"],"a02_q02":["usages-evolution"],"a03_q01":["usages-evolution"]}},{"etablissement":"college","matiere":"techno","classe":"3e","seance":"S10R","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Usages responsables du numérique et cybersécurité","questions":{"a01_q01":["usages-evolution"],"a01_q02":["usages-evolution"],"a02_q01":["usages-evolution"],"a02_q02":["usages-evolution"],"a02_q03":["usages-evolution"],"a03_q01":["usages-evolution"],"a03_q02":["usages-evolution"],"a04_q01":["usages-evolution"],"a04_q02":["usages-evolution"],"a05_q01":["usages-evolution"],"a06_q01":["usages-evolution"],"a06_q02":["usages-evolution"],"a07_q01":["usages-evolution"],"a08_q01":["usages-evolution"],"a09_q01":["usages-evolution"],"a09_q02":["usages-evolution"]}}]</script>
+    <script id="competences-evaluees-data" type="application/json">[{"etablissement":"college","matiere":"techno","classe":"3e","seance":"S11","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Organisation interne et échanges entre commande et énergie","questions":{"a01_q01":["fonctionnement"],"a01_q02":["fonctionnement"],"a02_q01":["fonctionnement"],"a02_q02":["fonctionnement"],"a03_q01":["fonctionnement"],"a03_q02":["fonctionnement"]}},{"etablissement":"college","matiere":"techno","classe":"3e","seance":"S12","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Interprétation des entrées, conditions et modification d’un algorithme","questions":{"a01_q01":["fonctionnement"],"a01_q02":["modifier-programme"],"a02_q01":["modifier-programme"],"a02_q02":["modifier-programme"],"a03_q01":["modifier-programme"],"a03_q02":["modifier-programme"]}},{"etablissement":"college","matiere":"techno","classe":"3e","seance":"S02","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Besoins, usages et évolution des solutions","questions":{"a01_q01":["usages-evolution"],"a01_q02":["usages-evolution"],"a01_q03":["usages-evolution"]}},{"etablissement":"college","matiere":"techno","classe":"3e","seance":"S10","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Usages responsables du numérique et cybersécurité","questions":{"a01_q01":["usages-evolution"],"a01_q02":["usages-evolution"],"a02_q01":["usages-evolution"],"a02_q02":["usages-evolution"],"a03_q01":["usages-evolution"]}},{"etablissement":"college","matiere":"techno","classe":"3e","seance":"S10R","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Usages responsables du numérique et cybersécurité","questions":{"a01_q01":["usages-evolution"],"a01_q02":["usages-evolution"],"a02_q01":["usages-evolution"],"a02_q02":["usages-evolution"],"a02_q03":["usages-evolution"],"a03_q01":["usages-evolution"],"a03_q02":["usages-evolution"],"a04_q01":["usages-evolution"],"a04_q02":["usages-evolution"],"a05_q01":["usages-evolution"],"a06_q01":["usages-evolution"],"a06_q02":["usages-evolution"],"a07_q01":["usages-evolution"],"a08_q01":["usages-evolution"],"a09_q01":["usages-evolution"],"a09_q02":["usages-evolution"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S11","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Décrire un besoin, des utilisateurs et une règle d’usage.","questions":{"a01_q01":["interactions"],"a01_q02":["fonctionnement"],"a02_q01":["modifier-programme"],"a03_q01":["tester"],"a01_q03":["fonctionnement"],"a01_q04":["fonctionnement"],"a01_q05":["fonctionnement"],"a01_q06":["fonctionnement"],"a03_q02":["usages-evolution"],"a03_q03":["usages-evolution"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S12","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Associer une fonction à un constituant.","questions":{"a01_q01":["interactions"],"a01_q02":["fonctionnement"],"a02_q01":["modifier-programme"],"a03_q01":["tester"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S13","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Modifier un programme événementiel simple dans le simulateur.","questions":{"a01_q01":["interactions"],"a01_q02":["fonctionnement"],"a02_q01":["modifier-programme"],"a03_q01":["tester"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S14","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Utiliser une variable pour représenter un état.","questions":{"a01_q01":["interactions"],"a01_q02":["fonctionnement"],"a02_q01":["modifier-programme"],"a03_q01":["tester"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S15","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Lire et tester une condition simple.","questions":{"a01_q01":["interactions"],"a01_q02":["fonctionnement"],"a02_q01":["modifier-programme"],"a03_q01":["tester"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S16","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Distinguer modèle et observation réelle.","questions":{"a01_q01":["interactions"],"a01_q02":["fonctionnement"],"a02_q01":["modifier-programme"],"a03_q01":["tester"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S17","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Croiser des documents et justifier une conclusion courte.","questions":{"a01_q01":["interactions"],"a01_q02":["fonctionnement"],"a02_q01":["modifier-programme"],"a03_q01":["tester"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S18","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Repérer une source et des conversions d’énergie.","questions":{"a01_q01":["choix"],"a01_q02":["fonctionnement"],"a02_q01":["tester"],"a03_q01":["tester"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S19","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Suivre un protocole donné et comparer des résultats.","questions":{"a01_q01":["choix"],"a01_q02":["fonctionnement"],"a02_q01":["tester"],"a03_q01":["tester"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S20","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Comparer des solutions selon plusieurs critères.","questions":{"a01_q01":["choix"],"a01_q02":["fonctionnement"],"a02_q01":["tester"],"a03_q01":["tester"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S21","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Choisir une solution en tenant compte du milieu.","questions":{"a01_q01":["choix"],"a01_q02":["fonctionnement"],"a02_q01":["tester"],"a03_q01":["tester"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S22","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Comparer des orientations à partir de données.","questions":{"a01_q01":["choix"],"a01_q02":["fonctionnement"],"a02_q01":["tester"],"a03_q01":["tester"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S23","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Modifier une condition à partir d’un seuil fourni.","questions":{"a01_q01":["choix"],"a01_q02":["fonctionnement"],"a02_q01":["tester"],"a03_q01":["tester"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S24","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Utiliser deux critères et une preuve chiffrée.","questions":{"a01_q01":["choix"],"a01_q02":["fonctionnement"],"a02_q01":["tester"],"a03_q01":["tester"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S25","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Suivre un parcours numérique et identifier une aide utile.","questions":{"a01_q01":["usages-evolution"],"a01_q02":["interactions"],"a02_q01":["interactions"],"a03_q01":["interactions"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S26","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Mener une recherche ciblée et organiser une trace.","questions":{"a01_q01":["usages-evolution"],"a01_q02":["interactions"],"a02_q01":["interactions"],"a03_q01":["interactions"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S27","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Distinguer partage utile, données personnelles et droit d’usage.","questions":{"a01_q01":["usages-evolution"],"a01_q02":["interactions"],"a02_q01":["interactions"],"a03_q01":["interactions"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S28","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Réutiliser sprites et événements pour un objectif technique.","questions":{"a01_q01":["modifier-programme"],"a01_q02":["programmer"],"a02_q01":["tester"],"a03_q01":["tester"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S29","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Utiliser une variable et vérifier sa mise à jour.","questions":{"a01_q01":["modifier-programme"],"a01_q02":["programmer"],"a02_q01":["tester"],"a03_q01":["tester"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S30","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Lire et modifier une condition dans un programme existant.","questions":{"a01_q01":["modifier-programme"],"a01_q02":["programmer"],"a02_q01":["tester"],"a03_q01":["tester"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S31","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Tester l’usage et améliorer une consigne.","questions":{"a01_q01":["modifier-programme"],"a01_q02":["programmer"],"a02_q01":["tester"],"a03_q01":["tester"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S32","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Rendre compte d’un programme avec une preuve.","questions":{"a01_q01":["modifier-programme"],"a01_q02":["programmer"],"a02_q01":["tester"],"a03_q01":["tester"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S33","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Exprimer le besoin et les limites d’un projet.","questions":{"a01_q01":["interactions"],"a01_q02":["concevoir"],"a02_q01":["fonctionnement"],"a03_q01":["modifier-programme"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S34","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Distinguer une entrée, un traitement et une sortie.","questions":{"a01_q01":["interactions"],"a01_q02":["concevoir"],"a02_q01":["fonctionnement"],"a03_q01":["modifier-programme"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S35","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Modifier une règle liée à une limite.","questions":{"a01_q01":["interactions"],"a01_q02":["concevoir"],"a02_q01":["fonctionnement"],"a03_q01":["modifier-programme"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S36","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Identifier une limite d’observation et de mesure.","questions":{"a01_q01":["interactions"],"a01_q02":["concevoir"],"a02_q01":["fonctionnement"],"a03_q01":["modifier-programme"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S37","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Lire l’ordre de décisions d’un programme.","questions":{"a01_q01":["interactions"],"a01_q02":["concevoir"],"a02_q01":["fonctionnement"],"a03_q01":["modifier-programme"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S38","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Associer une technique à son effet et à sa limite.","questions":{"a01_q01":["interactions"],"a01_q02":["concevoir"],"a02_q01":["fonctionnement"],"a03_q01":["modifier-programme"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S39","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Tester une situation inhabituelle avec une règle fournie.","questions":{"a01_q01":["interactions"],"a01_q02":["concevoir"],"a02_q01":["fonctionnement"],"a03_q01":["modifier-programme"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S40","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Organiser et exploiter des données avec une unité.","questions":{"a01_q01":["interactions"],"a01_q02":["concevoir"],"a02_q01":["fonctionnement"],"a03_q01":["modifier-programme"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S41","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Comparer des solutions sur leur cycle de vie.","questions":{"a01_q01":["interactions"],"a01_q02":["concevoir"],"a02_q01":["fonctionnement"],"a03_q01":["modifier-programme"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S42","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Communiquer une consigne et les limites d’un prototype.","questions":{"a01_q01":["interactions"],"a01_q02":["concevoir"],"a02_q01":["fonctionnement"],"a03_q01":["modifier-programme"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S43","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Confronter des essais à trois exigences.","questions":{"a01_q01":["interactions"],"a01_q02":["concevoir"],"a02_q01":["fonctionnement"],"a03_q01":["modifier-programme"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S44","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Choisir une amélioration réaliste et un critère de réussite.","questions":{"a01_q01":["concevoir"],"a01_q02":["programmer"],"a02_q01":["tester"],"a03_q01":["tester"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S45","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Organiser les tâches et prévoir un test avant de modifier.","questions":{"a01_q01":["concevoir"],"a01_q02":["programmer"],"a02_q01":["tester"],"a03_q01":["tester"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S46","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Modifier un programme ou document existant et conserver une preuve.","questions":{"a01_q01":["concevoir"],"a01_q02":["programmer"],"a02_q01":["tester"],"a03_q01":["tester"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S47","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Comparer deux versions et expliquer une limite.","questions":{"a01_q01":["concevoir"],"a01_q02":["programmer"],"a02_q01":["tester"],"a03_q01":["tester"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S48","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Traiter un dossier nouveau en réutilisant ses méthodes.","questions":{"a01_q01":["fonctionnement"],"a01_q02":["tester"],"a02_q01":["choix"],"a03_q01":["choix"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S49","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Choisir une reprise à partir d’une erreur réelle.","questions":{"a01_q01":["fonctionnement"],"a01_q02":["tester"],"a02_q01":["choix"],"a03_q01":["choix"]}},{"etablissement":"college","matiere":"techno","classe":"5e","seance":"S50","version":"v1","referentiel":"techno-cycle4-2024","perimetre":"Relier ses apprentissages à des traces de travail.","questions":{"a01_q01":["fonctionnement"],"a01_q02":["tester"],"a02_q01":["choix"],"a03_q01":["choix"]}}]</script>
 
     <script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
 
@@ -169,5 +1280,6 @@
     <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-dashboard.js"></script>
     <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
     <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-cards.js"></script>
+    <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-shop-preview.js"></script>
 </body>
 </html>

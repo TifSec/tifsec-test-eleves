@@ -2,20 +2,23 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="supabase-url" content="https://evbfflwfyiitrkgzjhwt.supabase.co">
+    <meta name="supabase-publishable-key" content="sb_publishable__aRCAzLQv4TmSL0Z1yvcZQ_Nbwd2Ah6">
 
     <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
 
     
-    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preconnect" href="https://evbfflwfyiitrkgzjhwt.supabase.co" crossorigin>
     <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
     <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
     
 
     <title>
         
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
         
     </title>
 
@@ -38,15 +41,17 @@
     
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css?v=20261022-shop-effects-2">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-learning-sequence.css">
     
     
 
@@ -54,11 +59,14 @@
 
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261022-quest-ui-2">
     
     
-<link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
+    
 </head>
 
 <body class="student-shell student-course-shell">
@@ -83,6 +91,9 @@
 
     <main class="student-course-main" id="student-course-main">
 
+
+
+
 <div id="course-work" data-etablissement="mfr" data-matiere="maths" data-classe="term" data-seance="S01" data-saving-enabled="true" data-collaboration-enabled="true">
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
@@ -105,8 +116,6 @@
     <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
     <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
 
-
-
 <div class="course-columns">
     <aside class="course-navigation" aria-label="Étapes de la séance">
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
@@ -119,7 +128,21 @@
 <!-- ========== INTRODUCTION DU COURS ========== -->
 
 <header class="cours-intro" id="course-intro">
+    
+    
+    
+    <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Mathématiques · Bac Pro 2 · S01</span></div>
     <h1>Remise en route et diagnostic</h1>
+    <aside class="course-learning-sequence" aria-label="Comment avancer dans le cours">
+        <strong>Pour avancer</strong>
+        <ol>
+            <li>Lis les repères et les étapes.</li>
+            <li>Observe l’exemple s’il y en a un.</li>
+            <li>Essaie à ton tour avec les questions.</li>
+            <li>Réutilise une méthode déjà rencontrée.</li>
+        </ol>
+        <p>Tu peux garder le cours ouvert et utiliser les aides si tu bloques.</p>
+    </aside>
 
     
     <p class="cours-theme">
@@ -133,13 +156,13 @@
     </p>
     
 
-    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : Effectuer et expliquer des calculs simples.</p></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : Effectuer et expliquer des calculs simples.</p></section>
     
-    <section><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
-    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
+    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
     
     
-    <section class="cours-objectifs">
+    <section class="course-info-card cours-objectifs">
         <h2>Ce que vous allez apprendre</h2>
         <ul>
             
@@ -198,9 +221,100 @@
 
 </header>
 
-    <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title"><article class="course-paper-sheet"><header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Pourcentages, quantités et fonctions</h2><p>Trois outils servent souvent dans un même problème : calculer une part, retrouver une quantité entière et remplacer une lettre par un nombre.</p></header><section class="course-paper-section"><h3>1. Calculer une réduction</h3><p>Une réduction de 15 % signifie que 15 parts sur 100 sont retirées du prix. On peut calculer la remise, puis l’enlever.</p><ol><li>10 % de 240 € : 240 ÷ 10 = 24 €.</li><li>5 % est la moitié de 10 % : 24 ÷ 2 = 12 €.</li><li>15 % = 10 % + 5 % : 24 + 12 = 36 € de remise.</li><li>Prix payé : 240 − 36 = 204 €.</li></ol></section><section class="course-paper-section"><h3>2. Utiliser le coefficient multiplicateur</h3><p>Après −15 %, il reste 100 % − 15 % = 85 % du prix. Le coefficient est donc 0,85.</p><ol><li>85 % = 85 ÷ 100 = 0,85.</li><li>Prix payé = 240 × 0,85 = 204 €.</li><li>Les deux méthodes donnent le même prix.</li></ol></section><section class="course-paper-section"><h3>3. Comprendre une matière sèche</h3><p>Si le foin contient 85 % de matière sèche, cela veut dire que 85 kg sur 100 kg sont de la matière sèche.</p><ol><li>Dans 7,5 kg de foin : 7,5 × 0,85 = 6,375 kg de matière sèche.</li><li>Pour obtenir 7,5 kg de matière sèche, on cherche la masse de foin x : 0,85x = 7,5.</li><li>On divise les deux côtés par 0,85 : x = 7,5 ÷ 0,85 ≈ 8,82 kg.</li><li>Il faut plus de 7,5 kg de foin, car une partie de sa masse n’est pas de la matière sèche.</li></ol></section><section class="course-paper-section"><h3>4. Résoudre une équation</h3><p>Une équation est une balance : pour garder l’équilibre, on fait la même opération à gauche et à droite.</p><ol><li>2x + 5 = 17.</li><li>On retire 5 des deux côtés : 2x = 12.</li><li>On divise les deux côtés par 2 : x = 6.</li><li>Vérification : 2 × 6 + 5 = 17.</li></ol></section><section class="course-paper-section"><h3>5. Image et antécédent</h3><p>Pour calculer l’image, on connaît x et on calcule le résultat. Pour chercher un antécédent, on connaît le résultat et on cherche le x qui le produit.</p><pre class="cours-code"><code>Si f(x) = 2x + 5 :
+<section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
+    <article class="course-paper-sheet">
+        <header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Pourcentages, quantités et fonctions</h2><p>Trois outils servent souvent dans un même problème : calculer une part, retrouver une quantité entière et remplacer une lettre par un nombre.</p></header>
+        
+        <section class="course-paper-section">
+            <h3>1. Calculer une réduction</h3>
+            
+<p>Une réduction de 15 % signifie que 15 parts sur 100 sont retirées du prix. On peut calculer la remise, puis l’enlever.</p>
+    
+
+<ol><li>10 % de 240 € : 240 ÷ 10 = 24 €.</li><li>5 % est la moitié de 10 % : 24 ÷ 2 = 12 €.</li><li>15 % = 10 % + 5 % : 24 + 12 = 36 € de remise.</li><li>Prix payé : 240 − 36 = 204 €.</li></ol>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>2. Utiliser le coefficient multiplicateur</h3>
+            
+<p>Après −15 %, il reste 100 % − 15 % = 85 % du prix. Le coefficient est donc 0,85.</p>
+    
+
+<ol><li>85 % = 85 ÷ 100 = 0,85.</li><li>Prix payé = 240 × 0,85 = 204 €.</li><li>Les deux méthodes donnent le même prix.</li></ol>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>3. Comprendre une matière sèche</h3>
+            
+<p>Si le foin contient 85 % de matière sèche, cela veut dire que 85 kg sur 100 kg sont de la matière sèche.</p>
+    
+
+<ol><li>Dans 7,5 kg de foin : 7,5 × 0,85 = 6,375 kg de matière sèche.</li><li>Pour obtenir 7,5 kg de matière sèche, on cherche la masse de foin x : 0,85x = 7,5.</li><li>On divise les deux côtés par 0,85 : x = 7,5 ÷ 0,85 ≈ 8,82 kg.</li><li>Il faut plus de 7,5 kg de foin, car une partie de sa masse n’est pas de la matière sèche.</li></ol>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>4. Résoudre une équation</h3>
+            
+<p>Une équation est une balance : pour garder l’équilibre, on fait la même opération à gauche et à droite.</p>
+    
+
+<ol><li>2x + 5 = 17.</li><li>On retire 5 des deux côtés : 2x = 12.</li><li>On divise les deux côtés par 2 : x = 6.</li><li>Vérification : 2 × 6 + 5 = 17.</li></ol>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>5. Image et antécédent</h3>
+            
+<p>Pour calculer l’image, on connaît x et on calcule le résultat. Pour chercher un antécédent, on connaît le résultat et on cherche le x qui le produit.</p>
+    
+
+<pre class="cours-code"><code>Si f(x) = 2x + 5 :
 Image de 4 : f(4) = 2 × 4 + 5 = 8 + 5 = 13.
-Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-paper-questions"><li><span>Calcule l’image de 10.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Cherche l’antécédent de 25.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je m’entraîne — même méthode que dans le cours</h3><p>Reprends les étapes de l’exemple juste au-dessus. Écris une ligne par étape et garde les unités.</p><ol class="course-paper-questions"><li><span>Calcule 10 %, puis 5 %, puis 15 % de 320 €.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Un aliment contient 80 % de matière sèche. Quelle masse sèche trouve-t-on dans 6 kg ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Résous 3x + 4 = 19 et vérifie en remplaçant x.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je transfère — une situation nouvelle</h3><p>Cette fois, les nombres ou le contexte changent. Commence par identifier ce que l’on cherche, puis choisis la méthode qui convient.</p><ol class="course-paper-questions"><li><span>Un article à 320 € subit une remise de 12 %. Calcule le prix payé de deux façons.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>On veut obtenir 9 kg de matière sèche avec un foin à 80 %. Quelle masse de foin faut-il ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Une fonction est g(x) = 3x + 4. Cherche l’antécédent de 25 et explique ta vérification.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section></article></section>
+Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Calcule l’image de 10.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Cherche l’antécédent de 25.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Je m’entraîne — même méthode que dans le cours</h3>
+            
+<p>Reprends les étapes de l’exemple juste au-dessus. Écris une ligne par étape et garde les unités.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Calcule 10 %, puis 5 %, puis 15 % de 320 €.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Un aliment contient 80 % de matière sèche. Quelle masse sèche trouve-t-on dans 6 kg ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Résous 3x + 4 = 19 et vérifie en remplaçant x.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Je transfère — une situation nouvelle</h3>
+            
+<p>Cette fois, les nombres ou le contexte changent. Commence par identifier ce que l’on cherche, puis choisis la méthode qui convient.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Un article à 320 € subit une remise de 12 %. Calcule le prix payé de deux façons.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>On veut obtenir 9 kg de matière sèche avec un foin à 80 %. Quelle masse de foin faut-il ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Une fonction est g(x) = 3x + 4. Cherche l’antécédent de 25 et explique ta vérification.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+    </article>
+</section>
+
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
         <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
@@ -208,13 +322,15 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
 <section class="cours-activites">
     
     <article class="cours-activite" id="a03">
-        <h2>Activité 1 — 1. Automatismes : remettre la machine en route</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span></div>
+        <h2>1. Automatismes : remettre la machine en route</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notion : calcul mental et opérations.</p>
     
@@ -246,16 +362,23 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a04">
-        <h2>Activité 2 — 2. Pourcentages : comprendre une réduction</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span></div>
+        <h2>2. Pourcentages : comprendre une réduction</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notion : pourcentage et coefficient multiplicateur.</p>
     
@@ -284,16 +407,23 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a05">
-        <h2>Activité 3 — Exercice 1 : Retrouver le montant de la réduction</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 1 : Retrouver le montant de la réduction</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Avant de calculer le prix final, nous devons comprendre combien représente réellement une réduction de 15 %.</p>
     
@@ -302,6 +432,7 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a05-q01-label">Question 1 — Calculer 10 % de 240 €.</h3>
             
@@ -319,6 +450,7 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a05-q02-label">Question 2 — Calculer 5 % de 240 € en utilisant le résultat précédent.</h3>
             
 
@@ -334,6 +466,7 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a05-q03-label">Question 3 — En déduire 15 % de 240 €.</h3>
             
@@ -351,6 +484,7 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a05-q04-label">Question 4 — Quel est le montant de la réduction proposée ?</h3>
             
 
@@ -365,16 +499,23 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
+            <a class="course-mission-next" href="#a06">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a06">
-        <h2>Activité 4 — Exercice 2 : Calculer le prix réellement payé</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 2 : Calculer le prix réellement payé</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Connaître une réduction ne suffit pas pour préparer un budget. Il faut déterminer le prix final.</p>
     
@@ -383,6 +524,7 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a06-q01-label">Question 1 — Calculer le prix de l&#39;équipement après réduction.</h3>
             
@@ -400,6 +542,7 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a06-q02-label">Question 2 — Expliquer pourquoi ce résultat est cohérent.</h3>
             
 
@@ -414,16 +557,23 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a05">← Étape précédente</a>
+            <a class="course-mission-next" href="#a07">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a07">
-        <h2>Activité 5 — Exercice 3 : Retrouver directement le prix final</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 5</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 3 : Retrouver directement le prix final</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi changer de méthode ? Lorsque l&#39;on doit calculer de nombreux prix, une méthode directe permet de gagner du temps sans changer le résultat.</p>
     
@@ -432,6 +582,7 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a07-q01-label">Question 1 — Quel pourcentage du prix initial reste-t-il après une réduction de 15 % ?</h3>
             
@@ -449,6 +600,7 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a07-q02-label">Question 2 — Écrire ce pourcentage sous forme décimale.</h3>
             
 
@@ -464,6 +616,7 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a07-q03-label">Question 3 — Multiplier 240 par ce nombre. Que constatez-vous ?</h3>
             
@@ -488,16 +641,23 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a06">← Étape précédente</a>
+            <a class="course-mission-next" href="#a08">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a08">
-        <h2>Activité 6 — 3. Pourcentages et fourrage : comprendre une quantité</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 6</span></div>
+        <h2>3. Pourcentages et fourrage : comprendre une quantité</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notion : proportion, pourcentage et conversion entre matière sèche et foin brut.</p>
     
@@ -544,16 +704,23 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a07">← Étape précédente</a>
+            <a class="course-mission-next" href="#a09">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a09">
-        <h2>Activité 7 — Exercice 1 : Calculer la quantité de matière sèche</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 7</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 1 : Calculer la quantité de matière sèche</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Nous allons utiliser un pourcentage pour retrouver une quantité en kilogrammes, et non plus une somme en euros.</p>
     
@@ -562,6 +729,7 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a09-q01-label">Question 1 — Écrire 1,5 % sous forme décimale.</h3>
             
@@ -579,6 +747,7 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a09-q02-label">Question 2 — Calculer 1,5 % de 500 kg.</h3>
             
 
@@ -595,6 +764,7 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a09-q03-label">Question 3 — Expliquer ce que représente le résultat obtenu.</h3>
             
 
@@ -609,16 +779,23 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a08">← Étape précédente</a>
+            <a class="course-mission-next" href="#a10">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a10">
-        <h2>Activité 8 — Exercice 2 : Comprendre la composition du foin</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 8</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 2 : Comprendre la composition du foin</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Nous devons vérifier qu&#39;une quantité de foin brut apporte réellement la quantité de matière sèche recherchée.</p>
     
@@ -627,6 +804,7 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a10-q01-label">Question 1 — Que signifie « un foin contenant 85 % de matière sèche » ?</h3>
             
@@ -644,6 +822,7 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a10-q02-label">Question 2 — Calculer la masse de matière sèche présente dans 7,5 kg de ce foin.</h3>
             
 
@@ -660,6 +839,7 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a10-q03-label">Question 3 — Expliquer pourquoi 7,5 kg de foin brut ne suffisent pas pour apporter 7,5 kg de matière sèche.</h3>
             
 
@@ -674,16 +854,23 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a09">← Étape précédente</a>
+            <a class="course-mission-next" href="#a11">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a11">
-        <h2>Activité 9 — Exercice 3 : Déterminer la masse de foin nécessaire</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 9</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 3 : Déterminer la masse de foin nécessaire</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Dans une situation professionnelle, nous connaissons parfois le besoin à satisfaire, mais pas encore la quantité de produit à utiliser. Il faut alors retrouver cette quantité.</p>
     
@@ -692,6 +879,7 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a11-q01-label">Question 1 — Calculer 7,5 ÷ 0,85.</h3>
             
@@ -709,6 +897,7 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a11-q02-label">Question 2 — Arrondir le résultat au dixième de kilogramme.</h3>
             
 
@@ -725,6 +914,7 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a11-q03-label">Question 3 — Comparer votre résultat avec la valeur de 8,82 kg donnée dans l&#39;exemple de l&#39;IFCE.</h3>
             
 
@@ -740,6 +930,7 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
         </div>
         
         <div class="cours-question" data-question="q04">
+            
             
             <h3 id="a11-q04-label">Question 4 — Expliquer pourquoi le résultat doit être supérieur à 7,5 kg.</h3>
             
@@ -761,16 +952,23 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a10">← Étape précédente</a>
+            <a class="course-mission-next" href="#a12">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a12">
-        <h2>Activité 10 — 4. Équations et fonctions : retrouver une valeur inconnue</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 10</span></div>
+        <h2>4. Équations et fonctions : retrouver une valeur inconnue</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notions : équation, fonction, image et antécédent.</p>
     
@@ -799,16 +997,23 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a11">← Étape précédente</a>
+            <a class="course-mission-next" href="#a13">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a13">
-        <h2>Activité 11 — Exercice 1 : Retrouver une quantité inconnue</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 11</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 1 : Retrouver une quantité inconnue</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Nous allons apprendre à retrouver une valeur de départ lorsque nous connaissons le résultat final.</p>
     
@@ -820,6 +1025,7 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a13-q01-label">Question 1 — Résoudre l&#39;équation : 2x + 5 = 17.</h3>
             
@@ -837,6 +1043,7 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a13-q02-label">Question 2 — Vérifier la solution obtenue en remplaçant x par sa valeur.</h3>
             
 
@@ -851,16 +1058,23 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a12">← Étape précédente</a>
+            <a class="course-mission-next" href="#a14">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a14">
-        <h2>Activité 12 — Exercice 2 : Calculer une image</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 12</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 2 : Calculer une image</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Nous allons utiliser une formule pour calculer un résultat à partir d&#39;une valeur connue.</p>
     
@@ -872,6 +1086,7 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a14-q01-label">Question 1 — Calculer f(4).</h3>
             
@@ -888,6 +1103,7 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
         </div>
         
         <div class="cours-question" data-question="q02">
+            
             
             <h3 id="a14-q02-label">Question 2 — Calculer f(10).</h3>
             
@@ -909,16 +1125,23 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a13">← Étape précédente</a>
+            <a class="course-mission-next" href="#a15">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a15">
-        <h2>Activité 13 — Exercice 3 : Retrouver un antécédent</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 13</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 3 : Retrouver un antécédent</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Nous allons relier les fonctions aux équations pour retrouver une valeur de départ à partir du résultat souhaité.</p>
     
@@ -930,6 +1153,7 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a15-q01-label">Question 1 — Quel nombre possède 17 comme image par la fonction f ? Justifier votre réponse.</h3>
             
@@ -945,16 +1169,23 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a14">← Étape précédente</a>
+            <a class="course-mission-next" href="#a16">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a16">
-        <h2>Activité 14 — 5. Mon premier bilan</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 14</span></div>
+        <h2>5. Mon premier bilan</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi ce bilan ? Il permet de savoir ce que vous maîtrisez déjà et les notions que nous devrons retravailler pendant l&#39;année.</p>
     
@@ -977,16 +1208,23 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a15">← Étape précédente</a>
+            <a class="course-mission-next" href="#a17">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a17">
-        <h2>Activité 15 — 6. Ce que je dois savoir faire</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 15</span></div>
+        <h2>6. Ce que je dois savoir faire</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cette dernière étape ? Elle permet de distinguer les méthodes importantes des exemples utilisés pendant la séance.</p>
     
@@ -997,16 +1235,23 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a16">← Étape précédente</a>
+            <a class="course-mission-next" href="#a18">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a18">
-        <h2>Activité 16 — À retenir</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 16</span></div>
+        <h2>À retenir</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <ul><li>Un pourcentage représente une proportion exprimée sur 100.</li><li>15 % correspond à 0,15 sous forme décimale.</li><li>Une diminution de 15 % correspond à un coefficient multiplicateur de 0,85.</li><li>Un résultat doit toujours être interprété avec son unité et vérifié.</li><li>Une équation permet de rechercher une valeur inconnue.</li><li>Une fonction associe une valeur de sortie à chaque valeur d&#39;entrée de son domaine.</li><li>Une même situation professionnelle peut être étudiée en TIM et en mathématiques avec des objectifs différents.</li><li>Une démarche expliquée est aussi importante que le résultat final.</li></ul>
     
@@ -1014,16 +1259,23 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a17">← Étape précédente</a>
+            <a class="course-mission-next" href="#a19">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a19">
-        <h2>Activité 17 — Sources et ressources</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 17</span></div>
+        <h2>Sources et ressources</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <ul><li>Chlorofil – Baccalauréat professionnel : tronc commun – référentiel et documents d&#39;accompagnement.</li><li>Chlorofil – Document d&#39;accompagnement MG1 – attendus et automatismes mathématiques.</li><li>IFCE – équipédia – Les besoins alimentaires du cheval – exemple professionnel utilisé pour le calcul du fourrage.</li></ul>
     
@@ -1040,6 +1292,11 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a18">← Étape précédente</a>
+            <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
 </section>
@@ -1068,16 +1325,18 @@ Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-pape
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
+
 
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
 
     </main>
     <footer class="site-footer">
     <p>
         &copy; 2026
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
     </p>
 </footer>
-<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
 </body>
 </html>

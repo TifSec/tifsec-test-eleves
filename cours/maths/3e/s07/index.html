@@ -2,20 +2,23 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="supabase-url" content="https://evbfflwfyiitrkgzjhwt.supabase.co">
+    <meta name="supabase-publishable-key" content="sb_publishable__aRCAzLQv4TmSL0Z1yvcZQ_Nbwd2Ah6">
 
     <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
 
     
-    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preconnect" href="https://evbfflwfyiitrkgzjhwt.supabase.co" crossorigin>
     <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
     <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
     
 
     <title>
         
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
         
     </title>
 
@@ -38,15 +41,17 @@
     
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css?v=20261022-shop-effects-2">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-learning-sequence.css">
     
     
 
@@ -54,11 +59,14 @@
 
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261022-quest-ui-2">
     
     
-<link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
+    
 </head>
 
 <body class="student-shell student-course-shell">
@@ -83,6 +91,9 @@
 
     <main class="student-course-main" id="student-course-main">
 
+
+
+
 <div id="course-work" data-etablissement="mfr" data-matiere="maths" data-classe="3e" data-seance="S07" data-saving-enabled="true" data-collaboration-enabled="true">
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
@@ -105,8 +116,6 @@
     <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
     <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
 
-
-
 <div class="course-columns">
     <aside class="course-navigation" aria-label="Étapes de la séance">
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
@@ -119,7 +128,21 @@
 <!-- ========== INTRODUCTION DU COURS ========== -->
 
 <header class="cours-intro" id="course-intro">
+    
+    
+    
+    <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Mathématiques · 3e MFR · S07</span></div>
     <h1>Évaluation 1 : Nombres et fractions</h1>
+    <aside class="course-learning-sequence" aria-label="Comment avancer dans le cours">
+        <strong>Pour avancer</strong>
+        <ol>
+            <li>Lis les repères et les étapes.</li>
+            <li>Observe l’exemple s’il y en a un.</li>
+            <li>Essaie à ton tour avec les questions.</li>
+            <li>Réutilise une méthode déjà rencontrée.</li>
+        </ol>
+        <p>Tu peux garder le cours ouvert et utiliser les aides si tu bloques.</p>
+    </aside>
 
     
     <p class="cours-theme">
@@ -133,13 +156,13 @@
     </p>
     
 
-    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Les objectifs et le lien avec les situations concrètes sont présentés au début du cours ci-dessous.</p></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi étudier ce sujet ?</h2><p>Les objectifs et le lien avec les situations concrètes sont présentés au début du cours ci-dessous.</p></section>
     
-    <section><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
-    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
+    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
     
     
-    <section class="cours-objectifs">
+    <section class="course-info-card cours-objectifs">
         <h2>Ce que vous allez apprendre</h2>
         <ul>
             
@@ -163,7 +186,33 @@
 
 </header>
 
-    <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title"><article class="course-paper-sheet"><header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Méthodes pour le bilan nombres et fractions</h2><p>Cette fiche rappelle les méthodes, pas les réponses. Lis chaque consigne et choisis l’outil qui correspond. Au brevet, montre ta méthode et vérifie tes réponses.</p></header><section class="course-paper-section"><h3>1. Petit pense-bête</h3><ul><li>Divisibilité : applique le critère ou écris la multiplication qui prouve le résultat.</li><li>Nombre premier : cherche un diviseur autre que 1 et lui-même.</li><li>Simplifier : divise le haut et le bas par le même nombre.</li><li>Comparer : mets les fractions au même dénominateur si besoin.</li><li>Additionner/soustraire : même dénominateur avant de calculer.</li><li>Multiplier : haut × haut et bas × bas.</li><li>Diviser : multiplie par l’inverse de la deuxième fraction.</li></ul></section><section class="course-paper-section"><h3>2. Organiser sa copie</h3><ul><li>Écris une étape par ligne.</li><li>Justifie quand la consigne dit « expliquer » ou « montrer ».</li><li>Simplifie les fractions quand c’est possible.</li><li>Dans un problème, ajoute l’unité et une phrase de réponse.</li><li>Relis la consigne avant de rendre.</li></ul></section></article></section>
+<section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
+    <article class="course-paper-sheet">
+        <header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Méthodes pour le bilan nombres et fractions</h2><p>Cette fiche rappelle les méthodes, pas les réponses. Lis chaque consigne et choisis l’outil qui correspond. Au brevet, montre ta méthode et vérifie tes réponses.</p></header>
+        
+        <section class="course-paper-section">
+            <h3>1. Petit pense-bête</h3>
+            
+<ul><li>Divisibilité : applique le critère ou écris la multiplication qui prouve le résultat.</li><li>Nombre premier : cherche un diviseur autre que 1 et lui-même.</li><li>Simplifier : divise le haut et le bas par le même nombre.</li><li>Comparer : mets les fractions au même dénominateur si besoin.</li><li>Additionner/soustraire : même dénominateur avant de calculer.</li><li>Multiplier : haut × haut et bas × bas.</li><li>Diviser : multiplie par l’inverse de la deuxième fraction.</li></ul>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>2. Organiser sa copie</h3>
+            
+<ul><li>Écris une étape par ligne.</li><li>Justifie quand la consigne dit « expliquer » ou « montrer ».</li><li>Simplifie les fractions quand c’est possible.</li><li>Dans un problème, ajoute l’unité et une phrase de réponse.</li><li>Relis la consigne avant de rendre.</li></ul>
+    
+
+
+            
+        </section>
+        
+    </article>
+</section>
+
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
         <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
@@ -171,13 +220,15 @@
 <section class="cours-activites">
     
     <article class="cours-activite" id="a01">
-        <h2>Activité 1 — Ce qui est évalué</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span></div>
+        <h2>Ce qui est évalué</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Cette évaluation reprend les notions travaillées depuis le début de la période.</p>
     
@@ -188,16 +239,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            
+            <a class="course-mission-next" href="#a02">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a02">
-        <h2>Activité 2 — Consignes</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span></div>
+        <h2>Consignes</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <ul><li>Lisez entièrement chaque question avant de commencer.</li><li>Laissez apparaître vos calculs et vos raisonnements.</li><li>Une réponse seule ne suffit pas lorsqu&#39;une justification est demandée.</li><li>Simplifiez les fractions lorsque c&#39;est possible.</li><li>Respectez les unités lorsqu&#39;elles sont nécessaires.</li><li>Vous pouvez vérifier vos résultats avant de rendre.</li></ul>
     
@@ -211,16 +269,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a01">← Étape précédente</a>
+            <a class="course-mission-next" href="#a03">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a03">
-        <h2>Activité 3 — 1. Automatismes — 3 points</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>1. Automatismes — 3 points</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Calculatrice interdite.</p>
     
@@ -232,6 +297,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a03-q01-label">Question 1 — 1. 8 × 7</h3>
             
@@ -249,6 +315,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a03-q02-label">Question 2 — 2. 84 ÷ 7</h3>
             
 
@@ -264,6 +331,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a03-q03-label">Question 3 — 3. 30 - 4 × 6</h3>
             
@@ -281,6 +349,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a03-q04-label">Question 4 — 4. Le quart de 72.</h3>
             
 
@@ -296,6 +365,7 @@
         </div>
         
         <div class="cours-question" data-question="q05">
+            
             
             <h3 id="a03-q05-label">Question 5 — 5. Écriture décimale de 3/4.</h3>
             
@@ -313,6 +383,7 @@
         
         <div class="cours-question" data-question="q06">
             
+            
             <h3 id="a03-q06-label">Question 6 — 6. Calculez 3/5 de 20.</h3>
             
 
@@ -327,16 +398,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a02">← Étape précédente</a>
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a04">
-        <h2>Activité 4 — 2. Divisibilité — 3 points</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>2. Divisibilité — 3 points</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Calculatrice interdite.</p>
     
@@ -345,6 +423,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a04-q01-label">Question 1 — 1. Le nombre 450 est-il divisible par 2, 3, 5, 9 et 10 ? Justifiez chaque réponse.</h3>
             
@@ -362,6 +441,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a04-q02-label">Question 2 — 2. Donnez tous les diviseurs positifs de 18.</h3>
             
 
@@ -378,6 +458,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a04-q03-label">Question 3 — 3. Expliquez la différence entre un multiple et un diviseur en utilisant l&#39;exemple : 24 = 6 × 4.</h3>
             
 
@@ -392,16 +473,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a05">
-        <h2>Activité 5 — 3. Nombres premiers — 3 points</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 5</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>3. Nombres premiers — 3 points</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Calculatrice interdite.</p>
     
@@ -410,6 +498,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a05-q01-label">Question 1 — 1. Parmi 17, 21, 29 et 33, quels nombres sont premiers ? Justifiez les nombres qui ne le sont pas.</h3>
             
@@ -427,6 +516,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a05-q02-label">Question 2 — 2. Décomposez 36 en facteurs premiers.</h3>
             
 
@@ -443,6 +533,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a05-q03-label">Question 3 — 3. Expliquez ce qu&#39;est un nombre premier. Le nombre 1 est-il premier ?</h3>
             
 
@@ -457,16 +548,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
+            <a class="course-mission-next" href="#a06">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a06">
-        <h2>Activité 6 — 4. Comprendre et simplifier les fractions — 3 points</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 6</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>4. Comprendre et simplifier les fractions — 3 points</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Calculatrice interdite.</p>
     
@@ -475,6 +573,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a06-q01-label">Question 1 — 1. Simplifiez complètement 18/24.</h3>
             
@@ -492,6 +591,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a06-q02-label">Question 2 — 2. La fraction 7/12 est-elle irréductible ? Justifiez.</h3>
             
 
@@ -507,6 +607,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a06-q03-label">Question 3 — 3. Comparez 3/4 et 5/8. Montrez votre méthode.</h3>
             
@@ -524,6 +625,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a06-q04-label">Question 4 — 4. Expliquez ce que représentent le numérateur et le dénominateur dans la fraction 3/8.</h3>
             
 
@@ -538,16 +640,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a05">← Étape précédente</a>
+            <a class="course-mission-next" href="#a07">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a07">
-        <h2>Activité 7 — 5. Calculer avec des fractions — 5 points</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 7</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>5. Calculer avec des fractions — 5 points</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Calculatrice interdite.</p>
     
@@ -559,6 +668,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a07-q01-label">Question 1 — 1. Calculez : 3/7 + 2/7.</h3>
             
@@ -576,6 +686,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a07-q02-label">Question 2 — 2. Calculez : 3/4 - 1/2.</h3>
             
 
@@ -591,6 +702,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a07-q03-label">Question 3 — 3. Calculez : 2/3 + 1/6.</h3>
             
@@ -608,6 +720,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a07-q04-label">Question 4 — 4. Calculez et simplifiez : 2/3 × 3/5.</h3>
             
 
@@ -623,6 +736,7 @@
         </div>
         
         <div class="cours-question" data-question="q05">
+            
             
             <h3 id="a07-q05-label">Question 5 — 5. Calculez et simplifiez : 3/4 × 2/9.</h3>
             
@@ -640,6 +754,7 @@
         
         <div class="cours-question" data-question="q06">
             
+            
             <h3 id="a07-q06-label">Question 6 — 6. Donnez l&#39;inverse de 3/5 puis vérifiez votre réponse.</h3>
             
 
@@ -656,6 +771,7 @@
         
         <div class="cours-question" data-question="q07">
             
+            
             <h3 id="a07-q07-label">Question 7 — 7. Calculez et simplifiez : 3/4 ÷ 1/2.</h3>
             
 
@@ -670,16 +786,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a06">← Étape précédente</a>
+            <a class="course-mission-next" href="#a08">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a08">
-        <h2>Activité 8 — 6. Problème bilan — 3 points</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 8</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>6. Problème bilan — 3 points</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Calculatrice autorisée.</p>
     
@@ -697,6 +820,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a08-q01-label">Question 1 — 1. Quelle masse représente 2/5 de 30 kg ?</h3>
             
@@ -714,6 +838,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a08-q02-label">Question 2 — 2. Combien de portions de 3/4 kg peut-on préparer avec cette quantité ?</h3>
             
 
@@ -730,6 +855,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a08-q03-label">Question 3 — 3. Quelle masse reste-t-il dans la réserve ?</h3>
             
 
@@ -745,6 +871,7 @@
         </div>
         
         <div class="cours-question" data-question="q04">
+            
             
             <h3 id="a08-q04-label">Question 4 — 4. Expliquez pourquoi vous avez utilisé une multiplication à la question 1 et une division à la question 2.</h3>
             
@@ -766,16 +893,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a07">← Étape précédente</a>
+            <a class="course-mission-next" href="#a09">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a09">
-        <h2>Activité 9 — Barème</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 9</span></div>
+        <h2>Barème</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Partie</th><th scope="col">Points</th></tr></thead><tbody><tr><td>1. Automatismes</td><td>3 points</td></tr><tr><td>2. Divisibilité</td><td>3 points</td></tr><tr><td>3. Nombres premiers</td><td>3 points</td></tr><tr><td>4. Comprendre et simplifier les fractions</td><td>3 points</td></tr><tr><td>5. Calculer avec des fractions</td><td>5 points</td></tr><tr><td>6. Problème bilan</td><td>3 points</td></tr><tr><td>Total</td><td>20 points</td></tr></tbody></table></div>
     
@@ -783,21 +917,29 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a08">← Étape précédente</a>
+            <a class="course-mission-next" href="#a10">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a10">
-        <h2>Activité 10 — Avant de rendre</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 10</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Avant de rendre</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a10-q01-label">Question 1 — Ai-je répondu à toutes les questions ?</h3>
             
@@ -814,6 +956,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a10-q02-label">Question 2 — Ai-je laissé mes calculs visibles ?</h3>
             
 
@@ -828,6 +971,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a10-q03-label">Question 3 — Ai-je justifié les réponses qui le demandaient ?</h3>
             
@@ -844,6 +988,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a10-q04-label">Question 4 — Ai-je simplifié mes fractions lorsque c&#39;était possible ?</h3>
             
 
@@ -858,6 +1003,7 @@
         </div>
         
         <div class="cours-question" data-question="q05">
+            
             
             <h3 id="a10-q05-label">Question 5 — Pour une division de fractions, ai-je inversé la deuxième fraction ?</h3>
             
@@ -874,6 +1020,7 @@
         
         <div class="cours-question" data-question="q06">
             
+            
             <h3 id="a10-q06-label">Question 6 — Ai-je indiqué les unités dans le problème ?</h3>
             
 
@@ -889,6 +1036,7 @@
         
         <div class="cours-question" data-question="q07">
             
+            
             <h3 id="a10-q07-label">Question 7 — Ai-je relu mes résultats ?</h3>
             
 
@@ -902,16 +1050,23 @@
             
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a09">← Étape précédente</a>
+            <a class="course-mission-next" href="#a11">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a11">
-        <h2>Activité 11 — Rendre l&#39;évaluation</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 11</span></div>
+        <h2>Rendre l&#39;évaluation</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Relisez une dernière fois vos réponses avant de valider.</p>
     
@@ -919,6 +1074,11 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a10">← Étape précédente</a>
+            <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
 </section>
@@ -947,16 +1107,18 @@
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
+
 
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
 
     </main>
     <footer class="site-footer">
     <p>
         &copy; 2026
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
     </p>
 </footer>
-<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
 </body>
 </html>

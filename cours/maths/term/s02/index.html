@@ -2,20 +2,23 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="supabase-url" content="https://evbfflwfyiitrkgzjhwt.supabase.co">
+    <meta name="supabase-publishable-key" content="sb_publishable__aRCAzLQv4TmSL0Z1yvcZQ_Nbwd2Ah6">
 
     <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
 
     
-    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preconnect" href="https://evbfflwfyiitrkgzjhwt.supabase.co" crossorigin>
     <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
     <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
     
 
     <title>
         
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
         
     </title>
 
@@ -38,15 +41,17 @@
     
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css?v=20261022-shop-effects-2">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-learning-sequence.css">
     
     
 
@@ -54,11 +59,14 @@
 
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261022-quest-ui-2">
     
     
-<link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
+    
 </head>
 
 <body class="student-shell student-course-shell">
@@ -83,6 +91,9 @@
 
     <main class="student-course-main" id="student-course-main">
 
+
+
+
 <div id="course-work" data-etablissement="mfr" data-matiere="maths" data-classe="term" data-seance="S02" data-saving-enabled="true" data-collaboration-enabled="true">
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
@@ -105,8 +116,6 @@
     <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
     <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
 
-
-
 <div class="course-columns">
     <aside class="course-navigation" aria-label="Étapes de la séance">
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
@@ -119,7 +128,21 @@
 <!-- ========== INTRODUCTION DU COURS ========== -->
 
 <header class="cours-intro" id="course-intro">
+    
+    
+    
+    <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Mathématiques · Bac Pro 2 · S02</span></div>
     <h1>Poursuivre le diagnostic – données, probabilités et calcul littéral</h1>
+    <aside class="course-learning-sequence" aria-label="Comment avancer dans le cours">
+        <strong>Pour avancer</strong>
+        <ol>
+            <li>Lis les repères et les étapes.</li>
+            <li>Observe l’exemple s’il y en a un.</li>
+            <li>Essaie à ton tour avec les questions.</li>
+            <li>Réutilise une méthode déjà rencontrée.</li>
+        </ol>
+        <p>Tu peux garder le cours ouvert et utiliser les aides si tu bloques.</p>
+    </aside>
 
     
     <p class="cours-theme">
@@ -133,13 +156,13 @@
     </p>
     
 
-    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : Calculer et interpréter une moyenne, une médiane et une étendue.</p></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : Calculer et interpréter une moyenne, une médiane et une étendue.</p></section>
     
-    <section><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
-    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
+    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
     
     
-    <section class="cours-objectifs">
+    <section class="course-info-card cours-objectifs">
         <h2>Ce que vous allez apprendre</h2>
         <ul>
             
@@ -201,7 +224,95 @@
 
 </header>
 
-    <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title"><article class="course-paper-sheet"><header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Statistiques, probabilités et calcul littéral</h2><p>Une statistique résume un groupe de données. Une probabilité décrit une chance. Une expression littérale est une formule qui fonctionne pour plusieurs valeurs.</p></header><section class="course-paper-section"><h3>1. Moyenne, médiane et étendue</h3><p>Range d’abord les valeurs dans l’ordre croissant. La moyenne partage le total équitablement ; la médiane est au milieu ; l’étendue mesure l’écart entre les extrêmes.</p><ol><li>Exemple : 4, 6, 6, 8, 11.</li><li>Moyenne : (4 + 6 + 6 + 8 + 11) ÷ 5 = 35 ÷ 5 = 7.</li><li>Médiane : la valeur du milieu est 6.</li><li>Étendue : 11 − 4 = 7.</li></ol></section><section class="course-paper-section"><h3>2. Probabilité</h3><p>Imagine un sac contenant 8 jetons rouges et 12 jetons bleus. Il y a 20 jetons en tout ; chaque jeton a la même chance d’être tiré.</p><ol><li>P(rouge) = 8/20.</li><li>On simplifie en divisant en haut et en bas par 4 : 8/20 = 2/5.</li><li>En décimal : 2 ÷ 5 = 0,4, donc 40 %.</li><li>P(non rouge) = 1 − 2/5 = 3/5. Les deux probabilités font 1 en tout.</li></ol></section><section class="course-paper-section"><h3>3. Réduire une expression</h3><p>On ne peut additionner que les termes de même famille. Les x sont comme des pommes ; les x² sont comme des cartons de pommes : ce ne sont pas la même chose.</p><ol><li>4x + 3x = 7x.</li><li>7x − 2x + 4 = 5x + 4.</li><li>3x² + 2x² = 5x².</li><li>3x + 2 ne se réduit pas : x et le nombre 2 sont différents.</li></ol></section><section class="course-paper-section"><h3>4. Développer avec la distributivité</h3><p>Le nombre devant la parenthèse multiplie chaque terme à l’intérieur. Pense à distribuer des cartes à chaque personne : personne n’est oublié.</p><ol><li>3(x + 4) = 3 × x + 3 × 4.</li><li>= 3x + 12.</li><li>5(2x − 3) = 5 × 2x − 5 × 3.</li><li>= 10x − 15.</li><li>2(x + 3) + 4x = 2x + 6 + 4x = 6x + 6.</li></ol></section><section class="course-paper-section"><h3>5. Remplacer x par une valeur</h3><p>Quand on calcule une formule pour une valeur donnée, remplace chaque x par cette valeur. Les parenthèses évitent les erreurs.</p><ol class="course-paper-questions"><li><span>Calcule 2x² + 3x − 1 pour x = 2. Écris une ligne par calcul.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Explique pourquoi 3x + 2 ne devient pas 5x.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je m’entraîne — même méthode que dans le cours</h3><p>Reprends les étapes de l’exemple juste au-dessus. Écris une ligne par étape et garde les unités.</p><ol class="course-paper-questions"><li><span>Données : 5, 6, 6, 7, 11. Calcule moyenne, médiane et étendue.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Un sac contient 3 jetons gagnants sur 12. Écris la probabilité en fraction puis en pourcentage.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Développe 4(x + 3), puis réduis 2x + 5x − 1.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je transfère — une situation nouvelle</h3><p>Cette fois, les nombres ou le contexte changent. Commence par identifier ce que l’on cherche, puis choisis la méthode qui convient.</p><ol class="course-paper-questions"><li><span>Compare deux semaines de travail avec les données du cours : choisis un indicateur et explique ce qu’il raconte.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Un événement a une probabilité de 0,35. Quelle est la probabilité de son contraire ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Calcule 3x + 2 pour x = 4. Explique pourquoi 3x + 2 n’est pas égal à 5x.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section></article></section>
+<section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
+    <article class="course-paper-sheet">
+        <header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Statistiques, probabilités et calcul littéral</h2><p>Une statistique résume un groupe de données. Une probabilité décrit une chance. Une expression littérale est une formule qui fonctionne pour plusieurs valeurs.</p></header>
+        
+        <section class="course-paper-section">
+            <h3>1. Moyenne, médiane et étendue</h3>
+            
+<p>Range d’abord les valeurs dans l’ordre croissant. La moyenne partage le total équitablement ; la médiane est au milieu ; l’étendue mesure l’écart entre les extrêmes.</p>
+    
+
+<ol><li>Exemple : 4, 6, 6, 8, 11.</li><li>Moyenne : (4 + 6 + 6 + 8 + 11) ÷ 5 = 35 ÷ 5 = 7.</li><li>Médiane : la valeur du milieu est 6.</li><li>Étendue : 11 − 4 = 7.</li></ol>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>2. Probabilité</h3>
+            
+<p>Imagine un sac contenant 8 jetons rouges et 12 jetons bleus. Il y a 20 jetons en tout ; chaque jeton a la même chance d’être tiré.</p>
+    
+
+<ol><li>P(rouge) = 8/20.</li><li>On simplifie en divisant en haut et en bas par 4 : 8/20 = 2/5.</li><li>En décimal : 2 ÷ 5 = 0,4, donc 40 %.</li><li>P(non rouge) = 1 − 2/5 = 3/5. Les deux probabilités font 1 en tout.</li></ol>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>3. Réduire une expression</h3>
+            
+<p>On ne peut additionner que les termes de même famille. Les x sont comme des pommes ; les x² sont comme des cartons de pommes : ce ne sont pas la même chose.</p>
+    
+
+<ol><li>4x + 3x = 7x.</li><li>7x − 2x + 4 = 5x + 4.</li><li>3x² + 2x² = 5x².</li><li>3x + 2 ne se réduit pas : x et le nombre 2 sont différents.</li></ol>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>4. Développer avec la distributivité</h3>
+            
+<p>Le nombre devant la parenthèse multiplie chaque terme à l’intérieur. Pense à distribuer des cartes à chaque personne : personne n’est oublié.</p>
+    
+
+<ol><li>3(x + 4) = 3 × x + 3 × 4.</li><li>= 3x + 12.</li><li>5(2x − 3) = 5 × 2x − 5 × 3.</li><li>= 10x − 15.</li><li>2(x + 3) + 4x = 2x + 6 + 4x = 6x + 6.</li></ol>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>5. Remplacer x par une valeur</h3>
+            
+<p>Quand on calcule une formule pour une valeur donnée, remplace chaque x par cette valeur. Les parenthèses évitent les erreurs.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Calcule 2x² + 3x − 1 pour x = 2. Écris une ligne par calcul.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Explique pourquoi 3x + 2 ne devient pas 5x.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Je m’entraîne — même méthode que dans le cours</h3>
+            
+<p>Reprends les étapes de l’exemple juste au-dessus. Écris une ligne par étape et garde les unités.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Données : 5, 6, 6, 7, 11. Calcule moyenne, médiane et étendue.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Un sac contient 3 jetons gagnants sur 12. Écris la probabilité en fraction puis en pourcentage.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Développe 4(x + 3), puis réduis 2x + 5x − 1.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Je transfère — une situation nouvelle</h3>
+            
+<p>Cette fois, les nombres ou le contexte changent. Commence par identifier ce que l’on cherche, puis choisis la méthode qui convient.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Compare deux semaines de travail avec les données du cours : choisis un indicateur et explique ce qu’il raconte.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Un événement a une probabilité de 0,35. Quelle est la probabilité de son contraire ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Calcule 3x + 2 pour x = 4. Explique pourquoi 3x + 2 n’est pas égal à 5x.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+    </article>
+</section>
+
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
         <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
@@ -209,13 +320,15 @@
 <section class="cours-activites">
     
     <article class="cours-activite" id="a03">
-        <h2>Activité 1 — 1. Automatismes : deuxième remise en route</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span></div>
+        <h2>1. Automatismes : deuxième remise en route</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notion : calcul mental, fractions, pourcentages et premières expressions littérales.</p>
     
@@ -247,16 +360,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a04">
-        <h2>Activité 2 — 2. Statistiques : comprendre des données professionnelles</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span></div>
+        <h2>2. Statistiques : comprendre des données professionnelles</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notion : moyenne, médiane, étendue et proportion.</p>
     
@@ -291,16 +411,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a05">
-        <h2>Activité 3 — Exercice 1 : Organiser et résumer les données</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 1 : Organiser et résumer les données</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi commencer par cet exercice ? Avant d&#39;interpréter une série, nous devons la mettre en ordre et calculer quelques indicateurs.</p>
     
@@ -309,6 +436,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a05-q01-label">Question 1 — Ranger les valeurs dans l&#39;ordre croissant.</h3>
             
@@ -326,6 +454,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a05-q02-label">Question 2 — Calculer le nombre total d&#39;heures.</h3>
             
 
@@ -341,6 +470,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a05-q03-label">Question 3 — Calculer la moyenne.</h3>
             
@@ -358,6 +488,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a05-q04-label">Question 4 — Déterminer la médiane.</h3>
             
 
@@ -373,6 +504,7 @@
         </div>
         
         <div class="cours-question" data-question="q05">
+            
             
             <h3 id="a05-q05-label">Question 5 — Calculer l&#39;étendue.</h3>
             
@@ -400,16 +532,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
+            <a class="course-mission-next" href="#a06">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a06">
-        <h2>Activité 4 — Exercice 2 : Compter et calculer une proportion</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 2 : Compter et calculer une proportion</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Nous allons utiliser les données pour répondre à une question précise et retrouver les pourcentages de la séance précédente.</p>
     
@@ -418,6 +557,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a06-q01-label">Question 1 — Combien de chevaux ont travaillé au moins 7 heures ?</h3>
             
@@ -435,6 +575,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a06-q02-label">Question 2 — Quel pourcentage de l&#39;effectif cela représente-t-il ?</h3>
             
 
@@ -449,16 +590,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a05">← Étape précédente</a>
+            <a class="course-mission-next" href="#a07">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a07">
-        <h2>Activité 5 — Exercice 3 : Interpréter correctement un résultat</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 5</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 3 : Interpréter correctement un résultat</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Une valeur statistique peut être correcte mathématiquement, mais mal interprétée. Nous devons apprendre à distinguer un résumé d&#39;une observation individuelle.</p>
     
@@ -467,6 +615,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a07-q01-label">Question 1 — Un élève affirme : « Un cheval travaille 7 heures. » Cette phrase décrit-elle correctement les données ? Expliquez.</h3>
             
@@ -488,16 +637,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a06">← Étape précédente</a>
+            <a class="course-mission-next" href="#a08">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a08">
-        <h2>Activité 6 — 3. Probabilités : mesurer une possibilité</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 6</span></div>
+        <h2>3. Probabilités : mesurer une possibilité</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notion : probabilité, événement et événement contraire.</p>
     
@@ -529,16 +685,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a07">← Étape précédente</a>
+            <a class="course-mission-next" href="#a09">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a09">
-        <h2>Activité 7 — Exercice 1 : Identifier les possibilités</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 7</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 1 : Identifier les possibilités</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Avant de calculer une probabilité, nous devons identifier toutes les issues possibles et celles qui correspondent à l&#39;événement étudié.</p>
     
@@ -547,6 +710,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a09-q01-label">Question 1 — Combien y a-t-il d&#39;issues possibles ?</h3>
             
@@ -564,6 +728,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a09-q02-label">Question 2 — Combien d&#39;issues correspondent à « le cheval participe à une compétition » ?</h3>
             
 
@@ -579,6 +744,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a09-q03-label">Question 3 — Calculer la probabilité de cet événement sous forme de fraction.</h3>
             
@@ -600,16 +766,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a08">← Étape précédente</a>
+            <a class="course-mission-next" href="#a10">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a10">
-        <h2>Activité 8 — Exercice 2 : Exprimer une probabilité de plusieurs façons</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 8</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 2 : Exprimer une probabilité de plusieurs façons</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Une même probabilité peut être écrite sous plusieurs formes. Les reconnaître permet de mieux comprendre et comparer les résultats.</p>
     
@@ -618,6 +791,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a10-q01-label">Question 1 — Simplifier la fraction 8/20.</h3>
             
@@ -635,6 +809,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a10-q02-label">Question 2 — Donner cette probabilité sous forme décimale.</h3>
             
 
@@ -651,6 +826,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a10-q03-label">Question 3 — Donner cette probabilité en pourcentage.</h3>
             
 
@@ -665,16 +841,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a09">← Étape précédente</a>
+            <a class="course-mission-next" href="#a11">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a11">
-        <h2>Activité 9 — Exercice 3 : Calculer l&#39;événement contraire</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 9</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 3 : Calculer l&#39;événement contraire</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Nous allons découvrir une méthode qui permet de calculer rapidement la probabilité qu&#39;un événement ne se produise pas.</p>
     
@@ -683,6 +866,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a11-q01-label">Question 1 — Calculer la probabilité que le cheval choisi ne participe pas à une compétition.</h3>
             
@@ -699,6 +883,7 @@
         </div>
         
         <div class="cours-question" data-question="q02">
+            
             
             <h3 id="a11-q02-label">Question 2 — Que remarquez-vous en additionnant les deux probabilités ?</h3>
             
@@ -720,16 +905,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a10">← Étape précédente</a>
+            <a class="course-mission-next" href="#a12">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a12">
-        <h2>Activité 10 — 4. Calcul littéral : comprendre et transformer une formule</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 10</span></div>
+        <h2>4. Calcul littéral : comprendre et transformer une formule</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notion : expression littérale, réduction et développement.</p>
     
@@ -755,16 +947,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a11">← Étape précédente</a>
+            <a class="course-mission-next" href="#a13">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a13">
-        <h2>Activité 11 — Exercice 1 : Réduire une expression</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 11</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 1 : Réduire une expression</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi commencer par réduire ? Réduire permet de regrouper les termes semblables pour obtenir une expression plus simple, sans changer sa valeur.</p>
     
@@ -773,6 +972,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a13-q01-label">Question 1 — Réduire : 4x + 3x.</h3>
             
@@ -790,6 +990,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a13-q02-label">Question 2 — Réduire : 7x - 2x + 4.</h3>
             
 
@@ -806,6 +1007,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a13-q03-label">Question 3 — Réduire : 3x² + 2x².</h3>
             
 
@@ -820,16 +1022,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a12">← Étape précédente</a>
+            <a class="course-mission-next" href="#a14">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a14">
-        <h2>Activité 12 — Exercice 2 : Développer une expression</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 12</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 2 : Développer une expression</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Développer permet de transformer une multiplication contenant une somme ou une différence en une expression sans parenthèses.</p>
     
@@ -838,6 +1047,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a14-q01-label">Question 1 — Développer : 3(x + 4).</h3>
             
@@ -854,6 +1064,7 @@
         </div>
         
         <div class="cours-question" data-question="q02">
+            
             
             <h3 id="a14-q02-label">Question 2 — Développer : 5(2x - 3).</h3>
             
@@ -878,16 +1089,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a13">← Étape précédente</a>
+            <a class="course-mission-next" href="#a15">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a15">
-        <h2>Activité 13 — Exercice 3 : Développer puis réduire</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 13</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 3 : Développer puis réduire</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Nous allons combiner les deux méthodes précédentes pour simplifier une expression plus complète.</p>
     
@@ -896,6 +1114,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a15-q01-label">Question 1 — Développer puis réduire : 2(x + 3) + 4x.</h3>
             
@@ -911,16 +1130,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a14">← Étape précédente</a>
+            <a class="course-mission-next" href="#a16">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a16">
-        <h2>Activité 14 — Exercice 4 : Utiliser une expression littérale</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 14</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 4 : Utiliser une expression littérale</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Une formule devient utile lorsqu&#39;elle permet de calculer un résultat concret à partir d&#39;une valeur connue.</p>
     
@@ -929,6 +1155,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a16-q01-label">Question 1 — Calculer 2x² + 3x - 1 pour x = 2.</h3>
             
@@ -945,6 +1172,7 @@
         </div>
         
         <div class="cours-question" data-question="q02">
+            
             
             <h3 id="a16-q02-label">Question 2 — Expliquer pourquoi 3x + 2 ne peut pas être réduit en 5x.</h3>
             
@@ -966,16 +1194,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a15">← Étape précédente</a>
+            <a class="course-mission-next" href="#a17">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a17">
-        <h2>Activité 15 — 5. Problème de synthèse : préparer un achat professionnel</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 15</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>5. Problème de synthèse : préparer un achat professionnel</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notion : pourcentage, coût total, budget et résolution de problème.</p>
     
@@ -1014,6 +1249,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a17-q01-label">Question 1 — Calculer le montant de la réduction.</h3>
             
@@ -1031,6 +1267,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a17-q02-label">Question 2 — Calculer le prix après réduction.</h3>
             
 
@@ -1047,6 +1284,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a17-q03-label">Question 3 — Calculer le coût total avec la livraison.</h3>
             
 
@@ -1062,6 +1300,7 @@
         </div>
         
         <div class="cours-question" data-question="q04">
+            
             
             <h3 id="a17-q04-label">Question 4 — Le budget est-il suffisant ? Justifier.</h3>
             
@@ -1082,6 +1321,7 @@
         
         <div class="cours-question" data-question="q05">
             
+            
             <h3 id="a17-q05-label">Question 5 — Comprendre ce que l&#39;on cherche.</h3>
             
 
@@ -1097,6 +1337,7 @@
         </div>
         
         <div class="cours-question" data-question="q06">
+            
             
             <h3 id="a17-q06-label">Question 6 — Repérer les données utiles.</h3>
             
@@ -1114,6 +1355,7 @@
         
         <div class="cours-question" data-question="q07">
             
+            
             <h3 id="a17-q07-label">Question 7 — Choisir les calculs et leur ordre.</h3>
             
 
@@ -1129,6 +1371,7 @@
         </div>
         
         <div class="cours-question" data-question="q08">
+            
             
             <h3 id="a17-q08-label">Question 8 — Faire apparaître les étapes du raisonnement.</h3>
             
@@ -1146,6 +1389,7 @@
         
         <div class="cours-question" data-question="q09">
             
+            
             <h3 id="a17-q09-label">Question 9 — Vérifier le résultat et répondre par une phrase.</h3>
             
 
@@ -1160,16 +1404,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a16">← Étape précédente</a>
+            <a class="course-mission-next" href="#a18">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a18">
-        <h2>Activité 16 — 6. Mon bilan après deux séances</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 16</span></div>
+        <h2>6. Mon bilan après deux séances</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi ce bilan ? Il permet de reconnaître vos progrès et d&#39;identifier les notions à consolider avant de poursuivre.</p>
     
@@ -1192,16 +1443,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a17">← Étape précédente</a>
+            <a class="course-mission-next" href="#a19">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a19">
-        <h2>Activité 17 — 7. Ce que je dois savoir faire</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 17</span></div>
+        <h2>7. Ce que je dois savoir faire</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>À l&#39;issue de cette séance, je dois progressivement être capable de :</p>
     
@@ -1212,16 +1470,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a18">← Étape précédente</a>
+            <a class="course-mission-next" href="#a20">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a20">
-        <h2>Activité 18 — À retenir</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 18</span></div>
+        <h2>À retenir</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <ul><li>La moyenne, la médiane et l&#39;étendue apportent des informations différentes sur une série statistique.</li><li>Une statistique doit être interprétée dans son contexte et accompagnée de son unité.</li><li>Une probabilité est comprise entre 0 et 1, soit entre 0 % et 100 %.</li><li>La probabilité d&#39;un événement et celle de son contraire ont pour somme 1.</li><li>Réduire consiste à regrouper des termes semblables.</li><li>Développer consiste notamment à utiliser la distributivité.</li><li>Une formule permet de réaliser un même calcul avec différentes valeurs.</li><li>Dans un problème, les étapes du raisonnement doivent apparaître.</li><li>La calculatrice et le tableur effectuent les calculs, mais ne remplacent pas la compréhension des méthodes.</li></ul>
     
@@ -1229,16 +1494,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a19">← Étape précédente</a>
+            <a class="course-mission-next" href="#a21">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a21">
-        <h2>Activité 19 — Sources et ressources</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 19</span></div>
+        <h2>Sources et ressources</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <ul><li>Chlorofil – Baccalauréat professionnel : tronc commun – référentiel et documents d&#39;accompagnement.</li><li>Chlorofil – Document d&#39;accompagnement MG1 – automatismes, statistiques, probabilités et pratique algébrique.</li><li>Chlorofil – Bac professionnel Conduite et gestion de l&#39;entreprise hippique – référentiel de spécialité.</li></ul>
     
@@ -1255,6 +1527,11 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a20">← Étape précédente</a>
+            <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
 </section>
@@ -1283,16 +1560,18 @@
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
+
 
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
 
     </main>
     <footer class="site-footer">
     <p>
         &copy; 2026
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
     </p>
 </footer>
-<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
 </body>
 </html>

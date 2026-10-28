@@ -2,20 +2,23 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="supabase-url" content="https://evbfflwfyiitrkgzjhwt.supabase.co">
+    <meta name="supabase-publishable-key" content="sb_publishable__aRCAzLQv4TmSL0Z1yvcZQ_Nbwd2Ah6">
 
     <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
 
     
-    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preconnect" href="https://evbfflwfyiitrkgzjhwt.supabase.co" crossorigin>
     <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
     <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
     
 
     <title>
         
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
         
     </title>
 
@@ -38,15 +41,17 @@
     
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css?v=20261022-shop-effects-2">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-learning-sequence.css">
     
     
 
@@ -54,11 +59,14 @@
 
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261022-quest-ui-2">
     
     
-<link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
+    
 </head>
 
 <body class="student-shell student-course-shell">
@@ -83,6 +91,9 @@
 
     <main class="student-course-main" id="student-course-main">
 
+
+
+
 <div id="course-work" data-etablissement="mfr" data-matiere="maths" data-classe="term" data-seance="S00" data-saving-enabled="true" data-collaboration-enabled="true">
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
@@ -105,8 +116,6 @@
     <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
     <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
 
-
-
 <div class="course-columns">
     <aside class="course-navigation" aria-label="Étapes de la séance">
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
@@ -119,7 +128,21 @@
 <!-- ========== INTRODUCTION DU COURS ========== -->
 
 <header class="cours-intro" id="course-intro">
+    
+    
+    
+    <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Mathématiques · Bac Pro 2 · S00</span></div>
     <h1>Gérer le stock de foin d&#39;une écurie avec les suites</h1>
+    <aside class="course-learning-sequence" aria-label="Comment avancer dans le cours">
+        <strong>Pour avancer</strong>
+        <ol>
+            <li>Lis les repères et les étapes.</li>
+            <li>Observe l’exemple s’il y en a un.</li>
+            <li>Essaie à ton tour avec les questions.</li>
+            <li>Réutilise une méthode déjà rencontrée.</li>
+        </ol>
+        <p>Tu peux garder le cours ouvert et utiliser les aides si tu bloques.</p>
+    </aside>
 
     
     <p class="cours-theme">
@@ -133,13 +156,13 @@
     </p>
     
 
-    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : Comprendre comment les pourcentages permettent de décrire une évolution.</p></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : Comprendre comment les pourcentages permettent de décrire une évolution.</p></section>
     
-    <section><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
-    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
+    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
     
     
-    <section class="cours-objectifs">
+    <section class="course-info-card cours-objectifs">
         <h2>Ce que vous allez apprendre</h2>
         <ul>
             
@@ -198,7 +221,95 @@
 
 </header>
 
-    <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title"><article class="course-paper-sheet"><header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Prévoir le stock de foin</h2><p>Garde cette fiche à côté de toi. Lis une étape, fais le calcul, puis compare avec la ligne suivante. Le but est de prévoir si le stock restera suffisant.</p></header><section class="course-paper-section"><h3>1. Calculer un pourcentage</h3><p>Un pourcentage, c’est une part sur 100. Pour diminuer une quantité de 12 %, il en reste 100 % − 12 % = 88 %.</p><ol><li>88 % = 0,88.</li><li>Après la consommation : stock × 0,88.</li><li>Exemple avec 50 tonnes : 50 × 0,88 = 44 tonnes.</li></ol></section><section class="course-paper-section"><h3>2. Ajouter une livraison chaque mois</h3><p>Le stock baisse d’abord avec la consommation, puis on ajoute les 2 tonnes livrées. L’ordre compte : on ne consomme pas les tonnes qui ne sont pas encore livrées.</p><ol><li>Stock du mois suivant = stock actuel × 0,88 + 2.</li><li>Départ : u₀ = 50 tonnes.</li><li>Après un mois : u₁ = 50 × 0,88 + 2 = 46 tonnes.</li><li>Après deux mois : u₂ = 46 × 0,88 + 2 = 42,48 tonnes.</li></ol></section><section class="course-paper-section"><h3>3. Reproduire la suite dans Calc ou Excel</h3><p>Un tableur recopie les mêmes étapes sans refaire les calculs à la main. La première cellule contient le stock de départ ; la cellule suivante contient la formule.</p><ul><li>A1 : Mois ; B1 : Stock (t).</li><li>A2 : 0 ; B2 : 50.</li><li>A3 : 1 ; B3 : =B2*0,88+2. Recopie la formule vers le bas.</li><li>Ajoute une colonne « Seuil de sécurité » avec 25 sur chaque ligne. Compare le stock à ce seuil.</li></ul><ol class="course-paper-questions"><li><span>Explique ce que représente une ligne du tableau.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>À partir de quel mois faut-il réagir si le stock passe sous le seuil ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>4. Comprendre le stock d’équilibre</h3><p>Le stock d’équilibre est la valeur vers laquelle le stock se rapproche si on répète toujours la même règle. À l’équilibre, le stock du mois suivant est égal au stock actuel.</p><ol><li>On pose x = 0,88x + 2.</li><li>On retire 0,88x des deux côtés : 0,12x = 2.</li><li>On divise par 0,12 : x = 2 ÷ 0,12 ≈ 16,67 tonnes.</li><li>Ce niveau est inférieur au seuil de 25 tonnes : les livraisons prévues ne suffisent pas à maintenir le stock de sécurité.</li></ol></section><section class="course-paper-section"><h3>5. La conclusion professionnelle</h3><p>Les calculs aident à décider, mais ils ne remplacent pas le responsable. Il faut aussi vérifier les dates de livraison, la météo, le nombre d’animaux et la consommation réelle.</p><ol class="course-paper-questions"><li><span>Écris une recommandation au responsable : que doit-il surveiller et que peut-il changer ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je m’entraîne — même méthode que dans le cours</h3><p>Reprends les étapes de l’exemple juste au-dessus. Écris une ligne par étape et garde les unités.</p><ol class="course-paper-questions"><li><span>Un stock commence à 40 t. Il diminue de 10 %, puis on livre 3 t. Calcule le stock du mois suivant.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Recommence le calcul pour le mois d’après.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Explique pourquoi il faut multiplier par 0,90 avant d’ajouter les 3 t.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je transfère — une situation nouvelle</h3><p>Cette fois, les nombres ou le contexte changent. Commence par identifier ce que l’on cherche, puis choisis la méthode qui convient.</p><ol class="course-paper-questions"><li><span>Une réserve d’eau contient 1 200 L. Elle perd 8 % par semaine et reçoit 50 L chaque semaine. Écris la formule de calcul du volume suivant.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Dans un tableur, quelle formule entrer si le volume est en B2 ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Le seuil d’alerte est 400 L. Explique comment le tableur peut aider à repérer le mois d’alerte.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section></article></section>
+<section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
+    <article class="course-paper-sheet">
+        <header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Prévoir le stock de foin</h2><p>Garde cette fiche à côté de toi. Lis une étape, fais le calcul, puis compare avec la ligne suivante. Le but est de prévoir si le stock restera suffisant.</p></header>
+        
+        <section class="course-paper-section">
+            <h3>1. Calculer un pourcentage</h3>
+            
+<p>Un pourcentage, c’est une part sur 100. Pour diminuer une quantité de 12 %, il en reste 100 % − 12 % = 88 %.</p>
+    
+
+<ol><li>88 % = 0,88.</li><li>Après la consommation : stock × 0,88.</li><li>Exemple avec 50 tonnes : 50 × 0,88 = 44 tonnes.</li></ol>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>2. Ajouter une livraison chaque mois</h3>
+            
+<p>Le stock baisse d’abord avec la consommation, puis on ajoute les 2 tonnes livrées. L’ordre compte : on ne consomme pas les tonnes qui ne sont pas encore livrées.</p>
+    
+
+<ol><li>Stock du mois suivant = stock actuel × 0,88 + 2.</li><li>Départ : u₀ = 50 tonnes.</li><li>Après un mois : u₁ = 50 × 0,88 + 2 = 46 tonnes.</li><li>Après deux mois : u₂ = 46 × 0,88 + 2 = 42,48 tonnes.</li></ol>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>3. Reproduire la suite dans Calc ou Excel</h3>
+            
+<p>Un tableur recopie les mêmes étapes sans refaire les calculs à la main. La première cellule contient le stock de départ ; la cellule suivante contient la formule.</p>
+    
+
+<ul><li>A1 : Mois ; B1 : Stock (t).</li><li>A2 : 0 ; B2 : 50.</li><li>A3 : 1 ; B3 : =B2*0,88+2. Recopie la formule vers le bas.</li><li>Ajoute une colonne « Seuil de sécurité » avec 25 sur chaque ligne. Compare le stock à ce seuil.</li></ul>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Explique ce que représente une ligne du tableau.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>À partir de quel mois faut-il réagir si le stock passe sous le seuil ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>4. Comprendre le stock d’équilibre</h3>
+            
+<p>Le stock d’équilibre est la valeur vers laquelle le stock se rapproche si on répète toujours la même règle. À l’équilibre, le stock du mois suivant est égal au stock actuel.</p>
+    
+
+<ol><li>On pose x = 0,88x + 2.</li><li>On retire 0,88x des deux côtés : 0,12x = 2.</li><li>On divise par 0,12 : x = 2 ÷ 0,12 ≈ 16,67 tonnes.</li><li>Ce niveau est inférieur au seuil de 25 tonnes : les livraisons prévues ne suffisent pas à maintenir le stock de sécurité.</li></ol>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>5. La conclusion professionnelle</h3>
+            
+<p>Les calculs aident à décider, mais ils ne remplacent pas le responsable. Il faut aussi vérifier les dates de livraison, la météo, le nombre d’animaux et la consommation réelle.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Écris une recommandation au responsable : que doit-il surveiller et que peut-il changer ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Je m’entraîne — même méthode que dans le cours</h3>
+            
+<p>Reprends les étapes de l’exemple juste au-dessus. Écris une ligne par étape et garde les unités.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Un stock commence à 40 t. Il diminue de 10 %, puis on livre 3 t. Calcule le stock du mois suivant.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Recommence le calcul pour le mois d’après.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Explique pourquoi il faut multiplier par 0,90 avant d’ajouter les 3 t.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Je transfère — une situation nouvelle</h3>
+            
+<p>Cette fois, les nombres ou le contexte changent. Commence par identifier ce que l’on cherche, puis choisis la méthode qui convient.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Une réserve d’eau contient 1 200 L. Elle perd 8 % par semaine et reçoit 50 L chaque semaine. Écris la formule de calcul du volume suivant.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Dans un tableur, quelle formule entrer si le volume est en B2 ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Le seuil d’alerte est 400 L. Explique comment le tableur peut aider à repérer le mois d’alerte.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+    </article>
+</section>
+
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
         <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
@@ -206,13 +317,15 @@
 <section class="cours-activites">
     
     <article class="cours-activite" id="a03">
-        <h2>Activité 1 — Préparation — Votre document de travail</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span></div>
+        <h2>Préparation — Votre document de travail</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Travaillez en binôme. Chacun doit être capable d&#39;expliquer les calculs réalisés.</p>
     
@@ -226,16 +339,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a04">
-        <h2>Activité 2 — 1. Automatismes — Pourcentages et calcul mental 15 min</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>1. Automatismes — Pourcentages et calcul mental 15 min</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Calculatrice : interdite.</p>
     
@@ -247,6 +367,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a04-q01-label">Question 1 — 1. Une tonne de granulés coûte 450 €. Son prix augmente de 4 %. Quel est son nouveau prix ?</h3>
             
@@ -271,6 +392,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a04-q02-label">Question 2 — 2. Une quantité est multipliée par 0,92 chaque mois. Quel est son pourcentage d&#39;évolution ?</h3>
             
 
@@ -290,6 +412,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a04-q03-label">Question 3 — 3. Un stock de 50 tonnes diminue de 12 %. Quelle quantité reste-t-il ?</h3>
             
@@ -314,6 +437,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a04-q04-label">Question 4 — 4. Quel coefficient multiplicateur correspond à une diminution de 12 % ?</h3>
             
 
@@ -332,16 +456,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a05">
-        <h2>Activité 3 — 2. Retour de stage — Comment gérer le foin ? 20 min</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>2. Retour de stage — Comment gérer le foin ? 20 min</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Calculatrice : non nécessaire.</p>
     
@@ -353,6 +484,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a05-q01-label">Question 1 — 1. Comment le responsable de votre structure surveille-t-il les quantités de foin disponibles ?</h3>
             
@@ -370,6 +502,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a05-q02-label">Question 2 — 2. Les achats se font-ils à dates fixes, en une grande livraison, ou seulement lorsque le stock diminue ?</h3>
             
 
@@ -386,6 +519,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a05-q03-label">Question 3 — 3. Quels problèmes peut provoquer un stock de foin trop faible ? Et un stock beaucoup trop important ?</h3>
             
 
@@ -401,6 +535,7 @@
         </div>
         
         <div class="cours-question" data-question="q04">
+            
             
             <h3 id="a05-q04-label">Question 4 — 4. Quels éléments peuvent modifier la consommation de foin ?</h3>
             
@@ -420,16 +555,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
+            <a class="course-mission-next" href="#a06">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a06">
-        <h2>Activité 4 — Le problème à résoudre</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span></div>
+        <h2>Le problème à résoudre</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Une écurie héberge 20 chevaux. Au 1er novembre, elle possède 60 tonnes de foin.</p>
     
@@ -449,16 +591,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a05">← Étape précédente</a>
+            <a class="course-mission-next" href="#a07">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a07">
-        <h2>Activité 5 — 3. Recherche — Prévoir l&#39;évolution du stock 40 min</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 5</span></div>
+        <h2>3. Recherche — Prévoir l&#39;évolution du stock 40 min</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Travail en binôme.</p>
     
@@ -478,21 +627,29 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a06">← Étape précédente</a>
+            <a class="course-mission-next" href="#a08">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a08">
-        <h2>Activité 6 — A. Traduire la situation en calcul</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 6</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>A. Traduire la situation en calcul</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a08-q01-label">Question 1 — 1. Après une consommation de 12 %, quel pourcentage du stock reste-t-il ?</h3>
             
@@ -514,6 +671,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a08-q02-label">Question 2 — 2. Complétez le calcul du stock restant après consommation :</h3>
             
 
@@ -534,6 +692,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a08-q03-label">Question 3 — 3. Le responsable achète ensuite 2 tonnes. Complétez la relation :</h3>
             
 
@@ -552,21 +711,29 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a07">← Étape précédente</a>
+            <a class="course-mission-next" href="#a09">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a09">
-        <h2>Activité 7 — B. Calculer les trois premiers mois</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 7</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>B. Calculer les trois premiers mois</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a09-q01-label">Question 1 — 4. Calculez u₁, le stock disponible après un mois.</h3>
             
@@ -591,6 +758,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a09-q02-label">Question 2 — 5. Calculez u₂, le stock disponible après deux mois.</h3>
             
 
@@ -614,6 +782,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a09-q03-label">Question 3 — 6. Calculez u₃, le stock disponible après trois mois.</h3>
             
 
@@ -635,16 +804,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a08">← Étape précédente</a>
+            <a class="course-mission-next" href="#a10">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a10">
-        <h2>Activité 8 — C. Quand le stock devient-il insuffisant ?</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 8</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>C. Quand le stock devient-il insuffisant ?</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Le responsable souhaite conserver au moins 25 tonnes de foin.</p>
     
@@ -653,6 +829,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a10-q01-label">Question 1 — 7. Poursuivez les calculs à l&#39;aide de la calculatrice. Complétez le tableau jusqu&#39;au mois où le stock passe sous 25 tonnes.</h3>
             
@@ -674,6 +851,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a10-q02-label">Question 2 — 8. Le responsable peut-il conserver durablement un stock supérieur à 25 tonnes en achetant seulement 2 tonnes par mois ? Justifiez avec vos résultats.</h3>
             
 
@@ -688,16 +866,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a09">← Étape précédente</a>
+            <a class="course-mission-next" href="#a11">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a11">
-        <h2>Activité 9 — 4. Comprendre la suite — Vers quel stock se dirige-t-on ? 20 min</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 9</span></div>
+        <h2>4. Comprendre la suite — Vers quel stock se dirige-t-on ? 20 min</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Calculatrice : autorisée.</p>
     
@@ -708,16 +893,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a10">← Étape précédente</a>
+            <a class="course-mission-next" href="#a12">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a12">
-        <h2>Activité 10 — A. Trouver le stock d&#39;équilibre</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 10</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>A. Trouver le stock d&#39;équilibre</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>On cherche une quantité L qui resterait identique d&#39;un mois à l&#39;autre dans notre modèle.</p>
     
@@ -732,6 +924,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a12-q01-label">Question 1 — 1. Résolvez cette équation.</h3>
             
@@ -748,6 +941,7 @@
         </div>
         
         <div class="cours-question" data-question="q02">
+            
             
             <h3 id="a12-q02-label">Question 2 — 2. Quelle est la valeur du stock d&#39;équilibre, arrondie au centième ?</h3>
             
@@ -769,6 +963,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a12-q03-label">Question 3 — 3. Ce stock d&#39;équilibre est-il supérieur ou inférieur au seuil de 25 tonnes ? Que peut-on en conclure ?</h3>
             
 
@@ -783,16 +978,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a11">← Étape précédente</a>
+            <a class="course-mission-next" href="#a13">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a13">
-        <h2>Activité 11 — B. Comprendre ce qu&#39;est une suite géométrique</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 11</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>B. Comprendre ce qu&#39;est une suite géométrique</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Une suite géométrique est une suite dans laquelle chaque terme s&#39;obtient en multipliant le précédent par un même nombre, appelé raison.</p>
     
@@ -810,6 +1012,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a13-q01-label">Question 1 — 4. Notre suite un+₁ = 0,88un + 2 est-elle directement géométrique ?</h3>
             
@@ -832,16 +1035,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a12">← Étape précédente</a>
+            <a class="course-mission-next" href="#a14">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a14">
-        <h2>Activité 12 — C. Faire apparaître une véritable suite géométrique</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 12</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>C. Faire apparaître une véritable suite géométrique</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>On décide d&#39;étudier l&#39;écart entre le stock du mois n et le stock d&#39;équilibre.</p>
     
@@ -862,6 +1072,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a14-q01-label">Question 1 — 5. La suite v est-elle géométrique ? Si oui, quelle est sa raison ?</h3>
             
@@ -881,16 +1092,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a13">← Étape précédente</a>
+            <a class="course-mission-next" href="#a15">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a15">
-        <h2>Activité 13 — À retenir</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 13</span></div>
+        <h2>À retenir</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Une suite géométrique de premier terme v₀ et de raison q vérifie :</p>
     
@@ -913,16 +1131,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a14">← Étape précédente</a>
+            <a class="course-mission-next" href="#a16">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a16">
-        <h2>Activité 14 — 5. Application numérique — Simuler les stocks avec un tableur 20 min</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 14</span></div>
+        <h2>5. Application numérique — Simuler les stocks avec un tableur 20 min</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Calculatrice et ordinateur : autorisés.</p>
     
@@ -933,16 +1158,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a15">← Étape précédente</a>
+            <a class="course-mission-next" href="#a17">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a17">
-        <h2>Activité 15 — A. Construire le tableau</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 15</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>A. Construire le tableau</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Ouvrez un nouveau classeur.</p>
     
@@ -975,6 +1207,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a17-q01-label">Question 1 — 1. Quel stock obtient-on au mois 24 ? Arrondissez au centième.</h3>
             
@@ -994,16 +1227,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a16">← Étape précédente</a>
+            <a class="course-mission-next" href="#a18">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a18">
-        <h2>Activité 16 — B. Représenter graphiquement l&#39;évolution</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 16</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>B. Représenter graphiquement l&#39;évolution</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Sélectionnez les cellules A1 à B26.</p>
     
@@ -1018,6 +1258,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a18-q01-label">Question 1 — Vérifiez que les mois sont sur l&#39;axe horizontal et le stock sur l&#39;axe vertical.</h3>
             
@@ -1038,6 +1279,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a18-q02-label">Question 2 — Indiquez les unités des deux axes.</h3>
             
 
@@ -1053,6 +1295,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a18-q03-label">Question 3 — 2. Comment évolue le stock ? Sa diminution semble-t-elle ralentir, accélérer ou rester identique chaque mois ?</h3>
             
@@ -1070,6 +1313,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a18-q04-label">Question 4 — 3. La courbe paraît se rapprocher d&#39;une valeur. Laquelle ? Retrouvez-vous le résultat calculé précédemment ?</h3>
             
 
@@ -1084,16 +1328,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a17">← Étape précédente</a>
+            <a class="course-mission-next" href="#a19">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a19">
-        <h2>Activité 17 — C. Prendre en compte l&#39;inflation</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 17</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>C. Prendre en compte l&#39;inflation</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Le stock n&#39;est pas la seule donnée qui intéresse le responsable. Le coût d&#39;achat peut également évoluer.</p>
     
@@ -1105,6 +1356,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a19-q01-label">Question 1 — 4. Quel coefficient multiplicateur représente cette hausse annuelle de 3 % ?</h3>
             
@@ -1126,6 +1378,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a19-q02-label">Question 2 — 5. Si P₀ représente le prix initial d&#39;une tonne de foin, écrivez le prix Pa après a années.</h3>
             
 
@@ -1146,6 +1399,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a19-q03-label">Question 3 — 6. Expliquez pourquoi attendre le dernier moment pour acheter du foin peut être risqué lorsque les prix augmentent.</h3>
             
 
@@ -1160,16 +1414,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a18">← Étape précédente</a>
+            <a class="course-mission-next" href="#a20">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a20">
-        <h2>Activité 18 — 6. Bilan — Conseiller le responsable de l&#39;écurie 5 min</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 18</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>6. Bilan — Conseiller le responsable de l&#39;écurie 5 min</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Calculatrice : non nécessaire.</p>
     
@@ -1178,6 +1439,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a20-q01-label">Question 1 — Rédigez votre conclusion :</h3>
             
@@ -1197,16 +1459,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a19">← Étape précédente</a>
+            <a class="course-mission-next" href="#a21">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a21">
-        <h2>Activité 19 — Pour le prochain retour de stage</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 19</span></div>
+        <h2>Pour le prochain retour de stage</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Recherchez, si ces informations sont accessibles dans votre structure :</p>
     
@@ -1220,16 +1489,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a20">← Étape précédente</a>
+            <a class="course-mission-next" href="#a22">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a22">
-        <h2>Activité 20 — À retenir</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 20</span></div>
+        <h2>À retenir</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <ul><li>Une baisse de 12 % correspond à multiplier par 0,88.</li><li>Une suite permet de représenter l&#39;évolution d&#39;une quantité au cours du temps.</li><li>Dans notre modèle : un+₁ = 0,88un + 2.</li><li>Cette suite est arithmético-géométrique, et non directement géométrique.</li><li>Une suite géométrique vérifie vn+₁ = q × vn.</li><li>Son terme général est vn = v₀ × qn.</li><li>Le stock étudié tend vers 16,67 tonnes.</li><li>Le seuil des 25 tonnes est franchi au mois 13.</li><li>Une simulation doit toujours être interprétée à partir des contraintes réelles de l&#39;entreprise.</li></ul>
     
@@ -1237,6 +1513,11 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a21">← Étape précédente</a>
+            <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
 </section>
@@ -1265,16 +1546,18 @@
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
+
 
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
 
     </main>
     <footer class="site-footer">
     <p>
         &copy; 2026
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
     </p>
 </footer>
-<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
 </body>
 </html>

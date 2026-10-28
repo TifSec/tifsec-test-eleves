@@ -2,20 +2,23 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="supabase-url" content="https://evbfflwfyiitrkgzjhwt.supabase.co">
+    <meta name="supabase-publishable-key" content="sb_publishable__aRCAzLQv4TmSL0Z1yvcZQ_Nbwd2Ah6">
 
     <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
 
     
-    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preconnect" href="https://evbfflwfyiitrkgzjhwt.supabase.co" crossorigin>
     <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
     <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
     
 
     <title>
         
-        Portail pédagogique Technologie | TIM | Mathématiques
+        Bilan de compétences – Calculer, modéliser et décider | BAC À SABLE — Portail pédagogique (comptes fictifs)
         
     </title>
 
@@ -38,15 +41,17 @@
     
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css?v=20261022-shop-effects-2">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-learning-sequence.css">
     
     
 
@@ -54,11 +59,14 @@
 
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261022-quest-ui-2">
     
     
-<link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
+    
 </head>
 
 <body class="student-shell student-course-shell">
@@ -83,6 +91,9 @@
 
     <main class="student-course-main" id="student-course-main">
 
+
+
+
 <div id="course-work" data-etablissement="mfr" data-matiere="maths" data-classe="term" data-seance="S08" data-saving-enabled="true" data-collaboration-enabled="true">
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
@@ -105,8 +116,6 @@
     <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
     <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
 
-
-
 <div class="course-columns">
     <aside class="course-navigation" aria-label="Étapes de la séance">
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
@@ -119,7 +128,21 @@
 <!-- ========== INTRODUCTION DU COURS ========== -->
 
 <header class="cours-intro" id="course-intro">
+    
+    
+    
+    <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Mathématiques · Bac Pro 2 · S08</span></div>
     <h1>Bilan de compétences – Calculer, modéliser et décider</h1>
+    <aside class="course-learning-sequence" aria-label="Comment avancer dans le cours">
+        <strong>Pour avancer</strong>
+        <ol>
+            <li>Lis les repères et les étapes.</li>
+            <li>Observe l’exemple s’il y en a un.</li>
+            <li>Essaie à ton tour avec les questions.</li>
+            <li>Réutilise une méthode déjà rencontrée.</li>
+        </ol>
+        <p>Tu peux garder le cours ouvert et utiliser les aides si tu bloques.</p>
+    </aside>
 
     
     <p class="cours-theme">
@@ -133,13 +156,13 @@
     </p>
     
 
-    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Depuis plusieurs séances, nous utilisons les mathématiques pour prévoir des dépenses, comparer des prestations, rechercher un coût minimal et respecter un budget.</p></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi étudier ce sujet ?</h2><p>Depuis plusieurs séances, nous utilisons les mathématiques pour prévoir des dépenses, comparer des prestations, rechercher un coût minimal et respecter un budget.</p></section>
     
-    <section><h2>Dans la vie quotidienne</h2><p>un centre équestre prépare l&#39;achat de matériel pour une journée d&#39;animation.</p></section>
-    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>un centre équestre prépare l&#39;achat de matériel pour une journée d&#39;animation.</p></section>
+    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
     
     
-    <section class="cours-objectifs">
+    <section class="course-info-card cours-objectifs">
         <h2>Ce que vous allez apprendre</h2>
         <ul>
             
@@ -170,7 +193,43 @@
 
 </header>
 
-    <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title"><article class="course-paper-sheet"><header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Méthodes à garder en tête pour le bilan</h2><p>Cette fiche rappelle comment t’organiser. Elle ne contient aucune réponse au bilan : c’est ton travail qui montrera ce que tu sais faire.</p></header><section class="course-paper-section"><h3>1. Pour chaque problème</h3><ul><li>Souligne la question : qu’est-ce qu’on cherche ?</li><li>Entoure les données utiles et leurs unités.</li><li>Choisis une formule ou une méthode.</li><li>Montre les calculs dans l’ordre.</li><li>Réponds par une phrase et vérifie que le résultat est possible.</li></ul></section><section class="course-paper-section"><h3>2. Repères de calcul</h3><ul><li>Pour une fonction : remplace x par la valeur donnée, puis respecte les priorités.</li><li>Pour une égalité : fais la même opération des deux côtés.</li><li>Pour un minimum en forme canonique : le carré vaut au minimum zéro.</li><li>Pour comparer deux offres : utilise la même valeur de x et les mêmes unités.</li><li>Pour une contrainte : traduis « au plus » par ≤ et « au moins » par ≥, puis vérifie le résultat dans le contexte.</li></ul></section><section class="course-paper-section"><h3>3. Présenter un raisonnement lisible</h3><p>Laisse une ligne par étape. N’efface pas les calculs qui permettent de comprendre ton raisonnement. Une calculatrice peut vérifier un résultat ; elle ne remplace pas l’explication.</p><ol class="course-paper-questions"><li><span>Avant de rendre, relis chaque consigne et vérifie que tu as répondu à toutes les parties.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section></article></section>
+<section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
+    <article class="course-paper-sheet">
+        <header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Méthodes à garder en tête pour le bilan</h2><p>Cette fiche rappelle comment t’organiser. Elle ne contient aucune réponse au bilan : c’est ton travail qui montrera ce que tu sais faire.</p></header>
+        
+        <section class="course-paper-section">
+            <h3>1. Pour chaque problème</h3>
+            
+<ul><li>Souligne la question : qu’est-ce qu’on cherche ?</li><li>Entoure les données utiles et leurs unités.</li><li>Choisis une formule ou une méthode.</li><li>Montre les calculs dans l’ordre.</li><li>Réponds par une phrase et vérifie que le résultat est possible.</li></ul>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>2. Repères de calcul</h3>
+            
+<ul><li>Pour une fonction : remplace x par la valeur donnée, puis respecte les priorités.</li><li>Pour une égalité : fais la même opération des deux côtés.</li><li>Pour un minimum en forme canonique : le carré vaut au minimum zéro.</li><li>Pour comparer deux offres : utilise la même valeur de x et les mêmes unités.</li><li>Pour une contrainte : traduis « au plus » par ≤ et « au moins » par ≥, puis vérifie le résultat dans le contexte.</li></ul>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>3. Présenter un raisonnement lisible</h3>
+            
+<p>Laisse une ligne par étape. N’efface pas les calculs qui permettent de comprendre ton raisonnement. Une calculatrice peut vérifier un résultat ; elle ne remplace pas l’explication.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Avant de rendre, relis chaque consigne et vérifie que tu as répondu à toutes les parties.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+    </article>
+</section>
+
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
         <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
@@ -178,13 +237,15 @@
 <section class="cours-activites">
     
     <article class="cours-activite" id="a02">
-        <h2>Activité 1 — À quoi sert cette évaluation ?</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span></div>
+        <h2>À quoi sert cette évaluation ?</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Depuis plusieurs séances, nous utilisons les mathématiques pour prévoir des dépenses, comparer des prestations, rechercher un coût minimal et respecter un budget.</p>
     
@@ -204,16 +265,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            
+            <a class="course-mission-next" href="#a03">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a03">
-        <h2>Activité 2 — 1. Automatismes et calculs professionnels</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>1. Automatismes et calculs professionnels</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Durée indicative : 7 minutes. Calculatrice interdite. Barème : 3 points.</p>
     
@@ -228,6 +296,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a03-q01-label">Question 1 — Calculer 15 % de 200 €. (0,5 point)</h3>
             
@@ -245,6 +314,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a03-q02-label">Question 2 — Un équipement coûte 240 €. Une remise de 25 % est accordée. Calculer son prix après remise. (1 point)</h3>
             
 
@@ -260,6 +330,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a03-q03-label">Question 3 — Résoudre l&#39;équation 5x + 15 = 60. (1 point)</h3>
             
@@ -277,6 +348,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a03-q04-label">Question 4 — Calculer 3² + 4². (0,5 point)</h3>
             
 
@@ -291,16 +363,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a02">← Étape précédente</a>
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a04">
-        <h2>Activité 3 — 2. Modéliser une prestation avec une fonction affine</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>2. Modéliser une prestation avec une fonction affine</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Durée indicative : 11 minutes. Calculatrice autorisée. Barème : 5 points.</p>
     
@@ -324,6 +403,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a04-q01-label">Question 1 — Écrire l&#39;expression de T(x). (1 point)</h3>
             
@@ -341,6 +421,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a04-q02-label">Question 2 — Expliquer ce que représentent 15 et 80 dans la formule. (1 point)</h3>
             
 
@@ -356,6 +437,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a04-q03-label">Question 3 — Calculer le coût du transport de huit équipements. (1 point)</h3>
             
@@ -373,6 +455,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a04-q04-label">Question 4 — Le centre dispose de 230 €. Combien d&#39;équipements peut-il transporter au maximum ? Justifier. (1,5 point)</h3>
             
 
@@ -389,6 +472,7 @@
         
         <div class="cours-question" data-question="q05">
             
+            
             <h3 id="a04-q05-label">Question 5 — Expliquer pourquoi onze équipements ne respectent pas ce budget. (0,5 point)</h3>
             
 
@@ -403,16 +487,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a05">
-        <h2>Activité 4 — 3. Rechercher un coût minimal et respecter un budget</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>3. Rechercher un coût minimal et respecter un budget</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Durée indicative : 14 minutes. Calculatrice autorisée. Barème : 6 points.</p>
     
@@ -436,6 +527,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a05-q01-label">Question 1 — Expliquer pourquoi C est une fonction du second degré. (0,5 point)</h3>
             
@@ -453,6 +545,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a05-q02-label">Question 2 — Calculer C(3), C(5) et C(7). (1,5 point)</h3>
             
 
@@ -469,6 +562,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a05-q03-label">Question 3 — Déterminer le coût minimal et le nombre d&#39;interventions correspondant. Justifier. (1,5 point)</h3>
             
 
@@ -484,6 +578,7 @@
         </div>
         
         <div class="cours-question" data-question="q04">
+            
             
             <h3 id="a05-q04-label">Question 4 — Donner les coordonnées du sommet de la parabole. (0,5 point)</h3>
             
@@ -507,6 +602,7 @@
         
         <div class="cours-question" data-question="q05">
             
+            
             <h3 id="a05-q05-label">Question 5 — Écrire l&#39;inéquation correspondant au budget. (0,5 point)</h3>
             
 
@@ -523,6 +619,7 @@
         
         <div class="cours-question" data-question="q06">
             
+            
             <h3 id="a05-q06-label">Question 6 — Résoudre cette inéquation et donner toutes les fréquences entières autorisées. (1,5 point)</h3>
             
 
@@ -537,16 +634,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
+            <a class="course-mission-next" href="#a06">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a06">
-        <h2>Activité 5 — 4. Comparer deux prestataires</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 5</span></div>
+        <h2>4. Comparer deux prestataires</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Durée indicative : 16 minutes. Calculatrice autorisée. Barème : 6 points.</p>
     
@@ -572,21 +676,29 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a05">← Étape précédente</a>
+            <a class="course-mission-next" href="#a07">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a07">
-        <h2>Activité 6 — Exercice 1 : Calculer et comparer</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 6</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 1 : Calculer et comparer</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a07-q01-label">Question 1 — Calculer les coûts des deux entreprises pour trois interventions. Indiquer laquelle est la moins chère. (1 point)</h3>
             
@@ -604,6 +716,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a07-q02-label">Question 2 — Calculer les coûts des deux entreprises pour six interventions. Indiquer laquelle est la moins chère. (1 point)</h3>
             
 
@@ -618,16 +731,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a06">← Étape précédente</a>
+            <a class="course-mission-next" href="#a08">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a08">
-        <h2>Activité 7 — Exercice 2 : Rechercher les points d&#39;égalité</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 7</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 2 : Rechercher les points d&#39;égalité</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Une équation permet de rechercher les fréquences pour lesquelles les deux entreprises proposent exactement le même coût.</p>
     
@@ -636,6 +756,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a08-q01-label">Question 1 — Écrire l&#39;équation A(x) = B(x), puis montrer qu&#39;elle peut s&#39;écrire x² - 12x + 32 = 0. (1,5 point)</h3>
             
@@ -653,6 +774,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a08-q02-label">Question 2 — Vérifier que x² - 12x + 32 = (x - 4)(x - 8), puis résoudre l&#39;équation à l&#39;aide de la règle du produit nul. (1,5 point)</h3>
             
 
@@ -669,6 +791,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a08-q03-label">Question 3 — Expliquer ce que représentent les solutions x = 4 et x = 8 dans cette situation professionnelle. (0,5 point)</h3>
             
 
@@ -683,16 +806,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a07">← Étape précédente</a>
+            <a class="course-mission-next" href="#a09">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a09">
-        <h2>Activité 8 — Exercice 3 : Conseiller le responsable</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 8</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 3 : Conseiller le responsable</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Les résultats mathématiques doivent permettre de prendre une décision qui respecte le besoin et le budget.</p>
     
@@ -704,6 +834,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a09-q01-label">Question 1 — Rédiger une recommandation indiquant l&#39;entreprise à choisir et justifier votre décision avec les coûts calculés. (0,5 point)</h3>
             
@@ -719,16 +850,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a08">← Étape précédente</a>
+            <a class="course-mission-next" href="#a10">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a10">
-        <h2>Activité 9 — 5. Mon bilan de compétences</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 9</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>5. Mon bilan de compétences</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Durée indicative : 5 minutes. Sans calculatrice.</p>
     
@@ -743,6 +881,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a10-q01-label">Question 1 — Quelle méthode maîtrises-tu le mieux ?</h3>
             
@@ -760,6 +899,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a10-q02-label">Question 2 — Quelle méthode souhaites-tu retravailler en priorité ?</h3>
             
 
@@ -776,6 +916,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a10-q03-label">Question 3 — As-tu écrit une démarche lorsque tu ne trouvais pas le résultat ? Explique.</h3>
             
 
@@ -790,16 +931,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a09">← Étape précédente</a>
+            <a class="course-mission-next" href="#a11">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a11">
-        <h2>Activité 10 — À retenir</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 10</span></div>
+        <h2>À retenir</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <ul><li>Une fonction affine représente une évolution régulière.</li><li>Une fonction du second degré peut posséder un minimum ou un maximum.</li><li>Une équation permet de rechercher des valeurs donnant une égalité.</li><li>Une inéquation permet de rechercher les valeurs respectant une condition.</li><li>Une décision professionnelle doit respecter les contraintes et être justifiée.</li></ul>
     
@@ -807,6 +955,11 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a10">← Étape précédente</a>
+            <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
 </section>
@@ -835,16 +988,18 @@
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
+
 
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
 
     </main>
     <footer class="site-footer">
     <p>
         &copy; 2026
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
     </p>
 </footer>
-<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
 </body>
 </html>

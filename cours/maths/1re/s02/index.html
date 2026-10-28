@@ -2,20 +2,23 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="supabase-url" content="https://evbfflwfyiitrkgzjhwt.supabase.co">
+    <meta name="supabase-publishable-key" content="sb_publishable__aRCAzLQv4TmSL0Z1yvcZQ_Nbwd2Ah6">
 
     <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
 
     
-    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preconnect" href="https://evbfflwfyiitrkgzjhwt.supabase.co" crossorigin>
     <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
     <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
     
 
     <title>
         
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
         
     </title>
 
@@ -38,15 +41,17 @@
     
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css?v=20261022-shop-effects-2">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-learning-sequence.css">
     
     
 
@@ -54,11 +59,14 @@
 
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261022-quest-ui-2">
     
     
-<link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
+    
 </head>
 
 <body class="student-shell student-course-shell">
@@ -83,6 +91,9 @@
 
     <main class="student-course-main" id="student-course-main">
 
+
+
+
 <div id="course-work" data-etablissement="mfr" data-matiere="maths" data-classe="1re" data-seance="S02" data-saving-enabled="true" data-collaboration-enabled="true">
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
@@ -105,8 +116,6 @@
     <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
     <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
 
-
-
 <div class="course-columns">
     <aside class="course-navigation" aria-label="Étapes de la séance">
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
@@ -119,7 +128,21 @@
 <!-- ========== INTRODUCTION DU COURS ========== -->
 
 <header class="cours-intro" id="course-intro">
+    
+    
+    
+    <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Mathématiques · Bac Pro 1 · S02</span></div>
     <h1>Comprendre les fractions et les pourcentages</h1>
+    <aside class="course-learning-sequence" aria-label="Comment avancer dans le cours">
+        <strong>Pour avancer</strong>
+        <ol>
+            <li>Lis les repères et les étapes.</li>
+            <li>Observe l’exemple s’il y en a un.</li>
+            <li>Essaie à ton tour avec les questions.</li>
+            <li>Réutilise une méthode déjà rencontrée.</li>
+        </ol>
+        <p>Tu peux garder le cours ouvert et utiliser les aides si tu bloques.</p>
+    </aside>
 
     
     <p class="cours-theme">
@@ -133,13 +156,13 @@
     </p>
     
 
-    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : Comprendre ce que représente une fraction simple.</p></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : Comprendre ce que représente une fraction simple.</p></section>
     
-    <section><h2>Dans la vie quotidienne</h2><p>Pour cet exercice, une entreprise hippique commande du matériel pour un montant total de 260 €.</p></section>
-    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Pour cet exercice, une entreprise hippique commande du matériel pour un montant total de 260 €.</p></section>
+    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
     
     
-    <section class="cours-objectifs">
+    <section class="course-info-card cours-objectifs">
         <h2>Ce que vous allez apprendre</h2>
         <ul>
             
@@ -196,7 +219,79 @@
 
 </header>
 
-    <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title"><article class="course-paper-sheet"><header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Comprendre fractions et pourcentages</h2><p>Une fraction et un pourcentage décrivent une part d’un tout. Comme une recette, il faut savoir quelle quantité représente le tout avant de calculer une part.</p></header><section class="course-paper-section"><h3>1. Lire une fraction</h3><p>Dans 3/4, le 4 partage le tout en quatre parts égales. Le 3 indique qu’on prend trois de ces parts. Pour parler en pourcentage, on compare la part à 100.</p></section><section class="course-paper-section"><h3>2. Transformer une fraction en pourcentage</h3><p>Pour transformer une fraction en nombre décimal, on divise le numérateur par le dénominateur. Puis on multiplie par 100 pour obtenir un pourcentage.</p><ol><li>1/2 = 1 ÷ 2 = 0,5 = 50 %.</li><li>1/4 = 1 ÷ 4 = 0,25 = 25 %.</li><li>3/4 = 3 ÷ 4 = 0,75 = 75 %.</li></ol></section><section class="course-paper-section"><h3>3. Calculer un pourcentage</h3><p>Pour trouver 15 % d’une quantité, on peut calculer 10 % puis 5 %. C’est souvent plus simple qu’une seule opération.</p><ol><li>10 % de 240 = 240 ÷ 10 = 24.</li><li>5 % de 240 = la moitié de 24 = 12.</li><li>15 % de 240 = 24 + 12 = 36.</li><li>Vérification : 0,15 × 240 = 36.</li></ol></section><section class="course-paper-section"><h3>4. Une remise et le prix final</h3><p>Une remise enlève une partie du prix. Après une remise de 15 %, il reste 85 % du prix de départ.</p><ol class="course-paper-questions"><li><span>Calcule la réduction de la situation du cours.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Calcule le prix final en retirant la réduction.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Refais le calcul avec le coefficient multiplicateur et compare.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je m’entraîne — même méthode que dans le cours</h3><p>Reprends les étapes de l’exemple juste au-dessus. Écris une ligne par étape et garde les unités.</p><ol class="course-paper-questions"><li><span>Calcule 10 %, 5 % et 15 % de 240 €.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Écris 3/4 en décimal puis en pourcentage.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Une remise est de 15 %. Quel pourcentage du prix reste à payer ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je transfère — une situation nouvelle</h3><p>Cette fois, les nombres ou le contexte changent. Commence par identifier ce que l’on cherche, puis choisis la méthode qui convient.</p><ol class="course-paper-questions"><li><span>Un produit coûte 86 €. Il baisse de 20 %, puis le nouveau prix augmente de 10 %. Calcule les deux évolutions dans l’ordre.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Explique pourquoi +10 % après −20 % ne ramène pas automatiquement au prix initial.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section></article></section>
+<section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
+    <article class="course-paper-sheet">
+        <header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Comprendre fractions et pourcentages</h2><p>Une fraction et un pourcentage décrivent une part d’un tout. Comme une recette, il faut savoir quelle quantité représente le tout avant de calculer une part.</p></header>
+        
+        <section class="course-paper-section">
+            <h3>1. Lire une fraction</h3>
+            
+<p>Dans 3/4, le 4 partage le tout en quatre parts égales. Le 3 indique qu’on prend trois de ces parts. Pour parler en pourcentage, on compare la part à 100.</p>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>2. Transformer une fraction en pourcentage</h3>
+            
+<p>Pour transformer une fraction en nombre décimal, on divise le numérateur par le dénominateur. Puis on multiplie par 100 pour obtenir un pourcentage.</p>
+    
+
+<ol><li>1/2 = 1 ÷ 2 = 0,5 = 50 %.</li><li>1/4 = 1 ÷ 4 = 0,25 = 25 %.</li><li>3/4 = 3 ÷ 4 = 0,75 = 75 %.</li></ol>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>3. Calculer un pourcentage</h3>
+            
+<p>Pour trouver 15 % d’une quantité, on peut calculer 10 % puis 5 %. C’est souvent plus simple qu’une seule opération.</p>
+    
+
+<ol><li>10 % de 240 = 240 ÷ 10 = 24.</li><li>5 % de 240 = la moitié de 24 = 12.</li><li>15 % de 240 = 24 + 12 = 36.</li><li>Vérification : 0,15 × 240 = 36.</li></ol>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>4. Une remise et le prix final</h3>
+            
+<p>Une remise enlève une partie du prix. Après une remise de 15 %, il reste 85 % du prix de départ.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Calcule la réduction de la situation du cours.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Calcule le prix final en retirant la réduction.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Refais le calcul avec le coefficient multiplicateur et compare.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Je m’entraîne — même méthode que dans le cours</h3>
+            
+<p>Reprends les étapes de l’exemple juste au-dessus. Écris une ligne par étape et garde les unités.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Calcule 10 %, 5 % et 15 % de 240 €.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Écris 3/4 en décimal puis en pourcentage.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Une remise est de 15 %. Quel pourcentage du prix reste à payer ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Je transfère — une situation nouvelle</h3>
+            
+<p>Cette fois, les nombres ou le contexte changent. Commence par identifier ce que l’on cherche, puis choisis la méthode qui convient.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Un produit coûte 86 €. Il baisse de 20 %, puis le nouveau prix augmente de 10 %. Calcule les deux évolutions dans l’ordre.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Explique pourquoi +10 % après −20 % ne ramène pas automatiquement au prix initial.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+    </article>
+</section>
+
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
         <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
@@ -204,13 +299,15 @@
 <section class="cours-activites">
     
     <article class="cours-activite" id="a03">
-        <h2>Activité 1 — Le réflexe à conserver</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span></div>
+        <h2>Le réflexe à conserver</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Ne cherchez pas immédiatement une touche sur la calculatrice.</p>
     
@@ -224,16 +321,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a04">
-        <h2>Activité 2 — 1. Échauffement : retrouver les bons réflexes</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>1. Échauffement : retrouver les bons réflexes</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Calculatrice interdite.</p>
     
@@ -248,6 +352,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a04-q01-label">Question 1 — 19 + 8 = ..........</h3>
             
@@ -265,6 +370,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a04-q02-label">Question 2 — 42 - 19 = ..........</h3>
             
 
@@ -280,6 +386,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a04-q03-label">Question 3 — 15 × 6 = ..........</h3>
             
@@ -297,6 +404,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a04-q04-label">Question 4 — 84 ÷ 7 = ..........</h3>
             
 
@@ -312,6 +420,7 @@
         </div>
         
         <div class="cours-question" data-question="q05">
+            
             
             <h3 id="a04-q05-label">Question 5 — 25 + 25 = ..........</h3>
             
@@ -329,6 +438,7 @@
         
         <div class="cours-question" data-question="q06">
             
+            
             <h3 id="a04-q06-label">Question 6 — 50 ÷ 2 = ..........</h3>
             
 
@@ -343,16 +453,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a05">
-        <h2>Activité 3 — 2. Une fraction, qu&#39;est-ce que cela représente ?</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>2. Une fraction, qu&#39;est-ce que cela représente ?</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Une fraction permet de représenter une ou plusieurs parts d&#39;un ensemble.</p>
     
@@ -373,6 +490,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a05-q01-label">Question 1 — Quelle est la moitié de 20 ?</h3>
             
@@ -390,6 +508,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a05-q02-label">Question 2 — Quelle est la moitié de 50 ?</h3>
             
 
@@ -405,6 +524,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a05-q03-label">Question 3 — Quel est le quart de 20 ?</h3>
             
@@ -422,6 +542,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a05-q04-label">Question 4 — Quel est le quart de 100 ?</h3>
             
 
@@ -437,6 +558,7 @@
         </div>
         
         <div class="cours-question" data-question="q05">
+            
             
             <h3 id="a05-q05-label">Question 5 — Quels sont les trois quarts de 20 ?</h3>
             
@@ -454,6 +576,7 @@
         
         <div class="cours-question" data-question="q06">
             
+            
             <h3 id="a05-q06-label">Question 6 — Quels sont les trois quarts de 100 ?</h3>
             
 
@@ -468,16 +591,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
+            <a class="course-mission-next" href="#a06">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a06">
-        <h2>Activité 4 — 3. Des fractions aux pourcentages</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span></div>
+        <h2>3. Des fractions aux pourcentages</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Le mot pourcentage signifie « pour 100 ».</p>
     
@@ -497,16 +627,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a05">← Étape précédente</a>
+            <a class="course-mission-next" href="#a07">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a07">
-        <h2>Activité 5 — 4. Calculer des pourcentages sans calculatrice</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 5</span></div>
+        <h2>4. Calculer des pourcentages sans calculatrice</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Calculatrice interdite.</p>
     
@@ -517,16 +654,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a06">← Étape précédente</a>
+            <a class="course-mission-next" href="#a08">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a08">
-        <h2>Activité 6 — Trois astuces à retenir</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 6</span></div>
+        <h2>Trois astuces à retenir</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <ul><li>50 % = prendre la moitié.</li><li>25 % = prendre le quart.</li><li>10 % = diviser par 10.</li></ul>
     
@@ -537,16 +681,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a07">← Étape précédente</a>
+            <a class="course-mission-next" href="#a09">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a09">
-        <h2>Activité 7 — 5. Combiner les astuces</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 7</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>5. Combiner les astuces</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Calculatrice interdite.</p>
     
@@ -561,6 +712,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a09-q01-label">Question 1 — 20 % de 60 = ..........</h3>
             
@@ -578,6 +730,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a09-q02-label">Question 2 — 30 % de 50 = ..........</h3>
             
 
@@ -593,6 +746,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a09-q03-label">Question 3 — 75 % de 40 = ..........</h3>
             
@@ -610,6 +764,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a09-q04-label">Question 4 — 5 % de 200 = ..........</h3>
             
 
@@ -624,16 +779,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a08">← Étape précédente</a>
+            <a class="course-mission-next" href="#a10">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a10">
-        <h2>Activité 8 — 6. Quelle proportion représentent-ils ?</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 8</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>6. Quelle proportion représentent-ils ?</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Une structure accueille 20 équidés :</p>
     
@@ -654,6 +816,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a10-q01-label">Question 1 — Combien y a-t-il de chevaux ?</h3>
             
@@ -671,6 +834,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a10-q02-label">Question 2 — Combien y a-t-il d&#39;équidés au total ?</h3>
             
 
@@ -686,6 +850,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a10-q03-label">Question 3 — Effectuez le calcul 12 ÷ 20. Quel résultat obtenez-vous ?</h3>
             
@@ -703,6 +868,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a10-q04-label">Question 4 — Multipliez ce résultat par 100.</h3>
             
 
@@ -719,6 +885,7 @@
         
         <div class="cours-question" data-question="q05">
             
+            
             <h3 id="a10-q05-label">Question 5 — Quel pourcentage de l&#39;effectif représentent donc les chevaux ?</h3>
             
 
@@ -733,16 +900,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a09">← Étape précédente</a>
+            <a class="course-mission-next" href="#a11">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a11">
-        <h2>Activité 9 — Calculer une proportion</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 9</span></div>
+        <h2>Calculer une proportion</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pour connaître la proportion représentée par une partie d&#39;un ensemble :</p>
     
@@ -759,16 +933,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a10">← Étape précédente</a>
+            <a class="course-mission-next" href="#a12">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a12">
-        <h2>Activité 10 — 7. À vous de faire</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 10</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>7. À vous de faire</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Calculatrice autorisée.</p>
     
@@ -783,6 +964,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a12-q01-label">Question 1 — Quelle proportion de l&#39;effectif représentent les 5 poneys ?</h3>
             
@@ -800,7 +982,8 @@
         
         <div class="cours-question" data-question="q02">
             
-            <h3 id="a12-q02-label">Question 2 — Exprimez cette proportion en pourcentage.</h3>
+            
+            <h3 id="a12-q02-label">Question 2 — Exprimez la proportion de poneys en pourcentage.</h3>
             
 
             
@@ -815,6 +998,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a12-q03-label">Question 3 — Quelle proportion représentent les 3 ânes ?</h3>
             
@@ -832,7 +1016,8 @@
         
         <div class="cours-question" data-question="q04">
             
-            <h3 id="a12-q04-label">Question 4 — Exprimez cette proportion en pourcentage.</h3>
+            
+            <h3 id="a12-q04-label">Question 4 — Exprimez la proportion d&#39;ânes en pourcentage.</h3>
             
 
             
@@ -848,6 +1033,7 @@
         
         <div class="cours-question" data-question="q05">
             
+            
             <h3 id="a12-q05-label">Question 5 — Additionnez les pourcentages de chevaux, poneys et ânes. Que constatez-vous ?</h3>
             
 
@@ -862,16 +1048,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a11">← Étape précédente</a>
+            <a class="course-mission-next" href="#a13">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a13">
-        <h2>Activité 11 — 8. Situation professionnelle – Une remise</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 11</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>8. Situation professionnelle – Une remise</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pour cet exercice, une entreprise hippique commande du matériel pour un montant total de 260 €.</p>
     
@@ -892,6 +1085,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a13-q01-label">Question 1 — Quel est le montant de la remise ?</h3>
             
@@ -909,6 +1103,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a13-q02-label">Question 2 — Quel montant l&#39;entreprise devra-t-elle finalement payer ?</h3>
             
 
@@ -925,6 +1120,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a13-q03-label">Question 3 — Expliquez pourquoi il faut soustraire la remise au prix initial.</h3>
             
 
@@ -939,16 +1135,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a12">← Étape précédente</a>
+            <a class="course-mission-next" href="#a14">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a14">
-        <h2>Activité 12 — 9. Petit défi</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 12</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>9. Petit défi</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Le prix d&#39;une prestation est de 80 €.</p>
     
@@ -966,6 +1169,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a14-q01-label">Question 1 — Calculez 10 % de 80 €.</h3>
             
@@ -983,6 +1187,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a14-q02-label">Question 2 — Calculez 5 % de 80 €.</h3>
             
 
@@ -998,6 +1203,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a14-q03-label">Question 3 — Déduisez-en 15 % de 80 €.</h3>
             
@@ -1015,6 +1221,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a14-q04-label">Question 4 — Quel est le montant de l&#39;augmentation ?</h3>
             
 
@@ -1031,6 +1238,7 @@
         
         <div class="cours-question" data-question="q05">
             
+            
             <h3 id="a14-q05-label">Question 5 — Quel est le nouveau prix ?</h3>
             
 
@@ -1045,16 +1253,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a13">← Étape précédente</a>
+            <a class="course-mission-next" href="#a15">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a15">
-        <h2>Activité 13 — 10. Bilan</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 13</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>10. Bilan</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Complétez sans regarder les exercices précédents :</p>
     
@@ -1063,6 +1278,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a15-q01-label">Question 1 — 50 % d&#39;une quantité correspond à ................................</h3>
             
@@ -1080,6 +1296,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a15-q02-label">Question 2 — 25 % d&#39;une quantité correspond à ................................</h3>
             
 
@@ -1095,6 +1312,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a15-q03-label">Question 3 — 10 % d&#39;une quantité peut être obtenu en ................................</h3>
             
@@ -1112,6 +1330,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a15-q04-label">Question 4 — Pour calculer une proportion, je ................................</h3>
             
 
@@ -1127,6 +1346,7 @@
         </div>
         
         <div class="cours-question" data-question="q05">
+            
             
             <h3 id="a15-q05-label">Question 5 — Une remise fait ................................ le prix.</h3>
             
@@ -1144,6 +1364,7 @@
         
         <div class="cours-question" data-question="q06">
             
+            
             <h3 id="a15-q06-label">Question 6 — Une augmentation fait ................................ le prix.</h3>
             
 
@@ -1158,16 +1379,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a14">← Étape précédente</a>
+            <a class="course-mission-next" href="#a16">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a16">
-        <h2>Activité 14 — À retenir</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 14</span></div>
+        <h2>À retenir</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <ul><li>50 % = 1/2 = la moitié.</li><li>25 % = 1/4 = le quart.</li><li>75 % = 3/4 = trois quarts.</li><li>10 % d&#39;une quantité = cette quantité ÷ 10.</li><li>On peut souvent combiner des pourcentages simples pour calculer mentalement.</li><li>Proportion = partie ÷ total.</li><li>Pourcentage = proportion × 100.</li><li>Une remise diminue une valeur ; une augmentation augmente une valeur.</li><li>Le calcul donne un résultat ; c&#39;est à vous de l&#39;interpréter pour répondre au problème.</li></ul>
     
@@ -1175,16 +1403,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a15">← Étape précédente</a>
+            <a class="course-mission-next" href="#a17">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a17">
-        <h2>Activité 15 — Sources</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 15</span></div>
+        <h2>Sources</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <ul><li>Ministère de l&#39;Agriculture – ChloroFil : Bac professionnel – Conduite et gestion de l&#39;entreprise hippique .</li><li>Ministère de l&#39;Agriculture – ChloroFil : Tronc commun du baccalauréat professionnel agricole .</li></ul>
     
@@ -1198,6 +1433,11 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a16">← Étape précédente</a>
+            <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
 </section>
@@ -1226,16 +1466,18 @@
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
+
 
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
 
     </main>
     <footer class="site-footer">
     <p>
         &copy; 2026
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
     </p>
 </footer>
-<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
 </body>
 </html>

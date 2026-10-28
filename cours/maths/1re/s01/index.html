@@ -2,20 +2,23 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="supabase-url" content="https://evbfflwfyiitrkgzjhwt.supabase.co">
+    <meta name="supabase-publishable-key" content="sb_publishable__aRCAzLQv4TmSL0Z1yvcZQ_Nbwd2Ah6">
 
     <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
 
     
-    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preconnect" href="https://evbfflwfyiitrkgzjhwt.supabase.co" crossorigin>
     <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
     <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
     
 
     <title>
         
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
         
     </title>
 
@@ -38,15 +41,17 @@
     
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css?v=20261022-shop-effects-2">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-learning-sequence.css">
     
     
 
@@ -54,11 +59,14 @@
 
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261022-quest-ui-2">
     
     
-<link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
+    
 </head>
 
 <body class="student-shell student-course-shell">
@@ -83,6 +91,9 @@
 
     <main class="student-course-main" id="student-course-main">
 
+
+
+
 <div id="course-work" data-etablissement="mfr" data-matiere="maths" data-classe="1re" data-seance="S01" data-saving-enabled="true" data-collaboration-enabled="true">
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
@@ -105,8 +116,6 @@
     <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
     <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
 
-
-
 <div class="course-columns">
     <aside class="course-navigation" aria-label="Étapes de la séance">
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
@@ -119,7 +128,21 @@
 <!-- ========== INTRODUCTION DU COURS ========== -->
 
 <header class="cours-intro" id="course-intro">
+    
+    
+    
+    <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Mathématiques · Bac Pro 1 · S01</span></div>
     <h1>Reprendre les bons réflexes</h1>
+    <aside class="course-learning-sequence" aria-label="Comment avancer dans le cours">
+        <strong>Pour avancer</strong>
+        <ol>
+            <li>Lis les repères et les étapes.</li>
+            <li>Observe l’exemple s’il y en a un.</li>
+            <li>Essaie à ton tour avec les questions.</li>
+            <li>Réutilise une méthode déjà rencontrée.</li>
+        </ol>
+        <p>Tu peux garder le cours ouvert et utiliser les aides si tu bloques.</p>
+    </aside>
 
     
     <p class="cours-theme">
@@ -133,13 +156,13 @@
     </p>
     
 
-    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : Retrouver des automatismes de calcul.</p></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : Retrouver des automatismes de calcul.</p></section>
     
-    <section><h2>Dans la vie quotidienne</h2><p>Une écurie possède 18 chevaux. 7 chevaux supplémentaires arrivent pour une compétition.</p></section>
-    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Une écurie possède 18 chevaux. 7 chevaux supplémentaires arrivent pour une compétition.</p></section>
+    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
     
     
-    <section class="cours-objectifs">
+    <section class="course-info-card cours-objectifs">
         <h2>Ce que vous allez apprendre</h2>
         <ul>
             
@@ -192,7 +215,66 @@
 
 </header>
 
-    <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title"><article class="course-paper-sheet"><header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Reprendre les bons réflexes de calcul</h2><p>Le but n’est pas d’aller vite en devinant. Le but est de choisir une opération, de la poser clairement et de vérifier si le résultat a du sens.</p></header><section class="course-paper-section"><h3>1. Décimaux et priorités</h3><p>Une calculatrice est comme un assistant : elle calcule ce qu’on lui demande, mais c’est à toi de choisir la bonne opération.</p><ol><li>Pour 3,5 + 2 × 4, on fait d’abord la multiplication.</li><li>2 × 4 = 8.</li><li>3,5 + 8 = 11,5.</li><li>Avec des parenthèses, (3,5 + 2) × 4 = 5,5 × 4 = 22.</li></ol></section><section class="course-paper-section"><h3>2. Choisir l’opération</h3><ul><li>Ajouter des quantités : addition.</li><li>Chercher un écart ou ce qu’il reste : soustraction.</li><li>Répéter plusieurs fois le même prix : multiplication.</li><li>Partager en parts égales ou retrouver une valeur par part : division.</li></ul></section><section class="course-paper-section"><h3>3. Vérifier avec la calculatrice</h3><p>Avant de taper, estime le résultat. Après le calcul, demande-toi si la taille du résultat est plausible. Écris d’abord la formule, puis utilise la calculatrice pour vérifier.</p><ol class="course-paper-questions"><li><span>Pour chaque situation du cours, écris : données → opération choisie → calcul → phrase réponse.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Explique pourquoi l’opération choisie convient.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je m’entraîne — même méthode que dans le cours</h3><p>Reprends les étapes de l’exemple juste au-dessus. Écris une ligne par étape et garde les unités.</p><ol class="course-paper-questions"><li><span>Calcule 6,4 + 2 × 1,5 en respectant les priorités.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Calcule (6,4 + 2) × 1,5 et explique pourquoi le résultat change.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Vérifie le résultat à la calculatrice après l’avoir estimé.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je transfère — une situation nouvelle</h3><p>Cette fois, les nombres ou le contexte changent. Commence par identifier ce que l’on cherche, puis choisis la méthode qui convient.</p><ol class="course-paper-questions"><li><span>Une structure achète 3 sacs à 18,75 € et paie 12 € de livraison. Écris le calcul dans le bon ordre.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Le budget est 70 €. Reste-t-il assez d’argent ? Montre le calcul et rédige une phrase.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section></article></section>
+<section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
+    <article class="course-paper-sheet">
+        <header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Reprendre les bons réflexes de calcul</h2><p>Le but n’est pas d’aller vite en devinant. Le but est de choisir une opération, de la poser clairement et de vérifier si le résultat a du sens.</p></header>
+        
+        <section class="course-paper-section">
+            <h3>1. Décimaux et priorités</h3>
+            
+<p>Une calculatrice est comme un assistant : elle calcule ce qu’on lui demande, mais c’est à toi de choisir la bonne opération.</p>
+    
+
+<ol><li>Pour 3,5 + 2 × 4, on fait d’abord la multiplication.</li><li>2 × 4 = 8.</li><li>3,5 + 8 = 11,5.</li><li>Avec des parenthèses, (3,5 + 2) × 4 = 5,5 × 4 = 22.</li></ol>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>2. Choisir l’opération</h3>
+            
+<ul><li>Ajouter des quantités : addition.</li><li>Chercher un écart ou ce qu’il reste : soustraction.</li><li>Répéter plusieurs fois le même prix : multiplication.</li><li>Partager en parts égales ou retrouver une valeur par part : division.</li></ul>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>3. Vérifier avec la calculatrice</h3>
+            
+<p>Avant de taper, estime le résultat. Après le calcul, demande-toi si la taille du résultat est plausible. Écris d’abord la formule, puis utilise la calculatrice pour vérifier.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Pour chaque situation du cours, écris : données → opération choisie → calcul → phrase réponse.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Explique pourquoi l’opération choisie convient.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Je m’entraîne — même méthode que dans le cours</h3>
+            
+<p>Reprends les étapes de l’exemple juste au-dessus. Écris une ligne par étape et garde les unités.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Calcule 6,4 + 2 × 1,5 en respectant les priorités.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Calcule (6,4 + 2) × 1,5 et explique pourquoi le résultat change.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Vérifie le résultat à la calculatrice après l’avoir estimé.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Je transfère — une situation nouvelle</h3>
+            
+<p>Cette fois, les nombres ou le contexte changent. Commence par identifier ce que l’on cherche, puis choisis la méthode qui convient.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Une structure achète 3 sacs à 18,75 € et paie 12 € de livraison. Écris le calcul dans le bon ordre.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Le budget est 70 €. Reste-t-il assez d’argent ? Montre le calcul et rédige une phrase.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+    </article>
+</section>
+
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
         <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
@@ -200,13 +282,15 @@
 <section class="cours-activites">
     
     <article class="cours-activite" id="a03">
-        <h2>Activité 1 — En mathématiques, le chemin compte plus que le résultat</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span></div>
+        <h2>En mathématiques, le chemin compte plus que le résultat</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Dans ce cours, écrire uniquement un résultat ne suffit pas.</p>
     
@@ -223,16 +307,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a04">
-        <h2>Activité 2 — 1. Échauffement : calculer sans calculatrice</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>1. Échauffement : calculer sans calculatrice</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Calculatrice interdite.</p>
     
@@ -247,6 +338,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a04-q01-label">Question 1 — 7 + 8 = ..........</h3>
             
@@ -264,6 +356,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a04-q02-label">Question 2 — 18 + 27 = ..........</h3>
             
 
@@ -279,6 +372,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a04-q03-label">Question 3 — 52 - 19 = ..........</h3>
             
@@ -296,6 +390,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a04-q04-label">Question 4 — 125 - 70 = ..........</h3>
             
 
@@ -311,6 +406,7 @@
         </div>
         
         <div class="cours-question" data-question="q05">
+            
             
             <h3 id="a04-q05-label">Question 5 — 6 × 8 = ..........</h3>
             
@@ -328,6 +424,7 @@
         
         <div class="cours-question" data-question="q06">
             
+            
             <h3 id="a04-q06-label">Question 6 — 14 × 7 = ..........</h3>
             
 
@@ -343,6 +440,7 @@
         </div>
         
         <div class="cours-question" data-question="q07">
+            
             
             <h3 id="a04-q07-label">Question 7 — 60 ÷ 5 = ..........</h3>
             
@@ -360,6 +458,7 @@
         
         <div class="cours-question" data-question="q08">
             
+            
             <h3 id="a04-q08-label">Question 8 — 156 ÷ 12 = ..........</h3>
             
 
@@ -374,16 +473,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a05">
-        <h2>Activité 3 — 2. Des nombres décimaux</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>2. Des nombres décimaux</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Calculatrice interdite.</p>
     
@@ -398,6 +504,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a05-q01-label">Question 1 — 2,5 + 3 = ..........</h3>
             
@@ -415,6 +522,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a05-q02-label">Question 2 — 7,5 + 2,5 = ..........</h3>
             
 
@@ -430,6 +538,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a05-q03-label">Question 3 — 12,5 - 2 = ..........</h3>
             
@@ -447,6 +556,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a05-q04-label">Question 4 — 20 - 3,5 = ..........</h3>
             
 
@@ -463,6 +573,7 @@
         
         <div class="cours-question" data-question="q05">
             
+            
             <h3 id="a05-q05-label">Question 5 — 2,5 × 4 = ..........</h3>
             
 
@@ -477,16 +588,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
+            <a class="course-mission-next" href="#a06">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a06">
-        <h2>Activité 4 — 3. Choisir la bonne opération</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>3. Choisir la bonne opération</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Calculatrice interdite.</p>
     
@@ -498,6 +616,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a06-q01-label">Question 1 — écrivez le calcul que vous choisissez ;</h3>
             
@@ -515,6 +634,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a06-q02-label">Question 2 — effectuez le calcul ;</h3>
             
 
@@ -531,6 +651,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a06-q03-label">Question 3 — écrivez une phrase de réponse avec l&#39;unité.</h3>
             
 
@@ -545,16 +666,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a05">← Étape précédente</a>
+            <a class="course-mission-next" href="#a07">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a07">
-        <h2>Activité 5 — Situation A</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 5</span></div>
+        <h2>Situation A</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Une écurie possède 18 chevaux. 7 chevaux supplémentaires arrivent pour une compétition.</p>
     
@@ -565,16 +693,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a06">← Étape précédente</a>
+            <a class="course-mission-next" href="#a08">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a08">
-        <h2>Activité 6 — Situation B</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 6</span></div>
+        <h2>Situation B</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Une réserve contient 50 kg d&#39;aliment. On utilise 18 kg.</p>
     
@@ -585,16 +720,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a07">← Étape précédente</a>
+            <a class="course-mission-next" href="#a09">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a09">
-        <h2>Activité 7 — Situation C</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 7</span></div>
+        <h2>Situation C</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>8 chevaux reçoivent chacun 5 kg de foin dans une situation simplifiée.</p>
     
@@ -608,16 +750,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a08">← Étape précédente</a>
+            <a class="course-mission-next" href="#a10">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a10">
-        <h2>Activité 8 — Situation D</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 8</span></div>
+        <h2>Situation D</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>48 kg d&#39;aliment doivent être répartis équitablement entre 6 lots.</p>
     
@@ -628,16 +777,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a09">← Étape précédente</a>
+            <a class="course-mission-next" href="#a11">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a11">
-        <h2>Activité 9 — 4. Utiliser la calculatrice sans lui confier le raisonnement</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 9</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>4. Utiliser la calculatrice sans lui confier le raisonnement</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Calculatrice autorisée à partir de maintenant.</p>
     
@@ -661,6 +817,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a11-q01-label">Question 1 — Quelle masse de foin faut-il pour les 12 chevaux pendant une journée ?</h3>
             
@@ -678,6 +835,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a11-q02-label">Question 2 — Quelle masse faut-il prévoir pour 7 jours ?</h3>
             
 
@@ -693,6 +851,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a11-q03-label">Question 3 — Le stock contient 700 kg de foin. Est-ce suffisant pour 7 jours ? Justifiez.</h3>
             
@@ -710,6 +869,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a11-q04-label">Question 4 — Quelle quantité restera-t-il après les 7 jours ?</h3>
             
 
@@ -724,16 +884,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a10">← Étape précédente</a>
+            <a class="course-mission-next" href="#a12">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a12">
-        <h2>Activité 10 — 5. Défi : le résultat de la calculatrice suffit-il ?</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 10</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>5. Défi : le résultat de la calculatrice suffit-il ?</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Calculatrice autorisée.</p>
     
@@ -751,6 +918,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a12-q01-label">Question 1 — Effectuez le calcul permettant de déterminer le nombre de ballots nécessaires.</h3>
             
@@ -768,6 +936,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a12-q02-label">Question 2 — Notez le résultat affiché par la calculatrice.</h3>
             
 
@@ -783,6 +952,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a12-q03-label">Question 3 — Peut-on réellement prendre ce nombre de ballots ?</h3>
             
@@ -800,6 +970,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a12-q04-label">Question 4 — Combien de ballots faut-il prévoir ?</h3>
             
 
@@ -816,6 +987,7 @@
         
         <div class="cours-question" data-question="q05">
             
+            
             <h3 id="a12-q05-label">Question 5 — Expliquez votre choix en une phrase.</h3>
             
 
@@ -830,16 +1002,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a11">← Étape précédente</a>
+            <a class="course-mission-next" href="#a13">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a13">
-        <h2>Activité 11 — 6. Mon premier bilan</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 11</span></div>
+        <h2>6. Mon premier bilan</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Sans regarder les réponses des autres, complétez :</p>
     
@@ -850,16 +1029,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a12">← Étape précédente</a>
+            <a class="course-mission-next" href="#a14">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a14">
-        <h2>Activité 12 — À retenir</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 12</span></div>
+        <h2>À retenir</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <ul><li>Avant de calculer, je cherche ce que je dois trouver.</li><li>Je choisis ensuite l&#39;opération adaptée.</li><li>Quand un calcul est simple, j&#39;essaie d&#39;abord de le faire mentalement.</li><li>Je peux décomposer un calcul pour le rendre plus facile.</li><li>J&#39;écris mes étapes : ma démarche compte autant que mon résultat.</li><li>Avec une calculatrice, je vérifie toujours si le résultat est cohérent.</li><li>Je termine un problème par une réponse adaptée à la situation.</li></ul>
     
@@ -867,16 +1053,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a13">← Étape précédente</a>
+            <a class="course-mission-next" href="#a15">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a15">
-        <h2>Activité 13 — Sources</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 13</span></div>
+        <h2>Sources</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <ul><li>Ministère de l&#39;Agriculture – ChloroFil : Bac professionnel – Conduite et gestion de l&#39;entreprise hippique .</li><li>Ministère de l&#39;Agriculture – ChloroFil : Tronc commun du baccalauréat professionnel agricole .</li></ul>
     
@@ -890,6 +1083,11 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a14">← Étape précédente</a>
+            <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
 </section>
@@ -918,16 +1116,18 @@
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
+
 
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
 
     </main>
     <footer class="site-footer">
     <p>
         &copy; 2026
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
     </p>
 </footer>
-<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
 </body>
 </html>

@@ -26,8 +26,8 @@
 .student-profile dt { color: #637382; font-size: .73rem; }
 .student-profile dd { margin: 3px 0 0; max-width: 24ch; font-size: .88rem; font-weight: 600; overflow-wrap: anywhere; }
 .student-profile [data-profile-field="validation"] { color: #226c51; }
-.student-shell button { min-height: 44px; padding: 10px 16px; border: 1px solid #dce5ea; border-radius: 10px; background: white; color: #294759; font: inherit; font-size: .85rem; cursor: pointer; }
-.student-shell button:hover { background: #f1f6f8; }
+.student-shell button:not(.shop-effect-card):not(.avatar-palette-swatch) { min-height: 44px; padding: 10px 16px; border: 1px solid #dce5ea; border-radius: 10px; background: white; color: #294759; font: inherit; font-size: .85rem; cursor: pointer; }
+.student-shell button:not(.shop-effect-card):not(.avatar-palette-swatch):hover { background: #f1f6f8; }
 .student-shell button:disabled { cursor: wait; opacity: .55; }
 .student-header button { font-size: .8rem; background: #f7f9fa; }
 @media (max-width: 700px) {

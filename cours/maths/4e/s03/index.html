@@ -2,20 +2,23 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="supabase-url" content="https://evbfflwfyiitrkgzjhwt.supabase.co">
+    <meta name="supabase-publishable-key" content="sb_publishable__aRCAzLQv4TmSL0Z1yvcZQ_Nbwd2Ah6">
 
     <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
 
     
-    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preconnect" href="https://evbfflwfyiitrkgzjhwt.supabase.co" crossorigin>
     <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
     <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
     
 
     <title>
         
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
         
     </title>
 
@@ -38,15 +41,17 @@
     
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css?v=20261022-shop-effects-2">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-learning-sequence.css">
     
     
 
@@ -54,11 +59,14 @@
 
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261022-quest-ui-2">
     
     
-<link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
+    
 </head>
 
 <body class="student-shell student-course-shell">
@@ -83,6 +91,9 @@
 
     <main class="student-course-main" id="student-course-main">
 
+
+
+
 <div id="course-work" data-etablissement="mfr" data-matiere="maths" data-classe="4e" data-seance="S03" data-saving-enabled="true" data-collaboration-enabled="true">
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
@@ -105,8 +116,6 @@
     <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
     <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
 
-
-
 <div class="course-columns">
     <aside class="course-navigation" aria-label="Étapes de la séance">
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
@@ -119,7 +128,21 @@
 <!-- ========== INTRODUCTION DU COURS ========== -->
 
 <header class="cours-intro" id="course-intro">
+    
+    
+    
+    <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Mathématiques · 4e MFR · S03</span></div>
     <h1>Nombres premiers et décomposition en facteurs premiers</h1>
+    <aside class="course-learning-sequence" aria-label="Comment avancer dans le cours">
+        <strong>Pour avancer</strong>
+        <ol>
+            <li>Lis les repères et les étapes.</li>
+            <li>Observe l’exemple s’il y en a un.</li>
+            <li>Essaie à ton tour avec les questions.</li>
+            <li>Réutilise une méthode déjà rencontrée.</li>
+        </ol>
+        <p>Tu peux garder le cours ouvert et utiliser les aides si tu bloques.</p>
+    </aside>
 
     
     <p class="cours-theme">
@@ -133,13 +156,13 @@
     </p>
     
 
-    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Les nombres premiers permettent de « démonter » un nombre en éléments plus simples.</p></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi étudier ce sujet ?</h2><p>Les nombres premiers permettent de « démonter » un nombre en éléments plus simples.</p></section>
     
-    <section><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
-    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
+    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
     
     
-    <section class="cours-objectifs">
+    <section class="course-info-card cours-objectifs">
         <h2>Ce que vous allez apprendre</h2>
         <ul>
             
@@ -170,7 +193,69 @@
 
 </header>
 
-    <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title"><article class="course-paper-sheet"><header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Nombres premiers et décomposition</h2><p>Un nombre premier est un nombre qui ne se partage exactement que par 1 et par lui-même. Décomposer en facteurs premiers, c’est démonter un nombre en petites briques premières. Tu construis ici les méthodes qui te serviront ensuite au brevet.</p></header><section class="course-paper-section"><h3>1. Reconnaître un nombre premier</h3><p>Teste les petits diviseurs. Si aucun nombre premier inférieur ou égal à sa racine ne le divise, il est premier.</p><ol><li>21 est divisible par 3 car 2 + 1 = 3.</li><li>21 = 3 × 7 : il n’est donc pas premier.</li><li>2 est le seul nombre premier pair. 1 n’est pas premier.</li></ol></section><section class="course-paper-section"><h3>2. Décomposer en facteurs premiers</h3><p>Divise autant que possible par les petits nombres premiers : 2, 3, 5, 7…</p><ol><li>Exemple avec 36 : 36 = 2 × 18.</li><li>= 2 × 2 × 9.</li><li>= 2 × 2 × 3 × 3.</li><li>Donc 36 = 2² × 3².</li></ol></section><section class="course-paper-section"><h3>3. Vérifier</h3><p>Multiplie les facteurs trouvés. Si tu retrouves le nombre de départ, ta décomposition est correcte.</p><ol class="course-paper-questions"><li><span>Décompose les nombres demandés dans le cours.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Réécris les facteurs identiques avec une puissance.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je m’entraîne — même méthode que dans le cours</h3><p>Reprends les étapes de l’exemple juste au-dessus. Écris une ligne par étape et garde les unités.</p><ol class="course-paper-questions"><li><span>Décompose 36 en facteurs premiers par divisions successives.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Vérifie en multipliant les facteurs retrouvés.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Écris le résultat avec des puissances.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je transfère — une situation nouvelle</h3><p>Cette fois, les nombres ou le contexte changent. Commence par identifier ce que l’on cherche, puis choisis la méthode qui convient.</p><ol class="course-paper-questions"><li><span>Décompose 90 en facteurs premiers et montre chaque division.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Explique comment vérifier qu’un nombre proposé est premier.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section></article></section>
+<section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
+    <article class="course-paper-sheet">
+        <header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Nombres premiers et décomposition</h2><p>Un nombre premier est un nombre qui ne se partage exactement que par 1 et par lui-même. Décomposer en facteurs premiers, c’est démonter un nombre en petites briques premières. Tu construis ici les méthodes qui te serviront ensuite au brevet.</p></header>
+        
+        <section class="course-paper-section">
+            <h3>1. Reconnaître un nombre premier</h3>
+            
+<p>Teste les petits diviseurs. Si aucun nombre premier inférieur ou égal à sa racine ne le divise, il est premier.</p>
+    
+
+<ol><li>21 est divisible par 3 car 2 + 1 = 3.</li><li>21 = 3 × 7 : il n’est donc pas premier.</li><li>2 est le seul nombre premier pair. 1 n’est pas premier.</li></ol>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>2. Décomposer en facteurs premiers</h3>
+            
+<p>Divise autant que possible par les petits nombres premiers : 2, 3, 5, 7…</p>
+    
+
+<ol><li>Exemple avec 36 : 36 = 2 × 18.</li><li>= 2 × 2 × 9.</li><li>= 2 × 2 × 3 × 3.</li><li>Donc 36 = 2² × 3².</li></ol>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>3. Vérifier</h3>
+            
+<p>Multiplie les facteurs trouvés. Si tu retrouves le nombre de départ, ta décomposition est correcte.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Décompose les nombres demandés dans le cours.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Réécris les facteurs identiques avec une puissance.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Je m’entraîne — même méthode que dans le cours</h3>
+            
+<p>Reprends les étapes de l’exemple juste au-dessus. Écris une ligne par étape et garde les unités.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Décompose 36 en facteurs premiers par divisions successives.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Vérifie en multipliant les facteurs retrouvés.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Écris le résultat avec des puissances.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Je transfère — une situation nouvelle</h3>
+            
+<p>Cette fois, les nombres ou le contexte changent. Commence par identifier ce que l’on cherche, puis choisis la méthode qui convient.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Décompose 90 en facteurs premiers et montre chaque division.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Explique comment vérifier qu’un nombre proposé est premier.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+    </article>
+</section>
+
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
         <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
@@ -178,13 +263,15 @@
 <section class="cours-activites">
     
     <article class="cours-activite" id="a02">
-        <h2>Activité 1 — Qu&#39;est-ce que c&#39;est ?</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span></div>
+        <h2>Qu&#39;est-ce que c&#39;est ?</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Certains nombres peuvent être obtenus par beaucoup de multiplications différentes. D&#39;autres ne peuvent être partagés exactement que par 1 et par eux-mêmes.</p>
     
@@ -195,16 +282,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            
+            <a class="course-mission-next" href="#a03">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a03">
-        <h2>Activité 2 — À quoi ça sert ?</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span></div>
+        <h2>À quoi ça sert ?</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Les nombres premiers permettent de « démonter » un nombre en éléments plus simples.</p>
     
@@ -245,16 +339,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a02">← Étape précédente</a>
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a04">
-        <h2>Activité 3 — 1. Automatismes : réutiliser la divisibilité</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>1. Automatismes : réutiliser la divisibilité</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notions : critères de divisibilité et calcul mental.</p>
     
@@ -272,6 +373,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a04-q01-label">Question 1 — 246 est-il divisible par 2 ?</h3>
             
@@ -293,6 +395,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a04-q02-label">Question 2 — 315 est-il divisible par 5 ?</h3>
             
 
@@ -313,6 +416,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a04-q03-label">Question 3 — 123 est-il divisible par 3 ?</h3>
             
 
@@ -332,6 +436,7 @@
         </div>
         
         <div class="cours-question" data-question="q04">
+            
             
             <h3 id="a04-q04-label">Question 4 — 2 026 est-il divisible par 9 ?</h3>
             
@@ -357,16 +462,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a05">
-        <h2>Activité 4 — 2. Découvrir les nombres premiers</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>2. Découvrir les nombres premiers</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notion : nombre premier.</p>
     
@@ -390,6 +502,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a05-q01-label">Question 1 — Quels nombres possèdent exactement deux diviseurs ?</h3>
             
@@ -407,6 +520,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a05-q02-label">Question 2 — Quels sont toujours les deux diviseurs de ces nombres ?</h3>
             
 
@@ -422,6 +536,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a05-q03-label">Question 3 — Combien de diviseurs positifs possède le nombre 1 ?</h3>
             
@@ -449,16 +564,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
+            <a class="course-mission-next" href="#a06">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a06">
-        <h2>Activité 5 — 3. Premier ou non premier ?</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 5</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>3. Premier ou non premier ?</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Pour montrer qu&#39;un nombre n&#39;est pas premier, il n&#39;est pas nécessaire de trouver tous ses diviseurs.</p>
     
@@ -473,6 +595,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a06-q01-label">Question 1 — Parmi 13, 15, 17, 21, 23, 27, 29 et 33, indiquez les nombres premiers. Justifiez les nombres qui ne le sont pas avec une multiplication. Indice 1 Commencez par tester la divisibilité par 2, 3 et 5. Indice 2 Pour montrer qu&#39;un nombre n&#39;est pas premier, un seul diviseur supplémentaire suffit. Indice 3 15 = 3 × 5 21 = 3 × 7 27 = 3 × 9 33 = 3 × 11</h3>
             
@@ -494,16 +617,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a05">← Étape précédente</a>
+            <a class="course-mission-next" href="#a07">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a07">
-        <h2>Activité 6 — 4. Décomposer un nombre en facteurs premiers</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 6</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>4. Décomposer un nombre en facteurs premiers</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notion : décomposition en facteurs premiers.</p>
     
@@ -533,6 +663,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a07-q01-label">Question 1 — Continuez la décomposition jusqu&#39;à n&#39;utiliser que des nombres premiers. Indice 1 Décomposez 6 et 4. Indice 2 6 = 2 × 3 et 4 = 2 × 2. Indice 3 24 = 2 × 3 × 2 × 2.</h3>
             
@@ -557,16 +688,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a06">← Étape précédente</a>
+            <a class="course-mission-next" href="#a08">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a08">
-        <h2>Activité 7 — Exercice : décomposer</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 7</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice : décomposer</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Il faut maintenant être capable de refaire la méthode sans que la première décomposition soit donnée.</p>
     
@@ -575,6 +713,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a08-q01-label">Question 1 — Décomposez 18, 20, 30 et 36 en facteurs premiers.</h3>
             
@@ -590,16 +729,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a07">← Étape précédente</a>
+            <a class="course-mission-next" href="#a09">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a09">
-        <h2>Activité 8 — 5. Écrire plus simplement avec les puissances</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 8</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>5. Écrire plus simplement avec les puissances</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notion : puissance.</p>
     
@@ -617,6 +763,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a09-q01-label">Question 1 — Réécrivez avec des puissances : 24 = 2 × 2 × 2 × 3 et 36 = 2 × 2 × 3 × 3.</h3>
             
@@ -634,6 +781,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a09-q02-label">Question 2 — Écrivez avec des puissances : 18, 20 et 75.</h3>
             
 
@@ -648,16 +796,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a08">← Étape précédente</a>
+            <a class="course-mission-next" href="#a10">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a10">
-        <h2>Activité 9 — 6. Repérer des facteurs communs</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 9</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>6. Repérer des facteurs communs</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notion : facteurs communs.</p>
     
@@ -681,6 +836,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a10-q01-label">Question 1 — Quels facteurs premiers apparaissent dans les deux décompositions ?</h3>
             
@@ -698,6 +854,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a10-q02-label">Question 2 — Produit de ces facteurs communs =</h3>
             
 
@@ -713,6 +870,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a10-q03-label">Question 3 — Que devient la fraction 18/24 si l&#39;on divise le numérateur et le dénominateur par 6 ?</h3>
             
@@ -734,16 +892,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a09">← Étape précédente</a>
+            <a class="course-mission-next" href="#a11">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a11">
-        <h2>Activité 10 — 7. Défi DNB : retrouver un nombre mystérieux</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 10</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>7. Défi DNB : retrouver un nombre mystérieux</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Calculatrice interdite.</p>
     
@@ -758,6 +923,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a11-q01-label">Question 1 — 1. Quel est ce nombre ?</h3>
             
@@ -775,6 +941,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a11-q02-label">Question 2 — 2. Sans effectuer toutes les divisions, citez au moins quatre diviseurs de ce nombre et expliquez comment vous les repérez.</h3>
             
 
@@ -790,6 +957,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a11-q03-label">Question 3 — 3. Ce nombre est-il premier ? Justifiez en une phrase.</h3>
             
@@ -811,16 +979,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a10">← Étape précédente</a>
+            <a class="course-mission-next" href="#a12">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a12">
-        <h2>Activité 11 — 8. Mon bilan</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 11</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>8. Mon bilan</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cette dernière étape ? Il faut vérifier que vous comprenez la méthode et pas seulement les exemples utilisés aujourd&#39;hui.</p>
     
@@ -829,6 +1004,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a12-q01-label">Question 1 — Expliquez avec vos mots ce qu&#39;est un nombre premier.</h3>
             
@@ -846,6 +1022,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a12-q02-label">Question 2 — À quoi peut servir une décomposition en facteurs premiers ?</h3>
             
 
@@ -860,16 +1037,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a11">← Étape précédente</a>
+            <a class="course-mission-next" href="#a13">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a13">
-        <h2>Activité 12 — À retenir</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 12</span></div>
+        <h2>À retenir</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <ul><li>Un nombre premier possède exactement deux diviseurs positifs : 1 et lui-même.</li><li>1 n&#39;est pas un nombre premier.</li><li>2 est le seul nombre premier pair.</li><li>Pour montrer qu&#39;un nombre n&#39;est pas premier, un seul diviseur supplémentaire suffit.</li><li>Décomposer en facteurs premiers consiste à écrire un nombre comme un produit de nombres premiers.</li><li>Une puissance permet d&#39;écrire plus simplement une multiplication répétée.</li><li>La décomposition permet de repérer des facteurs communs.</li></ul>
     
@@ -877,16 +1061,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a12">← Étape précédente</a>
+            <a class="course-mission-next" href="#a14">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a14">
-        <h2>Activité 13 — Pour aller plus loin : le crible d&#39;Ératosthène</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 13</span></div>
+        <h2>Pour aller plus loin : le crible d&#39;Ératosthène</h2>
         <p class="course-optional">Pour aller plus loin — activité facultative.</p>
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>À faire uniquement si vous avez terminé.</p>
     
@@ -900,16 +1091,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a13">← Étape précédente</a>
+            <a class="course-mission-next" href="#a15">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a15">
-        <h2>Activité 14 — Finir la séance</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 14</span></div>
+        <h2>Finir la séance</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Vérifiez vos réponses, vos décompositions et les justifications demandées.</p>
     
@@ -917,16 +1115,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a14">← Étape précédente</a>
+            <a class="course-mission-next" href="#a16">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a16">
-        <h2>Activité 15 — Références générales</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 15</span></div>
+        <h2>Références générales</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <ul><li>Chlorofil – Classes de 4e et 3e de l&#39;enseignement agricole</li><li>Éduscol – Les épreuves du DNB</li></ul>
     
@@ -940,6 +1145,11 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a15">← Étape précédente</a>
+            <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
 </section>
@@ -968,16 +1178,18 @@
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
+
 
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
 
     </main>
     <footer class="site-footer">
     <p>
         &copy; 2026
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
     </p>
 </footer>
-<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
 </body>
 </html>

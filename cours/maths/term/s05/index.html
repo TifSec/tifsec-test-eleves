@@ -2,20 +2,23 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="supabase-url" content="https://evbfflwfyiitrkgzjhwt.supabase.co">
+    <meta name="supabase-publishable-key" content="sb_publishable__aRCAzLQv4TmSL0Z1yvcZQ_Nbwd2Ah6">
 
     <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
 
     
-    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preconnect" href="https://evbfflwfyiitrkgzjhwt.supabase.co" crossorigin>
     <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
     <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
     
 
     <title>
         
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
         
     </title>
 
@@ -38,15 +41,17 @@
     
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css?v=20261022-shop-effects-2">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-learning-sequence.css">
     
     
 
@@ -54,11 +59,14 @@
 
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261022-quest-ui-2">
     
     
-<link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
+    
 </head>
 
 <body class="student-shell student-course-shell">
@@ -83,6 +91,9 @@
 
     <main class="student-course-main" id="student-course-main">
 
+
+
+
 <div id="course-work" data-etablissement="mfr" data-matiere="maths" data-classe="term" data-seance="S05" data-saving-enabled="true" data-collaboration-enabled="true">
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
@@ -105,8 +116,6 @@
     <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
     <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
 
-
-
 <div class="course-columns">
     <aside class="course-navigation" aria-label="Étapes de la séance">
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
@@ -119,7 +128,21 @@
 <!-- ========== INTRODUCTION DU COURS ========== -->
 
 <header class="cours-intro" id="course-intro">
+    
+    
+    
+    <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Mathématiques · Bac Pro 2 · S05</span></div>
     <h1>Fonction du second degré – Rechercher un coût minimal</h1>
+    <aside class="course-learning-sequence" aria-label="Comment avancer dans le cours">
+        <strong>Pour avancer</strong>
+        <ol>
+            <li>Lis les repères et les étapes.</li>
+            <li>Observe l’exemple s’il y en a un.</li>
+            <li>Essaie à ton tour avec les questions.</li>
+            <li>Réutilise une méthode déjà rencontrée.</li>
+        </ol>
+        <p>Tu peux garder le cours ouvert et utiliser les aides si tu bloques.</p>
+    </aside>
 
     
     <p class="cours-theme">
@@ -133,13 +156,13 @@
     </p>
     
 
-    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Certaines situations ne suivent pas la règle des fonctions affines. Un coût peut diminuer, atteindre un minimum, puis augmenter.</p></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi étudier ce sujet ?</h2><p>Certaines situations ne suivent pas la règle des fonctions affines. Un coût peut diminuer, atteindre un minimum, puis augmenter.</p></section>
     
-    <section><h2>Dans la vie quotidienne</h2><p>Un centre équestre cherche à organiser l’entretien mensuel de sa carrière. Les coûts utilisés dans cette séance sont fictifs.</p></section>
-    <section><h2>Pour commencer</h2><p>En séance 4, nous avons travaillé avec des fonctions affines : lorsque x augmente de 1, le résultat change toujours de la même quantité.</p></section>
+    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Un centre équestre cherche à organiser l’entretien mensuel de sa carrière. Les coûts utilisés dans cette séance sont fictifs.</p></section>
+    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>En séance 4, nous avons travaillé avec des fonctions affines : lorsque x augmente de 1, le résultat change toujours de la même quantité.</p></section>
     
     
-    <section class="cours-objectifs">
+    <section class="course-info-card cours-objectifs">
         <h2>Ce que vous allez apprendre</h2>
         <ul>
             
@@ -188,7 +211,101 @@
 
 </header>
 
-    <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title"><article class="course-paper-sheet"><header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Trouver le coût minimal avec la forme canonique</h2><p>La forme canonique sert à lire rapidement le minimum d’une parabole. On va d’abord la construire, puis vérifier qu’elle raconte la même chose que la formule de départ.</p></header><section class="course-paper-section"><h3>1. Comprendre ce que l’on cherche</h3><p>On étudie C(x) = 5x² − 40x + 260. On veut connaître le plus petit coût et le nombre x qui permet de l’obtenir. La forme canonique a la forme a(x − α)² + β : elle fait apparaître le sommet S(α ; β), c’est-à-dire le point le plus bas ou le plus haut de la parabole.</p></section><section class="course-paper-section"><h3>2. Préparer le carré</h3><p>On veut transformer x² − 8x en un carré. Un carré de la forme (x − a)² donne x² − 2ax + a². Le nombre placé devant x est donc le double du nombre a.</p><ol><li>Ici, le coefficient de x est −8. Sa moitié est −4 : on choisit donc (x − 4)².</li><li>Je vérifie en développant : (x − 4)(x − 4).</li><li>Je multiplie chaque terme : x × x = x² ; x × (−4) = −4x ; (−4) × x = −4x ; (−4) × (−4) = +16.</li><li>Je regroupe : x² − 4x − 4x + 16 = x² − 8x + 16.</li><li>Mais je cherchais x² − 8x, sans le +16. J’enlève donc 16 : x² − 8x = (x − 4)² − 16.</li></ol><p>On ajoute le +16 pour fabriquer le carré, puis on retire exactement ce même 16 pour conserver la valeur de départ. C’est comme déplacer un objet de 16 cm puis le ramener : le résultat final n’a pas bougé.</p><p>Dans 5(x² − 8x), le 5 multiplie tout ce qui est dans la parenthèse. Le −16 est donc lui aussi multiplié par 5 : 5 × (−16) = −80.</p><ol><li>5x² − 40x + 260 = 5(x² − 8x) + 260.</li><li>= 5((x − 4)² − 16) + 260.</li><li>Je distribue 5 aux deux termes : 5(x − 4)² − 80 + 260.</li><li>Je calcule les nombres seuls : −80 + 260 = 180.</li><li>Donc C(x) = 5(x − 4)² + 180.</li></ol></section><section class="course-paper-section"><h3>3. Transformer la formule entière</h3><p>On remplace seulement x² − 8x par le carré équivalent. Le 260 reste à l’extérieur.</p><ol><li>C(x) = 5(x² − 8x) + 260.</li><li>= 5((x − 4)² − 16) + 260.</li><li>On distribue 5 : = 5(x − 4)² − 80 + 260.</li><li>On calcule −80 + 260 = 180.</li><li>Donc C(x) = 5(x − 4)² + 180.</li></ol></section><section class="course-paper-section"><h3>4. Lire le minimum et le sommet</h3><p>Un carré ne peut jamais être négatif. Le plus petit carré vaut 0 ; il est obtenu quand x − 4 = 0, donc x = 4.</p><ol><li>À x = 4 : C(4) = 5(4 − 4)² + 180.</li><li>= 5 × 0² + 180.</li><li>= 180.</li><li>Le coût minimal est 180 €. Le sommet est S(4 ; 180) : 4 est le nombre d’interventions, 180 est le coût minimal.</li></ol></section><section class="course-paper-section"><h3>5. Vérifier en développant</h3><p>On vérifie la transformation dans l’autre sens. Si on retrouve la formule du départ, les deux écritures sont bien équivalentes.</p><ol class="course-paper-questions"><li><span>Développe 5(x − 4)² + 180 ligne par ligne.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Explique le rôle du nombre 16 ajouté puis retiré.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je m’entraîne — même méthode que dans le cours</h3><p>Reprends les étapes de l’exemple juste au-dessus. Écris une ligne par étape et garde les unités.</p><ol class="course-paper-questions"><li><span>Développe (x − 3)² sans sauter d’étape : écris (x − 3)(x − 3), les quatre produits, puis réduis.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Dans 5x² − 40x + 260, explique pourquoi on met 5 en facteur devant x² et −40x.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Explique pourquoi on ajoute puis retire 16 pour créer (x − 4)².</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je transfère — une situation nouvelle</h3><p>Cette fois, les nombres ou le contexte changent. Commence par identifier ce que l’on cherche, puis choisis la méthode qui convient.</p><ol class="course-paper-questions"><li><span>Transforme x² − 10x en carré diminué d’un nombre. Écris le carré développé pour contrôler.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Pour D(x) = 2(x − 5)² + 70, indique le x qui rend le carré égal à zéro et le coût minimal.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Explique ce que signifie le sommet dans une situation de coût.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section></article></section>
+<section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
+    <article class="course-paper-sheet">
+        <header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Trouver le coût minimal avec la forme canonique</h2><p>La forme canonique sert à lire rapidement le minimum d’une parabole. On va d’abord la construire, puis vérifier qu’elle raconte la même chose que la formule de départ.</p></header>
+        
+        <section class="course-paper-section">
+            <h3>1. Comprendre ce que l’on cherche</h3>
+            
+<p>On étudie C(x) = 5x² − 40x + 260. On veut connaître le plus petit coût et le nombre x qui permet de l’obtenir. La forme canonique a la forme a(x − α)² + β : elle fait apparaître le sommet S(α ; β), c’est-à-dire le point le plus bas ou le plus haut de la parabole.</p>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>2. Préparer le carré</h3>
+            
+<p>On veut transformer x² − 8x en un carré. Un carré de la forme (x − a)² donne x² − 2ax + a². Le nombre placé devant x est donc le double du nombre a.</p>
+    
+
+<ol><li>Ici, le coefficient de x est −8. Sa moitié est −4 : on choisit donc (x − 4)².</li><li>Je vérifie en développant : (x − 4)(x − 4).</li><li>Je multiplie chaque terme : x × x = x² ; x × (−4) = −4x ; (−4) × x = −4x ; (−4) × (−4) = +16.</li><li>Je regroupe : x² − 4x − 4x + 16 = x² − 8x + 16.</li><li>Mais je cherchais x² − 8x, sans le +16. J’enlève donc 16 : x² − 8x = (x − 4)² − 16.</li></ol>
+    
+
+<p>On ajoute le +16 pour fabriquer le carré, puis on retire exactement ce même 16 pour conserver la valeur de départ. C’est comme déplacer un objet de 16 cm puis le ramener : le résultat final n’a pas bougé.</p>
+    
+
+<p>Dans 5(x² − 8x), le 5 multiplie tout ce qui est dans la parenthèse. Le −16 est donc lui aussi multiplié par 5 : 5 × (−16) = −80.</p>
+    
+
+<ol><li>5x² − 40x + 260 = 5(x² − 8x) + 260.</li><li>= 5((x − 4)² − 16) + 260.</li><li>Je distribue 5 aux deux termes : 5(x − 4)² − 80 + 260.</li><li>Je calcule les nombres seuls : −80 + 260 = 180.</li><li>Donc C(x) = 5(x − 4)² + 180.</li></ol>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>3. Transformer la formule entière</h3>
+            
+<p>On remplace seulement x² − 8x par le carré équivalent. Le 260 reste à l’extérieur.</p>
+    
+
+<ol><li>C(x) = 5(x² − 8x) + 260.</li><li>= 5((x − 4)² − 16) + 260.</li><li>On distribue 5 : = 5(x − 4)² − 80 + 260.</li><li>On calcule −80 + 260 = 180.</li><li>Donc C(x) = 5(x − 4)² + 180.</li></ol>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>4. Lire le minimum et le sommet</h3>
+            
+<p>Un carré ne peut jamais être négatif. Le plus petit carré vaut 0 ; il est obtenu quand x − 4 = 0, donc x = 4.</p>
+    
+
+<ol><li>À x = 4 : C(4) = 5(4 − 4)² + 180.</li><li>= 5 × 0² + 180.</li><li>= 180.</li><li>Le coût minimal est 180 €. Le sommet est S(4 ; 180) : 4 est le nombre d’interventions, 180 est le coût minimal.</li></ol>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>5. Vérifier en développant</h3>
+            
+<p>On vérifie la transformation dans l’autre sens. Si on retrouve la formule du départ, les deux écritures sont bien équivalentes.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Développe 5(x − 4)² + 180 ligne par ligne.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Explique le rôle du nombre 16 ajouté puis retiré.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Je m’entraîne — même méthode que dans le cours</h3>
+            
+<p>Reprends les étapes de l’exemple juste au-dessus. Écris une ligne par étape et garde les unités.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Développe (x − 3)² sans sauter d’étape : écris (x − 3)(x − 3), les quatre produits, puis réduis.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Dans 5x² − 40x + 260, explique pourquoi on met 5 en facteur devant x² et −40x.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Explique pourquoi on ajoute puis retire 16 pour créer (x − 4)².</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Je transfère — une situation nouvelle</h3>
+            
+<p>Cette fois, les nombres ou le contexte changent. Commence par identifier ce que l’on cherche, puis choisis la méthode qui convient.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Transforme x² − 10x en carré diminué d’un nombre. Écris le carré développé pour contrôler.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Pour D(x) = 2(x − 5)² + 70, indique le x qui rend le carré égal à zéro et le coût minimal.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Explique ce que signifie le sommet dans une situation de coût.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+    </article>
+</section>
+
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
         <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
@@ -196,13 +313,15 @@
 <section class="cours-activites">
     
     <article class="cours-activite" id="a01">
-        <h2>Activité 1 — Retrouver les bases : carrés et calculs</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Retrouver les bases : carrés et calculs</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <h4>Notre situation professionnelle</h4>
     
@@ -256,6 +375,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a01-q01-label">Question 1 — Calculer 7² et expliquer ce que signifie le petit 2.</h3>
             
@@ -272,6 +392,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a01-q02-label">Question 2 — Calculer (-4)² puis -4². Expliquer la différence.</h3>
             
 
@@ -286,6 +407,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a01-q03-label">Question 3 — Résoudre x² = 25. Combien existe-t-il de solutions ?</h3>
             
@@ -302,6 +424,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a01-q04-label">Question 4 — Calculer 2 × 5² - 3 × 5 en respectant les priorités.</h3>
             
 
@@ -316,6 +439,7 @@
         </div>
         
         <div class="cours-question" data-question="q05">
+            
             
             <h3 id="a01-q05-label">Question 5 — Développer (x - 3)².</h3>
             
@@ -340,16 +464,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            
+            <a class="course-mission-next" href="#a02">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a02">
-        <h2>Activité 2 — Comprendre une fonction du second degré</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Comprendre une fonction du second degré</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notion : fonction et fonction du second degré.</p>
     
@@ -411,6 +542,7 @@
 
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a02-q01-label">Exercice 1 : Comprendre les lettres · Question 1 — Expliquer ce que représente x dans notre problème.</h3>
             
@@ -427,6 +559,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a02-q02-label">Exercice 1 : Comprendre les lettres · Question 2 — Expliquer ce que signifie C(3).</h3>
             
 
@@ -442,6 +575,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a02-q03-label">Exercice 1 : Comprendre les lettres · Question 3 — Pourquoi cette fonction est-elle du second degré ?</h3>
             
 
@@ -456,6 +590,7 @@
         </div>
         
         <div class="cours-question" data-question="q04">
+            
             
             <h3 id="a02-q04-label">Exercice 1 : Comprendre les lettres · Question 4 — Calculer C(3) en remplaçant x par 3 partout dans la formule.</h3>
             
@@ -479,6 +614,7 @@
         
         <div class="cours-question" data-question="q05">
             
+            
             <h3 id="a02-q05-label">Exercice 2 : Comparer deux organisations · Question 5 — Calculer C(2) et C(6), puis comparer les résultats.</h3>
             
 
@@ -494,6 +630,7 @@
         
         <div class="cours-question" data-question="q06">
             
+            
             <h3 id="a02-q06-label">Exercice 2 : Comparer deux organisations · Question 6 — Comment expliquer que deux fréquences différentes puissent donner le même coût ?</h3>
             
 
@@ -507,16 +644,23 @@
             
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a01">← Étape précédente</a>
+            <a class="course-mission-next" href="#a03">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a03">
-        <h2>Activité 3 — Observer les variations et trouver le minimum</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Observer les variations et trouver le minimum</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notions : tableau de valeurs, fonction croissante, fonction décroissante et minimum.</p>
     
@@ -546,6 +690,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a03-q01-label">Exercice 1 : Compléter un tableau de valeurs · Question 1 — Compléter le tableau de valeurs de C(x) pour x allant de 1 à 8.</h3>
             
@@ -656,6 +801,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a03-q02-label">Exercice 2 : Comprendre les variations · Question 2 — Décrire l&#39;évolution du coût lorsque x passe de 1 à 4.</h3>
             
 
@@ -670,6 +816,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a03-q03-label">Exercice 2 : Comprendre les variations · Question 3 — Décrire l&#39;évolution du coût lorsque x passe de 4 à 8.</h3>
             
@@ -686,6 +833,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a03-q04-label">Exercice 2 : Comprendre les variations · Question 4 — Quelle fréquence donne le coût le plus faible ? Préciser le coût correspondant.</h3>
             
 
@@ -700,6 +848,7 @@
         </div>
         
         <div class="cours-question" data-question="q05">
+            
             
             <h3 id="a03-q05-label">Exercice 2 : Comprendre les variations · Question 5 — Calculer les écarts C(2) - C(1), C(3) - C(2) et C(4) - C(3). Que remarquez-vous ?</h3>
             
@@ -730,16 +879,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a02">← Étape précédente</a>
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a04">
-        <h2>Activité 4 — Comprendre et construire la forme canonique</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Comprendre et construire la forme canonique</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notion : forme canonique.</p>
     
@@ -852,6 +1008,7 @@
 
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a04-q01-label">Exercice 1 : Vérifier les deux écritures · Question 1 — Développer 5(x - 4)² + 180 et retrouver la formule initiale.</h3>
             
@@ -868,6 +1025,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a04-q02-label">Exercice 1 : Vérifier les deux écritures · Question 2 — Calculer C(3) avec la forme canonique. Retrouve-t-on le même résultat ?</h3>
             
 
@@ -881,16 +1039,23 @@
             
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a05">
-        <h2>Activité 5 — Comprendre le minimum et le sommet</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 5</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Comprendre le minimum et le sommet</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notions : minimum, sommet et forme canonique.</p>
     
@@ -929,6 +1094,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a05-q01-label">Exercice 1 : Pourquoi le minimum vaut-il 180 € ? · Question 1 — Expliquer pourquoi (x - 4)² ne peut pas être négatif.</h3>
             
@@ -945,6 +1111,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a05-q02-label">Exercice 1 : Pourquoi le minimum vaut-il 180 € ? · Question 2 — Pour quelle valeur de x le carré (x - 4)² vaut-il zéro ?</h3>
             
 
@@ -960,6 +1127,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a05-q03-label">Exercice 1 : Pourquoi le minimum vaut-il 180 € ? · Question 3 — En déduire le coût minimal et la fréquence correspondante.</h3>
             
 
@@ -974,6 +1142,7 @@
         </div>
         
         <div class="cours-question" data-question="q04">
+            
             
             <h3 id="a05-q04-label">Exercice 1 : Pourquoi le minimum vaut-il 180 € ? · Question 4 — Calculer C(3) et C(5) avec la forme canonique. Que remarquez-vous ?</h3>
             
@@ -1015,6 +1184,7 @@
         
         <div class="cours-question" data-question="q05">
             
+            
             <h3 id="a05-q05-label">Exercice 2 : Comprendre le sommet · Question 5 — Donner les coordonnées du sommet de la parabole représentant C(x).</h3>
             
 
@@ -1030,6 +1200,7 @@
         
         <div class="cours-question" data-question="q06">
             
+            
             <h3 id="a05-q06-label">Exercice 2 : Comprendre le sommet · Question 6 — Pourquoi le sommet est-il appelé minimum dans notre situation ?</h3>
             
 
@@ -1044,6 +1215,7 @@
         </div>
         
         <div class="cours-question" data-question="q07">
+            
             
             <h3 id="a05-q07-label">Exercice 2 : Comprendre le sommet · Question 7 — Vérifier que la fréquence optimale respecte les contraintes du modèle.</h3>
             
@@ -1065,16 +1237,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
+            <a class="course-mission-next" href="#a06">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a06">
-        <h2>Activité 6 — Prendre une décision professionnelle</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 6</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Prendre une décision professionnelle</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notion : optimisation sous contraintes.</p>
     
@@ -1104,6 +1283,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a06-q01-label">Exercice 1 : Comparer les possibilités · Question 1 — Calculer les coûts pour deux, trois et cinq interventions.</h3>
             
@@ -1120,6 +1300,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a06-q02-label">Exercice 1 : Comparer les possibilités · Question 2 — Quelle fréquence minimise le coût parmi les solutions autorisées ?</h3>
             
 
@@ -1134,6 +1315,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a06-q03-label">Exercice 1 : Comparer les possibilités · Question 3 — Calculer le surcoût mensuel par rapport au minimum théorique de 180 €.</h3>
             
@@ -1157,6 +1339,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a06-q04-label">Exercice 2 : Justifier un conseil professionnel · Question 4 — Pourquoi ne peut-on plus recommander automatiquement quatre interventions ?</h3>
             
 
@@ -1172,6 +1355,7 @@
         
         <div class="cours-question" data-question="q05">
             
+            
             <h3 id="a06-q05-label">Exercice 2 : Justifier un conseil professionnel · Question 5 — Rédiger un conseil argumenté au responsable du centre équestre.</h3>
             
 
@@ -1185,16 +1369,23 @@
             
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a05">← Étape précédente</a>
+            <a class="course-mission-next" href="#a07">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a07">
-        <h2>Activité 7 — Bilan : vérifier sa compréhension</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 7</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Bilan : vérifier sa compréhension</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi ce bilan ? Nous allons vérifier que vous savez expliquer les notions essentielles avec vos propres mots.</p>
     
@@ -1206,6 +1397,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a07-q01-label">Question 1 — Quelle est la différence entre une fonction affine et une fonction du second degré ?</h3>
             
@@ -1222,6 +1414,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a07-q02-label">Question 2 — Pourquoi la forme canonique est-elle utile ?</h3>
             
 
@@ -1237,6 +1430,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a07-q03-label">Question 3 — Dans C(x) = 5(x - 4)² + 180, que représentent 4 et 180 ?</h3>
             
 
@@ -1251,6 +1445,7 @@
         </div>
         
         <div class="cours-question" data-question="q04">
+            
             
             <h3 id="a07-q04-label">Question 4 — Pourquoi faut-il vérifier les contraintes avant de proposer une solution ?</h3>
             
@@ -1272,16 +1467,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a06">← Étape précédente</a>
+            <a class="course-mission-next" href="#a08">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a08">
-        <h2>Activité 8 — Pour aller plus loin : défi facultatif</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 8</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Pour aller plus loin : défi facultatif</h2>
         <p class="course-optional">Pour aller plus loin — activité facultative.</p>
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi ce défi ? Nous allons comparer deux entreprises dont les coûts suivent des fonctions du second degré. Le but est de découvrir que le meilleur choix dépend des contraintes.</p>
     
@@ -1305,6 +1507,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a08-q01-label">Question 1 — Déterminer le coût minimal théorique de chaque entreprise et la fréquence correspondante.</h3>
             
@@ -1321,6 +1524,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a08-q02-label">Question 2 — Déterminer le coût minimal de chaque entreprise en respectant la contrainte d&#39;au moins cinq interventions.</h3>
             
 
@@ -1335,6 +1539,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a08-q03-label">Question 3 — Le responsable impose exactement six interventions. Quelle entreprise est la moins chère ?</h3>
             
@@ -1351,6 +1556,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a08-q04-label">Question 4 — Comparer les coûts des deux entreprises pour cinq, six et sept interventions.</h3>
             
 
@@ -1365,6 +1571,7 @@
         </div>
         
         <div class="cours-question" data-question="q05">
+            
             
             <h3 id="a08-q05-label">Question 5 — Défi avancé : sans tester toutes les valeurs, déterminer à partir de quelle fréquence entière B devient moins chère que A.</h3>
             
@@ -1381,6 +1588,7 @@
         
         <div class="cours-question" data-question="q06">
             
+            
             <h3 id="a08-q06-label">Question 6 — Rédiger une recommandation finale en précisant les informations à vérifier avant de signer un contrat.</h3>
             
 
@@ -1394,6 +1602,11 @@
             
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a07">← Étape précédente</a>
+            <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
 </section>
@@ -1422,16 +1635,18 @@
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
+
 
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
 
     </main>
     <footer class="site-footer">
     <p>
         &copy; 2026
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
     </p>
 </footer>
-<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
 </body>
 </html>

@@ -2,20 +2,23 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-graph.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="supabase-url" content="https://evbfflwfyiitrkgzjhwt.supabase.co">
+    <meta name="supabase-publishable-key" content="sb_publishable__aRCAzLQv4TmSL0Z1yvcZQ_Nbwd2Ah6">
 
     <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
 
     
-    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preconnect" href="https://evbfflwfyiitrkgzjhwt.supabase.co" crossorigin>
     <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
     <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
     
 
     <title>
         
-        Portail pédagogique Technologie | TIM | Mathématiques
+        Découvrir la dérivation – Comment évolue un coût ? | BAC À SABLE — Portail pédagogique (comptes fictifs)
         
     </title>
 
@@ -38,15 +41,17 @@
     
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css?v=20261022-shop-effects-2">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-learning-sequence.css">
     
     
 
@@ -54,11 +59,14 @@
 
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261022-quest-ui-2">
     
     
-<link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
+    
 </head>
 
 <body class="student-shell student-course-shell">
@@ -83,6 +91,9 @@
 
     <main class="student-course-main" id="student-course-main">
 
+
+
+
 <div id="course-work" data-etablissement="mfr" data-matiere="maths" data-classe="term" data-seance="S09" data-saving-enabled="true" data-collaboration-enabled="true">
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
@@ -105,8 +116,6 @@
     <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
     <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
 
-
-
 <div class="course-columns">
     <aside class="course-navigation" aria-label="Étapes de la séance">
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
@@ -119,7 +128,21 @@
 <!-- ========== INTRODUCTION DU COURS ========== -->
 
 <header class="cours-intro" id="course-intro">
+    
+    
+    
+    <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Mathématiques · Bac Pro 2 · S09</span></div>
     <h1>Découvrir la dérivation – Comment évolue un coût ?</h1>
+    <aside class="course-learning-sequence" aria-label="Comment avancer dans le cours">
+        <strong>Pour avancer</strong>
+        <ol>
+            <li>Lis les repères et les étapes.</li>
+            <li>Observe l’exemple s’il y en a un.</li>
+            <li>Essaie à ton tour avec les questions.</li>
+            <li>Réutilise une méthode déjà rencontrée.</li>
+        </ol>
+        <p>Tu peux garder le cours ouvert et utiliser les aides si tu bloques.</p>
+    </aside>
 
     
     <p class="cours-theme">
@@ -133,13 +156,13 @@
     </p>
     
 
-    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : Comprendre ce qu&#39;est une dérivée et à quoi elle sert.</p></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : Comprendre ce qu&#39;est une dérivée et à quoi elle sert.</p></section>
     
-    <section><h2>Dans la vie quotidienne</h2><p>Déplace le curseur pour observer comment évoluent le coût et la pente de la tangente. C(x) = 5x² - 40x + 260</p></section>
-    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Déplace le curseur pour observer comment évoluent le coût et la pente de la tangente. C(x) = 5x² - 40x + 260</p></section>
+    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
     
     
-    <section class="cours-objectifs">
+    <section class="course-info-card cours-objectifs">
         <h2>Ce que vous allez apprendre</h2>
         <ul>
             
@@ -211,9 +234,81 @@
 
 </header>
 
-    <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title"><article class="course-paper-sheet"><header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Comprendre la dérivée et repérer un minimum</h2><p>La dérivée est un indicateur de direction : elle dit si une courbe monte ou descend près d’un point. Imagine une route : la pente indique si l’on monte, si l’on descend ou si le chemin est plat.</p></header><section class="course-paper-section"><h3>1. Variation moyenne : comparer deux moments</h3><p>Pour savoir comment le coût évolue entre deux valeurs, on calcule la différence des coûts puis on la rapporte à la différence des x.</p><pre class="cours-code"><code>Taux de variation entre a et b : [f(b) − f(a)] ÷ (b − a).
+<section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
+    <article class="course-paper-sheet">
+        <header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Comprendre la dérivée et repérer un minimum</h2><p>La dérivée est un indicateur de direction : elle dit si une courbe monte ou descend près d’un point. Imagine une route : la pente indique si l’on monte, si l’on descend ou si le chemin est plat.</p></header>
+        
+        <section class="course-paper-section">
+            <h3>1. Variation moyenne : comparer deux moments</h3>
+            
+<p>Pour savoir comment le coût évolue entre deux valeurs, on calcule la différence des coûts puis on la rapporte à la différence des x.</p>
+    
+
+<pre class="cours-code"><code>Taux de variation entre a et b : [f(b) − f(a)] ÷ (b − a).
 Si le résultat est positif, le coût augmente entre a et b.
-S’il est négatif, le coût diminue.</code></pre></section><section class="course-paper-section"><h3>2. Nombre dérivé : la pente à un endroit précis</h3><p>La dérivée f′(a) mesure la pente de la courbe au point d’abscisse a. Sur le dessin, c’est la pente de la droite qui touche la courbe en ce point : la tangente.</p><ul><li>f′(a) &gt; 0 : la courbe monte près de a.</li><li>f′(a) &lt; 0 : la courbe descend près de a.</li><li>f′(a) = 0 : la tangente est horizontale. Cela peut signaler un sommet, mais il faut étudier le signe autour du point.</li></ul></section><section class="course-paper-section"><h3>3. Calculer une dérivée</h3><p>Règles utiles : la dérivée d’une constante est 0 ; la dérivée de x est 1 ; la dérivée de x² est 2x. On dérive chaque terme séparément.</p><ol class="course-paper-questions"><li><span>Pour f(x) = 5x² − 40x + 260, écris la dérivée de chaque terme sur une ligne.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Regroupe les termes obtenus.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Calcule f′(4) et interprète le résultat.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>4. Étudier le signe pour trouver un minimum</h3><p>On cherche quand la dérivée est négative et quand elle est positive. Si elle passe de − à +, la fonction descend puis remonte : elle atteint un minimum.</p><ol class="course-paper-questions"><li><span>Résous f′(x) = 0 pour trouver le point où la pente peut changer.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Fais un tableau de signes de f′.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Indique les intervalles où le coût diminue puis augmente.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Calcule le coût au point minimum et donne une phrase de conclusion.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je m’entraîne — même méthode que dans le cours</h3><p>Reprends les étapes de l’exemple juste au-dessus. Écris une ligne par étape et garde les unités.</p><ol class="course-paper-questions"><li><span>Pour f(x) = 5x² − 40x + 260, écris séparément la dérivée de 5x², de −40x et de 260.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Regroupe les termes pour obtenir f′(x).</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Résous f′(x) = 0 et explique ce que le résultat indique sur la pente.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je transfère — une situation nouvelle</h3><p>Cette fois, les nombres ou le contexte changent. Commence par identifier ce que l’on cherche, puis choisis la méthode qui convient.</p><ol class="course-paper-questions"><li><span>Pour g(x) = 2x² − 12x + 30, calcule g′(x).</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Résous g′(x) = 0 puis détermine où la fonction diminue et où elle augmente.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Un coût baisse puis remonte : à quoi correspond le point de changement ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section></article></section>
+S’il est négatif, le coût diminue.</code></pre>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>2. Nombre dérivé : la pente à un endroit précis</h3>
+            
+<p>La dérivée f′(a) mesure la pente de la courbe au point d’abscisse a. Sur le dessin, c’est la pente de la droite qui touche la courbe en ce point : la tangente.</p>
+    
+
+<ul><li>f′(a) &gt; 0 : la courbe monte près de a.</li><li>f′(a) &lt; 0 : la courbe descend près de a.</li><li>f′(a) = 0 : la tangente est horizontale. Cela peut signaler un sommet, mais il faut étudier le signe autour du point.</li></ul>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>3. Calculer une dérivée</h3>
+            
+<p>Règles utiles : la dérivée d’une constante est 0 ; la dérivée de x est 1 ; la dérivée de x² est 2x. On dérive chaque terme séparément.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Pour f(x) = 5x² − 40x + 260, écris la dérivée de chaque terme sur une ligne.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Regroupe les termes obtenus.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Calcule f′(4) et interprète le résultat.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>4. Étudier le signe pour trouver un minimum</h3>
+            
+<p>On cherche quand la dérivée est négative et quand elle est positive. Si elle passe de − à +, la fonction descend puis remonte : elle atteint un minimum.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Résous f′(x) = 0 pour trouver le point où la pente peut changer.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Fais un tableau de signes de f′.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Indique les intervalles où le coût diminue puis augmente.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Calcule le coût au point minimum et donne une phrase de conclusion.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Je m’entraîne — même méthode que dans le cours</h3>
+            
+<p>Reprends les étapes de l’exemple juste au-dessus. Écris une ligne par étape et garde les unités.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Pour f(x) = 5x² − 40x + 260, écris séparément la dérivée de 5x², de −40x et de 260.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Regroupe les termes pour obtenir f′(x).</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Résous f′(x) = 0 et explique ce que le résultat indique sur la pente.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Je transfère — une situation nouvelle</h3>
+            
+<p>Cette fois, les nombres ou le contexte changent. Commence par identifier ce que l’on cherche, puis choisis la méthode qui convient.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Pour g(x) = 2x² − 12x + 30, calcule g′(x).</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Résous g′(x) = 0 puis détermine où la fonction diminue et où elle augmente.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Un coût baisse puis remonte : à quoi correspond le point de changement ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+    </article>
+</section>
+
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
         <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
@@ -221,13 +316,15 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
 <section class="cours-activites">
     
     <article class="cours-activite" id="a03">
-        <h2>Activité 1 — 1. Retour rapide sur l&#39;évaluation</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>1. Retour rapide sur l&#39;évaluation</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Durée indicative : 4 minutes. Calculatrice interdite.</p>
     
@@ -239,6 +336,7 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a03-q01-label">Question 1 — Calculer T(8) lorsque T(x) = 15x + 80.</h3>
             
@@ -256,6 +354,7 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a03-q02-label">Question 2 — Quel est le minimum de C(x) = 4(x - 5)² + 160 ?</h3>
             
 
@@ -272,6 +371,7 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a03-q03-label">Question 3 — Que signifie l&#39;inégalité C(x) ≤ 176 ?</h3>
             
 
@@ -286,16 +386,23 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a04">
-        <h2>Activité 2 — 2. Comprendre une variation</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span></div>
+        <h2>2. Comprendre une variation</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Durée indicative : 9 minutes. Calculatrice autorisée.</p>
     
@@ -324,16 +431,23 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a05">
-        <h2>Activité 3 — Exercice : Comparer deux fréquences</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice : Comparer deux fréquences</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Nous allons calculer des coûts, puis mesurer comment ils changent.</p>
     
@@ -342,6 +456,7 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a05-q01-label">Question 1 — Calculer C(2) et C(3).</h3>
             
@@ -359,6 +474,7 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a05-q02-label">Question 2 — De combien le coût varie-t-il lorsque l&#39;on passe de deux à trois interventions ?</h3>
             
 
@@ -374,6 +490,7 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a05-q03-label">Question 3 — Calculer le taux de variation entre deux et trois interventions.</h3>
             
@@ -404,16 +521,23 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
+            <a class="course-mission-next" href="#a06">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a06">
-        <h2>Activité 4 — 3. Découvrir le nombre dérivé</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span></div>
+        <h2>3. Découvrir le nombre dérivé</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Durée indicative : 10 minutes. Calculatrice autorisée.</p>
     
@@ -433,16 +557,23 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a05">← Étape précédente</a>
+            <a class="course-mission-next" href="#a07">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a07">
-        <h2>Activité 5 — Observer une parabole et sa tangente</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 5</span></div>
+        <h2>Observer une parabole et sa tangente</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Déplace le curseur pour observer comment évoluent le coût et la pente de la tangente. C(x) = 5x² - 40x + 260</p>
     
@@ -507,19 +638,29 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
 <p>(C(3 + h) - C(3)) / h = -10 + 5h</p>
     
 
+<div class="course-graph" data-course-graph data-a="5" data-b="-40" data-c="260" data-x-min="1" data-x-max="8" data-y-min="150" data-y-max="290"><svg viewBox="0 0 680 390" role="img" aria-label="Courbe du coût et tangente mobile au point choisi"></svg><label>Déplacer le point : valeur de x<input type="range" min="1" max="8" step="0.1" value="3"></label><output aria-live="polite"></output><p>Courbe bleue : coût du modèle. Droite rouge : tangente.</p></div>
+    
+
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a06">← Étape précédente</a>
+            <a class="course-mission-next" href="#a08">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a08">
-        <h2>Activité 6 — Exercice : Observer une évolution locale</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 6</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice : Observer une évolution locale</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Nous allons observer ce qui arrive au taux de variation lorsque les deux valeurs étudiées deviennent très proches.</p>
     
@@ -528,6 +669,7 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a08-q01-label">Question 1 — Calculer -10 + 5h pour h = 1 puis h = 0,1.</h3>
             
@@ -545,6 +687,7 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a08-q02-label">Question 2 — Vers quelle valeur se rapproche le taux lorsque h se rapproche de zéro ?</h3>
             
 
@@ -560,6 +703,7 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a08-q03-label">Question 3 — Que signifie le signe négatif de C&#39;(3) ?</h3>
             
@@ -587,16 +731,23 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a07">← Étape précédente</a>
+            <a class="course-mission-next" href="#a09">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a09">
-        <h2>Activité 7 — 4. Calculer une dérivée</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 7</span></div>
+        <h2>4. Calculer une dérivée</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Durée indicative : 10 minutes. Calculatrice interdite.</p>
     
@@ -625,16 +776,23 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a08">← Étape précédente</a>
+            <a class="course-mission-next" href="#a10">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a10">
-        <h2>Activité 8 — Exercice : Appliquer les règles</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 8</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice : Appliquer les règles</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Nous allons apprendre à utiliser ces règles avant de les appliquer à notre situation professionnelle.</p>
     
@@ -643,6 +801,7 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a10-q01-label">Question 1 — Déterminer la dérivée de f(x) = 7x + 12.</h3>
             
@@ -660,6 +819,7 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a10-q02-label">Question 2 — Déterminer la dérivée de g(x) = 3x².</h3>
             
 
@@ -675,6 +835,7 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a10-q03-label">Question 3 — Déterminer la dérivée de h(x) = 4x² - 6x + 9.</h3>
             
@@ -692,6 +853,7 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a10-q04-label">Question 4 — Déterminer la dérivée de C(x) = 5x² - 40x + 260.</h3>
             
 
@@ -708,6 +870,7 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
         
         <div class="cours-question" data-question="q05">
             
+            
             <h3 id="a10-q05-label">Question 5 — Calculer C&#39;(3). Retrouve-t-on le résultat de l&#39;activité précédente ?</h3>
             
 
@@ -722,16 +885,23 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a09">← Étape précédente</a>
+            <a class="course-mission-next" href="#a11">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a11">
-        <h2>Activité 9 — 5. Utiliser la dérivée pour rechercher un minimum</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 9</span></div>
+        <h2>5. Utiliser la dérivée pour rechercher un minimum</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Durée indicative : 12 minutes. Calculatrice autorisée.</p>
     
@@ -769,16 +939,23 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a10">← Étape précédente</a>
+            <a class="course-mission-next" href="#a12">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a12">
-        <h2>Activité 10 — Exercice : Étudier le signe de la dérivée</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 10</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice : Étudier le signe de la dérivée</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Nous allons déterminer où la pente devient nulle et comment elle change de signe.</p>
     
@@ -787,6 +964,7 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a12-q01-label">Question 1 — Résoudre l&#39;équation C&#39;(x) = 0.</h3>
             
@@ -804,6 +982,7 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a12-q02-label">Question 2 — Calculer C&#39;(3) et C&#39;(5). Que constatez-vous ?</h3>
             
 
@@ -819,6 +998,7 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a12-q03-label">Question 3 — Compléter le tableau de variations et expliquer le sens des flèches.</h3>
             
@@ -837,16 +1017,23 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a11">← Étape précédente</a>
+            <a class="course-mission-next" href="#a13">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a13">
-        <h2>Activité 11 — Exercice : Conclure professionnellement</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 11</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice : Conclure professionnellement</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Nous allons transformer le résultat mathématique en une recommandation utilisable par le responsable du centre équestre.</p>
     
@@ -855,6 +1042,7 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a13-q01-label">Question 1 — Quel est le coût minimal ? Pour combien d&#39;interventions ? Justifier à l&#39;aide de la dérivée.</h3>
             
@@ -871,6 +1059,7 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
         </div>
         
         <div class="cours-question" data-question="q02">
+            
             
             <h3 id="a13-q02-label">Question 2 — Rédiger une recommandation de deux ou trois phrases au responsable.</h3>
             
@@ -891,6 +1080,7 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a13-q03-label">Question 3 — Calculer la dérivée f&#39;(x).</h3>
             
 
@@ -906,6 +1096,7 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
         </div>
         
         <div class="cours-question" data-question="q04">
+            
             
             <h3 id="a13-q04-label">Question 4 — Résoudre f&#39;(x) = 0.</h3>
             
@@ -923,6 +1114,7 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
         
         <div class="cours-question" data-question="q05">
             
+            
             <h3 id="a13-q05-label">Question 5 — Étudier le signe de f&#39;(x).</h3>
             
 
@@ -938,6 +1130,7 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
         </div>
         
         <div class="cours-question" data-question="q06">
+            
             
             <h3 id="a13-q06-label">Question 6 — En déduire les variations de f.</h3>
             
@@ -955,6 +1148,7 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
         
         <div class="cours-question" data-question="q07">
             
+            
             <h3 id="a13-q07-label">Question 7 — Calculer le minimum et l&#39;interpréter.</h3>
             
 
@@ -969,16 +1163,23 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a12">← Étape précédente</a>
+            <a class="course-mission-next" href="#a14">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a14">
-        <h2>Activité 12 — 6. Bilan de la séance</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 12</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>6. Bilan de la séance</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Durée indicative : 4 minutes. Calculatrice interdite.</p>
     
@@ -990,6 +1191,7 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a14-q01-label">Question 1 — Quelle différence existe-t-il entre C(x) et C&#39;(x) ?</h3>
             
@@ -1007,6 +1209,7 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a14-q02-label">Question 2 — Déterminer la dérivée de f(x) = 3x² - 8x + 5.</h3>
             
 
@@ -1023,6 +1226,7 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a14-q03-label">Question 3 — Que signifie une dérivée négative sur un intervalle ?</h3>
             
 
@@ -1037,16 +1241,23 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a13">← Étape précédente</a>
+            <a class="course-mission-next" href="#a15">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a15">
-        <h2>Activité 13 — À retenir</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 13</span></div>
+        <h2>À retenir</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <ul><li>Le taux de variation mesure une évolution moyenne entre deux valeurs.</li><li>La dérivée décrit l&#39;évolution locale d&#39;une fonction.</li><li>Le nombre dérivé f&#39;(a) est la pente de la tangente au point d&#39;abscisse a.</li><li>Si f(x) = ax² + bx + c, alors f&#39;(x) = 2ax + b.</li><li>Une dérivée négative indique une fonction décroissante ; une dérivée positive indique une fonction croissante.</li><li>Lorsque la dérivée passe de négative à positive, la fonction atteint un minimum.</li><li>Le résultat mathématique doit toujours être interprété dans le contexte professionnel.</li></ul>
     
@@ -1054,16 +1265,23 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a14">← Étape précédente</a>
+            <a class="course-mission-next" href="#a16">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a16">
-        <h2>Activité 14 — Pour aller plus loin : défi facultatif</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 14</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Pour aller plus loin : défi facultatif</h2>
         <p class="course-optional">Pour aller plus loin — activité facultative.</p>
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Calculatrice autorisée. À réaliser uniquement si les activités précédentes sont terminées.</p>
     
@@ -1087,6 +1305,7 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a16-q01-label">Question 1 — Déterminer F&#39;(x).</h3>
             
@@ -1104,6 +1323,7 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a16-q02-label">Question 2 — Vérifier que F&#39;(x) = 6(x - 1)(x - 4).</h3>
             
 
@@ -1119,6 +1339,7 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a16-q03-label">Question 3 — Déterminer le signe de F&#39;(x) sur [0 ; 6].</h3>
             
@@ -1139,6 +1360,7 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a16-q04-label">Question 4 — Calculer F(0), F(1), F(4) et F(6), puis déterminer le minimum global.</h3>
             
 
@@ -1153,6 +1375,11 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a15">← Étape précédente</a>
+            <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
 </section>
@@ -1181,16 +1408,18 @@ S’il est négatif, le coût diminue.</code></pre></section><section class="cou
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-graph-init.js"></script>
 
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
 
     </main>
     <footer class="site-footer">
     <p>
         &copy; 2026
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
     </p>
 </footer>
-<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
 </body>
 </html>

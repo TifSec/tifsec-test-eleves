@@ -2,20 +2,23 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="supabase-url" content="https://evbfflwfyiitrkgzjhwt.supabase.co">
+    <meta name="supabase-publishable-key" content="sb_publishable__aRCAzLQv4TmSL0Z1yvcZQ_Nbwd2Ah6">
 
     <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
 
     
-    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preconnect" href="https://evbfflwfyiitrkgzjhwt.supabase.co" crossorigin>
     <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
     <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
     
 
     <title>
         
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
         
     </title>
 
@@ -38,15 +41,17 @@
     
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css?v=20261022-shop-effects-2">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-learning-sequence.css">
     
     
 
@@ -54,9 +59,13 @@
 
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
     
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261022-quest-ui-2">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
     
 </head>
 
@@ -82,6 +91,9 @@
 
     <main class="student-course-main" id="student-course-main">
 
+
+
+
 <div id="course-work" data-etablissement="college" data-matiere="techno" data-classe="5e" data-seance="S08" data-saving-enabled="true" data-collaboration-enabled="true">
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
@@ -104,8 +116,6 @@
     <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
     <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
 
-
-
 <div class="course-columns">
     <aside class="course-navigation" aria-label="Étapes de la séance">
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
@@ -118,7 +128,21 @@
 <!-- ========== INTRODUCTION DU COURS ========== -->
 
 <header class="cours-intro" id="course-intro">
+    
+    
+    
+    <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Technologie · 5e · S08</span></div>
     <h1>Un objet qui ne fonctionne plus est-il forcément à jeter ?</h1>
+    <aside class="course-learning-sequence" aria-label="Comment avancer dans le cours">
+        <strong>Pour avancer</strong>
+        <ol>
+            <li>Lis les repères et les étapes.</li>
+            <li>Observe l’exemple s’il y en a un.</li>
+            <li>Essaie à ton tour avec les questions.</li>
+            <li>Réutilise une méthode déjà rencontrée.</li>
+        </ol>
+        <p>Tu peux garder le cours ouvert et utiliser les aides si tu bloques.</p>
+    </aside>
 
     
     <p class="cours-theme">
@@ -132,13 +156,13 @@
     </p>
     
 
-    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : Comprendre qu&#39;un objet qui ne fonctionne plus n&#39;est pas forcément définitivement inutilisable.</p></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : Comprendre qu&#39;un objet qui ne fonctionne plus n&#39;est pas forcément définitivement inutilisable.</p></section>
     
-    <section><h2>Dans la vie quotidienne</h2><p>Une petite lampe alimentée par des piles ne s&#39;allume plus lorsque l&#39;on appuie sur son interrupteur.</p></section>
-    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Une petite lampe alimentée par des piles ne s&#39;allume plus lorsque l&#39;on appuie sur son interrupteur.</p></section>
+    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
     
     
-    <section class="cours-objectifs">
+    <section class="course-info-card cours-objectifs">
         <h2>Ce que vous allez apprendre</h2>
         <ul>
             
@@ -195,6 +219,7 @@
 
 </header>
 
+
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
         <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
@@ -202,13 +227,15 @@
 <section class="cours-activites">
     
     <article class="cours-activite" id="a04">
-        <h2>Activité 1 — 1. Observer avant d&#39;expliquer</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>1. Observer avant d&#39;expliquer</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Imaginez la situation suivante :</p>
     
@@ -220,6 +247,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a04-q01-label">Question 1 — Q1 : Décrivez uniquement ce que vous observez, sans essayer d&#39;expliquer pourquoi.</h3>
             
@@ -236,6 +264,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a04-q02-label">Question 2 — Q2 : Quel devrait être le fonctionnement normal de la lampe ?</h3>
             
 
@@ -251,6 +280,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a04-q03-label">Question 3 — Q3 : Peut-on déjà savoir avec certitude quelle pièce est responsable ? Expliquez.</h3>
             
 
@@ -264,16 +294,23 @@
             
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a05">
-        <h2>Activité 2 — 2. Un même problème peut avoir plusieurs causes</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>2. Un même problème peut avoir plusieurs causes</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>La lampe ne s&#39;allume pas.</p>
     
@@ -288,6 +325,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a05-q01-label">Question 1 — Q4 : Parmi ces causes, lesquelles vous semblent les plus simples à vérifier sans démonter la lampe ?</h3>
             
@@ -304,6 +342,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a05-q02-label">Question 2 — Q5 : Pourquoi serait-il peu logique de remplacer immédiatement toutes les pièces de la lampe ?</h3>
             
 
@@ -317,16 +356,23 @@
             
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
+            <a class="course-mission-next" href="#a06">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a06">
-        <h2>Activité 3 — 3. Dans quel ordre vérifier ?</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>3. Dans quel ordre vérifier ?</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Il faut maintenant choisir un ordre logique pour effectuer les vérifications.</p>
     
@@ -335,6 +381,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a06-q01-label">Question 1 — Q6 : Classez les vérifications suivantes de celle que vous effectueriez en premier à celle que vous effectueriez en dernier :</h3>
             
@@ -351,6 +398,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a06-q02-label">Question 2 — vérifier que les piles sont présentes ;</h3>
             
 
@@ -365,6 +413,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a06-q03-label">Question 3 — vérifier leur sens ;</h3>
             
@@ -381,6 +430,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a06-q04-label">Question 4 — vérifier si les piles peuvent encore alimenter correctement l&#39;objet ;</h3>
             
 
@@ -395,6 +445,7 @@
         </div>
         
         <div class="cours-question" data-question="q05">
+            
             
             <h3 id="a06-q05-label">Question 5 — vérifier le fonctionnement apparent de l&#39;interrupteur ;</h3>
             
@@ -411,6 +462,7 @@
         
         <div class="cours-question" data-question="q06">
             
+            
             <h3 id="a06-q06-label">Question 6 — vérifier les contacts électriques accessibles ;</h3>
             
 
@@ -425,6 +477,7 @@
         </div>
         
         <div class="cours-question" data-question="q07">
+            
             
             <h3 id="a06-q07-label">Question 7 — envisager un défaut d&#39;un composant interne.</h3>
             
@@ -441,6 +494,7 @@
         
         <div class="cours-question" data-question="q08">
             
+            
             <h3 id="a06-q08-label">Question 8 — Q7 : Pourquoi est-il généralement préférable de commencer par des vérifications simples et accessibles ?</h3>
             
 
@@ -454,16 +508,23 @@
             
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a05">← Étape précédente</a>
+            <a class="course-mission-next" href="#a07">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a07">
-        <h2>Activité 4 — 4. Une méthode pour rechercher l&#39;origine d&#39;un problème</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span></div>
+        <h2>4. Une méthode pour rechercher l&#39;origine d&#39;un problème</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>À partir de vos réponses, nous pouvons construire une démarche simple :</p>
     
@@ -483,16 +544,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a06">← Étape précédente</a>
+            <a class="course-mission-next" href="#a08">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a08">
-        <h2>Activité 5 — 5. Dysfonctionnement, cause et diagnostic</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 5</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>5. Dysfonctionnement, cause et diagnostic</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Un dysfonctionnement correspond à un fonctionnement anormal ou à l&#39;absence du fonctionnement attendu.</p>
     
@@ -513,6 +581,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a08-q01-label">Question 1 — Q8 : Avec vos propres mots, expliquez la différence entre un dysfonctionnement et sa cause.</h3>
             
@@ -527,16 +596,23 @@
             
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a07">← Étape précédente</a>
+            <a class="course-mission-next" href="#a09">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a09">
-        <h2>Activité 6 — 6. Première enquête : la lampe</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 6</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>6. Première enquête : la lampe</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Voici les résultats de vérifications effectuées sur la lampe :</p>
     
@@ -548,6 +624,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a09-q01-label">Question 1 — Q9 : Quelle cause devient maintenant la plus probable ?</h3>
             
@@ -564,6 +641,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a09-q02-label">Question 2 — Q10 : Quelle intervention simple proposeriez-vous ?</h3>
             
 
@@ -579,6 +657,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a09-q03-label">Question 3 — Q11 : Que faut-il faire après cette intervention ? Pourquoi ?</h3>
             
 
@@ -592,16 +671,23 @@
             
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a08">← Étape précédente</a>
+            <a class="course-mission-next" href="#a10">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a10">
-        <h2>Activité 7 — 7. Deuxième enquête : le petit ventilateur</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 7</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>7. Deuxième enquête : le petit ventilateur</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Un petit ventilateur alimenté par piles tourne beaucoup plus lentement que d&#39;habitude.</p>
     
@@ -622,6 +708,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a10-q01-label">Question 1 — Q12 : Quelles causes pouvez-vous déjà écarter grâce aux vérifications ?</h3>
             
@@ -638,6 +725,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a10-q02-label">Question 2 — Q13 : Quelle cause devient la plus probable ?</h3>
             
 
@@ -653,6 +741,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a10-q03-label">Question 3 — Q14 : Quelle vérification supplémentaire permettrait de vérifier cette idée ?</h3>
             
 
@@ -666,16 +755,23 @@
             
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a09">← Étape précédente</a>
+            <a class="course-mission-next" href="#a11">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a11">
-        <h2>Activité 8 — 8. Troisième enquête : le jouet électronique</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 8</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>8. Troisième enquête : le jouet électronique</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Un jouet électronique fonctionne normalement lorsqu&#39;il reste posé sur une table, mais peut s&#39;éteindre lorsqu&#39;on le déplace.</p>
     
@@ -690,6 +786,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a11-q01-label">Question 1 — Q15 : Quel est le dysfonctionnement observé ?</h3>
             
@@ -706,6 +803,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a11-q02-label">Question 2 — Q16 : Quelle cause semble la plus probable ?</h3>
             
 
@@ -720,6 +818,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a11-q03-label">Question 3 — Q17 : Quel indice du tableau vous permet de privilégier cette cause ?</h3>
             
@@ -736,6 +835,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a11-q04-label">Question 4 — Q18 : Quelle intervention simple pourrait être envisagée ?</h3>
             
 
@@ -751,6 +851,7 @@
         
         <div class="cours-question" data-question="q05">
             
+            
             <h3 id="a11-q05-label">Question 5 — Q19 : Quel test faudrait-il ensuite réaliser ?</h3>
             
 
@@ -764,16 +865,23 @@
             
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a10">← Étape précédente</a>
+            <a class="course-mission-next" href="#a12">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a12">
-        <h2>Activité 9 — 9. Quatrième enquête : l&#39;éclairage de vélo</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 9</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>9. Quatrième enquête : l&#39;éclairage de vélo</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Un éclairage de vélo s&#39;allume encore, mais sa lumière est devenue beaucoup plus faible qu&#39;auparavant.</p>
     
@@ -788,6 +896,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a12-q01-label">Question 1 — Q20 : Peut-on déjà choisir avec certitude entre A, B et C ? Pourquoi ?</h3>
             
@@ -811,6 +920,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a12-q02-label">Question 2 — Q21 : Quelle cause devient la plus probable ?</h3>
             
 
@@ -826,6 +936,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a12-q03-label">Question 3 — Q22 : Quelle vérification permettrait de la confirmer ?</h3>
             
 
@@ -839,16 +950,23 @@
             
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a11">← Étape précédente</a>
+            <a class="course-mission-next" href="#a13">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a13">
-        <h2>Activité 10 — 10. Construire un tableau de diagnostic</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 10</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>10. Construire un tableau de diagnostic</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Choisissez maintenant deux des quatre enquêtes.</p>
     
@@ -860,6 +978,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a13-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
             
@@ -979,16 +1098,23 @@
             
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a12">← Étape précédente</a>
+            <a class="course-mission-next" href="#a14">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a14">
-        <h2>Activité 11 — 11. Une vérification qui échoue peut quand même être utile</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 11</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>11. Une vérification qui échoue peut quand même être utile</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Lors d&#39;un diagnostic, une première idée peut se révéler fausse.</p>
     
@@ -1006,6 +1132,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a14-q01-label">Question 1 — Q23 : Choisissez une enquête et donnez un exemple de cause que l&#39;on peut écarter grâce à une vérification.</h3>
             
@@ -1022,6 +1149,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a14-q02-label">Question 2 — Q24 : Pourquoi éliminer une mauvaise explication permet-il tout de même d&#39;avancer ?</h3>
             
 
@@ -1035,16 +1163,23 @@
             
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a13">← Étape précédente</a>
+            <a class="course-mission-next" href="#a15">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a15">
-        <h2>Activité 12 — 12. Réparer, remplacer... ou continuer le diagnostic ?</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 12</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>12. Réparer, remplacer... ou continuer le diagnostic ?</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Le diagnostic sert aussi à éviter de remplacer inutilement un objet entier.</p>
     
@@ -1059,6 +1194,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a15-q01-label">Question 1 — Q25 : Dans quelles situations une intervention simple semble possible à partir des informations fournies ?</h3>
             
@@ -1075,6 +1211,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a15-q02-label">Question 2 — Q26 : Dans quelles situations faudrait-il obtenir davantage d&#39;informations avant de décider ?</h3>
             
 
@@ -1089,6 +1226,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a15-q03-label">Question 3 — Q27 : Pourquoi prolonger la durée d&#39;utilisation d&#39;un objet grâce à une réparation peut-il être intéressant ?</h3>
             
@@ -1105,6 +1243,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a15-q04-label">Question 4 — Q28 : Faut-il pour autant toujours réparer n&#39;importe quel objet ? Expliquez.</h3>
             
 
@@ -1118,16 +1257,23 @@
             
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a14">← Étape précédente</a>
+            <a class="course-mission-next" href="#a16">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a16">
-        <h2>Activité 13 — 13. La réparation dans la vraie vie</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 13</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>13. La réparation dans la vraie vie</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>La réparation n&#39;est pas seulement une activité scolaire.</p>
     
@@ -1151,6 +1297,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a16-q01-label">Question 1 — Q29 : Pourquoi est-il intéressant de disposer de données réelles permettant de localiser des réparateurs plutôt que de simplement dire « il faut réparer » ?</h3>
             
@@ -1165,16 +1312,23 @@
             
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a15">← Étape précédente</a>
+            <a class="course-mission-next" href="#a17">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a17">
-        <h2>Activité 14 — 14. Petit défi : quelle méthode est la plus rigoureuse ?</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 14</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>14. Petit défi : quelle méthode est la plus rigoureuse ?</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Trois élèves recherchent pourquoi une lampe ne s&#39;allume plus.</p>
     
@@ -1186,6 +1340,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a17-q01-label">Question 1 — Q30 : Quel élève utilise la méthode la plus logique ?</h3>
             
@@ -1202,6 +1357,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a17-q02-label">Question 2 — Q31 : Quel est le problème dans la méthode de Léa ?</h3>
             
 
@@ -1217,6 +1373,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a17-q03-label">Question 3 — Q32 : Quel est le problème dans la méthode d&#39;Inès ?</h3>
             
 
@@ -1230,16 +1387,23 @@
             
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a16">← Étape précédente</a>
+            <a class="course-mission-next" href="#a18">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a18">
-        <h2>Activité 15 — 15. Conclusion du travail</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 15</span></div>
+        <h2>15. Conclusion du travail</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Sans retourner lire les parties précédentes, complétez :</p>
     
@@ -1259,16 +1423,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a17">← Étape précédente</a>
+            <a class="course-mission-next" href="#a19">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a19">
-        <h2>Activité 16 — Sources et ressources</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 16</span></div>
+        <h2>Sources et ressources</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <ul><li>Ministère de l&#39;Éducation nationale – Programme de technologie du cycle 4 : Programme officiel de technologie</li><li>Ministère de l&#39;Éducation nationale – Programme de technologie, compétence « Identifier un dysfonctionnement d&#39;un objet technique et y remédier » : Repères de progressivité 5e / 4e / 3e</li><li>ADEME – Réparation, garanties : ce qu&#39;il faut savoir pour faire durer ses objets : Guide sur la réparation et l&#39;allongement de la durée d&#39;usage</li><li>ADEME – Que faire de mes objets et déchets ? Réparer : Ressource pratique sur la réparation</li><li>data.gouv.fr / ADEME – Acteurs de l&#39;économie circulaire : Données ouvertes sur les acteurs de la réparation, du réemploi et du tri</li></ul>
     
@@ -1294,6 +1465,11 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a18">← Étape précédente</a>
+            <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
 </section>
@@ -1323,13 +1499,16 @@
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
 
+
+
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
 
     </main>
     <footer class="site-footer">
     <p>
         &copy; 2026
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
     </p>
 </footer>
 </body>

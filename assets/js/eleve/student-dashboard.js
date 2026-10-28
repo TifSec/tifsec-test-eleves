@@ -17,6 +17,8 @@ export function initDashboard() {
     const historyCount = document.getElementById('student-history-count');
     const followupPanel = document.getElementById('student-followup-panel');
     const followupContent = document.getElementById('student-followup');
+    const rewardShop = document.getElementById('student-card-shop');
+    const isLocalPreview = ['localhost', '127.0.0.1', '[::1]'].includes(window.location.hostname);
     const filters = [...(document.getElementById('student-filters')?.querySelectorAll('[data-view]') || [])];
     if (!lessons || !stats || !status || !refreshButton) return;
     let generation = 0;
@@ -31,6 +33,7 @@ export function initDashboard() {
     };
     function clear() {
         ++generation;
+        if (rewardShop) rewardShop.hidden = true;
         lessons.replaceChildren();
         stats.replaceChildren();
         viewState = null;
@@ -138,6 +141,7 @@ export function initDashboard() {
                 status.textContent = 'Reconnecte-toi pour retrouver ton travail.'; return;
             }
             const model = dashboardModel({ catalogue, profile: verified.profile, userId: session.user.id, ...data });
+            if (rewardShop) rewardShop.hidden = verified.profile.etablissement !== 'college' && !isLocalPreview;
             const progressions = JSON.parse(document.getElementById('progressions-data')?.textContent || '[]');
             viewState = { model, progressions, profile: verified.profile, userId: verified.user.id };
             lastLoaded = Date.now();

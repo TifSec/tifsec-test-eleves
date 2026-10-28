@@ -2,20 +2,23 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="supabase-url" content="https://evbfflwfyiitrkgzjhwt.supabase.co">
+    <meta name="supabase-publishable-key" content="sb_publishable__aRCAzLQv4TmSL0Z1yvcZQ_Nbwd2Ah6">
 
     <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
 
     
-    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preconnect" href="https://evbfflwfyiitrkgzjhwt.supabase.co" crossorigin>
     <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
     <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
     
 
     <title>
         
-        Protéger ses comptes et ses données | Portail pédagogique Technologie | TIM | Mathématiques
+        Protéger ses comptes et ses données | BAC À SABLE — Portail pédagogique (comptes fictifs)
         
     </title>
 
@@ -38,15 +41,17 @@
     
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css?v=20261022-shop-effects-2">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-learning-sequence.css">
     
     
 
@@ -54,9 +59,13 @@
 
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
     
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261022-quest-ui-2">
+    
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
     
 </head>
 
@@ -82,6 +91,9 @@
 
     <main class="student-course-main" id="student-course-main">
 
+
+
+
 <div id="course-work" data-etablissement="college" data-matiere="techno" data-classe="3e" data-seance="S10" data-saving-enabled="true" data-collaboration-enabled="true">
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
@@ -104,8 +116,6 @@
     <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
     <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
 
-
-
 <div class="course-columns">
     <aside class="course-navigation" aria-label="Étapes de la séance">
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
@@ -118,7 +128,21 @@
 <!-- ========== INTRODUCTION DU COURS ========== -->
 
 <header class="cours-intro" id="course-intro">
+    
+    
+    
+    <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Technologie · 3e · S10</span></div>
     <h1>Ancien essai court — protéger l’accès à ses comptes</h1>
+    <aside class="course-learning-sequence" aria-label="Comment avancer dans le cours">
+        <strong>Pour avancer</strong>
+        <ol>
+            <li>Lis les repères et les étapes.</li>
+            <li>Observe l’exemple s’il y en a un.</li>
+            <li>Essaie à ton tour avec les questions.</li>
+            <li>Réutilise une méthode déjà rencontrée.</li>
+        </ol>
+        <p>Tu peux garder le cours ouvert et utiliser les aides si tu bloques.</p>
+    </aside>
 
     
     <p class="cours-theme">
@@ -132,13 +156,13 @@
     </p>
     
 
-    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Un réseau peut fonctionner correctement alors qu’un utilisateur se fait tromper. Nous allons apprendre à choisir une réaction et à l’expliquer, plutôt qu’à mémoriser une liste de dangers.</p></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi étudier ce sujet ?</h2><p>Un réseau peut fonctionner correctement alors qu’un utilisateur se fait tromper. Nous allons apprendre à choisir une réaction et à l’expliquer, plutôt qu’à mémoriser une liste de dangers.</p></section>
     
-    <section><h2>Dans la vie quotidienne</h2><p>Ces réflexes servent pour l’ENT, une messagerie, un jeu en ligne ou un réseau social. Nous travaillons uniquement sur des situations inventées : ne saisis jamais un vrai mot de passe ni un code personnel dans tes réponses.</p></section>
-    <section><h2>Pour commencer</h2><p>En S09, vous avez étudié comment des réseaux communiquent. Rappelle oralement le rôle du routeur. Puis discutez : pouvoir joindre un service prouve-t-il que la personne qui demande à se connecter est autorisée ? Si les réseaux restent difficiles, le professeur reprend un exemple avant de poursuivre.</p></section>
-    <section><h2>Ce qui va nous servir</h2><ul><li>Un service en ligne échange des données par un réseau.</li><li>Pour cette séance, aucune configuration réseau ni création de compte n’est nécessaire.</li></ul></section>
-    <section class="cours-notions"><h2>Les repères pour comprendre</h2><h3>Indiquer son identité et la vérifier</h3><p>Un identifiant indique le compte demandé : par exemple un nom d’utilisateur. L’authentification sert à vérifier le droit d’utiliser ce compte, par exemple avec un mot de passe. Connaître un identifiant ne donne donc pas, à lui seul, le droit d’entrer.</p><h3>Plusieurs protections se complètent</h3><p>Un mot de passe long et difficile à deviner doit être différent pour chaque service. Un gestionnaire de mots de passe peut aider. Quand elle est proposée, la double authentification ajoute une vérification : par exemple un code temporaire sur un appareil que l’on possède. Ce code reste secret et cette protection ne rend pas toutes les tromperies impossibles.</p><h3>Prendre le temps de vérifier</h3><p>L’hameçonnage est une tromperie qui cherche à obtenir des informations ou une action en imitant un service connu. Une urgence, un logo ou le nom affiché de l’expéditeur ne prouvent pas l’origine du message. En cas de doute, ouvre toi-même l’application habituelle ou contacte le service par un moyen déjà connu. Sur un ordinateur partagé, déconnecte ton compte après usage.</p></section>
-    <section class="cours-objectifs">
+    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Ces réflexes servent pour l’ENT, une messagerie, un jeu en ligne ou un réseau social. Nous travaillons uniquement sur des situations inventées : ne saisis jamais un vrai mot de passe ni un code personnel dans tes réponses.</p></section>
+    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>En S09, vous avez étudié comment des réseaux communiquent. Rappelle oralement le rôle du routeur. Puis discutez : pouvoir joindre un service prouve-t-il que la personne qui demande à se connecter est autorisée ? Si les réseaux restent difficiles, le professeur reprend un exemple avant de poursuivre.</p></section>
+    <section class="course-info-card course-info-prerequisites"><h2>Ce qui va nous servir</h2><ul><li>Un service en ligne échange des données par un réseau.</li><li>Pour cette séance, aucune configuration réseau ni création de compte n’est nécessaire.</li></ul></section>
+    <section class="course-info-card cours-notions"><h2>Les repères pour comprendre</h2><h3>Indiquer son identité et la vérifier</h3><p>Un identifiant indique le compte demandé : par exemple un nom d’utilisateur. L’authentification sert à vérifier le droit d’utiliser ce compte, par exemple avec un mot de passe. Connaître un identifiant ne donne donc pas, à lui seul, le droit d’entrer.</p><h3>Plusieurs protections se complètent</h3><p>Un mot de passe long et difficile à deviner doit être différent pour chaque service. Un gestionnaire de mots de passe peut aider. Quand elle est proposée, la double authentification ajoute une vérification : par exemple un code temporaire sur un appareil que l’on possède. Ce code reste secret et cette protection ne rend pas toutes les tromperies impossibles.</p><h3>Prendre le temps de vérifier</h3><p>L’hameçonnage est une tromperie qui cherche à obtenir des informations ou une action en imitant un service connu. Une urgence, un logo ou le nom affiché de l’expéditeur ne prouvent pas l’origine du message. En cas de doute, ouvre toi-même l’application habituelle ou contacte le service par un moyen déjà connu. Sur un ordinateur partagé, déconnecte ton compte après usage.</p></section>
+    <section class="course-info-card cours-objectifs">
         <h2>Ce que vous allez apprendre</h2>
         <ul>
             
@@ -166,6 +190,7 @@
     
 </header>
 
+
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
         <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
@@ -173,7 +198,8 @@
 <section class="cours-activites">
     
     <article class="cours-activite" id="a01">
-        <h2>Activité 1 — Choisir comment protéger un compte</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Choisir comment protéger un compte</h2>
         
         <p><strong>Pourquoi cette activité ?</strong> Comprendre ce que chaque protection apporte, pour ne pas compter sur une seule précaution.</p>
         <h3>Comment procéder ?</h3><ol><li>Lis les repères. Explique oralement à ton voisin la différence entre identifiant et authentification.</li><li>Réponds au choix proposé, puis explique les deux protections de la situation suivante en deux à quatre phrases.</li><li>En groupe, chacun doit pouvoir expliquer l’une des protections ; une seule réponse commune est enregistrée.</li></ol>
@@ -183,7 +209,9 @@
         
         
         
+        
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a01-q01-label">Question 1 — Sam saisit son nom d’utilisateur puis un code secret pour accéder à son compte. Quel élément sert à vérifier son droit d’accès ?</h3>
             
@@ -200,6 +228,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a01-q02-label">Question 2 — Un mot de passe utilisé sur un jeu a été volé. Alex utilise un mot de passe différent pour sa messagerie et y a activé la double authentification. Explique ce que chacune de ces deux précautions apporte à sa messagerie.</h3>
             
 
@@ -213,10 +242,16 @@
             
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            
+            <a class="course-mission-next" href="#a02">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a02">
-        <h2>Activité 2 — Examiner une demande inhabituelle</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Examiner une demande inhabituelle</h2>
         
         <p><strong>Pourquoi cette activité ?</strong> Apprendre à justifier un doute et à vérifier sans utiliser le chemin proposé par le message.</p>
         <h3>Comment procéder ?</h3><ol><li>Lis silencieusement le message. Repère ce qu’il demande de faire et ce qui pousse à se dépêcher.</li><li>Compare tes observations avec ton voisin avant de rédiger. Explique tes indices avec tes mots.</li><li>Si tu hésites, demande au professeur la ressource officielle sur l’hameçonnage. Cherche seulement comment vérifier une demande, puis reviens à la situation.</li></ol>
@@ -228,7 +263,9 @@
         
         
         
+        
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a02-q01-label">Question 1 — Relève deux indices différents qui doivent t’alerter, explique pourquoi, puis propose un moyen de vérifier la demande sans y répondre. Quatre à cinq phrases suffisent.</h3>
             
@@ -245,6 +282,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a02-q02-label">Question 2 — Un autre message affiche le vrai logo du collège et ne contient aucune faute. Que peux-tu en conclure ?</h3>
             
 
@@ -258,10 +296,16 @@
             
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a01">← Étape précédente</a>
+            <a class="course-mission-next" href="#a03">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a03">
-        <h2>Activité 3 — Réagir et expliquer</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Réagir et expliquer</h2>
         
         <p><strong>Pourquoi cette activité ?</strong> Transformer les précautions du cours en une courte démarche utilisable dans une situation nouvelle.</p>
         <h3>Comment procéder ?</h3><ol><li>Imagine les premières actions utiles, sans ouvrir de compte réel ni modifier tes réglages personnels.</li><li>Écris trois étapes numérotées et explique brièvement leur utilité. Relis ensuite les réponses de la séance.</li></ol>
@@ -271,7 +315,9 @@
         
         
         
+        
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a03-q01-label">Question 1 — Lou a communiqué le mot de passe de l’ENT à un faux service d’assistance. Lou peut encore ouvrir l’application habituelle. Propose trois actions utiles, dans un ordre cohérent, pour demander de l’aide et protéger le compte. Explique à quoi sert chaque action.</h3>
             
@@ -286,10 +332,16 @@
             
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a02">← Étape précédente</a>
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a04">
-        <h2>Activité 4 — Pour aller plus loin, si tu as terminé</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span></div>
+        <h2>Pour aller plus loin, si tu as terminé</h2>
         <p class="course-optional">Pour aller plus loin — activité facultative.</p>
         <p><strong>Pourquoi cette activité ?</strong> Réutiliser les réflexes dans une autre situation, sans ajouter de travail obligatoire.</p>
         <h3>Comment procéder ?</h3><ol><li>Imagine oralement une demande inhabituelle dans un jeu en ligne, sans utiliser de données personnelles.</li><li>Demande à un camarade quel indice il vérifierait et par quel autre chemin.</li></ol>
@@ -299,6 +351,12 @@
         
         
         
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
 </section>
@@ -328,13 +386,16 @@
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
 
+
+
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
 
     </main>
     <footer class="site-footer">
     <p>
         &copy; 2026
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
     </p>
 </footer>
 </body>

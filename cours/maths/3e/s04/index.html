@@ -2,20 +2,23 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="supabase-url" content="https://evbfflwfyiitrkgzjhwt.supabase.co">
+    <meta name="supabase-publishable-key" content="sb_publishable__aRCAzLQv4TmSL0Z1yvcZQ_Nbwd2Ah6">
 
     <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
 
     
-    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preconnect" href="https://evbfflwfyiitrkgzjhwt.supabase.co" crossorigin>
     <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
     <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
     
 
     <title>
         
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
         
     </title>
 
@@ -38,15 +41,17 @@
     
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css?v=20261022-shop-effects-2">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-learning-sequence.css">
     
     
 
@@ -54,11 +59,14 @@
 
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261022-quest-ui-2">
     
     
-<link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
+    
 </head>
 
 <body class="student-shell student-course-shell">
@@ -83,6 +91,9 @@
 
     <main class="student-course-main" id="student-course-main">
 
+
+
+
 <div id="course-work" data-etablissement="mfr" data-matiere="maths" data-classe="3e" data-seance="S04" data-saving-enabled="true" data-collaboration-enabled="true">
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
@@ -105,8 +116,6 @@
     <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
     <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
 
-
-
 <div class="course-columns">
     <aside class="course-navigation" aria-label="Étapes de la séance">
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
@@ -119,7 +128,21 @@
 <!-- ========== INTRODUCTION DU COURS ========== -->
 
 <header class="cours-intro" id="course-intro">
+    
+    
+    
+    <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Mathématiques · 3e MFR · S04</span></div>
     <h1>Comprendre, simplifier et comparer des fractions</h1>
+    <aside class="course-learning-sequence" aria-label="Comment avancer dans le cours">
+        <strong>Pour avancer</strong>
+        <ol>
+            <li>Lis les repères et les étapes.</li>
+            <li>Observe l’exemple s’il y en a un.</li>
+            <li>Essaie à ton tour avec les questions.</li>
+            <li>Réutilise une méthode déjà rencontrée.</li>
+        </ol>
+        <p>Tu peux garder le cours ouvert et utiliser les aides si tu bloques.</p>
+    </aside>
 
     
     <p class="cours-theme">
@@ -133,13 +156,13 @@
     </p>
     
 
-    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Les fractions permettent de décrire une proportion, comparer des quantités, répartir une surface ou exprimer une partie d&#39;un ensemble.</p></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi étudier ce sujet ?</h2><p>Les fractions permettent de décrire une proportion, comparer des quantités, répartir une surface ou exprimer une partie d&#39;un ensemble.</p></section>
     
-    <section><h2>Dans la vie quotidienne</h2><p>Dans un exercice mathématique simplifié, on compare la proportion d&#39;un même élément dans deux rations.</p></section>
-    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Dans un exercice mathématique simplifié, on compare la proportion d&#39;un même élément dans deux rations.</p></section>
+    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
     
     
-    <section class="cours-objectifs">
+    <section class="course-info-card cours-objectifs">
         <h2>Ce que vous allez apprendre</h2>
         <ul>
             
@@ -170,7 +193,69 @@
 
 </header>
 
-    <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title"><article class="course-paper-sheet"><header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Simplifier et comparer des fractions</h2><p>Une fraction est une division et une part d’un tout. Pour comparer deux parts, il faut les exprimer avec des parts de même taille. Au brevet, montre ta méthode et vérifie tes réponses.</p></header><section class="course-paper-section"><h3>1. Simplifier une fraction</h3><p>On divise le numérateur et le dénominateur par le même nombre. La valeur ne change pas : on coupe chaque part en plus gros morceaux.</p><ol><li>12/18 : le haut et le bas sont divisibles par 6.</li><li>12 ÷ 6 = 2 et 18 ÷ 6 = 3.</li><li>Donc 12/18 = 2/3.</li></ol></section><section class="course-paper-section"><h3>2. Comparer</h3><p>Même dénominateur : compare les numérateurs. Même numérateur : la fraction avec le plus petit dénominateur est la plus grande. Si tout est différent, cherche un dénominateur commun.</p></section><section class="course-paper-section"><h3>3. Exemple avec deux dénominateurs différents</h3><p>Pour comparer 2/3 et 3/4, on transforme les deux fractions en douzièmes.</p><ol><li>3 et 4 ont 12 comme multiple commun.</li><li>2/3 = 2 × 4 / 3 × 4 = 8/12.</li><li>3/4 = 3 × 3 / 4 × 3 = 9/12.</li><li>9/12 &gt; 8/12, donc 3/4 &gt; 2/3.</li></ol></section><section class="course-paper-section"><h3>Je m’entraîne — même méthode que dans le cours</h3><p>Reprends les étapes de l’exemple juste au-dessus. Écris une ligne par étape et garde les unités.</p><ol class="course-paper-questions"><li><span>Simplifie 18/24 en divisant le haut et le bas par le même nombre.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Compare 3/4 et 5/8 en les transformant en huitièmes.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Explique pourquoi la valeur ne change pas quand on multiplie haut et bas par le même nombre.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je transfère — une situation nouvelle</h3><p>Cette fois, les nombres ou le contexte changent. Commence par identifier ce que l’on cherche, puis choisis la méthode qui convient.</p><ol class="course-paper-questions"><li><span>Compare 5/6 et 7/9 en cherchant un dénominateur commun.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Une équipe a parcouru 7/10 d’un trajet ; une autre 2/3. Qui est la plus avancée ? Montre comment tu compares.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section></article></section>
+<section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
+    <article class="course-paper-sheet">
+        <header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Simplifier et comparer des fractions</h2><p>Une fraction est une division et une part d’un tout. Pour comparer deux parts, il faut les exprimer avec des parts de même taille. Au brevet, montre ta méthode et vérifie tes réponses.</p></header>
+        
+        <section class="course-paper-section">
+            <h3>1. Simplifier une fraction</h3>
+            
+<p>On divise le numérateur et le dénominateur par le même nombre. La valeur ne change pas : on coupe chaque part en plus gros morceaux.</p>
+    
+
+<ol><li>12/18 : le haut et le bas sont divisibles par 6.</li><li>12 ÷ 6 = 2 et 18 ÷ 6 = 3.</li><li>Donc 12/18 = 2/3.</li></ol>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>2. Comparer</h3>
+            
+<p>Même dénominateur : compare les numérateurs. Même numérateur : la fraction avec le plus petit dénominateur est la plus grande. Si tout est différent, cherche un dénominateur commun.</p>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>3. Exemple avec deux dénominateurs différents</h3>
+            
+<p>Pour comparer 2/3 et 3/4, on transforme les deux fractions en douzièmes.</p>
+    
+
+<ol><li>3 et 4 ont 12 comme multiple commun.</li><li>2/3 = 2 × 4 / 3 × 4 = 8/12.</li><li>3/4 = 3 × 3 / 4 × 3 = 9/12.</li><li>9/12 &gt; 8/12, donc 3/4 &gt; 2/3.</li></ol>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Je m’entraîne — même méthode que dans le cours</h3>
+            
+<p>Reprends les étapes de l’exemple juste au-dessus. Écris une ligne par étape et garde les unités.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Simplifie 18/24 en divisant le haut et le bas par le même nombre.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Compare 3/4 et 5/8 en les transformant en huitièmes.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Explique pourquoi la valeur ne change pas quand on multiplie haut et bas par le même nombre.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Je transfère — une situation nouvelle</h3>
+            
+<p>Cette fois, les nombres ou le contexte changent. Commence par identifier ce que l’on cherche, puis choisis la méthode qui convient.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Compare 5/6 et 7/9 en cherchant un dénominateur commun.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Une équipe a parcouru 7/10 d’un trajet ; une autre 2/3. Qui est la plus avancée ? Montre comment tu compares.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+    </article>
+</section>
+
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
         <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
@@ -178,13 +263,15 @@
 <section class="cours-activites">
     
     <article class="cours-activite" id="a02">
-        <h2>Activité 1 — Qu&#39;est-ce qu&#39;une fraction ?</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span></div>
+        <h2>Qu&#39;est-ce qu&#39;une fraction ?</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Une fraction permet de représenter une partie d&#39;une quantité, mais aussi un nombre ou une division.</p>
     
@@ -195,16 +282,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            
+            <a class="course-mission-next" href="#a03">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a03">
-        <h2>Activité 2 — À quoi ça sert ?</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span></div>
+        <h2>À quoi ça sert ?</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Les fractions permettent de décrire une proportion, comparer des quantités, répartir une surface ou exprimer une partie d&#39;un ensemble.</p>
     
@@ -239,16 +333,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a02">← Étape précédente</a>
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a04">
-        <h2>Activité 3 — 1. Automatismes : réactiver les outils utiles</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>1. Automatismes : réactiver les outils utiles</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notions : division, divisibilité et facteurs communs.</p>
     
@@ -263,6 +364,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a04-q01-label">Question 1 — 1. 72 ÷ 8 =</h3>
             
@@ -279,6 +381,7 @@
         </div>
         
         <div class="cours-question" data-question="q02">
+            
             
             <h3 id="a04-q02-label">Question 2 — 54 est-il divisible par 3 ?</h3>
             
@@ -300,6 +403,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a04-q03-label">Question 3 — Simplifiez 12/18 en divisant le numérateur et le dénominateur par 6.</h3>
             
 
@@ -320,16 +424,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a05">
-        <h2>Activité 4 — 2. Comprendre ce que représente une fraction</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>2. Comprendre ce que représente une fraction</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notion : numérateur et dénominateur.</p>
     
@@ -353,6 +464,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a05-q01-label">Question 1 — Nombre total de parts =</h3>
             
@@ -370,6 +482,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a05-q02-label">Question 2 — Nombre de parts prises =</h3>
             
 
@@ -385,6 +498,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a05-q03-label">Question 3 — Écrivez la fraction correspondant à la partie prise et celle correspondant à la partie restante.</h3>
             
@@ -409,16 +523,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
+            <a class="course-mission-next" href="#a06">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a06">
-        <h2>Activité 5 — 3. Une fraction est aussi une division</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 5</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>3. Une fraction est aussi une division</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notion : fraction-quotient.</p>
     
@@ -436,6 +557,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a06-q01-label">Question 1 — 1/2 = 1 ÷ 2 =</h3>
             
@@ -453,6 +575,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a06-q02-label">Question 2 — 3/4 = 3 ÷ 4 =</h3>
             
 
@@ -468,6 +591,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a06-q03-label">Question 3 — 5/2 = 5 ÷ 2 =</h3>
             
@@ -492,16 +616,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a05">← Étape précédente</a>
+            <a class="course-mission-next" href="#a07">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a07">
-        <h2>Activité 6 — 4. Découvrir les fractions équivalentes</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 6</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>4. Découvrir les fractions équivalentes</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notion : fractions équivalentes.</p>
     
@@ -525,6 +656,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a07-q01-label">Question 1 — Que remarquez-vous si vous calculez la valeur de ces quatre fractions ?</h3>
             
@@ -541,6 +673,7 @@
         </div>
         
         <div class="cours-question" data-question="q02">
+            
             
             <h3 id="a07-q02-label">Question 2 — Complétez : 1/2 = 2/... ; 1/2 = .../10 ; 3/4 = 6/... Indice 1 Regardez par combien le numérateur a été multiplié. Indice 2 Il faut effectuer la même multiplication au numérateur et au dénominateur. Indice 3 1/2 = 2/4 1/2 = 5/10 3/4 = 6/8</h3>
             
@@ -562,16 +695,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a06">← Étape précédente</a>
+            <a class="course-mission-next" href="#a08">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a08">
-        <h2>Activité 7 — 5. Simplifier une fraction</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 7</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>5. Simplifier une fraction</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notion : simplification et fraction irréductible.</p>
     
@@ -601,6 +741,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a08-q01-label">Question 1 — Simplifiez : 8/12 ; 10/15 ; 12/16 ; 15/25. Indice 1 Cherchez un diviseur commun au numérateur et au dénominateur. Indice 2 Testez 2, 3, 4 ou 5. Indice 3 8/12 : diviser par 4. 10/15 : diviser par 5. 12/16 : diviser par 4. 15/25 : diviser par 5.</h3>
             
@@ -617,6 +758,7 @@
         </div>
         
         <div class="cours-question" data-question="q02">
+            
             
             <h3 id="a08-q02-label">Question 2 — Parmi 2/3, 4/6, 5/7 et 15/20, quelles fractions sont déjà irréductibles ?</h3>
             
@@ -641,16 +783,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a07">← Étape précédente</a>
+            <a class="course-mission-next" href="#a09">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a09">
-        <h2>Activité 8 — 6. Comparer des fractions</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 8</span></div>
+        <h2>6. Comparer des fractions</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notion : ordre et comparaison de fractions.</p>
     
@@ -667,21 +816,29 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a08">← Étape précédente</a>
+            <a class="course-mission-next" href="#a10">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a10">
-        <h2>Activité 9 — Cas 1 : même dénominateur</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 9</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Cas 1 : même dénominateur</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a10-q01-label">Question 1 — Comparez : 3/8 et 5/8 ; 7/10 et 4/10.</h3>
             
@@ -697,21 +854,29 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a09">← Étape précédente</a>
+            <a class="course-mission-next" href="#a11">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a11">
-        <h2>Activité 10 — Cas 2 : même numérateur</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 10</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Cas 2 : même numérateur</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a11-q01-label">Question 1 — Comparez : 1/2 et 1/4 ; 3/5 et 3/8.</h3>
             
@@ -727,21 +892,29 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a10">← Étape précédente</a>
+            <a class="course-mission-next" href="#a12">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a12">
-        <h2>Activité 11 — Cas 3 : tout est différent</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 11</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Cas 3 : tout est différent</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a12-q01-label">Question 1 — Comparez 2/3 et 3/4 en les écrivant avec le même dénominateur. Indice 1 Cherchez un multiple commun de 3 et de 4. Indice 2 12 est un multiple commun. Indice 3 2/3 = 8/12 3/4 = 9/12</h3>
             
@@ -763,16 +936,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a11">← Étape précédente</a>
+            <a class="course-mission-next" href="#a13">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a13">
-        <h2>Activité 12 — 7. Situation professionnelle : comparer deux proportions</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 12</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>7. Situation professionnelle : comparer deux proportions</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Calculatrice autorisée.</p>
     
@@ -799,6 +979,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a13-q01-label">Question 1 — Transformez 3/5 en une fraction de dénominateur 10, comparez les deux fractions puis rédigez une phrase de conclusion.</h3>
             
@@ -820,16 +1001,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a12">← Étape précédente</a>
+            <a class="course-mission-next" href="#a14">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a14">
-        <h2>Activité 13 — 8. Défi DNB : choisir le meilleur parcours</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 13</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>8. Défi DNB : choisir le meilleur parcours</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Calculatrice interdite.</p>
     
@@ -844,6 +1032,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a14-q01-label">Question 1 — Qui a parcouru la plus grande proportion ? Justifiez avec des fractions ayant le même dénominateur. Indice 1 Cherchez un multiple commun de 8 et de 3. Indice 2 24 convient. Indice 3 5/8 = 15/24 2/3 = 16/24</h3>
             
@@ -860,6 +1049,7 @@
         </div>
         
         <div class="cours-question" data-question="q02">
+            
             
             <h3 id="a14-q02-label">Question 2 — Quelle fraction du parcours reste à effectuer à l&#39;élève B ?</h3>
             
@@ -881,16 +1071,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a13">← Étape précédente</a>
+            <a class="course-mission-next" href="#a15">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a15">
-        <h2>Activité 14 — 9. Mon bilan</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 14</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>9. Mon bilan</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cette dernière étape ? Pour vérifier que vous savez expliquer les méthodes, pas seulement les appliquer.</p>
     
@@ -899,6 +1096,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a15-q01-label">Question 1 — Expliquez avec vos mots comment simplifier une fraction.</h3>
             
@@ -916,6 +1114,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a15-q02-label">Question 2 — Que pouvez-vous faire lorsque deux fractions sont difficiles à comparer directement ?</h3>
             
 
@@ -930,16 +1129,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a14">← Étape précédente</a>
+            <a class="course-mission-next" href="#a16">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a16">
-        <h2>Activité 15 — À retenir</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 15</span></div>
+        <h2>À retenir</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <ul><li>Une fraction représente une partie, mais aussi un nombre ou une division.</li><li>Dans a/b, a est le numérateur et b le dénominateur.</li><li>Des fractions équivalentes représentent le même nombre.</li><li>Pour obtenir une fraction équivalente, on multiplie ou divise le numérateur et le dénominateur par le même nombre non nul.</li><li>Une fraction irréductible ne peut plus être simplifiée.</li><li>À dénominateurs égaux, on compare les numérateurs.</li><li>À numérateurs positifs égaux, le plus petit dénominateur correspond à la plus grande fraction.</li><li>Si tout est différent, on peut utiliser des fractions équivalentes ayant le même dénominateur.</li></ul>
     
@@ -947,16 +1153,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a15">← Étape précédente</a>
+            <a class="course-mission-next" href="#a17">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a17">
-        <h2>Activité 16 — Finir la séance</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 16</span></div>
+        <h2>Finir la séance</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Vérifiez vos simplifications, vos signes de comparaison et les justifications demandées.</p>
     
@@ -964,16 +1177,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a16">← Étape précédente</a>
+            <a class="course-mission-next" href="#a18">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a18">
-        <h2>Activité 17 — Références générales</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 17</span></div>
+        <h2>Références générales</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <ul><li>Chlorofil – Classes de 4e et 3e de l&#39;enseignement agricole</li><li>Éduscol – Les épreuves du DNB</li></ul>
     
@@ -987,6 +1207,11 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a17">← Étape précédente</a>
+            <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
 </section>
@@ -1015,16 +1240,18 @@
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
+
 
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
 
     </main>
     <footer class="site-footer">
     <p>
         &copy; 2026
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
     </p>
 </footer>
-<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
 </body>
 </html>

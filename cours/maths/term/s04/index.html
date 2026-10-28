@@ -2,20 +2,23 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="supabase-url" content="https://evbfflwfyiitrkgzjhwt.supabase.co">
+    <meta name="supabase-publishable-key" content="sb_publishable__aRCAzLQv4TmSL0Z1yvcZQ_Nbwd2Ah6">
 
     <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
 
     
-    <link rel="preconnect" href="https://aqbjykgppbyrzqxlzxuf.supabase.co" crossorigin>
+    <link rel="preconnect" href="https://evbfflwfyiitrkgzjhwt.supabase.co" crossorigin>
     <link rel="preload" as="script" href="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp">
     <link rel="modulepreload" href="/tifsec-test-eleves/assets/js/auth/auth-session.js">
     
 
     <title>
         
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
         
     </title>
 
@@ -38,15 +41,17 @@
     
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css?v=20261022-shop-effects-2">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-shell.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-learning-sequence.css">
     
     
 
@@ -54,11 +59,14 @@
 
 
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
+    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261022-quest-ui-2">
     
     
-<link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
+    
 </head>
 
 <body class="student-shell student-course-shell">
@@ -83,6 +91,9 @@
 
     <main class="student-course-main" id="student-course-main">
 
+
+
+
 <div id="course-work" data-etablissement="mfr" data-matiere="maths" data-classe="term" data-seance="S04" data-saving-enabled="true" data-collaboration-enabled="true">
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
@@ -105,8 +116,6 @@
     <section id="course-feedback" class="collaboration-feedback" aria-live="polite"></section>
     <section id="course-evaluation" class="student-evaluation" data-enabled="true" aria-live="polite" hidden></section>
 
-
-
 <div class="course-columns">
     <aside class="course-navigation" aria-label="Étapes de la séance">
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
@@ -119,7 +128,21 @@
 <!-- ========== INTRODUCTION DU COURS ========== -->
 
 <header class="cours-intro" id="course-intro">
+    
+    
+    
+    <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Mathématiques · Bac Pro 2 · S04</span></div>
     <h1>Fonctions affines – Comparer deux organisations d&#39;une journée équestre</h1>
+    <aside class="course-learning-sequence" aria-label="Comment avancer dans le cours">
+        <strong>Pour avancer</strong>
+        <ol>
+            <li>Lis les repères et les étapes.</li>
+            <li>Observe l’exemple s’il y en a un.</li>
+            <li>Essaie à ton tour avec les questions.</li>
+            <li>Réutilise une méthode déjà rencontrée.</li>
+        </ol>
+        <p>Tu peux garder le cours ouvert et utiliser les aides si tu bloques.</p>
+    </aside>
 
     
     <p class="cours-theme">
@@ -133,13 +156,13 @@
     </p>
     
 
-    <section><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : Comprendre ce qu&#39;est une fonction affine et à quoi elle sert.</p></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi étudier ce sujet ?</h2><p>Objectif de cette séance : Comprendre ce qu&#39;est une fonction affine et à quoi elle sert.</p></section>
     
-    <section><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
-    <section><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
+    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
     
     
-    <section class="cours-objectifs">
+    <section class="course-info-card cours-objectifs">
         <h2>Ce que vous allez apprendre</h2>
         <ul>
             
@@ -229,9 +252,84 @@
 
 </header>
 
-    <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title"><article class="course-paper-sheet"><header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Comparer deux organisations avec des fonctions affines</h2><p>Une fonction affine décrit un coût qui comporte souvent une part fixe et une part qui augmente avec l’activité.</p></header><section class="course-paper-section"><h3>1. Lire la formule comme un tarif</h3><p>Dans f(x) = ax + b, x est le nombre d’activités, a est le coût ajouté à chaque activité et b est le coût fixe, même si x vaut zéro.</p><pre class="cours-code"><code>Exemple : A(x) = 20x + 100.
+<section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
+    <article class="course-paper-sheet">
+        <header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Comparer deux organisations avec des fonctions affines</h2><p>Une fonction affine décrit un coût qui comporte souvent une part fixe et une part qui augmente avec l’activité.</p></header>
+        
+        <section class="course-paper-section">
+            <h3>1. Lire la formule comme un tarif</h3>
+            
+<p>Dans f(x) = ax + b, x est le nombre d’activités, a est le coût ajouté à chaque activité et b est le coût fixe, même si x vaut zéro.</p>
+    
+
+<pre class="cours-code"><code>Exemple : A(x) = 20x + 100.
 20 € s’ajoutent par activité.
-100 € sont payés au départ.</code></pre></section><section class="course-paper-section"><h3>2. Calculer un coût</h3><p>Pour calculer une image, remplace x par le nombre demandé. Respecte les priorités : multiplication avant addition.</p><ol><li>Pour x = 4 : A(4) = 20 × 4 + 100.</li><li>= 80 + 100.</li><li>= 180 €.</li></ol></section><section class="course-paper-section"><h3>3. Trouver le point de bascule</h3><p>Le point de bascule est le nombre d’activités pour lequel les deux organisations coûtent pareil. On écrit donc une égalité.</p><ol><li>A(x) = 20x + 100 ; B(x) = 30x + 40.</li><li>20x + 100 = 30x + 40.</li><li>On retire 20x : 100 = 10x + 40.</li><li>On retire 40 : 60 = 10x.</li><li>On divise par 10 : x = 6.</li><li>À 6 activités, les coûts sont égaux. Ensuite, compare les deux prix pour savoir laquelle est la moins chère.</li></ol></section><section class="course-paper-section"><h3>4. Conseiller sans oublier le contexte</h3><p>Une formule peut donner un résultat juste mais impossible dans la réalité. Le nombre d’activités doit respecter le minimum, le maximum et le budget.</p><ol class="course-paper-questions"><li><span>Calcule les deux coûts pour le nombre demandé.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Vérifie les contraintes.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Écris une phrase qui nomme l’offre choisie et explique pourquoi.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je m’entraîne — même méthode que dans le cours</h3><p>Reprends les étapes de l’exemple juste au-dessus. Écris une ligne par étape et garde les unités.</p><ol class="course-paper-questions"><li><span>Avec A(x) = 20x + 100, calcule A(6) en écrivant les étapes.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Avec B(x) = 30x + 40, cherche quand A(x) = B(x).</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Interprète le nombre obtenu avec une phrase.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je transfère — une situation nouvelle</h3><p>Cette fois, les nombres ou le contexte changent. Commence par identifier ce que l’on cherche, puis choisis la méthode qui convient.</p><ol class="course-paper-questions"><li><span>Deux prestataires proposent P(x) = 18x + 90 et Q(x) = 24x + 42. Trouve le nombre x pour lequel les tarifs sont égaux.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Compare les deux coûts pour x = 3, puis pour x = 10.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Quelle offre recommandes-tu selon le nombre d’activités ? Justifie.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section></article></section>
+100 € sont payés au départ.</code></pre>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>2. Calculer un coût</h3>
+            
+<p>Pour calculer une image, remplace x par le nombre demandé. Respecte les priorités : multiplication avant addition.</p>
+    
+
+<ol><li>Pour x = 4 : A(4) = 20 × 4 + 100.</li><li>= 80 + 100.</li><li>= 180 €.</li></ol>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>3. Trouver le point de bascule</h3>
+            
+<p>Le point de bascule est le nombre d’activités pour lequel les deux organisations coûtent pareil. On écrit donc une égalité.</p>
+    
+
+<ol><li>A(x) = 20x + 100 ; B(x) = 30x + 40.</li><li>20x + 100 = 30x + 40.</li><li>On retire 20x : 100 = 10x + 40.</li><li>On retire 40 : 60 = 10x.</li><li>On divise par 10 : x = 6.</li><li>À 6 activités, les coûts sont égaux. Ensuite, compare les deux prix pour savoir laquelle est la moins chère.</li></ol>
+    
+
+
+            
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>4. Conseiller sans oublier le contexte</h3>
+            
+<p>Une formule peut donner un résultat juste mais impossible dans la réalité. Le nombre d’activités doit respecter le minimum, le maximum et le budget.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Calcule les deux coûts pour le nombre demandé.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Vérifie les contraintes.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Écris une phrase qui nomme l’offre choisie et explique pourquoi.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Je m’entraîne — même méthode que dans le cours</h3>
+            
+<p>Reprends les étapes de l’exemple juste au-dessus. Écris une ligne par étape et garde les unités.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Avec A(x) = 20x + 100, calcule A(6) en écrivant les étapes.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Avec B(x) = 30x + 40, cherche quand A(x) = B(x).</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Interprète le nombre obtenu avec une phrase.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Je transfère — une situation nouvelle</h3>
+            
+<p>Cette fois, les nombres ou le contexte changent. Commence par identifier ce que l’on cherche, puis choisis la méthode qui convient.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Deux prestataires proposent P(x) = 18x + 90 et Q(x) = 24x + 42. Trouve le nombre x pour lequel les tarifs sont égaux.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Compare les deux coûts pour x = 3, puis pour x = 10.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Quelle offre recommandes-tu selon le nombre d’activités ? Justifie.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+    </article>
+</section>
+
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
         <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
@@ -239,13 +337,15 @@
 <section class="cours-activites">
     
     <article class="cours-activite" id="a03">
-        <h2>Activité 1 — 1. Automatismes : retrouver les méthodes utiles</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>1. Automatismes : retrouver les méthodes utiles</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notions : calcul mental, réduction, image d&#39;une fonction, équation et inéquation.</p>
     
@@ -269,6 +369,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a03-q01-label">Question 1 — Calculer 25 % de 240 €.</h3>
             
@@ -286,6 +387,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a03-q02-label">Question 2 — Réduire : 8x + 12 - 3x - 7.</h3>
             
 
@@ -301,6 +403,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a03-q03-label">Question 3 — Calculer l&#39;image de 4 par f(x) = 5x - 3.</h3>
             
@@ -318,6 +421,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a03-q04-label">Question 4 — Résoudre : 4x + 8 = 28.</h3>
             
 
@@ -333,6 +437,7 @@
         </div>
         
         <div class="cours-question" data-question="q05">
+            
             
             <h3 id="a03-q05-label">Question 5 — Résoudre : 3x &gt; 18.</h3>
             
@@ -354,16 +459,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a04">
-        <h2>Activité 2 — 2. Comprendre les deux organisations</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span></div>
+        <h2>2. Comprendre les deux organisations</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notion : comparaison de deux modèles économiques.</p>
     
@@ -398,16 +510,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a05">
-        <h2>Activité 3 — Exercice 1 : Identifier les différences</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 1 : Identifier les différences</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Nous allons repérer les avantages et les inconvénients de chaque organisation avant de construire les formules.</p>
     
@@ -416,6 +535,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a05-q01-label">Question 1 — Expliquer ce qui distingue les deux organisations du point de vue des charges.</h3>
             
@@ -431,16 +551,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
+            <a class="course-mission-next" href="#a06">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a06">
-        <h2>Activité 4 — Exercice 2 : Construire les résultats financiers</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 2 : Construire les résultats financiers</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Nous allons construire deux formules qui permettront de comparer les organisations pour n&#39;importe quel nombre de participants.</p>
     
@@ -449,6 +576,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a06-q01-label">Question 1 — Retrouver l&#39;expression du résultat financier de l&#39;organisation A, étudiée à la séance précédente.</h3>
             
@@ -466,6 +594,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a06-q02-label">Question 2 — Construire l&#39;expression du résultat financier de l&#39;organisation B.</h3>
             
 
@@ -481,6 +610,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a06-q03-label">Question 3 — Calculer le résultat financier de chaque organisation pour 10 participants.</h3>
             
@@ -498,6 +628,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a06-q04-label">Question 4 — Quelle organisation est préférable avec 10 participants ? Justifier.</h3>
             
 
@@ -512,16 +643,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a05">← Étape précédente</a>
+            <a class="course-mission-next" href="#a07">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a07">
-        <h2>Activité 5 — 3. Comprendre les fonctions affines</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 5</span></div>
+        <h2>3. Comprendre les fonctions affines</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notion : fonction affine et sens de variation.</p>
     
@@ -559,16 +697,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a06">← Étape précédente</a>
+            <a class="course-mission-next" href="#a08">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a08">
-        <h2>Activité 6 — Exercice 1 : Lire les coefficients</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 6</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 1 : Lire les coefficients</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Nous allons comprendre ce que chaque nombre représente pour pouvoir prévoir l&#39;évolution des résultats financiers.</p>
     
@@ -577,6 +722,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a08-q01-label">Question 1 — Identifier les coefficients a et b de chaque fonction.</h3>
             
@@ -594,6 +740,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a08-q02-label">Question 2 — Interpréter les coefficients 33 et 28 dans le contexte professionnel.</h3>
             
 
@@ -609,6 +756,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a08-q03-label">Question 3 — Interpréter les coefficients -396 et -310.</h3>
             
@@ -626,6 +774,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a08-q04-label">Question 4 — Les deux fonctions sont-elles croissantes ou décroissantes ? Justifier.</h3>
             
 
@@ -640,16 +789,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a07">← Étape précédente</a>
+            <a class="course-mission-next" href="#a09">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a09">
-        <h2>Activité 7 — Exercice 2 : Comparer les valeurs</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 7</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 2 : Comparer les valeurs</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Nous allons observer les résultats à plusieurs niveaux de fréquentation pour repérer si le classement des organisations change.</p>
     
@@ -658,6 +814,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a09-q01-label">Question 1 — Compléter le tableau en calculant les résultats financiers des deux organisations.</h3>
             
@@ -674,6 +831,7 @@
         </div>
         
         <div class="cours-question" data-question="q02">
+            
             
             <h3 id="a09-q02-label">Question 2 — Complète le tableau ci-dessous.</h3>
             
@@ -780,6 +938,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a09-q03-label">Question 3 — Pour quelles valeurs du tableau l&#39;organisation A donne-t-elle le meilleur résultat ?</h3>
             
 
@@ -796,6 +955,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a09-q04-label">Question 4 — Expliquer pourquoi A devient plus intéressante lorsque le nombre de participants augmente.</h3>
             
 
@@ -810,16 +970,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a08">← Étape précédente</a>
+            <a class="course-mission-next" href="#a10">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a10">
-        <h2>Activité 8 — 4. Déterminer le point de bascule</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 8</span></div>
+        <h2>4. Déterminer le point de bascule</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notion : égalité de deux fonctions affines.</p>
     
@@ -845,16 +1012,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a09">← Étape précédente</a>
+            <a class="course-mission-next" href="#a11">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a11">
-        <h2>Activité 9 — Exercice 1 : Trouver l&#39;égalité</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 9</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 1 : Trouver l&#39;égalité</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Nous allons déterminer le nombre théorique de participants pour lequel les deux organisations donnent exactement le même résultat.</p>
     
@@ -863,6 +1037,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a11-q01-label">Question 1 — Écrire l&#39;équation correspondant à des résultats financiers identiques.</h3>
             
@@ -880,6 +1055,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a11-q02-label">Question 2 — Résoudre cette équation en détaillant toutes les étapes.</h3>
             
 
@@ -896,6 +1072,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a11-q03-label">Question 3 — Pourquoi ne peut-on pas retenir directement 17,2 participants ?</h3>
             
 
@@ -910,16 +1087,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a10">← Étape précédente</a>
+            <a class="course-mission-next" href="#a12">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a12">
-        <h2>Activité 10 — Exercice 2 : Interpréter le point de bascule</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 10</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 2 : Interpréter le point de bascule</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Nous allons vérifier de quel côté du seuil chaque organisation est préférable.</p>
     
@@ -928,6 +1112,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a12-q01-label">Question 1 — Calculer les résultats financiers pour 17 et 18 participants.</h3>
             
@@ -944,6 +1129,7 @@
         </div>
         
         <div class="cours-question" data-question="q02">
+            
             
             <h3 id="a12-q02-label">Question 2 — Conclure : à partir de combien de participants faut-il choisir A ?</h3>
             
@@ -965,16 +1151,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a11">← Étape précédente</a>
+            <a class="course-mission-next" href="#a13">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a13">
-        <h2>Activité 11 — 5. Conseiller le responsable</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 11</span></div>
+        <h2>5. Conseiller le responsable</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Notion : inéquation du premier degré.</p>
     
@@ -1003,16 +1196,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a12">← Étape précédente</a>
+            <a class="course-mission-next" href="#a14">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a14">
-        <h2>Activité 12 — Exercice 1 : Traduire et résoudre une condition</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 12</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 1 : Traduire et résoudre une condition</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Nous allons transformer une phrase professionnelle en inéquation, puis trouver les valeurs qui la respectent.</p>
     
@@ -1021,6 +1221,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a14-q01-label">Question 1 — Écrire l&#39;inéquation traduisant « l&#39;organisation A rapporte davantage que l&#39;organisation B ».</h3>
             
@@ -1038,6 +1239,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a14-q02-label">Question 2 — Résoudre cette inéquation.</h3>
             
 
@@ -1054,6 +1256,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a14-q03-label">Question 3 — Indiquer les valeurs entières pour lesquelles A est préférable, compte tenu de la capacité maximale.</h3>
             
 
@@ -1068,16 +1271,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a13">← Étape précédente</a>
+            <a class="course-mission-next" href="#a15">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a15">
-        <h2>Activité 13 — Exercice 2 : Justifier un choix</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 13</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Exercice 2 : Justifier un choix</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi cet exercice ? Un responsable doit pouvoir comprendre les calculs et la raison du choix proposé.</p>
     
@@ -1086,6 +1296,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a15-q01-label">Question 1 — Quelle organisation conseiller pour 15 participants ? Justifier par un calcul.</h3>
             
@@ -1103,6 +1314,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a15-q02-label">Question 2 — Quelle organisation conseiller pour 19 participants ? Justifier par un calcul.</h3>
             
 
@@ -1119,6 +1331,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a15-q03-label">Question 3 — Rédiger une recommandation de quelques lignes pour le responsable.</h3>
             
 
@@ -1133,16 +1346,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a14">← Étape précédente</a>
+            <a class="course-mission-next" href="#a16">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a16">
-        <h2>Activité 14 — 6. Bilan de la séance</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 14</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>6. Bilan de la séance</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi ce bilan ? Il permet de vérifier que vous avez compris les méthodes, mais surtout pourquoi et quand les utiliser.</p>
     
@@ -1154,6 +1374,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a16-q01-label">Question 1 — Que représentent les coefficients a et b dans une fonction affine f(x) = ax + b ?</h3>
             
@@ -1171,6 +1392,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a16-q02-label">Question 2 — Quelle est la différence entre une équation et une inéquation ?</h3>
             
 
@@ -1187,6 +1409,7 @@
         
         <div class="cours-question" data-question="q03">
             
+            
             <h3 id="a16-q03-label">Question 3 — Pourquoi faut-il tenir compte du nombre maximal de participants ?</h3>
             
 
@@ -1201,16 +1424,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a15">← Étape précédente</a>
+            <a class="course-mission-next" href="#a18">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a18">
-        <h2>Activité 15 — À retenir</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 15</span></div>
+        <h2>À retenir</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <ul><li>Une fonction affine s&#39;écrit f(x) = ax + b.</li><li>Le coefficient a indique la variation du résultat lorsque x augmente de 1.</li><li>Le coefficient b représente la valeur de la fonction pour x = 0.</li><li>Si a est positif, la fonction est croissante ; s&#39;il est négatif, elle est décroissante.</li><li>Une équation permet de rechercher quand deux modèles sont égaux.</li><li>Une inéquation permet de rechercher quand un modèle est plus avantageux.</li><li>Une solution doit respecter les contraintes de la situation professionnelle.</li></ul>
     
@@ -1218,16 +1448,23 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a16">← Étape précédente</a>
+            <a class="course-mission-next" href="#a19">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a19">
-        <h2>Activité 16 — Pour aller plus loin : défi facultatif</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 16</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Pour aller plus loin : défi facultatif</h2>
         <p class="course-optional">Pour aller plus loin — activité facultative.</p>
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Pourquoi ce défi ? Jusqu&#39;ici, nous avons supposé que les deux organisations attiraient le même nombre de participants. Nous allons maintenant tester ce qui se passe si cette hypothèse change.</p>
     
@@ -1248,6 +1485,7 @@
         
         
         <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
             <h3 id="a19-q01-label">Question 1 — Expliquer pourquoi x ne peut pas dépasser 17 dans cette situation.</h3>
             
@@ -1268,6 +1506,7 @@
         
         <div class="cours-question" data-question="q02">
             
+            
             <h3 id="a19-q02-label">Question 2 — Déterminer à partir de combien de participants dans A cette organisation devient plus avantageuse que B.</h3>
             
 
@@ -1283,6 +1522,7 @@
         </div>
         
         <div class="cours-question" data-question="q03">
+            
             
             <h3 id="a19-q03-label">Question 3 — Si le centre augmente sa capacité, combien de places faudrait-il prévoir au minimum pour que A puisse devenir plus avantageuse, tout en conservant trois participants supplémentaires pour B ?</h3>
             
@@ -1300,6 +1540,7 @@
         
         <div class="cours-question" data-question="q04">
             
+            
             <h3 id="a19-q04-label">Question 4 — Expliquer pourquoi ce résultat mathématique ne suffit pas pour décider d&#39;agrandir le centre.</h3>
             
 
@@ -1314,16 +1555,23 @@
 
         </div>
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a18">← Étape précédente</a>
+            <a class="course-mission-next" href="#a20">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
     <article class="cours-activite" id="a20">
-        <h2>Activité 17 — Sources et ressources</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 17</span></div>
+        <h2>Sources et ressources</h2>
         
         
         
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <ul><li>Chlorofil – Référentiel Bac Pro, tronc commun.</li><li>Chlorofil – Document d&#39;accompagnement MG1.</li></ul>
     
@@ -1337,6 +1585,11 @@
 
         
         
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a19">← Étape précédente</a>
+            <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
+        </nav>
     </article>
     
 </section>
@@ -1365,16 +1618,18 @@
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
+
 
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+
 
     </main>
     <footer class="site-footer">
     <p>
         &copy; 2026
-        Portail pédagogique Technologie | TIM | Mathématiques
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
     </p>
 </footer>
-<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
 </body>
 </html>
