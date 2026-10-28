@@ -58,6 +58,7 @@
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
     
     
+<link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
 </head>
 
 <body class="student-shell student-course-shell">
@@ -86,7 +87,7 @@
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
         <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
-        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-paper-toggle">Version papier</button><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
     </div>
     <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
         <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
@@ -223,6 +224,7 @@
 
 </header>
 
+    <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title"><article class="course-paper-sheet"><header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Calculer un résultat et un seuil de rentabilité</h2><p>En gestion, on compare l’argent qui entre et l’argent qui sort. Les lettres permettent de faire le calcul pour plusieurs nombres de participants.</p></header><section class="course-paper-section"><h3>1. Recettes, charges et résultat</h3><p>La recette est l’argent reçu. Les charges sont les dépenses. Le résultat indique ce qu’il reste après avoir payé les charges.</p><ol><li>Exemple : 10 participants paient 30 € chacun.</li><li>Recettes : 30 × 10 = 300 €.</li><li>Charges : 120 € de frais fixes et 8 € par participant.</li><li>Charges totales : 120 + 8 × 10 = 200 €.</li><li>Résultat : 300 − 200 = 100 €.</li></ol></section><section class="course-paper-section"><h3>2. Écrire une formule</h3><p>On note x le nombre de participants. Une formule permet de refaire le calcul sans remplacer tout de suite x.</p><ol><li>Recettes : R(x) = 30x.</li><li>Charges : C(x) = 120 + 8x.</li><li>Résultat : G(x) = R(x) − C(x).</li><li>G(x) = 30x − (120 + 8x).</li><li>G(x) = 30x − 120 − 8x = 22x − 120.</li></ol></section><section class="course-paper-section"><h3>3. Trouver le seuil de rentabilité</h3><p>Le seuil est atteint quand recettes et charges sont égales : le résultat est alors zéro. C’est comme le point où le compteur passe de perte à bénéfice.</p><ol><li>On résout 22x − 120 = 0.</li><li>On ajoute 120 des deux côtés : 22x = 120.</li><li>On divise par 22 : x = 120 ÷ 22 ≈ 5,45.</li><li>On ne peut pas accueillir 5,45 personnes. Il faut donc au moins 6 participants.</li><li>Vérifie le résultat avec x = 5 puis x = 6.</li></ol></section><section class="course-paper-section"><h3>4. Comparer deux tarifs</h3><p>Pour comparer deux offres, calcule les deux coûts avec le même nombre de participants, puis regarde à partir de quel effectif l’une devient moins chère.</p><ol class="course-paper-questions"><li><span>Note les deux formules de coût.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Choisis un nombre de participants et calcule chaque coût.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Écris une égalité si tu cherches le point où les deux coûts sont égaux.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Conclue avec le nombre de participants et l’offre conseillée.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je m’entraîne — même méthode que dans le cours</h3><p>Reprends les étapes de l’exemple juste au-dessus. Écris une ligne par étape et garde les unités.</p><ol class="course-paper-questions"><li><span>Pour 12 participants à 30 € chacun, calcule les recettes.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Les charges sont 120 € fixes et 8 € par participant. Calcule les charges pour 12 participants.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Calcule le résultat : recettes − charges.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je transfère — une situation nouvelle</h3><p>Cette fois, les nombres ou le contexte changent. Commence par identifier ce que l’on cherche, puis choisis la méthode qui convient.</p><ol class="course-paper-questions"><li><span>Une activité rapporte 28 € par participant et coûte 150 € fixes plus 10 € par personne. Écris la formule du résultat.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Résous l’équation qui donne le seuil de rentabilité.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Le résultat est-il positif pour 8 participants ? Montre les étapes.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section></article></section>
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
         <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
@@ -1266,5 +1268,6 @@
         Portail pédagogique Technologie | TIM | Mathématiques
     </p>
 </footer>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
 </body>
 </html>

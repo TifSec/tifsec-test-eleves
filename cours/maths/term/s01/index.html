@@ -58,6 +58,7 @@
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
     
     
+<link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
 </head>
 
 <body class="student-shell student-course-shell">
@@ -86,7 +87,7 @@
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
         <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
-        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-paper-toggle">Version papier</button><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
     </div>
     <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
         <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
@@ -197,6 +198,9 @@
 
 </header>
 
+    <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title"><article class="course-paper-sheet"><header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Pourcentages, quantités et fonctions</h2><p>Trois outils servent souvent dans un même problème : calculer une part, retrouver une quantité entière et remplacer une lettre par un nombre.</p></header><section class="course-paper-section"><h3>1. Calculer une réduction</h3><p>Une réduction de 15 % signifie que 15 parts sur 100 sont retirées du prix. On peut calculer la remise, puis l’enlever.</p><ol><li>10 % de 240 € : 240 ÷ 10 = 24 €.</li><li>5 % est la moitié de 10 % : 24 ÷ 2 = 12 €.</li><li>15 % = 10 % + 5 % : 24 + 12 = 36 € de remise.</li><li>Prix payé : 240 − 36 = 204 €.</li></ol></section><section class="course-paper-section"><h3>2. Utiliser le coefficient multiplicateur</h3><p>Après −15 %, il reste 100 % − 15 % = 85 % du prix. Le coefficient est donc 0,85.</p><ol><li>85 % = 85 ÷ 100 = 0,85.</li><li>Prix payé = 240 × 0,85 = 204 €.</li><li>Les deux méthodes donnent le même prix.</li></ol></section><section class="course-paper-section"><h3>3. Comprendre une matière sèche</h3><p>Si le foin contient 85 % de matière sèche, cela veut dire que 85 kg sur 100 kg sont de la matière sèche.</p><ol><li>Dans 7,5 kg de foin : 7,5 × 0,85 = 6,375 kg de matière sèche.</li><li>Pour obtenir 7,5 kg de matière sèche, on cherche la masse de foin x : 0,85x = 7,5.</li><li>On divise les deux côtés par 0,85 : x = 7,5 ÷ 0,85 ≈ 8,82 kg.</li><li>Il faut plus de 7,5 kg de foin, car une partie de sa masse n’est pas de la matière sèche.</li></ol></section><section class="course-paper-section"><h3>4. Résoudre une équation</h3><p>Une équation est une balance : pour garder l’équilibre, on fait la même opération à gauche et à droite.</p><ol><li>2x + 5 = 17.</li><li>On retire 5 des deux côtés : 2x = 12.</li><li>On divise les deux côtés par 2 : x = 6.</li><li>Vérification : 2 × 6 + 5 = 17.</li></ol></section><section class="course-paper-section"><h3>5. Image et antécédent</h3><p>Pour calculer l’image, on connaît x et on calcule le résultat. Pour chercher un antécédent, on connaît le résultat et on cherche le x qui le produit.</p><pre class="cours-code"><code>Si f(x) = 2x + 5 :
+Image de 4 : f(4) = 2 × 4 + 5 = 8 + 5 = 13.
+Antécédent de 17 : 2x + 5 = 17, donc x = 6.</code></pre><ol class="course-paper-questions"><li><span>Calcule l’image de 10.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Cherche l’antécédent de 25.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je m’entraîne — même méthode que dans le cours</h3><p>Reprends les étapes de l’exemple juste au-dessus. Écris une ligne par étape et garde les unités.</p><ol class="course-paper-questions"><li><span>Calcule 10 %, puis 5 %, puis 15 % de 320 €.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Un aliment contient 80 % de matière sèche. Quelle masse sèche trouve-t-on dans 6 kg ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Résous 3x + 4 = 19 et vérifie en remplaçant x.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je transfère — une situation nouvelle</h3><p>Cette fois, les nombres ou le contexte changent. Commence par identifier ce que l’on cherche, puis choisis la méthode qui convient.</p><ol class="course-paper-questions"><li><span>Un article à 320 € subit une remise de 12 %. Calcule le prix payé de deux façons.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>On veut obtenir 9 kg de matière sèche avec un foin à 80 %. Quelle masse de foin faut-il ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Une fonction est g(x) = 3x + 4. Cherche l’antécédent de 25 et explique ta vérification.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section></article></section>
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
         <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
@@ -1074,5 +1078,6 @@
         Portail pédagogique Technologie | TIM | Mathématiques
     </p>
 </footer>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
 </body>
 </html>

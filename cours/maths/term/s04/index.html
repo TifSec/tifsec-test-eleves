@@ -58,6 +58,7 @@
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
     
     
+<link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
 </head>
 
 <body class="student-shell student-course-shell">
@@ -86,7 +87,7 @@
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
         <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
-        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-paper-toggle">Version papier</button><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
     </div>
     <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
         <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
@@ -228,6 +229,9 @@
 
 </header>
 
+    <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title"><article class="course-paper-sheet"><header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Comparer deux organisations avec des fonctions affines</h2><p>Une fonction affine décrit un coût qui comporte souvent une part fixe et une part qui augmente avec l’activité.</p></header><section class="course-paper-section"><h3>1. Lire la formule comme un tarif</h3><p>Dans f(x) = ax + b, x est le nombre d’activités, a est le coût ajouté à chaque activité et b est le coût fixe, même si x vaut zéro.</p><pre class="cours-code"><code>Exemple : A(x) = 20x + 100.
+20 € s’ajoutent par activité.
+100 € sont payés au départ.</code></pre></section><section class="course-paper-section"><h3>2. Calculer un coût</h3><p>Pour calculer une image, remplace x par le nombre demandé. Respecte les priorités : multiplication avant addition.</p><ol><li>Pour x = 4 : A(4) = 20 × 4 + 100.</li><li>= 80 + 100.</li><li>= 180 €.</li></ol></section><section class="course-paper-section"><h3>3. Trouver le point de bascule</h3><p>Le point de bascule est le nombre d’activités pour lequel les deux organisations coûtent pareil. On écrit donc une égalité.</p><ol><li>A(x) = 20x + 100 ; B(x) = 30x + 40.</li><li>20x + 100 = 30x + 40.</li><li>On retire 20x : 100 = 10x + 40.</li><li>On retire 40 : 60 = 10x.</li><li>On divise par 10 : x = 6.</li><li>À 6 activités, les coûts sont égaux. Ensuite, compare les deux prix pour savoir laquelle est la moins chère.</li></ol></section><section class="course-paper-section"><h3>4. Conseiller sans oublier le contexte</h3><p>Une formule peut donner un résultat juste mais impossible dans la réalité. Le nombre d’activités doit respecter le minimum, le maximum et le budget.</p><ol class="course-paper-questions"><li><span>Calcule les deux coûts pour le nombre demandé.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Vérifie les contraintes.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Écris une phrase qui nomme l’offre choisie et explique pourquoi.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je m’entraîne — même méthode que dans le cours</h3><p>Reprends les étapes de l’exemple juste au-dessus. Écris une ligne par étape et garde les unités.</p><ol class="course-paper-questions"><li><span>Avec A(x) = 20x + 100, calcule A(6) en écrivant les étapes.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Avec B(x) = 30x + 40, cherche quand A(x) = B(x).</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Interprète le nombre obtenu avec une phrase.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je transfère — une situation nouvelle</h3><p>Cette fois, les nombres ou le contexte changent. Commence par identifier ce que l’on cherche, puis choisis la méthode qui convient.</p><ol class="course-paper-questions"><li><span>Deux prestataires proposent P(x) = 18x + 90 et Q(x) = 24x + 42. Trouve le nombre x pour lequel les tarifs sont égaux.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Compare les deux coûts pour x = 3, puis pour x = 10.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Quelle offre recommandes-tu selon le nombre d’activités ? Justifie.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section></article></section>
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
         <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
@@ -1371,5 +1375,6 @@
         Portail pédagogique Technologie | TIM | Mathématiques
     </p>
 </footer>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
 </body>
 </html>

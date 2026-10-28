@@ -58,6 +58,7 @@
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
     
     
+<link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
 </head>
 
 <body class="student-shell student-course-shell">
@@ -86,7 +87,7 @@
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
         <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
-        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-paper-toggle">Version papier</button><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
     </div>
     <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
         <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
@@ -191,6 +192,7 @@
 
 </header>
 
+    <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title"><article class="course-paper-sheet"><header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Reprendre les bons réflexes de calcul</h2><p>Le but n’est pas d’aller vite en devinant. Le but est de choisir une opération, de la poser clairement et de vérifier si le résultat a du sens.</p></header><section class="course-paper-section"><h3>1. Décimaux et priorités</h3><p>Une calculatrice est comme un assistant : elle calcule ce qu’on lui demande, mais c’est à toi de choisir la bonne opération.</p><ol><li>Pour 3,5 + 2 × 4, on fait d’abord la multiplication.</li><li>2 × 4 = 8.</li><li>3,5 + 8 = 11,5.</li><li>Avec des parenthèses, (3,5 + 2) × 4 = 5,5 × 4 = 22.</li></ol></section><section class="course-paper-section"><h3>2. Choisir l’opération</h3><ul><li>Ajouter des quantités : addition.</li><li>Chercher un écart ou ce qu’il reste : soustraction.</li><li>Répéter plusieurs fois le même prix : multiplication.</li><li>Partager en parts égales ou retrouver une valeur par part : division.</li></ul></section><section class="course-paper-section"><h3>3. Vérifier avec la calculatrice</h3><p>Avant de taper, estime le résultat. Après le calcul, demande-toi si la taille du résultat est plausible. Écris d’abord la formule, puis utilise la calculatrice pour vérifier.</p><ol class="course-paper-questions"><li><span>Pour chaque situation du cours, écris : données → opération choisie → calcul → phrase réponse.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Explique pourquoi l’opération choisie convient.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je m’entraîne — même méthode que dans le cours</h3><p>Reprends les étapes de l’exemple juste au-dessus. Écris une ligne par étape et garde les unités.</p><ol class="course-paper-questions"><li><span>Calcule 6,4 + 2 × 1,5 en respectant les priorités.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Calcule (6,4 + 2) × 1,5 et explique pourquoi le résultat change.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Vérifie le résultat à la calculatrice après l’avoir estimé.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je transfère — une situation nouvelle</h3><p>Cette fois, les nombres ou le contexte changent. Commence par identifier ce que l’on cherche, puis choisis la méthode qui convient.</p><ol class="course-paper-questions"><li><span>Une structure achète 3 sacs à 18,75 € et paie 12 € de livraison. Écris le calcul dans le bon ordre.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Le budget est 70 €. Reste-t-il assez d’argent ? Montre le calcul et rédige une phrase.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section></article></section>
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
         <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
@@ -926,5 +928,6 @@
         Portail pédagogique Technologie | TIM | Mathématiques
     </p>
 </footer>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
 </body>
 </html>

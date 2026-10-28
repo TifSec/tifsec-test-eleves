@@ -58,6 +58,7 @@
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
     
     
+<link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
 </head>
 
 <body class="student-shell student-course-shell">
@@ -86,7 +87,7 @@
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
         <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
-        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-paper-toggle">Version papier</button><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
     </div>
     <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
         <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
@@ -198,6 +199,7 @@
 
 </header>
 
+    <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title"><article class="course-paper-sheet"><header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Proportionnalité et premiers calculs</h2><p>Le passage à l’unité ressemble au prix affiché en magasin : on trouve d’abord le prix d’un article, puis on multiplie par le nombre voulu. Au brevet, montre ta méthode et vérifie tes réponses.</p></header><section class="course-paper-section"><h3>1. Passer par une unité</h3><p>Si 4 objets coûtent 10 €, on cherche d’abord le prix d’un seul objet.</p><ol><li>Prix d’un objet : 10 ÷ 4 = 2,50 €.</li><li>Prix de 7 objets : 2,50 × 7 = 17,50 €.</li><li>Vérifie que le prix augmente quand le nombre d’objets augmente.</li></ol></section><section class="course-paper-section"><h3>2. Fractions, pourcentages et unités</h3><p>Une fraction d’une quantité peut se calculer en divisant par le dénominateur puis en multipliant par le numérateur.</p><ol><li>3/4 de 20 = 20 ÷ 4 × 3.</li><li>= 5 × 3 = 15.</li><li>Pour 20 % d’une quantité, calcule 0,20 × quantité.</li></ol></section><section class="course-paper-section"><h3>3. Géométrie et problème</h3><p>Le périmètre mesure le tour ; l’aire mesure la surface à couvrir. Comme une clôture et un tapis : la clôture suit le bord, le tapis recouvre le sol.</p><ol class="course-paper-questions"><li><span>Note les données et les unités.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Choisis la formule adaptée.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Vérifie que ta réponse est une longueur, une aire ou une quantité, selon la question.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je m’entraîne — même méthode que dans le cours</h3><p>Reprends les étapes de l’exemple juste au-dessus. Écris une ligne par étape et garde les unités.</p><ol class="course-paper-questions"><li><span>Si 4 kg coûtent 10 €, trouve le prix de 1 kg puis celui de 7 kg.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Calcule 3/4 de 20 et 15 % de 80.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Explique la différence entre périmètre et aire.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je transfère — une situation nouvelle</h3><p>Cette fois, les nombres ou le contexte changent. Commence par identifier ce que l’on cherche, puis choisis la méthode qui convient.</p><ol class="course-paper-questions"><li><span>Une clôture entoure un terrain rectangulaire de 12 m sur 8 m. Calcule la longueur de clôture nécessaire.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Le sol mesure 12 m sur 8 m. Calcule la surface à couvrir. Indique les unités.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section></article></section>
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
         <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
@@ -1071,5 +1073,6 @@
         Portail pédagogique Technologie | TIM | Mathématiques
     </p>
 </footer>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
 </body>
 </html>

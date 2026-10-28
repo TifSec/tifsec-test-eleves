@@ -8,4 +8,3 @@ if (toggle && paper) toggle.addEventListener('click', () => {
         document.getElementById('course-save-status').textContent = 'Le nouvel onglet a été bloqué. Autorise les fenêtres surgissantes pour ouvrir la fiche.';
     }
 });
-

@@ -58,6 +58,7 @@
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
     
     
+<link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
 </head>
 
 <body class="student-shell student-course-shell">
@@ -86,7 +87,7 @@
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
         <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
-        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-paper-toggle">Version papier</button><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
     </div>
     <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
         <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
@@ -169,6 +170,7 @@
 
 </header>
 
+    <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title"><article class="course-paper-sheet"><header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Nombres premiers et décomposition</h2><p>Un nombre premier est un nombre qui ne se partage exactement que par 1 et par lui-même. Décomposer en facteurs premiers, c’est démonter un nombre en petites briques premières. Tu construis ici les méthodes qui te serviront ensuite au brevet.</p></header><section class="course-paper-section"><h3>1. Reconnaître un nombre premier</h3><p>Teste les petits diviseurs. Si aucun nombre premier inférieur ou égal à sa racine ne le divise, il est premier.</p><ol><li>21 est divisible par 3 car 2 + 1 = 3.</li><li>21 = 3 × 7 : il n’est donc pas premier.</li><li>2 est le seul nombre premier pair. 1 n’est pas premier.</li></ol></section><section class="course-paper-section"><h3>2. Décomposer en facteurs premiers</h3><p>Divise autant que possible par les petits nombres premiers : 2, 3, 5, 7…</p><ol><li>Exemple avec 36 : 36 = 2 × 18.</li><li>= 2 × 2 × 9.</li><li>= 2 × 2 × 3 × 3.</li><li>Donc 36 = 2² × 3².</li></ol></section><section class="course-paper-section"><h3>3. Vérifier</h3><p>Multiplie les facteurs trouvés. Si tu retrouves le nombre de départ, ta décomposition est correcte.</p><ol class="course-paper-questions"><li><span>Décompose les nombres demandés dans le cours.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Réécris les facteurs identiques avec une puissance.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je m’entraîne — même méthode que dans le cours</h3><p>Reprends les étapes de l’exemple juste au-dessus. Écris une ligne par étape et garde les unités.</p><ol class="course-paper-questions"><li><span>Décompose 36 en facteurs premiers par divisions successives.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Vérifie en multipliant les facteurs retrouvés.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Écris le résultat avec des puissances.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je transfère — une situation nouvelle</h3><p>Cette fois, les nombres ou le contexte changent. Commence par identifier ce que l’on cherche, puis choisis la méthode qui convient.</p><ol class="course-paper-questions"><li><span>Décompose 90 en facteurs premiers et montre chaque division.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Explique comment vérifier qu’un nombre proposé est premier.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section></article></section>
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
         <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
@@ -976,5 +978,6 @@
         Portail pédagogique Technologie | TIM | Mathématiques
     </p>
 </footer>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
 </body>
 </html>

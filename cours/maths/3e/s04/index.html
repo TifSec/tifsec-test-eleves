@@ -58,6 +58,7 @@
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
     
     
+<link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
 </head>
 
 <body class="student-shell student-course-shell">
@@ -86,7 +87,7 @@
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
         <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
-        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-paper-toggle">Version papier</button><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
     </div>
     <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
         <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
@@ -169,6 +170,7 @@
 
 </header>
 
+    <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title"><article class="course-paper-sheet"><header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Simplifier et comparer des fractions</h2><p>Une fraction est une division et une part d’un tout. Pour comparer deux parts, il faut les exprimer avec des parts de même taille. Au brevet, montre ta méthode et vérifie tes réponses.</p></header><section class="course-paper-section"><h3>1. Simplifier une fraction</h3><p>On divise le numérateur et le dénominateur par le même nombre. La valeur ne change pas : on coupe chaque part en plus gros morceaux.</p><ol><li>12/18 : le haut et le bas sont divisibles par 6.</li><li>12 ÷ 6 = 2 et 18 ÷ 6 = 3.</li><li>Donc 12/18 = 2/3.</li></ol></section><section class="course-paper-section"><h3>2. Comparer</h3><p>Même dénominateur : compare les numérateurs. Même numérateur : la fraction avec le plus petit dénominateur est la plus grande. Si tout est différent, cherche un dénominateur commun.</p></section><section class="course-paper-section"><h3>3. Exemple avec deux dénominateurs différents</h3><p>Pour comparer 2/3 et 3/4, on transforme les deux fractions en douzièmes.</p><ol><li>3 et 4 ont 12 comme multiple commun.</li><li>2/3 = 2 × 4 / 3 × 4 = 8/12.</li><li>3/4 = 3 × 3 / 4 × 3 = 9/12.</li><li>9/12 &gt; 8/12, donc 3/4 &gt; 2/3.</li></ol></section><section class="course-paper-section"><h3>Je m’entraîne — même méthode que dans le cours</h3><p>Reprends les étapes de l’exemple juste au-dessus. Écris une ligne par étape et garde les unités.</p><ol class="course-paper-questions"><li><span>Simplifie 18/24 en divisant le haut et le bas par le même nombre.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Compare 3/4 et 5/8 en les transformant en huitièmes.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Explique pourquoi la valeur ne change pas quand on multiplie haut et bas par le même nombre.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je transfère — une situation nouvelle</h3><p>Cette fois, les nombres ou le contexte changent. Commence par identifier ce que l’on cherche, puis choisis la méthode qui convient.</p><ol class="course-paper-questions"><li><span>Compare 5/6 et 7/9 en cherchant un dénominateur commun.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Une équipe a parcouru 7/10 d’un trajet ; une autre 2/3. Qui est la plus avancée ? Montre comment tu compares.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section></article></section>
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
         <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
@@ -1023,5 +1025,6 @@
         Portail pédagogique Technologie | TIM | Mathématiques
     </p>
 </footer>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
 </body>
 </html>

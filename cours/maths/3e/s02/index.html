@@ -58,6 +58,7 @@
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
     
     
+<link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
 </head>
 
 <body class="student-shell student-course-shell">
@@ -86,7 +87,7 @@
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
         <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
-        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-paper-toggle">Version papier</button><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
     </div>
     <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
         <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
@@ -169,6 +170,7 @@
 
 </header>
 
+    <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title"><article class="course-paper-sheet"><header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Multiples, diviseurs et divisibilité</h2><p>Un multiple, c’est un résultat de table de multiplication. Un diviseur, c’est un nombre qui partage exactement une quantité, sans reste. Au brevet, montre ta méthode et vérifie tes réponses.</p></header><section class="course-paper-section"><h3>1. Multiple et diviseur</h3><p>Dans 24 = 6 × 4, 24 est un multiple de 6 et de 4. En même temps, 6 et 4 sont des diviseurs de 24.</p><ol><li>Pour savoir si 42 est multiple de 6, je cherche 6 × un nombre.</li><li>6 × 7 = 42 : oui, 42 est un multiple de 6.</li><li>Donc 6 est un diviseur de 42.</li></ol></section><section class="course-paper-section"><h3>2. Critères rapides</h3><ul><li>Divisible par 2 : le chiffre des unités est 0, 2, 4, 6 ou 8.</li><li>Divisible par 5 : le chiffre des unités est 0 ou 5.</li><li>Divisible par 10 : le chiffre des unités est 0.</li><li>Divisible par 3 : la somme des chiffres est un multiple de 3.</li><li>Divisible par 9 : la somme des chiffres est un multiple de 9.</li></ul></section><section class="course-paper-section"><h3>3. Faire des lots identiques</h3><p>Pour faire le plus grand nombre de lots identiques sans reste, cherche un diviseur commun aux quantités.</p><ol><li>Écris chaque quantité sous forme de produit ou liste ses diviseurs.</li><li>Repère les diviseurs communs.</li><li>Choisis le plus grand si l’énoncé demande le maximum.</li><li>Vérifie qu’il ne reste rien.</li></ol></section><section class="course-paper-section"><h3>Je m’entraîne — même méthode que dans le cours</h3><p>Reprends les étapes de l’exemple juste au-dessus. Écris une ligne par étape et garde les unités.</p><ol class="course-paper-questions"><li><span>Vérifie si 42 est divisible par 2, 3, 5, 9 et 10. Dis quel critère tu utilises.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Écris les multiples de 6 jusqu’à 60.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>À partir de 24 = 6 × 4, indique un multiple et deux diviseurs.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je transfère — une situation nouvelle</h3><p>Cette fois, les nombres ou le contexte changent. Commence par identifier ce que l’on cherche, puis choisis la méthode qui convient.</p><ol class="course-paper-questions"><li><span>On a 36 pommes et 48 poires. On veut faire le plus grand nombre de paniers identiques sans reste. Quel calcul ou outil mathématique faut-il utiliser ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Un code doit être divisible par 3 et par 5. Explique comment tester rapidement un code.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section></article></section>
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
         <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
@@ -1225,5 +1227,6 @@
         Portail pédagogique Technologie | TIM | Mathématiques
     </p>
 </footer>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
 </body>
 </html>

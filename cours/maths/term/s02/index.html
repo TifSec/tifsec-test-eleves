@@ -58,6 +58,7 @@
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
     
     
+<link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
 </head>
 
 <body class="student-shell student-course-shell">
@@ -86,7 +87,7 @@
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
         <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
-        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-paper-toggle">Version papier</button><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
     </div>
     <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
         <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
@@ -200,6 +201,7 @@
 
 </header>
 
+    <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title"><article class="course-paper-sheet"><header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Statistiques, probabilités et calcul littéral</h2><p>Une statistique résume un groupe de données. Une probabilité décrit une chance. Une expression littérale est une formule qui fonctionne pour plusieurs valeurs.</p></header><section class="course-paper-section"><h3>1. Moyenne, médiane et étendue</h3><p>Range d’abord les valeurs dans l’ordre croissant. La moyenne partage le total équitablement ; la médiane est au milieu ; l’étendue mesure l’écart entre les extrêmes.</p><ol><li>Exemple : 4, 6, 6, 8, 11.</li><li>Moyenne : (4 + 6 + 6 + 8 + 11) ÷ 5 = 35 ÷ 5 = 7.</li><li>Médiane : la valeur du milieu est 6.</li><li>Étendue : 11 − 4 = 7.</li></ol></section><section class="course-paper-section"><h3>2. Probabilité</h3><p>Imagine un sac contenant 8 jetons rouges et 12 jetons bleus. Il y a 20 jetons en tout ; chaque jeton a la même chance d’être tiré.</p><ol><li>P(rouge) = 8/20.</li><li>On simplifie en divisant en haut et en bas par 4 : 8/20 = 2/5.</li><li>En décimal : 2 ÷ 5 = 0,4, donc 40 %.</li><li>P(non rouge) = 1 − 2/5 = 3/5. Les deux probabilités font 1 en tout.</li></ol></section><section class="course-paper-section"><h3>3. Réduire une expression</h3><p>On ne peut additionner que les termes de même famille. Les x sont comme des pommes ; les x² sont comme des cartons de pommes : ce ne sont pas la même chose.</p><ol><li>4x + 3x = 7x.</li><li>7x − 2x + 4 = 5x + 4.</li><li>3x² + 2x² = 5x².</li><li>3x + 2 ne se réduit pas : x et le nombre 2 sont différents.</li></ol></section><section class="course-paper-section"><h3>4. Développer avec la distributivité</h3><p>Le nombre devant la parenthèse multiplie chaque terme à l’intérieur. Pense à distribuer des cartes à chaque personne : personne n’est oublié.</p><ol><li>3(x + 4) = 3 × x + 3 × 4.</li><li>= 3x + 12.</li><li>5(2x − 3) = 5 × 2x − 5 × 3.</li><li>= 10x − 15.</li><li>2(x + 3) + 4x = 2x + 6 + 4x = 6x + 6.</li></ol></section><section class="course-paper-section"><h3>5. Remplacer x par une valeur</h3><p>Quand on calcule une formule pour une valeur donnée, remplace chaque x par cette valeur. Les parenthèses évitent les erreurs.</p><ol class="course-paper-questions"><li><span>Calcule 2x² + 3x − 1 pour x = 2. Écris une ligne par calcul.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Explique pourquoi 3x + 2 ne devient pas 5x.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je m’entraîne — même méthode que dans le cours</h3><p>Reprends les étapes de l’exemple juste au-dessus. Écris une ligne par étape et garde les unités.</p><ol class="course-paper-questions"><li><span>Données : 5, 6, 6, 7, 11. Calcule moyenne, médiane et étendue.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Un sac contient 3 jetons gagnants sur 12. Écris la probabilité en fraction puis en pourcentage.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Développe 4(x + 3), puis réduis 2x + 5x − 1.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je transfère — une situation nouvelle</h3><p>Cette fois, les nombres ou le contexte changent. Commence par identifier ce que l’on cherche, puis choisis la méthode qui convient.</p><ol class="course-paper-questions"><li><span>Compare deux semaines de travail avec les données du cours : choisis un indicateur et explique ce qu’il raconte.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Un événement a une probabilité de 0,35. Quelle est la probabilité de son contraire ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Calcule 3x + 2 pour x = 4. Explique pourquoi 3x + 2 n’est pas égal à 5x.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section></article></section>
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
         <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
@@ -1291,5 +1293,6 @@
         Portail pédagogique Technologie | TIM | Mathématiques
     </p>
 </footer>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
 </body>
 </html>

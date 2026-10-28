@@ -58,6 +58,7 @@
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css">
     
     
+<link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css">
 </head>
 
 <body class="student-shell student-course-shell">
@@ -86,7 +87,7 @@
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
         <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
-        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-paper-toggle">Version papier</button><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
     </div>
     <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
         <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
@@ -169,6 +170,7 @@
 
 </header>
 
+    <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title"><article class="course-paper-sheet"><header><p class="course-paper-kicker">Cours magistral puis exercices</p><h2 id="course-paper-title">Fiche papier — Additionner et soustraire des fractions</h2><p>On ne peut additionner que des parts de même taille. On ne peut pas additionner des pommes et des quarts de pomme sans d’abord les exprimer dans la même unité. Au brevet, montre ta méthode et vérifie tes réponses.</p></header><section class="course-paper-section"><h3>1. Même dénominateur</h3><p>Le dénominateur indique la taille des parts. Si cette taille est déjà la même, on garde le dénominateur et on additionne seulement le nombre de parts.</p><ol><li>3/7 + 2/7 = 5/7.</li><li>7/10 − 3/10 = 4/10 = 2/5.</li></ol></section><section class="course-paper-section"><h3>2. Dénominateurs différents</h3><p>Avant de calculer, transforme les fractions pour avoir la même taille de part. Le dénominateur commun est comme une unité commune.</p><ol><li>1/2 + 1/4.</li><li>Un demi = deux quarts : 1/2 = 2/4.</li><li>Donc 1/2 + 1/4 = 2/4 + 1/4 = 3/4.</li><li>On ne fait pas 1/2 + 1/4 = 2/6 : les parts n’ont pas la même taille.</li></ol></section><section class="course-paper-section"><h3>3. Méthode à recopier</h3><ul><li>Trouver un dénominateur commun.</li><li>Transformer chaque fraction en multipliant en haut et en bas par le même nombre.</li><li>Additionner ou soustraire les numérateurs.</li><li>Garder le dénominateur commun.</li><li>Simplifier si possible.</li></ul><ol class="course-paper-questions"><li><span>Fais les calculs du cours en laissant visibles toutes les transformations.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je m’entraîne — même méthode que dans le cours</h3><p>Reprends les étapes de l’exemple juste au-dessus. Écris une ligne par étape et garde les unités.</p><ol class="course-paper-questions"><li><span>Calcule 3/7 + 2/7 puis 7/10 − 3/10.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Calcule 1/2 + 1/4 en transformant le demi en quarts.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Explique pourquoi on garde le dénominateur commun.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section><section class="course-paper-section"><h3>Je transfère — une situation nouvelle</h3><p>Cette fois, les nombres ou le contexte changent. Commence par identifier ce que l’on cherche, puis choisis la méthode qui convient.</p><ol class="course-paper-questions"><li><span>Calcule 2/3 + 1/4 : trouve un dénominateur commun, transforme, puis additionne.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Un bidon est rempli à 5/6. On utilise 1/4 du bidon. Quelle fraction reste-t-il ? Écris toutes les étapes.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol></section></article></section>
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
         <!-- ========== ACTIVITÉS ET QUESTIONS ========== -->
@@ -994,5 +996,6 @@
         Portail pédagogique Technologie | TIM | Mathématiques
     </p>
 </footer>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
 </body>
 </html>

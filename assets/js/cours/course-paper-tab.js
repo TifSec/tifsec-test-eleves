@@ -35,4 +35,3 @@ export function openCoursePaperTab(source) {
     paperDocument.title = sheet.querySelector('h1, h2')?.textContent || 'Version papier du cours';
     return true;
 }
-
