@@ -6,4 +6,4 @@ Site d'essai, branché sur la **base de test** Supabase (`evbfflwfyiitrkgzjhwt`)
 séances en brouillon visibles. Il est généré automatiquement depuis la branche `refonte-jekyll` de
 `TifSec/tifsec.github.io` (branche `construit/bac-a-sable`) : ne pas modifier les fichiers ici à la main.
 
-L'ancienne version statique, branchée sur la vraie base, est conservée dans l'étiquette `avant-bac-a-sable-2026-10-28`.
+L'ancienne version statique, branchée sur la vraie base, est conservée dans la branche `ancienne-version`.
