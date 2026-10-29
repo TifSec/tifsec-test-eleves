@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Simuler</a></li><li><a href="#a02">Test réel (poste maquette)</a></li><li><a href="#a03">Défi — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">L’émetteur</a></li><li><a href="#a02">Le récepteur</a></li><li><a href="#a03">Test réel (poste maquette)</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -207,15 +207,18 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Simuler</h2>
+        <h2>L’émetteur</h2>
         
         
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas ajouter l’envoi d’une alerte radio à la fonction declencherAlerte de la cuve, comme pour le tracker en 4e. On attend la description des blocs ajoutés.</p></div>
         
         
 
         
-<ol><li>Ajoute envoyerRadio à la fonction declencherAlerte : radio envoyer chaîne « PLEINE ».</li><li>Récepteur : quand une chaîne est reçue, l’afficher et jouer un son.</li><li>Teste dans le simulateur (deux cartes).</li></ol>
+<ol><li>Ouvre la fonction declencherAlerte (projet de la classe).</li><li>Au démarrage, ajoute « radio définir groupe » avec le numéro de ton groupe.</li><li>Dans declencherAlerte, ajoute « radio envoyer chaîne « PLEINE » ».</li></ol>
+    
+
+<p>Pourquoi une chaîne de caractères ? L’afficheur affiche directement le mot reçu : pas besoin de décoder un nombre.</p>
     
 
 
@@ -229,7 +232,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Décris les blocs de l’émetteur et du récepteur.</h3>
+            <h3 id="a01-q01-label">Question 1 — Décris les blocs que tu as ajoutés à la carte de la cuve pour envoyer l’alerte par radio.</h3>
             
 
             
@@ -251,24 +254,32 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Test réel (poste maquette)</h2>
+        <h2>Le récepteur</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> La simulation marche. Testons en vrai.</p>
-        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> La cuve envoie. Programme l’afficheur.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas programmer la carte « afficheur » qui, dans la salle, reçoit l’alerte de la cuve et la signale. On attend ses blocs et ce que tu observes dans le simulateur.</p></div>
         
         
 
         
-<p>Le professeur téléverse l’émetteur sur la carte libre et le récepteur sur la carte du tracker (programme du tracker sauvegardé).</p>
+<ol><li>Crée un projet 3e_S37_afficheur.</li><li>Au démarrage : même groupe radio que la cuve.</li><li>« quand une chaîne est reçue par radio » : afficher la chaîne et jouer un son.</li><li>Teste dans le simulateur (deux cartes).</li></ol>
+    
+
+<p>Pourquoi un son ? L’alerte doit être remarquée même si personne ne regarde l’écran.</p>
     
 
 
-        
+        <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
+<p><a href="https://makecode.microbit.org/" target="_blank" rel="noopener noreferrer">MakeCode micro:bit (gratuit, dans le navigateur)</a></p>
+
+
+</div></details>
+
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Le test réel a-t-il fonctionné ? À quelle distance ?</h3>
+            <h3 id="a02-q01-label">Question 1 — Décris les blocs de la carte afficheur et ce que tu observes dans le simulateur quand la cuve envoie l’alerte.</h3>
             
 
             
@@ -276,23 +287,7 @@
                 <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Attendu ou observé ?</p></details>
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a02-q02-label">Question 2 — Après le test, que faut-il faire sur la carte du tracker ?</h3>
-            
-
-            
-            
-                <select id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><option value="">Choisis une réponse</option><option value="a">Lui remettre son programme d’origine.</option><option value="b">Rien.</option><option value="c">La garder en récepteur.</option></select>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Relis l’exemple expliqué.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Bloc par bloc (réflexe n° 9).</p></details>
             
             
         </div>
@@ -305,16 +300,19 @@
     </article>
     
     <article class="cours-activite" id="a03" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
-        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Test réel (poste maquette)</h2>
         
-        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> La simulation marche. Testons en vrai.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas tester l’alerte radio sur de vraies cartes micro:bit, au poste maquette. On attend le résultat du test et la distance maximale de réception.</p></div>
         
         
 
         
-<p>Plusieurs cuves dans le collège ?</p>
+<ol><li>Le professeur téléverse l’émetteur sur la carte libre et le récepteur sur la carte du tracker (son programme est sauvegardé).</li><li>Éloignez progressivement les deux cartes.</li><li>Notez la plus grande distance où l’alerte est reçue.</li></ol>
+    
+
+<p>Pourquoi un test réel ? Le simulateur ne connaît ni les murs ni la distance : seul l’essai réel le prouve.</p>
     
 
 
@@ -323,15 +321,31 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Comment l’afficheur saurait-il quelle cuve alerte ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Le test réel de l’alerte a-t-il fonctionné ? Jusqu’à quelle distance ?</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Attendu ou observé ?</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a03-q02-label">Question 2 — Après le test, que faut-il faire sur la carte du tracker ?</h3>
+            
+
+            
+            
+                <select id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label"><option value="">Choisis une réponse</option><option value="a">Lui remettre son programme d’origine.</option><option value="b">Rien.</option><option value="c">La garder en récepteur.</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Relis l’exemple expliqué.</p></details>
             
             
         </div>
@@ -344,6 +358,45 @@
     </article>
     
     <article class="cours-activite" id="a04" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Pour aller plus loin</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        
+        
+        
+        
+
+        
+<p>Il pourrait y avoir plusieurs cuves dans le collège.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Comment l’afficheur saurait-il quelle cuve alerte ?</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a05" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
@@ -358,12 +411,12 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Réponds au problème du jour : comment deux objets communiquent-ils une alerte par radio ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment deux objets communiquent-ils une alerte par radio ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème (réflexe n° 3).</p></details>
@@ -373,7 +426,7 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -418,7 +471,7 @@
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

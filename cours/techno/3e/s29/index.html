@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">La fonction chercherSoleil</a></li><li><a href="#a02">Créer une fonction dans un jeu</a></li><li><a href="#a03">Défi — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">La fonction chercherSoleil du tracker</a></li><li><a href="#a02">Créer une fonction dans un jeu</a></li><li><a href="#a03">Appel et retour</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -207,10 +207,10 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>La fonction chercherSoleil</h2>
+        <h2>La fonction chercherSoleil du tracker</h2>
         
         
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas découvrir ce qu’est une fonction à partir d’un extrait du vrai programme du tracker (ci-dessous). On attend le nombre d’appels de la fonction chercherSoleil et l’intérêt d’en avoir fait une fonction.</p></div>
         
         
 
@@ -231,18 +231,24 @@ fonction chercherSoleil
     tourner vers cet angle</code></pre>
     
 
+<ol><li>Lis l’extrait du vrai programme du tracker ci-dessous.</li><li>Repère la définition de la fonction (« fonction chercherSoleil »).</li><li>Repère chaque ligne « appeler chercherSoleil ».</li></ol>
+    
+
+<p>Pourquoi une fonction ? Le balayage est écrit une seule fois mais utilisé à deux endroits : si on le corrige, la correction vaut partout.</p>
+    
+
 
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Combien de fois la fonction chercherSoleil est-elle appelée dans le texte du programme ?</h3>
+            <h3 id="a01-q01-label">Question 1 — Dans l’extrait du programme du tracker, combien de fois la fonction chercherSoleil est-elle appelée ?</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label">
+                <input type="text" inputmode="decimal" id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><p>Unité : appels</p>
 
                 
             <details><summary>Un coup de pouce</summary><p>N’oublie pas l’unité (réflexe n° 5).</p></details>
@@ -253,7 +259,7 @@ fonction chercherSoleil
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Pourquoi avoir écrit une fonction plutôt que de recopier le balayage deux fois ?</h3>
+            <h3 id="a01-q02-label">Question 2 — Pourquoi le programmeur du tracker a-t-il écrit une fonction plutôt que de recopier le balayage deux fois ?</h3>
             
 
             
@@ -261,7 +267,7 @@ fonction chercherSoleil
                 <textarea id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Pense à « car » (réflexe n° 4).</p></details>
+            <details><summary>Un coup de pouce</summary><p>Bloc par bloc (réflexe n° 9).</p></details>
             
             
         </div>
@@ -278,12 +284,15 @@ fonction chercherSoleil
         <h2>Créer une fonction dans un jeu</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as vu une vraie fonction. Crée la tienne.</p>
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas créer ta propre fonction « nouvelleVague » dans un jeu MakeCode Arcade, puis l’appeler à deux endroits. On attend le contenu de la fonction et ses appels, décrits en français.</p></div>
         
         
 
         
-<ol><li>Ouvre MakeCode Arcade, nouveau projet 3e_S29_tonprenom.</li><li>Avancé &gt; Fonctions &gt; Créer une fonction « nouvelleVague ».</li><li>Dans la fonction : créer 3 ennemis à des positions au hasard.</li><li>Appelle « nouvelleVague » au démarrage et chaque fois que le score atteint un multiple de 10.</li></ol>
+<ol><li>Ouvre MakeCode Arcade, nouveau projet 3e_S29_tonprenom, avec un joueur qui se déplace.</li><li>Avancé &gt; Fonctions &gt; Créer une fonction « nouvelleVague ».</li><li>Dans la fonction : créer 3 ennemis à des positions au hasard.</li><li>Appelle « nouvelleVague » au démarrage et quand le score atteint un multiple de 10.</li></ol>
+    
+
+<p>Pourquoi appeler à deux endroits ? C’est tout l’intérêt : un seul bloc de code, utilisé chaque fois qu’on en a besoin.</p>
     
 
 
@@ -297,7 +306,7 @@ fonction chercherSoleil
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Écris en langage naturel le contenu de ta fonction et les endroits où tu l’appelles.</h3>
+            <h3 id="a02-q01-label">Question 1 — Écris en langage naturel le contenu de ta fonction « nouvelleVague » et les endroits où tu l’appelles.</h3>
             
 
             
@@ -310,22 +319,6 @@ fonction chercherSoleil
             
         </div>
         
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a02-q02-label">Question 2 — Que se passe-t-il quand on appelle une fonction ?</h3>
-            
-
-            
-            
-                <select id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><option value="">Choisis une réponse</option><option value="a">Le programme exécute ses instructions, puis reprend là où il était.</option><option value="b">Le programme s’arrête.</option><option value="c">La fonction est supprimée.</option></select>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Relis l’exemple expliqué.</p></details>
-            
-            
-        </div>
-        
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#a01">← Étape précédente</a>
@@ -334,8 +327,71 @@ fonction chercherSoleil
     </article>
     
     <article class="cours-activite" id="a03" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Appel et retour</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Ta fonction marche. Que se passe-t-il exactement lors d’un appel ?</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas observer, dans ton jeu, ce qui se passe quand le programme appelle une fonction. On attend l’explication de l’appel et du retour.</p></div>
+        
+        
+
+        
+<ol><li>Ajoute « score + 1 » juste après l’appel de « nouvelleVague » au démarrage.</li><li>Lance le jeu et observe dans quel ordre les choses se passent.</li><li>Déduis ce que fait le programme après avoir exécuté la fonction.</li></ol>
+    
+
+<p>Pourquoi observer l’ordre ? Il montre que le programme « part » dans la fonction, puis revient exactement là où il était.</p>
+    
+
+
+        <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
+<p><a href="https://arcade.makecode.com/" target="_blank" rel="noopener noreferrer">MakeCode Arcade (gratuit, dans le navigateur)</a></p>
+
+
+</div></details>
+
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a03-q01-label">Question 1 — D’après ton test, que se passe-t-il quand le programme appelle une fonction ?</h3>
+            
+
+            
+            
+                <select id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label"><option value="">Choisis une réponse</option><option value="a">Il exécute ses instructions, puis reprend là où il était.</option><option value="b">Il s’arrête.</option><option value="c">La fonction est supprimée.</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Relis l’exemple expliqué.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a03-q02-label">Question 2 — Dans ton jeu, le score vaut-il 1 avant ou après l’apparition des ennemis ? Explique avec l’ordre d’exécution.</h3>
+            
+
+            
+            
+                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Pense à « car » (réflexe n° 4).</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a02">← Étape précédente</a>
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
+        <h2>Pour aller plus loin</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
@@ -357,12 +413,12 @@ fonction chercherSoleil
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Modifie « nouvelleVague » pour qu’elle reçoive le nombre d’ennemis. Quel intérêt ?</h3>
+            <h3 id="a04-q01-label">Question 1 — Modifie « nouvelleVague » pour qu’elle reçoive le nombre d’ennemis. Quel intérêt ?</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
@@ -372,12 +428,12 @@ fonction chercherSoleil
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a02">← Étape précédente</a>
-            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a04" data-course-step>
+    <article class="cours-activite" id="a05" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
@@ -392,12 +448,12 @@ fonction chercherSoleil
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Réponds au problème du jour : à quoi sert une fonction, et comment en créer une ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : à quoi sert une fonction, et comment en créer une ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème (réflexe n° 3).</p></details>
@@ -407,7 +463,7 @@ fonction chercherSoleil
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -452,7 +508,7 @@ fonction chercherSoleil
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

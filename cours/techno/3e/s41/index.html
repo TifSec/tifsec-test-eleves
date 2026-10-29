@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Choisir</a></li><li><a href="#a02">Câbler et simuler</a></li><li><a href="#a03">Défi — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Choisir les constituants</a></li><li><a href="#a02">Câbler</a></li><li><a href="#a03">Simuler</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -207,15 +207,21 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Choisir</h2>
+        <h2>Choisir les constituants</h2>
         
         
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas vérifier les constituants choisis par la classe pour le prototype de la cuve et leurs broches (document 1). On attend le rôle de la résistance de la LED et la raison du choix du bouton A.</p></div>
         
         
 
         
 <div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Proposition de la classe</caption><thead><tr><th scope="col">Fonction</th><th scope="col">Constituant choisi</th><th scope="col">Broche</th></tr></thead><tbody><tr><td>Mesurer le niveau</td><td>Capteur à ultrasons</td><td>P1 (trig) et P2 (echo)</td></tr><tr><td>Alerter visuellement</td><td>LED rouge + résistance 220 Ω</td><td>P0</td></tr><tr><td>Alerter par le son</td><td>Buzzer</td><td>P8</td></tr><tr><td>Demander l’affichage</td><td>Bouton A de la carte</td><td>—</td></tr></tbody></table></div>
+    
+
+<ol><li>Lis la proposition de la classe (document 1).</li><li>Pour chaque constituant, vérifie qu’il remplit une fonction du cahier des charges.</li><li>Repère pourquoi la LED a une résistance.</li></ol>
+    
+
+<p>Pourquoi justifier chaque constituant ? Un constituant sans fonction coûte de l’argent et de l’énergie pour rien.</p>
     
 
 
@@ -224,7 +230,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Pourquoi met-on une résistance en série avec la LED ?</h3>
+            <h3 id="a01-q01-label">Question 1 — D’après le document 1, pourquoi met-on une résistance en série avec la LED rouge de la cuve ?</h3>
             
 
             
@@ -232,7 +238,7 @@
                 <textarea id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Pense à « car » (réflexe n° 4).</p></details>
+            <details><summary>Un coup de pouce</summary><p>« D’après le document… » (réflexe n° 2).</p></details>
             
             
         </div>
@@ -240,7 +246,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Pourquoi utiliser le bouton A de la carte plutôt qu’un bouton externe ?</h3>
+            <h3 id="a01-q02-label">Question 2 — Pourquoi la classe utilise-t-elle le bouton A de la carte plutôt qu’un bouton externe ?</h3>
             
 
             
@@ -262,15 +268,18 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Câbler et simuler</h2>
+        <h2>Câbler</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les constituants sont choisis. Câble-les.</p>
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas câbler le prototype numérique de la cuve dans Tinkercad Circuits, en suivant le document 1. On attend la broche de chaque constituant.</p></div>
         
         
 
         
-<ol><li>Ouvre Tinkercad Circuits, nouveau circuit 3e_S41_groupe.</li><li>Place la micro:bit, le capteur à ultrasons, la LED, la résistance, le buzzer.</li><li>Relie selon le document 1 (masse commune).</li><li>Lance la simulation avec un programme simple (LED allumée si distance &lt; 20).</li></ol>
+<ol><li>Ouvre Tinkercad Circuits, nouveau circuit 3e_S41_groupe.</li><li>Place la micro:bit, le capteur à ultrasons, la LED, la résistance et le buzzer.</li><li>Relie chaque constituant à sa broche (document 1).</li><li>Relie toutes les masses (GND) entre elles.</li></ol>
+    
+
+<p>Pourquoi une masse commune ? Une tension se mesure toujours entre deux points : sans masse commune, les constituants ne « parlent » pas la même langue.</p>
     
 
 
@@ -284,15 +293,80 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Décris ton câblage (constituant → broche) et le résultat de la simulation.</h3>
+            <h3 id="a02-q01-label">Question 1 — Note le câblage de ton circuit Tinkercad pour la cuve.</h3>
             
 
             
             
-                <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Combien d’éléments sont demandés ?</p></details>
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Constituant</th>
+                                
+                                <th>Broche reliée</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    LED (avec sa résistance)
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Câbler — Broche reliée — LED (avec sa résistance)">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Buzzer
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Câbler — Broche reliée — Buzzer">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Capteur à ultrasons (echo)
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Câbler — Broche reliée — Capteur à ultrasons (echo)">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            <details><summary>Un coup de pouce</summary><p>Ligne × colonne.</p></details>
             
             
         </div>
@@ -305,8 +379,55 @@
     </article>
     
     <article class="cours-activite" id="a03" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Simuler</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le circuit est câblé. Vérifie-le en simulation.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas vérifier ton câblage par une simulation avec un programme simple. On attend ce que fait la LED et ta conclusion sur le câblage.</p></div>
+        
+        
+
+        
+<ol><li>Écris un programme simple : allumer la LED si la distance est inférieure à 20 cm.</li><li>Lance la simulation.</li><li>Déplace l’objet devant le capteur et observe la LED.</li></ol>
+    
+
+<p>Pourquoi un programme simple ? Il vérifie seulement le câblage : s’il marche, on pourra charger le vrai programme sans doute sur les fils.</p>
+    
+
+
+        <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
+<p><a href="https://www.tinkercad.com/learn/circuits" target="_blank" rel="noopener noreferrer">Tinkercad Circuits — simulation de circuits avec micro:bit</a></p>
+
+
+</div></details>
+
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a03-q01-label">Question 1 — Décris le résultat de la simulation de ton circuit : que fait la LED quand l’objet s’approche du capteur ? Le câblage est-il bon ?</h3>
+            
+
+            
+            
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Combien d’éléments sont demandés ?</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a02">← Étape précédente</a>
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
+        <h2>Pour aller plus loin</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
@@ -323,12 +444,12 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Que se passe-t-il si le capteur n’a pas la même masse que la carte ?</h3>
+            <h3 id="a04-q01-label">Question 1 — Que se passe-t-il si le capteur n’a pas la même masse que la carte ?</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
@@ -338,12 +459,12 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a02">← Étape précédente</a>
-            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a04" data-course-step>
+    <article class="cours-activite" id="a05" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
@@ -358,12 +479,12 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Réponds au problème du jour : quels constituants et comment les relier ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : quels constituants choisir et comment les relier pour le prototype numérique de la cuve ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème (réflexe n° 3).</p></details>
@@ -373,7 +494,7 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -418,7 +539,7 @@
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

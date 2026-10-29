@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">L’épreuve (30 minutes)</a></li><li><a href="#a02">Autocorrection</a></li><li><a href="#a03">Défi — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Partie 1 — Analyser (10 minutes)</a></li><li><a href="#a02">Partie 2 — Calculer et expliquer (10 minutes)</a></li><li><a href="#a03">Partie 3 — Argumenter (10 minutes)</a></li><li><a href="#a04">Autocorrection</a></li><li><a href="#a05">Pour aller plus loin — facultatif</a></li><li><a href="#a06">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -205,18 +205,24 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>L’épreuve (30 minutes)</h2>
+        <h2>Partie 1 — Analyser (10 minutes)</h2>
         
         
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Brevet blanc n° 2, en 30 minutes : la cuve d’eau de pluie d’un gymnase (documents 1 et 2, situation inventée). Partie 1 : on attend la chaîne d’information et la valeur à compléter dans le programme. Garde environ 10 minutes.</p></div>
         
         
 
         
+<blockquote>Réflexe brevet n° 21 : je lis le barème : je donne plus de temps aux questions qui rapportent le plus.</blockquote>
+    
+
 <h4>Document 1 — La cuve d’un gymnase (situation inventée)</h4>
     
 
 <blockquote>Le toit du gymnase (500 m²) alimente une cuve de 10 m³ qui sert aux toilettes. Un capteur à ultrasons mesure le niveau ; si la cuve est presque vide (moins de 10 %), une vanne bascule sur l’eau du réseau. Un écran affiche le volume. Une pompe alimentée par le secteur envoie l’eau vers les toilettes.</blockquote>
+    
+
+<h4>Document 2 — Programme incomplet</h4>
     
 
 <pre class="cours-code"><code>répéter toujours
@@ -228,13 +234,19 @@
         basculer la vanne sur la cuve</code></pre>
     
 
+<ol><li>Lis le barème (R21) et survole tout le sujet.</li><li>Lis le document 1 en entier.</li><li>Range les constituants de la chaîne d’information.</li><li>Calcule la valeur à écrire dans le programme (document 2).</li></ol>
+    
+
+<p>Pourquoi survoler d’abord ? Tu repères les questions faciles et tu répartis ton temps avant de commencer.</p>
+    
+
 
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Chaîne d’information (document 1).</h3>
+            <h3 id="a01-q01-label">Question 1 — D’après le document 1, écris le constituant de chaque fonction de la chaîne d’information de la cuve du gymnase.</h3>
             
 
             
@@ -263,7 +275,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="L’épreuve (30 minutes) — Constituant — Acquérir">
+                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Partie 1 — Analyser (10 minutes) — Constituant — Acquérir">
                                     
                                 </td>
                                 
@@ -280,7 +292,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="L’épreuve (30 minutes) — Constituant — Traiter">
+                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Partie 1 — Analyser (10 minutes) — Constituant — Traiter">
                                     
                                 </td>
                                 
@@ -297,7 +309,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="L’épreuve (30 minutes) — Constituant — Communiquer">
+                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Partie 1 — Analyser (10 minutes) — Constituant — Communiquer">
                                     
                                 </td>
                                 
@@ -315,7 +327,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Quelle valeur faut-il écrire dans le programme pour « moins de 10 % » d’une cuve de 10 m³ (en litres) ?</h3>
+            <h3 id="a01-q02-label">Question 2 — Quelle valeur faut-il écrire dans le programme (document 2) pour « moins de 10 % » d’une cuve de 10 m³ ?</h3>
             
 
             
@@ -324,54 +336,6 @@
 
                 
             <details><summary>Un coup de pouce</summary><p>N’oublie pas l’unité (réflexe n° 5).</p></details>
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q03">
-            
-            
-            <h3 id="a01-q03-label">Question 3 — 1 mm de pluie sur 1 m² donne 1 L. Combien de litres récupère le toit pour une pluie de 8 mm ?</h3>
-            
-
-            
-            
-                <input type="text" inputmode="decimal" id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label"><p>Unité : L</p>
-
-                
-            <details><summary>Un coup de pouce</summary><p>N’oublie pas l’unité (réflexe n° 5).</p></details>
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q04">
-            
-            
-            <h3 id="a01-q04-label">Question 4 — Argumente (R19) : cette installation est-elle intéressante pour la commune ?</h3>
-            
-
-            
-            
-                <textarea id="a01-q04" data-answer-id="a01_q04" data-required="true" aria-labelledby="a01-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q05">
-            
-            
-            <h3 id="a01-q05-label">Question 5 — Pourquoi la vanne bascule-t-elle sur l’eau du réseau quand la cuve est presque vide ?</h3>
-            
-
-            
-            
-                <textarea id="a01-q05" data-answer-id="a01_q05" data-required="true" aria-labelledby="a01-q05-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Pense à « car » (réflexe n° 4).</p></details>
             
             
         </div>
@@ -385,28 +349,51 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Autocorrection</h2>
+        <h2>Partie 2 — Calculer et expliquer (10 minutes)</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Corrige-toi.</p>
-        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Passe à la partie 2 du sujet.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Partie 2 du brevet blanc : tu vas calculer l’eau récupérée par le toit du gymnase et expliquer le rôle de la vanne. On attend un résultat avec son unité et une explication avec « car ». Garde environ 10 minutes.</p></div>
         
         
 
         
+<ol><li>Lis la donnée sur la pluie : 1 mm sur 1 m² = 1 L.</li><li>Calcule le volume récupéré par le toit.</li><li>Explique le rôle de la vanne avec « car ».</li></ol>
+    
+
+<p>Pourquoi « car » ? Une explication sans justification ne rapporte qu’une partie des points.</p>
+    
+
+
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Analyse deux erreurs : quel réflexe t’a manqué ?</h3>
+            <h3 id="a02-q01-label">Question 1 — 1 mm de pluie sur 1 m² donne 1 L. D’après le document 1, combien de litres le toit du gymnase récupère-t-il pour une pluie de 8 mm ?</h3>
             
 
             
             
-                <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label"><p>Unité : L</p>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
+            <details><summary>Un coup de pouce</summary><p>N’oublie pas l’unité (réflexe n° 5).</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a02-q02-label">Question 2 — D’après le document 1, pourquoi la vanne bascule-t-elle sur l’eau du réseau quand la cuve est presque vide ? Justifie avec « car ».</h3>
+            
+
+            
+            
+                <textarea id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>« D’après le document… » (réflexe n° 2).</p></details>
             
             
         </div>
@@ -419,8 +406,92 @@
     </article>
     
     <article class="cours-activite" id="a03" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Partie 3 — Argumenter (10 minutes)</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Dernière partie du sujet.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Partie 3 du brevet blanc : tu vas argumenter sur l’intérêt de la cuve du gymnase pour la commune, avec les chiffres de tes réponses. On attend une argumentation en trois temps. Garde du temps pour relire.</p></div>
+        
+        
+
+        
+<ol><li>Choisis ta position sur l’intérêt de l’installation pour la commune.</li><li>Argumente en trois temps (R19) avec des chiffres de tes réponses.</li><li>Garde 2 minutes pour relire (R16).</li></ol>
+    
+
+<p>Pourquoi réutiliser tes calculs ? Ils deviennent les preuves chiffrées de ton argumentation.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a03-q01-label">Question 1 — Argumente en trois temps (R19) : la cuve du gymnase est-elle intéressante pour la commune ?</h3>
+            
+
+            
+            
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a02">← Étape précédente</a>
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a04" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Autocorrection</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> L’épreuve est terminée. Corrige-toi.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas corriger toi-même ta copie du brevet blanc n° 2 avec le corrigé projeté. On attend deux erreurs analysées, chacune reliée à un réflexe.</p></div>
+        
+        
+
+        
+<ol><li>Le professeur projette le corrigé.</li><li>Compare chaque réponse.</li><li>Pour deux erreurs, note le réflexe qui t’a manqué.</li></ol>
+    
+
+<p>Pourquoi tout de suite ? Tu te souviens de ton raisonnement : tu vois mieux d’où vient l’erreur.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Pour deux questions du brevet blanc n° 2 où tu as perdu des points, écris le réflexe qui t’a manqué.</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Combien d’éléments sont demandés ?</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a05" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
+        <h2>Pour aller plus loin</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
@@ -437,12 +508,12 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Combien de chasses avec une cuve pleine ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Combien de chasses d’eau permet une cuve pleine de 10 m³ ?</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="false" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
@@ -452,12 +523,12 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a02">← Étape précédente</a>
-            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
+            <a class="course-mission-next" href="#a06">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a04" data-course-step>
+    <article class="cours-activite" id="a06" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
@@ -472,12 +543,12 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Ta gestion du temps s’est-elle améliorée depuis le brevet blanc n° 1 ? Explique.</h3>
+            <h3 id="a06-q01-label">Question 1 — Ta gestion du temps s’est-elle améliorée depuis le brevet blanc n° 1 ? Explique avec un exemple.</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a06-q01" data-answer-id="a06_q01" data-required="true" aria-labelledby="a06-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème (réflexe n° 3).</p></details>
@@ -487,7 +558,7 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-back" href="#a05">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -532,7 +603,7 @@
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a06">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

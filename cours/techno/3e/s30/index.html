@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Lire du Python</a></li><li><a href="#a02">Modifier</a></li><li><a href="#a03">Défi — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Lire du Python</a></li><li><a href="#a02">L’indentation</a></li><li><a href="#a03">Modifier ton jeu en Python</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -166,7 +166,7 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>MakeCode affiche le même programme en blocs, en JavaScript ou en Python : seuls l’écriture change, pas ce que fait le programme.</li>
+            <li>MakeCode affiche le même programme en blocs, en JavaScript ou en Python : seule l’écriture change, pas ce que fait le programme.</li>
             
             <li>En Python, l’indentation (le décalage) indique ce qui est à l’intérieur d’une boucle ou d’une condition ; un « : » termine les lignes if, for, def.</li>
             
@@ -210,7 +210,7 @@
         <h2>Lire du Python</h2>
         
         
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas lire un court programme Python (ci-dessous), proche du jeu de la séance 29, et retrouver ses blocs. On attend le bloc qui correspond à chaque ligne.</p></div>
         
         
 
@@ -229,13 +229,19 @@ if score &gt; 10:
 <p>Exemple expliqué : « for i in range(3): » répète 3 fois ce qui est décalé en dessous ; « def » crée une fonction.</p>
     
 
+<ol><li>Lis le programme Python ci-dessous et l’exemple expliqué.</li><li>Pour chaque ligne qui finit par « : », cherche le bloc équivalent.</li><li>Repère les lignes décalées : elles sont « à l’intérieur ».</li></ol>
+    
+
+<p>Pourquoi Python ? C’est le langage étudié au lycée ; tu y retrouves exactement les mêmes idées que dans les blocs.</p>
+    
+
 
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Associe chaque ligne Python au bloc correspondant.</h3>
+            <h3 id="a01-q01-label">Question 1 — Associe chaque ligne du programme Python à son bloc MakeCode.</h3>
             
 
             
@@ -313,22 +319,6 @@ if score &gt; 10:
             
         </div>
         
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a01-q02-label">Question 2 — À quoi sert le décalage des lignes en Python ?</h3>
-            
-
-            
-            
-                <select id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><option value="">Choisis une réponse</option><option value="a">À indiquer ce qui fait partie de la boucle, de la condition ou de la fonction.</option><option value="b">À faire joli.</option><option value="c">Rien.</option></select>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Relis l’exemple expliqué.</p></details>
-            
-            
-        </div>
-        
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#course-intro">← Revoir l’objectif</a>
@@ -338,37 +328,51 @@ if score &gt; 10:
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Modifier</h2>
+        <h2>L’indentation</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais lire du Python. Modifie maintenant ton jeu.</p>
-        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais associer Python et blocs. Regarde le rôle du décalage.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas comprendre le rôle de l’indentation (le décalage des lignes) en Python, sur le programme ci-dessus. On attend son rôle et l’effet d’une indentation oubliée.</p></div>
         
         
 
         
-<ol><li>Ouvre ton jeu de la séance 29 et passe en Python (onglet en haut).</li><li>Change le nombre d’ennemis de 3 à 5 dans range().</li><li>Reviens en blocs : vérifie que le bloc a changé.</li></ol>
+<ol><li>Regarde la ligne « creer_ennemi() » : elle est décalée de 4 espaces.</li><li>Demande-toi ce qui arriverait si elle ne l’était pas.</li><li>Réponds.</li></ol>
+    
+
+<p>Pourquoi le décalage compte-t-il ? En blocs, on voit qu’un bloc est « dans » une boucle ; en Python, c’est le décalage qui le dit.</p>
     
 
 
-        <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
-<p><a href="https://arcade.makecode.com/" target="_blank" rel="noopener noreferrer">MakeCode Arcade (gratuit, dans le navigateur)</a></p>
-
-
-</div></details>
-
+        
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Quelle ligne as-tu modifiée, et qu’as-tu observé en revenant aux blocs ?</h3>
+            <h3 id="a02-q01-label">Question 1 — Dans le programme Python ci-dessus, à quoi sert le décalage de la ligne « creer_ennemi() » ?</h3>
             
 
             
             
-                <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <select id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label"><option value="">Choisis une réponse</option><option value="a">À indiquer qu’elle fait partie de la boucle for.</option><option value="b">À faire joli.</option><option value="c">Rien.</option></select>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Bloc par bloc (réflexe n° 9).</p></details>
+            <details><summary>Un coup de pouce</summary><p>Relis l’exemple expliqué.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a02-q02-label">Question 2 — Si on enlève le décalage de « creer_ennemi() », combien d’ennemis seront créés ? Pourquoi ?</h3>
+            
+
+            
+            
+                <textarea id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Pense à « car » (réflexe n° 4).</p></details>
             
             
         </div>
@@ -381,16 +385,19 @@ if score &gt; 10:
     </article>
     
     <article class="cours-activite" id="a03" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
-        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Modifier ton jeu en Python</h2>
         
-        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu comprends le décalage. Modifie maintenant ton propre jeu.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas modifier ton propre jeu de la séance 29 en Python, puis vérifier le changement dans les blocs. On attend la ligne modifiée et ce que tu observes.</p></div>
         
         
 
         
-<p>Une erreur d’indentation empêche le programme de fonctionner.</p>
+<ol><li>Ouvre ton jeu de la séance 29.</li><li>Clique sur l’onglet « Python » en haut.</li><li>Change le nombre d’ennemis de 3 à 5 dans range().</li><li>Reviens en blocs et vérifie que le bloc a changé.</li></ol>
+    
+
+<p>Pourquoi passer d’un mode à l’autre ? Tu vérifies que c’est bien le même programme, écrit de deux façons.</p>
     
 
 
@@ -404,15 +411,15 @@ if score &gt; 10:
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Supprime le décalage d’une ligne dans la boucle. Que se passe-t-il ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Dans ton jeu, quelle ligne Python as-tu modifiée, et qu’as-tu observé en revenant aux blocs ?</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Bloc par bloc (réflexe n° 9).</p></details>
             
             
         </div>
@@ -425,6 +432,50 @@ if score &gt; 10:
     </article>
     
     <article class="cours-activite" id="a04" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Pour aller plus loin</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        
+        
+        
+        
+
+        
+<p>Une erreur d’indentation empêche souvent le programme de fonctionner.</p>
+    
+
+
+        <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
+<p><a href="https://arcade.makecode.com/" target="_blank" rel="noopener noreferrer">MakeCode Arcade (gratuit, dans le navigateur)</a></p>
+
+
+</div></details>
+
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Supprime le décalage d’une ligne dans la boucle de ton jeu. Que se passe-t-il ?</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a05" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
@@ -439,12 +490,12 @@ if score &gt; 10:
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Réponds au problème du jour : comment un programme en blocs s’écrit-il en Python ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment un programme en blocs s’écrit-il en Python ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème (réflexe n° 3).</p></details>
@@ -454,7 +505,7 @@ if score &gt; 10:
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -499,7 +550,7 @@ if score &gt; 10:
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

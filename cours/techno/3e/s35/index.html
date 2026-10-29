@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Les données</a></li><li><a href="#a02">L’algorithme</a></li><li><a href="#a03">Défi — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Entrées et sorties</a></li><li><a href="#a02">L’algorithme principal</a></li><li><a href="#a03">Répartir les fonctions</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -207,20 +207,27 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Les données</h2>
+        <h2>Entrées et sorties</h2>
         
         
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas lister les données que la carte de la cuve reçoit (entrées) et ce qu’elle commande (sorties), à partir de sa chaîne d’information (séance 25). On attend les deux listes.</p></div>
         
         
 
         
+<ol><li>Relis la chaîne d’information de la cuve (séance 25).</li><li>Les entrées sont ce que la carte reçoit (capteurs, bouton).</li><li>Les sorties sont ce que la carte commande (pompe, LED, écran, radio).</li></ol>
+    
+
+<p>Pourquoi entrées et sorties ? Un algorithme transforme des entrées en sorties : il faut d’abord savoir lesquelles.</p>
+    
+
+
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Complète les entrées et sorties.</h3>
+            <h3 id="a01-q01-label">Question 1 — Écris les entrées et les sorties de la carte de la cuve.</h3>
             
 
             
@@ -249,7 +256,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Les données — Données — Entrées">
+                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Entrées et sorties — Données — Entrées">
                                     
                                 </td>
                                 
@@ -266,7 +273,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Les données — Données — Sorties">
+                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Entrées et sorties — Données — Sorties">
                                     
                                 </td>
                                 
@@ -290,15 +297,21 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>L’algorithme</h2>
+        <h2>L’algorithme principal</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les données sont connues. Conçois les règles.</p>
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas écrire l’algorithme principal de la cuve à partir des règles décidées par la classe (ci-dessous), en appelant des fonctions. On attend un algorithme qui traite les quatre règles.</p></div>
         
         
 
         
-<p>Règles décidées par la classe : alerte « pleine » au-dessus de 90 % ; pompe interdite sous 10 % ; affichage du volume quand on appuie sur le bouton ; envoi radio de l’alerte.</p>
+<p>Règles décidées par la classe : alerte « pleine » au-dessus de 90 % ; pompe interdite sous 10 % ; affichage du volume quand on appuie sur le bouton ; envoi radio de l’alerte vers la salle.</p>
+    
+
+<ol><li>Lis les règles décidées par la classe.</li><li>Écris l’algorithme principal avec TOUJOURS, SI … ALORS, QUAND.</li><li>Remplace chaque action détaillée par l’appel d’une fonction (mesurerNiveau, declencherAlerte…).</li></ol>
+    
+
+<p>Pourquoi appeler des fonctions ? L’algorithme principal reste court et lisible ; chaque groupe programmera une fonction.</p>
     
 
 
@@ -307,7 +320,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Écris l’algorithme principal en langage naturel, en appelant des fonctions.</h3>
+            <h3 id="a02-q01-label">Question 1 — Écris l’algorithme principal de la cuve en langage naturel, en appelant des fonctions.</h3>
             
 
             
@@ -320,10 +333,36 @@
             
         </div>
         
-        <div class="cours-question" data-question="q02">
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a01">← Étape précédente</a>
+            <a class="course-mission-next" href="#a03">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a03" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Répartir les fonctions</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> L’algorithme est écrit. Répartissez le travail.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas répartir avec la classe les fonctions de l’algorithme de la cuve entre les groupes. On attend la répartition notée.</p></div>
+        
+        
+
+        
+<ol><li>Liste les fonctions appelées dans ton algorithme.</li><li>Avec la classe, attribue chaque fonction à un groupe.</li><li>Note la tienne.</li></ol>
+    
+
+<p>Pourquoi répartir ? Comme dans une entreprise, chaque équipe programme une partie ; il faudra ensuite les assembler (séance 42).</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            
-            <h3 id="a02-q02-label">Question 2 — Répartissez les fonctions entre les groupes.</h3>
+            <h3 id="a03-q01-label">Question 1 — Note quel groupe programme chaque fonction de la cuve.</h3>
             
 
             
@@ -352,7 +391,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a02_q02_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="L’algorithme — Groupe — mesurerNiveau">
+                                    <input type="text" data-answer-id="a03_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Répartir les fonctions — Groupe — mesurerNiveau">
                                     
                                 </td>
                                 
@@ -369,7 +408,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a02_q02_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="L’algorithme — Groupe — declencherAlerte">
+                                    <input type="text" data-answer-id="a03_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Répartir les fonctions — Groupe — declencherAlerte">
                                     
                                 </td>
                                 
@@ -379,21 +418,21 @@
                     </table>
                 </div>
             
-            <details><summary>Un coup de pouce</summary><p>Ligne × colonne.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Bloc par bloc (réflexe n° 9).</p></details>
             
             
         </div>
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a01">← Étape précédente</a>
-            <a class="course-mission-next" href="#a03">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+            <a class="course-mission-back" href="#a02">← Étape précédente</a>
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a03" data-course-step>
+    <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
+        <h2>Pour aller plus loin</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
@@ -410,12 +449,12 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Que faire si la cuve est pleine et que la pompe doit être bloquée ? Y a-t-il contradiction ?</h3>
+            <h3 id="a04-q01-label">Question 1 — La cuve est pleine et la pompe doit être bloquée : y a-t-il une contradiction dans les règles ?</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
@@ -425,12 +464,12 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a02">← Étape précédente</a>
-            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a04" data-course-step>
+    <article class="cours-activite" id="a05" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
@@ -445,12 +484,12 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Réponds au problème du jour : quelles données, et quel algorithme pour la cuve ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : quelles données la cuve utilise-t-elle, et quel algorithme décidera de ses actions ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème (réflexe n° 3).</p></details>
@@ -460,7 +499,7 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -505,7 +544,7 @@
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

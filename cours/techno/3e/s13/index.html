@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Le dossier</a></li><li><a href="#a02">Je relis (R16, R20)</a></li><li><a href="#a03">Défi — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Calculer la taille des photos</a></li><li><a href="#a02">Le trajet des photos</a></li><li><a href="#a03">Compter et relire</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -183,7 +183,7 @@
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Depuis la séance 8, tu as étudié Internet et le codage.</p><p>Aujourd’hui, un dossier sur une caméra de surveillance d’un jardin partagé (inventé).</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Depuis la séance 8, tu as étudié Internet et le codage.</p><p>Aujourd’hui, un dossier de type brevet sur la caméra d’un jardin partagé (inventé).</p></div></section>
     
     
     
@@ -205,10 +205,10 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Le dossier</h2>
+        <h2>Calculer la taille des photos</h2>
         
         
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas t’entraîner au brevet sur un dossier : la caméra d’un jardin partagé (documents 1 et 2, situation inventée). Partie 1 : on attend la taille d’une photo avant et après compression, avec l’unité.</p></div>
         
         
 
@@ -216,7 +216,7 @@
 <blockquote>Réflexe brevet n° 20 : je soigne la langue : vocabulaire technique exact, phrases relues.</blockquote>
     
 
-<h4>Document 1</h4>
+<h4>Document 1 — La caméra du jardin partagé (situation inventée)</h4>
     
 
 <blockquote>Une caméra prend une photo de 1 000 × 800 pixels toutes les 10 minutes et l’envoie par Wi-Fi à la box, puis par Internet au serveur de l’association. Les photos sont compressées en JPEG (environ 10 fois plus légères).</blockquote>
@@ -225,13 +225,19 @@
 <div class="cours-table-wrapper"><table class="cours-table"><caption>Document 2 — Table de routage de la box</caption><thead><tr><th scope="col">Destination</th><th scope="col">Sortie</th></tr></thead><tbody><tr><td>Réseau de l’association</td><td>Sortie 2</td></tr><tr><td>Autre</td><td>Sortie 1</td></tr></tbody></table></div>
     
 
+<ol><li>Lis tout le dossier une première fois.</li><li>Calcule la taille d’une photo : pixels × 3 octets (séance 11).</li><li>Divise par 10 pour la compression.</li><li>Écris l’unité à chaque résultat.</li></ol>
+    
+
+<p>Pourquoi l’unité ? Au brevet, un résultat sans unité est incomplet : c’est un point perdu facilement.</p>
+    
+
 
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Quelle est la taille d’une photo non compressée (3 octets par pixel) ?</h3>
+            <h3 id="a01-q01-label">Question 1 — D’après le document 1, quelle est la taille d’une photo de la caméra non compressée (3 octets par pixel) ?</h3>
             
 
             
@@ -247,60 +253,12 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Quelle est sa taille après compression (environ 10 fois moins) ?</h3>
+            <h3 id="a01-q02-label">Question 2 — Quelle est la taille de cette photo après compression JPEG (environ 10 fois moins) ?</h3>
             
 
             
             
                 <input type="text" inputmode="decimal" id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><p>Unité : octets</p>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Écris l’opération, calcule, vérifie l’unité.</p></details>
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q03">
-            
-            
-            <h3 id="a01-q03-label">Question 3 — D’après le document 2, par quelle sortie la box envoie-t-elle la photo vers le serveur de l’association ?</h3>
-            
-
-            
-            
-                <select id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label"><option value="">Choisis une réponse</option><option value="a">Sortie 2</option><option value="b">Sortie 1</option><option value="c">Aucune</option></select>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Élimine d’abord les réponses impossibles.</p></details>
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q04">
-            
-            
-            <h3 id="a01-q04-label">Question 4 — Décris le trajet d’une photo, de la caméra au serveur, avec le vocabulaire exact (R20).</h3>
-            
-
-            
-            
-                <textarea id="a01-q04" data-answer-id="a01_q04" data-required="true" aria-labelledby="a01-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Compte les éléments demandés, puis cherche-les dans les documents de la mission.</p></details>
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q05">
-            
-            
-            <h3 id="a01-q05-label">Question 5 — Combien de photos par jour (24 h) ?</h3>
-            
-
-            
-            
-                <input type="text" inputmode="decimal" id="a01-q05" data-answer-id="a01_q05" data-required="true" aria-labelledby="a01-q05-label">
 
                 
             <details><summary>Un coup de pouce</summary><p>Écris l’opération, calcule, vérifie l’unité.</p></details>
@@ -317,28 +275,51 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Je relis (R16, R20)</h2>
+        <h2>Le trajet des photos</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Relis-toi.</p>
-        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les tailles sont calculées. Suis maintenant le trajet des photos.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Partie 2 du dossier : tu vas décrire le trajet d’une photo de la caméra jusqu’au serveur, avec la table de routage du document 2. On attend la bonne sortie et un trajet décrit avec le vocabulaire exact.</p></div>
         
         
 
         
+<ol><li>Relis le document 1 : par où passe la photo ?</li><li>Lis la table de routage de la box (document 2).</li><li>Décris le trajet avec le vocabulaire exact : Wi-Fi, box, routeur, Internet, serveur, paquets (R20).</li></ol>
+    
+
+<p>Pourquoi le vocabulaire exact ? Au brevet, la maîtrise de la langue est notée : « la box » ou « le routeur », pas « le truc ».</p>
+    
+
+
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Quel mot technique as-tu corrigé ou précisé en te relisant ?</h3>
+            <h3 id="a02-q01-label">Question 1 — D’après le document 2, par quelle sortie la box envoie-t-elle la photo vers le serveur de l’association ?</h3>
             
 
             
             
-                <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <select id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label"><option value="">Choisis une réponse</option><option value="a">Sortie 2</option><option value="b">Sortie 1</option><option value="c">Aucune</option></select>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Une phrase complète qui reprend les mots de la question.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Élimine d’abord les réponses impossibles.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a02-q02-label">Question 2 — D’après le document 1, décris le trajet d’une photo, de la caméra au serveur de l’association, avec le vocabulaire exact (R20).</h3>
+            
+
+            
+            
+                <textarea id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Retrouve la phrase ou la ligne utile du document, puis commence par « D’après le document… ».</p></details>
             
             
         </div>
@@ -351,8 +332,66 @@
     </article>
     
     <article class="cours-activite" id="a03" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Compter et relire</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Termine le dossier, puis relis-toi.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Partie 3 du dossier : tu vas calculer le nombre de photos par jour, puis relire tout ton travail (R16, R20). On attend un résultat avec son unité et une correction précise.</p></div>
+        
+        
+
+        
+<ol><li>Calcule le nombre de photos par jour (une toutes les 10 minutes).</li><li>Relis toutes tes réponses : unités, vocabulaire (R16, R20).</li><li>Note une correction faite en te relisant.</li></ol>
+    
+
+<p>Pourquoi garder du temps pour relire ? Les dernières minutes servent à corriger les unités et les mots : ce sont des points faciles.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a03-q01-label">Question 1 — D’après le document 1, combien de photos la caméra prend-elle par jour (24 h) ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label"><p>Unité : photos</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris l’opération, calcule, vérifie l’unité.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a03-q02-label">Question 2 — En relisant ton dossier sur la caméra, quel mot technique ou quelle unité as-tu corrigé ?</h3>
+            
+
+            
+            
+                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Une phrase complète qui reprend les mots de la question.</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a02">← Étape précédente</a>
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
+        <h2>Pour aller plus loin</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
@@ -369,12 +408,12 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Quelle place occupent-elles (compressées) ?</h3>
+            <h3 id="a04-q01-label">Question 1 — Quelle place occupent-elles sur le serveur (compressées) ?</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Une phrase complète qui reprend les mots de la question.</p></details>
@@ -384,12 +423,12 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a02">← Étape précédente</a>
-            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a04" data-course-step>
+    <article class="cours-activite" id="a05" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
@@ -404,12 +443,12 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Quel point dois-tu revoir (routage, binaire, calcul de taille) ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Quel point dois-tu revoir (routage, binaire, calcul de taille) ? Comment vas-tu le travailler ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème et de « Ce que je retiens », avec un exemple de la séance.</p></details>
@@ -419,7 +458,7 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -464,7 +503,7 @@
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

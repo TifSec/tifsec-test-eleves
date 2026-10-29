@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Le dossier</a></li><li><a href="#a02">Je relis</a></li><li><a href="#a03">Défi — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Compléter le programme</a></li><li><a href="#a02">Algorithme et fonction</a></li><li><a href="#a03">Tester et relire</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -181,7 +181,7 @@
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Depuis la séance 35, tu as programmé la cuve.</p><p>Aujourd’hui : un dossier sur un éclairage automatique de couloir (inventé).</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Depuis la séance 35, tu as programmé la cuve.</p><p>Aujourd’hui : un dossier de type brevet sur l’éclairage automatique d’un couloir (inventé).</p></div></section>
     
     
     
@@ -203,15 +203,21 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Le dossier</h2>
+        <h2>Compléter le programme</h2>
         
         
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas t’entraîner au brevet sur un dossier : l’éclairage automatique d’un couloir (documents 1 et 2, situation inventée). Partie 1 : on attend les deux trous du programme complétés.</p></div>
         
         
 
         
+<h4>Document 1 — L’éclairage automatique d’un couloir (situation inventée)</h4>
+    
+
 <blockquote>Un détecteur de présence et un capteur de lumière. Si quelqu’un passe ET qu’il fait sombre (lumière &lt; 50), la lampe s’allume pendant 2 minutes. Une fonction « allumer » gère l’allumage et la minuterie.</blockquote>
+    
+
+<h4>Document 2 — Programme incomplet</h4>
     
 
 <pre class="cours-code"><code>toujours
@@ -224,13 +230,19 @@ fonction allumer
     lampe OFF</code></pre>
     
 
+<ol><li>Lis le document 1 en entier.</li><li>Compare le programme (document 2) avec ce qu’il doit faire (R13).</li><li>Pour la pause, convertis 2 minutes en millisecondes (1 s = 1 000 ms).</li></ol>
+    
+
+<p>Pourquoi convertir ? Les cartes programmables comptent le temps en millisecondes : 2 « minutes » écrit tel quel serait faux.</p>
+    
+
 
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Complète les trous.</h3>
+            <h3 id="a01-q01-label">Question 1 — Complète les deux trous du programme de l’éclairage du couloir (document 2).</h3>
             
 
             
@@ -259,7 +271,7 @@ fonction allumer
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Le dossier — À écrire — Condition">
+                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Compléter le programme — À écrire — Condition">
                                     
                                 </td>
                                 
@@ -276,7 +288,7 @@ fonction allumer
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Le dossier — À écrire — Durée de la pause (en ms)">
+                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Compléter le programme — À écrire — Durée de la pause (en ms)">
                                     
                                 </td>
                                 
@@ -286,54 +298,6 @@ fonction allumer
                     </table>
                 </div>
             
-            <details><summary>Un coup de pouce</summary><p>Ligne × colonne.</p></details>
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a01-q02-label">Question 2 — Écris l’algorithme complet en langage naturel.</h3>
-            
-
-            
-            
-                <textarea id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Combien d’éléments sont demandés ?</p></details>
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q03">
-            
-            
-            <h3 id="a01-q03-label">Question 3 — Pourquoi utiliser une fonction « allumer » ?</h3>
-            
-
-            
-            
-                <textarea id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Pense à « car » (réflexe n° 4).</p></details>
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q04">
-            
-            
-            <h3 id="a01-q04-label">Question 4 — Propose un test limite pour ce programme.</h3>
-            
-
-            
-            
-                <textarea id="a01-q04" data-answer-id="a01_q04" data-required="true" aria-labelledby="a01-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
             <details><summary>Un coup de pouce</summary><p>Bloc par bloc (réflexe n° 9).</p></details>
             
             
@@ -348,20 +312,27 @@ fonction allumer
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Je relis</h2>
+        <h2>Algorithme et fonction</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Relis-toi.</p>
-        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le programme est complet. Écris l’algorithme.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Partie 2 du dossier : tu vas écrire l’algorithme de l’éclairage et expliquer l’intérêt de la fonction « allumer ». On attend un algorithme complet et une explication.</p></div>
         
         
 
         
+<ol><li>Écris l’algorithme complet en langage naturel (R12).</li><li>Explique pourquoi « allumer » est une fonction.</li><li>Pense à ce que tu as fait en séance 29.</li></ol>
+    
+
+<p>Pourquoi une fonction ici ? L’allumage avec minuterie pourra servir pour d’autres détecteurs sans être réécrit.</p>
+    
+
+
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Correction faite en te relisant ?</h3>
+            <h3 id="a02-q01-label">Question 1 — Écris l’algorithme complet de l’éclairage du couloir en langage naturel.</h3>
             
 
             
@@ -369,7 +340,23 @@ fonction allumer
                 <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Combien d’éléments sont demandés ?</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a02-q02-label">Question 2 — D’après le document 1, pourquoi le programmeur a-t-il utilisé une fonction « allumer » ?</h3>
+            
+
+            
+            
+                <textarea id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Bloc par bloc (réflexe n° 9).</p></details>
             
             
         </div>
@@ -382,8 +369,66 @@ fonction allumer
     </article>
     
     <article class="cours-activite" id="a03" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Tester et relire</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Termine le dossier, puis relis-toi.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Partie 3 du dossier : tu vas proposer un test à la valeur limite, puis relire ton travail. On attend un test avec son résultat attendu et une correction précise.</p></div>
+        
+        
+
+        
+<ol><li>Propose un test à la valeur limite (R15).</li><li>Relis toutes tes réponses (R16).</li><li>Note une correction.</li></ol>
+    
+
+<p>Pourquoi la valeur limite ? Au brevet, on demande souvent « que se passe-t-il si la lumière vaut exactement 50 ? ».</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a03-q01-label">Question 1 — Propose un test à la valeur limite pour le programme de l’éclairage du couloir, avec le résultat attendu.</h3>
+            
+
+            
+            
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Bloc par bloc (réflexe n° 9).</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a03-q02-label">Question 2 — En relisant ton dossier sur l’éclairage du couloir, quelle correction as-tu faite ?</h3>
+            
+
+            
+            
+                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a02">← Étape précédente</a>
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
+        <h2>Pour aller plus loin</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
@@ -400,12 +445,12 @@ fonction allumer
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Que fait le programme ? Est-ce gênant ?</h3>
+            <h3 id="a04-q01-label">Question 1 — Que fait le programme ? Est-ce gênant ?</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Bloc par bloc (réflexe n° 9).</p></details>
@@ -415,12 +460,12 @@ fonction allumer
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a02">← Étape précédente</a>
-            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a04" data-course-step>
+    <article class="cours-activite" id="a05" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
@@ -435,12 +480,12 @@ fonction allumer
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Quel réflexe as-tu utilisé ? Exemple.</h3>
+            <h3 id="a05-q01-label">Question 1 — Quel réflexe (R12, R13, R15, R16) t’a le plus aidé dans ce dossier ? Donne un exemple de ta copie.</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème (réflexe n° 3).</p></details>
@@ -450,7 +495,7 @@ fonction allumer
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -495,7 +540,7 @@ fonction allumer
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

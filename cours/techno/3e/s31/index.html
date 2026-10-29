@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Concevoir</a></li><li><a href="#a02">Programmer et faire tester</a></li><li><a href="#a03">Défi — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Concevoir</a></li><li><a href="#a02">Programmer</a></li><li><a href="#a03">Faire tester et corriger</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -208,12 +208,18 @@
         <h2>Concevoir</h2>
         
         
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas concevoir un mini-jeu qui sensibilise à l’économie de l’eau, à partir de l’idée ci-dessous ou de la tienne. On attend un algorithme avec au moins un événement, une condition et une fonction.</p></div>
         
         
 
         
 <p>Idée : le joueur ferme des robinets qui fuient ; chaque robinet fermé fait gagner des litres économisés ; une fonction « nouvelleFuite » crée une fuite au hasard.</p>
+    
+
+<ol><li>Lis l’idée de jeu proposée (ou invente la tienne sur le même thème).</li><li>Écris les règles : ce que fait le joueur, ce qui fait gagner, ce qui fait perdre.</li><li>Transforme-les en algorithme avec au moins un événement (QUAND), une condition (SI) et une fonction.</li></ol>
+    
+
+<p>Pourquoi l’algorithme d’abord ? En séance 31 de 4e, tu as vu que programmer devient une simple traduction quand les règles sont écrites.</p>
     
 
 
@@ -222,7 +228,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Écris l’algorithme de ton jeu (au moins un événement, une condition, une fonction).</h3>
+            <h3 id="a01-q01-label">Question 1 — Écris l’algorithme de ton mini-jeu sur l’économie de l’eau (au moins un événement, une condition et une fonction).</h3>
             
 
             
@@ -244,14 +250,21 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Programmer et faire tester</h2>
+        <h2>Programmer</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Programme ton jeu, puis fais-le tester.</p>
-        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> L’algorithme est prêt. Programme-le.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas programmer ton mini-jeu dans MakeCode Arcade, en traduisant ton algorithme partie par partie. On attend la description de la fonction de ton jeu.</p></div>
         
         
 
         
+<ol><li>Ouvre MakeCode Arcade, nouveau projet 3e_S31_tonprenom.</li><li>Programme ton algorithme partie par partie.</li><li>Teste après chaque partie.</li></ol>
+    
+
+<p>Pourquoi tester après chaque partie ? Si un bug apparaît, tu sais qu’il vient de ce que tu viens d’ajouter.</p>
+    
+
+
         <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
 <p><a href="https://arcade.makecode.com/" target="_blank" rel="noopener noreferrer">MakeCode Arcade (gratuit, dans le navigateur)</a></p>
 
@@ -262,7 +275,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Décris ta fonction et un bug trouvé par ton testeur, avec sa correction.</h3>
+            <h3 id="a02-q01-label">Question 1 — Décris la fonction de ton mini-jeu : son nom, ce qu’elle fait et quand elle est appelée.</h3>
             
 
             
@@ -270,7 +283,7 @@
                 <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Attendu ou observé ?</p></details>
+            <details><summary>Un coup de pouce</summary><p>Combien d’éléments sont demandés ?</p></details>
             
             
         </div>
@@ -283,33 +296,41 @@
     </article>
     
     <article class="cours-activite" id="a03" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
-        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Faire tester et corriger</h2>
         
-        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Ton jeu fonctionne. Fais-le tester.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas faire tester ton mini-jeu par un camarade, puis corriger un bug avec la méthode de débogage de 4e. On attend un bug précis et sa correction.</p></div>
         
         
 
         
-<p>Le message de sensibilisation compte.</p>
+<ol><li>Échange ton poste avec un camarade pendant 5 minutes.</li><li>Il joue et note les bugs ou ce qui n’est pas clair.</li><li>Reprends ton poste et corrige avec la méthode de 4e : reproduire, isoler, modifier une chose, retester.</li></ol>
+    
+
+<p>Pourquoi un testeur ? Il joue autrement que toi et trouve ce que tu ne vois plus.</p>
     
 
 
-        
+        <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
+<p><a href="https://arcade.makecode.com/" target="_blank" rel="noopener noreferrer">MakeCode Arcade (gratuit, dans le navigateur)</a></p>
+
+
+</div></details>
+
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Quel message ton jeu affiche-t-il à la fin ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Décris un bug trouvé par ton testeur dans ton mini-jeu et la correction que tu as faite.</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Attendu ou observé ?</p></details>
             
             
         </div>
@@ -322,6 +343,45 @@
     </article>
     
     <article class="cours-activite" id="a04" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Pour aller plus loin</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        
+        
+        
+        
+
+        
+<p>Le message de sensibilisation compte autant que le jeu.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Quel message ton jeu affiche-t-il à la fin, et pourquoi ce message ?</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Pense à « car » (réflexe n° 4).</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a05" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
@@ -336,12 +396,12 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Réponds au problème du jour : comment as-tu conçu ton mini-jeu ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment as-tu conçu ton mini-jeu sur l’eau ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème (réflexe n° 3).</p></details>
@@ -351,7 +411,7 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -396,7 +456,7 @@
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">La grille de choix</a></li><li><a href="#a02">Argumenter</a></li><li><a href="#a03">Défi — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">La grille de choix</a></li><li><a href="#a02">Argumenter le choix</a></li><li><a href="#a03">Les limites du choix</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -208,7 +208,7 @@
         <h2>La grille de choix</h2>
         
         
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas départager les cuves A et B avec une grille de choix pondérée (documents 1 et 2). On attend le score de chaque cuve.</p></div>
         
         
 
@@ -216,7 +216,13 @@
 <div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Poids des critères décidés par la classe</caption><thead><tr><th scope="col">Critère</th><th scope="col">Poids</th></tr></thead><tbody><tr><td>Prix</td><td>3</td></tr><tr><td>Bilan carbone</td><td>3</td></tr><tr><td>Installation simple</td><td>2</td></tr><tr><td>Durée de vie</td><td>1</td></tr></tbody></table></div>
     
 
-<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 2 — Notes</caption><thead><tr><th scope="col">Critère</th><th scope="col">Cuve A</th><th scope="col">Cuve B</th></tr></thead><tbody><tr><td>Prix (note /5)</td><td>5</td><td>1</td></tr><tr><td>Bilan carbone (/5)</td><td>5</td><td>2</td></tr><tr><td>Installation (/5)</td><td>5</td><td>1</td></tr><tr><td>Durée de vie (/5)</td><td>3</td><td>5</td></tr></tbody></table></div>
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 2 — Notes des cuves</caption><thead><tr><th scope="col">Critère</th><th scope="col">Cuve A</th><th scope="col">Cuve B</th></tr></thead><tbody><tr><td>Prix (note /5)</td><td>5</td><td>1</td></tr><tr><td>Bilan carbone (/5)</td><td>5</td><td>2</td></tr><tr><td>Installation (/5)</td><td>5</td><td>1</td></tr><tr><td>Durée de vie (/5)</td><td>3</td><td>5</td></tr></tbody></table></div>
+    
+
+<ol><li>Lis les poids des critères décidés par la classe (document 1).</li><li>Lis les notes des cuves (document 2).</li><li>Pour chaque cuve : multiplie chaque note par son poids, puis additionne.</li></ol>
+    
+
+<p>Pourquoi des poids ? Tous les critères ne comptent pas autant : le prix et le bilan carbone comptent ici trois fois plus que la durée de vie.</p>
     
 
 
@@ -225,12 +231,12 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Calcule le score pondéré de la cuve A (note × poids, additionnés).</h3>
+            <h3 id="a01-q01-label">Question 1 — D’après les documents 1 et 2, calcule le score pondéré de la cuve A (note × poids, additionnés).</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label">
+                <input type="text" inputmode="decimal" id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><p>Unité : points</p>
 
                 
             <details><summary>Un coup de pouce</summary><p>Écris l’opération, calcule, vérifie l’unité.</p></details>
@@ -241,12 +247,12 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Calcule le score pondéré de la cuve B.</h3>
+            <h3 id="a01-q02-label">Question 2 — Calcule de même le score pondéré de la cuve B.</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label">
+                <input type="text" inputmode="decimal" id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><p>Unité : points</p>
 
                 
             <details><summary>Un coup de pouce</summary><p>Écris l’opération, calcule, vérifie l’unité.</p></details>
@@ -263,41 +269,32 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Argumenter</h2>
+        <h2>Argumenter le choix</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les scores sont calculés. Argumente le choix.</p>
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas rédiger l’argumentation du choix de la cuve, avec les chiffres des séances 18 à 20. On attend une argumentation en trois temps avec au moins deux chiffres.</p></div>
         
         
 
         
+<ol><li>Reprends les scores, le bilan carbone (séance 19) et les prix (séance 18).</li><li>Écris « J’affirme que… », puis « D’après… » avec au moins deux chiffres, puis « Donc… ».</li><li>Relis-toi.</li></ol>
+    
+
+<p>Pourquoi des chiffres ? Une argumentation chiffrée se vérifie : c’est ce qui la rend convaincante.</p>
+    
+
+
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Argumente le choix de la classe en trois temps (R19), avec au moins deux chiffres.</h3>
+            <h3 id="a02-q01-label">Question 1 — Argumente en trois temps (R19) le choix de la cuve pour le collège, avec au moins deux chiffres des séances 18 à 20.</h3>
             
 
             
             
                 <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Une phrase complète qui reprend les mots de la question.</p></details>
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a02-q02-label">Question 2 — Quelle limite a ce choix ? Comment le projet peut-il la compenser ?</h3>
-            
-
-            
-            
-                <textarea id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Une phrase complète qui reprend les mots de la question.</p></details>
@@ -313,8 +310,50 @@
     </article>
     
     <article class="cours-activite" id="a03" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Les limites du choix</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le choix est argumenté. A-t-il des faiblesses ?</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas repérer une limite de la cuve choisie et proposer comment le projet peut la compenser. On attend une limite et une compensation.</p></div>
+        
+        
+
+        
+<ol><li>Regarde les critères où la cuve choisie est moins bonne.</li><li>Imagine ce que le projet peut faire pour compenser.</li><li>Écris la limite et sa compensation.</li></ol>
+    
+
+<p>Pourquoi parler des limites ? Un choix honnête reconnaît ses faiblesses : c’est ce qu’attend un jury de soutenance.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a03-q01-label">Question 1 — Quelle limite a le choix de la cuve A ? Comment le projet peut-il la compenser ?</h3>
+            
+
+            
+            
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Une phrase complète qui reprend les mots de la question.</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a02">← Étape précédente</a>
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
+        <h2>Pour aller plus loin</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
@@ -331,12 +370,12 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Quels poids feraient gagner la cuve B ?</h3>
+            <h3 id="a04-q01-label">Question 1 — Quels poids feraient gagner la cuve B ?</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Une phrase complète qui reprend les mots de la question.</p></details>
@@ -346,12 +385,12 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a02">← Étape précédente</a>
-            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a04" data-course-step>
+    <article class="cours-activite" id="a05" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
@@ -366,12 +405,12 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Réponds au problème du jour : quelle solution choisir, et comment la justifier ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : quelle solution de cuve choisir pour le collège, et comment la justifier ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème et de « Ce que je retiens », avec un exemple de la séance.</p></details>
@@ -381,7 +420,7 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -426,7 +465,7 @@
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

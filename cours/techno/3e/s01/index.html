@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Le brevet</a></li><li><a href="#a02">Diagnostic</a></li><li><a href="#a03">Mes réflexes</a></li><li><a href="#a04">Défi — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Le brevet</a></li><li><a href="#a02">Diagnostic : une cuve connectée</a></li><li><a href="#a03">Mes réflexes</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -196,7 +196,7 @@
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En 5e et en 4e, tu as étudié les quatre maquettes, programmé des jeux et un objet communicant.</p><p>En 3e, tu vas concevoir un objet nouveau : la cuve d’eau intelligente. Et tu prépares le brevet.</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En 5e et en 4e, tu as étudié les quatre maquettes, programmé des jeux et un objet communicant.</p><p>En 3e, tu vas concevoir un objet nouveau : la cuve d’eau de pluie intelligente. Et tu prépares le brevet.</p></div></section>
     
     
     
@@ -221,12 +221,21 @@
         <h2>Le brevet</h2>
         
         
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas découvrir comment la technologie est évaluée au brevet, à partir de la présentation de l’épreuve ci-dessous. On attend la durée de la partie technologie et une explication du réflexe R10 (gérer son temps).</p></div>
         
         
 
         
-<p>Selon la note de cadrage relevée sur le site (à revérifier) : l’épreuve de sciences porte sur deux disciplines parmi physique-chimie, SVT et technologie, environ 30 minutes chacune, avec des points pour la maîtrise de la langue.</p>
+<p>Selon la note de cadrage (à revérifier) : l’épreuve de sciences porte sur deux disciplines parmi physique-chimie, SVT et technologie, environ 30 minutes chacune, avec des points pour la maîtrise de la langue.</p>
+    
+
+<blockquote>Réflexe brevet n° 10 : je gère mon temps : je survole tout le sujet, je commence par ce que je sais, je garde du temps pour relire.</blockquote>
+    
+
+<ol><li>Lis la présentation de l’épreuve ci-dessous.</li><li>Repère la durée de la partie technologie.</li><li>Relis le réflexe R10 (gérer son temps) et explique-le avec tes mots.</li></ol>
+    
+
+<p>Pourquoi en parler dès la rentrée ? Chaque séance de 3e t’entraîne à une partie de l’épreuve : savoir où l’on va aide à travailler.</p>
     
 
 
@@ -235,7 +244,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Combien de temps environ dure la partie de technologie au brevet (si elle est tirée) ?</h3>
+            <h3 id="a01-q01-label">Question 1 — D’après la présentation, combien de temps dure environ la partie de technologie au brevet (si elle est tirée au sort) ?</h3>
             
 
             
@@ -251,7 +260,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Pourquoi faut-il gérer son temps au brevet ? Utilise le réflexe R10.</h3>
+            <h3 id="a01-q02-label">Question 2 — Pourquoi faut-il gérer son temps pendant les 30 minutes de technologie au brevet ? Utilise le réflexe R10.</h3>
             
 
             
@@ -273,19 +282,28 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Diagnostic</h2>
+        <h2>Diagnostic : une cuve connectée</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu connais l’épreuve. Fais le point sur tes acquis.</p>
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas faire un diagnostic de tes acquis de 5e et de 4e sur un exemple : une cuve connectée (description et programme ci-dessous). On attend la fonction de chaque constituant et le programme traduit en français.</p></div>
         
         
 
         
+<blockquote>Une cuve connectée : un capteur de niveau mesure la hauteur d’eau ; une carte micro:bit décide ; une LED rouge prévient quand la cuve est presque pleine ; une pompe envoie l’eau vers l’arrosage.</blockquote>
+    
+
 <pre class="cours-code"><code>toujours
     si niveau d’eau &gt; 90 alors
         allumer la LED rouge
     sinon
         éteindre la LED rouge</code></pre>
+    
+
+<ol><li>Lis la description de la cuve connectée et son programme.</li><li>Range chaque constituant dans sa fonction (acquérir, traiter, communiquer, agir).</li><li>Traduis le programme en phrases (SI … ALORS … SINON).</li></ol>
+    
+
+<p>Pourquoi un diagnostic ? Tu vois ce que tu as retenu de la 5e et de la 4e, et ce qu’il faut revoir avant le brevet.</p>
     
 
 
@@ -294,7 +312,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Classe chaque constituant d’une cuve connectée.</h3>
+            <h3 id="a02-q01-label">Question 1 — Écris la fonction de chaque constituant de la cuve connectée décrite ci-dessus.</h3>
             
 
             
@@ -323,7 +341,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Diagnostic — Fonction — Capteur de niveau">
+                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Diagnostic : une cuve connectée — Fonction — Capteur de niveau">
                                     
                                 </td>
                                 
@@ -340,7 +358,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Diagnostic — Fonction — Carte micro:bit">
+                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Diagnostic : une cuve connectée — Fonction — Carte micro:bit">
                                     
                                 </td>
                                 
@@ -357,7 +375,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a02_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Diagnostic — Fonction — LED rouge">
+                                    <input type="text" data-answer-id="a02_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Diagnostic : une cuve connectée — Fonction — LED rouge">
                                     
                                 </td>
                                 
@@ -374,7 +392,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a02_q01_r3_c1" data-required="true" data-row="3" data-col="1" aria-label="Diagnostic — Fonction — Pompe">
+                                    <input type="text" data-answer-id="a02_q01_r3_c1" data-required="true" data-row="3" data-col="1" aria-label="Diagnostic : une cuve connectée — Fonction — Pompe">
                                     
                                 </td>
                                 
@@ -392,7 +410,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Traduis ce programme en algorithme en langage naturel.</h3>
+            <h3 id="a02-q02-label">Question 2 — Traduis le programme de la cuve connectée en algorithme, en langage naturel.</h3>
             
 
             
@@ -417,12 +435,18 @@
         <h2>Mes réflexes</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Fais le point sur tes réflexes.</p>
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas faire le point sur les seize réflexes brevet appris en 5e et en 4e, rappelés ci-dessous. On attend un réflexe maîtrisé et un réflexe à travailler, chacun avec une raison.</p></div>
         
         
 
         
 <p>Réflexes de 5e : R1 à R10 ; réflexes de 4e : R11 appareil + unité, R12 algorithme, R13 bloc manquant, R14 comparer avec chiffres, R15 protocole, R16 relire.</p>
+    
+
+<ol><li>Lis la liste des réflexes R1 à R16.</li><li>Choisis celui que tu utilises le mieux, avec un exemple vécu.</li><li>Choisis celui que tu dois travailler, et dis pourquoi.</li></ol>
+    
+
+<p>Pourquoi choisir un réflexe à travailler ? On progresse mieux sur un objectif précis que sur « tout revoir ».</p>
     
 
 
@@ -431,7 +455,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Quel réflexe utilises-tu le mieux, et lequel dois-tu travailler ? Pourquoi ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Parmi les réflexes R1 à R16, lequel utilises-tu le mieux, et lequel dois-tu travailler cette année ? Pourquoi ?</h3>
             
 
             
@@ -453,7 +477,7 @@
     
     <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
+        <h2>Pour aller plus loin</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
@@ -461,7 +485,7 @@
         
 
         
-<p>La cuve d’eau intelligente sera le projet de l’année.</p>
+<p>La cuve d’eau de pluie intelligente sera le projet de l’année.</p>
     
 
 
@@ -470,7 +494,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Imagine une fonction que la cuve devrait avoir.</h3>
+            <h3 id="a04-q01-label">Question 1 — Imagine une fonction que la cuve du collège devrait avoir.</h3>
             
 
             

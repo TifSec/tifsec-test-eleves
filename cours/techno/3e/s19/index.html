@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Les données</a></li><li><a href="#a02">Graphique et analyse</a></li><li><a href="#a03">Défi — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Les totaux</a></li><li><a href="#a02">La fonction SI</a></li><li><a href="#a03">Graphique et analyse</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -209,10 +209,10 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Les données</h2>
+        <h2>Les totaux</h2>
         
         
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas calculer dans Calc le bilan carbone total des cuves A et B, à partir des émissions de chaque étape de leur cycle de vie (tableau ci-dessous). On attend les deux totaux.</p></div>
         
         
 
@@ -220,7 +220,10 @@
 <div class="cours-table-wrapper"><table class="cours-table"><caption>Ce que tu dois obtenir dans Calc (valeurs inventées pour l’exercice)</caption><thead><tr><th scope="col"></th><th scope="col">A</th><th scope="col">B</th><th scope="col">C</th></tr></thead><tbody><tr><td>1</td><td>Étape</td><td>Cuve A (kg CO₂e)</td><td>Cuve B (kg CO₂e)</td></tr><tr><td>2</td><td>Fabrication</td><td>120</td><td>600</td></tr><tr><td>3</td><td>Transport</td><td>20</td><td>150</td></tr><tr><td>4</td><td>Utilisation (20 ans)</td><td>10</td><td>10</td></tr><tr><td>5</td><td>Fin de vie</td><td>15</td><td>40</td></tr><tr><td>6</td><td>Total</td><td></td><td></td></tr></tbody></table></div>
     
 
-<ol><li>Ouvre Calc, enregistre sous 3e_S19_groupe.ods, recopie le tableau.</li><li>En B6 : =SOMME(B2:B5) ; recopie vers C6.</li><li>En B8 : =SI(B6&lt;C6;&quot;Cuve A&quot;;&quot;Cuve B&quot;).</li></ol>
+<ol><li>Ouvre Calc et enregistre sous 3e_S19_groupe.ods.</li><li>Recopie le tableau ci-dessous (lignes 1 à 6, colonnes A à C).</li><li>En B6, écris =SOMME(B2:B5), puis recopie la formule en C6.</li></ol>
+    
+
+<p>Pourquoi SOMME ? Si une valeur change, le total se recalcule tout seul.</p>
     
 
 
@@ -229,7 +232,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Recopie les totaux.</h3>
+            <h3 id="a01-q01-label">Question 1 — Recopie les totaux calculés par Calc pour le bilan carbone des cuves A et B.</h3>
             
 
             
@@ -258,7 +261,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Les données — Total (kg CO₂e) — A">
+                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Les totaux — Total (kg CO₂e) — A">
                                     
                                 </td>
                                 
@@ -275,7 +278,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Les données — Total (kg CO₂e) — B">
+                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Les totaux — Total (kg CO₂e) — B">
                                     
                                 </td>
                                 
@@ -285,22 +288,6 @@
                     </table>
                 </div>
             
-            <details><summary>Un coup de pouce</summary><p>Une case à la fois : la ligne croise la colonne (réflexe n° 6).</p></details>
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a01-q02-label">Question 2 — Écris la formule de B8 et ce qu’elle affiche.</h3>
-            
-
-            
-            
-                <textarea id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
             <details><summary>Un coup de pouce</summary><p>Une formule commence par « = », puis la fonction et la plage (ex. =MOYENNE(B2:B10)).</p></details>
             
             
@@ -315,15 +302,18 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Graphique et analyse</h2>
+        <h2>La fonction SI</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les totaux sont calculés. Un graphique aide à comparer.</p>
-        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les totaux sont calculés. Fais désigner la meilleure cuve par Calc.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas utiliser la fonction SI de Calc pour que la feuille désigne seule la cuve qui a le plus petit bilan carbone. On attend la formule et son résultat.</p></div>
         
         
 
         
-<ol><li>Sélectionne A1:C5, Insertion &gt; Diagramme &gt; Colonnes.</li><li>Titre « Bilan carbone par étape » ; axe Y « kg CO₂e ».</li></ol>
+<ol><li>En A8, écris « La meilleure cuve : ».</li><li>En B8, écris =SI(B6&lt;C6;&quot;Cuve A&quot;;&quot;Cuve B&quot;).</li><li>Change une valeur de la cuve B pour la rendre meilleure, observe B8, puis remets la valeur.</li></ol>
+    
+
+<p>Pourquoi SI ? La feuille décide toute seule : si les données changent, la conclusion change aussi.</p>
     
 
 
@@ -332,28 +322,12 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — D’après le graphique, quelle étape pèse le plus pour chaque cuve ? Pourquoi ?</h3>
+            <h3 id="a02-q01-label">Question 1 — Écris la formule de la cellule B8 de ta feuille de bilan carbone et ce qu’elle affiche.</h3>
             
 
             
             
                 <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Une formule commence par « = », puis la fonction et la plage (ex. =MOYENNE(B2:B10)).</p></details>
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a02-q02-label">Question 2 — La cuve B dure 50 ans au lieu de 20. Faut-il en tenir compte ? Calcule le bilan par année.</h3>
-            
-
-            
-            
-                <textarea id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Une formule commence par « = », puis la fonction et la plage (ex. =MOYENNE(B2:B10)).</p></details>
@@ -369,8 +343,66 @@
     </article>
     
     <article class="cours-activite" id="a03" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Graphique et analyse</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Calc a choisi. Un graphique aide à comprendre pourquoi.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas tracer le graphique du bilan carbone par étape et l’analyser, puis tenir compte de la durée de vie des cuves. On attend l’étape la plus lourde, expliquée, et un calcul par année.</p></div>
+        
+        
+
+        
+<ol><li>Sélectionne A1:C5, puis Insertion &gt; Diagramme &gt; Colonnes.</li><li>Titre « Bilan carbone par étape » ; axe Y « kg CO₂e ».</li><li>Repère l’étape la plus haute pour chaque cuve.</li></ol>
+    
+
+<p>Pourquoi un graphique ? Il montre d’un coup d’œil quelle étape pèse le plus : c’est là qu’il faut agir.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a03-q01-label">Question 1 — D’après ton graphique, quelle étape du cycle de vie pèse le plus pour chaque cuve ? Pourquoi ?</h3>
+            
+
+            
+            
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Une formule commence par « = », puis la fonction et la plage (ex. =MOYENNE(B2:B10)).</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a03-q02-label">Question 2 — La cuve B dure 50 ans au lieu de 20. Faut-il en tenir compte ? Calcule le bilan carbone par année pour chaque cuve.</h3>
+            
+
+            
+            
+                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Une formule commence par « = », puis la fonction et la plage (ex. =MOYENNE(B2:B10)).</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a02">← Étape précédente</a>
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
+        <h2>Pour aller plus loin</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
@@ -387,12 +419,12 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Écris une formule qui compte combien d’étapes de la cuve B dépassent 100 kg.</h3>
+            <h3 id="a04-q01-label">Question 1 — Écris une formule qui compte combien d’étapes de la cuve B dépassent 100 kg.</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Une formule commence par « = », puis la fonction et la plage (ex. =MOYENNE(B2:B10)).</p></details>
@@ -402,12 +434,12 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a02">← Étape précédente</a>
-            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a04" data-course-step>
+    <article class="cours-activite" id="a05" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
@@ -422,12 +454,12 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Réponds au problème du jour : comment comparer l’impact carbone de deux cuves avec un tableur ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment comparer l’impact carbone de deux cuves avec un tableur ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème et de « Ce que je retiens », avec un exemple de la séance.</p></details>
@@ -437,7 +469,7 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -482,7 +514,7 @@
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

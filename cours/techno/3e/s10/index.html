@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Le binaire</a></li><li><a href="#a02">Le code ASCII</a></li><li><a href="#a03">Défi — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Du binaire au décimal</a></li><li><a href="#a02">Du décimal au binaire</a></li><li><a href="#a03">Le code ASCII</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -207,15 +207,21 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Le binaire</h2>
+        <h2>Du binaire au décimal</h2>
         
         
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas apprendre à lire un nombre écrit en binaire (avec des 0 et des 1), à l’aide de l’exemple expliqué. On attend deux nombres binaires convertis en décimal.</p></div>
         
         
 
         
 <div class="cours-table-wrapper"><table class="cours-table"><caption>Exemple expliqué : 00001010 = 8 + 2 = 10</caption><thead><tr><th scope="col">128</th><th scope="col">64</th><th scope="col">32</th><th scope="col">16</th><th scope="col">8</th><th scope="col">4</th><th scope="col">2</th><th scope="col">1</th></tr></thead><tbody><tr><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td></tr></tbody></table></div>
+    
+
+<ol><li>Lis l’exemple expliqué : chaque case a une valeur (128, 64, … 1).</li><li>Pour un nombre binaire, repère les cases qui contiennent 1.</li><li>Additionne leurs valeurs.</li></ol>
+    
+
+<p>Pourquoi des 0 et des 1 ? Dans un ordinateur, un fil est soit sous tension, soit non : deux états seulement, qu’on note 1 et 0.</p>
     
 
 
@@ -224,7 +230,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Que vaut 00000101 en décimal ?</h3>
+            <h3 id="a01-q01-label">Question 1 — Que vaut le nombre binaire 00000101 en décimal ?</h3>
             
 
             
@@ -240,7 +246,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Que vaut 00001111 en décimal ?</h3>
+            <h3 id="a01-q02-label">Question 2 — Que vaut le nombre binaire 00001111 en décimal ?</h3>
             
 
             
@@ -249,22 +255,6 @@
 
                 
             <details><summary>Un coup de pouce</summary><p>Écris l’opération, calcule, vérifie l’unité.</p></details>
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q03">
-            
-            
-            <h3 id="a01-q03-label">Question 3 — Écris 12 en binaire sur 8 bits et explique ta méthode.</h3>
-            
-
-            
-            
-                <textarea id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Une idée + « car » + une raison tirée de la séance.</p></details>
             
             
         </div>
@@ -278,15 +268,18 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Le code ASCII</h2>
+        <h2>Du décimal au binaire</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les nombres sont codés. Et les lettres ?</p>
-        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais lire le binaire. Fais l’inverse.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas écrire un nombre décimal (12) en binaire, avec la méthode des plus grandes valeurs. On attend le nombre sur 8 bits et la méthode.</p></div>
         
         
 
         
-<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Extrait de la table ASCII</caption><thead><tr><th scope="col">Caractère</th><th scope="col">A</th><th scope="col">B</th><th scope="col">C</th><th scope="col">E</th><th scope="col">O</th><th scope="col">T</th></tr></thead><tbody><tr><td>Code</td><td>65</td><td>66</td><td>67</td><td>69</td><td>79</td><td>84</td></tr></tbody></table></div>
+<ol><li>Prends le nombre 12.</li><li>Cherche la plus grande valeur du tableau qui tient dans 12 (8) : mets 1 dans sa case.</li><li>Recommence avec le reste (12 − 8 = 4).</li><li>Mets 0 dans les autres cases.</li></ol>
+    
+
+<p>Pourquoi commencer par la plus grande valeur ? Comme pour rendre la monnaie : on prend d’abord les gros billets.</p>
     
 
 
@@ -295,7 +288,52 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Code le mot « EAU » en ASCII.</h3>
+            <h3 id="a02-q01-label">Question 1 — Écris le nombre 12 en binaire sur 8 bits et explique ta méthode.</h3>
+            
+
+            
+            
+                <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Une idée + « car » + une raison tirée de la séance.</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a01">← Étape précédente</a>
+            <a class="course-mission-next" href="#a03">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a03" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Le code ASCII</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les nombres sont codés. Et les lettres ?</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas coder et décoder des mots avec le code ASCII, à partir de l’extrait de table du document 1. On attend un mot codé et un message décodé.</p></div>
+        
+        
+
+        
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Extrait de la table ASCII</caption><thead><tr><th scope="col">Caractère</th><th scope="col">A</th><th scope="col">B</th><th scope="col">C</th><th scope="col">E</th><th scope="col">O</th><th scope="col">T</th></tr></thead><tbody><tr><td>Code</td><td>65</td><td>66</td><td>67</td><td>69</td><td>79</td><td>84</td></tr></tbody></table></div>
+    
+
+<ol><li>Lis le document 1 : le code de quelques lettres.</li><li>Pour coder un mot, remplace chaque lettre par son code.</li><li>Pour décoder, fais l’inverse.</li></ol>
+    
+
+<p>Pourquoi un code commun ? Tous les ordinateurs utilisent la même table : un texte écrit sur l’un se lit sur l’autre.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a03-q01-label">Question 1 — Code le mot « EAU » avec la table ASCII du document 1.</h3>
             
 
             
@@ -324,7 +362,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Le code ASCII — Code — E">
+                                    <input type="text" data-answer-id="a03_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Le code ASCII — Code — E">
                                     
                                 </td>
                                 
@@ -341,7 +379,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Le code ASCII — Code — A">
+                                    <input type="text" data-answer-id="a03_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Le code ASCII — Code — A">
                                     
                                 </td>
                                 
@@ -358,7 +396,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a02_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Le code ASCII — Code — U (code 85)">
+                                    <input type="text" data-answer-id="a03_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Le code ASCII — Code — U (code 85)">
                                     
                                 </td>
                                 
@@ -376,12 +414,12 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Décode le message 84 79 84 79 avec le document 1.</h3>
+            <h3 id="a03-q02-label">Question 2 — Décode le message 84 79 84 79 avec le document 1.</h3>
             
 
             
             
-                <textarea id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Une phrase complète qui reprend les mots de la question.</p></details>
@@ -391,14 +429,14 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a01">← Étape précédente</a>
-            <a class="course-mission-next" href="#a03">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+            <a class="course-mission-back" href="#a02">← Étape précédente</a>
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a03" data-course-step>
+    <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
+        <h2>Pour aller plus loin</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
@@ -415,12 +453,12 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Combien de valeurs différentes un octet peut-il représenter ?</h3>
+            <h3 id="a04-q01-label">Question 1 — Combien de valeurs différentes un octet peut-il représenter ?</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Une phrase complète qui reprend les mots de la question.</p></details>
@@ -430,12 +468,12 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a02">← Étape précédente</a>
-            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a04" data-course-step>
+    <article class="cours-activite" id="a05" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
@@ -450,12 +488,12 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Réponds au problème du jour : comment un ordinateur représente-t-il nombres et lettres avec des 0 et des 1 ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment un ordinateur représente-t-il nombres et lettres avec des 0 et des 1 ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème et de « Ce que je retiens », avec un exemple de la séance.</p></details>
@@ -465,7 +503,7 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -510,7 +548,7 @@
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

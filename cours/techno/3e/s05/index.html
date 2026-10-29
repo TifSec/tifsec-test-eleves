@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Entraîner</a></li><li><a href="#a02">Tester</a></li><li><a href="#a03">Défi — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Entraîner</a></li><li><a href="#a02">Tester</a></li><li><a href="#a03">Expliquer une erreur</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -210,15 +210,15 @@
         <h2>Entraîner</h2>
         
         
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas entraîner une intelligence artificielle à reconnaître de l’eau claire et de l’eau trouble, dans Teachable Machine, avec les photos fournies par le professeur. On attend un modèle entraîné et l’explication du rôle des exemples.</p></div>
         
         
 
         
-<ol><li>Ouvre Teachable Machine &gt; Projet d’image standard.</li><li>Classe 1 : « eau claire » ; ajoute les 20 photos fournies.</li><li>Classe 2 : « eau trouble » ; ajoute les 20 photos fournies.</li><li>Clique sur « Entraîner le modèle ».</li></ol>
+<ol><li>Ouvre Teachable Machine &gt; Projet d’image standard.</li><li>Classe 1 : « eau claire » ; ajoute les 20 photos fournies par le professeur.</li><li>Classe 2 : « eau trouble » ; ajoute les 20 photos fournies.</li><li>Clique sur « Entraîner le modèle ».</li></ol>
     
 
-<p>Exemple expliqué : comme un enfant à qui on montre beaucoup de chats et de chiens, la machine compare les exemples ; plus il y en a, et plus ils sont variés, mieux elle classe.</p>
+<p>Pourquoi des exemples ? Comme un enfant à qui on montre beaucoup de chats et de chiens, la machine compare les exemples ; plus il y en a, et plus ils sont variés, mieux elle classe.</p>
     
 
 
@@ -232,7 +232,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Que donne-t-on à la machine pour qu’elle apprenne ?</h3>
+            <h3 id="a01-q01-label">Question 1 — Dans Teachable Machine, que donnes-tu à la machine pour qu’elle apprenne à reconnaître l’eau claire ?</h3>
             
 
             
@@ -248,7 +248,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Pourquoi faut-il beaucoup d’exemples variés ?</h3>
+            <h3 id="a01-q02-label">Question 2 — Pourquoi faut-il beaucoup de photos variées d’eau claire et d’eau trouble pour entraîner le modèle ?</h3>
             
 
             
@@ -273,12 +273,15 @@
         <h2>Tester</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le modèle est entraîné. Est-il fiable ?</p>
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas tester le modèle que tu as entraîné sur des photos qu’il n’a jamais vues. On attend un tableau des réponses du modèle, avec les pourcentages de confiance.</p></div>
         
         
 
         
-<p>Teste le modèle avec les 6 photos de test fournies (jamais vues pendant l’entraînement).</p>
+<ol><li>Clique sur « Aperçu » et charge les 6 photos de test fournies (jamais vues pendant l’entraînement).</li><li>Pour chacune, note la réponse attendue et la réponse du modèle avec son pourcentage.</li><li>Compte les erreurs.</li></ol>
+    
+
+<p>Pourquoi des photos jamais vues ? Une IA doit marcher sur des cas nouveaux : la tester sur ses propres exemples ne prouverait rien.</p>
     
 
 
@@ -292,7 +295,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Note les résultats.</h3>
+            <h3 id="a02-q01-label">Question 1 — Teste ton modèle avec les photos de test et note les résultats.</h3>
             
 
             
@@ -385,7 +388,7 @@
                     </table>
                 </div>
             
-            <details><summary>Un coup de pouce</summary><p>Une case à la fois : la ligne croise la colonne (réflexe n° 6).</p></details>
+            <details><summary>Un coup de pouce</summary><p>Action → résultat attendu → résultat observé ; une seule chose à la fois.</p></details>
             
             
         </div>
@@ -398,38 +401,36 @@
     </article>
     
     <article class="cours-activite" id="a03" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
-        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Expliquer une erreur</h2>
         
-        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le modèle n’est pas parfait. Comprends pourquoi.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas expliquer une erreur ou une hésitation de ton modèle et proposer comment mieux l’entraîner. On attend une cause plausible et une amélioration.</p></div>
         
         
 
         
-<p>Teachable Machine affiche un pourcentage de confiance.</p>
+<ol><li>Choisis une photo où le modèle hésite ou se trompe (ou imagine-la).</li><li>Cherche ce qui la rend différente des photos d’entraînement : éclairage, verre, fond…</li><li>Propose une amélioration de l’entraînement.</li></ol>
+    
+
+<p>Pourquoi chercher la cause ? Une IA se trompe pour une raison : le plus souvent, ses exemples ne couvraient pas ce cas.</p>
     
 
 
-        <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
-<p><a href="https://teachablemachine.withgoogle.com/" target="_blank" rel="noopener noreferrer">Teachable Machine (Google) — apprentissage automatique dans le navigateur</a></p>
-
-
-</div></details>
-
+        
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Que signifie « 60 % claire » ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Ton modèle a hésité ou s’est trompé sur une photo. Propose une explication et une amélioration de l’entraînement.</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Une phrase complète qui reprend les mots de la question.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Une idée réaliste + « Cela permet de… ».</p></details>
             
             
         </div>
@@ -442,6 +443,45 @@
     </article>
     
     <article class="cours-activite" id="a04" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Pour aller plus loin</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        
+        
+        
+        
+
+        
+<p>Teachable Machine affiche un pourcentage de confiance.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Que signifie « 60 % claire » pour une photo ?</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Une phrase complète qui reprend les mots de la question.</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a05" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
@@ -456,12 +496,12 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Réponds au problème du jour : comment une IA apprend-elle à reconnaître des images ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment une IA apprend-elle à reconnaître des images ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème et de « Ce que je retiens », avec un exemple de la séance.</p></details>
@@ -471,7 +511,7 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -516,7 +556,7 @@
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

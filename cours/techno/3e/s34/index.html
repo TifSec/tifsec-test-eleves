@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">D’où vient l’impact ?</a></li><li><a href="#a02">Mes usages</a></li><li><a href="#a03">Défi — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">D’où vient l’impact ?</a></li><li><a href="#a02">La vidéo</a></li><li><a href="#a03">Mes gestes de sobriété</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -210,12 +210,18 @@
         <h2>D’où vient l’impact ?</h2>
         
         
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas découvrir d’où vient l’impact environnemental du numérique, à partir des ordres de grandeur du document 1. On attend la source principale et le lien avec la durée de vie des appareils.</p></div>
         
         
 
         
 <div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Ordres de grandeur arrondis (études ADEME-Arcep)</caption><thead><tr><th scope="col">Source</th><th scope="col">Part de l’impact du numérique en France (ordre de grandeur)</th></tr></thead><tbody><tr><td>Fabrication des terminaux (téléphones, ordinateurs, TV)</td><td>Environ 3/4</td></tr><tr><td>Centres de données</td><td>Environ 1/10 à 1/5</td></tr><tr><td>Réseaux</td><td>Environ 1/10</td></tr></tbody></table></div>
+    
+
+<ol><li>Lis le document 1 : trois sources d’impact du numérique.</li><li>Repère la plus importante.</li><li>Fais le lien avec la durée de vie de ton téléphone.</li></ol>
+    
+
+<p>Pourquoi la fabrication pèse-t-elle autant ? Extraire les métaux et fabriquer les puces demande énormément d’énergie et de matières, avant même la première utilisation.</p>
     
 
 
@@ -224,7 +230,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — D’après le document 1, quelle est la principale source d’impact ?</h3>
+            <h3 id="a01-q01-label">Question 1 — D’après le document 1, quelle est la principale source d’impact du numérique ?</h3>
             
 
             
@@ -240,7 +246,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Pourquoi garder son téléphone deux ans de plus réduit-il plus l’impact que de supprimer quelques e-mails ?</h3>
+            <h3 id="a01-q02-label">Question 2 — D’après le document 1, pourquoi garder son téléphone deux ans de plus réduit-il plus l’impact que de supprimer quelques e-mails ?</h3>
             
 
             
@@ -248,7 +254,7 @@
                 <textarea id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Pense à « car » (réflexe n° 4).</p></details>
+            <details><summary>Un coup de pouce</summary><p>« D’après le document… » (réflexe n° 2).</p></details>
             
             
         </div>
@@ -262,15 +268,21 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Mes usages</h2>
+        <h2>La vidéo</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu connais les sources. Regarde tes usages.</p>
-        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu connais les sources. Regarde un de tes usages.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas chiffrer l’effet d’un geste simple : regarder ses vidéos en définition standard. On attend un calcul de données économisées, en Go.</p></div>
         
         
 
         
 <p>Ordre de grandeur : une heure de vidéo en haute définition transfère environ 3 Go ; en définition standard, environ 1 Go.</p>
+    
+
+<ol><li>Lis l’ordre de grandeur ci-dessous : données transférées par heure de vidéo.</li><li>Calcule la différence entre haute définition et définition standard pour une heure.</li><li>Multiplie par 10 heures.</li></ol>
+    
+
+<p>Pourquoi la vidéo ? C’est l’usage qui transfère le plus de données : réseaux et centres de données travaillent pour elle.</p>
     
 
 
@@ -292,15 +304,41 @@
             
         </div>
         
-        <div class="cours-question" data-question="q02">
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a01">← Étape précédente</a>
+            <a class="course-mission-next" href="#a03">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a03" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Mes gestes de sobriété</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as chiffré un geste. Classe maintenant tous tes gestes.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas proposer et classer trois gestes de sobriété numérique, du plus efficace au moins efficace, à l’aide du document 1. On attend un classement justifié.</p></div>
+        
+        
+
+        
+<ol><li>Liste trois gestes de sobriété numérique que tu pourrais faire.</li><li>Classe-les selon la source d’impact qu’ils réduisent (document 1).</li><li>Justifie le geste le plus efficace.</li></ol>
+    
+
+<p>Pourquoi classer ? Tous les gestes n’ont pas le même effet : mieux vaut commencer par celui qui compte le plus.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            
-            <h3 id="a02-q02-label">Question 2 — Propose trois gestes de sobriété numérique et classe-les du plus efficace au moins efficace. Justifie le premier.</h3>
+            <h3 id="a03-q01-label">Question 1 — Propose trois gestes de sobriété numérique et classe-les du plus efficace au moins efficace. Justifie le premier avec le document 1.</h3>
             
 
             
             
-                <textarea id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Pense à « car » (réflexe n° 4).</p></details>
@@ -310,14 +348,14 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a01">← Étape précédente</a>
-            <a class="course-mission-next" href="#a03">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+            <a class="course-mission-back" href="#a02">← Étape précédente</a>
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a03" data-course-step>
+    <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
+        <h2>Pour aller plus loin</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
@@ -334,12 +372,12 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Pourquoi un téléphone reconditionné a-t-il un impact plus faible qu’un neuf ?</h3>
+            <h3 id="a04-q01-label">Question 1 — Pourquoi un téléphone reconditionné a-t-il un impact plus faible qu’un neuf ?</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Bloc par bloc (réflexe n° 9).</p></details>
@@ -349,12 +387,12 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a02">← Étape précédente</a>
-            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a04" data-course-step>
+    <article class="cours-activite" id="a05" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
@@ -369,12 +407,12 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Réponds au problème du jour : quel est l’impact de nos usages numériques, et comment le réduire ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : quel est l’impact de nos usages numériques, et comment le réduire ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème (réflexe n° 3).</p></details>
@@ -384,7 +422,7 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -429,7 +467,7 @@
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

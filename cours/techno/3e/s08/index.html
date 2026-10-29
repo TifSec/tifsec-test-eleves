@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Le chemin</a></li><li><a href="#a02">Les paquets</a></li><li><a href="#a03">Un réseau de réseaux</a></li><li><a href="#a04">Défi — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Le chemin</a></li><li><a href="#a02">Les paquets</a></li><li><a href="#a03">Un réseau de réseaux</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -210,12 +210,18 @@
         <h2>Le chemin</h2>
         
         
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas suivre le trajet d’une photo envoyée par Léa à Tom sur une messagerie, à partir de l’exemple expliqué. On attend les étapes du trajet remises dans l’ordre.</p></div>
         
         
 
         
 <p>Exemple expliqué : Léa envoie une photo depuis son téléphone en Wi-Fi. Photo → box de Léa → réseau de son fournisseur → routeurs d’Internet → serveur de l’application de messagerie → réseau mobile de Tom → téléphone de Tom.</p>
+    
+
+<ol><li>Lis l’exemple expliqué : la photo de Léa.</li><li>Repère chaque équipement traversé, dans l’ordre.</li><li>Numérote les étapes du tableau de 1 à 5.</li></ol>
+    
+
+<p>Pourquoi passer par un serveur ? Le message n’est pas envoyé directement au téléphone de Tom : le serveur de l’application le garde et le transmet quand Tom est connecté.</p>
     
 
 
@@ -224,7 +230,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Remets dans l’ordre le trajet d’un message (1 à 5).</h3>
+            <h3 id="a01-q01-label">Question 1 — Remets dans l’ordre (1 à 5) le trajet d’un message envoyé par messagerie.</h3>
             
 
             
@@ -348,12 +354,18 @@
         <h2>Les paquets</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu connais le chemin. Le message voyage-t-il en un seul morceau ?</p>
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas comprendre pourquoi un message est découpé en paquets numérotés, à partir du texte ci-dessous. On attend le rôle du numéro et ce qui se passe quand un paquet se perd.</p></div>
         
         
 
         
 <p>Une photo de 3 Mo est découpée en environ 2 000 paquets. Chaque paquet contient une partie de la photo, l’adresse de destination et son numéro.</p>
+    
+
+<ol><li>Lis le texte sur les paquets.</li><li>Imagine 2 000 morceaux qui prennent des routes différentes.</li><li>Demande-toi comment les remettre dans l’ordre, et que faire si un morceau se perd.</li></ol>
+    
+
+<p>Pourquoi découper ? Un gros fichier découpé passe par plusieurs chemins en même temps, et une erreur oblige à renvoyer un seul petit morceau, pas tout.</p>
     
 
 
@@ -362,7 +374,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Pourquoi chaque paquet porte-t-il un numéro ?</h3>
+            <h3 id="a02-q01-label">Question 1 — La photo de Léa est découpée en paquets. Pourquoi chaque paquet porte-t-il un numéro ?</h3>
             
 
             
@@ -378,7 +390,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Un paquet se perd en route. Que se passe-t-il ?</h3>
+            <h3 id="a02-q02-label">Question 2 — Un paquet de la photo se perd en route. Que se passe-t-il ?</h3>
             
 
             
@@ -403,11 +415,18 @@
         <h2>Un réseau de réseaux</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tous ces réseaux sont reliés.</p>
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas expliquer l’expression « réseau de réseaux » en t’appuyant sur le réseau du collège étudié en 4e. On attend une explication avec le rôle des routeurs et l’exemple du collège.</p></div>
         
         
 
         
+<ol><li>Rappelle-toi le réseau du collège (4e) : ordinateurs, commutateur, routeur.</li><li>Imagine des milliers de réseaux comme lui.</li><li>Explique ce qui les relie.</li></ol>
+    
+
+<p>Pourquoi « réseau de réseaux » ? Personne ne possède Internet en entier : chaque réseau garde son organisation et se relie aux autres par des routeurs.</p>
+    
+
+
         
         
         <div class="cours-question" data-question="q01">
@@ -435,7 +454,7 @@
     
     <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
+        <h2>Pour aller plus loin</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
@@ -487,7 +506,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : par où passe un message envoyé à un ami loin ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : par où passe un message envoyé à un ami loin de chez toi ?</h3>
             
 
             

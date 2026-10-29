@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Quelles données ?</a></li><li><a href="#a02">La chaîne complète</a></li><li><a href="#a03">Données et décisions</a></li><li><a href="#a04">Défi — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Quelles données ?</a></li><li><a href="#a02">La chaîne complète</a></li><li><a href="#a03">Données et décisions</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -208,17 +208,24 @@
         <h2>Quelles données ?</h2>
         
         
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas choisir les capteurs de la cuve à partir des données qu’elle doit acquérir, en t’appuyant sur ceux de nos maquettes. On attend le capteur de chaque donnée.</p></div>
         
         
 
         
+<ol><li>Relis le cahier des charges : ce que la cuve doit surveiller.</li><li>Pour chaque donnée, rappelle-toi les capteurs vus sur nos maquettes (ultrasons du monte-charge, boutons…).</li><li>Choisis le capteur.</li></ol>
+    
+
+<p>Pourquoi partir des données ? On ne choisit pas un capteur « parce qu’il existe » : on le choisit pour une information dont on a besoin.</p>
+    
+
+
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Pour chaque donnée, choisis le capteur.</h3>
+            <h3 id="a01-q01-label">Question 1 — Pour chaque donnée que la cuve doit acquérir, choisis le capteur.</h3>
             
 
             
@@ -291,7 +298,7 @@
                     </table>
                 </div>
             
-            <details><summary>Un coup de pouce</summary><p>Ligne × colonne.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Capteur ou bouton → acquérir ; carte → traiter ; écran, voyant → communiquer.</p></details>
             
             
         </div>
@@ -308,17 +315,24 @@
         <h2>La chaîne complète</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les capteurs sont choisis. Construis toute la chaîne.</p>
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas construire la chaîne d’information complète de la cuve, de ses capteurs jusqu’à l’alerte radio. On attend chaque constituant dans la bonne colonne.</p></div>
         
         
 
         
+<ol><li>Range les capteurs dans « Acquérir ».</li><li>Écris la carte dans « Traiter ».</li><li>Liste dans « Communiquer » tout ce qui informe : écran, LED, buzzer, radio.</li></ol>
+    
+
+<p>Pourquoi la radio dans « communiquer » ? Elle ne mesure rien et ne décide rien : elle transmet l’information à une autre carte.</p>
+    
+
+
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Construis la chaîne d’information de la cuve.</h3>
+            <h3 id="a02-q01-label">Question 1 — Construis la chaîne d’information de la cuve du collège.</h3>
             
 
             
@@ -373,7 +387,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Pourquoi la radio fait-elle partie de « communiquer » ?</h3>
+            <h3 id="a02-q02-label">Question 2 — Pourquoi la radio fait-elle partie de « communiquer » dans la chaîne d’information de la cuve ?</h3>
             
 
             
@@ -398,17 +412,24 @@
         <h2>Données et décisions</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Que fera la carte de ces données ?</p>
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas imaginer les décisions que la carte de la cuve prendra à partir des données de ses capteurs. On attend deux décisions écrites avec SI … ALORS.</p></div>
         
         
 
         
+<ol><li>Imagine ce que la carte doit faire de chaque donnée.</li><li>Écris chaque décision sous la forme SI … ALORS ….</li><li>Pense à la sécurité de la pompe (cuve vide).</li></ol>
+    
+
+<p>Pourquoi des décisions ? Ce sont elles qui rendent la cuve « intelligente » : elles deviendront l’algorithme de la séance 35.</p>
+    
+
+
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Donne deux décisions que la carte devra prendre à partir des données.</h3>
+            <h3 id="a03-q01-label">Question 1 — Donne deux décisions que la carte de la cuve devra prendre à partir des données de ses capteurs (SI … ALORS …).</h3>
             
 
             
@@ -416,7 +437,7 @@
                 <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Combien d’éléments sont demandés ?</p></details>
+            <details><summary>Un coup de pouce</summary><p>Bloc par bloc (réflexe n° 9).</p></details>
             
             
         </div>
@@ -430,7 +451,7 @@
     
     <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
+        <h2>Pour aller plus loin</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
@@ -447,7 +468,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Quel constituant faudrait-il ajouter ?</h3>
+            <h3 id="a04-q01-label">Question 1 — Quel constituant faudrait-il ajouter à la cuve ?</h3>
             
 
             
@@ -482,7 +503,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : quelle chaîne d’information pour la cuve ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : quelle chaîne d’information permettra à la cuve de surveiller l’eau et d’alerter ?</h3>
             
 
             
