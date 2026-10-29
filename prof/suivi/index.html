@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="supabase-url" content="https://evbfflwfyiitrkgzjhwt.supabase.co">
     <meta name="supabase-publishable-key" content="sb_publishable__aRCAzLQv4TmSL0Z1yvcZQ_Nbwd2Ah6">
+    <meta name="tifsec-bonus-defi" content="5">
 
     <meta name="description" content="Cours de Technologie, TIM et Mathématiques">
 
@@ -147,6 +148,12 @@
                 <p id="copy-grade-total" role="status" aria-live="polite"></p>
                 <p id="copy-grade-status" role="status" aria-live="polite"></p>
                 <button type="button" id="copy-grade-validate" disabled>Valider la correction et verrouiller la copie</button>
+            </section>
+            <section id="tracking-challenge" class="copy-correction" hidden aria-labelledby="tracking-challenge-title">
+                <h3 id="tracking-challenge-title">Petit défi (hors note)</h3>
+                <p>Le défi ne compte pas dans la note sur 20. S’il est réussi, chaque participant de cette copie gagne 5 XP, une seule fois par séance.</p>
+                <label><input type="checkbox" id="tracking-challenge-award"> Défi réussi : accorder 5 XP</label>
+                <p id="tracking-challenge-status" role="status" aria-live="polite"></p>
             </section>
             <fieldset id="tracking-correction" disabled>
                 <legend>Retour à l’élève ou au groupe</legend>
