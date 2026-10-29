@@ -121,7 +121,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Qui fait quoi ?</a></li><li><a href="#a02">Suivre l’énergie et les messages</a></li><li><a href="#a03">Chercher une panne — entraînement DNB</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Qui fait quoi dans le monte-charge ?</a></li><li><a href="#a02">Les deux chemins : les ordres et l’énergie</a></li><li><a href="#a03">Enquête : le monte-charge ne monte plus</a></li><li><a href="#a04">Le volet roulant de ta chambre — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -133,27 +133,31 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Technologie · 3e · S11</span></div>
-    <h1>Comment circulent l’énergie et l’information dans un système automatisé ?</h1>
+    <h1>Séance 11 : Comment le monte-charge se met-il en mouvement ?</h1>
     
 
     
-    <p class="cours-theme">
-        <strong>Thème :</strong> Structure, fonctionnement, comportement : comprendre un système automatisé
-    </p>
+    
+    <section class="course-info-card cours-theme">
+        <h2>Thème du programme</h2>
+        <p>Structure, fonctionnement, comportement : des objets et des systèmes techniques à comprendre</p>
+    </section>
     
 
     
-    <p class="cours-problematique">
-        <strong>Problématique :</strong> Tu appuies sur Monter : comment la plateforme se met-elle en mouvement ?
-    </p>
+    <section class="course-info-card cours-problematique">
+        <h2>Le problème à résoudre</h2>
+        <p>Tu appuies sur le bouton « Monter » : que se passe-t-il à l’intérieur du monte-charge pour que la plateforme bouge ?</p>
+    </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi étudier ce sujet ?</h2><p>Comprendre ce qui donne les ordres et ce qui fait bouger la plateforme.</p></section>
     
-    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Le même principe se retrouve dans un portail ou un volet roulant.</p></section>
-    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>En S07, un capteur donnait une information pour commander une pompe. Ici, nous suivons les messages et l’énergie dans un monte-charge.</p></section>
-    <section class="course-info-card course-info-prerequisites"><h2>Ce qui va nous servir</h2><ul><li>Un capteur détecte une situation.</li><li>Une pièce remplit un rôle : détecter, commander, entraîner…</li></ul></section>
-    <section class="course-info-card cours-notions"><h2>Les repères pour comprendre</h2><h3>Donner un ordre ou fournir de l’énergie ?</h3><p>Pense à une télévision : la télécommande demande l’allumage ; la prise fournit l’électricité. Le message et l’énergie suivent deux chemins différents. La télévision sert seulement d’exemple. Reprenons maintenant notre monte-charge : dans les deux chemins ci-dessous, nous parlons bien de ses pièces.</p><h3>Le chemin des messages</h3><p>Le bouton envoie une demande. Le capteur indique une position. La carte lit ces messages et donne un ordre : c’est la chaîne d’information.</p><h3>Le chemin de l’énergie</h3><p>L’alimentation fournit l’électricité. L’interface de puissance est un interrupteur piloté par la carte. Le moteur produit le mouvement ; la poulie et le câble le transmettent à la plateforme : c’est la chaîne d’énergie.</p></section>
+    <section class="course-info-card cours-competences-bo">
+        <h2>Compétences travaillées</h2>
+        <ul><li>Décrire et caractériser l’organisation interne d’un objet ou d’un système technique et ses échanges avec son environnement (énergies, données)</li><li>Identifier un dysfonctionnement d’un objet technique et y remédier</li></ul>
+    </section>
+    
+
     
     
     <section class="course-info-card cours-objectifs">
@@ -161,7 +165,11 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Un ordre et un apport d’énergie ont des rôles différents.</li>
+            <li>Dans un système automatisé, il y a deux chemins : le chemin des informations (les messages et les ordres) et le chemin de l’énergie (ce qui fait bouger).</li>
+            
+            <li>La chaîne d’information : le bouton et le capteur envoient des messages, la carte de commande décide et donne les ordres.</li>
+            
+            <li>La chaîne d’énergie : l’alimentation fournit l’électricité, l’interface de puissance la laisse passer, le moteur produit le mouvement, la poulie et le câble le transmettent.</li>
             
         </ul>
         
@@ -169,30 +177,26 @@
         <h2>Ce que tu vas apprendre à faire</h2>
         <ul>
             
-            <li>Expliquer le rôle des pièces.</li>
+            <li>Dire le rôle de chaque pièce du monte-charge.</li>
             
-            <li>Relier les pièces dans le bon ordre.</li>
+            <li>Ranger les pièces dans le bon ordre, sur le bon chemin.</li>
             
-            <li>Proposer une vérification pour chercher une panne.</li>
+            <li>Proposer une vérification pour chercher une panne, au lieu d’accuser une pièce au hasard.</li>
             
         </ul>
         
     </section>
     
+
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><p>Au DNB, on te demandera souvent d’expliquer comment fonctionne un système : un portail, un volet roulant, un ascenseur… Ils fonctionnent tous de la même façon : des pièces qui donnent des ordres, et des pièces qui font bouger.</p><p>Aujourd’hui, tu apprends à séparer ces deux chemins sur le monte-charge. Cette méthode te servira pour n’importe quel système.</p></section>
     
     
-    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
-<p>Nous préparons la description des chaînes d’information et d’énergie. Dans l’annexe, consulte la rubrique « Énergie » page 8 et la colonne 3e. Inutile de lire tout le programme.</p>
     
-
-<p><a href="https://www.education.gouv.fr/bo/2024/Hebdo9/MENE2402802A" target="_blank" rel="noopener noreferrer">Ministère — Programme de technologie, BO du 29 février 2024</a></p>
-
-
-<p><a href="https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf#page=8" target="_blank" rel="noopener noreferrer">Ministère — Annexe du programme : énergie, page 8</a></p>
-
-
-</div></details>
-
+    
+    
+    
+    
+    
 </header>
 
 
@@ -204,24 +208,25 @@
     
     <article class="cours-activite" id="a01">
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Qui fait quoi ?</h2>
+        <h2>Qui fait quoi dans le monte-charge ?</h2>
         
-        <p><strong>Pourquoi cette activité ?</strong> Reconnaître les pièces avant de les relier.</p>
-        <h3>Comment procéder ?</h3><ol><li>Lis le dossier.</li><li>Écris une courte action pour chaque pièce.</li></ol>
+        
+        
+        
 
         
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Notre monte-charge transporte des caisses entre deux niveaux. Nous l’étudions sur documents, sans manipulation.</p>
+<p>Le monte-charge transporte des caisses entre deux étages. Voici ses pièces principales :</p>
     
 
-<ul><li>Bouton Monter : l’utilisateur appuie pour demander la montée.</li><li>Capteur haut : il détecte l’arrivée de la plateforme en haut.</li><li>Carte de commande : elle lit les messages et donne les ordres.</li><li>Alimentation et interface de puissance : elles fournissent et commandent l’électricité du moteur.</li><li>Moteur, poulie et câble : ils entraînent la plateforme.</li><li>Voyant : la carte l’allume quand elle commande un mouvement.</li></ul>
+<ul><li>Bouton « Monter » : l’utilisateur appuie dessus pour demander la montée.</li><li>Capteur haut : il détecte quand la plateforme arrive en haut.</li><li>Carte de commande : c’est le « cerveau ». Elle lit les messages et donne les ordres.</li><li>Alimentation : elle fournit l’électricité.</li><li>Interface de puissance : c’est un interrupteur commandé par la carte. Il laisse passer, ou non, l’électricité vers le moteur.</li><li>Moteur : il tourne quand il reçoit de l’électricité.</li><li>Poulie et câble : ils transmettent le mouvement du moteur à la plateforme.</li><li>Voyant : la carte l’allume quand elle donne l’ordre de bouger.</li></ul>
     
 
 
         <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
-<p>Si besoin : dans la page micro:bit, cherche « entrée » et « sortie ». Quel rôle joue un bouton ? Et une LED ? Reviens ensuite aux pièces de notre dossier ; le câblage n’est pas le même.</p>
+<p>Tu ne sais plus ce qu’est une entrée (comme un bouton) ou une sortie (comme une lumière) ? Cette page l’explique avec la carte micro:bit.</p>
     
 
 <p><a href="https://microbit.org/fr/get-started/features/leds-and-buttons/" target="_blank" rel="noopener noreferrer">micro:bit — LEDs et boutons (en français)</a></p>
@@ -233,7 +238,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Que fait chaque pièce ? Une courte phrase par case suffit.</h3>
+            <h3 id="a01-q01-label">Question 1 — Écris le rôle de chaque pièce. Une courte phrase suffit.</h3>
             
 
             
@@ -243,7 +248,7 @@
                         <thead>
                             <tr>
                                 
-                                <th>Composant</th>
+                                <th>Pièce</th>
                                 
                                 <th>Son rôle</th>
                                 
@@ -256,13 +261,13 @@
                                 
                                 <td>
                                     
-                                    Bouton Monter
+                                    Bouton « Monter »
                                     
                                 </td>
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Qui fait quoi ? — Son rôle — Bouton Monter">
+                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Qui fait quoi dans le monte-charge ? — Son rôle — Bouton « Monter »">
                                     
                                 </td>
                                 
@@ -273,13 +278,13 @@
                                 
                                 <td>
                                     
-                                    Capteur de position haut
+                                    Capteur haut
                                     
                                 </td>
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Qui fait quoi ? — Son rôle — Capteur de position haut">
+                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Qui fait quoi dans le monte-charge ? — Son rôle — Capteur haut">
                                     
                                 </td>
                                 
@@ -296,7 +301,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Qui fait quoi ? — Son rôle — Carte de commande">
+                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Qui fait quoi dans le monte-charge ? — Son rôle — Carte de commande">
                                     
                                 </td>
                                 
@@ -307,13 +312,13 @@
                                 
                                 <td>
                                     
-                                    Moteur électrique
+                                    Moteur
                                     
                                 </td>
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r3_c1" data-required="true" data-row="3" data-col="1" aria-label="Qui fait quoi ? — Son rôle — Moteur électrique">
+                                    <input type="text" data-answer-id="a01_q01_r3_c1" data-required="true" data-row="3" data-col="1" aria-label="Qui fait quoi dans le monte-charge ? — Son rôle — Moteur">
                                     
                                 </td>
                                 
@@ -330,7 +335,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r4_c1" data-required="true" data-row="4" data-col="1" aria-label="Qui fait quoi ? — Son rôle — Voyant">
+                                    <input type="text" data-answer-id="a01_q01_r4_c1" data-required="true" data-row="4" data-col="1" aria-label="Qui fait quoi dans le monte-charge ? — Son rôle — Voyant">
                                     
                                 </td>
                                 
@@ -340,7 +345,7 @@
                     </table>
                 </div>
             
-            <details><summary>Un coup de pouce</summary><p>Commence par un verbe : détecter, demander, décider, entraîner ou informer.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Commence chaque phrase par un verbe : demander, détecter, décider, tourner, afficher.</p></details>
             
             
         </div>
@@ -353,7 +358,7 @@
 
             
             
-                <select id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><option value="">Choisis une réponse</option><option value="bouton">Le bouton Monter.</option><option value="alimentation">L’alimentation électrique.</option><option value="capteur">Le capteur de position.</option></select>
+                <select id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><option value="">Choisis une réponse</option><option value="bouton">Le bouton « Monter ».</option><option value="alimentation">L’alimentation.</option><option value="capteur">Le capteur haut.</option></select>
 
                 
             
@@ -370,24 +375,31 @@
     
     <article class="cours-activite" id="a02">
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Suivre l’énergie et les messages</h2>
+        <h2>Les deux chemins : les ordres et l’énergie</h2>
         
-        <p><strong>Pourquoi cette activité ?</strong> Comprendre comment les pièces travaillent ensemble.</p>
-        <h3>Comment procéder ?</h3><ol><li>Complète le tableau de l’énergie.</li><li>Complète ensuite les deux trajets des messages.</li></ol>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu connais le rôle de chaque pièce. Maintenant, tu vas voir comment elles travaillent ensemble. Il y a deux chemins différents : celui des messages et celui de l’énergie.</p>
+        
+        
 
         
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Pour monter : l’alimentation fournit l’électricité, l’interface de puissance la laisse passer et le moteur tourne. La poulie et le câble entraînent la plateforme.</p>
+<p>Exemple pour comprendre : avec une télévision, la télécommande envoie un ordre (« allume-toi »), mais c’est la prise qui fournit l’électricité. L’ordre et l’énergie ne passent pas par le même chemin.</p>
+    
+
+<p>Dans le monte-charge, c’est pareil. Pour monter : l’alimentation fournit l’électricité, l’interface de puissance la laisse passer, le moteur tourne, puis la poulie et le câble entraînent la plateforme. C’est la chaîne d’énergie.</p>
+    
+
+<p>En même temps, le bouton et le capteur envoient des messages à la carte, et la carte envoie un ordre à l’interface de puissance. C’est la chaîne d’information.</p>
     
 
 
         <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
-<p>Si besoin : lis le court passage sur la chaîne d’énergie dans le texte sous la vidéo. Repère les quatre fonctions, puis retrouve les pièces correspondantes dans notre dossier. Tu n’as pas besoin de regarder toute la vidéo.</p>
+<p>Cette vidéo explique la chaîne d’énergie. Lis seulement le texte sous la vidéo et repère les quatre actions : alimenter, distribuer, convertir, transmettre.</p>
     
 
-<p><a href="https://www.lumni.fr/video/comment-produire-et-bien-utiliser-lenergie-electrique-23-avril" target="_blank" rel="noopener noreferrer">Lumni / France Télévisions — Comment produire et bien utiliser l’énergie électrique ?</a></p>
+<p><a href="https://www.lumni.fr/video/comment-produire-et-bien-utiliser-lenergie-electrique-23-avril" target="_blank" rel="noopener noreferrer">Lumni — Comment produire et bien utiliser l’énergie électrique ?</a></p>
 
 
 </div></details>
@@ -396,7 +408,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Quelle pièce réalise chaque action ?</h3>
+            <h3 id="a02-q01-label">Question 1 — Chaîne d’énergie : quelle pièce réalise chaque action ?</h3>
             
 
             
@@ -408,7 +420,7 @@
                                 
                                 <th>Action</th>
                                 
-                                <th>Pièce ou ensemble de pièces</th>
+                                <th>Pièce</th>
                                 
                             </tr>
                         </thead>
@@ -419,30 +431,13 @@
                                 
                                 <td>
                                     
-                                    1 — Fournir l’électricité (alimenter)
+                                    1. Fournir l’électricité (alimenter)
                                     
                                 </td>
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Suivre l’énergie et les messages — Pièce ou ensemble de pièces — 1 — Fournir l’électricité (alimenter)">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    2 — Laisser passer l’électricité (distribuer)
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Suivre l’énergie et les messages — Pièce ou ensemble de pièces — 2 — Laisser passer l’électricité (distribuer)">
+                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Les deux chemins : les ordres et l’énergie — Pièce — 1. Fournir l’électricité (alimenter)">
                                     
                                 </td>
                                 
@@ -453,13 +448,13 @@
                                 
                                 <td>
                                     
-                                    3 — Produire un mouvement (convertir)
+                                    2. Laisser passer l’électricité (distribuer)
                                     
                                 </td>
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a02_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Suivre l’énergie et les messages — Pièce ou ensemble de pièces — 3 — Produire un mouvement (convertir)">
+                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Les deux chemins : les ordres et l’énergie — Pièce — 2. Laisser passer l’électricité (distribuer)">
                                     
                                 </td>
                                 
@@ -470,13 +465,30 @@
                                 
                                 <td>
                                     
-                                    4 — Entraîner la plateforme (transmettre)
+                                    3. Produire un mouvement (convertir)
                                     
                                 </td>
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a02_q01_r3_c1" data-required="true" data-row="3" data-col="1" aria-label="Suivre l’énergie et les messages — Pièce ou ensemble de pièces — 4 — Entraîner la plateforme (transmettre)">
+                                    <input type="text" data-answer-id="a02_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Les deux chemins : les ordres et l’énergie — Pièce — 3. Produire un mouvement (convertir)">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    4. Amener le mouvement à la plateforme (transmettre)
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r3_c1" data-required="true" data-row="3" data-col="1" aria-label="Les deux chemins : les ordres et l’énergie — Pièce — 4. Amener le mouvement à la plateforme (transmettre)">
                                     
                                 </td>
                                 
@@ -494,7 +506,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Complète les deux lignes ci-dessous. Remplace chaque « … » par une pièce ou un court message.</h3>
+            <h3 id="a02-q02-label">Question 2 — Chaîne d’information : recopie les deux lignes et remplace chaque « … » par une pièce ou un court message.</h3>
             
 
             
@@ -510,7 +522,7 @@ La plateforme arrive en haut :
                 <textarea id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Une flèche signifie « envoie un message à ». Exemple : télécommande — « change de chaîne » → télévision. Les noms des pièces et leur rôle sont dans le dossier.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Une flèche veut dire « envoie un message à ». Exemple : télécommande — « allume-toi » → télévision.</p></details>
             
             
         </div>
@@ -524,21 +536,25 @@ La plateforme arrive en haut :
     
     <article class="cours-activite" id="a03">
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Chercher une panne — entraînement DNB</h2>
+        <h2>Enquête : le monte-charge ne monte plus</h2>
         
-        <p><strong>Pourquoi cette activité ?</strong> Vérifier avant d’accuser une pièce.</p>
-        <h3>Comment procéder ?</h3><ol><li>Lis les observations.</li><li>Explique ton raisonnement en quelques phrases.</li></ol>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais comment le monte-charge fonctionne quand tout va bien. Maintenant, on utilise ce que tu as appris pour chercher une panne, comme au DNB.</p>
+        
+        
 
         
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Le voyant s’allume, mais la plateforme ne bouge pas. Le voyant reçoit son ordre de la carte : il ne mesure pas le mouvement. On n’a pas encore vérifié si le moteur reçoit de l’électricité ou si son axe tourne.</p>
+<p>Le voyant s’allume, mais la plateforme ne bouge pas.</p>
+    
+
+<p>Rappel : le voyant est allumé par la carte de commande. Il montre seulement que la carte a donné l’ordre de monter. Il ne vérifie pas si le moteur tourne vraiment.</p>
     
 
 
         <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
-<p>Si besoin : relis le rôle d’une LED sur la page micro:bit. Distingue ce qu’elle affiche de ce qu’un capteur mesure. Puis justifie ton test avec les observations du dossier.</p>
+<p>Relis le rôle d’une LED (un voyant) sur cette page : elle affiche quelque chose, mais elle ne mesure rien.</p>
     
 
 <p><a href="https://microbit.org/fr/get-started/features/leds-and-buttons/" target="_blank" rel="noopener noreferrer">micro:bit — LEDs et boutons (en français)</a></p>
@@ -550,11 +566,11 @@ La plateforme arrive en haut :
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Un élève dit : « Le voyant est allumé, donc le câble est cassé. » Réponds aux trois points suivants.</h3>
+            <h3 id="a03-q01-label">Question 1 — Un élève dit : « Le voyant est allumé, donc c’est le câble qui est cassé. » A-t-il raison ? Réponds aux trois points.</h3>
             
 
             
-<ul><li>Le voyant suffit-il à savoir si le moteur reçoit de l’électricité ? Pourquoi ?</li><li>Que pourrait-on vérifier pour trouver la panne ?</li><li>Explique ce que le résultat de cette vérification nous apprendrait.</li></ul>
+<ul><li>Le voyant allumé prouve-t-il que le moteur reçoit de l’électricité ? Pourquoi ?</li><li>Que pourrait-on vérifier pour trouver la panne ?</li><li>Que nous apprendrait le résultat de cette vérification ?</li></ul>
     
 
 
@@ -562,7 +578,7 @@ La plateforme arrive en haut :
                 <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Exemple : si la lampe de ton vélo ne s’allume pas, tu vérifies avant de décider que l’ampoule est cassée. Ici aussi, plusieurs pièces peuvent être en cause. Propose une vérification, sans la réaliser.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Exemple de la vie courante : si ton vélo n’avance pas alors que tu pédales, est-ce forcément la chaîne ? Il faut vérifier avant de décider.</p></details>
             
             
         </div>
@@ -570,7 +586,7 @@ La plateforme arrive en haut :
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a03-q02-label">Question 2 — La carte donne l’ordre de monter, mais rien ne bouge. Cite une pièce qui pourrait être en cause et explique son rôle.</h3>
+            <h3 id="a03-q02-label">Question 2 — La carte donne bien l’ordre de monter, mais rien ne bouge. Cite une pièce de la chaîne d’énergie qui pourrait être en panne, et explique pourquoi.</h3>
             
 
             
@@ -578,7 +594,7 @@ La plateforme arrive en haut :
                 <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            
+            <details><summary>Un coup de pouce</summary><p>Relis le tableau de la mission 2 : quelles pièces se trouvent après la carte de commande ?</p></details>
             
             
         </div>
@@ -591,25 +607,79 @@ La plateforme arrive en haut :
     </article>
     
     <article class="cours-activite" id="a04">
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span></div>
-        <h2>Pour aller plus loin</h2>
-        <p class="course-optional">Pour aller plus loin — activité facultative.</p>
-        <p><strong>Pourquoi cette activité ?</strong> Retrouver les deux chemins dans un objet connu.</p>
-        <h3>Comment procéder ?</h3><ol><li>Choisis un volet ou un portail.</li><li>Explique oralement ce qui donne l’ordre et ce qui fournit l’énergie.</li></ol>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Le volet roulant de ta chambre</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste.</p>
+        
+        
+        
 
         
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Facultatif : ce travail n’est pas nécessaire pour obtenir 20.</p>
+<p>Un volet roulant électrique fonctionne comme le monte-charge : un interrupteur, une carte, un moteur, un axe qui enroule le volet.</p>
     
 
 
         
         
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Écris la chaîne d’information et la chaîne d’énergie du volet roulant, comme tu l’as fait pour le monte-charge.</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Commence par : « Information : interrupteur → … » puis « Énergie : alimentation → … ».</p></details>
+            
+            
+        </div>
+        
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a05">
+        <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Conclusion de ton travail</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as trouvé le rôle des pièces, suivi les deux chemins et mené une enquête. Il reste à répondre au problème de départ.</p>
+        
+        
+
+        
+
+        
+        
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour en 3 ou 4 phrases : quand tu appuies sur « Monter », que se passe-t-il à l’intérieur du monte-charge ?</h3>
+            
+
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Tu peux commencer par : « Le bouton envoie… La carte de commande… L’interface de puissance… Le moteur… »</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -617,9 +687,14 @@ La plateforme arrive en haut :
 </section>
 
     </fieldset>
-    <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Information : recevoir des messages, décider, donner un ordre.</li><li>Énergie : fournir l’électricité, la distribuer, produire puis transmettre un mouvement.</li><li>Un voyant allumé ne prouve pas que toutes les pièces fonctionnent.</li></ul>
-    <h3>Faire le point</h3><p>Quelle différence fais-tu entre donner un ordre et faire bouger la plateforme ?</p>
+    <span id="course-summary"></span>
+<section class="cours-sources course-info-card" aria-labelledby="course-sources-title"><h2 id="course-sources-title">Sources et ressources officielles</h2>
+<p><a href="https://www.education.gouv.fr/media/160767/download" target="_blank" rel="noopener noreferrer">Ministère de l’Éducation nationale — Programme de technologie du cycle 4 (BO n° 9 du 29 février 2024)</a></p>
+
+
+<p><a href="https://edubase.eduscol.education.fr/fiche/24732" target="_blank" rel="noopener noreferrer">Éduscol — Édubase : le projet de monte-charge</a></p>
+
+
 </section>
 
     <div class="course-submit-panel">
