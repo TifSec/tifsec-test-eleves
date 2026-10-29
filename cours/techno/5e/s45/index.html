@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">1. Repère les indices</a></li><li><a href="#a02">2. À toi de tester</a></li><li><a href="#a03">3. Explique avec une preuve</a></li><li><a href="#a04">4. Garde le mémo</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Ouvrir le programme</a></li><li><a href="#a02">Programmer</a></li><li><a href="#a03">Tester dans le simulateur</a></li><li><a href="#a04">Défi — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -134,62 +134,68 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Technologie · 5e · S45</span></div>
-    <h1>Comment préparer un prototype testable ?</h1>
+    <h1>Séance 45 : Programmer notre amélioration</h1>
     
 
     
     
     <section class="course-info-card cours-theme">
         <h2>Thème du programme</h2>
-        <p>Améliorer, réaliser et valider une solution numérique</p>
+        <p>Création, conception, réalisation, innovations : des objets à concevoir et à réaliser</p>
     </section>
     
 
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Comment préparer un prototype testable ?</p>
+        <p>Comment modifier le programme du tracker pour réaliser notre amélioration, et la tester dans le simulateur ?</p>
     </section>
     
 
     
-
-    
-    
-
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><p>Organiser les tâches et prévoir un test avant de modifier.</p></section>
-    
-    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Préparer un test avant de modifier un objet aide à comprendre l’effet de chaque changement.</p></section>
-    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>Après S44 — Quel problème allons-nous améliorer ?, nous poursuivons avec un seul objectif : organiser les tâches et prévoir un test avant de modifier.</p></section>
-    
-    
-    
-<p>Ce que tu vas apprendre : Un test contrôlé change une seule chose et garde une trace du résultat.</p>
+    <section class="course-info-card cours-competences-bo">
+        <h2>Compétences travaillées</h2>
+        <ul><li>Concevoir, écrire, tester et mettre au point un programme</li><li>Comprendre et modifier un programme associé à une fonctionnalité d’un objet ou d’un système technique</li></ul>
+    </section>
     
 
-<p>Ce que tu vas apprendre à faire : Organiser les tâches et prévoir un test avant de modifier.</p>
+    
+    
+    <section class="course-info-card cours-objectifs">
+        
+        <h2>Ce que tu vas apprendre</h2>
+        <ul>
+            
+            <li>Modifier un programme existant : on garde ce qui fonctionne et on ajoute ou change seulement ce qui est nécessaire.</li>
+            
+            <li>Dans le simulateur MakeCode, on peut régler la valeur lue sur une broche pour imiter un capteur.</li>
+            
+        </ul>
+        
+        
+        <h2>Ce que tu vas apprendre à faire</h2>
+        <ul>
+            
+            <li>Ouvrir le programme fourni et le modifier.</li>
+            
+            <li>Tester une modification dans le simulateur.</li>
+            
+            <li>Expliquer sa modification.</li>
+            
+        </ul>
+        
+    </section>
     
 
-<p>Tu vas observer une situation, suivre un exemple guidé, puis faire un essai et vérifier ce qu’il montre.</p>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séance 44, tu as repéré l’endroit du programme à modifier.</p><p>Aujourd’hui, tu programmes ton amélioration dans le simulateur. Tous les groupes travaillent en même temps ; le vrai tracker attendra la séance 46. Le guidage est plus léger : à toi de proposer ta démarche, une aide est disponible pour chaque amélioration.</p></div></section>
     
-
-<p>À quoi cela sert dans la vie réelle : Préparer un test avant de modifier un objet aide à comprendre l’effet de chaque changement.</p>
     
-
-<p>Tu as environ 50 minutes : 10 minutes pour comprendre, 25 minutes pour faire, 10 minutes pour vérifier et 5 minutes pour le bilan.</p>
     
-
-
     
-    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
-<p>Programme de Technologie du cycle 4, repères de 5e : cette séance contribue progressivement aux compétences ci-dessous ; elle ne prétend pas valider seule une compétence de fin de cycle.</p>
     
-
-<p><a href="https://www.education.gouv.fr/bo/2024/Hebdo9/MENE2402802A" target="_blank" rel="noopener noreferrer">Ministère — Programme de Technologie 2024</a></p>
-
-
-</div></details>
-
+    
+    
+    
     
     <nav class="course-mission-controls course-intro-controls" aria-label="Commencer la séance"><a class="course-mission-next" href="#a01">J’ai compris l’objectif : commencer la première mission <span aria-hidden="true">→</span></a></nav>
 </header>
@@ -203,56 +209,42 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>1. Repère les indices</h2>
+        <h2>Ouvrir le programme</h2>
         
         
-        <p><strong>Pourquoi cette activité ?</strong> Observe la situation et l’exemple guidé : ils montrent ce qu’il faut comprendre avant de commencer.</p>
-        <h3>Comment procéder ?</h3><ol><li>Lis la situation et repère les informations utiles.</li><li>Suis l’exemple guidé et repère la méthode utilisée.</li><li>Réponds aux questions en t’appuyant sur le cours.</li></ol>
+        
+        
 
         
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Avant de modifier, conserver une copie de la version qui fonctionne. Un petit plan indique ce qui change, ce qui reste identique et comment comparer les deux versions.</p>
+<ol><li>Ouvre le lien du programme du tracker donné par le professeur (ou importe le fichier tracker_solaire.js dans MakeCode, onglet JavaScript, puis reviens sur Blocs).</li><li>Renomme le projet : 5e_S45_groupe.</li><li>Repère les blocs « au démarrage », « toujours » et la fonction chercherSoleil.</li></ol>
     
 
-<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Trace à préparer</th><th scope="col">Contenu attendu</th></tr></thead><tbody><tr><td>Croquis ou blocs</td><td>Partie modifiée repérable</td></tr><tr><td>Liste de tâches</td><td>Trois tâches courtes et ordonnées</td></tr><tr><td>Test</td><td>Même situation pour les deux versions</td></tr></tbody></table></div>
-    
-
-<p>Exemple guidé : avant de changer un programme, je note le résultat actuel. Je modifie une seule règle, puis je refais le même essai. Cette comparaison permet de voir si mon changement a aidé.</p>
+<p>Dans le simulateur, clique sur les broches P1 et P2 pour régler la lumière simulée des capteurs gauche et droit. Le servomoteur est sur P0 : son angle s’affiche.</p>
     
 
 
-        
+        <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
+<p><a href="https://makecode.microbit.org/" target="_blank" rel="noopener noreferrer">MakeCode micro:bit (gratuit, dans le navigateur)</a></p>
+
+
+</div></details>
+
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Pourquoi conserver la version précédente avant la modification ?</h3>
+            <h3 id="a01-q01-label">Question 1 — Pourquoi travailler sur une copie du programme et pas sur l’original ?</h3>
             
 
             
             
-                <textarea id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Une correction peut aussi introduire une erreur.</p></details>
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a01-q02-label">Question 2 — Donner les noms des deux versions, sans nom complet ni donnée personnelle.</h3>
-            
-
-            
-            
-                <textarea id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <select id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><option value="">Choisis une réponse</option><option value="a">Pour pouvoir revenir au programme qui fonctionne en cas d’erreur.</option><option value="b">Parce que l’original est trop long.</option><option value="c">Pour aller plus vite.</option></select>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Par exemple support_v1 et support_v2.</p></details>
+            
             
             
         </div>
@@ -266,37 +258,29 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>2. À toi de tester</h2>
+        <h2>Programmer</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le programme est ouvert. À toi de faire ta modification, avec l’aide si besoin.</p>
         
         
-        <p><strong>Pourquoi cette activité ?</strong> Tu viens de voir la méthode ; maintenant, applique-la dans un essai que tu peux vérifier.</p>
-        <h3>Comment procéder ?</h3><ol><li>Dupliquer le projet numérique et nommer clairement les deux versions.</li><li>Dessiner les blocs ou écrans concernés avant de les modifier.</li><li>Écrire le test de comparaison et répartir les rôles, puis les faire tourner.</li></ol>
 
         
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Note une trace courte : ce que tu as fait, ce que tu attendais et ce que tu as observé.</p>
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Aide pour chaque amélioration</caption><thead><tr><th scope="col">Amélioration</th><th scope="col">Aide : ce qu’il faut ajouter ou changer</th></tr></thead><tbody><tr><td>A — Mode nuit</td><td>Dans « toujours », au début du « sinon » : si luminosité &lt; 100 alors angle = 20 (et tourner le servomoteur à angle).</td></tr><tr><td>B — Afficher la direction</td><td>Après « tourner le servomoteur à angle » : si angle &lt; 90 alors afficher une flèche vers la gauche, sinon une flèche vers la droite.</td></tr><tr><td>C — Réagir moins souvent</td><td>Remplacer 30 par 80 dans les deux comparaisons, ou remplacer la pause de 100 ms par 1 000 ms.</td></tr></tbody></table></div>
+    
+
+<p>Rappel du réflexe n° 8 : fais une modification, teste, puis passe à la suivante.</p>
     
 
 
-        <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
-<p>Dans la documentation, retrouver les blocs d’événement, variable et condition utilisés aujourd’hui.</p>
-    
-
-<p><a href="https://makecode.microbit.org/reference" target="_blank" rel="noopener noreferrer">MakeCode micro:bit — Référence</a></p>
-
-
-<p><a href="https://makecode.microbit.org/" target="_blank" rel="noopener noreferrer">Ouvrir le simulateur MakeCode micro:bit</a></p>
-
-
-</div></details>
-
+        
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Présenter tes trois tâches et le test prévu avant de commencer.</h3>
+            <h3 id="a02-q01-label">Question 1 — Décris précisément la modification que ton groupe a faite (quels blocs ajoutés ou changés, et où).</h3>
             
 
             
@@ -304,7 +288,23 @@
                 <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Le test doit viser le critère défini en S44.</p></details>
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a02-q02-label">Question 2 — Explique en une phrase, avec « si … alors … » ou avec les nombres, ce que fait ta modification.</h3>
+            
+
+            
+            
+                <textarea id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
             
             
         </div>
@@ -318,31 +318,112 @@
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>3. Explique avec une preuve</h2>
+        <h2>Tester dans le simulateur</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Ta modification est faite. Il faut maintenant prouver qu’elle fonctionne.</p>
         
         
-        <p><strong>Pourquoi cette activité ?</strong> Avant de conclure, relie ta réponse à une observation ou à une information précise.</p>
-        <h3>Comment procéder ?</h3><ol><li>Répondre en une à trois phrases.</li><li>Citer une observation, une règle ou une valeur du document.</li></ol>
 
         
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
+<p>Prépare deux tests : un où l’amélioration doit agir, un où elle ne doit pas agir. Exemple pour A : P1 et P2 à 20 (nuit) → angle 20 ; P1 et P2 à 600 (jour) → le tracker suit la lumière normalement.</p>
+    
+
 
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Si l’on change en même temps les commandes, les messages et les seuils, pourquoi devient-il difficile d’expliquer une amélioration ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Écris tes deux tests et leurs résultats dans le simulateur.</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Test (valeurs de P1 et P2)</th>
+                                
+                                <th>Résultat attendu</th>
+                                
+                                <th>Résultat observé</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a03_q01_r0_c0" data-required="true" data-row="0" data-col="0" aria-label="Tester dans le simulateur — Test (valeurs de P1 et P2) — ">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a03_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Tester dans le simulateur — Résultat attendu — ">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a03_q01_r0_c2" data-required="true" data-row="0" data-col="2" aria-label="Tester dans le simulateur — Résultat observé — ">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a03_q01_r1_c0" data-required="true" data-row="1" data-col="0" aria-label="Tester dans le simulateur — Test (valeurs de P1 et P2) — ">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a03_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Tester dans le simulateur — Résultat attendu — ">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a03_q01_r1_c2" data-required="true" data-row="1" data-col="2" aria-label="Tester dans le simulateur — Résultat observé — ">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a03-q02-label">Question 2 — Le simulateur montre que ton programme fonctionne. Est-ce suffisant pour être sûr qu’il marchera sur le vrai tracker ?</h3>
+            
+
+            
+            
+                <select id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label"><option value="">Choisis une réponse</option><option value="a">Non : il faudra tester sur le vrai tracker, avec de vrais capteurs.</option><option value="b">Oui, c’est certain.</option><option value="c">Non, le simulateur ne sert à rien.</option></select>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Commence par une seule modification principale.</p></details>
+            
             
             
         </div>
@@ -355,23 +436,79 @@
     </article>
     
     <article class="cours-activite" id="a04" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>4. Garde le mémo</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Défi</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
-        <p><strong>Pourquoi cette activité ?</strong> Garde une trace courte pour pouvoir réutiliser cette méthode dans une prochaine séance.</p>
-        <h3>Comment procéder ?</h3><ol><li>Relis les deux idées à retenir.</li><li>Note une méthode que tu pourras réutiliser.</li></ol>
+        
 
         
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
+<p>On peut combiner deux améliorations.</p>
+    
+
 
         
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Ajoute une deuxième amélioration et explique comment tu as vérifié qu’elle ne gêne pas la première.</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a05" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Conclusion de ton travail</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Ton amélioration est programmée et testée dans le simulateur. Il reste à répondre au problème de départ.</p>
+        
+        
+
+        
+
+        
+        
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment avez-vous modifié le programme du tracker, et comment l’avez-vous testé ?</h3>
+            
+
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -384,18 +521,22 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Un test contrôlé change une seule chose et garde une trace du résultat.</li><li>Organiser les tâches et prévoir un test avant de modifier.</li></ul>
-    <h3>Faire le point</h3><p>Je peux expliquer avec mes mots ce que j’ai appris aujourd’hui et montrer une réponse ou un essai qui le prouve.</p>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>On modifie une copie du programme et on garde l’original.</li><li>On teste chaque modification : un cas où elle agit, un cas où elle n’agit pas.</li><li>Une entrée simulée n’est pas une mesure réelle : il faudra tester sur le vrai tracker.</li></ul>
+    
 </section>
 
+<section class="cours-sources course-info-card" aria-labelledby="course-sources-title"><h2 id="course-sources-title">Sources et ressources officielles</h2>
+<p><a href="https://www.education.gouv.fr/media/160767/download" target="_blank" rel="noopener noreferrer">Ministère de l’Éducation nationale — Programme de technologie du cycle 4 (BO n° 9 du 29 février 2024)</a></p>
 
+
+</section>
 
     <div class="course-submit-panel">
         <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
         <p id="course-submit-status" role="status" aria-live="polite"></p>
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

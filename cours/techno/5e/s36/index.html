@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">1. Repère les indices</a></li><li><a href="#a02">2. À toi de tester</a></li><li><a href="#a03">3. Explique avec une preuve</a></li><li><a href="#a04">4. Garde le mémo</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Repérer les paramètres</a></li><li><a href="#a02">Tester (poste maquette)</a></li><li><a href="#a03">Plus vite, est-ce mieux ?</a></li><li><a href="#a04">Défi — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -134,62 +134,66 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Technologie · 5e · S36</span></div>
-    <h1>Une eau claire est-elle forcément utilisable ?</h1>
+    <h1>Séance 36 : Que se passe-t-il si je change un nombre du programme ?</h1>
     
 
     
     
     <section class="course-info-card cours-theme">
         <h2>Thème du programme</h2>
-        <p>Concevoir une cuve intelligente simulée</p>
+        <p>Structure, fonctionnement, comportement : des objets et des systèmes techniques à comprendre</p>
     </section>
     
 
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Une eau claire est-elle forcément utilisable ?</p>
+        <p>Comment changer la vitesse du moteur dans le programme, et comment vérifier l’effet de ce changement ?</p>
     </section>
     
 
     
-
-    
-    
-
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><p>Identifier une limite d’observation et de mesure.</p></section>
-    
-    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>L’apparence ne suffit pas pour vérifier la qualité sanitaire de l’eau.</p></section>
-    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>Après S35 — Quand faut-il arrêter de remplir ?, nous poursuivons avec un seul objectif : identifier une limite d’observation et de mesure.</p></section>
-    
-    
-    
-<p>Ce que tu vas apprendre : Une observation visuelle ne permet pas de détecter toutes les substances ou tous les microbes.</p>
+    <section class="course-info-card cours-competences-bo">
+        <h2>Compétences travaillées</h2>
+        <ul><li>Comprendre et modifier un programme associé à une fonctionnalité d’un objet ou d’un système technique</li><li>Valider les solutions techniques par des simulations ou par des protocoles de tests</li></ul>
+    </section>
     
 
-<p>Ce que tu vas apprendre à faire : Identifier une limite d’observation et de mesure.</p>
+    
+    
+    <section class="course-info-card cours-objectifs">
+        
+        <h2>Ce que tu vas apprendre</h2>
+        <ul>
+            
+            <li>Un paramètre est un nombre du programme qui règle un comportement : ici, la vitesse du moteur (137 dans le programme d’origine, sur une échelle de 0 à 255).</li>
+            
+            <li>On vérifie l’effet d’un changement par un test : prévoir, changer une seule chose, observer, comparer.</li>
+            
+        </ul>
+        
+        
+        <h2>Ce que tu vas apprendre à faire</h2>
+        <ul>
+            
+            <li>Repérer un paramètre dans un programme.</li>
+            
+            <li>Prévoir l’effet d’un changement, puis le vérifier par un test.</li>
+            
+        </ul>
+        
+    </section>
     
 
-<p>Tu vas observer une situation, suivre un exemple guidé, puis faire un essai et vérifier ce qu’il montre.</p>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séance 30, tu as changé la vitesse de ton personnage dans Arcade. En séance 35, tu as lu le programme du monte-charge.</p><p>Aujourd’hui, tu modifies un paramètre du vrai programme. Chaque groupe prépare sa modification ; le professeur l’envoie sur la maquette, un groupe à la fois.</p></div></section>
     
-
-<p>À quoi cela sert dans la vie réelle : L’apparence ne suffit pas pour vérifier la qualité sanitaire de l’eau.</p>
     
-
-<p>Tu as environ 50 minutes : 10 minutes pour comprendre, 25 minutes pour faire, 10 minutes pour vérifier et 5 minutes pour le bilan.</p>
     
-
-
     
-    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
-<p>Programme de Technologie du cycle 4, repères de 5e : cette séance contribue progressivement aux compétences ci-dessous ; elle ne prétend pas valider seule une compétence de fin de cycle.</p>
     
-
-<p><a href="https://www.education.gouv.fr/bo/2024/Hebdo9/MENE2402802A" target="_blank" rel="noopener noreferrer">Ministère — Programme de Technologie 2024</a></p>
-
-
-</div></details>
-
+    
+    
+    
     
     <nav class="course-mission-controls course-intro-controls" aria-label="Commencer la séance"><a class="course-mission-next" href="#a01">J’ai compris l’objectif : commencer la première mission <span aria-hidden="true">→</span></a></nav>
 </header>
@@ -203,40 +207,46 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>1. Repère les indices</h2>
+        <h2>Repérer les paramètres</h2>
         
         
-        <p><strong>Pourquoi cette activité ?</strong> Observe la situation et l’exemple guidé : ils montrent ce qu’il faut comprendre avant de commencer.</p>
-        <h3>Comment procéder ?</h3><ol><li>Lis la situation et repère les informations utiles.</li><li>Suis l’exemple guidé et repère la méthode utilisée.</li><li>Réponds aux questions en t’appuyant sur le cours.</li></ol>
+        
+        
 
         
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Une observation de couleur ou de trouble ne mesure pas toutes les substances et tous les risques. Un filtre qui retient des particules ne suffit pas à garantir une eau potable. Dans notre projet, l’eau reste étiquetée NON POTABLE.</p>
+<pre class="cours-code"><code>faire tourner le moteur vers l’avant à la vitesse 137
+écran : écrire « Appel Etage »</code></pre>
     
 
-<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Échantillon fictif</th><th scope="col">Aspect</th><th scope="col">Information connue</th></tr></thead><tbody><tr><td>A</td><td>Clair</td><td>Composition inconnue</td></tr><tr><td>B</td><td>Trouble</td><td>Particules visibles</td></tr><tr><td>C</td><td>Clair</td><td>Alerte donnée par le scénario</td></tr></tbody></table></div>
+<p>Dans le programme d’origine, le moteur tourne à la vitesse 137. La carte accepte des valeurs de 0 (arrêt) à 255 (vitesse maximale).</p>
     
 
-<p>Exemple guidé : une eau peut paraître claire et contenir pourtant des microbes ou des substances invisibles. La vue seule ne permet donc pas de dire qu’elle est potable. Dans notre projet, l’eau reste non potable et ne se goûte jamais.</p>
+<p>Rappel de la séance 6 et du réflexe n° 8 : je change une seule chose à la fois.</p>
     
 
 
-        
+        <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
+<p><a href="https://makecode.microbit.org/" target="_blank" rel="noopener noreferrer">MakeCode micro:bit (gratuit, dans le navigateur)</a></p>
+
+
+</div></details>
+
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Peut-on déclarer A potable avec le seul document ?</h3>
+            <h3 id="a01-q01-label">Question 1 — Que se passe-t-il probablement si on met la vitesse à 0 ?</h3>
             
 
             
             
-                <textarea id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <select id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><option value="">Choisis une réponse</option><option value="a">Le moteur ne tourne pas : la cabine ne monte pas.</option><option value="b">La cabine monte très vite.</option><option value="c">L’écran s’éteint.</option></select>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Une absence d’indice visible n’est pas une preuve complète.</p></details>
+            
             
             
         </div>
@@ -244,7 +254,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Pourquoi B et C peuvent-ils conduire à une alerte pour des raisons différentes ?</h3>
+            <h3 id="a01-q02-label">Question 2 — Ton groupe choisit une nouvelle vitesse (entre 80 et 200). Écris ta valeur et ta prévision : la cabine montera-t-elle plus vite ou moins vite, et pourquoi ?</h3>
             
 
             
@@ -252,7 +262,7 @@
                 <textarea id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Comparer observation et information donnée.</p></details>
+            
             
             
         </div>
@@ -266,34 +276,29 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>2. À toi de tester</h2>
+        <h2>Tester (poste maquette)</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as prévu. Le test sur la vraie maquette va dire si tu avais raison.</p>
         
         
-        <p><strong>Pourquoi cette activité ?</strong> Tu viens de voir la méthode ; maintenant, applique-la dans un essai que tu peux vérifier.</p>
-        <h3>Comment procéder ?</h3><ol><li>Classer séparément ce qui est observé et ce qui est inconnu.</li><li>Chercher sur la ressource ce que signifie contrôler la qualité d’une eau.</li><li>Rédiger une étiquette de projet qui ne promet pas plus que les données disponibles.</li></ol>
 
         
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Note une trace courte : ce que tu as fait, ce que tu attendais et ce que tu as observé.</p>
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Protocole de test</caption><thead><tr><th scope="col">Étape</th><th scope="col">Ce qu’on fait</th></tr></thead><tbody><tr><td>1</td><td>Mesurer avec un chronomètre la durée de la montée avec le programme d’origine (vitesse 137).</td></tr><tr><td>2</td><td>Le professeur envoie le programme modifié du groupe.</td></tr><tr><td>3</td><td>Mesurer la durée de la montée avec la nouvelle vitesse, dans les mêmes conditions (cabine vide).</td></tr><tr><td>4</td><td>Le professeur remet le programme d’origine.</td></tr></tbody></table></div>
+    
+
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Exemple de résultats d’une autre classe (valeurs inventées)</caption><thead><tr><th scope="col">Vitesse</th><th scope="col">Durée de la montée</th></tr></thead><tbody><tr><td>137</td><td>6 s</td></tr><tr><td>100</td><td>9 s</td></tr><tr><td>200</td><td>4 s</td></tr></tbody></table></div>
     
 
 
-        <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
-<p>Sur le portail public, chercher qualité de l’eau et usages ; relever une information qui distingue observation et contrôle.</p>
-    
-
-<p><a href="https://www.eaufrance.fr/" target="_blank" rel="noopener noreferrer">Eaufrance — Portail public de l’eau</a></p>
-
-
-</div></details>
-
+        
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Rédiger une étiquette courte pour l’eau du projet, avec une limite explicite.</h3>
+            <h3 id="a02-q01-label">Question 1 — Écris les durées mesurées par ton groupe (vitesse 137 et ta vitesse), avec leur unité.</h3>
             
 
             
@@ -301,7 +306,39 @@
                 <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Évite la mention « propre donc buvable ».</p></details>
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a02-q02-label">Question 2 — D’après le document 1, combien de secondes gagne-t-on en passant de la vitesse 137 à la vitesse 200 ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><p>Unité : s</p>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a02-q03-label">Question 3 — Ta prévision était-elle juste ? Compare avec tes mesures.</h3>
+            
+
+            
+            
+                <textarea id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
             
             
         </div>
@@ -315,23 +352,22 @@
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>3. Explique avec une preuve</h2>
+        <h2>Plus vite, est-ce mieux ?</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as mesuré l’effet de la vitesse. Mais la vitesse la plus grande est-elle la meilleure ?</p>
         
         
-        <p><strong>Pourquoi cette activité ?</strong> Avant de conclure, relie ta réponse à une observation ou à une information précise.</p>
-        <h3>Comment procéder ?</h3><ol><li>Répondre en une à trois phrases.</li><li>Citer une observation, une règle ou une valeur du document.</li></ol>
 
         
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-
+        
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Un groupe filtre B et obtient un aspect clair. Quelle conclusion peut-il écrire, et laquelle doit-il éviter ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Donne un avantage et un inconvénient d’une vitesse très élevée pour un monte-charge.</h3>
             
 
             
@@ -339,7 +375,23 @@
                 <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Ne dépasse pas ce qui a été observé.</p></details>
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a03-q02-label">Question 2 — Propose un autre paramètre ou un message de l’écran que tu aimerais changer, et explique ce que cela apporterait à l’utilisateur.</h3>
+            
+
+            
+            
+                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
             
             
         </div>
@@ -352,23 +404,79 @@
     </article>
     
     <article class="cours-activite" id="a04" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>4. Garde le mémo</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Défi</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
-        <p><strong>Pourquoi cette activité ?</strong> Garde une trace courte pour pouvoir réutiliser cette méthode dans une prochaine séance.</p>
-        <h3>Comment procéder ?</h3><ol><li>Relis les deux idées à retenir.</li><li>Note une méthode que tu pourras réutiliser.</li></ol>
+        
 
         
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
+<p>Le capteur à ultrasons mesure la distance pendant le trajet.</p>
+    
+
 
         
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Imagine comment on pourrait utiliser cette distance pour ralentir la cabine juste avant l’arrivée. Écris ton idée en « si … alors … ».</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a05" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Conclusion de ton travail</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as modifié un paramètre et vérifié son effet. Il reste à répondre au problème de départ.</p>
+        
+        
+
+        
+
+        
+        
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment changer la vitesse du moteur, et comment vérifier l’effet de ce changement ?</h3>
+            
+
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -381,18 +489,22 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Une observation visuelle ne permet pas de détecter toutes les substances ou tous les microbes.</li><li>Identifier une limite d’observation et de mesure.</li></ul>
-    <h3>Faire le point</h3><p>Je peux expliquer avec mes mots ce que j’ai appris aujourd’hui et montrer une réponse ou un essai qui le prouve.</p>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Un paramètre est un nombre qui règle un comportement (vitesse 0 à 255).</li><li>On vérifie un changement par un test : prévoir, ne changer qu’une chose, mesurer, comparer.</li></ul>
+    
 </section>
 
+<section class="cours-sources course-info-card" aria-labelledby="course-sources-title"><h2 id="course-sources-title">Sources et ressources officielles</h2>
+<p><a href="https://www.education.gouv.fr/media/160767/download" target="_blank" rel="noopener noreferrer">Ministère de l’Éducation nationale — Programme de technologie du cycle 4 (BO n° 9 du 29 février 2024)</a></p>
 
+
+</section>
 
     <div class="course-submit-panel">
         <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
         <p id="course-submit-status" role="status" aria-live="polite"></p>
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

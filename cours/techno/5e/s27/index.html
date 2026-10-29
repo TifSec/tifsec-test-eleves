@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">1. Repère les indices</a></li><li><a href="#a02">2. À toi de tester</a></li><li><a href="#a03">3. Explique avec une preuve</a></li><li><a href="#a04">4. Garde le mémo</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Saisir et calculer les moyennes</a></li><li><a href="#a02">Le graphique</a></li><li><a href="#a03">Conclure</a></li><li><a href="#a04">Défi : les vraies éoliennes — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -134,62 +134,68 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Technologie · 5e · S27</span></div>
-    <h1>Comment partager sans exposer les autres ?</h1>
+    <h1>Séance 27 : Calc n° 2 : 3, 4 ou 5 pales ?</h1>
     
 
     
     
     <section class="course-info-card cours-theme">
         <h2>Thème du programme</h2>
-        <p>Rechercher, conserver et partager une information</p>
+        <p>Structure, fonctionnement, comportement : des objets et des systèmes techniques à comprendre</p>
     </section>
     
 
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Comment partager sans exposer les autres ?</p>
+        <p>Comment un tableur aide-t-il à comparer les rotors avec des moyennes et un graphique ?</p>
     </section>
     
 
     
-
-    
-    
-
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><p>Distinguer partage utile, données personnelles et droit d’usage.</p></section>
-    
-    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Partager des documents sans exposer les personnes protège leur vie privée et respecte les auteurs.</p></section>
-    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>Après S26 — Comment retrouver une information et sa source ?, nous poursuivons avec un seul objectif : distinguer partage utile, données personnelles et droit d’usage.</p></section>
-    
-    
-    
-<p>Ce que tu vas apprendre : Un partage respecte les données personnelles et les droits d’utilisation.</p>
+    <section class="course-info-card cours-competences-bo">
+        <h2>Compétences travaillées</h2>
+        <ul><li>Caractériser et choisir un objet ou un système technique selon différents critères</li><li>Valider les solutions techniques par des simulations ou par des protocoles de tests</li></ul>
+    </section>
     
 
-<p>Ce que tu vas apprendre à faire : Distinguer partage utile, données personnelles et droit d’usage.</p>
+    
+    
+    <section class="course-info-card cours-objectifs">
+        
+        <h2>Ce que tu vas apprendre</h2>
+        <ul>
+            
+            <li>La fonction MOYENNE calcule la moyenne d’une plage de cellules.</li>
+            
+            <li>Un graphique en barres permet de comparer des valeurs d’un coup d’œil ; il a un titre et des axes nommés.</li>
+            
+        </ul>
+        
+        
+        <h2>Ce que tu vas apprendre à faire</h2>
+        <ul>
+            
+            <li>Calculer une moyenne avec une formule.</li>
+            
+            <li>Créer un graphique en barres et lui donner un titre.</li>
+            
+            <li>Conclure à partir d’un graphique.</li>
+            
+        </ul>
+        
+    </section>
     
 
-<p>Tu vas observer une situation, suivre un exemple guidé, puis faire un essai et vérifier ce qu’il montre.</p>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séance 26, tu as mesuré la tension produite par les rotors.</p><p>Aujourd’hui, tu traites ces mesures avec Calc : moyennes, graphique, conclusion. Ton fichier reste sur l’ordinateur ; sur le site, tu écris tes formules et tes résultats.</p></div></section>
     
-
-<p>À quoi cela sert dans la vie réelle : Partager des documents sans exposer les personnes protège leur vie privée et respecte les auteurs.</p>
     
-
-<p>Tu as environ 50 minutes : 10 minutes pour comprendre, 25 minutes pour faire, 10 minutes pour vérifier et 5 minutes pour le bilan.</p>
     
-
-
     
-    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
-<p>Programme de Technologie du cycle 4, repères de 5e : cette séance contribue progressivement aux compétences ci-dessous ; elle ne prétend pas valider seule une compétence de fin de cycle.</p>
     
-
-<p><a href="https://www.education.gouv.fr/bo/2024/Hebdo9/MENE2402802A" target="_blank" rel="noopener noreferrer">Ministère — Programme de Technologie 2024</a></p>
-
-
-</div></details>
-
+    
+    
+    
     
     <nav class="course-mission-controls course-intro-controls" aria-label="Commencer la séance"><a class="course-mission-next" href="#a01">J’ai compris l’objectif : commencer la première mission <span aria-hidden="true">→</span></a></nav>
 </header>
@@ -203,23 +209,26 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>1. Repère les indices</h2>
+        <h2>Saisir et calculer les moyennes</h2>
         
         
-        <p><strong>Pourquoi cette activité ?</strong> Observe la situation et l’exemple guidé : ils montrent ce qu’il faut comprendre avant de commencer.</p>
-        <h3>Comment procéder ?</h3><ol><li>Lis la situation et repère les informations utiles.</li><li>Suis l’exemple guidé et repère la méthode utilisée.</li><li>Réponds aux questions en t’appuyant sur le cours.</li></ol>
+        
+        
 
         
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Document envisagé</th><th scope="col">Contenu</th></tr></thead><tbody><tr><td>A</td><td>Photo de classe avec noms complets</td></tr><tr><td>B</td><td>Schéma original de cuve sans visage ni nom</td></tr><tr><td>C</td><td>Image trouvée sans auteur ni licence</td></tr></tbody></table></div>
+<p>Utilise les mesures du document 2 de la séance 26 (valeurs inventées), rappelées ici :</p>
     
 
-<p>Un travail peut être partagé sans révéler l’identité des élèves. L’autorisation d’utiliser une image n’est pas donnée par sa simple présence sur internet.</p>
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Ce que tu dois obtenir dans Calc</caption><thead><tr><th scope="col"></th><th scope="col">A</th><th scope="col">B</th><th scope="col">C</th><th scope="col">D</th><th scope="col">E</th></tr></thead><tbody><tr><td>1</td><td>Rotor</td><td>Mesure 1 (V)</td><td>Mesure 2 (V)</td><td>Mesure 3 (V)</td><td>Moyenne (V)</td></tr><tr><td>2</td><td>3 pales</td><td>18</td><td>19</td><td>17</td><td></td></tr><tr><td>3</td><td>4 pales</td><td>22</td><td>24</td><td>23</td><td></td></tr><tr><td>4</td><td>5 pales</td><td>21</td><td>20</td><td>22</td><td></td></tr></tbody></table></div>
     
 
-<p>Exemple guidé : avant de partager une capture d’écran, je vérifie qu’elle ne montre ni nom complet, ni visage, ni identifiant. Je retire ces informations et je cite l’auteur d’une image que je réutilise.</p>
+<ol><li>Ouvre Calc et enregistre sous 5e_S27_tonprenom.ods.</li><li>Recopie le tableau (sans la colonne E pour l’instant).</li><li>En E2, écris =MOYENNE(B2:D2) puis Entrée.</li><li>Recopie la formule vers le bas jusqu’à E4 avec la poignée (comme en séance 16).</li></ol>
+    
+
+<p>Exemple expliqué : =MOYENNE(B2:D2) additionne B2, C2 et D2 puis divise par 3. Pour le rotor à 3 pales : (1,8 + 1,9 + 1,7) ÷ 3 = 1,8 V.</p>
     
 
 
@@ -228,7 +237,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Quel document contient des données personnelles évidentes ?</h3>
+            <h3 id="a01-q01-label">Question 1 — Écris la formule que tu as mise en E3.</h3>
             
 
             
@@ -236,7 +245,7 @@
                 <textarea id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Pense à ce qui permet d’identifier une personne.</p></details>
+            
             
             
         </div>
@@ -244,15 +253,15 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Pourquoi C ne peut-il pas être réutilisé sans vérification ?</h3>
+            <h3 id="a01-q02-label">Question 2 — Quelle moyenne le tableur affiche-t-il pour le rotor à 5 pales ?</h3>
             
 
             
             
-                <textarea id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><p>Unité : V</p>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Accessible ne signifie pas libre de droits.</p></details>
+            
             
             
         </div>
@@ -266,42 +275,53 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>2. À toi de tester</h2>
+        <h2>Le graphique</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les moyennes sont calculées. Un graphique les rend faciles à comparer.</p>
         
         
-        <p><strong>Pourquoi cette activité ?</strong> Tu viens de voir la méthode ; maintenant, applique-la dans un essai que tu peux vérifier.</p>
-        <h3>Comment procéder ?</h3><ol><li>Choisir un schéma de ton travail et lui donner un titre clair.</li><li>Retirer les données personnelles inutiles.</li><li>Préciser la source des éléments réutilisés ou dessiner soi-même une version simple.</li></ol>
 
         
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Note une trace courte : ce que tu as fait, ce que tu attendais et ce que tu as observé.</p>
+<ol><li>Sélectionne les cellules A1 à A4, puis, en maintenant Ctrl, les cellules E1 à E4.</li><li>Menu Insertion &gt; Diagramme, choisis « Colonne » (barres verticales).</li><li>Donne un titre : Tension moyenne selon le nombre de pales.</li><li>Nomme l’axe vertical : Tension (V).</li><li>Enregistre (Ctrl + S).</li></ol>
+    
+
+<p>Un graphique sans titre ni unité est inutilisable : le lecteur ne sait pas ce qu’il regarde (réflexe n° 5).</p>
     
 
 
-        <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
-<p>Lire comment accéder aux parcours avec son établissement et conserver son compte.</p>
-    
-
-<p><a href="https://pix.fr/eleve/" target="_blank" rel="noopener noreferrer">Pix — Espace élève</a></p>
-
-
-</div></details>
-
+        
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Décrire deux choix faits pour rendre ton document partageable et compréhensible.</h3>
+            <h3 id="a02-q01-label">Question 1 — Pourquoi choisir un graphique en barres pour comparer les rotors ?</h3>
             
 
             
             
-                <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <select id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label"><option value="">Choisis une réponse</option><option value="a">Pour comparer les hauteurs des barres d’un coup d’œil.</option><option value="b">Pour montrer une évolution dans le temps.</option><option value="c">Pour faire joli.</option></select>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Une action protège les personnes, une autre aide à comprendre.</p></details>
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a02-q02-label">Question 2 — Écris le titre de ton graphique et le nom de son axe vertical.</h3>
+            
+
+            
+            
+                <textarea id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
             
             
         </div>
@@ -315,31 +335,66 @@
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>3. Explique avec une preuve</h2>
+        <h2>Conclure</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le graphique est prêt. Il reste à conclure, chiffres à l’appui.</p>
         
         
-        <p><strong>Pourquoi cette activité ?</strong> Avant de conclure, relie ta réponse à une observation ou à une information précise.</p>
-        <h3>Comment procéder ?</h3><ol><li>Répondre en une à trois phrases.</li><li>Citer une observation, une règle ou une valeur du document.</li></ol>
 
         
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
+<p>Rappel des réflexes n° 4 et 5 : « car » + des valeurs avec leur unité.</p>
+    
+
 
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Un lien public est proposé pour le travail du groupe. Quelle vérification faut-il demander avant diffusion ?</h3>
+            <h3 id="a03-q01-label">Question 1 — D’après ton graphique, quel rotor produit la tension moyenne la plus élevée ?</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <select id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label"><option value="">Choisis une réponse</option><option value="a">Le rotor à 4 pales.</option><option value="b">Le rotor à 3 pales.</option><option value="c">Le rotor à 5 pales.</option></select>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Diffuser au groupe et publier à tous ne sont pas la même chose.</p></details>
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a03-q02-label">Question 2 — Plus de pales, est-ce toujours mieux ? Justifie avec les moyennes.</h3>
+            
+
+            
+            
+                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a03-q03-label">Question 3 — Nos propres mesures de la séance 26 donnent-elles le même classement ? Compare.</h3>
+            
+
+            
+            
+                <textarea id="a03-q03" data-answer-id="a03_q03" data-required="true" aria-labelledby="a03-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
             
             
         </div>
@@ -352,23 +407,79 @@
     </article>
     
     <article class="cours-activite" id="a04" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>4. Garde le mémo</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Défi : les vraies éoliennes</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
-        <p><strong>Pourquoi cette activité ?</strong> Garde une trace courte pour pouvoir réutiliser cette méthode dans une prochaine séance.</p>
-        <h3>Comment procéder ?</h3><ol><li>Relis les deux idées à retenir.</li><li>Note une méthode que tu pourras réutiliser.</li></ol>
+        
 
         
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
+<p>Les grandes éoliennes ont presque toutes 3 pales.</p>
+    
+
 
         
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Cherche ou propose une raison pour laquelle on ne met pas plus de pales sur les grandes éoliennes.</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a05" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Conclusion de ton travail</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as calculé, représenté et conclu. Il reste à répondre au problème de départ.</p>
+        
+        
+
+        
+
+        
+        
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment un tableur aide-t-il à comparer les rotors ?</h3>
+            
+
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -381,18 +492,22 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Un partage respecte les données personnelles et les droits d’utilisation.</li><li>Distinguer partage utile, données personnelles et droit d’usage.</li></ul>
-    <h3>Faire le point</h3><p>Je peux expliquer avec mes mots ce que j’ai appris aujourd’hui et montrer une réponse ou un essai qui le prouve.</p>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>=MOYENNE(B2:D2) calcule une moyenne.</li><li>Un graphique en barres compare des catégories ; il a un titre et des axes avec unité.</li><li>Plus de pales n’est pas toujours mieux : il faut mesurer pour le savoir.</li></ul>
+    
 </section>
 
+<section class="cours-sources course-info-card" aria-labelledby="course-sources-title"><h2 id="course-sources-title">Sources et ressources officielles</h2>
+<p><a href="https://www.education.gouv.fr/media/160767/download" target="_blank" rel="noopener noreferrer">Ministère de l’Éducation nationale — Programme de technologie du cycle 4 (BO n° 9 du 29 février 2024)</a></p>
 
+
+</section>
 
     <div class="course-submit-panel">
         <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
         <p id="course-submit-status" role="status" aria-live="polite"></p>
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

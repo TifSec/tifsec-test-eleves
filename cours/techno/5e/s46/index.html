@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">1. Repère les indices</a></li><li><a href="#a02">2. À toi de tester</a></li><li><a href="#a03">3. Explique avec une preuve</a></li><li><a href="#a04">4. Garde le mémo</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Le protocole (poste maquette)</a></li><li><a href="#a02">Panneau fixe ou panneau qui suit ?</a></li><li><a href="#a03">Défi — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -134,62 +134,68 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Technologie · 5e · S46</span></div>
-    <h1>Réaliser puis chercher un défaut</h1>
+    <h1>Séance 46 : Notre amélioration fonctionne-t-elle ?</h1>
     
 
     
     
     <section class="course-info-card cours-theme">
         <h2>Thème du programme</h2>
-        <p>Améliorer, réaliser et valider une solution numérique</p>
+        <p>Création, conception, réalisation, innovations : des objets à concevoir et à réaliser</p>
     </section>
     
 
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Réaliser puis chercher un défaut</p>
+        <p>Comment prouver, par des tests sur le vrai tracker, que notre amélioration fonctionne ?</p>
     </section>
     
 
     
-
-    
-    
-
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><p>Modifier un programme ou document existant et conserver une preuve.</p></section>
-    
-    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Une méthode de dépannage étape par étape évite les modifications au hasard.</p></section>
-    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>Après S45 — Comment préparer un prototype testable ?, nous poursuivons avec un seul objectif : modifier un programme ou document existant et conserver une preuve.</p></section>
-    
-    
-    
-<p>Ce que tu vas apprendre : Dépanner consiste à isoler une cause possible puis à vérifier l’effet d’une correction.</p>
+    <section class="course-info-card cours-competences-bo">
+        <h2>Compétence travaillée</h2>
+        <ul><li>Valider les solutions techniques par des simulations ou par des protocoles de tests</li></ul>
+    </section>
     
 
-<p>Ce que tu vas apprendre à faire : Modifier un programme ou document existant et conserver une preuve.</p>
+    
+    
+    <section class="course-info-card cours-objectifs">
+        
+        <h2>Ce que tu vas apprendre</h2>
+        <ul>
+            
+            <li>Un protocole de test sur l’objet réel reprend les tests du simulateur avec de vraies conditions (lampe, ombre).</li>
+            
+            <li>On conclut à partir de résultats notés, et on dit honnêtement ce qui ne marche pas encore.</li>
+            
+        </ul>
+        
+        
+        <h2>Ce que tu vas apprendre à faire</h2>
+        <ul>
+            
+            <li>Tester une modification sur l’objet réel en suivant un protocole.</li>
+            
+            <li>Noter et exploiter des résultats dans un tableur.</li>
+            
+            <li>Conclure honnêtement.</li>
+            
+        </ul>
+        
+    </section>
     
 
-<p>Tu vas observer une situation, suivre un exemple guidé, puis faire un essai et vérifier ce qu’il montre.</p>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séance 45, ton groupe a programmé et testé son amélioration dans le simulateur.</p><p>Aujourd’hui, chaque groupe envoie son programme sur le vrai tracker et le teste. Le professeur remet le programme d’origine à la fin.</p></div></section>
     
-
-<p>À quoi cela sert dans la vie réelle : Une méthode de dépannage étape par étape évite les modifications au hasard.</p>
     
-
-<p>Tu as environ 50 minutes : 10 minutes pour comprendre, 25 minutes pour faire, 10 minutes pour vérifier et 5 minutes pour le bilan.</p>
     
-
-
     
-    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
-<p>Programme de Technologie du cycle 4, repères de 5e : cette séance contribue progressivement aux compétences ci-dessous ; elle ne prétend pas valider seule une compétence de fin de cycle.</p>
     
-
-<p><a href="https://www.education.gouv.fr/bo/2024/Hebdo9/MENE2402802A" target="_blank" rel="noopener noreferrer">Ministère — Programme de Technologie 2024</a></p>
-
-
-</div></details>
-
+    
+    
+    
     
     <nav class="course-mission-controls course-intro-controls" aria-label="Commencer la séance"><a class="course-mission-next" href="#a01">J’ai compris l’objectif : commencer la première mission <span aria-hidden="true">→</span></a></nav>
 </header>
@@ -203,20 +209,20 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>1. Repère les indices</h2>
+        <h2>Le protocole (poste maquette)</h2>
         
         
-        <p><strong>Pourquoi cette activité ?</strong> Observe la situation et l’exemple guidé : ils montrent ce qu’il faut comprendre avant de commencer.</p>
-        <h3>Comment procéder ?</h3><ol><li>Lis la situation et repère les informations utiles.</li><li>Suis l’exemple guidé et repère la méthode utilisée.</li><li>Réponds aux questions en t’appuyant sur le cours.</li></ol>
+        
+        
 
         
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Aujourd’hui, on réalise l’amélioration préparée en S45. Une erreur repérée et expliquée est une trace utile. On évite d’ajouter un nouvel objectif avant d’avoir testé le premier.</p>
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Protocole de test</caption><thead><tr><th scope="col">Étape</th><th scope="col">Ce qu’on fait</th></tr></thead><tbody><tr><td>1</td><td>Le professeur envoie le programme du groupe sur la carte.</td></tr><tr><td>2</td><td>On refait les deux tests de la séance 45 avec une lampe de poche (jour) ou en cachant les capteurs (nuit).</td></tr><tr><td>3</td><td>On note les résultats observés.</td></tr><tr><td>4</td><td>Le professeur remet le programme d’origine.</td></tr></tbody></table></div>
     
 
-<p>Exemple guidé : si l’affichage reste bloqué, je refais le même test et je vérifie une chose à la fois : événement reçu, valeur de la variable, puis condition. Je corrige seulement après avoir repéré l’étape fautive.</p>
+<p>Les groupes qui attendent leur passage travaillent sur la mission 2.</p>
     
 
 
@@ -225,15 +231,77 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Quel élément as-tu effectivement modifié ?</h3>
+            <h3 id="a01-q01-label">Question 1 — Écris les résultats de tes deux tests sur le vrai tracker.</h3>
             
 
             
             
-                <textarea id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Évite « j’ai amélioré le projet » sans détail.</p></details>
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Test</th>
+                                
+                                <th>Résultat attendu</th>
+                                
+                                <th>Résultat observé</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r0_c0" data-required="true" data-row="0" data-col="0" aria-label="Le protocole (poste maquette) — Test — ">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Le protocole (poste maquette) — Résultat attendu — ">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r0_c2" data-required="true" data-row="0" data-col="2" aria-label="Le protocole (poste maquette) — Résultat observé — ">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r1_c0" data-required="true" data-row="1" data-col="0" aria-label="Le protocole (poste maquette) — Test — ">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Le protocole (poste maquette) — Résultat attendu — ">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r1_c2" data-required="true" data-row="1" data-col="2" aria-label="Le protocole (poste maquette) — Résultat observé — ">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            
             
             
         </div>
@@ -241,7 +309,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Quel élément as-tu gardé identique pour comparer ?</h3>
+            <h3 id="a01-q02-label">Question 2 — Y a-t-il une différence entre le simulateur et le vrai tracker ? Si oui, propose une explication.</h3>
             
 
             
@@ -249,7 +317,7 @@
                 <textarea id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Relis le protocole de S45.</p></details>
+            
             
             
         </div>
@@ -263,45 +331,72 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>2. À toi de tester</h2>
+        <h2>Panneau fixe ou panneau qui suit ?</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Ton amélioration est testée. Une question reste : le tracker est-il vraiment utile par rapport à un panneau fixe ?</p>
         
         
-        <p><strong>Pourquoi cette activité ?</strong> Tu viens de voir la méthode ; maintenant, applique-la dans un essai que tu peux vérifier.</p>
-        <h3>Comment procéder ?</h3><ol><li>Effectuer la modification dans la copie du projet.</li><li>Exécuter le test prévu, puis provoquer un cas différent.</li><li>Conserver une trace de l’avant, de l’après et d’un défaut ou d’une limite repérés.</li></ol>
 
         
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Note une trace courte : ce que tu as fait, ce que tu attendais et ce que tu as observé.</p>
+<p>Démonstration : on éclaire le panneau avec une lampe placée à cinq positions, et on mesure la tension du panneau (multimètre), tracker éteint (fixe) puis allumé (il suit).</p>
+    
+
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 2 — Exemple de mesures (valeurs inventées)</caption><thead><tr><th scope="col">Position de la lampe</th><th scope="col">Panneau fixe (V)</th><th scope="col">Panneau qui suit (V)</th></tr></thead><tbody><tr><td>1 (gauche)</td><td>0,8</td><td>20</td></tr><tr><td>2</td><td>14</td><td>21</td></tr><tr><td>3 (face)</td><td>21</td><td>21</td></tr><tr><td>4</td><td>13</td><td>20</td></tr><tr><td>5 (droite)</td><td>7</td><td>19</td></tr></tbody></table></div>
+    
+
+<ol><li>Dans Calc, recopie le tableau (enregistre sous 5e_S46_groupe.ods).</li><li>Calcule la moyenne de chaque colonne avec =MOYENNE() (séance 27).</li><li>Calcule l’écart entre les deux moyennes.</li></ol>
     
 
 
-        <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
-<p>Dans la documentation, retrouver les blocs d’événement, variable et condition utilisés aujourd’hui.</p>
-    
-
-<p><a href="https://makecode.microbit.org/reference" target="_blank" rel="noopener noreferrer">MakeCode micro:bit — Référence</a></p>
-
-
-<p><a href="https://makecode.microbit.org/" target="_blank" rel="noopener noreferrer">Ouvrir le simulateur MakeCode micro:bit</a></p>
-
-
-</div></details>
-
+        
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Décrire un essai avec action, résultat attendu, observation et décision après l’essai.</h3>
+            <h3 id="a02-q01-label">Question 1 — Quelle est la moyenne du panneau fixe ?</h3>
             
 
             
             
-                <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label"><p>Unité : V</p>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Un résultat inattendu doit être décrit avant d’être corrigé.</p></details>
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a02-q02-label">Question 2 — Quelle est la moyenne du panneau qui suit ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><p>Unité : V</p>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a02-q03-label">Question 3 — D’après ces moyennes, le tracker est-il utile ? Justifie avec les valeurs et leur unité.</h3>
+            
+
+            
+            
+                <textarea id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
             
             
         </div>
@@ -314,32 +409,35 @@
     </article>
     
     <article class="cours-activite" id="a03" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>3. Explique avec une preuve</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Défi</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
-        <p><strong>Pourquoi cette activité ?</strong> Avant de conclure, relie ta réponse à une observation ou à une information précise.</p>
-        <h3>Comment procéder ?</h3><ol><li>Répondre en une à trois phrases.</li><li>Citer une observation, une règle ou une valeur du document.</li></ol>
+        
 
         
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
+<p>Le servomoteur consomme aussi de l’énergie.</p>
+    
+
 
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Un premier essai réussit. Pourquoi faut-il encore rechercher un cas différent ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Que faudrait-il mesurer de plus pour savoir si le tracker gagne vraiment de l’énergie au total ?</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Pense redémarrage, seuil ou information absente selon ton support.</p></details>
+            
             
             
         </div>
@@ -352,19 +450,34 @@
     </article>
     
     <article class="cours-activite" id="a04" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>4. Garde le mémo</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Conclusion de ton travail</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as testé sur l’objet réel et comparé. Il reste à répondre au problème de départ.</p>
         
         
-        <p><strong>Pourquoi cette activité ?</strong> Garde une trace courte pour pouvoir réutiliser cette méthode dans une prochaine séance.</p>
-        <h3>Comment procéder ?</h3><ol><li>Relis les deux idées à retenir.</li><li>Note une méthode que tu pourras réutiliser.</li></ol>
 
         
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
+        
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Réponds au problème du jour : comment prouver que votre amélioration fonctionne ? Votre amélioration fonctionne-t-elle ?</h3>
+            
 
-        
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
@@ -381,11 +494,15 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Dépanner consiste à isoler une cause possible puis à vérifier l’effet d’une correction.</li><li>Modifier un programme ou document existant et conserver une preuve.</li></ul>
-    <h3>Faire le point</h3><p>Je peux expliquer avec mes mots ce que j’ai appris aujourd’hui et montrer une réponse ou un essai qui le prouve.</p>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>On prouve une amélioration par des tests sur l’objet réel : attendu, observé, conclusion honnête.</li><li>Une moyenne permet de comparer deux séries de mesures.</li></ul>
+    
 </section>
 
+<section class="cours-sources course-info-card" aria-labelledby="course-sources-title"><h2 id="course-sources-title">Sources et ressources officielles</h2>
+<p><a href="https://www.education.gouv.fr/media/160767/download" target="_blank" rel="noopener noreferrer">Ministère de l’Éducation nationale — Programme de technologie du cycle 4 (BO n° 9 du 29 février 2024)</a></p>
 
+
+</section>
 
     <div class="course-submit-panel">
         <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>

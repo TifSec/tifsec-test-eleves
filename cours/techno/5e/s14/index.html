@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">1. Repère les indices</a></li><li><a href="#a02">2. À toi de tester</a></li><li><a href="#a03">3. Explique avec une preuve</a></li><li><a href="#a04">4. Garde le mémo</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Bits et octets</a></li><li><a href="#a02">Quel fichier est le plus lourd ?</a></li><li><a href="#a03">Envoyer et stocker</a></li><li><a href="#a04">Défi calcul — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -134,62 +134,70 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Technologie · 5e · S14</span></div>
-    <h1>Comment mémoriser une position ?</h1>
+    <h1>Séance 14 : Combien pèse un fichier ?</h1>
     
 
     
     
     <section class="course-info-card cours-theme">
         <h2>Thème du programme</h2>
-        <p>Comprendre et commander un monte-charge</p>
+        <p>Les objets et les systèmes techniques : leurs usages et leurs interactions à découvrir et analyser</p>
     </section>
     
 
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Comment mémoriser une position ?</p>
+        <p>Comment mesurer la quantité d’information d’un fichier, et pourquoi une vidéo prend-elle plus de place qu’un texte ?</p>
     </section>
     
 
     
-
-    
-    
-
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><p>Utiliser une variable pour représenter un état.</p></section>
-    
-    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Les compteurs de points, les réglages et les états d’un appareil reposent sur des informations mémorisées.</p></section>
-    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>Après S13 — Comment un bouton déclenche-t-il une action ?, nous poursuivons avec un seul objectif : utiliser une variable pour représenter un état.</p></section>
-    
-    
-    
-<p>Ce que tu vas apprendre : Une variable conserve une information qui peut changer pendant le programme.</p>
+    <section class="course-info-card cours-competences-bo">
+        <h2>Compétence travaillée</h2>
+        <ul><li>Décrire les liens entre usages et évolutions technologiques des objets et des systèmes techniques</li></ul>
+    </section>
     
 
-<p>Ce que tu vas apprendre à faire : Utiliser une variable pour représenter un état.</p>
+    
+    
+    <section class="course-info-card cours-objectifs">
+        
+        <h2>Ce que tu vas apprendre</h2>
+        <ul>
+            
+            <li>Le bit est la plus petite information possible : 0 ou 1. Un octet est un groupe de 8 bits.</li>
+            
+            <li>Multiples : 1 kilooctet (Ko) = 1 000 octets ; 1 mégaoctet (Mo) = 1 000 Ko ; 1 gigaoctet (Go) = 1 000 Mo.</li>
+            
+            <li>Ordres de grandeur : un texte de quelques pages pèse quelques Ko, une photo quelques Mo, une minute de vidéo des dizaines de Mo.</li>
+            
+        </ul>
+        
+        
+        <h2>Ce que tu vas apprendre à faire</h2>
+        <ul>
+            
+            <li>Convertir entre Ko, Mo et Go.</li>
+            
+            <li>Comparer la taille de fichiers différents.</li>
+            
+            <li>Toujours écrire l’unité (réflexe brevet n° 5).</li>
+            
+        </ul>
+        
+    </section>
     
 
-<p>Tu vas observer une situation, suivre un exemple guidé, puis faire un essai et vérifier ce qu’il montre.</p>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séance 13, tu as vu que chaque fichier a un type.</p><p>Les fichiers n’ont pas tous la même taille : une vidéo remplit vite une clé USB, un texte presque pas. Aujourd’hui, tu apprends à mesurer cette quantité d’information.</p></div></section>
     
-
-<p>À quoi cela sert dans la vie réelle : Les compteurs de points, les réglages et les états d’un appareil reposent sur des informations mémorisées.</p>
     
-
-<p>Tu as environ 50 minutes : 10 minutes pour comprendre, 25 minutes pour faire, 10 minutes pour vérifier et 5 minutes pour le bilan.</p>
     
-
-
     
-    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
-<p>Programme de Technologie du cycle 4, repères de 5e : cette séance contribue progressivement aux compétences ci-dessous ; elle ne prétend pas valider seule une compétence de fin de cycle.</p>
     
-
-<p><a href="https://www.education.gouv.fr/bo/2024/Hebdo9/MENE2402802A" target="_blank" rel="noopener noreferrer">Ministère — Programme de Technologie 2024</a></p>
-
-
-</div></details>
-
+    
+    
+    
     
     <nav class="course-mission-controls course-intro-controls" aria-label="Commencer la séance"><a class="course-mission-next" href="#a01">J’ai compris l’objectif : commencer la première mission <span aria-hidden="true">→</span></a></nav>
 </header>
@@ -203,26 +211,26 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>1. Repère les indices</h2>
+        <h2>Bits et octets</h2>
         
         
-        <p><strong>Pourquoi cette activité ?</strong> Observe la situation et l’exemple guidé : ils montrent ce qu’il faut comprendre avant de commencer.</p>
-        <h3>Comment procéder ?</h3><ol><li>Lis la situation et repère les informations utiles.</li><li>Suis l’exemple guidé et repère la méthode utilisée.</li><li>Réponds aux questions en t’appuyant sur le cours.</li></ol>
+        
+        
 
         
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Une variable est une information conservée par le programme. Comme la case d’un tableau, elle a un nom et une valeur. Ici position vaut 0 en BAS et 1 en HAUT.</p>
+<p>Dans un ordinateur, toute information est écrite avec seulement deux symboles : 0 et 1. Un 0 ou un 1 s’appelle un bit.</p>
     
 
-<pre class="cours-code"><code>Au démarrage : position ← 0
-Bouton A : position ← 1
-Bouton B : position ← 0
-Toujours : afficher position</code></pre>
+<p>8 bits forment un octet. Un octet suffit pour écrire une lettre, par exemple la lettre A.</p>
     
 
-<p>Exemple guidé dans un jeu : la variable score vaut 0 au départ ; après une pièce, elle vaut 1. Cette comparaison montre qu’une variable garde une valeur. Revenons au monte-charge : position garde l’état BAS ou HAUT.</p>
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Unité</th><th scope="col">Valeur</th></tr></thead><tbody><tr><td>1 octet</td><td>8 bits</td></tr><tr><td>1 kilooctet (Ko)</td><td>1 000 octets</td></tr><tr><td>1 mégaoctet (Mo)</td><td>1 000 Ko</td></tr><tr><td>1 gigaoctet (Go)</td><td>1 000 Mo</td></tr></tbody></table></div>
+    
+
+<p>Exemple expliqué : combien de Ko dans 3 Mo ? 1 Mo = 1 000 Ko, donc 3 Mo = 3 × 1 000 = 3 000 Ko.</p>
     
 
 
@@ -231,15 +239,15 @@ Toujours : afficher position</code></pre>
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Quelle valeur représente la position haute dans ce modèle ?</h3>
+            <h3 id="a01-q01-label">Question 1 — Combien de bits y a-t-il dans 4 octets ?</h3>
             
 
             
             
-                <textarea id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><p>Unité : bits</p>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Lis la convention de codage.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Un octet = 8 bits.</p></details>
             
             
         </div>
@@ -247,15 +255,15 @@ Toujours : afficher position</code></pre>
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Pourquoi faut-il donner une valeur à position au démarrage ?</h3>
+            <h3 id="a01-q02-label">Question 2 — Combien de Mo y a-t-il dans 2 Go ?</h3>
             
 
             
             
-                <textarea id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><p>Unité : Mo</p>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Imagine deux essais qui commencent avec des valeurs différentes.</p></details>
+            
             
             
         </div>
@@ -269,45 +277,72 @@ Toujours : afficher position</code></pre>
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>2. À toi de tester</h2>
+        <h2>Quel fichier est le plus lourd ?</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais convertir les unités. Maintenant, compare la taille de fichiers différents et vois ce qui les rend lourds.</p>
         
         
-        <p><strong>Pourquoi cette activité ?</strong> Tu viens de voir la méthode ; maintenant, applique-la dans un essai que tu peux vérifier.</p>
-        <h3>Comment procéder ?</h3><ol><li>Modifier une copie du projet de S13.</li><li>Créer position dans Variables, puis reconstituer le programme fourni.</li><li>Tester A, B, A et redémarrage ; noter la valeur à chaque fois.</li></ol>
 
         
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Note une trace courte : ce que tu as fait, ce que tu attendais et ce que tu as observé.</p>
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Tailles habituelles (ordres de grandeur)</caption><thead><tr><th scope="col">Fichier</th><th scope="col">Taille</th></tr></thead><tbody><tr><td>Fiche Writer de 2 pages (texte)</td><td>20 Ko</td></tr><tr><td>Photo prise avec un téléphone</td><td>4 Mo</td></tr><tr><td>Chanson de 3 minutes (MP3)</td><td>5 Mo</td></tr><tr><td>Vidéo de 1 minute en haute définition</td><td>100 Mo</td></tr></tbody></table></div>
+    
+
+<blockquote>Réflexe brevet n° 5 : j’écris toujours l’unité de mes résultats (Ko, Mo, Go, km, W…). Un nombre sans unité ne veut rien dire.</blockquote>
+    
+
+<p>Exemple : « 4 » ne dit rien ; « 4 Mo » dit qu’il s’agit d’une photo d’environ 4 mégaoctets.</p>
     
 
 
-        <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
-<p>Dans la documentation, retrouver les blocs d’événement, variable et condition utilisés aujourd’hui.</p>
-    
-
-<p><a href="https://makecode.microbit.org/reference" target="_blank" rel="noopener noreferrer">MakeCode micro:bit — Référence</a></p>
-
-
-<p><a href="https://makecode.microbit.org/" target="_blank" rel="noopener noreferrer">Ouvrir le simulateur MakeCode micro:bit</a></p>
-
-
-</div></details>
-
+        
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Donner les valeurs observées après A, B, A puis redémarrage.</h3>
+            <h3 id="a02-q01-label">Question 1 — D’après le document 1, quel fichier est le plus lourd ?</h3>
             
 
             
             
-                <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <select id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label"><option value="">Choisis une réponse</option><option value="a">La fiche Writer.</option><option value="b">La photo.</option><option value="c">La vidéo d’une minute.</option></select>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Affiche la variable, pas un nombre écrit à la main.</p></details>
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a02-q02-label">Question 2 — D’après le document 1, combien de photos de 4 Mo peut-on mettre sur une clé USB de 1 Go ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><p>Unité : photos</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Convertis d’abord 1 Go en Mo, puis divise par la taille d’une photo.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a02-q03-label">Question 3 — Pourquoi une vidéo est-elle beaucoup plus lourde qu’un texte ? Explique avec « car ».</h3>
+            
+
+            
+            
+                <textarea id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
             
             
         </div>
@@ -321,23 +356,26 @@ Toujours : afficher position</code></pre>
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>3. Explique avec une preuve</h2>
+        <h2>Envoyer et stocker</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais quels fichiers sont lourds. Cela a des conséquences quand on les envoie ou qu’on les garde.</p>
         
         
-        <p><strong>Pourquoi cette activité ?</strong> Avant de conclure, relie ta réponse à une observation ou à une information précise.</p>
-        <h3>Comment procéder ?</h3><ol><li>Répondre en une à trois phrases.</li><li>Citer une observation, une règle ou une valeur du document.</li></ol>
 
         
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
+<p>Plus un fichier est lourd, plus il met de temps à être envoyé et plus il remplit la mémoire d’un téléphone ou d’un serveur. Les serveurs qui stockent nos fichiers consomment de l’électricité.</p>
+    
+
 
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Un programme affiche toujours 0 même après A. Proposer une vérification précise.</h3>
+            <h3 id="a03-q01-label">Question 1 — Donne un conseil pour envoyer moins de données quand on partage des photos, et explique pourquoi c’est utile.</h3>
             
 
             
@@ -345,7 +383,7 @@ Toujours : afficher position</code></pre>
                 <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Il peut s’agir du changement de valeur ou de ce qui est affiché.</p></details>
+            
             
             
         </div>
@@ -358,23 +396,79 @@ Toujours : afficher position</code></pre>
     </article>
     
     <article class="cours-activite" id="a04" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>4. Garde le mémo</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Défi calcul</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
-        <p><strong>Pourquoi cette activité ?</strong> Garde une trace courte pour pouvoir réutiliser cette méthode dans une prochaine séance.</p>
-        <h3>Comment procéder ?</h3><ol><li>Relis les deux idées à retenir.</li><li>Note une méthode que tu pourras réutiliser.</li></ol>
+        
 
         
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
+<p>Une minute de vidéo pèse environ 100 Mo.</p>
+    
+
 
         
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Combien pèse environ un film de 2 heures ? Donne le résultat en Go, avec le calcul.</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a05" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Conclusion de ton travail</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as appris les unités, comparé des fichiers et réfléchi à leur envoi. Il reste à répondre au problème de départ.</p>
+        
+        
+
+        
+
+        
+        
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment mesurer la quantité d’information d’un fichier, et pourquoi une vidéo prend-elle plus de place qu’un texte ?</h3>
+            
+
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -387,18 +481,22 @@ Toujours : afficher position</code></pre>
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Une variable conserve une information qui peut changer pendant le programme.</li><li>Utiliser une variable pour représenter un état.</li></ul>
-    <h3>Faire le point</h3><p>Je peux expliquer avec mes mots ce que j’ai appris aujourd’hui et montrer une réponse ou un essai qui le prouve.</p>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Bit : 0 ou 1. Octet : 8 bits. Ko, Mo, Go : on multiplie par 1 000 à chaque fois.</li><li>Une vidéo est bien plus lourde qu’une photo, elle-même plus lourde qu’un texte.</li><li>Réflexe brevet n° 5 : j’écris toujours l’unité.</li></ul>
+    
 </section>
 
+<section class="cours-sources course-info-card" aria-labelledby="course-sources-title"><h2 id="course-sources-title">Sources et ressources officielles</h2>
+<p><a href="https://www.education.gouv.fr/media/160767/download" target="_blank" rel="noopener noreferrer">Ministère de l’Éducation nationale — Programme de technologie du cycle 4 (BO n° 9 du 29 février 2024)</a></p>
 
+
+</section>
 
     <div class="course-submit-panel">
         <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
         <p id="course-submit-status" role="status" aria-live="polite"></p>
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

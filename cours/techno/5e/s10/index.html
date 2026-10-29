@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a04">1. Avant de programmer : retrouvons notre méthode</a></li><li><a href="#a05">2. Créer notre premier personnage</a></li><li><a href="#a06">3. Permettre au joueur de déplacer le personnage</a></li><li><a href="#a07">4. Une valeur peut modifier le comportement</a></li><li><a href="#a08">5. Ajouter l&#39;objet à récupérer</a></li><li><a href="#a09">6. Que se passe-t-il lorsque le joueur touche l&#39;objet ?</a></li><li><a href="#a10">7. Le programme doit se souvenir</a></li><li><a href="#a11">8. Créer la sortie</a></li><li><a href="#a12">9. La sortie ne doit pas toujours provoquer la victoire</a></li><li><a href="#a13">10. Tester plusieurs situations</a></li><li><a href="#a14">11. Quand un test échoue</a></li><li><a href="#a15">12. Petit défi : maintenant, avec moins d&#39;aide</a></li><li><a href="#a16">13. Conclusion</a></li><li><a href="#a17">Sources et ressources</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Collecter les informations</a></li><li><a href="#a02">Ranger sur une frise</a></li><li><a href="#a03">Expliquer les évolutions</a></li><li><a href="#a04">Et demain ? — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -134,24 +134,29 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Technologie · 5e · S10</span></div>
-    <h1>Comment assembler nos petites solutions pour créer un jeu ?</h1>
+    <h1>Séance 10 : Comment la lampe a-t-elle évolué ?</h1>
     
 
     
     
     <section class="course-info-card cours-theme">
         <h2>Thème du programme</h2>
-        <p>Structure, fonctionnement, comportement : des objets et des systèmes techniques à comprendre</p>
+        <p>Les objets et les systèmes techniques : leurs usages et leurs interactions à découvrir et analyser</p>
     </section>
     
 
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Comment construire progressivement un programme en assemblant plusieurs petites solutions ?</p>
+        <p>Pourquoi la façon de s’éclairer a-t-elle changé au cours de l’histoire ?</p>
     </section>
     
 
+    
+    <section class="course-info-card cours-competences-bo">
+        <h2>Compétence travaillée</h2>
+        <ul><li>Décrire les liens entre usages et évolutions technologiques des objets et des systèmes techniques</li></ul>
+    </section>
     
 
     
@@ -161,65 +166,40 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Comprendre qu&#39;un programme complexe peut être construit progressivement.</li>
+            <li>Un objet évolue pour répondre à de nouveaux besoins, grâce à des inventions et à des innovations.</li>
             
-            <li>Comprendre qu&#39;un événement déclenche des instructions lorsqu&#39;une situation particulière se produit.</li>
+            <li>Une frise chronologique range les objets dans l’ordre du temps.</li>
             
-            <li>Comprendre qu&#39;une variable permet au programme de conserver une information.</li>
-            
-            <li>Comprendre qu&#39;une condition permet au programme de choisir entre plusieurs actions.</li>
-            
-            <li>Comprendre qu&#39;il est utile de tester chaque petite fonctionnalité avant d&#39;en ajouter une nouvelle.</li>
-            
-            <li>Comprendre qu&#39;une erreur observée fournit des informations utiles pour rechercher ce qui doit être corrigé.</li>
+            <li>Des données sont des informations qu’on peut trier et comparer (date, énergie utilisée, avantage).</li>
             
         </ul>
         
         
+        <h2>Ce que tu vas apprendre à faire</h2>
+        <ul>
+            
+            <li>Collecter des informations dans des documents.</li>
+            
+            <li>Trier des données dans l’ordre chronologique.</li>
+            
+            <li>Expliquer une évolution par un besoin ou une invention.</li>
+            
+        </ul>
+        
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><p>Objectif de cette séance : Comprendre qu&#39;un programme complexe peut être construit progressivement.</p></section>
-    
-    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Un test consiste à provoquer volontairement une situation précise puis à comparer :</p></section>
-    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séance 9, tu as comparé plusieurs solutions pour éclairer.</p><p>Ces solutions ne sont pas apparues en même temps. Aujourd’hui, tu vas les ranger dans le temps et comprendre ce qui a poussé les humains à changer de lampe.</p></div></section>
     
     
     
-<h4>Compétence visée : Compléter et modifier un programme graphique, tester son fonctionnement et corriger progressivement les erreurs observées</h4>
     
-
-<p>Objectifs d’apprentissage :</p>
     
-
-<ul><li>Comprendre qu&#39;un programme complexe peut être construit progressivement.</li><li>Comprendre qu&#39;un événement déclenche des instructions lorsqu&#39;une situation particulière se produit.</li><li>Comprendre qu&#39;une variable permet au programme de conserver une information.</li><li>Comprendre qu&#39;une condition permet au programme de choisir entre plusieurs actions.</li><li>Comprendre qu&#39;il est utile de tester chaque petite fonctionnalité avant d&#39;en ajouter une nouvelle.</li><li>Comprendre qu&#39;une erreur observée fournit des informations utiles pour rechercher ce qui doit être corrigé.</li></ul>
     
-
-<ul><li>Créer un programme simple avec MakeCode Arcade.</li><li>Créer et contrôler un personnage.</li><li>Créer plusieurs sprites ayant des rôles différents.</li><li>Détecter le contact entre deux types de sprites.</li><li>Mémoriser une information avec une variable.</li><li>Utiliser une condition simple.</li><li>Tester plusieurs situations prévues.</li><li>Modifier une petite partie du programme puis tester à nouveau.</li></ul>
     
-
-<ul><li>Un document LibreOffice Writer nommé 5e_S10_nom1_nom2.odt.</li><li>Les noms et prénoms des élèves du groupe.</li><li>Le titre de la séance.</li><li>Les réponses aux différentes questions.</li><li>Un tableau présentant les tests réalisés.</li><li>Un projet MakeCode Arcade nommé 5e_S10_nom1_nom2.</li></ul>
     
-
-<p>Le document Writer devra être rendu en fin de séance, même si le programme n&#39;est pas entièrement terminé.</p>
     
-
-<p>Important : ne cherchez pas à terminer tout le jeu immédiatement. Nous allons construire et tester une fonctionnalité à la fois.</p>
-    
-
-
-    
-    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
-<p>Dans cette page du ministère, retrouve le programme ou le référentiel de ta formation. Les objectifs précis étudiés aujourd’hui sont indiqués dans le cours.</p>
-    
-
-<p><a href="https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4" target="_blank" rel="noopener noreferrer">Consulter les programmes et attendus officiels</a></p>
-
-
-</div></details>
-
-    
-    <nav class="course-mission-controls course-intro-controls" aria-label="Commencer la séance"><a class="course-mission-next" href="#a04">J’ai compris l’objectif : commencer la première mission <span aria-hidden="true">→</span></a></nav>
+    <nav class="course-mission-controls course-intro-controls" aria-label="Commencer la séance"><a class="course-mission-next" href="#a01">J’ai compris l’objectif : commencer la première mission <span aria-hidden="true">→</span></a></nav>
 </header>
 
 
@@ -229,9 +209,9 @@
 
 <section class="cours-activites">
     
-    <article class="cours-activite" id="a04" data-course-step>
+    <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>1. Avant de programmer : retrouvons notre méthode</h2>
+        <h2>Collecter les informations</h2>
         
         
         
@@ -241,13 +221,13 @@
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Lors de la séance précédente, nous avons préparé le fonctionnement d&#39;un petit jeu :</p>
+<h4>Document 1 — Quelques étapes de l’éclairage (dates arrondies)</h4>
     
 
-<p>Le joueur doit récupérer un objet puis rejoindre la sortie.</p>
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Solution</th><th scope="col">Date d’apparition</th><th scope="col">Énergie utilisée</th><th scope="col">Ce qu’elle a apporté</th></tr></thead><tbody><tr><td>Lampe à huile</td><td>vers -15 000 (Préhistoire)</td><td>Graisse ou huile qui brûle</td><td>Une lumière qu’on peut transporter dans une grotte</td></tr><tr><td>Bougie</td><td>Antiquité</td><td>Cire qui brûle</td><td>Plus pratique et plus propre que la graisse</td></tr><tr><td>Ampoule à filament</td><td>1879</td><td>Électricité</td><td>Pas de flamme, donc moins de risque d’incendie</td></tr><tr><td>LED d’éclairage</td><td>années 2000</td><td>Électricité</td><td>Beaucoup moins de consommation, très longue durée</td></tr><tr><td>Lampe solaire de jardin</td><td>années 2000</td><td>Lumière du soleil stockée dans une batterie</td><td>Pas de fil ni de prise</td></tr></tbody></table></div>
     
 
-<p>Nous avions décomposé le problème « créer un jeu » en plusieurs sous-problèmes.</p>
+<p>Dans ce tableau, chaque ligne est un objet ; chaque colonne est un type de donnée (date, énergie, avantage).</p>
     
 
 
@@ -256,35 +236,47 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Q1 : Sans regarder votre travail précédent, retrouvez au moins cinq sous-problèmes nécessaires pour réaliser ce jeu.</h3>
+            <h3 id="a01-q01-label">Question 1 — D’après le document 1, quelle est la plus ancienne solution ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <select id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><option value="">Choisis une réponse</option><option value="a">La bougie.</option><option value="b">La lampe à huile.</option><option value="c">L’ampoule à filament.</option></select>
 
                 
             
             
             
-<p>Comparez ensuite votre réponse avec votre document de la séance 9.</p>
-    
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a01-q02-label">Question 2 — D’après le document 1, combien d’années séparent l’ampoule à filament (1879) de l’an 2000 ?</h3>
+            
 
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><p>Unité : ans</p>
 
+                
+            
+            
+            
         </div>
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#course-intro">← Revoir l’objectif</a>
-            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+            <a class="course-mission-next" href="#a02">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a05" data-course-step>
+    <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>2. Créer notre premier personnage</h2>
+        <h2>Ranger sur une frise</h2>
         
-        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as collecté les informations. Pour voir l’évolution, il faut maintenant trier ces données dans l’ordre du temps.</p>
         
         
 
@@ -292,61 +284,10 @@
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Ouvrez MakeCode Arcade puis créez un nouveau projet nommé :</p>
+<p>Une frise chronologique se lit de gauche (le plus ancien) à droite (le plus récent).</p>
     
 
-<p>5e_S10_nom1_nom2</p>
-    
-
-<p>Important :</p>
-    
-
-<ul><li>les blocs servant à créer, positionner ou initialiser les éléments du jeu seront placés dans au démarrage, sauf indication contraire ;</li><li>les blocs commençant par « lorsque... » sont des événements : ils restent dans leurs propres blocs.</li></ul>
-    
-
-<p>Notre premier sous-problème est :</p>
-    
-
-<p>Créer le personnage du joueur.</p>
-    
-
-<p>Dans MakeCode Arcade, les personnages et de nombreux objets présents à l&#39;écran sont appelés des sprites.</p>
-    
-
-<p>Documentation : Microsoft MakeCode Arcade – Sprites</p>
-    
-
-<p><a href="https://arcade.makecode.com/reference/sprites" target="_blank" rel="noopener noreferrer">Microsoft MakeCode Arcade – Sprites</a></p>
-
-
-<p>Étape 1 : ouvrez la catégorie Sprites.</p>
-    
-
-<p>Étape 2 : recherchez le bloc qui permet de créer un sprite et de lui attribuer une image et un type.</p>
-    
-
-<p>Placez ce bloc dans au démarrage.</p>
-    
-
-<p>Choisissez une apparence simple pour votre personnage et conservez le type :</p>
-    
-
-<p>Player</p>
-    
-
-<p>Renommez la variable créée automatiquement en :</p>
-    
-
-<p>joueur</p>
-    
-
-<p>Ajoutez ensuite, dans au démarrage, le bloc permettant de définir la position du sprite.</p>
-    
-
-<p>Vous pouvez placer votre joueur où vous le souhaitez. Pour commencer simplement, vous pouvez utiliser :</p>
-    
-
-<p>x = 10 y = 60</p>
+<p>Exemple expliqué : la lampe à huile vient en premier car c’est la plus ancienne (vers -15 000).</p>
     
 
 
@@ -355,7 +296,240 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a05-q01-label">Question 1 — Q2 : Pourquoi faut-il créer le sprite joueur avant de pouvoir le positionner ou le déplacer ?</h3>
+            <h3 id="a02-q01-label">Question 1 — Range les solutions de la plus ancienne à la plus récente (écris le nom de la solution dans chaque case).</h3>
+            
+
+            
+            
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Rang</th>
+                                
+                                <th>Solution</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    1 (la plus ancienne)
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    Lampe à huile
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    2
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Ranger sur une frise — Solution — 2">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    3
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Ranger sur une frise — Solution — 3">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    4 (les plus récentes, à égalité)
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r3_c1" data-required="true" data-row="3" data-col="1" aria-label="Ranger sur une frise — Solution — 4 (les plus récentes, à égalité)">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a02-q02-label">Question 2 — Quelle grande invention sépare la bougie de l’ampoule à filament ?</h3>
+            
+
+            
+            
+                <select id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><option value="">Choisis une réponse</option><option value="a">L’utilisation de l’électricité.</option><option value="b">La découverte du feu.</option><option value="c">Le panneau solaire.</option></select>
+
+                
+            
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a01">← Étape précédente</a>
+            <a class="course-mission-next" href="#a03">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a03" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Expliquer les évolutions</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu vois l’ordre des inventions. Il reste à comprendre pourquoi on est passé de l’une à l’autre.</p>
+        
+        
+
+        
+
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
+        
+<p>Une évolution s’explique souvent par un besoin nouveau (moins de danger, moins de dépenses) ou par une invention (l’électricité, la LED).</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a03-q01-label">Question 1 — D’après le document 1, explique pourquoi on est passé de la bougie à l’ampoule à filament. Utilise « car » et un fait du document (réflexe n° 4).</h3>
+            
+
+            
+            
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a03-q02-label">Question 2 — Explique pourquoi on remplace aujourd’hui les ampoules à filament par des LED. Pense à ce que tu as appris en séance 9.</h3>
+            
+
+            
+            
+                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a02">← Étape précédente</a>
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a04" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Et demain ?</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        
+        
+        
+
+        
+
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
+        
+<p>L’éclairage continue d’évoluer.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Imagine la lampe de demain : à quel nouveau besoin répondrait-elle ?</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a05" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Conclusion de ton travail</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as collecté, trié et expliqué. Il reste à répondre au problème de départ.</p>
+        
+        
+
+        
+
+        
+        
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : pourquoi la façon de s’éclairer a-t-elle changé au cours de l’histoire ? Donne deux exemples.</h3>
             
 
             
@@ -371,1336 +545,6 @@
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#a04">← Étape précédente</a>
-            <a class="course-mission-next" href="#a06">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a06" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>3. Permettre au joueur de déplacer le personnage</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Le sprite apparaît, mais le joueur ne peut pas encore le contrôler.</p>
-    
-
-<p>Nous devons maintenant résoudre :</p>
-    
-
-<p>Comment relier les boutons directionnels au personnage ?</p>
-    
-
-<p>Étape 1 : ouvrez la catégorie Controller.</p>
-    
-
-<p>Étape 2 : recherchez le bloc permettant de :</p>
-    
-
-<p>déplacer joueur avec les boutons</p>
-    
-
-<p>Ce bloc possède deux valeurs de vitesse :</p>
-    
-
-<ul><li>vx : vitesse sur l&#39;axe horizontal ;</li><li>vy : vitesse sur l&#39;axe vertical.</li></ul>
-    
-
-<p>Documentation : Microsoft MakeCode Arcade – Déplacement d&#39;un sprite avec les boutons</p>
-    
-
-<p><a href="https://arcade.makecode.com/reference/controller/move-sprite" target="_blank" rel="noopener noreferrer">Microsoft MakeCode Arcade – Déplacement d&#39;un sprite avec les boutons</a></p>
-
-
-<p>Pour commencer, faites en sorte que le joueur puisse se déplacer uniquement horizontalement.</p>
-    
-
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a06-q01-label">Question 1 — Q3 : Quelle valeur devez-vous mettre à 0 pour empêcher les déplacements verticaux ?</h3>
-            
-
-            
-            
-                <textarea id="a06-q01" data-answer-id="a06_q01" data-required="true" aria-labelledby="a06-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-<p>Testez avec le simulateur.</p>
-    
-
-
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a06-q02-label">Question 2 — Q4 : Que se passerait-il si nous supprimions complètement le bloc de déplacement ?</h3>
-            
-
-            
-            
-                <textarea id="a06-q02" data-answer-id="a06_q02" data-required="true" aria-labelledby="a06-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a05">← Étape précédente</a>
-            <a class="course-mission-next" href="#a07">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a07" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>4. Une valeur peut modifier le comportement</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>La vitesse du joueur dépend des valeurs indiquées dans le bloc de déplacement.</p>
-    
-
-<p>Avant de modifier les valeurs :</p>
-    
-
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a07-q01-label">Question 1 — Q5 : Que pensez-vous qu&#39;il se passera si vous doublez la valeur de vx ?</h3>
-            
-
-            
-            
-                <textarea id="a07-q01" data-answer-id="a07_q01" data-required="true" aria-labelledby="a07-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-<p>Notez votre hypothèse dans Writer.</p>
-    
-
-<p>Doublez ensuite la valeur et testez le programme.</p>
-    
-
-
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a07-q02-label">Question 2 — Q6 : Qu&#39;avez-vous observé ? Votre hypothèse était-elle correcte ?</h3>
-            
-
-            
-            
-                <textarea id="a07-q02" data-answer-id="a07_q02" data-required="true" aria-labelledby="a07-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-<p>Choisissez ensuite une vitesse qui vous semble adaptée au jeu.</p>
-    
-
-
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a06">← Étape précédente</a>
-            <a class="course-mission-next" href="#a08">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a08" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 5</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>5. Ajouter l&#39;objet à récupérer</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Le joueur existe et peut se déplacer.</p>
-    
-
-<p>Résolvons maintenant :</p>
-    
-
-<p>Créer l&#39;objet que le joueur devra récupérer.</p>
-    
-
-<p>Vous avez déjà créé un sprite une fois.</p>
-    
-
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a08-q01-label">Question 1 — Q7 : Dans quelle catégorie devez-vous rechercher le bloc nécessaire ?</h3>
-            
-
-            
-            
-                <textarea id="a08-q01" data-answer-id="a08_q01" data-required="true" aria-labelledby="a08-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-<p>Créez un nouveau sprite dans au démarrage.</p>
-    
-
-<p>Renommez sa variable :</p>
-    
-
-<p>objet</p>
-    
-
-<p>Choisissez son apparence.</p>
-    
-
-<p>Cette fois, utilisez le type :</p>
-    
-
-<p>Food</p>
-    
-
-<p>Placez l&#39;objet sur la même ligne horizontale que le joueur afin de pouvoir le tester facilement.</p>
-    
-
-<p>Par exemple :</p>
-    
-
-<p>x = 80 y = 60</p>
-    
-
-
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a08-q02-label">Question 2 — Q8 : Pourquoi est-il utile que le joueur soit de type Player et l&#39;objet de type Food ?</h3>
-            
-
-            
-            
-                <textarea id="a08-q02" data-answer-id="a08_q02" data-required="true" aria-labelledby="a08-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a07">← Étape précédente</a>
-            <a class="course-mission-next" href="#a09">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a09" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 6</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>6. Que se passe-t-il lorsque le joueur touche l&#39;objet ?</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Lancez le jeu puis déplacez le joueur jusqu&#39;à l&#39;objet.</p>
-    
-
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a09-q01-label">Question 1 — Q9 : Que se passe-t-il actuellement lorsque les deux sprites se touchent ?</h3>
-            
-
-            
-            
-                <textarea id="a09-q01" data-answer-id="a09_q01" data-required="true" aria-labelledby="a09-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-<p>Rien de particulier n&#39;a encore été programmé pour cette situation.</p>
-    
-
-<p>Nous allons utiliser un événement.</p>
-    
-
-<p>Documentation : Microsoft MakeCode Arcade – Événement de chevauchement entre sprites</p>
-    
-
-<p><a href="https://arcade.makecode.com/reference/sprites/on-overlap" target="_blank" rel="noopener noreferrer">Microsoft MakeCode Arcade – Événement de chevauchement entre sprites</a></p>
-
-
-<p>Dans la catégorie Sprites, recherchez le bloc qui commence par :</p>
-    
-
-<p>lorsque sprite de type ... chevauche sprite de type ...</p>
-    
-
-<p>Réglez les types pour détecter :</p>
-    
-
-<p>Player + Food</p>
-    
-
-<p>Attention : ce bloc est un événement. Il ne se place pas dans au démarrage.</p>
-    
-
-<p>Les instructions situées à l&#39;intérieur seront exécutées lorsque les deux types de sprites se chevaucheront.</p>
-    
-
-<p>Dans cet événement, ajoutez un bloc de la catégorie Sprites permettant de détruire l&#39;objet récupéré.</p>
-    
-
-<p>Testez.</p>
-    
-
-
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a09-q02-label">Question 2 — Q10 : Quelle situation déclenche maintenant la disparition de l&#39;objet ?</h3>
-            
-
-            
-            
-                <textarea id="a09-q02" data-answer-id="a09_q02" data-required="true" aria-labelledby="a09-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q03">
-            
-            
-            <h3 id="a09-q03-label">Question 3 — Q11 : Pourquoi le bloc de chevauchement est-il appelé un événement ?</h3>
-            
-
-            
-            
-                <textarea id="a09-q03" data-answer-id="a09_q03" data-required="true" aria-labelledby="a09-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a08">← Étape précédente</a>
-            <a class="course-mission-next" href="#a10">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a10" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 7</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>7. Le programme doit se souvenir</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>L&#39;objet disparaît maintenant lorsque le joueur le récupère.</p>
-    
-
-<p>Mais une difficulté apparaît :</p>
-    
-
-<p>Comment le programme saura-t-il plus tard que l&#39;objet a déjà été récupéré ?</p>
-    
-
-<p>Nous allons conserver cette information dans une variable.</p>
-    
-
-<p>Ouvrez la catégorie Variables et créez :</p>
-    
-
-<p>objetRecupere</p>
-    
-
-<p>Documentation : Microsoft MakeCode Arcade – Variables</p>
-    
-
-<p><a href="https://arcade.makecode.com/blocks/variables" target="_blank" rel="noopener noreferrer">Microsoft MakeCode Arcade – Variables</a></p>
-
-
-<p>Cette variable utilisera deux valeurs simples :</p>
-    
-
-<ul><li>0 : l&#39;objet n&#39;a pas encore été récupéré ;</li><li>1 : l&#39;objet a été récupéré.</li></ul>
-    
-
-<p>Dans au démarrage, ajoutez :</p>
-    
-
-<p>définir objetRecupere à 0</p>
-    
-
-<p>Puis, dans l&#39;événement Player + Food, juste avant ou après la disparition de l&#39;objet, ajoutez :</p>
-    
-
-<p>définir objetRecupere à 1</p>
-    
-
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a10-q01-label">Question 1 — Q12 : Pourquoi la variable vaut-elle 0 au démarrage ?</h3>
-            
-
-            
-            
-                <textarea id="a10-q01" data-answer-id="a10_q01" data-required="true" aria-labelledby="a10-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a10-q02-label">Question 2 — Q13 : Quel événement fait passer sa valeur à 1 ?</h3>
-            
-
-            
-            
-                <textarea id="a10-q02" data-answer-id="a10_q02" data-required="true" aria-labelledby="a10-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q03">
-            
-            
-            <h3 id="a10-q03-label">Question 3 — Q14 : Pourquoi devons-nous mémoriser cette information alors que l&#39;objet a disparu de l&#39;écran ?</h3>
-            
-
-            
-            
-                <textarea id="a10-q03" data-answer-id="a10_q03" data-required="true" aria-labelledby="a10-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a09">← Étape précédente</a>
-            <a class="course-mission-next" href="#a11">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a11" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 8</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>8. Créer la sortie</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Nous allons maintenant créer un troisième sprite : la sortie.</p>
-    
-
-<p>Vous connaissez déjà la méthode générale.</p>
-    
-
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a11-q01-label">Question 1 — Q15 : Créez un nouveau sprite représentant la sortie.</h3>
-            
-
-            
-            
-                <textarea id="a11-q01" data-answer-id="a11_q01" data-required="true" aria-labelledby="a11-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-<p>Renommez sa variable :</p>
-    
-
-<p>sortie</p>
-    
-
-<p>Donnez-lui un type différent de Player et Food.</p>
-    
-
-<p>Vous pouvez créer un nouveau type nommé :</p>
-    
-
-<p>Exit</p>
-    
-
-<p>Placez ensuite la sortie à un autre endroit de l&#39;écran.</p>
-    
-
-<p>Nous devons détecter lorsque le joueur l&#39;atteint.</p>
-    
-
-
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a11-q02-label">Question 2 — Q16 : Quel type de bloc déjà utilisé pourrait permettre de détecter cette rencontre ?</h3>
-            
-
-            
-            
-                <textarea id="a11-q02" data-answer-id="a11_q02" data-required="true" aria-labelledby="a11-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-<p>Créez l&#39;événement correspondant au chevauchement :</p>
-    
-
-<p>Player + Exit</p>
-    
-
-
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a10">← Étape précédente</a>
-            <a class="course-mission-next" href="#a12">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a12" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 9</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>9. La sortie ne doit pas toujours provoquer la victoire</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Avant de poursuivre : rendez de nouveau le déplacement possible sur les axes x ET y.</p>
-    
-
-<p>Retournez au bloc de déplacement du joueur et remettez une valeur différente de 0 pour vy.</p>
-    
-
-<p>Le joueur peut maintenant rejoindre la sortie.</p>
-    
-
-<p>Mais nous voulons respecter la règle :</p>
-    
-
-<p>Le joueur doit avoir récupéré l&#39;objet avant de pouvoir gagner.</p>
-    
-
-<p>Complétez :</p>
-    
-
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a12-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
-            
-
-            
-            
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Situation</th>
-                                
-                                <th>Valeur de objetRecupere</th>
-                                
-                                <th>Résultat attendu</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Le joueur n&#39;a pas récupéré l&#39;objet
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a12_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="9. La sortie ne doit pas toujours provoquer la victoire — Valeur de objetRecupere — Le joueur n&#39;a pas récupéré l&#39;objet">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a12_q01_r0_c2" data-required="true" data-row="0" data-col="2" aria-label="9. La sortie ne doit pas toujours provoquer la victoire — Résultat attendu — Le joueur n&#39;a pas récupéré l&#39;objet">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Le joueur a récupéré l&#39;objet
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a12_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="9. La sortie ne doit pas toujours provoquer la victoire — Valeur de objetRecupere — Le joueur a récupéré l&#39;objet">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a12_q01_r1_c2" data-required="true" data-row="1" data-col="2" aria-label="9. La sortie ne doit pas toujours provoquer la victoire — Résultat attendu — Le joueur a récupéré l&#39;objet">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a12-q02-label">Question 2 — Q17 : Complétez le tableau avant de programmer la suite.</h3>
-            
-
-            
-            
-                <textarea id="a12-q02" data-answer-id="a12_q02" data-required="true" aria-labelledby="a12-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-<p>Le programme doit maintenant prendre une décision.</p>
-    
-
-<p>Ouvrez la catégorie Logique et recherchez un bloc :</p>
-    
-
-<p>SI ... ALORS ... SINON ...</p>
-    
-
-<p>Documentation : Microsoft MakeCode Arcade – Conditions If / Else</p>
-    
-
-<p><a href="https://arcade.makecode.com/blocks/logic/if" target="_blank" rel="noopener noreferrer">Microsoft MakeCode Arcade – Conditions If / Else</a></p>
-
-
-<p>Placez ce bloc à l&#39;intérieur de l&#39;événement Player + Exit.</p>
-    
-
-<p>Nous voulons obtenir :</p>
-    
-
-<p>SI objetRecupere = 1 ALORS déclencher la victoire SINON continuer la partie</p>
-    
-
-<p>Pour déclencher la victoire, recherchez dans la catégorie Jeu le bloc permettant de terminer la partie en gagnant.</p>
-    
-
-
-        </div>
-        
-        <div class="cours-question" data-question="q03">
-            
-            
-            <h3 id="a12-q03-label">Question 3 — Q18 : Pourquoi cette condition doit-elle être vérifiée lorsque le joueur atteint la sortie et non uniquement au démarrage ?</h3>
-            
-
-            
-            
-                <textarea id="a12-q03" data-answer-id="a12_q03" data-required="true" aria-labelledby="a12-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q04">
-            
-            
-            <h3 id="a12-q04-label">Question 4 — Q19 : Quelle donnée permet au programme de choisir entre victoire et poursuite de la partie ?</h3>
-            
-
-            
-            
-                <textarea id="a12-q04" data-answer-id="a12_q04" data-required="true" aria-labelledby="a12-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a11">← Étape précédente</a>
-            <a class="course-mission-next" href="#a13">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a13" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 10</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>10. Tester plusieurs situations</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Le programme semble maintenant fonctionner.</p>
-    
-
-<p>Mais jouer une fois ne suffit pas pour vérifier un programme.</p>
-    
-
-<p>Un test consiste à provoquer volontairement une situation précise puis à comparer :</p>
-    
-
-<p>résultat attendu ↔ résultat obtenu</p>
-    
-
-<p>Complétez dans Writer :</p>
-    
-
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a13-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
-            
-
-            
-            
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Test</th>
-                                
-                                <th>Résultat attendu</th>
-                                
-                                <th>Résultat obtenu</th>
-                                
-                                <th>Correct ?</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Déplacer le joueur dans les quatre directions
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    Le joueur répond correctement aux commandes
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a13_q01_r0_c2" data-required="true" data-row="0" data-col="2" aria-label="10. Tester plusieurs situations — Résultat obtenu — Déplacer le joueur dans les quatre directions">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    Oui / Non
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Toucher l&#39;objet
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    L&#39;objet disparaît
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a13_q01_r1_c2" data-required="true" data-row="1" data-col="2" aria-label="10. Tester plusieurs situations — Résultat obtenu — Toucher l&#39;objet">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    Oui / Non
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Atteindre la sortie sans prendre l&#39;objet
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    La partie continue
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a13_q01_r2_c2" data-required="true" data-row="2" data-col="2" aria-label="10. Tester plusieurs situations — Résultat obtenu — Atteindre la sortie sans prendre l&#39;objet">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    Oui / Non
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Prendre l&#39;objet puis atteindre la sortie
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    Victoire
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a13_q01_r3_c2" data-required="true" data-row="3" data-col="2" aria-label="10. Tester plusieurs situations — Résultat obtenu — Prendre l&#39;objet puis atteindre la sortie">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    Oui / Non
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a13-q02-label">Question 2 — Q20 : Pourquoi faut-il tester la sortie avec et sans l&#39;objet ?</h3>
-            
-
-            
-            
-                <textarea id="a13-q02" data-answer-id="a13_q02" data-required="true" aria-labelledby="a13-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a12">← Étape précédente</a>
-            <a class="course-mission-next" href="#a14">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a14" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 11</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>11. Quand un test échoue</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Si un test échoue, ne recommencez pas immédiatement tout le programme.</p>
-    
-
-<p>Ne modifiez pas non plus plusieurs parties au hasard.</p>
-    
-
-<p>Utilisez la méthode :</p>
-    
-
-<p>Observer → proposer une cause → vérifier → modifier une chose → tester à nouveau</p>
-    
-
-<p>Exemples :</p>
-    
-
-<ul><li>l&#39;objet ne disparaît pas → vérifier d&#39;abord l&#39;événement Player + Food ;</li><li>l&#39;objet disparaît mais la victoire reste impossible → vérifier la valeur de objetRecupere ;</li><li>le joueur gagne même sans récupérer l&#39;objet → vérifier la condition placée dans l&#39;événement de sortie.</li></ul>
-    
-
-<p>Si vous rencontrez une erreur, complétez une ligne :</p>
-    
-
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a14-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
-            
-
-            
-            
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Problème observé</th>
-                                
-                                <th>Cause possible</th>
-                                
-                                <th>Modification réalisée</th>
-                                
-                                <th>Nouveau résultat</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a14_q01_r0_c0" data-required="true" data-row="0" data-col="0" aria-label="11. Quand un test échoue — Problème observé — ">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a14_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="11. Quand un test échoue — Cause possible — ">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a14_q01_r0_c2" data-required="true" data-row="0" data-col="2" aria-label="11. Quand un test échoue — Modification réalisée — ">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a14_q01_r0_c3" data-required="true" data-row="0" data-col="3" aria-label="11. Quand un test échoue — Nouveau résultat — ">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a14-q02-label">Question 2 — Q21 : Pourquoi vaut-il mieux modifier une seule chose avant de tester à nouveau ?</h3>
-            
-
-            
-            
-                <textarea id="a14-q02" data-answer-id="a14_q02" data-required="true" aria-labelledby="a14-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a13">← Étape précédente</a>
-            <a class="course-mission-next" href="#a15">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a15" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 12</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>12. Petit défi : maintenant, avec moins d&#39;aide</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Cette partie est facultative. Ne la commencez que si le programme principal fonctionne et si les tests précédents sont terminés.</p>
-    
-
-<p>Choisissez une seule amélioration :</p>
-    
-
-<ul><li>afficher un message lorsque la sortie est atteinte sans l&#39;objet ;</li><li>ajouter un deuxième objet à récupérer ;</li><li>ajouter un compteur de points ;</li><li>ajouter trois vies ;</li><li>ajouter un ennemi qui fait perdre une vie.</li></ul>
-    
-
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a15-q01-label">Question 1 — Q22 : Quelle amélioration choisissez-vous ?</h3>
-            
-
-            
-            
-                <textarea id="a15-q01" data-answer-id="a15_q01" data-required="true" aria-labelledby="a15-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a15-q02-label">Question 2 — Q23 : Avant de programmer, décomposez-la en plusieurs petits problèmes.</h3>
-            
-
-            
-            
-                <textarea id="a15-q02" data-answer-id="a15_q02" data-required="true" aria-labelledby="a15-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q03">
-            
-            
-            <h3 id="a15-q03-label">Question 3 — Q24 : Pour chaque petit problème, indiquez ce dont vous pensez avoir besoin :</h3>
-            
-
-            
-            
-                <textarea id="a15-q03" data-answer-id="a15_q03" data-required="true" aria-labelledby="a15-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-<ul><li>un sprite ;</li><li>un événement ;</li><li>une variable ;</li><li>une condition ;</li><li>ou une solution déjà utilisée dans le programme.</li></ul>
-    
-
-<p>Expliquez vos choix avant de rechercher les blocs.</p>
-    
-
-<p>Vous pouvez ensuite essayer de programmer votre amélioration.</p>
-    
-
-
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a14">← Étape précédente</a>
-            <a class="course-mission-next" href="#a16">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a16" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 13</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>13. Conclusion</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Répondez avec vos propres mots.</p>
-    
-
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a16-q01-label">Question 1 — Q25 : Qu&#39;est-ce qu&#39;un événement ? Donnez un exemple provenant de votre jeu.</h3>
-            
-
-            
-            
-                <textarea id="a16-q01" data-answer-id="a16_q01" data-required="true" aria-labelledby="a16-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a16-q02-label">Question 2 — Q26 : À quoi sert la variable objetRecupere ?</h3>
-            
-
-            
-            
-                <textarea id="a16-q02" data-answer-id="a16_q02" data-required="true" aria-labelledby="a16-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q03">
-            
-            
-            <h3 id="a16-q03-label">Question 3 — Q27 : Pourquoi avons-nous besoin d&#39;une condition au niveau de la sortie ?</h3>
-            
-
-            
-            
-                <textarea id="a16-q03" data-answer-id="a16_q03" data-required="true" aria-labelledby="a16-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q04">
-            
-            
-            <h3 id="a16-q04-label">Question 4 — Q28 : Pourquoi avons-nous construit et testé le jeu fonctionnalité par fonctionnalité plutôt que de tout programmer en une seule fois ?</h3>
-            
-
-            
-            
-                <textarea id="a16-q04" data-answer-id="a16_q04" data-required="true" aria-labelledby="a16-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q05">
-            
-            
-            <h3 id="a16-q05-label">Question 5 — Q29 : Un autre élève souhaite créer un jeu mais ne sait pas par où commencer. Expliquez-lui en trois ou quatre phrases la méthode que vous lui conseilleriez.</h3>
-            
-
-            
-            
-                <textarea id="a16-q05" data-answer-id="a16_q05" data-required="true" aria-labelledby="a16-q05-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-<p>Votre réponse devra faire apparaître les idées :</p>
-    
-
-<p>décomposer → réaliser une petite partie → tester → corriger → continuer → assembler</p>
-    
-
-<p>Enregistrez votre fichier Writer.</p>
-    
-
-<p>Vérifiez également que votre projet MakeCode Arcade porte le nom :</p>
-    
-
-<p>5e_S10_nom1_nom2</p>
-    
-
-<p>Déposez les fichiers demandés dans l&#39;espace d&#39;échange.</p>
-    
-
-
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a15">← Étape précédente</a>
-            <a class="course-mission-next" href="#a17">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a17" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 14</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>Sources et ressources</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<ul><li>Ministère de l&#39;Éducation nationale – Programme de technologie du cycle 4 : Programme officiel de technologie</li></ul>
-    
-
-<p><a href="https://www.education.gouv.fr/bo/2024/Hebdo9/MENE2402802A" target="_blank" rel="noopener noreferrer">Programme officiel de technologie</a></p>
-
-
-<p>Cette séance utilise MakeCode Arcade de manière volontairement guidée. Les élèves commencent par identifier le rôle de chaque bloc, le tester et observer son effet. L&#39;aide diminue progressivement lorsque des solutions déjà rencontrées doivent être réutilisées.</p>
-    
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a16">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -1713,18 +557,22 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">Faire le point</h2>
-    <p>Relis tes réponses et vérifie les points demandés dans le bilan du cours. Tu peux revenir sur ton travail tant que le professeur ne l’a pas clôturé.</p>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Un objet évolue grâce aux inventions et pour répondre à de nouveaux besoins.</li><li>Une frise chronologique se lit du plus ancien au plus récent.</li><li>Collecter, trier et analyser des données permet de comprendre une évolution.</li></ul>
+    
 </section>
 
+<section class="cours-sources course-info-card" aria-labelledby="course-sources-title"><h2 id="course-sources-title">Sources et ressources officielles</h2>
+<p><a href="https://www.education.gouv.fr/media/160767/download" target="_blank" rel="noopener noreferrer">Ministère de l’Éducation nationale — Programme de technologie du cycle 4 (BO n° 9 du 29 février 2024)</a></p>
 
+
+</section>
 
     <div class="course-submit-panel">
         <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
         <p id="course-submit-status" role="status" aria-live="polite"></p>
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a17">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

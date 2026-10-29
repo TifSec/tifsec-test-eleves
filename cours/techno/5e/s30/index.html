@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">1. Repère les indices</a></li><li><a href="#a02">2. À toi de tester</a></li><li><a href="#a03">3. Explique avec une preuve</a></li><li><a href="#a04">4. Garde le mémo</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Créer le personnage</a></li><li><a href="#a02">Changer un nombre</a></li><li><a href="#a03">Rester dans l’écran</a></li><li><a href="#a04">Défi — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -134,62 +134,70 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Technologie · 5e · S30</span></div>
-    <h1>Arcade : gagner seulement si les conditions sont réunies</h1>
+    <h1>Séance 30 : Arcade : comment faire bouger un personnage avec les boutons ?</h1>
     
 
     
     
     <section class="course-info-card cours-theme">
-        <h2>Thème du programme</h2>
-        <p>Créer un jeu de collecte et expliquer ses règles</p>
+        <h2>Thèmes du programme</h2>
+        <ul><li>Structure, fonctionnement, comportement : des objets et des systèmes techniques à comprendre</li><li>Création, conception, réalisation, innovations : des objets à concevoir et à réaliser</li></ul>
     </section>
     
 
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Arcade : gagner seulement si les conditions sont réunies</p>
+        <p>Comment un programme fait-il réagir un personnage quand le joueur appuie sur les boutons ?</p>
     </section>
     
 
     
-
-    
-    
-
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><p>Lire et modifier une condition dans un programme existant.</p></section>
-    
-    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Les conditions permettent aux jeux et aux applications de réagir différemment selon la situation.</p></section>
-    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>Après S29 — Arcade : à quoi sert un compteur ?, nous poursuivons avec un seul objectif : lire et modifier une condition dans un programme existant.</p></section>
-    
-    
-    
-<p>Ce que tu vas apprendre : Une condition permet de tester une règle de victoire ou de poursuite.</p>
+    <section class="course-info-card cours-competences-bo">
+        <h2>Compétences travaillées</h2>
+        <ul><li>Concevoir, écrire, tester et mettre au point un programme</li><li>Comprendre et modifier un programme associé à une fonctionnalité d’un objet ou d’un système technique</li></ul>
+    </section>
     
 
-<p>Ce que tu vas apprendre à faire : Lire et modifier une condition dans un programme existant.</p>
+    
+    
+    <section class="course-info-card cours-objectifs">
+        
+        <h2>Ce que tu vas apprendre</h2>
+        <ul>
+            
+            <li>Un programme est une suite d’instructions que l’ordinateur exécute. Avec MakeCode Arcade, on l’écrit avec des blocs.</li>
+            
+            <li>Les entrées sont ce qui donne une information au programme (les boutons) ; les sorties sont ce que le programme produit (l’écran, le son).</li>
+            
+            <li>Une variable garde une information, par exemple le personnage du joueur ou sa vitesse.</li>
+            
+        </ul>
+        
+        
+        <h2>Ce que tu vas apprendre à faire</h2>
+        <ul>
+            
+            <li>Lire un programme bloc par bloc (réflexe brevet n° 9).</li>
+            
+            <li>Créer un personnage qui se déplace avec les boutons.</li>
+            
+            <li>Changer un nombre et prévoir son effet.</li>
+            
+        </ul>
+        
+    </section>
     
 
-<p>Tu vas observer une situation, suivre un exemple guidé, puis faire un essai et vérifier ce qu’il montre.</p>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Les maquettes du collège (monte-charge, tracker) sont commandées par des programmes écrits avec des blocs, dans MakeCode.</p><p>Avant de les étudier, tu apprends à programmer en créant un jeu avec MakeCode Arcade, qui utilise les mêmes blocs. Ton jeu reste dans MakeCode ; sur le site, tu expliques ce que tu as fait.</p></div></section>
     
-
-<p>À quoi cela sert dans la vie réelle : Les conditions permettent aux jeux et aux applications de réagir différemment selon la situation.</p>
     
-
-<p>Tu as environ 50 minutes : 10 minutes pour comprendre, 25 minutes pour faire, 10 minutes pour vérifier et 5 minutes pour le bilan.</p>
     
-
-
     
-    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
-<p>Programme de Technologie du cycle 4, repères de 5e : cette séance contribue progressivement aux compétences ci-dessous ; elle ne prétend pas valider seule une compétence de fin de cycle.</p>
     
-
-<p><a href="https://www.education.gouv.fr/bo/2024/Hebdo9/MENE2402802A" target="_blank" rel="noopener noreferrer">Ministère — Programme de Technologie 2024</a></p>
-
-
-</div></details>
-
+    
+    
+    
     
     <nav class="course-mission-controls course-intro-controls" aria-label="Commencer la séance"><a class="course-mission-next" href="#a01">J’ai compris l’objectif : commencer la première mission <span aria-hidden="true">→</span></a></nav>
 </header>
@@ -203,42 +211,50 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>1. Repère les indices</h2>
+        <h2>Créer le personnage</h2>
         
         
-        <p><strong>Pourquoi cette activité ?</strong> Observe la situation et l’exemple guidé : ils montrent ce qu’il faut comprendre avant de commencer.</p>
-        <h3>Comment procéder ?</h3><ol><li>Lis la situation et repère les informations utiles.</li><li>Suis l’exemple guidé et repère la méthode utilisée.</li><li>Réponds aux questions en t’appuyant sur le cours.</li></ol>
+        
+        
 
         
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Nouvelle règle du jeu : la sortie termine la partie seulement lorsque le score est au moins égal à 3. Si le score vaut 0, 1 ou 2, le joueur doit continuer la collecte.</p>
+<ol><li>Ouvre arcade.makecode.com et clique sur « Nouveau projet ». Nomme-le : 5e_S30_tonprenom.</li><li>Dans la catégorie « Sprites », fais glisser le bloc « définir mySprite à sprite … de type Player » dans « au démarrage ».</li><li>Clique sur le carré gris du bloc et dessine (ou choisis dans la galerie) ton personnage. Ne passe pas plus de 3 minutes sur le dessin !</li><li>Dans « Contrôleur », ajoute « déplacer mySprite avec les boutons » sous le bloc précédent.</li><li>Teste dans le simulateur à gauche avec les flèches du clavier.</li></ol>
     
 
-<pre class="cours-code"><code>Quand joueur touche sortie :
-    si score ≥ 3 : terminer la partie avec victoire
-    sinon : afficher « collecte encore »</code></pre>
+<blockquote>Réflexe brevet n° 9 : je lis un programme bloc par bloc, de haut en bas, comme une recette : je dis ce que fait chaque bloc.</blockquote>
     
 
-<p>Exemple guidé dans Arcade : si le score atteint 5, alors le jeu affiche « gagné » ; sinon, la partie continue. Je teste 4 puis 5 pour vérifier les deux branches de la condition.</p>
+<pre class="cours-code"><code>au démarrage
+    définir mySprite à sprite [ton dessin] de type Player
+    déplacer mySprite avec les boutons</code></pre>
+    
+
+<p>Exemple expliqué : bloc 1, au démarrage du jeu, on crée un personnage (un sprite) rangé dans la variable mySprite. Bloc 2, on indique que ce personnage se déplace quand le joueur appuie sur les flèches.</p>
     
 
 
-        
+        <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
+<p><a href="https://arcade.makecode.com/" target="_blank" rel="noopener noreferrer">MakeCode Arcade (gratuit, dans le navigateur)</a></p>
+
+
+</div></details>
+
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — La sortie doit-elle permettre de gagner avec un score de 2 ? Justifier.</h3>
+            <h3 id="a01-q01-label">Question 1 — Dans ce programme, quelles sont les entrées ?</h3>
             
 
             
             
-                <textarea id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <select id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><option value="">Choisis une réponse</option><option value="a">Les flèches (boutons) du joueur.</option><option value="b">L’écran du jeu.</option><option value="c">Le dessin du personnage.</option></select>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Comparer la valeur à la règle.</p></details>
+            
             
             
         </div>
@@ -246,15 +262,31 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Pourquoi la valeur 3 doit-elle permettre de gagner ?</h3>
+            <h3 id="a01-q02-label">Question 2 — Quelle est la sortie ?</h3>
             
 
             
             
-                <textarea id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <select id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><option value="">Choisis une réponse</option><option value="a">L’écran, où le personnage bouge.</option><option value="b">Le clavier.</option><option value="c">La souris.</option></select>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Distingue supérieur de supérieur ou égal.</p></details>
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a01-q03-label">Question 3 — Explique avec tes mots ce que fait le bloc « déplacer mySprite avec les boutons ».</h3>
+            
+
+            
+            
+                <textarea id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
             
             
         </div>
@@ -268,37 +300,29 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>2. À toi de tester</h2>
+        <h2>Changer un nombre</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Ton personnage bouge. Un programme se règle avec des nombres : change-les et observe l’effet.</p>
         
         
-        <p><strong>Pourquoi cette activité ?</strong> Tu viens de voir la méthode ; maintenant, applique-la dans un essai que tu peux vérifier.</p>
-        <h3>Comment procéder ?</h3><ol><li>Ajouter cette condition au contact avec la sortie.</li><li>Tester volontairement avec un score de 2 puis de 3.</li><li>Rendre le message d’aide lisible et enregistrer une copie du projet.</li></ol>
 
         
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Note une trace courte : ce que tu as fait, ce que tu attendais et ce que tu as observé.</p>
+<p>Clique sur le petit « + » du bloc « déplacer mySprite avec les boutons » : deux nombres apparaissent, vx et vy (vitesse horizontale et verticale), réglés sur 100.</p>
+    
+
+<p>Rappel de la séance 6 : je prévois, je change un seul réglage, j’observe, je compare.</p>
     
 
 
-        <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
-<p>Retrouver un bloc pour le sprite, les commandes, le score ou les contacts ; comparer avec ton programme.</p>
-    
-
-<p><a href="https://arcade.makecode.com/reference" target="_blank" rel="noopener noreferrer">MakeCode Arcade — Référence</a></p>
-
-
-<p><a href="https://arcade.makecode.com/" target="_blank" rel="noopener noreferrer">Ouvrir MakeCode Arcade</a></p>
-
-
-</div></details>
-
+        
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Décrire tes deux essais à la limite du seuil et ce qu’ils montrent.</h3>
+            <h3 id="a02-q01-label">Question 1 — Avant de tester, prévois : que va-t-il se passer si on remplace 100 par 30 pour vx et vy ?</h3>
             
 
             
@@ -306,7 +330,39 @@
                 <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Un test proche du seuil repère les erreurs de comparaison.</p></details>
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a02-q02-label">Question 2 — Teste avec 30, puis avec 200. Décris ce que tu observes et dis si ta prévision était juste.</h3>
+            
+
+            
+            
+                <textarea id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a02-q03-label">Question 3 — Tu mets vx à 100 et vy à 0. Que se passe-t-il ?</h3>
+            
+
+            
+            
+                <select id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label"><option value="">Choisis une réponse</option><option value="a">Le personnage se déplace seulement de gauche à droite.</option><option value="b">Le personnage ne bouge plus du tout.</option><option value="c">Le personnage se déplace seulement de haut en bas.</option></select>
+
+                
+            
             
             
         </div>
@@ -320,23 +376,26 @@
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>3. Explique avec une preuve</h2>
+        <h2>Rester dans l’écran</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais régler la vitesse. Il reste un problème à corriger : le personnage peut sortir de l’écran.</p>
         
         
-        <p><strong>Pourquoi cette activité ?</strong> Avant de conclure, relie ta réponse à une observation ou à une information précise.</p>
-        <h3>Comment procéder ?</h3><ol><li>Répondre en une à trois phrases.</li><li>Citer une observation, une règle ou une valeur du document.</li></ol>
 
         
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
+<p>Ton personnage peut sortir de l’écran. Dans « Sprites », le bloc « définir mySprite rester à l’écran à vrai » l’en empêche.</p>
+    
+
 
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Un programme utilise score &gt; 3. Quelle différence concrète observera-t-on ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Ajoute ce bloc et teste. Écris dans l’ordre les trois blocs de ton programme « au démarrage », comme dans l’exemple.</h3>
             
 
             
@@ -344,7 +403,23 @@
                 <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Cherche la première valeur qui change de résultat.</p></details>
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a03-q02-label">Question 2 — Copie le lien de partage de ton jeu (bouton « Partager ») si ton professeur le demande. Sinon, écris « enregistré dans MakeCode ».</h3>
+            
+
+            
+            
+                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
             
             
         </div>
@@ -357,23 +432,79 @@
     </article>
     
     <article class="cours-activite" id="a04" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>4. Garde le mémo</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Défi</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
-        <p><strong>Pourquoi cette activité ?</strong> Garde une trace courte pour pouvoir réutiliser cette méthode dans une prochaine séance.</p>
-        <h3>Comment procéder ?</h3><ol><li>Relis les deux idées à retenir.</li><li>Note une méthode que tu pourras réutiliser.</li></ol>
+        
 
         
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
+<p>Tu peux ajouter un décor : « Scène » &gt; « définir l’image d’arrière-plan ».</p>
+    
+
 
         
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Ajoute un arrière-plan, puis explique dans quel bloc tu l’as mis et pourquoi.</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a05" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Conclusion de ton travail</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as créé un personnage, réglé sa vitesse et corrigé un problème. Il reste à répondre au problème de départ.</p>
+        
+        
+
+        
+
+        
+        
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment un programme fait-il réagir un personnage quand le joueur appuie sur les boutons ?</h3>
+            
+
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -386,18 +517,25 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Une condition permet de tester une règle de victoire ou de poursuite.</li><li>Lire et modifier une condition dans un programme existant.</li></ul>
-    <h3>Faire le point</h3><p>Je peux expliquer avec mes mots ce que j’ai appris aujourd’hui et montrer une réponse ou un essai qui le prouve.</p>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Un programme est une suite d’instructions ; ici, des blocs.</li><li>Entrées : les boutons. Sorties : l’écran, le son.</li><li>Réflexe brevet n° 9 : je lis un programme bloc par bloc, comme une recette.</li></ul>
+    
 </section>
 
+<section class="cours-sources course-info-card" aria-labelledby="course-sources-title"><h2 id="course-sources-title">Sources et ressources officielles</h2>
+<p><a href="https://www.education.gouv.fr/media/160767/download" target="_blank" rel="noopener noreferrer">Ministère de l’Éducation nationale — Programme de technologie du cycle 4 (BO n° 9 du 29 février 2024)</a></p>
 
+
+<p><a href="https://arcade.makecode.com/" target="_blank" rel="noopener noreferrer">MakeCode Arcade (gratuit, dans le navigateur)</a></p>
+
+
+</section>
 
     <div class="course-submit-panel">
         <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
         <p id="course-submit-status" role="status" aria-live="polite"></p>
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>
