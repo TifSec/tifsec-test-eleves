@@ -46,7 +46,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Structurer avec les styles</a></li><li><a href="#a02">La table des matières</a></li><li><a href="#a03">En-tête et pied de page</a></li><li><a href="#a04">Défi — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Structurer avec les styles</a></li><li><a href="#a02">La table des matières</a></li><li><a href="#a03">En-tête et pied de page</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -168,7 +168,7 @@
             
             <li>Les styles de titres (Titre 1, Titre 2) structurent un document ; Writer s’en sert pour créer une table des matières automatique.</li>
             
-            <li>L’en-tête et le pied de page se répètent sur chaque page (nom, date, numéro de page).</li>
+            <li>L’en-tête et le pied de page se répètent sur chaque page (nom, numéro de page).</li>
             
         </ul>
         
@@ -187,7 +187,7 @@
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En 5e, tu as utilisé les styles Titre 1 et Titre 2 et une liste numérotée.</p><p>Aujourd’hui, tu rédiges le compte rendu de la séance 5 (le monte-charge) avec une table des matières et des numéros de page.</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En 5e, tu as utilisé le style Titre 1 et une liste. En séance 5, tu as analysé le monte-charge.</p><p>Aujourd’hui, tu rédiges le compte rendu de la séance 5 dans Writer, avec une table des matières et des numéros de page. Ton fichier reste sur l’ordinateur ; sur le site, tu réponds sur ta méthode.</p></div></section>
     
     
     
@@ -212,14 +212,15 @@
         <h2>Structurer avec les styles</h2>
         
         
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas créer dans Writer le compte rendu des choix de conception du monte-charge (séance 5), organisé avec les styles de titre. On attend un fichier enregistré et des réponses sur le rôle des styles.</p></div>
         
         
 
         
+<ol><li>Ouvre Writer et enregistre sous 4e_S06_tonprenom.odt.</li><li>Écris le titre « Les choix de conception du monte-charge » en style Titre.</li><li>Écris trois parties en style Titre 1 : « Sécurité », « Ergonomie », « Énergie ».</li><li>Sous chaque partie, écris deux phrases tirées de la séance 5.</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<ol><li>Ouvre Writer, enregistre sous 4e_S06_tonprenom.odt.</li><li>Titre « Les choix de conception du monte-charge » en style Titre.</li><li>Trois parties en Titre 1 : « Sécurité », « Ergonomie », « Énergie ».</li><li>Dans chaque partie, deux ou trois phrases tirées de la séance 5.</li></ol>
+<p>Pourquoi des styles plutôt que du gras ? Writer reconnaît les titres grâce aux styles : c’est ce qui lui permettra de construire la table des matières tout seul.</p>
     
 
 
@@ -233,7 +234,7 @@
 
             
             
-                <select id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><option value="">Choisis une réponse</option><option value="a">À structurer le document et à créer la table des matières automatiquement.</option><option value="b">Seulement à grossir le texte.</option><option value="c">À changer la couleur de la page.</option></select>
+                <select id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><option value="">Choisis une réponse</option><option value="a">À structurer le document et à créer la table des matières.</option><option value="b">Seulement à grossir le texte.</option><option value="c">À changer la couleur de la page.</option></select>
 
                 
             <details><summary>Un coup de pouce</summary><p>Élimine d’abord les réponses impossibles.</p></details>
@@ -268,15 +269,16 @@
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>La table des matières</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Ton document est structuré. Writer peut maintenant construire la table des matières tout seul.</p>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Ton document est structuré. Writer peut construire la table des matières tout seul.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas ajouter une table des matières automatique à ton compte rendu Writer. On attend que tu expliques comment la table se met à jour et ce qu’il faut pour qu’un titre y apparaisse.</p></div>
         
         
 
         
+<ol><li>Place le curseur sous le titre.</li><li>Clique sur Insertion &gt; Table des matières et index &gt; Table des matières, puis OK.</li><li>Ajoute une partie « Conclusion » en style Titre 1 à la fin.</li><li>Clic droit sur la table &gt; Mettre à jour l’index.</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<ol><li>Place le curseur sous le titre.</li><li>Insertion &gt; Table des matières et index &gt; Table des matières.</li><li>Valide : les trois parties apparaissent.</li><li>Ajoute une partie « Conclusion » en Titre 1, puis clic droit sur la table &gt; Mettre à jour l’index.</li></ol>
+<p>Pourquoi une table automatique ? Si on ajoute une partie ou une page, elle se met à jour en un clic, sans rien recopier.</p>
     
 
 
@@ -285,7 +287,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Que se passe-t-il dans la table des matières quand tu ajoutes la partie « Conclusion » et que tu mets à jour ?</h3>
+            <h3 id="a02-q01-label">Question 1 — Que se passe-t-il dans la table quand tu ajoutes « Conclusion » et que tu mets à jour ?</h3>
             
 
             
@@ -301,12 +303,12 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Que faut-il faire pour qu’un titre apparaisse dans la table des matières ?</h3>
+            <h3 id="a02-q02-label">Question 2 — Que faut-il pour qu’un titre apparaisse dans la table des matières ?</h3>
             
 
             
             
-                <select id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><option value="">Choisis une réponse</option><option value="a">Lui donner un style de titre (Titre 1, Titre 2…).</option><option value="b">L’écrire en gras.</option><option value="c">L’écrire en majuscules.</option></select>
+                <select id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><option value="">Choisis une réponse</option><option value="a">Un style de titre.</option><option value="b">Le gras.</option><option value="c">Les majuscules.</option></select>
 
                 
             <details><summary>Un coup de pouce</summary><p>Élimine d’abord les réponses impossibles.</p></details>
@@ -325,15 +327,16 @@
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>En-tête et pied de page</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Il reste à identifier chaque page avec un en-tête et un pied de page.</p>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Il reste à identifier chaque page.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas ajouter à ton compte rendu un en-tête (prénom, classe) et un pied de page avec le numéro de page automatique. On attend que tu expliques l’intérêt du champ « Numéro de page ».</p></div>
         
         
 
         
+<ol><li>Clique sur Insertion &gt; En-tête et pied de page &gt; En-tête &gt; Par défaut ; écris ton prénom et ta classe.</li><li>Clique sur Insertion &gt; En-tête et pied de page &gt; Pied de page &gt; Par défaut.</li><li>Dans le pied de page : Insertion &gt; Champ &gt; Numéro de page.</li><li>Enregistre (Ctrl + S).</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<ol><li>Insertion &gt; En-tête et pied de page &gt; En-tête &gt; Par défaut : écris ton prénom et ta classe.</li><li>Insertion &gt; En-tête et pied de page &gt; Pied de page &gt; Par défaut.</li><li>Dans le pied de page : Insertion &gt; Champ &gt; Numéro de page.</li><li>Enregistre (Ctrl + S).</li></ol>
+<p>Pourquoi un champ « Numéro de page » ? Il s’écrit une seule fois et se met à jour tout seul sur chaque page.</p>
     
 
 
@@ -364,15 +367,13 @@
     
     <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
+        <h2>Pour aller plus loin</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
         
-
         
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Le style Titre 2 crée des sous-parties.</p>
     
@@ -383,7 +384,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Ajoute deux sous-parties en Titre 2 dans « Sécurité ». Que devient la table des matières ?</h3>
+            <h3 id="a04-q01-label">Question 1 — Ajoute deux sous-parties en Titre 2 dans « Sécurité » et mets à jour la table. Que vois-tu ?</h3>
             
 
             
@@ -410,17 +411,15 @@
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Ton compte rendu est organisé. Il reste à répondre au problème de départ.</p>
         
         
-
         
 
-        
         
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment organiser un compte rendu pour qu’on s’y retrouve facilement ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment organiser un compte rendu pour qu’on s’y retrouve ? Cite au moins quatre étapes dans l’ordre.</h3>
             
 
             
@@ -448,7 +447,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Styles de titres → table des matières automatique (mise à jour par clic droit).</li><li>En-tête et pied de page : répétés sur chaque page ; numéro de page par un champ.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Styles de titres → table des matières automatique (mise à jour par clic droit).</li><li>En-tête et pied de page répétés ; numéro de page par un champ.</li></ul>
     
 </section>
 

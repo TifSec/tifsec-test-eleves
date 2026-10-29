@@ -46,7 +46,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Proposer le protocole</a></li><li><a href="#a02">Mesures (poste maquette) et exploitation</a></li><li><a href="#a03">Défi — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Proposer le protocole</a></li><li><a href="#a02">Exploiter les mesures</a></li><li><a href="#a03">Améliorer l’installation</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -185,7 +185,7 @@
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séance 44, émetteur et récepteur ont fonctionné dans le simulateur.</p><p>Aujourd’hui, on teste en vrai avec le tracker et la deuxième carte. Le cahier des charges demandait une réception à au moins 10 m.</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séance 44, émetteur et récepteur ont fonctionné dans le simulateur.</p><p>Aujourd’hui, on teste en vrai avec le tracker et la deuxième carte. Le cahier des charges (séance 41) demandait une réception à au moins 10 m.</p></div></section>
     
     
     
@@ -210,19 +210,27 @@
         <h2>Proposer le protocole</h2>
         
         
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas écrire le protocole d’un essai qui vérifie si la liaison radio entre le tracker (émetteur) et la deuxième carte (récepteur) fonctionne jusqu’à 10 m, comme le demande le cahier des charges de la séance 41. Tu t’appuies sur le réflexe R15. On attend trois lignes précises : ce que tu changes, ce que tu mesures, ce que tu gardes identique.</p></div>
         
         
 
         
+<blockquote>Réflexe brevet n° 15 : j’écris ce que je change, ce que je mesure, ce que je garde identique.</blockquote>
+    
 
-        
-        
+<ol><li>Relis le critère du cahier des charges : « réception à au moins 10 m ».</li><li>Choisis ce que tu fais varier : la distance entre le tracker et la carte réceptrice (ou un obstacle).</li><li>Choisis ce que tu mesures : le nombre de messages reçus quand le tracker en envoie 10.</li><li>Liste tout ce qui doit rester identique pour que l’essai soit juste.</li></ol>
+    
+
+<p>Pourquoi compter des messages sur 10 ? Un seul message reçu ne prouve rien : sur 10 envois, on voit si la liaison est fiable ou si elle « décroche ».</p>
+    
+
+
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Écris ton protocole.</h3>
+            <h3 id="a01-q01-label">Question 1 — Écris ton protocole pour vérifier que la carte réceptrice reçoit bien les mesures du tracker à 10 m ou plus.</h3>
             
 
             
@@ -245,30 +253,13 @@
                                 
                                 <td>
                                     
-                                    Je change
+                                    Ce que je change
                                     
                                 </td>
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Proposer le protocole — Mon protocole — Je change">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Je mesure
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Proposer le protocole — Mon protocole — Je mesure">
+                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Proposer le protocole — Mon protocole — Ce que je change">
                                     
                                 </td>
                                 
@@ -279,13 +270,30 @@
                                 
                                 <td>
                                     
-                                    Je garde identique
+                                    Ce que je mesure
                                     
                                 </td>
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Proposer le protocole — Mon protocole — Je garde identique">
+                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Proposer le protocole — Mon protocole — Ce que je mesure">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Ce que je garde identique
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Proposer le protocole — Mon protocole — Ce que je garde identique">
                                     
                                 </td>
                                 
@@ -309,20 +317,21 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Mesures (poste maquette) et exploitation</h2>
+        <h2>Exploiter les mesures</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> La classe applique le protocole retenu.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas exploiter les résultats de l’essai de portée réalisé par la classe avec le tracker et la carte réceptrice (document 1). On attend un pourcentage calculé et une conclusion sur le critère « 10 m » du cahier des charges.</p></div>
         
         
 
         
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Le professeur téléverse le programme d’un groupe sur le tracker et sur la carte libre. Les mesures sont mises en commun :</p>
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Exemple de résultats (à remplacer par ceux de la classe)</caption><thead><tr><th scope="col">Distance</th><th scope="col">2 m</th><th scope="col">5 m</th><th scope="col">10 m</th><th scope="col">15 m</th><th scope="col">10 m derrière un mur</th></tr></thead><tbody><tr><td>Messages reçus sur 10</td><td>10</td><td>10</td><td>9</td><td>6</td><td>3</td></tr></tbody></table></div>
     
 
-<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Exemple de résultats (à remplacer par ceux de la classe)</caption><thead><tr><th scope="col">Distance</th><th scope="col">2 m</th><th scope="col">5 m</th><th scope="col">10 m</th><th scope="col">15 m</th><th scope="col">10 m derrière un mur</th></tr></thead><tbody><tr><td>Messages reçus sur 10</td><td>10</td><td>10</td><td>9</td><td>6</td><td>3</td></tr></tbody></table></div>
+<ol><li>Le professeur téléverse le programme d’un groupe sur le tracker et sur la carte libre ; la classe applique le protocole retenu.</li><li>Lis les résultats mis en commun (document 1).</li><li>Calcule le pourcentage de messages reçus à 10 m.</li><li>Regarde aussi le cas « derrière un mur ».</li></ol>
+    
+
+<p>Pourquoi un pourcentage ? Il permet de comparer facilement avec un critère, même si on n’envoie pas toujours 10 messages.</p>
     
 
 
@@ -331,7 +340,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — D’après le document 1, quel pourcentage de messages est reçu à 10 m ?</h3>
+            <h3 id="a02-q01-label">Question 1 — D’après le document 1, quel pourcentage des messages envoyés par le tracker est reçu à 10 m ?</h3>
             
 
             
@@ -347,7 +356,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Le critère « réception à au moins 10 m » est-il respecté ? Justifie, et parle du mur.</h3>
+            <h3 id="a02-q02-label">Question 2 — Le critère du cahier des charges « réception à au moins 10 m » est-il respecté ? Justifie avec le document 1, et parle du mur.</h3>
             
 
             
@@ -360,22 +369,6 @@
             
         </div>
         
-        <div class="cours-question" data-question="q03">
-            
-            
-            <h3 id="a02-q03-label">Question 3 — Après les tests, que faut-il faire sur le tracker ?</h3>
-            
-
-            
-            
-                <select id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label"><option value="">Choisis une réponse</option><option value="a">Remettre le programme d’origine (ou garder le nôtre si la classe l’adopte).</option><option value="b">Rien.</option><option value="c">Le démonter.</option></select>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Relis l’exemple expliqué.</p></details>
-            
-            
-        </div>
-        
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#a01">← Étape précédente</a>
@@ -384,18 +377,19 @@
     </article>
     
     <article class="cours-activite" id="a03" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
-        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Améliorer l’installation</h2>
         
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu connais la portée. Utilise-la pour bien installer le récepteur.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas utiliser les résultats de l’essai pour conseiller un emplacement à la carte réceptrice du tracker dans la salle. On attend un conseil justifié par les mesures et un moyen de le vérifier.</p></div>
         
         
 
         
+<ol><li>Reprends ta conclusion de la mission 2.</li><li>Cherche où placer la carte réceptrice dans la salle pour éviter les obstacles.</li><li>Propose une amélioration et dis comment la vérifier.</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Certains messages arrivent mais sont perdus si le récepteur est occupé.</p>
+<p>Pourquoi proposer une amélioration ? Un test ne sert pas qu’à juger : il aide à mieux installer l’objet.</p>
     
 
 
@@ -404,15 +398,31 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Comment le récepteur pourrait-il signaler qu’il n’a rien reçu depuis 10 s ?</h3>
+            <h3 id="a03-q01-label">Question 1 — D’après tes résultats, où conseilles-tu d’installer la carte réceptrice du tracker dans la salle ? Comment vérifierais-tu que ton conseil fonctionne ?</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a03-q02-label">Question 2 — Après les tests, que faut-il faire sur le tracker du collège ?</h3>
+            
+
+            
+            
+                <select id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label"><option value="">Choisis une réponse</option><option value="a">Remettre le programme d’origine (ou garder le nôtre si la classe l’adopte).</option><option value="b">Rien.</option><option value="c">Le démonter.</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Relis l’exemple expliqué.</p></details>
             
             
         </div>
@@ -425,28 +435,65 @@
     </article>
     
     <article class="cours-activite" id="a04" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Pour aller plus loin</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        
+        
+        
+        
+
+        
+<p>Certains messages arrivent mais sont perdus si le récepteur est occupé.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Comment la carte réceptrice pourrait-elle signaler qu’elle n’a rien reçu depuis 10 s ?</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a05" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> La liaison est testée. Il reste à répondre au problème de départ.</p>
         
         
-
         
 
-        
         
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Réponds au problème du jour : comment as-tu vérifié la fiabilité de la liaison, et qu’as-tu conclu ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment as-tu vérifié la fiabilité de la liaison radio du tracker, et qu’as-tu conclu ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème (réflexe n° 3).</p></details>
@@ -456,7 +503,7 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -501,7 +548,7 @@
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

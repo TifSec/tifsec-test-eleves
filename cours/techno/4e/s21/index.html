@@ -46,7 +46,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Proposer un protocole</a></li><li><a href="#a02">Mesurer (poste maquette) et mettre en commun</a></li><li><a href="#a03">Défi — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Proposer un protocole</a></li><li><a href="#a02">Répéter les mesures</a></li><li><a href="#a03">Mesurer et conclure (poste maquette)</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -168,7 +168,7 @@
             
             <li>Un protocole précise ce que je change (une seule chose), ce que je mesure, et ce que je garde identique.</li>
             
-            <li>On répète les mesures et on note les résultats dans un tableau avant de conclure.</li>
+            <li>On répète les mesures avant de conclure.</li>
             
         </ul>
         
@@ -178,14 +178,14 @@
             
             <li>Proposer un protocole (réflexe R15).</li>
             
-            <li>Mettre en œuvre le protocole et exploiter les résultats.</li>
+            <li>Exploiter des résultats.</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En 5e, le protocole de mesure de l’éolienne était fourni. En séance 20, tu as choisi les appareils.</p><p>Aujourd’hui, c’est toi qui proposes le protocole. La classe choisira le meilleur, puis on le mettra en œuvre.</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En 5e, le protocole de mesure était fourni. En séance 20, tu as choisi les appareils.</p><p>Aujourd’hui, c’est toi qui proposes le protocole ; la classe choisit le meilleur et on le met en œuvre.</p></div></section>
     
     
     
@@ -210,17 +210,18 @@
         <h2>Proposer un protocole</h2>
         
         
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas écrire le protocole d’un essai sur l’éolienne de la classe : produit-elle encore une tension quand le ventilateur souffle faiblement (vitesse 1 sur 3) ? Tu t’appuies sur le réflexe R15. On attend trois lignes précises : ce que tu changes, ce que tu mesures (appareil, unité), ce que tu gardes identique.</p></div>
         
         
 
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <blockquote>Réflexe brevet n° 15 : j’écris ce que je change, ce que je mesure, ce que je garde identique.</blockquote>
     
 
-<p>Le ventilateur a trois vitesses : 1 (faible), 2, 3 (fort).</p>
+<ol><li>Lis le réflexe R15.</li><li>Le ventilateur a trois vitesses : 1 (faible), 2, 3 (fort).</li><li>Écris ce que tu changes, ce que tu mesures (appareil, unité), ce que tu gardes identique.</li></ol>
+    
+
+<p>Pourquoi garder le reste identique ? Si on change deux choses à la fois, on ne sait pas laquelle explique la différence.</p>
     
 
 
@@ -229,7 +230,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Écris ton protocole.</h3>
+            <h3 id="a01-q01-label">Question 1 — Écris ton protocole pour savoir si l’éolienne de la classe produit encore une tension quand le ventilateur est sur la vitesse 1 (vent faible).</h3>
             
 
             
@@ -307,22 +308,6 @@
             
         </div>
         
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a01-q02-label">Question 2 — Combien de fois mesures-tu pour chaque vitesse, et pourquoi ?</h3>
-            
-
-            
-            
-                <textarea id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Attendu ou observé ?</p></details>
-            
-            
-        </div>
-        
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#course-intro">← Revoir l’objectif</a>
@@ -332,20 +317,18 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Mesurer (poste maquette) et mettre en commun</h2>
+        <h2>Répéter les mesures</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> La classe a choisi un protocole. Mettons-le en œuvre.</p>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Ton protocole est écrit. Est-ce qu’une mesure suffit ?</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas décider combien de fois répéter chaque mesure de ton protocole de la mission 1. On attend un nombre de mesures et une explication de ce que tu fais des résultats.</p></div>
         
         
 
         
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Le protocole choisi par la classe est mis en œuvre (le professeur gère l’alimentation). Résultats mis en commun :</p>
+<ol><li>Demande-toi si une seule mesure suffit.</li><li>Choisis combien de fois tu mesures.</li><li>Explique ce que tu fais des résultats.</li></ol>
     
 
-<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Exemple de résultats (valeurs inventées si la mesure n’a pas pu être faite)</caption><thead><tr><th scope="col">Vitesse du ventilateur</th><th scope="col">Tension (V), moyenne de la classe</th></tr></thead><tbody><tr><td>1 (faible)</td><td>0,3</td></tr><tr><td>2</td><td>1,1</td></tr><tr><td>3 (fort)</td><td>1,9</td></tr></tbody></table></div>
+<p>Pourquoi répéter ? Une mesure varie un peu (souffle irrégulier, lecture) : la moyenne de plusieurs mesures est plus fiable.</p>
     
 
 
@@ -354,7 +337,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — D’après le document 1, l’éolienne produit-elle encore avec un vent faible ? Justifie avec les valeurs et l’unité.</h3>
+            <h3 id="a02-q01-label">Question 1 — Combien de fois mesures-tu pour chaque vitesse, et pourquoi ?</h3>
             
 
             
@@ -362,23 +345,7 @@
                 <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>« D’après le document… » (réflexe n° 2).</p></details>
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a02-q02-label">Question 2 — Combien de fois la tension est-elle plus grande en vent fort qu’en vent faible (arrondi à l’unité) ?</h3>
-            
-
-            
-            
-                <input type="text" inputmode="decimal" id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label">
-
-                
-            <details><summary>Un coup de pouce</summary><p>N’oublie pas l’unité (réflexe n° 5).</p></details>
+            <details><summary>Un coup de pouce</summary><p>Attendu ou observé ?</p></details>
             
             
         </div>
@@ -391,18 +358,22 @@
     </article>
     
     <article class="cours-activite" id="a03" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
-        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Mesurer et conclure (poste maquette)</h2>
         
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> La classe a choisi un protocole. Mettons-le en œuvre.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas exploiter les résultats de l’essai réalisé par la classe sur l’éolienne (document 1). On attend une conclusion avec des valeurs et leur unité, et un calcul de comparaison.</p></div>
         
         
 
         
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Exemple de résultats (à remplacer par ceux de la classe)</caption><thead><tr><th scope="col">Vitesse du ventilateur</th><th scope="col">Tension (V), moyenne de la classe</th></tr></thead><tbody><tr><td>1 (faible)</td><td>0,3</td></tr><tr><td>2</td><td>1,1</td></tr><tr><td>3 (fort)</td><td>1,9</td></tr></tbody></table></div>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Une LED rouge s’allume à partir d’environ 1,6 V.</p>
+<ol><li>Le protocole choisi par la classe est mis en œuvre (le professeur gère l’alimentation).</li><li>Lis les résultats mis en commun (document 1).</li><li>Conclus avec les valeurs et l’unité.</li></ol>
+    
+
+<p>Pourquoi conclure avec des valeurs ? Une conclusion chiffrée se vérifie ; « elle produit peu » ne se vérifie pas.</p>
     
 
 
@@ -411,15 +382,31 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — À quelles vitesses du ventilateur la LED s’allume-t-elle ?</h3>
+            <h3 id="a03-q01-label">Question 1 — L’éolienne produit-elle encore avec un vent faible ? Justifie avec les valeurs et l’unité.</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Pense à « car » (réflexe n° 4).</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a03-q02-label">Question 2 — Combien de fois la tension est-elle plus grande en vent fort qu’en vent faible (arrondi à l’unité) ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>N’oublie pas l’unité (réflexe n° 5).</p></details>
             
             
         </div>
@@ -432,28 +419,65 @@
     </article>
     
     <article class="cours-activite" id="a04" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Pour aller plus loin</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        
+        
+        
+        
+
+        
+<p>Une LED rouge s’allume à partir d’environ 1,6 V.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — À quelles vitesses la LED s’allume-t-elle ?</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a05" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as proposé, mené et exploité un protocole. Il reste à répondre au problème de départ.</p>
         
         
-
         
 
-        
         
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Réponds au problème du jour : comment as-tu proposé et mené ton protocole, et que conclus-tu ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment as-tu mené ton protocole, et que conclus-tu ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème (réflexe n° 3).</p></details>
@@ -463,7 +487,7 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -476,7 +500,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Protocole : je change une seule chose, je mesure (appareil, unité), je garde le reste identique ; je répète.</li><li>Plus le vent est fort, plus l’éolienne produit.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Protocole : je change une seule chose, je mesure, je garde le reste identique ; je répète.</li><li>Plus le vent est fort, plus l’éolienne produit.</li></ul>
     
 </section>
 
@@ -508,7 +532,7 @@
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

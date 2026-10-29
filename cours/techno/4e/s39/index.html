@@ -46,7 +46,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Le symptôme</a></li><li><a href="#a02">Proposer le protocole</a></li><li><a href="#a03">Conclure</a></li><li><a href="#a04">Défi — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Le symptôme</a></li><li><a href="#a02">Proposer le protocole</a></li><li><a href="#a03">Conclure</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -210,14 +210,18 @@
         <h2>Le symptôme</h2>
         
         
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas analyser une panne réelle du monte-charge, préparée par le professeur : la cabine ne monte pas. Tu t’appuies sur le symptôme décrit ci-dessous et sur la chaîne d’information (séance 35). On attend la liste de ce qui fonctionne et des causes possibles.</p></div>
         
         
 
         
+<blockquote>Symptôme observé : au démarrage, les voyants sont orange puis verts, l’écran affiche « Attente ». La cabine est en bas. On appuie sur le bouton Étage : rien ne se passe.</blockquote>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Symptôme observé (démonstration) : au démarrage, les voyants sont orange puis verts, l’écran affiche « Attente ». On appuie sur Étage, cabine en bas : rien ne se passe.</p>
+<ol><li>Observe la démonstration du professeur (ou lis le symptôme ci-dessous).</li><li>Liste ce qui fonctionne : voyants, écran, carte…</li><li>Liste ce qui pourrait être en cause pour que la cabine ne monte pas.</li></ol>
+    
+
+<p>Pourquoi commencer par ce qui marche ? Tout ce qui fonctionne est hors de cause : il reste moins de suspects.</p>
     
 
 
@@ -226,7 +230,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — D’après le symptôme, qu’est-ce qui fonctionne et qu’est-ce qui peut être en cause ?</h3>
+            <h3 id="a01-q01-label">Question 1 — Le monte-charge démarre normalement, mais la cabine ne monte pas quand on appuie sur Étage. D’après ce symptôme, qu’est-ce qui fonctionne et qu’est-ce qui peut être en cause ?</h3>
             
 
             
@@ -250,20 +254,28 @@
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Proposer le protocole</h2>
         
-        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu connais les causes possibles. Organise les vérifications.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas écrire le protocole de dépannage du monte-charge : les vérifications à faire, dans l’ordre, pour trouver pourquoi la cabine ne monte pas. Tu t’appuies sur tes causes possibles de la mission 1 et sur l’exemple de ligne. On attend un tableau de trois vérifications complètes.</p></div>
         
         
 
         
+<p>Exemple expliqué de ligne : « Vérification : l’écran s’allume-t-il ? — Attendu : il affiche « Attente ». — Sinon : problème d’alimentation ou de carte. »</p>
+    
 
-        
-        
+<ol><li>Reprends tes causes possibles de la mission 1.</li><li>Range-les de la plus simple à vérifier à la plus précise.</li><li>Pour chacune, écris ce que tu attends si tout va bien.</li><li>Puis ce que tu conclus si ce n’est pas le cas.</li></ol>
+    
+
+<p>Pourquoi du simple au précis ? On vérifie d’abord ce qui est rapide et fréquent, pour ne pas démonter le monte-charge pour rien.</p>
+    
+
+
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Écris ton protocole (trois vérifications, de la plus simple à la plus précise).</h3>
+            <h3 id="a02-q01-label">Question 1 — Écris ton protocole pour trouver pourquoi la cabine du monte-charge ne monte pas : trois vérifications, de la plus simple à la plus précise.</h3>
             
 
             
@@ -275,7 +287,7 @@
                                 
                                 <th>Vérification</th>
                                 
-                                <th>Résultat attendu</th>
+                                <th>Résultat attendu si tout va bien</th>
                                 
                                 <th>Si ce n’est pas le cas, je conclus…</th>
                                 
@@ -294,7 +306,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Proposer le protocole — Résultat attendu — ">
+                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Proposer le protocole — Résultat attendu si tout va bien — ">
                                     
                                 </td>
                                 
@@ -317,7 +329,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Proposer le protocole — Résultat attendu — ">
+                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Proposer le protocole — Résultat attendu si tout va bien — ">
                                     
                                 </td>
                                 
@@ -340,7 +352,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a02_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Proposer le protocole — Résultat attendu — ">
+                                    <input type="text" data-answer-id="a02_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Proposer le protocole — Résultat attendu si tout va bien — ">
                                     
                                 </td>
                                 
@@ -373,14 +385,18 @@
         <h2>Conclure</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le protocole est proposé. La classe l’applique en démonstration.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas expliquer la panne trouvée par la classe (un contact décalé) à l’aide du programme du monte-charge étudié en séance 36. On attend une explication qui relie le contact, la broche P13 et la condition de montée.</p></div>
         
         
 
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Résultat du protocole de la classe : le contact bas n’est plus appuyé par la cabine (il a été légèrement décalé).</p>
+    
+
+<ol><li>Lis le résultat du protocole appliqué par la classe.</li><li>Relis la condition de montée du programme (séance 36) : si (P13 = 1) ET (P1 appuyé).</li><li>Explique le lien entre le contact décalé et la condition.</li></ol>
+    
+
+<p>Pourquoi relier au programme ? La panne est mécanique, mais c’est le programme qui décide de ne pas démarrer : il faut les deux pour comprendre.</p>
     
 
 
@@ -389,7 +405,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Explique pourquoi un contact bas décalé empêche la montée, en t’appuyant sur le programme (séance 36).</h3>
+            <h3 id="a03-q01-label">Question 1 — Le contact bas du monte-charge a été légèrement décalé. Explique pourquoi cela empêche la montée, en t’appuyant sur le programme de la séance 36.</h3>
             
 
             
@@ -411,15 +427,13 @@
     
     <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
+        <h2>Pour aller plus loin</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
         
-
         
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Une panne peut aussi venir du programme.</p>
     
@@ -430,7 +444,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Comment vérifier si le programme est en cause, sans toucher aux fils ?</h3>
+            <h3 id="a04-q01-label">Question 1 — Comment vérifier si le programme du monte-charge est en cause, sans toucher aux fils ?</h3>
             
 
             
@@ -457,17 +471,15 @@
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as proposé un protocole et trouvé la panne. Il reste à répondre au problème de départ.</p>
         
         
-
         
 
-        
         
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment proposer un protocole pour trouver l’origine d’une panne ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment proposer un protocole pour trouver l’origine d’une panne du monte-charge ?</h3>
             
 
             

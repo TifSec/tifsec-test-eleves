@@ -46,7 +46,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Le panier</a></li><li><a href="#a02">Les fruits</a></li><li><a href="#a03">Défi — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Le panier</a></li><li><a href="#a02">Les fruits</a></li><li><a href="#a03">Les vies</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -166,9 +166,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Chaque ligne de l’algorithme devient un ou plusieurs blocs : QUAND → bloc d’événement ; SI … ALORS → bloc « si » ; RÉPÉTER → bloc « répéter » ou « toujours ».</li>
+            <li>Chaque ligne de l’algorithme devient un ou plusieurs blocs : QUAND → événement ; SI → « si … alors » ; RÉPÉTER → « à chaque … ms » ou « toujours ».</li>
             
-            <li>On teste après chaque partie traduite.</li>
+            <li>On teste après chaque partie.</li>
             
         </ul>
         
@@ -178,7 +178,7 @@
             
             <li>Traduire un algorithme en blocs Arcade.</li>
             
-            <li>Utiliser une boucle « répéter » ou « toujours ».</li>
+            <li>Utiliser une boucle.</li>
             
         </ul>
         
@@ -210,14 +210,15 @@
         <h2>Le panier</h2>
         
         
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas commencer à programmer le jeu « Récolte » dans MakeCode Arcade : le panier qui se déplace avec les flèches. On attend un panier qui fonctionne et le bloc qui traduit la règle.</p></div>
         
         
 
         
+<ol><li>Ouvre MakeCode Arcade, nouveau projet 4e_S32_tonprenom.</li><li>Crée un sprite « panier » (type Player) en bas de l’écran.</li><li>Ajoute « déplacer panier avec les boutons » et mets la vitesse verticale à 0.</li><li>Teste avec les flèches.</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<ol><li>Ouvre MakeCode Arcade, nouveau projet 4e_S32_tonprenom.</li><li>Crée un sprite « panier » (type Player) en bas de l’écran.</li><li>Ajoute le bloc « déplacer panier avec les boutons » et mets la vitesse verticale à 0.</li></ol>
+<p>Pourquoi vitesse verticale 0 ? Le panier ne doit bouger que de gauche à droite, comme dans les règles.</p>
     
 
 
@@ -231,7 +232,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Quel bloc correspond à la ligne « QUAND on appuie sur une flèche : déplacer le panier » de ton algorithme ?</h3>
+            <h3 id="a01-q01-label">Question 1 — Quel bloc traduit « QUAND on appuie sur une flèche : déplacer le panier » ?</h3>
             
 
             
@@ -239,7 +240,23 @@
                 <textarea id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Bloc par bloc : quand ? quelle condition ? quelle action ?</p></details>
+            <details><summary>Un coup de pouce</summary><p>Bloc par bloc (réflexe n° 9).</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a01-q02-label">Question 2 — Que fait la vitesse verticale 0 ?</h3>
+            
+
+            
+            
+                <select id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><option value="">Choisis une réponse</option><option value="a">Le panier ne monte ni ne descend.</option><option value="b">Le panier ne bouge plus.</option><option value="c">Il va plus vite.</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Relis l’exemple expliqué.</p></details>
             
             
         </div>
@@ -256,14 +273,15 @@
         <h2>Les fruits</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le panier bouge. Fais tomber les fruits.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas programmer les fruits qui tombent et le score du jeu « Récolte », en traduisant ton algorithme de la séance 31. On attend l’association entre chaque ligne de l’algorithme et son bloc.</p></div>
         
         
 
         
+<ol><li>Dans « à chaque 2000 ms », crée un sprite « fruit » (type Food) en haut, x au hasard entre 10 et 150.</li><li>Donne-lui vy = 50.</li><li>Ajoute « quand Player chevauche Food » : score +1, détruire le fruit.</li><li>Teste.</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<ol><li>Dans « à chaque 2000 ms », crée un sprite « fruit » (type Food) en haut, à une position x au hasard entre 10 et 150.</li><li>Donne-lui une vitesse vy = 50.</li><li>Ajoute « quand sprite de type Player chevauche sprite de type Food » : changer le score de 1, détruire le fruit.</li></ol>
+<p>Pourquoi tester après chaque partie ? Si un bug apparaît, on sait qu’il vient de la dernière partie ajoutée.</p>
     
 
 
@@ -355,22 +373,6 @@
             
         </div>
         
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a02-q02-label">Question 2 — Quel bloc répète des instructions sans fin ?</h3>
-            
-
-            
-            
-                <select id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><option value="">Choisis une réponse</option><option value="a">« toujours »</option><option value="b">« au démarrage »</option><option value="c">« si … alors »</option></select>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Relis l’exemple expliqué.</p></details>
-            
-            
-        </div>
-        
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#a01">← Étape précédente</a>
@@ -379,18 +381,19 @@
     </article>
     
     <article class="cours-activite" id="a03" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
-        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Les vies</h2>
         
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les fruits tombent. Il manque les vies.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas programmer les vies du jeu « Récolte » : un fruit qui touche le sol fait perdre une vie. On attend la description des blocs utilisés.</p></div>
         
         
 
         
+<ol><li>Au démarrage, mets les vies à 3.</li><li>Quand un fruit sort par le bas (y &gt; 120), retire une vie et détruis le fruit.</li><li>Teste : à 0 vie, la partie s’arrête.</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Il reste les vies.</p>
+<p>Pourquoi les vies ? Elles donnent un enjeu au joueur : c’est la condition de fin de partie.</p>
     
 
 
@@ -404,12 +407,12 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Programme la perte d’une vie quand un fruit sort de l’écran par le bas. Quel bloc as-tu utilisé ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Décris les blocs utilisés pour retirer une vie quand un fruit touche le sol.</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Bloc par bloc (réflexe n° 9).</p></details>
@@ -425,28 +428,65 @@
     </article>
     
     <article class="cours-activite" id="a04" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Pour aller plus loin</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        
+        
+        
+        
+
+        
+<p>Le jeu peut afficher un message de fin.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Ajoute « Bravo ! » quand le score atteint 20. Quel bloc ?</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Bloc par bloc (réflexe n° 9).</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a05" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Ton jeu prend forme. Il reste à répondre au problème de départ.</p>
         
         
-
         
 
-        
         
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Réponds au problème du jour : comment as-tu traduit ton algorithme en programme ? Donne deux exemples de traduction.</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment as-tu traduit ton algorithme en programme ? Donne deux exemples.</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème (réflexe n° 3).</p></details>
@@ -456,7 +496,7 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -469,7 +509,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>QUAND → événement ; SI → « si … alors » ; RÉPÉTER → « répéter » / « toujours » / « à chaque … ms ».</li><li>On teste après chaque partie traduite.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>QUAND → événement ; SI → « si … alors » ; RÉPÉTER → « toujours » / « à chaque … ms ».</li><li>Tester après chaque partie.</li></ul>
     
 </section>
 
@@ -501,7 +541,7 @@
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

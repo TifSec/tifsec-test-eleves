@@ -46,7 +46,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Le dossier</a></li><li><a href="#a02">Je relis (R16)</a></li><li><a href="#a03">Défi — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">La chaîne d’information de la barrière</a></li><li><a href="#a02">Compléter le programme</a></li><li><a href="#a03">Écrire l’algorithme et relire</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -166,7 +166,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Chaîne d’information, algorithme, programme à compléter.</li>
+            <li>Chaîne d’information : acquérir, traiter, communiquer.</li>
+            
+            <li>Algorithme en langage naturel ; programme à compléter.</li>
             
         </ul>
         
@@ -181,7 +183,7 @@
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Depuis la séance 35, tu as analysé et complété le programme du monte-charge.</p><p>Aujourd’hui, un dossier sur la barrière du parking du collège (situation inventée).</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Depuis la séance 35, tu as analysé et complété le programme du monte-charge.</p><p>Aujourd’hui, un dossier de type brevet sur la barrière du parking du collège (situation inventée).</p></div></section>
     
     
     
@@ -203,32 +205,24 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Le dossier</h2>
+        <h2>La chaîne d’information de la barrière</h2>
         
         
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas t’entraîner au brevet sur un dossier : la barrière du parking du collège (document 1, situation inventée). On attend la fonction de chaque constituant de la barrière dans la chaîne d’information (acquérir, traiter, communiquer).</p></div>
         
         
 
         
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<h4>Document 1 — La barrière</h4>
+<h4>Document 1 — La barrière du parking (situation inventée)</h4>
     
 
 <blockquote>Un lecteur de badge lit la carte du professeur. Si le badge est autorisé, la carte programmable commande le moteur qui lève la barrière, et un feu passe au vert. Un capteur infrarouge détecte la voiture sous la barrière : tant qu’une voiture est détectée, la barrière reste levée. Puis elle se baisse et le feu repasse au rouge.</blockquote>
     
 
-<h4>Document 2 — Programme incomplet</h4>
+<ol><li>Lis tout le document 1 une première fois, sans répondre.</li><li>Relis-le en soulignant mentalement chaque constituant.</li><li>Pour chacun, demande-toi : récupère-t-il une information, décide-t-il, ou informe-t-il l’utilisateur ?</li></ol>
     
 
-<pre class="cours-code"><code>toujours
-    si badge autorisé alors
-        lever la barrière ; feu vert
-        attendre 3 s
-        tant que ……………… 
-            attendre 0,5 s
-        baisser la barrière ; ………………</code></pre>
+<p>Pourquoi lire deux fois ? La première lecture donne le fonctionnement général ; la seconde sert à chercher les réponses.</p>
     
 
 
@@ -237,7 +231,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — D’après le document 1, classe les constituants.</h3>
+            <h3 id="a01-q01-label">Question 1 — D’après le document 1, écris la fonction de chaque constituant de la barrière dans la chaîne d’information.</h3>
             
 
             
@@ -266,7 +260,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Le dossier — Fonction — Lecteur de badge">
+                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="La chaîne d’information de la barrière — Fonction — Lecteur de badge">
                                     
                                 </td>
                                 
@@ -283,7 +277,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Le dossier — Fonction — Capteur infrarouge">
+                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="La chaîne d’information de la barrière — Fonction — Capteur infrarouge">
                                     
                                 </td>
                                 
@@ -300,7 +294,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Le dossier — Fonction — Carte programmable">
+                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="La chaîne d’information de la barrière — Fonction — Carte programmable">
                                     
                                 </td>
                                 
@@ -317,7 +311,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r3_c1" data-required="true" data-row="3" data-col="1" aria-label="Le dossier — Fonction — Feu">
+                                    <input type="text" data-answer-id="a01_q01_r3_c1" data-required="true" data-row="3" data-col="1" aria-label="La chaîne d’information de la barrière — Fonction — Feu">
                                     
                                 </td>
                                 
@@ -332,10 +326,48 @@
             
         </div>
         
-        <div class="cours-question" data-question="q02">
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#course-intro">← Revoir l’objectif</a>
+            <a class="course-mission-next" href="#a02">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a02" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Compléter le programme</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu connais la chaîne d’information. Passe au programme.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas compléter le programme de la barrière (document 2) à partir de son fonctionnement décrit dans le document 1, avec le réflexe R13. On attend les deux trous complétés et l’explication de la sécurité apportée par la boucle « tant que ».</p></div>
+        
+        
+
+        
+<h4>Document 2 — Programme incomplet de la barrière</h4>
+    
+
+<pre class="cours-code"><code>toujours
+    si badge autorisé alors
+        lever la barrière ; feu vert
+        attendre 3 s
+        tant que ……………… 
+            attendre 0,5 s
+        baisser la barrière ; ………………</code></pre>
+    
+
+<ol><li>Lis le programme incomplet (document 2).</li><li>Relis dans le document 1 ce que doit faire la barrière quand une voiture est dessous.</li><li>Compare ligne par ligne (R13) et complète les trous.</li></ol>
+    
+
+<p>Pourquoi revenir au document 1 ? C’est lui qui dit ce que le programme doit faire : la réponse est dans le texte.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            
-            <h3 id="a01-q02-label">Question 2 — Complète les deux trous du programme (document 2).</h3>
+            <h3 id="a02-q01-label">Question 1 — Complète les deux trous du programme de la barrière (document 2).</h3>
             
 
             
@@ -364,7 +396,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q02_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Le dossier — À écrire — Condition du « tant que »">
+                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Compléter le programme — À écrire — Condition du « tant que »">
                                     
                                 </td>
                                 
@@ -381,7 +413,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q02_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Le dossier — À écrire — Dernière action">
+                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Compléter le programme — À écrire — Dernière action">
                                     
                                 </td>
                                 
@@ -396,71 +428,18 @@
             
         </div>
         
-        <div class="cours-question" data-question="q03">
+        <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q03-label">Question 3 — Écris l’algorithme complet en langage naturel.</h3>
-            
-
-            
-            
-                <textarea id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Combien d’éléments sont demandés ?</p></details>
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q04">
-            
-            
-            <h3 id="a01-q04-label">Question 4 — Pourquoi la boucle « tant que » est-elle une sécurité ? Justifie avec « car ».</h3>
+            <h3 id="a02-q02-label">Question 2 — Pourquoi la boucle « tant que » du programme de la barrière est-elle une sécurité ? Justifie avec « car ».</h3>
             
 
             
             
-                <textarea id="a01-q04" data-answer-id="a01_q04" data-required="true" aria-labelledby="a01-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Pense à « car » (réflexe n° 4).</p></details>
-            
-            
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#course-intro">← Revoir l’objectif</a>
-            <a class="course-mission-next" href="#a02">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a02" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Je relis (R16)</h2>
-        
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Relis-toi.</p>
-        
-        
-
-        
-
-        
-        
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a02-q01-label">Question 1 — Quelle réponse as-tu améliorée en te relisant ?</h3>
-            
-
-            
-            
-                <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Bloc par bloc (réflexe n° 9).</p></details>
             
             
         </div>
@@ -473,18 +452,19 @@
     </article>
     
     <article class="cours-activite" id="a03" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
-        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Écrire l’algorithme et relire</h2>
         
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le programme est complet. Écris l’algorithme, puis relis-toi.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas écrire l’algorithme complet de la barrière en langage naturel (R12), puis relire tout ton dossier (R16). On attend un algorithme avec TOUJOURS, SI … ALORS, TANT QUE, et une amélioration précise d’une de tes réponses.</p></div>
         
         
 
         
+<ol><li>Écris l’algorithme complet de la barrière avec TOUJOURS, SI … ALORS, TANT QUE (R12).</li><li>Relis toutes tes réponses du dossier (R16) : ai-je répondu à la question ? justifié ? utilisé les documents ?</li><li>Améliore une réponse.</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Le badge peut être refusé.</p>
+<p>Pourquoi écrire l’algorithme à la fin ? Tu as compris le fonctionnement et le programme : il ne reste qu’à le dire en français.</p>
     
 
 
@@ -493,12 +473,28 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Ajoute un « sinon » à l’algorithme pour ce cas.</h3>
+            <h3 id="a03-q01-label">Question 1 — Écris l’algorithme complet de la barrière du parking en langage naturel.</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Combien d’éléments sont demandés ?</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a03-q02-label">Question 2 — En relisant ton dossier sur la barrière, quelle réponse as-tu améliorée ? Qu’as-tu changé ?</h3>
+            
+
+            
+            
+                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
@@ -514,28 +510,65 @@
     </article>
     
     <article class="cours-activite" id="a04" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Pour aller plus loin</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        
+        
+        
+        
+
+        
+<p>Le badge peut être refusé.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Ajoute un « sinon » à l’algorithme de la barrière pour ce cas.</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a05" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as traité un dossier complet. Fais le point.</p>
         
         
-
         
 
-        
         
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Quel réflexe (R9, R12, R13, R16) t’a le plus aidé ? Exemple.</h3>
+            <h3 id="a05-q01-label">Question 1 — Quel réflexe (R9, R12, R13, R16) t’a le plus aidé dans le dossier de la barrière ? Donne un exemple précis de ta copie.</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème (réflexe n° 3).</p></details>
@@ -545,7 +578,7 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -590,7 +623,7 @@
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

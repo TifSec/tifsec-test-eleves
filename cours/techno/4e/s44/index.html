@@ -46,7 +46,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">L’émetteur</a></li><li><a href="#a02">Le récepteur</a></li><li><a href="#a03">Défi — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">L’émetteur</a></li><li><a href="#a02">Le récepteur</a></li><li><a href="#a03">Tester les deux programmes</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -210,14 +210,15 @@
         <h2>L’émetteur</h2>
         
         
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas ajouter l’envoi radio de la luminosité et de l’angle dans une copie du vrai programme du tracker, sans toucher au suivi du soleil. On attend les ajouts au bon endroit et l’explication de la règle « ne rien casser ».</p></div>
         
         
 
         
+<ol><li>Ouvre une copie du programme du tracker (lien du professeur).</li><li>Au démarrage, ajoute « radio définir groupe » avec ton numéro.</li><li>Dans la boucle « toujours », après le réglage de l’angle, ajoute « radio envoyer valeur « lum » = gauche + droite » et « radio envoyer valeur « angle » = angle ».</li><li>Ne modifie rien d’autre.</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<ol><li>Ouvre une copie du programme du tracker (lien du professeur).</li><li>Au démarrage, ajoute « radio définir groupe » (ton numéro).</li><li>Dans la boucle « toujours », après le réglage de l’angle, ajoute « radio envoyer valeur « lum » = gauche + droite » et « radio envoyer valeur « angle » = angle ».</li><li>Ne modifie rien d’autre.</li></ol>
+<p>Pourquoi « ne modifie rien d’autre » ? Le suivi du soleil fonctionne déjà : on ajoute la nouvelle fonction sans risquer de le casser.</p>
     
 
 
@@ -231,7 +232,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Pourquoi ne faut-il rien modifier d’autre dans le programme du tracker ?</h3>
+            <h3 id="a01-q01-label">Question 1 — Pourquoi ne faut-il rien modifier d’autre dans le programme du tracker quand on ajoute l’envoi radio ?</h3>
             
 
             
@@ -247,7 +248,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Où places-tu chaque ajout ?</h3>
+            <h3 id="a01-q02-label">Question 2 — Dans le programme du tracker, où places-tu chaque ajout ?</h3>
             
 
             
@@ -303,7 +304,7 @@
                     </table>
                 </div>
             
-            <details><summary>Un coup de pouce</summary><p>Ligne × colonne.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Bloc par bloc (réflexe n° 9).</p></details>
             
             
         </div>
@@ -320,14 +321,15 @@
         <h2>Le récepteur</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> L’émetteur envoie. Programme maintenant le récepteur.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas programmer la deuxième carte, celle qui recevra et affichera dans la salle les mesures envoyées par le tracker. On attend son algorithme en langage naturel.</p></div>
         
         
 
         
+<ol><li>Crée un nouveau projet 4e_S44_recepteur.</li><li>Au démarrage : le même groupe radio que l’émetteur.</li><li>Ajoute « quand une donnée est reçue par radio name, value ».</li><li>Dedans : si name = « lum » alors montrer value ; si name = « angle » alors montrer value (ou une flèche).</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<ol><li>Nouveau projet 4e_S44_recepteur.</li><li>Au démarrage : même groupe radio.</li><li>« quand une donnée est reçue par radio name, value » : si name = « lum » alors montrer value ; si name = « angle » alors montrer value sur la ligne… (ou afficher une flèche).</li></ol>
+<p>Pourquoi deux conditions sur le nom ? Le tracker envoie deux mesures : le récepteur doit les distinguer, comme en séance 42.</p>
     
 
 
@@ -341,7 +343,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Écris l’algorithme du récepteur en langage naturel.</h3>
+            <h3 id="a02-q01-label">Question 1 — Écris en langage naturel l’algorithme de la carte réceptrice du tracker.</h3>
             
 
             
@@ -354,22 +356,6 @@
             
         </div>
         
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a02-q02-label">Question 2 — Teste dans le simulateur : change la lumière des capteurs de l’émetteur. Que montre le récepteur ?</h3>
-            
-
-            
-            
-                <textarea id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Attendu ou observé ?</p></details>
-            
-            
-        </div>
-        
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#a01">← Étape précédente</a>
@@ -378,18 +364,19 @@
     </article>
     
     <article class="cours-activite" id="a03" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
-        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Tester les deux programmes</h2>
         
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les deux programmes sont écrits. Vérifie qu’ils marchent ensemble.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas tester ensemble, dans le simulateur, le programme du tracker complété et celui du récepteur. On attend ce que montre le récepteur et la preuve que le suivi du soleil marche toujours.</p></div>
         
         
 
         
+<ol><li>Dans le simulateur de l’émetteur, change la lumière des capteurs gauche et droit.</li><li>Observe le récepteur (ou bascule entre les deux projets).</li><li>Vérifie que le suivi du soleil fonctionne toujours.</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Envoyer trop souvent occupe la radio et vide les piles.</p>
+<p>Pourquoi revérifier le suivi du soleil ? C’est la preuve que l’ajout n’a rien cassé.</p>
     
 
 
@@ -403,15 +390,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Comment n’envoyer les mesures que toutes les 5 secondes, sans ralentir le suivi du soleil ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Dans le simulateur, change la lumière des capteurs du tracker. Que montre la carte réceptrice ? Le suivi du soleil fonctionne-t-il toujours ?</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Attendu ou observé ?</p></details>
+            <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
             
             
         </div>
@@ -424,28 +411,65 @@
     </article>
     
     <article class="cours-activite" id="a04" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Pour aller plus loin</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        
+        
+        
+        
+
+        
+<p>Envoyer trop souvent occupe la radio et vide les piles.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Comment n’envoyer les mesures que toutes les 5 secondes, sans ralentir le suivi du soleil ?</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Attendu ou observé ?</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a05" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les deux programmes sont prêts. Il reste à répondre au problème de départ.</p>
         
         
-
         
 
-        
         
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Réponds au problème du jour : comment as-tu ajouté l’envoi des mesures sans casser le programme du tracker ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment as-tu ajouté l’envoi des mesures sans casser le programme du tracker ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème (réflexe n° 3).</p></details>
@@ -455,7 +479,7 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -500,7 +524,7 @@
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

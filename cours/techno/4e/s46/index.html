@@ -46,7 +46,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Les mesures</a></li><li><a href="#a02">Le graphique</a></li><li><a href="#a03">Défi — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Les calculs</a></li><li><a href="#a02">Le graphique</a></li><li><a href="#a03">Interpréter</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -185,7 +185,7 @@
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séance 45, la liaison radio a été testée. Le récepteur a enregistré les mesures toutes les heures (fichier fourni).</p><p>Aujourd’hui, tu exploites ces mesures dans Calc.</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séance 45, la liaison radio a été testée. La carte réceptrice a enregistré la lumière envoyée par le tracker toutes les heures.</p><p>Aujourd’hui, tu exploites ces mesures dans Calc.</p></div></section>
     
     
     
@@ -207,20 +207,21 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Les mesures</h2>
+        <h2>Les calculs</h2>
         
         
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas calculer dans Calc la valeur la plus faible, la plus forte et la moyenne des mesures de lumière envoyées par le tracker pendant une journée (document 1). On attend un fichier enregistré et les trois résultats.</p></div>
         
         
 
         
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Mesures reçues (exemple de journée ensoleillée)</caption><thead><tr><th scope="col">Heure</th><th scope="col">8 h</th><th scope="col">9 h</th><th scope="col">10 h</th><th scope="col">11 h</th><th scope="col">12 h</th><th scope="col">13 h</th><th scope="col">14 h</th><th scope="col">15 h</th><th scope="col">16 h</th><th scope="col">17 h</th></tr></thead><tbody><tr><td>Lumière (0-510)</td><td>60</td><td>150</td><td>280</td><td>390</td><td>460</td><td>470</td><td>430</td><td>300</td><td>170</td><td>70</td></tr></tbody></table></div>
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Lumière reçue par la carte réceptrice, une journée ensoleillée (exemple)</caption><thead><tr><th scope="col">Heure</th><th scope="col">8 h</th><th scope="col">9 h</th><th scope="col">10 h</th><th scope="col">11 h</th><th scope="col">12 h</th><th scope="col">13 h</th><th scope="col">14 h</th><th scope="col">15 h</th><th scope="col">16 h</th><th scope="col">17 h</th></tr></thead><tbody><tr><td>Lumière (0-510)</td><td>60</td><td>150</td><td>280</td><td>390</td><td>460</td><td>470</td><td>430</td><td>300</td><td>170</td><td>70</td></tr></tbody></table></div>
     
 
-<ol><li>Ouvre Calc, enregistre sous 4e_S46_groupe.ods, recopie le tableau (heures en ligne 1, valeurs en ligne 2, à partir de B).</li><li>Calcule MIN, MAX et MOYENNE des valeurs (=MIN(B2:K2)…).</li></ol>
+<ol><li>Ouvre Calc et enregistre sous 4e_S46_groupe.ods.</li><li>Recopie le document 1 : heures en ligne 1, valeurs en ligne 2, à partir de la colonne B.</li><li>En B4, écris =MIN(B2:K2) ; en B5, =MAX(B2:K2) ; en B6, =MOYENNE(B2:K2).</li><li>Écris une étiquette en A4, A5, A6.</li></ol>
+    
+
+<p>Pourquoi des fonctions ? Si une mesure change, Calc recalcule tout seul : pas d’erreur de calcul à la main.</p>
     
 
 
@@ -229,7 +230,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Recopie tes résultats.</h3>
+            <h3 id="a01-q01-label">Question 1 — Recopie les résultats calculés par Calc pour les mesures de lumière du document 1.</h3>
             
 
             
@@ -258,7 +259,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Les mesures — Résultat — MIN">
+                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Les calculs — Résultat — MIN">
                                     
                                 </td>
                                 
@@ -275,7 +276,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Les mesures — Résultat — MAX">
+                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Les calculs — Résultat — MAX">
                                     
                                 </td>
                                 
@@ -292,7 +293,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Les mesures — Résultat — MOYENNE">
+                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Les calculs — Résultat — MOYENNE">
                                     
                                 </td>
                                 
@@ -302,7 +303,7 @@
                     </table>
                 </div>
             
-            <details><summary>Un coup de pouce</summary><p>Ligne × colonne.</p></details>
+            <details><summary>Un coup de pouce</summary><p>« = » + fonction + plage.</p></details>
             
             
         </div>
@@ -319,14 +320,15 @@
         <h2>Le graphique</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les calculs sont faits. Un graphique montre l’évolution.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas tracer dans Calc la courbe de la lumière reçue au cours de la journée, avec un titre et des axes nommés. On attend une description de la courbe et son explication.</p></div>
         
         
 
         
+<ol><li>Sélectionne les lignes 1 et 2 (A1:K2).</li><li>Insertion &gt; Diagramme &gt; Lignes.</li><li>Titre : « Lumière reçue par le tracker » ; axe X : « Heure » ; axe Y : « Lumière ».</li><li>Enregistre (Ctrl + S).</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<ol><li>Sélectionne les deux lignes, Insertion &gt; Diagramme &gt; Lignes.</li><li>Titre : « Lumière reçue par le tracker » ; axe X : « Heure » ; axe Y : « Lumière ».</li></ol>
+<p>Pourquoi une courbe ? Elle montre comment une grandeur évolue dans le temps : on voit d’un coup d’œil le matin, midi et le soir.</p>
     
 
 
@@ -335,7 +337,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Décris l’évolution de la lumière pendant la journée et explique-la.</h3>
+            <h3 id="a02-q01-label">Question 1 — Décris l’évolution de la lumière reçue par le tracker pendant la journée et explique-la.</h3>
             
 
             
@@ -351,7 +353,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Pourquoi un graphique en courbe plutôt qu’en secteurs ?</h3>
+            <h3 id="a02-q02-label">Question 2 — Pourquoi un graphique en courbe plutôt qu’en secteurs pour ces mesures ?</h3>
             
 
             
@@ -372,18 +374,19 @@
     </article>
     
     <article class="cours-activite" id="a03" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
-        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Interpréter</h2>
         
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as décrit la courbe. Tire-en une information utile.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas utiliser les mesures de lumière pour savoir à quels moments le panneau du tracker est le plus efficace. On attend un nombre d’heures lu sur les mesures.</p></div>
         
         
 
         
+<ol><li>Repère sur ta courbe les heures où la lumière dépasse 300.</li><li>Compte ces heures.</li><li>Fais le lien avec la production d’électricité du panneau du tracker.</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>La fonction SI permet d’écrire « Fort » ou « Faible ».</p>
+<p>Pourquoi relier au panneau ? Le tracker sert à produire de l’électricité : ces mesures disent quand il est le plus utile.</p>
     
 
 
@@ -392,15 +395,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Écris une formule qui affiche « Fort » si la valeur de B2 dépasse 300, sinon « Faible ».</h3>
+            <h3 id="a03-q01-label">Question 1 — D’après le document 1, pendant combien d’heures relevées la lumière dépasse-t-elle 300 ?</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label"><p>Unité : h</p>
 
                 
-            <details><summary>Un coup de pouce</summary><p>« = » + fonction + plage.</p></details>
+            <details><summary>Un coup de pouce</summary><p>N’oublie pas l’unité (réflexe n° 5).</p></details>
             
             
         </div>
@@ -413,28 +416,65 @@
     </article>
     
     <article class="cours-activite" id="a04" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Pour aller plus loin</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        
+        
+        
+        
+
+        
+<p>La fonction SI permet d’écrire « Fort » ou « Faible ».</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Écris une formule qui affiche « Fort » si la valeur de B2 dépasse 300, sinon « Faible ».</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>« = » + fonction + plage.</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a05" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as exploité les mesures. Il reste à répondre au problème de départ.</p>
         
         
-
         
 
-        
         
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Réponds au problème du jour : que nous apprennent les mesures reçues ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : que nous apprennent les mesures de lumière reçues pendant une journée ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème (réflexe n° 3).</p></details>
@@ -444,7 +484,7 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -489,7 +529,7 @@
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

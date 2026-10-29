@@ -46,7 +46,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Trouver ce qui manque</a></li><li><a href="#a02">Programmer dans le simulateur</a></li><li><a href="#a03">Défi — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Trouver ce qui manque</a></li><li><a href="#a02">Programmer dans le simulateur</a></li><li><a href="#a03">Tester sur la maquette</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -176,7 +176,7 @@
         <h2>Ce que tu vas apprendre à faire</h2>
         <ul>
             
-            <li>Trouver le bloc qui manque dans un programme (réflexe R13).</li>
+            <li>Trouver ce qui manque dans un programme (réflexe R13).</li>
             
             <li>Compléter un programme et le tester.</li>
             
@@ -185,7 +185,7 @@
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séance 37, tu as associé des distances aux positions de la cabine.</p><p>Aujourd’hui, tu complètes le programme pour afficher l’étage, puis un groupe à la fois le teste sur la maquette.</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séance 37, tu as associé des distances mesurées par le capteur à ultrasons aux positions de la cabine.</p><p>Aujourd’hui, tu complètes le programme pour afficher l’étage sur l’écran, puis un groupe à la fois le teste sur la maquette.</p></div></section>
     
     
     
@@ -210,12 +210,10 @@
         <h2>Trouver ce qui manque</h2>
         
         
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas compléter un programme incomplet (affiché ci-dessous) qui doit afficher sur l’écran du monte-charge la position de la cabine, à partir de la distance mesurée par le capteur à ultrasons. Tu t’appuies sur les plages de distances de la séance 37. On attend les deux trous complétés.</p></div>
         
         
 
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <blockquote>Réflexe brevet n° 13 : je cherche le bloc ou la ligne qui manque en comparant ce que fait le programme et ce qu’il devrait faire.</blockquote>
     
@@ -231,13 +229,19 @@
     pause 200 ms</code></pre>
     
 
+<ol><li>Lis le réflexe R13.</li><li>Lis le programme incomplet ligne par ligne.</li><li>Compare avec ce qu’il doit faire : ETAGE si moins de 8 cm, RDC si plus de 24 cm, MILIEU sinon.</li><li>Écris ce qui manque dans chaque trou.</li></ol>
+    
+
+<p>Pourquoi comparer ? On trouve ce qui manque en mettant côte à côte ce que fait le programme et ce qu’il devrait faire.</p>
+    
+
 
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Complète les deux trous du programme.</h3>
+            <h3 id="a01-q01-label">Question 1 — Complète les deux trous du programme d’affichage de l’étage du monte-charge.</h3>
             
 
             
@@ -310,14 +314,15 @@
         <h2>Programmer dans le simulateur</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais ce qui manque. Programme-le dans le simulateur.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas ajouter les blocs de la mission 1 dans une copie du programme du monte-charge, puis les tester dans le simulateur MakeCode en réglant la distance du capteur. On attend un tableau « attendu / observé » pour trois distances.</p></div>
         
         
 
         
+<ol><li>Ouvre la copie du programme du monte-charge fournie par le professeur.</li><li>Ajoute les blocs de la mission 1 dans la boucle « toujours ».</li><li>Dans le simulateur, règle la distance (curseur de P2) à 5, puis 16, puis 26 cm.</li><li>Note à chaque fois ce que tu attends et ce qui s’affiche.</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<ol><li>Ouvre le programme du monte-charge fourni par le professeur (copie).</li><li>Ajoute les blocs de la mission 1 dans la boucle « toujours ».</li><li>Dans le simulateur, règle la distance (curseur de P2) à 5, 16 puis 26 cm.</li><li>Note ce qui s’affiche.</li></ol>
+<p>Pourquoi noter « attendu » et « observé » ? Si les deux sont identiques, le programme est juste ; sinon, tu sais où chercher.</p>
     
 
 
@@ -331,7 +336,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Résultats dans le simulateur.</h3>
+            <h3 id="a02-q01-label">Question 1 — Dans le simulateur, règle la distance du capteur et note ce que tu attends et ce qui s’affiche sur l’écran.</h3>
             
 
             
@@ -432,7 +437,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Où faut-il placer ces nouveaux blocs ?</h3>
+            <h3 id="a02-q02-label">Question 2 — Dans le programme du monte-charge, où faut-il placer ces nouveaux blocs ?</h3>
             
 
             
@@ -453,18 +458,19 @@
     </article>
     
     <article class="cours-activite" id="a03" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
-        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Tester sur la maquette</h2>
         
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le simulateur fonctionne. Vérifie sur l’objet réel.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas observer ton programme d’affichage de l’étage sur le vrai monte-charge (le professeur le téléverse) et comparer avec le simulateur. On attend une observation précise de l’écran pendant un trajet et une explication.</p></div>
         
         
 
         
+<ol><li>Quand c’est le tour de ton groupe, le professeur téléverse ton programme sur le monte-charge.</li><li>Observe l’écran pendant une montée, puis une descente.</li><li>Compare avec le simulateur.</li><li>Le professeur remet ensuite le programme d’origine.</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Pendant le trajet, la boucle « tant que » occupe la carte.</p>
+<p>Pourquoi tester sur la maquette ? Le simulateur ne bouge pas vraiment : sur l’objet réel, la carte est occupée par la boucle de trajet, et des surprises apparaissent.</p>
     
 
 
@@ -473,15 +479,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — L’affichage se met-il à jour pendant la montée ? Que faudrait-il changer ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Sur la maquette, l’écran du monte-charge affiche-t-il l’étage pendant la montée, ou seulement à l’arrêt ? Propose une explication.</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Ton idée répond-elle au besoin ?</p></details>
             
             
         </div>
@@ -494,28 +500,65 @@
     </article>
     
     <article class="cours-activite" id="a04" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Pour aller plus loin</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        
+        
+        
+        
+
+        
+<p>Pendant le trajet, la boucle « tant que » occupe la carte.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Que faudrait-il changer dans le programme pour que l’étage s’affiche aussi pendant la montée ?</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Bloc par bloc (réflexe n° 9).</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a05" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Ton programme affiche l’étage. Il reste à répondre au problème de départ.</p>
         
         
-
         
 
-        
         
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Réponds au problème du jour : comment as-tu complété le programme, et comment l’as-tu testé ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment as-tu complété le programme du monte-charge, et comment l’as-tu testé ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème (réflexe n° 3).</p></details>
@@ -525,7 +568,7 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -570,7 +613,7 @@
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

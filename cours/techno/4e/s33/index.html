@@ -46,7 +46,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Comprendre une liste</a></li><li><a href="#a02">La vague</a></li><li><a href="#a03">Défi — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Comprendre une liste</a></li><li><a href="#a02">Créer la vague</a></li><li><a href="#a03">Compter les pièges</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -166,9 +166,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Une liste (tableau) range plusieurs valeurs ou objets sous un seul nom : liste des fruits, liste des scores.</li>
+            <li>Une liste range plusieurs éléments sous un seul nom ; l’indice du premier est 0.</li>
             
-            <li>La boucle « pour chaque élément de la liste » applique la même action à tous les éléments.</li>
+            <li>La boucle « pour chaque élément » applique la même action à tous.</li>
             
         </ul>
         
@@ -176,16 +176,16 @@
         <h2>Ce que tu vas apprendre à faire</h2>
         <ul>
             
-            <li>Créer et parcourir une liste.</li>
+            <li>Lire et parcourir une liste.</li>
             
-            <li>Utiliser une boucle « pour chaque ».</li>
+            <li>Utiliser « pour chaque ».</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séance 32, tu as fait tomber les fruits un par un.</p><p>Aujourd’hui, tu ajoutes une vague de pièges qui doivent tous changer de vitesse en même temps : il faut une liste.</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séance 32, tu as fait tomber des fruits un par un.</p><p>Aujourd’hui, tu ajoutes une vague de pièges qui doivent tous accélérer ensemble : il faut une liste.</p></div></section>
     
     
     
@@ -210,14 +210,18 @@
         <h2>Comprendre une liste</h2>
         
         
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas découvrir ce qu’est une liste en programmation, à partir de l’exemple expliqué. On attend que tu saches lire un élément par son indice et donner la longueur d’une liste.</p></div>
         
         
 
         
+<p>Exemple expliqué : vitesses = [30, 50, 80]. Indice 0 → 30 ; indice 1 → 50 ; indice 2 → 80. Longueur : 3.</p>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Exemple expliqué : liste vitesses = [30, 50, 80]. L’élément d’indice 0 vaut 30, l’élément d’indice 1 vaut 50, l’élément d’indice 2 vaut 80. La longueur de la liste est 3.</p>
+<ol><li>Lis l’exemple expliqué.</li><li>Compte les éléments à partir de 0.</li><li>Réponds sur la liste des couleurs.</li></ol>
+    
+
+<p>Pourquoi commencer à 0 ? C’est la convention de presque tous les langages : le premier élément est à l’indice 0.</p>
     
 
 
@@ -226,7 +230,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Pour la liste couleurs = [rouge, vert, bleu, jaune], complète.</h3>
+            <h3 id="a01-q01-label">Question 1 — Voici une liste : couleurs = [rouge, vert, bleu, jaune]. Complète le tableau.</h3>
             
 
             
@@ -283,13 +287,13 @@
                                 
                                 <td>
                                     
-                                    Longueur de la liste
+                                    Longueur
                                     
                                 </td>
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Comprendre une liste — Réponse — Longueur de la liste">
+                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Comprendre une liste — Réponse — Longueur">
                                     
                                 </td>
                                 
@@ -307,12 +311,12 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Pourquoi l’indice du premier élément est-il 0 ?</h3>
+            <h3 id="a01-q02-label">Question 2 — Quel est l’indice du dernier élément d’une liste de 4 éléments ?</h3>
             
 
             
             
-                <select id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><option value="">Choisis une réponse</option><option value="a">C’est une convention des langages de programmation : on compte à partir de 0.</option><option value="b">C’est une erreur.</option><option value="c">Le premier élément est vide.</option></select>
+                <select id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><option value="">Choisis une réponse</option><option value="a">3</option><option value="b">4</option><option value="c">0</option></select>
 
                 
             <details><summary>Un coup de pouce</summary><p>Relis l’exemple expliqué.</p></details>
@@ -329,17 +333,18 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>La vague</h2>
+        <h2>Créer la vague</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais ce qu’est une liste. Utilise-la pour piloter une vague de pièges.</p>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais ce qu’est une liste. Utilise-la.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas ajouter à ton jeu « Récolte » une vague de 5 pièges rangés dans une liste, qui accélèrent tous ensemble grâce à « pour chaque ». On attend l’explication de l’intérêt de « pour chaque ».</p></div>
         
         
 
         
+<ol><li>Au démarrage, crée 5 sprites « piège » (type Enemy).</li><li>Utilise « tableau de sprites de type Enemy » pour les récupérer dans une liste.</li><li>Toutes les 5 s : « pour chaque valeur de pièges » → mettre vy de valeur à 80.</li><li>Teste : tous accélèrent ensemble.</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<ol><li>Au démarrage, crée 5 sprites « piège » (type Enemy) et ajoute-les à une liste « pièges » (bloc « tableau de sprites de type Enemy »).</li><li>Toutes les 5 secondes : « pour chaque élément valeur de pièges » : mettre vy de valeur à 80.</li><li>Teste : tous les pièges accélèrent en même temps.</li></ol>
+<p>Pourquoi « pour chaque » ? Un seul bloc agit sur tous les pièges, quel que soit leur nombre.</p>
     
 
 
@@ -353,7 +358,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Pourquoi la boucle « pour chaque » est-elle plus pratique que 5 blocs « mettre vy » ?</h3>
+            <h3 id="a02-q01-label">Question 1 — Pourquoi « pour chaque » est-il plus pratique que 5 blocs « mettre vy » ?</h3>
             
 
             
@@ -390,18 +395,19 @@
     </article>
     
     <article class="cours-activite" id="a03" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
-        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Compter les pièges</h2>
         
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> La vague fonctionne. Compte les pièges.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas afficher dans ton jeu le nombre de pièges restants. On attend le bloc utilisé et sa valeur quand tous les pièges sont détruits.</p></div>
         
         
 
         
+<ol><li>Affiche le nombre de pièges restants (longueur de la liste).</li><li>Détruis un piège en le touchant.</li><li>Observe le nombre qui change.</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>On peut compter les éléments d’une liste.</p>
+<p>Pourquoi la longueur ? Elle permet de savoir quand la vague est terminée.</p>
     
 
 
@@ -415,12 +421,12 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Affiche le nombre de pièges encore présents. Quel bloc utilises-tu ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Quel bloc donne le nombre de pièges, et que vaut-il quand tous sont détruits ?</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Bloc par bloc (réflexe n° 9).</p></details>
@@ -436,28 +442,65 @@
     </article>
     
     <article class="cours-activite" id="a04" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Pour aller plus loin</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        
+        
+        
+        
+
+        
+<p>Une nouvelle vague peut arriver quand la précédente est finie.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Écris la règle en langage naturel.</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Combien d’éléments sont demandés ?</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a05" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Ta vague fonctionne. Il reste à répondre au problème de départ.</p>
         
         
-
         
 
-        
         
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Réponds au problème du jour : comment gérer plusieurs objets du même type ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment gérer plusieurs objets du même type ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème (réflexe n° 3).</p></details>
@@ -467,7 +510,7 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -480,7 +523,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Liste : plusieurs éléments sous un même nom ; indice à partir de 0 ; longueur.</li><li>« pour chaque » applique la même action à tous les éléments.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Liste : indice à partir de 0, longueur.</li><li>« pour chaque » : même action sur tous.</li></ul>
     
 </section>
 
@@ -512,7 +555,7 @@
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

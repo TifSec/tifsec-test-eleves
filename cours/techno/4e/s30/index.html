@@ -46,7 +46,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Le robot humain (activité débranchée)</a></li><li><a href="#a02">Des instructions floues</a></li><li><a href="#a03">Répéter</a></li><li><a href="#a04">Défi — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Le robot humain (activité débranchée)</a></li><li><a href="#a02">Des instructions floues</a></li><li><a href="#a03">La boucle</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -148,7 +148,7 @@
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Pourquoi un ordinateur a-t-il besoin d’instructions très précises, dans un ordre précis ?</p>
+        <p>Pourquoi un ordinateur a-t-il besoin d’instructions précises, dans un ordre précis ?</p>
     </section>
     
 
@@ -166,9 +166,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Un algorithme est une suite d’instructions précises, dans un ordre précis, pour résoudre un problème.</li>
+            <li>Un algorithme est une suite d’instructions précises, dans un ordre précis.</li>
             
-            <li>Une machine ne devine rien : une instruction floue ou dans le mauvais ordre donne un mauvais résultat.</li>
+            <li>Une boucle répète des instructions : RÉPÉTER 4 FOIS…</li>
             
         </ul>
         
@@ -178,14 +178,14 @@
             
             <li>Écrire des instructions précises.</li>
             
-            <li>Repérer une instruction ambiguë ou mal placée.</li>
+            <li>Utiliser une boucle.</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En 5e, tu as programmé un jeu Arcade avec des blocs.</p><p>Avant de programmer en 4e, tu vas apprendre à écrire un algorithme. Aujourd’hui, sans ordinateur : un élève joue le robot.</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En 5e, tu as programmé un jeu Arcade avec des blocs.</p><p>Avant de programmer en 4e, tu apprends à écrire un algorithme. Aujourd’hui, sans ordinateur : un élève joue le robot.</p></div></section>
     
     
     
@@ -210,17 +210,15 @@
         <h2>Le robot humain (activité débranchée)</h2>
         
         
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas jouer au « robot humain » sur une grille de 5 × 5 cases tracée par le professeur : le robot ne connaît que trois instructions. On attend les quatre instructions qui mènent le robot à une case donnée.</p></div>
         
         
 
         
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Le professeur dessine une grille de 5 × 5 cases. Un élève « robot » ne connaît que trois instructions : AVANCER (d’une case), TOURNER À DROITE, TOURNER À GAUCHE.</p>
+<ol><li>Le professeur trace une grille de 5 × 5 cases.</li><li>Un élève « robot » ne connaît que : AVANCER, TOURNER À DROITE, TOURNER À GAUCHE.</li><li>Un autre élève lui dicte les instructions pour atteindre une case.</li><li>Observe ce qui se passe quand une instruction manque.</li></ol>
     
 
-<p>Exemple expliqué : pour aller deux cases devant puis une à droite : AVANCER, AVANCER, TOURNER À DROITE, AVANCER. Si on oublie TOURNER À DROITE, le robot avance tout droit et se trompe.</p>
+<p>Pourquoi un robot humain ? Il montre qu’une machine fait exactement ce qu’on lui dit, ni plus ni moins.</p>
     
 
 
@@ -229,7 +227,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Le robot part de la case en bas à gauche, regard vers le haut. Écris les 4 premières instructions pour atteindre la case 2 cases au-dessus et 1 case à droite.</h3>
+            <h3 id="a01-q01-label">Question 1 — Le robot part en bas à gauche, regard vers le haut. Écris les 4 instructions pour aller 2 cases au-dessus et 1 à droite.</h3>
             
 
             
@@ -336,19 +334,24 @@
         <h2>Des instructions floues</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le robot n’exécute que des instructions précises.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas comprendre pourquoi une machine ne peut pas exécuter une instruction floue comme « Va vers la porte ». On attend une explication et le bon ordre d’une suite d’actions.</p></div>
         
         
 
         
+<ol><li>Lis l’instruction « Va vers la porte ».</li><li>Demande-toi si le robot la connaît.</li><li>Réécris-la avec les instructions du robot (en imaginant la grille).</li></ol>
+    
 
-        
-        
+<p>Pourquoi être précis ? Un ordinateur ne devine jamais : une instruction floue ne peut pas être exécutée.</p>
+    
+
+
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — « Va vers la porte. » Pourquoi un robot ne peut-il pas exécuter cette instruction ?</h3>
+            <h3 id="a02-q01-label">Question 1 — Pourquoi le robot ne peut-il pas exécuter « Va vers la porte » ?</h3>
             
 
             
@@ -364,12 +367,12 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Dans quel ordre faut-il écrire les instructions pour faire un sandwich ?</h3>
+            <h3 id="a02-q02-label">Question 2 — Dans quel ordre faire un sandwich ?</h3>
             
 
             
             
-                <select id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><option value="">Choisis une réponse</option><option value="a">Ouvrir le pain, mettre le jambon, fermer le pain.</option><option value="b">Fermer le pain, mettre le jambon, ouvrir le pain.</option><option value="c">L’ordre n’a pas d’importance.</option></select>
+                <select id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><option value="">Choisis une réponse</option><option value="a">Ouvrir le pain, mettre le jambon, fermer le pain.</option><option value="b">Fermer, mettre, ouvrir.</option><option value="c">Peu importe.</option></select>
 
                 
             <details><summary>Un coup de pouce</summary><p>Relis l’exemple expliqué.</p></details>
@@ -386,17 +389,18 @@
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Répéter</h2>
+        <h2>La boucle</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Écrire des instructions répétées est long. Il y a plus court.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas raccourcir une suite d’instructions répétées avec une boucle RÉPÉTER. On attend l’algorithme avec la boucle et la figure que dessine le robot.</p></div>
         
         
 
         
+<ol><li>Lis la suite d’instructions de la question.</li><li>Repère le groupe d’instructions qui se répète.</li><li>Réécris-la avec RÉPÉTER … FOIS.</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Pour avancer de 4 cases, on peut écrire : RÉPÉTER 4 FOIS : AVANCER. C’est une boucle.</p>
+<p>Pourquoi une boucle ? Elle évite de recopier : plus court, et moins d’erreurs.</p>
     
 
 
@@ -405,7 +409,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Réécris avec une boucle : AVANCER, TOURNER À DROITE, AVANCER, TOURNER À DROITE, AVANCER, TOURNER À DROITE, AVANCER, TOURNER À DROITE. Que dessine le robot ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Réécris avec une boucle : AVANCER, TOURNER À DROITE (4 fois de suite). Que dessine le robot ?</h3>
             
 
             
@@ -427,15 +431,13 @@
     
     <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
+        <h2>Pour aller plus loin</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
         
-
         
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>On ajoute l’instruction SI MUR DEVANT ALORS TOURNER À DROITE.</p>
     
@@ -473,10 +475,8 @@
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu penses comme un ordinateur. Il reste à répondre au problème de départ.</p>
         
         
-
         
 
-        
         
         
         

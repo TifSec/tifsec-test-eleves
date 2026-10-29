@@ -46,7 +46,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Trois bugs fréquents</a></li><li><a href="#a02">Faire tester</a></li><li><a href="#a03">Défi — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">La méthode</a></li><li><a href="#a02">Faire tester</a></li><li><a href="#a03">Vérifier la correction</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -166,9 +166,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Un bug est une erreur de programme. Pour le trouver : reproduire le bug, isoler la partie en cause, faire une hypothèse, modifier une seule chose, retester.</li>
+            <li>Déboguer : reproduire le bug, isoler la partie en cause, faire une hypothèse, modifier une seule chose, retester.</li>
             
-            <li>Faire tester son jeu par un camarade révèle des bugs qu’on ne voit pas soi-même.</li>
+            <li>Faire tester par un autre révèle des bugs qu’on ne voit pas.</li>
             
         </ul>
         
@@ -178,14 +178,14 @@
             
             <li>Suivre une méthode de débogage.</li>
             
-            <li>Faire tester son programme et exploiter les retours.</li>
+            <li>Faire tester et exploiter les retours.</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séances 31 à 33, tu as programmé ton jeu.</p><p>Aujourd’hui, tu chasses les bugs. C’est aussi le bilan de la séquence.</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séances 31 à 33, tu as programmé ton jeu.</p><p>Aujourd’hui, tu chasses les bugs. C’est le bilan de la séquence.</p></div></section>
     
     
     
@@ -207,20 +207,24 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Trois bugs fréquents</h2>
+        <h2>La méthode</h2>
         
         
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas apprendre une méthode pour trouver un bug, à partir de trois bugs fréquents du jeu « Récolte » (document 1). On attend ce que tu vérifies en premier et pourquoi on ne change qu’une chose à la fois.</p></div>
         
         
 
         
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1</caption><thead><tr><th scope="col">Bug</th><th scope="col">Cause probable</th></tr></thead><tbody><tr><td>Le score augmente de 2 à chaque fruit</td><td>Deux blocs de chevauchement identiques</td></tr><tr><td>Les fruits ne tombent pas</td><td>Vitesse vy à 0 ou bloc « à chaque » absent</td></tr><tr><td>Le panier sort de l’écran</td><td>Option « rester à l’écran » non activée</td></tr></tbody></table></div>
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1</caption><thead><tr><th scope="col">Bug</th><th scope="col">Cause probable</th></tr></thead><tbody><tr><td>Le score augmente de 2</td><td>Deux blocs de chevauchement identiques</td></tr><tr><td>Les fruits ne tombent pas</td><td>vy à 0 ou bloc « à chaque » absent</td></tr><tr><td>Le panier sort de l’écran</td><td>« rester à l’écran » non activé</td></tr></tbody></table></div>
     
 
-<p>Méthode : 1) reproduire le bug ; 2) chercher le bloc concerné ; 3) une hypothèse ; 4) une seule modification ; 5) retester (réflexe n° 8).</p>
+<ul><li>1. Reproduire le bug.</li><li>2. Trouver le bloc concerné.</li><li>3. Faire une hypothèse.</li><li>4. Modifier une seule chose.</li><li>5. Retester.</li></ul>
+    
+
+<ol><li>Lis le document 1 : trois bugs fréquents.</li><li>Lis la méthode en 5 étapes.</li><li>Applique-la au premier bug.</li></ol>
+    
+
+<p>Pourquoi une méthode ? Corriger au hasard crée souvent de nouveaux bugs.</p>
     
 
 
@@ -234,7 +238,7 @@
 
             
             
-                <select id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><option value="">Choisis une réponse</option><option value="a">S’il y a deux blocs de chevauchement qui ajoutent 1.</option><option value="b">La couleur du panier.</option><option value="c">Le son.</option></select>
+                <select id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><option value="">Choisis une réponse</option><option value="a">S’il y a deux blocs de chevauchement identiques.</option><option value="b">La couleur du panier.</option><option value="c">Le son.</option></select>
 
                 
             <details><summary>Un coup de pouce</summary><p>Relis l’exemple expliqué.</p></details>
@@ -245,7 +249,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Explique pourquoi on ne modifie qu’une seule chose avant de retester.</h3>
+            <h3 id="a01-q02-label">Question 2 — Pourquoi ne modifier qu’une seule chose avant de retester ?</h3>
             
 
             
@@ -269,15 +273,16 @@
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Faire tester</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu connais la méthode. Un autre regard aide à trouver les bugs.</p>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu connais la méthode. Un autre regard aide.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas faire tester ton jeu « Récolte » par un camarade, puis corriger les bugs qu’il a trouvés. On attend deux bugs réels et leur correction.</p></div>
         
         
 
         
+<ol><li>Échange ton poste avec un camarade pendant 5 minutes.</li><li>Il joue et note les bugs.</li><li>Reprends ton poste et corrige avec la méthode.</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Échange ton poste avec un camarade pendant 5 minutes. Il joue et note les bugs. Puis vous corrigez chacun votre jeu.</p>
+<p>Pourquoi un testeur ? Le programmeur sait comment son jeu « devrait » marcher : il ne pense pas à jouer autrement.</p>
     
 
 
@@ -291,7 +296,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Note deux bugs trouvés (par toi ou ton testeur) et leur correction.</h3>
+            <h3 id="a02-q01-label">Question 1 — Note deux bugs trouvés par ton testeur dans ton jeu « Récolte », et leur correction.</h3>
             
 
             
@@ -360,18 +365,19 @@
     </article>
     
     <article class="cours-activite" id="a03" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
-        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Vérifier la correction</h2>
         
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les bugs sont corrigés. Vérifie.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas vérifier que tes corrections n’ont rien cassé d’autre dans ton jeu. On attend la description de ta vérification.</p></div>
         
         
 
         
+<ol><li>Rejoue la situation qui provoquait le bug.</li><li>Vérifie que le bug a disparu.</li><li>Vérifie que le reste du jeu marche encore.</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Certains bugs n’arrivent que rarement.</p>
+<p>Pourquoi revérifier tout le jeu ? Une correction peut casser autre chose : c’est pour ça qu’on reteste.</p>
     
 
 
@@ -380,15 +386,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Pourquoi un bug rare est-il difficile à corriger ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Comment as-tu vérifié que ta correction n’a rien cassé d’autre ?</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Pense à « car » (réflexe n° 4).</p></details>
+            <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
             
             
         </div>
@@ -401,28 +407,65 @@
     </article>
     
     <article class="cours-activite" id="a04" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Pour aller plus loin</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        
+        
+        
+        
+
+        
+<p>Certains bugs n’arrivent que rarement.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Pourquoi un bug rare est-il difficile à corriger ?</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Pense à « car » (réflexe n° 4).</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a05" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as débogué ton jeu. Il reste à répondre au problème de départ.</p>
         
         
-
         
 
-        
         
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Réponds au problème du jour : comment trouver et corriger un bug dans un programme ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment trouver et corriger un bug ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème (réflexe n° 3).</p></details>
@@ -432,7 +475,7 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -445,7 +488,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Déboguer : reproduire, isoler, hypothèse, une seule modification, retester.</li><li>Faire tester par un autre.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Déboguer : reproduire, isoler, hypothèse, une modification, retester.</li></ul>
     
 </section>
 
@@ -477,7 +520,7 @@
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

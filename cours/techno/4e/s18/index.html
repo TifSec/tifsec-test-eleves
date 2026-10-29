@@ -46,7 +46,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Le dossier</a></li><li><a href="#a02">Je relis (R16)</a></li><li><a href="#a03">Défi — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Les équipements de la médiathèque</a></li><li><a href="#a02">Une panne d’impression</a></li><li><a href="#a03">Calculer et argumenter</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -181,7 +181,7 @@
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Depuis la séance 13, tu as étudié le réseau.</p><p>Aujourd’hui, tu traites un dossier sur le réseau d’une médiathèque (situation inventée).</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Depuis la séance 13, tu as étudié le réseau.</p><p>Aujourd’hui, un dossier sur le réseau d’une médiathèque (situation inventée), mission par mission.</p></div></section>
     
     
     
@@ -203,15 +203,13 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Le dossier</h2>
+        <h2>Les équipements de la médiathèque</h2>
         
         
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas t’entraîner au brevet sur le réseau d’une médiathèque (document 1). On attend le rôle de chaque équipement et la topologie du réseau filaire.</p></div>
         
         
 
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <h4>Document 1 — Le réseau de la médiathèque</h4>
     
@@ -219,7 +217,10 @@
 <blockquote>Six ordinateurs et une imprimante sont reliés par câble à un commutateur. Un point d’accès Wi-Fi permet aux visiteurs de se connecter. Une box relie la médiathèque à Internet avec un débit de 100 Mbit/s.</blockquote>
     
 
-<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 2 — Quelques adresses</caption><thead><tr><th scope="col">Appareil</th><th scope="col">Adresse IP</th></tr></thead><tbody><tr><td>Poste accueil</td><td>192.168.10.2</td></tr><tr><td>Poste 1</td><td>192.168.10.3</td></tr><tr><td>Imprimante</td><td>192.168.10.3</td></tr><tr><td>Tablette visiteur</td><td>192.168.10.40</td></tr></tbody></table></div>
+<ol><li>Lis tout le document 1 une première fois.</li><li>Repère chaque équipement.</li><li>Écris son rôle avec les mots de la séance 13.</li></ol>
+    
+
+<p>Pourquoi les mots exacts ? Au brevet, « commutateur » et « routeur » ne sont pas interchangeables : le vocabulaire juste rapporte des points.</p>
     
 
 
@@ -257,7 +258,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Le dossier — Rôle — Commutateur">
+                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Les équipements de la médiathèque — Rôle — Commutateur">
                                     
                                 </td>
                                 
@@ -274,7 +275,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Le dossier — Rôle — Point d’accès Wi-Fi">
+                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Les équipements de la médiathèque — Rôle — Point d’accès Wi-Fi">
                                     
                                 </td>
                                 
@@ -291,7 +292,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Le dossier — Rôle — Box">
+                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Les équipements de la médiathèque — Rôle — Box">
                                     
                                 </td>
                                 
@@ -309,63 +310,15 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — D’après le document 2, un problème empêche d’imprimer depuis le Poste 1. Lequel ? Propose une correction.</h3>
+            <h3 id="a01-q02-label">Question 2 — Quelle est la topologie du réseau filaire ?</h3>
             
 
             
             
-                <textarea id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Retrouve la phrase ou la ligne utile du document, puis commence par « D’après le document… ».</p></details>
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q03">
-            
-            
-            <h3 id="a01-q03-label">Question 3 — Un visiteur télécharge un fichier de 500 Mo avec le débit de 100 Mbit/s. Combien de secondes faut-il ?</h3>
-            
-
-            
-            
-                <input type="text" inputmode="decimal" id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label"><p>Unité : s</p>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Écris l’opération, calcule, vérifie l’unité.</p></details>
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q04">
-            
-            
-            <h3 id="a01-q04-label">Question 4 — Quelle est la topologie du réseau filaire de la médiathèque ?</h3>
-            
-
-            
-            
-                <select id="a01-q04" data-answer-id="a01_q04" data-required="true" aria-labelledby="a01-q04-label"><option value="">Choisis une réponse</option><option value="a">En étoile, autour du commutateur.</option><option value="b">En ligne.</option><option value="c">Il n’y en a pas.</option></select>
+                <select id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><option value="">Choisis une réponse</option><option value="a">En étoile, autour du commutateur.</option><option value="b">En ligne.</option><option value="c">Aucune.</option></select>
 
                 
             <details><summary>Un coup de pouce</summary><p>Élimine d’abord les réponses impossibles.</p></details>
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q05">
-            
-            
-            <h3 id="a01-q05-label">Question 5 — Pourquoi est-il prudent que le Wi-Fi des visiteurs soit séparé du réseau des postes du personnel ? Justifie avec « car ».</h3>
-            
-
-            
-            
-                <textarea id="a01-q05" data-answer-id="a01_q05" data-required="true" aria-labelledby="a01-q05-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Une idée + « car » + une raison tirée de la séance.</p></details>
             
             
         </div>
@@ -379,22 +332,30 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Je relis (R16)</h2>
+        <h2>Une panne d’impression</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le dossier est terminé. Relis-toi.</p>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les équipements sont connus. Un problème empêche d’imprimer.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas chercher pourquoi un poste de la médiathèque ne peut pas imprimer, à partir des adresses du document 2. On attend la cause de la panne et une correction.</p></div>
         
         
 
         
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 2</caption><thead><tr><th scope="col">Appareil</th><th scope="col">Adresse IP</th></tr></thead><tbody><tr><td>Poste accueil</td><td>192.168.10.2</td></tr><tr><td>Poste 1</td><td>192.168.10.3</td></tr><tr><td>Imprimante</td><td>192.168.10.3</td></tr><tr><td>Tablette visiteur</td><td>192.168.10.40</td></tr></tbody></table></div>
+    
 
-        
-        
+<ol><li>Lis le document 2.</li><li>Compare les adresses deux à deux.</li><li>Trouve le problème et propose une correction.</li></ol>
+    
+
+<p>Pourquoi comparer les adresses ? Une adresse en double est la panne la plus fréquente dans un petit réseau (séance 16).</p>
+    
+
+
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Quelle réponse as-tu améliorée en te relisant (unité, justification…) ?</h3>
+            <h3 id="a02-q01-label">Question 1 — D’après le document 2, pourquoi le Poste 1 ne peut-il pas imprimer ? Propose une correction.</h3>
             
 
             
@@ -402,7 +363,7 @@
                 <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Une phrase complète qui reprend les mots de la question.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Retrouve la phrase ou la ligne utile du document, puis commence par « D’après le document… ».</p></details>
             
             
         </div>
@@ -415,18 +376,19 @@
     </article>
     
     <article class="cours-activite" id="a03" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
-        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Calculer et argumenter</h2>
         
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le problème est trouvé. Termine par le calcul et l’argument.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas calculer un temps de téléchargement et argumenter sur la sécurité du Wi-Fi des visiteurs de la médiathèque. On attend un résultat avec son unité et une justification avec « car ».</p></div>
         
         
 
         
+<ol><li>Calcule la durée avec la méthode de la séance 17 (× 8, ÷ débit).</li><li>Écris l’unité (réflexe n° 5).</li><li>Pour la dernière question, justifie avec « car », puis relis tout (R16).</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Le débit est partagé entre tous les visiteurs.</p>
+<p>Pourquoi relire à la fin ? C’est le moment de vérifier unités et justifications sur tout le dossier.</p>
     
 
 
@@ -435,15 +397,31 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Si 4 visiteurs téléchargent en même temps, quel débit a chacun (environ) ? Combien de temps pour le fichier de 500 Mo ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Un visiteur télécharge un fichier de 500 Mo à 100 Mbit/s. Combien de secondes ?</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label"><p>Unité : s</p>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Une phrase complète qui reprend les mots de la question.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Écris l’opération, calcule, vérifie l’unité.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a03-q02-label">Question 2 — Pourquoi le Wi-Fi des visiteurs doit-il être séparé du réseau du personnel ? Justifie avec « car ».</h3>
+            
+
+            
+            
+                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Une idée + « car » + une raison tirée de la séance.</p></details>
             
             
         </div>
@@ -456,28 +434,65 @@
     </article>
     
     <article class="cours-activite" id="a04" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Pour aller plus loin</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        
+        
+        
+        
+
+        
+<p>Le débit est partagé entre les visiteurs.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Si 4 visiteurs téléchargent en même temps, combien de temps pour le fichier de 500 Mo ?</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Une phrase complète qui reprend les mots de la question.</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a05" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as traité un dossier complet. Fais le point.</p>
         
         
-
         
 
-        
         
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Quel point du réseau dois-tu encore revoir ? Comment vas-tu le travailler ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Quel point du réseau dois-tu encore revoir, et comment vas-tu le travailler ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème et de « Ce que je retiens », avec un exemple de la séance.</p></details>
@@ -487,7 +502,7 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -500,7 +515,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Réseau local : terminaux, commutateur, point d’accès, box ; adresses IP uniques.</li><li>Durée = taille × 8 ÷ débit.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Réseau local : terminaux, commutateur, point d’accès, box ; adresses uniques.</li><li>Durée = taille × 8 ÷ débit.</li></ul>
     
 </section>
 
@@ -532,7 +547,7 @@
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

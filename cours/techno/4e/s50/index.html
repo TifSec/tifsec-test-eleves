@@ -46,7 +46,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Ce que je sais faire</a></li><li><a href="#a02">Reprendre une difficulté</a></li><li><a href="#a03">Défi Arcade — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Ce que je sais faire</a></li><li><a href="#a02">Reprendre une difficulté</a></li><li><a href="#a03">Échanger nos jeux</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -208,19 +208,24 @@
         <h2>Ce que je sais faire</h2>
         
         
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas faire le bilan de ton année de 4e en technologie, à partir de la liste des séances du site. On attend trois savoir-faire nouveaux, chacun avec un exemple précis de séance.</p></div>
         
         
 
         
+<ol><li>Feuillette la liste des séances de 4e sur le site.</li><li>Choisis trois choses que tu ne savais pas faire en septembre.</li><li>Pour chacune, retrouve un exemple précis (séance, objet, résultat).</li></ol>
+    
 
-        
-        
+<p>Pourquoi un exemple ? « Je sais programmer » est vague ; « j’ai ajouté l’envoi radio au tracker en séance 44 » prouve ce que tu sais faire.</p>
+    
+
+
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Cite trois choses que tu sais faire maintenant (et pas en septembre), avec un exemple chacune.</h3>
+            <h3 id="a01-q01-label">Question 1 — Cite trois choses que tu sais faire en technologie à la fin de la 4e (et pas en septembre), avec un exemple de séance pour chacune.</h3>
             
 
             
@@ -236,7 +241,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Quel réflexe dit : « Je change une seule chose, je mesure, je garde le reste identique » ?</h3>
+            <h3 id="a01-q02-label">Question 2 — Quel réflexe brevet dit : « J’écris ce que je change, ce que je mesure, ce que je garde identique » ?</h3>
             
 
             
@@ -261,14 +266,15 @@
         <h2>Reprendre une difficulté</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as fait le bilan. Reprends une difficulté.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas reprendre seul une notion de 4e qui t’a posé problème, en relisant sa séance sur le site. On attend le nom de la notion, une explication avec tes mots et un exemple.</p></div>
         
         
 
         
+<ol><li>Choisis une notion qui t’a posé problème (réseau, protocole, programme, Calc…).</li><li>Relis la séance correspondante sur le site, en particulier « Ce que je retiens ».</li><li>Refais une question de cette séance sans regarder ta première réponse.</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Choisis une notion difficile, relis la séance correspondante et refais un exercice proche.</p>
+<p>Pourquoi reprendre une difficulté ? En 3e, tout revient au brevet : mieux vaut la régler maintenant.</p>
     
 
 
@@ -277,7 +283,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Quelle notion as-tu reprise ? Explique-la avec tes mots et un exemple.</h3>
+            <h3 id="a02-q01-label">Question 1 — Quelle notion de 4e as-tu reprise ? Explique-la avec tes mots et un exemple.</h3>
             
 
             
@@ -298,18 +304,19 @@
     </article>
     
     <article class="cours-activite" id="a03" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi Arcade</h2>
-        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Échanger nos jeux</h2>
         
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> La difficulté est reprise. Place au jeu !</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas tester le jeu « Récolte » programmé par un camarade (séances 31 à 34). On attend une réussite et une amélioration précise.</p></div>
         
         
 
         
+<ol><li>Ouvre ton jeu « Récolte » (séances 31 à 34) dans MakeCode Arcade.</li><li>Échange de poste avec un camarade et joue à son jeu.</li><li>Note une réussite et une idée d’amélioration.</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Ouvre ton jeu (séances 31 à 34) et échange avec un camarade.</p>
+<p>Pourquoi jouer au jeu d’un autre ? Tu vois d’autres façons de programmer la même chose.</p>
     
 
 
@@ -323,15 +330,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Qu’as-tu trouvé de réussi dans le jeu de ton camarade ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Dans le jeu « Récolte » de ton camarade, qu’as-tu trouvé de réussi, et quelle amélioration lui proposes-tu ?</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Ton idée répond-elle au besoin ?</p></details>
             
             
         </div>
@@ -344,28 +351,65 @@
     </article>
     
     <article class="cours-activite" id="a04" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Pour aller plus loin</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        
+        
+        
+        
+
+        
+<p>En 3e, tu prépareras le brevet.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Quel réflexe veux-tu améliorer en premier, et comment ?</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a05" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Fais ton bilan.</p>
         
         
-
         
 
-        
         
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Réponds au problème du jour : qu’as-tu appris en 4e, et que dois-tu travailler avant la 3e ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : qu’as-tu appris en 4e, et que dois-tu travailler avant la 3e ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème (réflexe n° 3).</p></details>
@@ -375,7 +419,7 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -420,7 +464,7 @@
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

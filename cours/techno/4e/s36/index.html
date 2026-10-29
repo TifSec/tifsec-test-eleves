@@ -46,7 +46,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Le programme</a></li><li><a href="#a02">La boucle « tant que »</a></li><li><a href="#a03">La descente</a></li><li><a href="#a04">Défi — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">La montée</a></li><li><a href="#a02">La boucle « tant que »</a></li><li><a href="#a03">La descente</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -166,7 +166,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Traduire un programme en algorithme : écrire en langage naturel ce que fait chaque bloc, dans l’ordre, avec QUAND, TANT QUE, SI … ALORS.</li>
+            <li>Traduire un programme en algorithme : écrire en langage naturel ce que fait chaque bloc, dans l’ordre.</li>
+            
+            <li>« tant que » répète tant qu’une condition est vraie.</li>
             
         </ul>
         
@@ -174,16 +176,16 @@
         <h2>Ce que tu vas apprendre à faire</h2>
         <ul>
             
-            <li>Traduire un programme en algorithme en langage naturel.</li>
+            <li>Traduire un programme en algorithme.</li>
             
-            <li>Expliquer le rôle d’une boucle « tant que ».</li>
+            <li>Expliquer une boucle « tant que ».</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séance 35, tu as identifié la chaîne d’information. En séance 31, tu as écrit un algorithme avant de programmer.</p><p>Aujourd’hui, tu fais l’inverse : tu pars du programme et tu écris l’algorithme.</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séance 35, tu as identifié la chaîne d’information. En séance 31, tu as écrit un algorithme avant de programmer.</p><p>Aujourd’hui, tu fais l’inverse : du programme vers l’algorithme.</p></div></section>
     
     
     
@@ -205,15 +207,13 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Le programme</h2>
+        <h2>La montée</h2>
         
         
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas traduire en français la partie du programme réel du monte-charge (affiché ci-dessous) qui fait monter la cabine. On attend un algorithme en langage naturel avec SI … ALORS et TANT QUE.</p></div>
         
         
 
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <pre class="cours-code"><code>au démarrage
     voyants orange ; écrire « Attente » ; voyants verts
@@ -233,7 +233,13 @@ toujours
         écrire « Stop RDC » ; voyants verts</code></pre>
     
 
-<p>Exemple expliqué : « si (P13 = 1) ET (P1 appuyé) » se traduit : SI la cabine est en bas ET qu’on appuie sur le bouton Étage ALORS…</p>
+<p>Exemple expliqué : « si (P13 = 1) ET (P1 appuyé) » se traduit : SI la cabine est en bas ET qu’on appuie sur Étage ALORS…</p>
+    
+
+<ol><li>Lis le programme bloc par bloc.</li><li>Remplace chaque broche par ce qu’elle signifie (P13 = 1 → cabine en bas…).</li><li>Écris la partie « montée » en français.</li></ol>
+    
+
+<p>Pourquoi remplacer les broches ? « P13 = 1 » ne parle qu’au programmeur ; « la cabine est en bas » parle à tout le monde.</p>
     
 
 
@@ -242,7 +248,7 @@ toujours
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Traduis la première partie (montée) en algorithme, en langage naturel.</h3>
+            <h3 id="a01-q01-label">Question 1 — Traduis en langage naturel la partie du programme du monte-charge qui fait monter la cabine.</h3>
             
 
             
@@ -250,7 +256,7 @@ toujours
                 <textarea id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Bloc par bloc (réflexe n° 9).</p></details>
             
             
         </div>
@@ -266,14 +272,19 @@ toujours
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>La boucle « tant que »</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as traduit la montée. Concentre-toi sur la boucle qui fait monter la cabine.</p>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as traduit la montée. Concentre-toi sur la boucle.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas comprendre la boucle « tant que P0 = 0 » du programme du monte-charge. On attend ce qu’elle fait et sa différence avec « répéter 4 fois ».</p></div>
         
         
 
         
+<ol><li>Repère la boucle « tant que P0 = 0 ».</li><li>Demande-toi quand elle s’arrête.</li><li>Compare avec « répéter 4 fois » (séance 30).</li></ol>
+    
 
-        
-        
+<p>Pourquoi « tant que » ici ? On ne sait pas combien de temps dure la montée : on s’arrête quand la cabine touche le contact haut.</p>
+    
+
+
         
         
         <div class="cours-question" data-question="q01">
@@ -284,7 +295,7 @@ toujours
 
             
             
-                <select id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label"><option value="">Choisis une réponse</option><option value="a">Elle fait tourner le moteur tant que le contact haut n’est pas appuyé.</option><option value="b">Elle répète 0 fois.</option><option value="c">Elle arrête le moteur.</option></select>
+                <select id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label"><option value="">Choisis une réponse</option><option value="a">Le moteur tourne tant que le contact haut n’est pas appuyé.</option><option value="b">Elle répète 0 fois.</option><option value="c">Elle arrête le moteur.</option></select>
 
                 
             <details><summary>Un coup de pouce</summary><p>Relis l’exemple expliqué.</p></details>
@@ -295,7 +306,7 @@ toujours
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Quelle est la différence entre « répéter 4 fois » et « tant que » ?</h3>
+            <h3 id="a02-q02-label">Question 2 — Différence entre « répéter 4 fois » et « tant que » ?</h3>
             
 
             
@@ -320,19 +331,24 @@ toujours
         <h2>La descente</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> La montée est traduite. À toi pour la descente.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas traduire seul la partie du programme qui fait descendre la cabine, avec la même méthode. On attend l’algorithme de la descente.</p></div>
         
         
 
         
+<ol><li>Lis la deuxième partie du programme.</li><li>Utilise la même méthode qu’en mission 1.</li><li>Écris en langage naturel l’algorithme de la partie du programme qui fait descendre la cabine.</li></ol>
+    
 
-        
-        
+<p>Pourquoi refaire seul ? La descente est symétrique de la montée : c’est le bon moment pour vérifier que tu as compris.</p>
+    
+
+
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Écris l’algorithme de la descente.</h3>
+            <h3 id="a03-q01-label">Question 1 — Écris en langage naturel l’algorithme de la partie du programme qui fait descendre la cabine.</h3>
             
 
             
@@ -340,7 +356,7 @@ toujours
                 <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Combien d’éléments sont demandés ?</p></details>
+            <details><summary>Un coup de pouce</summary><p>Bloc par bloc (réflexe n° 9).</p></details>
             
             
         </div>
@@ -354,17 +370,15 @@ toujours
     
     <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
+        <h2>Pour aller plus loin</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
         
-
         
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>On appuie sur Étage pendant que la cabine descend.</p>
+<p>On appuie sur Étage pendant la descente.</p>
     
 
 
@@ -373,7 +387,7 @@ toujours
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — D’après le programme, que se passe-t-il ? Est-ce un problème ?</h3>
+            <h3 id="a04-q01-label">Question 1 — Que se passe-t-il d’après le programme ?</h3>
             
 
             
@@ -400,17 +414,15 @@ toujours
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as traduit le programme. Il reste à répondre au problème de départ.</p>
         
         
-
         
 
-        
         
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment traduire le programme en algorithme ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment traduire un programme en algorithme ?</h3>
             
 
             
@@ -438,7 +450,7 @@ toujours
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Programme → algorithme : chaque bloc en langage naturel, dans l’ordre.</li><li>« tant que » : répète tant qu’une condition est vraie.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Programme → algorithme : bloc par bloc, en langage naturel.</li><li>« tant que » : répète tant qu’une condition est vraie.</li></ul>
     
 </section>
 

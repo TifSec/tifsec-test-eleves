@@ -46,7 +46,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Identifier (poste maquette)</a></li><li><a href="#a02">Énergie en entrée, énergie en sortie</a></li><li><a href="#a03">Des pertes</a></li><li><a href="#a04">Défi — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Identifier (poste maquette)</a></li><li><a href="#a02">Énergie en entrée, énergie en sortie</a></li><li><a href="#a03">Les pertes</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -166,7 +166,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Sur l’éolienne du collège, le ventilateur (alimenté par l’alimentation ATX) crée le vent ; le rotor convertit l’énergie du vent en mouvement de rotation ; le moteur de lecteur CD, utilisé en génératrice, convertit ce mouvement en énergie électrique ; les fils la transmettent à la LED ou au multimètre.</li>
+            <li>Le ventilateur (alimenté par l’alimentation ATX) crée le vent ; le rotor convertit l’énergie du vent en rotation ; le moteur de CD, utilisé en génératrice, convertit la rotation en électricité ; les fils la transmettent.</li>
+            
+            <li>À chaque conversion, une partie de l’énergie est perdue (frottements, chaleur).</li>
             
         </ul>
         
@@ -183,7 +185,7 @@
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En 5e, la chaîne d’énergie de l’éolienne t’était fournie sur des photos.</p><p>En 4e, c’est toi qui identifies les constituants sur la vraie maquette, et qui écris les énergies.</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En 5e, la chaîne d’énergie de l’éolienne t’était fournie.</p><p>En 4e, c’est toi qui identifies les constituants sur la vraie maquette et qui écris les énergies.</p></div></section>
     
     
     
@@ -208,17 +210,15 @@
         <h2>Identifier (poste maquette)</h2>
         
         
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas suivre le chemin de l’énergie dans l’éolienne de la classe (ou sur les photos projetées), de la prise à la LED. On attend la liste des constituants dans l’ordre. Seul le professeur branche l’alimentation 230 V.</p></div>
         
         
 
         
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>⚠️ L’alimentation ATX se branche sur le 230 V : seul le professeur la branche et la manipule. Tu peux seulement observer, et utiliser l’interrupteur du ventilateur si le professeur te le demande.</p>
+<ol><li>⚠️ L’alimentation ATX est branchée sur le 230 V : seul le professeur la branche et la manipule.</li><li>Quand ton groupe passe au poste maquette, suis le chemin de l’énergie, de la prise à la LED.</li><li>Note les constituants dans l’ordre.</li><li>Les autres groupes utilisent les photos projetées.</li></ol>
     
 
-<p>Chaque groupe passe au poste maquette ; les autres préparent la mission 2 avec les photos.</p>
+<p>Pourquoi suivre le chemin de l’énergie ? Une chaîne d’énergie se lit dans l’ordre : chaque constituant reçoit l’énergie du précédent.</p>
     
 
 
@@ -227,7 +227,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Écris le nom des constituants que tu as identifiés, dans l’ordre où passe l’énergie.</h3>
+            <h3 id="a01-q01-label">Question 1 — Écris les constituants dans l’ordre où passe l’énergie.</h3>
             
 
             
@@ -333,15 +333,19 @@
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Énergie en entrée, énergie en sortie</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as identifié les constituants. Précise maintenant les énergies.</p>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as identifié les constituants. Précise les énergies.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas trouver quelle énergie reçoit et quelle énergie fournit chaque constituant de l’éolienne, en t’aidant de l’exemple du ventilateur. On attend le tableau des énergies et la fonction de la génératrice.</p></div>
         
         
 
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Exemple expliqué : le ventilateur reçoit de l’énergie électrique et fournit l’énergie de mouvement de l’air (le vent).</p>
+    
+
+<ol><li>Lis l’exemple expliqué.</li><li>Pour le rotor puis la génératrice, demande-toi : quelle énergie reçoit-il ? laquelle fournit-il ?</li><li>Complète le tableau.</li></ol>
+    
+
+<p>Pourquoi entrée et sortie ? Un constituant qui convertit change la forme de l’énergie : c’est ce qu’on écrit sur les flèches d’un schéma bloc.</p>
     
 
 
@@ -350,7 +354,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Complète les énergies.</h3>
+            <h3 id="a02-q01-label">Question 1 — Pour le rotor et la génératrice de l’éolienne de la classe, écris l’énergie reçue (entrée) et l’énergie fournie (sortie).</h3>
             
 
             
@@ -398,19 +402,19 @@
                                 
                                 <td>
                                     
-                                    Moteur de CD (génératrice)
+                                    Génératrice
                                     
                                 </td>
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Énergie en entrée, énergie en sortie — Énergie en entrée — Moteur de CD (génératrice)">
+                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Énergie en entrée, énergie en sortie — Énergie en entrée — Génératrice">
                                     
                                 </td>
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a02_q01_r1_c2" data-required="true" data-row="1" data-col="2" aria-label="Énergie en entrée, énergie en sortie — Énergie en sortie — Moteur de CD (génératrice)">
+                                    <input type="text" data-answer-id="a02_q01_r1_c2" data-required="true" data-row="1" data-col="2" aria-label="Énergie en entrée, énergie en sortie — Énergie en sortie — Génératrice">
                                     
                                 </td>
                                 
@@ -428,7 +432,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Quelle fonction de la chaîne d’énergie réalise la génératrice ?</h3>
+            <h3 id="a02-q02-label">Question 2 — Quelle fonction réalise la génératrice ?</h3>
             
 
             
@@ -450,17 +454,18 @@
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Des pertes</h2>
+        <h2>Les pertes</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Toute l’énergie du ventilateur n’arrive pas à la LED.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas comparer l’énergie consommée par le ventilateur (2 W) et celle produite par la génératrice (0,1 W). On attend une explication de la différence avec deux pertes.</p></div>
         
         
 
         
+<ol><li>Lis les deux puissances.</li><li>Compare : le ventilateur consomme 2 W, la génératrice produit 0,1 W.</li><li>Cherche où passe l’énergie manquante.</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Le ventilateur consomme environ 2 W ; la génératrice produit environ 0,1 W.</p>
+<p>Pourquoi des pertes ? Aucune conversion n’est parfaite : une partie de l’énergie part en chaleur ou en frottements.</p>
     
 
 
@@ -469,7 +474,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Pourquoi l’éolienne produit-elle beaucoup moins d’énergie que n’en consomme le ventilateur ? Donne deux pertes.</h3>
+            <h3 id="a03-q01-label">Question 1 — Pourquoi l’éolienne produit-elle beaucoup moins que ce que consomme le ventilateur ? Donne deux pertes.</h3>
             
 
             
@@ -477,7 +482,7 @@
                 <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Source → constituant qui transforme → forme d’énergie en sortie.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Une idée + « car » + une raison tirée de la séance.</p></details>
             
             
         </div>
@@ -491,15 +496,13 @@
     
     <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
+        <h2>Pour aller plus loin</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
         
-
         
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Le rendement compare l’énergie utile à l’énergie reçue.</p>
     
@@ -510,7 +513,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Calcule le rendement de la maquette avec les valeurs de la mission 3.</h3>
+            <h3 id="a04-q01-label">Question 1 — Calcule le rendement de la maquette (0,1 W produits pour 2 W consommés).</h3>
             
 
             
@@ -537,10 +540,8 @@
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as décrit toute la chaîne. Il reste à répondre au problème de départ.</p>
         
         
-
         
 
-        
         
         
         
@@ -575,7 +576,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Rotor : énergie du vent → rotation ; génératrice : rotation → électricité ; fils : transmettre.</li><li>À chaque conversion, une partie de l’énergie est perdue (frottements, chaleur).</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Rotor : vent → rotation ; génératrice : rotation → électricité ; fils : transmettre.</li><li>À chaque conversion, une partie de l’énergie est perdue.</li></ul>
     
 </section>
 

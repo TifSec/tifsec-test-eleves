@@ -46,7 +46,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Calculer à la main</a></li><li><a href="#a02">La feuille de calcul</a></li><li><a href="#a03">Le graphique</a></li><li><a href="#a04">Défi — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Calculer à la main</a></li><li><a href="#a02">La feuille de calcul</a></li><li><a href="#a03">Le graphique</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -166,9 +166,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Le débit est la quantité de données transmise par seconde, en mégabits par seconde (Mbit/s). 1 octet = 8 bits, donc 1 Mo = 8 Mbit.</li>
+            <li>Le débit est la quantité de données transmise par seconde (Mbit/s). 1 octet = 8 bits, donc 1 Mo = 8 Mbit.</li>
             
-            <li>Durée (s) = taille (Mbit) ÷ débit (Mbit/s). Dans Calc, une formule utilise des références de cellules : =B2*8/C2.</li>
+            <li>Durée (s) = taille (Mo) × 8 ÷ débit (Mbit/s). Dans Calc, une formule utilise des références de cellules : =B2*8/C2.</li>
             
         </ul>
         
@@ -180,14 +180,14 @@
             
             <li>Écrire une formule avec des références de cellules.</li>
             
-            <li>Faire un graphique avec un titre et des axes nommés.</li>
+            <li>Faire un graphique titré.</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En 5e, tu as utilisé SOMME et MOYENNE dans Calc. En séance 13, tu as vu les liaisons du réseau.</p><p>Aujourd’hui, tu calcules combien de temps il faut pour envoyer une vidéo selon la connexion.</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En 5e, tu as utilisé SOMME et MOYENNE. En séance 13, tu as vu les liaisons du réseau.</p><p>Aujourd’hui, tu calcules combien de temps il faut pour envoyer une vidéo. Ton fichier reste sur l’ordinateur ; sur le site, tu réponds sur ta méthode.</p></div></section>
     
     
     
@@ -212,14 +212,18 @@
         <h2>Calculer à la main</h2>
         
         
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas calculer à la main le temps d’envoi d’une vidéo, à partir de l’exemple expliqué (taille en Mo, débit en Mbit/s). On attend une durée en secondes et l’explication du « × 8 ».</p></div>
         
         
 
         
+<p>Exemple expliqué : vidéo de 100 Mo, débit 20 Mbit/s. 100 × 8 = 800 Mbit ; 800 ÷ 20 = 40 s.</p>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Exemple expliqué : vidéo de 100 Mo avec un débit de 20 Mbit/s. Taille en mégabits : 100 × 8 = 800 Mbit. Durée : 800 ÷ 20 = 40 s.</p>
+<ol><li>Lis l’exemple expliqué.</li><li>Convertis la taille en mégabits (× 8).</li><li>Divise par le débit.</li><li>Écris le résultat en secondes.</li></ol>
+    
+
+<p>Pourquoi × 8 ? La taille d’un fichier est en octets, le débit en bits : il faut la même unité avant de diviser.</p>
     
 
 
@@ -249,7 +253,7 @@
 
             
             
-                <select id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><option value="">Choisis une réponse</option><option value="a">Parce qu’un octet contient 8 bits.</option><option value="b">Parce qu’il y a 8 câbles.</option><option value="c">Au hasard.</option></select>
+                <select id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><option value="">Choisis une réponse</option><option value="a">Un octet contient 8 bits.</option><option value="b">Il y a 8 câbles.</option><option value="c">Au hasard.</option></select>
 
                 
             <details><summary>Un coup de pouce</summary><p>Élimine d’abord les réponses impossibles.</p></details>
@@ -269,17 +273,18 @@
         <h2>La feuille de calcul</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais faire le calcul. Laisse Calc le faire pour plusieurs connexions.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas faire faire ce calcul par le tableur Calc pour trois connexions (ADSL, 4G, fibre), en recopiant le tableau fourni. On attend la formule recopiée et les durées obtenues.</p></div>
         
         
 
         
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<div class="cours-table-wrapper"><table class="cours-table"><caption>Ce que tu dois obtenir dans Calc (débits typiques arrondis)</caption><thead><tr><th scope="col"></th><th scope="col">A</th><th scope="col">B</th><th scope="col">C</th><th scope="col">D</th></tr></thead><tbody><tr><td>1</td><td>Connexion</td><td>Taille (Mo)</td><td>Débit (Mbit/s)</td><td>Durée (s)</td></tr><tr><td>2</td><td>ADSL</td><td>250</td><td>8</td><td></td></tr><tr><td>3</td><td>4G</td><td>250</td><td>40</td><td></td></tr><tr><td>4</td><td>Fibre</td><td>250</td><td>500</td><td></td></tr></tbody></table></div>
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Ce que tu dois obtenir dans Calc</caption><thead><tr><th scope="col"></th><th scope="col">A</th><th scope="col">B</th><th scope="col">C</th><th scope="col">D</th></tr></thead><tbody><tr><td>1</td><td>Connexion</td><td>Taille (Mo)</td><td>Débit (Mbit/s)</td><td>Durée (s)</td></tr><tr><td>2</td><td>ADSL</td><td>250</td><td>8</td><td></td></tr><tr><td>3</td><td>4G</td><td>250</td><td>40</td><td></td></tr><tr><td>4</td><td>Fibre</td><td>250</td><td>500</td><td></td></tr></tbody></table></div>
     
 
-<ol><li>Ouvre Calc, enregistre sous 4e_S17_tonprenom.ods et recopie le tableau.</li><li>En D2, écris =B2*8/C2 puis Entrée.</li><li>Recopie la formule jusqu’en D4 avec la poignée.</li></ol>
+<ol><li>Ouvre Calc, enregistre sous 4e_S17_tonprenom.ods et recopie le tableau.</li><li>En D2, écris =B2*8/C2 puis Entrée.</li><li>Recopie la formule jusqu’en D4 avec la poignée (petit carré en bas à droite).</li></ol>
+    
+
+<p>Pourquoi des références (B2, C2) ? Si on change la taille ou le débit, Calc recalcule tout seul : c’est l’intérêt d’un tableur.</p>
     
 
 
@@ -288,7 +293,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Quelle formule as-tu écrite en D3 (après recopie) ?</h3>
+            <h3 id="a02-q01-label">Question 1 — Quelle formule obtiens-tu en D3 après la recopie ?</h3>
             
 
             
@@ -304,7 +309,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Recopie les durées obtenues.</h3>
+            <h3 id="a02-q02-label">Question 2 — Recopie les durées calculées par ta feuille Calc (colonne D) pour la vidéo de 250 Mo.</h3>
             
 
             
@@ -377,7 +382,7 @@
                     </table>
                 </div>
             
-            <details><summary>Un coup de pouce</summary><p>Une case à la fois : la ligne croise la colonne (réflexe n° 6).</p></details>
+            <details><summary>Un coup de pouce</summary><p>Une formule commence par « = », puis la fonction et la plage (ex. =MOYENNE(B2:B10)).</p></details>
             
             
         </div>
@@ -394,14 +399,15 @@
         <h2>Le graphique</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les résultats sont calculés. Un graphique les rend plus parlants.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas tracer dans Calc le graphique des durées d’envoi de la mission 2. On attend un graphique titré et un calcul qui compare la fibre et l’ADSL.</p></div>
         
         
 
         
+<ol><li>Sélectionne A1:A4, puis avec Ctrl, D1:D4.</li><li>Insertion &gt; Diagramme &gt; Colonnes.</li><li>Titre : « Durée d’envoi d’une vidéo de 250 Mo » ; axe Y : « Durée (s) ».</li><li>Enregistre (Ctrl + S).</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<ol><li>Sélectionne A1:A4 et D1:D4 (touche Ctrl pour la deuxième plage).</li><li>Insertion &gt; Diagramme &gt; Colonnes.</li><li>Titre : « Durée d’envoi d’une vidéo de 250 Mo » ; axe Y : « Durée (s) ».</li></ol>
+<p>Pourquoi un titre et des axes nommés ? Un graphique sans titre ni unité ne peut pas être lu par quelqu’un d’autre.</p>
     
 
 
@@ -410,7 +416,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — D’après ton graphique, combien de fois la fibre est-elle plus rapide que l’ADSL pour ce fichier ? Montre le calcul.</h3>
+            <h3 id="a03-q01-label">Question 1 — Combien de fois la fibre est-elle plus rapide que l’ADSL pour ce fichier ? Montre le calcul.</h3>
             
 
             
@@ -419,22 +425,6 @@
 
                 
             <details><summary>Un coup de pouce</summary><p>Une formule commence par « = », puis la fonction et la plage (ex. =MOYENNE(B2:B10)).</p></details>
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a03-q02-label">Question 2 — Pourquoi utiliser des références (B2, C2) plutôt que les nombres dans la formule ?</h3>
-            
-
-            
-            
-                <select id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label"><option value="">Choisis une réponse</option><option value="a">Si on change la taille ou le débit, le résultat se recalcule tout seul.</option><option value="b">C’est plus joli.</option><option value="c">Calc refuse les nombres.</option></select>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Élimine d’abord les réponses impossibles.</p></details>
             
             
         </div>
@@ -448,17 +438,15 @@
     
     <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
+        <h2>Pour aller plus loin</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
         
-
         
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Dans la réalité, le débit varie selon l’heure et le nombre d’utilisateurs.</p>
+<p>Le débit réel est souvent plus faible que prévu.</p>
     
 
 
@@ -494,17 +482,15 @@
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as calculé et comparé. Il reste à répondre au problème de départ.</p>
         
         
-
         
 
-        
         
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment calculer le temps d’envoi d’un fichier selon le débit ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment calculer le temps d’envoi d’un fichier ? Explique le calcul et la formule Calc.</h3>
             
 
             
@@ -532,7 +518,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Durée (s) = taille (Mo) × 8 ÷ débit (Mbit/s).</li><li>Calc : formule avec références de cellules, recopie avec la poignée, graphique avec titre et axes.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Durée (s) = taille (Mo) × 8 ÷ débit (Mbit/s).</li><li>Calc : références de cellules, poignée, graphique titré.</li></ul>
     
 </section>
 

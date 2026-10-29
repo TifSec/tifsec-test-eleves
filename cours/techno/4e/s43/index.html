@@ -46,7 +46,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Inventaire</a></li><li><a href="#a02">Choisir l’alimentation</a></li><li><a href="#a03">Le schéma du prototype</a></li><li><a href="#a04">Défi — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Inventaire</a></li><li><a href="#a02">Choisir l’alimentation</a></li><li><a href="#a03">La chaîne d’information du prototype</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -210,14 +210,18 @@
         <h2>Inventaire</h2>
         
         
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas faire l’inventaire du prototype du tracker communicant à partir du document 1 : ce qui existe déjà et ce qui manque pour qu’il envoie ses mesures. On attend le rôle de chaque constituant manquant.</p></div>
         
         
 
         
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Inventaire du tracker</caption><thead><tr><th scope="col">Constituant</th><th scope="col">Présent sur le tracker ?</th></tr></thead><tbody><tr><td>Carte micro:bit avec radio</td><td>Oui</td></tr><tr><td>Capteurs de lumière</td><td>Oui</td></tr><tr><td>Servomoteur</td><td>Oui</td></tr><tr><td>Deuxième carte (récepteur)</td><td>Non (la carte libre de la classe)</td></tr><tr><td>Alimentation du récepteur</td><td>Non</td></tr></tbody></table></div>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1</caption><thead><tr><th scope="col">Constituant</th><th scope="col">Présent sur le tracker ?</th></tr></thead><tbody><tr><td>Carte micro:bit avec radio</td><td>Oui</td></tr><tr><td>Capteurs de lumière</td><td>Oui</td></tr><tr><td>Servomoteur</td><td>Oui</td></tr><tr><td>Deuxième carte (récepteur)</td><td>Non (la carte libre de la classe)</td></tr><tr><td>Alimentation du récepteur</td><td>Non</td></tr></tbody></table></div>
+<ol><li>Lis le document 1 : ce qui est déjà sur le tracker et ce qui manque.</li><li>Pour chaque constituant manquant, demande-toi à quoi il servira dans le projet.</li><li>Écris son rôle.</li></ol>
+    
+
+<p>Pourquoi un inventaire ? On n’achète ni ne fabrique rien d’inutile : on part de ce qu’on a déjà.</p>
     
 
 
@@ -226,7 +230,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — D’après le document 1, écris le rôle de chaque constituant manquant.</h3>
+            <h3 id="a01-q01-label">Question 1 — D’après le document 1, écris le rôle de chaque constituant qui manque au tracker communicant.</h3>
             
 
             
@@ -299,14 +303,18 @@
         <h2>Choisir l’alimentation</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais ce qui manque. Choisis l’alimentation du récepteur.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas choisir comment alimenter la carte réceptrice du tracker, en comparant les deux solutions du document 2 avec le besoin. On attend un choix justifié par le document.</p></div>
         
         
 
         
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 2 — Alimenter la carte réceptrice</caption><thead><tr><th scope="col">Solution</th><th scope="col">Autonomie</th><th scope="col">Mobilité</th></tr></thead><tbody><tr><td>Câble USB sur l’ordinateur</td><td>Illimitée</td><td>Faible (près de l’ordinateur)</td></tr><tr><td>Boîtier 2 piles AAA</td><td>Plusieurs jours</td><td>Bonne</td></tr></tbody></table></div>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 2</caption><thead><tr><th scope="col">Solution</th><th scope="col">Autonomie</th><th scope="col">Mobilité</th></tr></thead><tbody><tr><td>Câble USB sur l’ordinateur</td><td>Illimitée</td><td>Faible (près de l’ordinateur)</td></tr><tr><td>Boîtier 2 piles AAA</td><td>Plusieurs jours</td><td>Bonne</td></tr></tbody></table></div>
+<ol><li>Lis le document 2 : deux solutions pour alimenter la carte réceptrice.</li><li>Relis le besoin : la carte doit pouvoir être posée n’importe où dans la salle.</li><li>Compare les deux solutions sur ce critère et choisis.</li></ol>
+    
+
+<p>Pourquoi partir du besoin ? La meilleure solution n’existe pas en général : c’est celle qui répond le mieux à ce qu’on demande.</p>
     
 
 
@@ -315,7 +323,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — La carte réceptrice doit pouvoir être posée n’importe où dans la salle. Quelle alimentation choisis-tu ? Justifie avec le document 2.</h3>
+            <h3 id="a02-q01-label">Question 1 — La carte réceptrice du tracker doit pouvoir être posée n’importe où dans la salle. Quelle alimentation choisis-tu ? Justifie avec le document 2.</h3>
             
 
             
@@ -331,12 +339,12 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Pourquoi le récepteur n’a-t-il pas besoin de capteur de lumière ?</h3>
+            <h3 id="a02-q02-label">Question 2 — Pourquoi la carte réceptrice n’a-t-elle pas besoin de capteur de lumière ?</h3>
             
 
             
             
-                <select id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><option value="">Choisis une réponse</option><option value="a">Il reçoit la mesure par radio : il ne mesure rien lui-même.</option><option value="b">Parce qu’il est à l’ombre.</option><option value="c">Il en a besoin.</option></select>
+                <select id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><option value="">Choisis une réponse</option><option value="a">Elle reçoit la mesure par radio : elle ne mesure rien elle-même.</option><option value="b">Parce qu’elle est à l’ombre.</option><option value="c">Elle en a besoin.</option></select>
 
                 
             <details><summary>Un coup de pouce</summary><p>Relis l’exemple expliqué.</p></details>
@@ -353,16 +361,21 @@
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Le schéma du prototype</h2>
+        <h2>La chaîne d’information du prototype</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Il reste à dessiner la nouvelle chaîne d’information.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas compléter la chaîne d’information du tracker devenu communicant, avec les constituants des missions 1 et 2. On attend chaque constituant dans la bonne colonne.</p></div>
         
         
 
         
+<ol><li>Reprends la chaîne d’information du tracker vue en 5e.</li><li>Ajoute la nouvelle partie : la carte du tracker émet, la deuxième carte reçoit et affiche.</li><li>Range chaque constituant dans sa colonne.</li></ol>
+    
 
-        
-        
+<p>Pourquoi redessiner la chaîne ? Ajouter une fonction change l’organisation de l’objet : la chaîne montre le nouveau trajet de l’information.</p>
+    
+
+
         
         
         <div class="cours-question" data-question="q01">
@@ -393,19 +406,19 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a03_q01_r0_c0" data-required="true" data-row="0" data-col="0" aria-label="Le schéma du prototype — Acquérir — ">
+                                    <input type="text" data-answer-id="a03_q01_r0_c0" data-required="true" data-row="0" data-col="0" aria-label="La chaîne d’information du prototype — Acquérir — ">
                                     
                                 </td>
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a03_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Le schéma du prototype — Traiter et émettre — ">
+                                    <input type="text" data-answer-id="a03_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="La chaîne d’information du prototype — Traiter et émettre — ">
                                     
                                 </td>
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a03_q01_r0_c2" data-required="true" data-row="0" data-col="2" aria-label="Le schéma du prototype — Recevoir et communiquer — ">
+                                    <input type="text" data-answer-id="a03_q01_r0_c2" data-required="true" data-row="0" data-col="2" aria-label="La chaîne d’information du prototype — Recevoir et communiquer — ">
                                     
                                 </td>
                                 
@@ -429,17 +442,15 @@
     
     <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
+        <h2>Pour aller plus loin</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
         
-
         
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Le récepteur pourrait aussi émettre un son quand la lumière est faible.</p>
+<p>La carte réceptrice pourrait aussi émettre un son quand la lumière est faible.</p>
     
 
 
@@ -475,10 +486,8 @@
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> L’inventaire est fait. Il reste à répondre au problème de départ.</p>
         
         
-
         
 
-        
         
         
         

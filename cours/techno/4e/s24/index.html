@@ -46,7 +46,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Le dossier</a></li><li><a href="#a02">Je relis (R16)</a></li><li><a href="#a03">Défi — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">La chaîne d’énergie du voilier</a></li><li><a href="#a02">Mesurer et proposer un protocole</a></li><li><a href="#a03">Comparer et relire</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -134,7 +134,7 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Technologie · 4e · S24</span></div>
-    <h1>Séance 24 : Bilan et entraînement au brevet n° 3 : une éolienne de bateau</h1>
+    <h1>Séance 24 : Bilan et entraînement au brevet n° 3 : l’éolienne d’un voilier</h1>
     
 
     
@@ -148,7 +148,7 @@
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Suis-je capable d’analyser une chaîne d’énergie, de choisir un appareil de mesure et de comparer deux solutions ?</p>
+        <p>Suis-je capable d’analyser une chaîne d’énergie, de choisir un appareil et de proposer un protocole ?</p>
     </section>
     
 
@@ -166,7 +166,7 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Chaîne d’énergie, mesures, comparaison de solutions.</li>
+            <li>Chaîne d’énergie, mesures, protocole, comparaison.</li>
             
         </ul>
         
@@ -181,7 +181,7 @@
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Depuis la séance 19, tu as étudié l’énergie de l’éolienne.</p><p>Aujourd’hui, tu traites un dossier sur la petite éolienne d’un voilier (situation inventée).</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Depuis la séance 19, tu as étudié l’énergie de l’éolienne.</p><p>Aujourd’hui, un dossier sur l’éolienne d’un voilier (situation inventée), mission par mission.</p></div></section>
     
     
     
@@ -203,23 +203,27 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Le dossier</h2>
+        <h2>La chaîne d’énergie du voilier</h2>
         
         
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas t’entraîner au brevet sur la chaîne d’énergie de l’éolienne d’un voilier (documents 1 et 2). On attend la fonction de chaque constituant et une puissance lue dans le document 2.</p></div>
         
         
 
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <h4>Document 1 — L’éolienne du voilier</h4>
     
 
-<blockquote>Sur un voilier, une petite éolienne recharge une batterie de 12 V qui alimente l’éclairage et le GPS. Le rotor fait tourner une génératrice. Un régulateur protège la batterie contre la surcharge.</blockquote>
+<blockquote>Une petite éolienne recharge une batterie de 12 V qui alimente l’éclairage et le GPS. Le rotor fait tourner une génératrice. Un régulateur protège la batterie.</blockquote>
     
 
-<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 2 — Production selon le vent</caption><thead><tr><th scope="col">Vent (km/h)</th><th scope="col">10</th><th scope="col">20</th><th scope="col">30</th><th scope="col">40</th></tr></thead><tbody><tr><td>Puissance produite (W)</td><td>5</td><td>30</td><td>80</td><td>150</td></tr></tbody></table></div>
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 2</caption><thead><tr><th scope="col">Vent (km/h)</th><th scope="col">10</th><th scope="col">20</th><th scope="col">30</th><th scope="col">40</th></tr></thead><tbody><tr><td>Puissance (W)</td><td>5</td><td>30</td><td>80</td><td>150</td></tr></tbody></table></div>
+    
+
+<ol><li>Lis tout le document 1.</li><li>Repère le constituant qui convertit, celui qui stocke, celui qui transmet.</li><li>Complète le tableau.</li></ol>
+    
+
+<p>Pourquoi « stocker » ? Sur un bateau, on a besoin d’électricité même sans vent : la batterie garde l’énergie pour plus tard.</p>
     
 
 
@@ -228,7 +232,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Complète la chaîne d’énergie du voilier.</h3>
+            <h3 id="a01-q01-label">Question 1 — D’après le document 1, écris la fonction de chaque constituant de la chaîne d’énergie du voilier (convertir, stocker, transmettre).</h3>
             
 
             
@@ -257,7 +261,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Le dossier — Fonction — Rotor et génératrice">
+                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="La chaîne d’énergie du voilier — Fonction — Rotor et génératrice">
                                     
                                 </td>
                                 
@@ -274,7 +278,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Le dossier — Fonction — Batterie">
+                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="La chaîne d’énergie du voilier — Fonction — Batterie">
                                     
                                 </td>
                                 
@@ -291,7 +295,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Le dossier — Fonction — Fils">
+                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="La chaîne d’énergie du voilier — Fonction — Fils">
                                     
                                 </td>
                                 
@@ -309,7 +313,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — D’après le document 2, quelle puissance l’éolienne produit-elle avec un vent de 30 km/h ?</h3>
+            <h3 id="a01-q02-label">Question 2 — D’après le document 2, quelle puissance avec un vent de 30 km/h ?</h3>
             
 
             
@@ -322,15 +326,41 @@
             
         </div>
         
-        <div class="cours-question" data-question="q03">
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#course-intro">← Revoir l’objectif</a>
+            <a class="course-mission-next" href="#a02">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a02" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Mesurer et proposer un protocole</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> La chaîne est claire. Passons aux mesures.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas choisir un appareil de mesure et écrire un protocole pour vérifier le document 2 sur l’éolienne du voilier (réflexes R11 et R15). On attend l’appareil et un protocole en trois lignes.</p></div>
+        
+        
+
+        
+<ol><li>Choisis l’appareil pour la tension de la batterie (R11).</li><li>Puis écris un protocole pour vérifier le document 2 (R15).</li><li>Une seule chose change : le vent.</li></ol>
+    
+
+<p>Pourquoi vérifier le document 2 ? Les chiffres d’un fabricant se vérifient par un protocole : c’est la démarche d’un technicien.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            
-            <h3 id="a01-q03-label">Question 3 — Quel appareil choisir pour vérifier la tension de la batterie ?</h3>
+            <h3 id="a02-q01-label">Question 1 — Quel appareil pour vérifier la tension de la batterie ?</h3>
             
 
             
             
-                <select id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label"><option value="">Choisis une réponse</option><option value="a">Un multimètre en voltmètre, branché aux bornes de la batterie.</option><option value="b">Un chronomètre.</option><option value="c">Un ampèremètre en dérivation.</option></select>
+                <select id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label"><option value="">Choisis une réponse</option><option value="a">Un multimètre en voltmètre, aux bornes de la batterie.</option><option value="b">Un chronomètre.</option><option value="c">Un ampèremètre en dérivation.</option></select>
 
                 
             <details><summary>Un coup de pouce</summary><p>Relis l’exemple expliqué.</p></details>
@@ -338,10 +368,10 @@
             
         </div>
         
-        <div class="cours-question" data-question="q04">
+        <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q04-label">Question 4 — Propose un protocole pour vérifier le document 2 sur une éolienne réelle.</h3>
+            <h3 id="a02-q02-label">Question 2 — Propose un protocole pour vérifier, avec l’éolienne du voilier, que la puissance produite augmente avec la vitesse du vent comme l’indique le document 2.</h3>
             
 
             
@@ -370,7 +400,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q04_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Le dossier — Protocole — Je change">
+                                    <input type="text" data-answer-id="a02_q02_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Mesurer et proposer un protocole — Protocole — Je change">
                                     
                                 </td>
                                 
@@ -387,7 +417,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q04_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Le dossier — Protocole — Je mesure">
+                                    <input type="text" data-answer-id="a02_q02_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Mesurer et proposer un protocole — Protocole — Je mesure">
                                     
                                 </td>
                                 
@@ -404,7 +434,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q04_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Le dossier — Protocole — Je garde identique">
+                                    <input type="text" data-answer-id="a02_q02_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Mesurer et proposer un protocole — Protocole — Je garde identique">
                                     
                                 </td>
                                 
@@ -419,59 +449,6 @@
             
         </div>
         
-        <div class="cours-question" data-question="q05">
-            
-            
-            <h3 id="a01-q05-label">Question 5 — Le propriétaire hésite entre l’éolienne et un panneau solaire. Donne un argument chiffré ou un critère pour chaque solution.</h3>
-            
-
-            
-            
-                <textarea id="a01-q05" data-answer-id="a01_q05" data-required="true" aria-labelledby="a01-q05-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Combien d’éléments sont demandés ?</p></details>
-            
-            
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#course-intro">← Revoir l’objectif</a>
-            <a class="course-mission-next" href="#a02">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a02" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Je relis (R16)</h2>
-        
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le dossier est terminé. Relis-toi.</p>
-        
-        
-
-        
-
-        
-        
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a02-q01-label">Question 1 — Vérifie les unités : en as-tu oublié une ? Laquelle as-tu ajoutée ?</h3>
-            
-
-            
-            
-                <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
-            
-            
-        </div>
-        
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#a01">← Étape précédente</a>
@@ -480,18 +457,19 @@
     </article>
     
     <article class="cours-activite" id="a03" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
-        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Comparer et relire</h2>
         
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les mesures sont prévues. Termine en comparant.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas comparer l’éolienne et un panneau solaire pour le voilier, puis relire tout ton dossier (R14, R16). On attend un argument avec un critère nommé pour chaque solution.</p></div>
         
         
 
         
+<ol><li>Donne un argument pour chaque solution, avec un critère nommé (R14).</li><li>Relis tout le dossier : unités, justifications (R16).</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Énergie (Wh) = puissance (W) × durée (h).</p>
+<p>Pourquoi un argument pour chaque solution ? Le propriétaire choisira mieux s’il connaît les deux côtés.</p>
     
 
 
@@ -500,15 +478,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Quelle énergie produit l’éolienne en 5 h avec un vent de 20 km/h ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Le propriétaire hésite entre l’éolienne et un panneau solaire. Donne un argument chiffré ou un critère pour chacun.</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Quelle énergie entre, laquelle sort ?</p></details>
+            <details><summary>Un coup de pouce</summary><p>Combien d’éléments sont demandés ?</p></details>
             
             
         </div>
@@ -521,28 +499,65 @@
     </article>
     
     <article class="cours-activite" id="a04" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Pour aller plus loin</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        
+        
+        
+        
+
+        
+<p>Énergie (Wh) = puissance (W) × durée (h).</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Quelle énergie en 5 h avec un vent de 20 km/h ?</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Quelle énergie entre, laquelle sort ?</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a05" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as traité un dossier complet. Fais le point.</p>
         
         
-
         
 
-        
         
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Quel réflexe as-tu le mieux utilisé aujourd’hui ? Donne un exemple.</h3>
+            <h3 id="a05-q01-label">Question 1 — Quel réflexe as-tu le mieux utilisé aujourd’hui ? Donne un exemple.</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème (réflexe n° 3).</p></details>
@@ -552,7 +567,7 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -565,7 +580,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Chaîne d’énergie : convertir, stocker, transmettre.</li><li>Mesurer : appareil adapté et unité ; protocole : changer, mesurer, garder.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Chaîne d’énergie : convertir, stocker, transmettre.</li><li>Mesurer : bon appareil et unité ; protocole : changer, mesurer, garder.</li></ul>
     
 </section>
 
@@ -597,7 +612,7 @@
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

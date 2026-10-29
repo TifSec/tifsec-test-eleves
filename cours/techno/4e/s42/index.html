@@ -46,7 +46,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Un premier message</a></li><li><a href="#a02">Envoyer une mesure</a></li><li><a href="#a03">Défi — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Un premier message</a></li><li><a href="#a02">Envoyer une mesure</a></li><li><a href="#a03">Envoyer deux mesures</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -185,7 +185,7 @@
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séance 41, ton groupe a fixé la nouvelle fonction.</p><p>Aujourd’hui, tu découvres la radio dans le simulateur, qui affiche deux cartes.</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séance 41, ton groupe a fixé la nouvelle fonction du tracker.</p><p>Aujourd’hui, tu découvres la radio dans le simulateur MakeCode, qui affiche deux cartes.</p></div></section>
     
     
     
@@ -210,17 +210,15 @@
         <h2>Un premier message</h2>
         
         
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas faire communiquer deux cartes micro:bit par radio dans le simulateur MakeCode : un appui sur A envoie le nombre 7 à l’autre carte. On attend un programme qui fonctionne et le rôle de chaque bloc radio.</p></div>
         
         
 
         
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<ol><li>Ouvre MakeCode micro:bit, nouveau projet 4e_S42_groupe.</li><li>Au démarrage : « radio définir groupe 12 » (ou le numéro de ton groupe).</li><li>« quand le bouton A est pressé » : « radio envoyer nombre 7 ».</li><li>« quand une donnée est reçue par radio receivedNumber » : « montrer nombre receivedNumber ».</li><li>Le simulateur affiche une deuxième carte : appuie sur A sur la première.</li></ol>
+<ol><li>Ouvre MakeCode micro:bit, nouveau projet 4e_S42_groupe.</li><li>Au démarrage : « radio définir groupe » avec le numéro de ton groupe.</li><li>« quand le bouton A est pressé » : « radio envoyer nombre 7 ».</li><li>« quand une donnée est reçue par radio receivedNumber » : « montrer nombre receivedNumber ».</li><li>Le simulateur affiche une deuxième carte : appuie sur A sur la première.</li></ol>
     
 
-<p>Exemple expliqué : le même programme est sur les deux cartes. Celle où on appuie sur A envoie 7 ; l’autre reçoit 7 et l’affiche.</p>
+<p>Pourquoi le même programme sur les deux cartes ? Celle où on appuie sur A envoie 7 ; l’autre reçoit 7 et l’affiche. Chaque carte peut émettre et recevoir.</p>
     
 
 
@@ -234,7 +232,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Que se passe-t-il si les deux cartes ne sont pas sur le même groupe radio ?</h3>
+            <h3 id="a01-q01-label">Question 1 — Que se passe-t-il si les deux cartes micro:bit ne sont pas sur le même groupe radio ?</h3>
             
 
             
@@ -250,7 +248,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Associe chaque bloc à son rôle.</h3>
+            <h3 id="a01-q02-label">Question 2 — Associe chaque bloc radio de MakeCode à son rôle.</h3>
             
 
             
@@ -340,14 +338,15 @@
         <h2>Envoyer une mesure</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Un nombre fixe passe. Envoie maintenant une vraie mesure.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas remplacer le nombre fixe par une vraie mesure : la lumière captée par la première carte, envoyée toutes les 2 secondes. C’est ce que fera le tracker. On attend la description de ce qu’affiche la carte réceptrice.</p></div>
         
         
 
         
+<ol><li>Remplace 7 par le bloc « niveau d’intensité lumineuse ».</li><li>Mets l’envoi dans « toujours », suivi de « pause 2000 ms ».</li><li>Dans le simulateur, change la lumière de la première carte (curseur) et observe la seconde.</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<ol><li>Remplace 7 par « niveau d’intensité lumineuse ».</li><li>Envoie la mesure toutes les 2 secondes avec « toujours » et « pause 2000 ms ».</li><li>Dans le simulateur, change la lumière de la première carte et observe la seconde.</li></ol>
+<p>Pourquoi une pause de 2 s ? Envoyer sans arrêt encombre la radio ; toutes les 2 secondes suffit pour suivre la lumière.</p>
     
 
 
@@ -361,7 +360,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Décris ce qui s’affiche sur la carte réceptrice quand tu changes la lumière de l’émettrice.</h3>
+            <h3 id="a02-q01-label">Question 1 — Dans le simulateur, décris ce qui s’affiche sur la carte réceptrice quand tu changes la lumière de la carte émettrice.</h3>
             
 
             
@@ -382,18 +381,19 @@
     </article>
     
     <article class="cours-activite" id="a03" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
-        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Envoyer deux mesures</h2>
         
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Une mesure passe. Le tracker en enverra deux.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas envoyer deux mesures différentes (lumière et température) d’une carte à l’autre, avec des valeurs nommées. Le tracker enverra lui aussi deux mesures : la lumière et l’angle. On attend l’explication du rôle du nom et l’algorithme du récepteur.</p></div>
         
         
 
         
+<ol><li>Remplace « radio envoyer nombre » par « radio envoyer valeur « lum » = niveau d’intensité lumineuse ».</li><li>Ajoute « radio envoyer valeur « temp » = température ».</li><li>Sur le récepteur, utilise « quand une donnée est reçue par radio name, value » et « si name = « lum » alors montrer value ».</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>« radio envoyer valeur « lum » = … » envoie un nom et un nombre.</p>
+<p>Pourquoi un nom ? Quand deux mesures arrivent, le récepteur doit savoir laquelle il reçoit : le nom sert d’étiquette.</p>
     
 
 
@@ -407,15 +407,31 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Pourquoi envoyer un nom avec le nombre quand on transmet deux mesures (lumière et angle) ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Pourquoi faut-il envoyer un nom avec le nombre quand la carte émettrice transmet deux mesures (lumière et température) ?</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Quelle énergie entre, laquelle sort ?</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a03-q02-label">Question 2 — Écris en langage naturel ce que fait le récepteur quand il reçoit une valeur nommée.</h3>
+            
+
+            
+            
+                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Combien d’éléments sont demandés ?</p></details>
             
             
         </div>
@@ -428,28 +444,65 @@
     </article>
     
     <article class="cours-activite" id="a04" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Pour aller plus loin</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        
+        
+        
+        
+
+        
+<p>Plusieurs groupes émettent en même temps dans la salle.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Que se passerait-il si deux groupes choisissaient le même numéro de groupe radio ?</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Ton idée répond-elle au besoin ?</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a05" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les deux cartes se parlent. Il reste à répondre au problème de départ.</p>
         
         
-
         
 
-        
         
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Réponds au problème du jour : comment une carte envoie-t-elle une donnée à une autre par radio ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment une carte micro:bit envoie-t-elle une donnée à une autre par radio ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème (réflexe n° 3).</p></details>
@@ -459,7 +512,7 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -472,7 +525,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Radio micro:bit : même groupe ; envoyer (nombre, valeur) ; « quand une donnée est reçue ».</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Radio micro:bit : même groupe ; envoyer (nombre, valeur nommée) ; « quand une donnée est reçue ».</li></ul>
     
 </section>
 
@@ -504,7 +557,7 @@
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

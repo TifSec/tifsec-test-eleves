@@ -46,7 +46,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Grandeur, appareil, unité</a></li><li><a href="#a02">Brancher le multimètre</a></li><li><a href="#a03">Choisir pour une question</a></li><li><a href="#a04">Défi — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Grandeur, appareil, unité</a></li><li><a href="#a02">Brancher le multimètre</a></li><li><a href="#a03">Choisir pour une vraie question</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -166,9 +166,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Le multimètre mesure une tension (en volts, V) en voltmètre, branché en dérivation (aux bornes), ou une intensité (en ampères, A) en ampèremètre, branché en série (dans le circuit).</li>
+            <li>Le multimètre mesure une tension (V) en voltmètre, branché en dérivation (aux bornes), ou une intensité (A) en ampèremètre, branché en série (dans le circuit).</li>
             
-            <li>Le chronomètre mesure une durée (s) ; le compte-tours (tachymètre) mesure une vitesse de rotation (tr/min).</li>
+            <li>Le chronomètre mesure une durée (s) ; le compte-tours mesure une vitesse de rotation (tr/min).</li>
             
         </ul>
         
@@ -210,17 +210,21 @@
         <h2>Grandeur, appareil, unité</h2>
         
         
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas apprendre à choisir l’appareil de mesure qui convient (multimètre, chronomètre, compte-tours…) pour des mesures sur l’éolienne, à l’aide du document 1. On attend le bon appareil pour chaque mesure.</p></div>
         
         
 
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <blockquote>Réflexe brevet n° 11 : je choisis l’appareil de mesure et j’écris l’unité qu’il donne.</blockquote>
     
 
-<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1</caption><thead><tr><th scope="col">Grandeur</th><th scope="col">Appareil</th><th scope="col">Unité</th></tr></thead><tbody><tr><td>Tension électrique</td><td>Multimètre en voltmètre</td><td>volt (V)</td></tr><tr><td>Intensité du courant</td><td>Multimètre en ampèremètre</td><td>ampère (A)</td></tr><tr><td>Durée</td><td>Chronomètre</td><td>seconde (s)</td></tr><tr><td>Vitesse de rotation</td><td>Compte-tours</td><td>tour par minute (tr/min)</td></tr></tbody></table></div>
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1</caption><thead><tr><th scope="col">Grandeur</th><th scope="col">Appareil</th><th scope="col">Unité</th></tr></thead><tbody><tr><td>Tension</td><td>Multimètre en voltmètre</td><td>volt (V)</td></tr><tr><td>Intensité</td><td>Multimètre en ampèremètre</td><td>ampère (A)</td></tr><tr><td>Durée</td><td>Chronomètre</td><td>seconde (s)</td></tr><tr><td>Vitesse de rotation</td><td>Compte-tours</td><td>tour par minute (tr/min)</td></tr></tbody></table></div>
+    
+
+<ol><li>Lis le document 1.</li><li>Pour chaque mesure demandée, repère la grandeur (tension, durée, rotation…).</li><li>Choisis l’appareil qui mesure cette grandeur.</li></ol>
+    
+
+<p>Pourquoi ce réflexe ? Une mesure n’a de sens qu’avec le bon appareil et la bonne unité : au brevet, l’unité oubliée coûte des points.</p>
     
 
 
@@ -229,7 +233,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — D’après le document 1, choisis l’appareil pour chaque mesure.</h3>
+            <h3 id="a01-q01-label">Question 1 — Pour chaque mesure à faire sur l’éolienne de la classe, choisis l’appareil dans le document 1.</h3>
             
 
             
@@ -269,13 +273,13 @@
                                 
                                 <td>
                                     
-                                    la tension produite par la génératrice
+                                    la tension de la génératrice
                                     
                                 </td>
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Grandeur, appareil, unité — Appareil — la tension produite par la génératrice">
+                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Grandeur, appareil, unité — Appareil — la tension de la génératrice">
                                     
                                 </td>
                                 
@@ -319,14 +323,18 @@
         <h2>Brancher le multimètre</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais choisir l’appareil. Encore faut-il bien le brancher.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas apprendre à brancher le multimètre en voltmètre ou en ampèremètre, à partir de l’exemple expliqué. On attend le bon branchement et des résultats écrits avec leur unité.</p></div>
         
         
 
         
+<p>Exemple expliqué : pour mesurer la tension de la génératrice, on pose les deux pointes du multimètre sur ses deux bornes, sans ouvrir le circuit : c’est la dérivation.</p>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Exemple expliqué : pour mesurer la tension de la génératrice, on place les deux pointes du multimètre aux deux bornes de la génératrice, sans ouvrir le circuit : c’est le branchement en dérivation.</p>
+<ol><li>Lis l’exemple expliqué (voltmètre).</li><li>Retiens : tension = aux bornes (dérivation) ; intensité = dans le circuit (série).</li><li>Réponds, puis écris chaque mesure avec son unité.</li></ol>
+    
+
+<p>Pourquoi deux branchements ? L’intensité est le courant qui traverse le circuit : il doit passer dans l’ampèremètre. La tension se mesure entre deux points.</p>
     
 
 
@@ -335,12 +343,12 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Comment brancher un ampèremètre pour mesurer le courant qui traverse la LED ?</h3>
+            <h3 id="a02-q01-label">Question 1 — Comment brancher un ampèremètre pour mesurer le courant de la LED ?</h3>
             
 
             
             
-                <select id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label"><option value="">Choisis une réponse</option><option value="a">En série : on ouvre le circuit et on place l’ampèremètre dedans.</option><option value="b">En dérivation, aux bornes de la LED.</option><option value="c">On ne le branche pas.</option></select>
+                <select id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label"><option value="">Choisis une réponse</option><option value="a">En série : on ouvre le circuit et on le place dedans.</option><option value="b">En dérivation.</option><option value="c">On ne le branche pas.</option></select>
 
                 
             <details><summary>Un coup de pouce</summary><p>Élimine d’abord les réponses impossibles.</p></details>
@@ -351,7 +359,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Écris le résultat avec la bonne unité.</h3>
+            <h3 id="a02-q02-label">Question 2 — Voici trois affichages lus sur les appareils de mesure de l’éolienne. Écris chaque résultat avec la bonne unité.</h3>
             
 
             
@@ -363,7 +371,7 @@
                                 
                                 <th>Affichage</th>
                                 
-                                <th>Résultat avec unité</th>
+                                <th>Résultat</th>
                                 
                             </tr>
                         </thead>
@@ -380,7 +388,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a02_q02_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Brancher le multimètre — Résultat avec unité — Multimètre sur V : 1,8">
+                                    <input type="text" data-answer-id="a02_q02_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Brancher le multimètre — Résultat — Multimètre sur V : 1,8">
                                     
                                 </td>
                                 
@@ -397,7 +405,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a02_q02_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Brancher le multimètre — Résultat avec unité — Multimètre sur A : 0,02">
+                                    <input type="text" data-answer-id="a02_q02_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Brancher le multimètre — Résultat — Multimètre sur A : 0,02">
                                     
                                 </td>
                                 
@@ -414,7 +422,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a02_q02_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Brancher le multimètre — Résultat avec unité — Compte-tours : 900">
+                                    <input type="text" data-answer-id="a02_q02_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Brancher le multimètre — Résultat — Compte-tours : 900">
                                     
                                 </td>
                                 
@@ -424,7 +432,7 @@
                     </table>
                 </div>
             
-            <details><summary>Un coup de pouce</summary><p>Une case à la fois : la ligne croise la colonne (réflexe n° 6).</p></details>
+            <details><summary>Un coup de pouce</summary><p>Action → résultat attendu → résultat observé ; une seule chose à la fois.</p></details>
             
             
         </div>
@@ -438,22 +446,27 @@
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Choisir pour une question</h2>
+        <h2>Choisir pour une vraie question</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu connais les appareils. Choisis-en un pour répondre à une vraie question.</p>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu connais les appareils. Choisis-en un pour une vraie question.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas choisir l’appareil et la méthode pour répondre à une vraie question : l’éolienne tourne-t-elle plus vite avec 3 ou 5 pales ? On attend l’appareil, son utilisation et ce que tu gardes identique.</p></div>
         
         
 
         
+<ol><li>Lis la question.</li><li>Choisis la grandeur à mesurer, puis l’appareil.</li><li>Explique comment l’utiliser et ce que tu gardes identique.</li></ol>
+    
 
-        
-        
+<p>Pourquoi garder le même vent ? Pour comparer les rotors, seule la forme doit changer (réflexe n° 8).</p>
+    
+
+
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — On veut savoir si l’éolienne tourne plus vite avec 3 ou 5 pales. Quel appareil choisis-tu ? Explique comment tu l’utilises.</h3>
+            <h3 id="a03-q01-label">Question 1 — On veut savoir si l’éolienne tourne plus vite avec 3 ou 5 pales. Quel appareil choisis-tu, et comment l’utilises-tu ?</h3>
             
 
             
@@ -461,23 +474,7 @@
                 <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Une idée + « car » + une raison tirée de la séance.</p></details>
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a03-q02-label">Question 2 — Pourquoi faut-il toujours écrire l’unité d’une mesure ?</h3>
-            
-
-            
-            
-                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Action → résultat attendu → résultat observé ; une seule chose à la fois.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Une idée réaliste + « Cela permet de… ».</p></details>
             
             
         </div>
@@ -491,15 +488,13 @@
     
     <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
+        <h2>Pour aller plus loin</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
         
-
         
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>La puissance électrique se calcule : P = U × I.</p>
     
@@ -510,7 +505,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Avec 1,8 V et 0,02 A, calcule la puissance produite.</h3>
+            <h3 id="a04-q01-label">Question 1 — Avec 1,8 V et 0,02 A, calcule la puissance.</h3>
             
 
             
@@ -537,17 +532,15 @@
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais choisir et brancher. Il reste à répondre au problème de départ.</p>
         
         
-
         
 
-        
         
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : quel appareil choisir pour une grandeur, et comment brancher le multimètre ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : quel appareil choisir pour chaque grandeur, et comment brancher le multimètre ?</h3>
             
 
             
@@ -575,7 +568,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Voltmètre en dérivation (V), ampèremètre en série (A), chronomètre (s), compte-tours (tr/min).</li><li>Réflexe R11 : appareil adapté + unité.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Voltmètre en dérivation (V), ampèremètre en série (A), chronomètre (s), compte-tours (tr/min).</li><li>Réflexe R11.</li></ul>
     
 </section>
 

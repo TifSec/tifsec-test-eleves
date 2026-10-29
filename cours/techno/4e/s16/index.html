@@ -46,7 +46,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">La méthode</a></li><li><a href="#a02">Le réseau en panne</a></li><li><a href="#a03">Vérifier et expliquer</a></li><li><a href="#a04">Défi — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">La méthode</a></li><li><a href="#a02">Le réseau en panne</a></li><li><a href="#a03">Prouver que c’est réparé</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -166,9 +166,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Une panne de réseau peut venir d’une liaison (câble absent), d’une adresse IP en double, d’une adresse d’un autre réseau ou d’un mauvais masque.</li>
+            <li>Une panne de réseau peut venir d’une liaison absente, d’une adresse en double, d’une adresse d’un autre réseau ou d’un mauvais masque.</li>
             
-            <li>On cherche méthodiquement : liaison, puis adresse, puis masque, en testant avec ping après chaque vérification.</li>
+            <li>On vérifie dans l’ordre (liaison, adresse, masque), et on refait un ping après chaque correction.</li>
             
         </ul>
         
@@ -210,17 +210,18 @@
         <h2>La méthode</h2>
         
         
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas apprendre la méthode de diagnostic d’une panne de réseau à partir du document 1 (liaison, adresse, réseau, masque). On attend l’ordre des vérifications et le rôle du ping.</p></div>
         
         
 
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Méthode de diagnostic</caption><thead><tr><th scope="col">Étape</th><th scope="col">Je vérifie…</th><th scope="col">Si c’est faux…</th></tr></thead><tbody><tr><td>1</td><td>Chaque ordinateur est-il relié au commutateur ?</td><td>J’ajoute le câble.</td></tr><tr><td>2</td><td>Les adresses sont-elles uniques ?</td><td>Je change l’adresse en double.</td></tr><tr><td>3</td><td>Les trois premiers nombres sont-ils identiques ?</td><td>Je corrige l’adresse.</td></tr><tr><td>4</td><td>Le masque est-il 255.255.255.0 partout ?</td><td>Je corrige le masque.</td></tr></tbody></table></div>
     
 
-<p>Après chaque correction, je refais un ping : c’est le réflexe n° 8, une seule chose à la fois.</p>
+<ol><li>Lis la méthode du document 1.</li><li>Retiens l’ordre : liaison, adresse unique, même réseau, masque.</li><li>Retiens la règle : un ping après chaque correction.</li></ol>
+    
+
+<p>Pourquoi un ping après chaque correction ? Pour savoir laquelle a réglé la panne : une seule modification à la fois (réflexe n° 8).</p>
     
 
 
@@ -242,6 +243,22 @@
             
         </div>
         
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a01-q02-label">Question 2 — Par quoi commence-t-on ?</h3>
+            
+
+            
+            
+                <select id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><option value="">Choisis une réponse</option><option value="a">Vérifier que chaque ordinateur est relié.</option><option value="b">Changer tous les masques.</option><option value="c">Racheter un commutateur.</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Élimine d’abord les réponses impossibles.</p></details>
+            
+            
+        </div>
+        
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#course-intro">← Revoir l’objectif</a>
@@ -254,14 +271,18 @@
         <h2>Le réseau en panne</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu connais la méthode. Applique-la au réseau fourni.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas dépanner le réseau fourni par le professeur (fichier Filius ou document 2) en appliquant la méthode. On attend la panne de chaque ordinateur et sa correction.</p></div>
         
         
 
         
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 2 — Le réseau fourni</caption><thead><tr><th scope="col">Ordinateur</th><th scope="col">Adresse</th><th scope="col">Masque</th><th scope="col">Câble</th></tr></thead><tbody><tr><td>PC A</td><td>192.168.1.1</td><td>255.255.255.0</td><td>oui</td></tr><tr><td>PC B</td><td>192.168.2.2</td><td>255.255.255.0</td><td>oui</td></tr><tr><td>PC C</td><td>192.168.1.3</td><td>255.255.255.0</td><td>non</td></tr><tr><td>PC D</td><td>192.168.1.1</td><td>255.255.255.0</td><td>oui</td></tr></tbody></table></div>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 2 — Le réseau fourni (fichier Filius du professeur)</caption><thead><tr><th scope="col">Ordinateur</th><th scope="col">Adresse</th><th scope="col">Masque</th><th scope="col">Câble</th></tr></thead><tbody><tr><td>PC A</td><td>192.168.1.1</td><td>255.255.255.0</td><td>oui</td></tr><tr><td>PC B</td><td>192.168.2.2</td><td>255.255.255.0</td><td>oui</td></tr><tr><td>PC C</td><td>192.168.1.3</td><td>255.255.255.0</td><td>non</td></tr><tr><td>PC D</td><td>192.168.1.1</td><td>255.255.255.0</td><td>oui</td></tr></tbody></table></div>
+<ol><li>Ouvre le fichier Filius du professeur (ou lis le document 2).</li><li>Applique la méthode ordinateur par ordinateur.</li><li>Note la panne de chacun.</li></ol>
+    
+
+<p>Pourquoi suivre la méthode même si on « voit » la panne ? Parce qu’il y en a souvent plusieurs : la méthode évite d’en oublier.</p>
     
 
 
@@ -270,7 +291,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — D’après le document 2, écris la panne de chaque ordinateur (ou « aucune »).</h3>
+            <h3 id="a02-q01-label">Question 1 — Écris la panne de chaque ordinateur (ou « aucune »).</h3>
             
 
             
@@ -438,43 +459,32 @@
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Vérifier et expliquer</h2>
+        <h2>Prouver que c’est réparé</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les pannes sont corrigées. Prouve-le.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas prouver que le réseau de la mission 2 est réparé. On attend la liste des pings à faire et ce qu’ils doivent montrer.</p></div>
         
         
 
         
+<ol><li>Après tes corrections, choisis les pings à faire.</li><li>Un ping vers chaque ordinateur doit répondre.</li><li>Écris ta liste de vérifications.</li></ol>
+    
 
-        
-        
+<p>Pourquoi prouver ? Un technicien ne dit pas « je crois que ça marche » : il montre un test réussi.</p>
+    
+
+
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Après tes corrections, quels pings dois-tu faire pour prouver que tout fonctionne ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Quels pings fais-tu pour prouver que tout fonctionne ?</h3>
             
 
             
             
                 <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Une phrase complète qui reprend les mots de la question.</p></details>
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a03-q02-label">Question 2 — Un camarade dit : « Mon PC ne marche pas, je rachète un ordinateur. » Que lui conseilles-tu ?</h3>
-            
-
-            
-            
-                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Une phrase complète qui reprend les mots de la question.</p></details>
@@ -491,15 +501,13 @@
     
     <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
+        <h2>Pour aller plus loin</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
         
-
         
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Certaines pannes viennent du commutateur lui-même.</p>
     
@@ -510,7 +518,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Comment prouver que c’est le commutateur qui est en panne, et pas un ordinateur ?</h3>
+            <h3 id="a04-q01-label">Question 1 — Comment prouver que c’est le commutateur, et pas un ordinateur ?</h3>
             
 
             
@@ -537,10 +545,8 @@
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as dépanné un réseau. Il reste à répondre au problème de départ.</p>
         
         
-
         
 
-        
         
         
         

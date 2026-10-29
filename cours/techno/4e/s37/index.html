@@ -46,7 +46,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Les relevés</a></li><li><a href="#a02">Associer distance et position</a></li><li><a href="#a03">Modifier le programme</a></li><li><a href="#a04">Défi — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Lire les relevés</a></li><li><a href="#a02">Associer distance et position</a></li><li><a href="#a03">Écrire la modification</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -166,9 +166,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Le capteur à ultrasons mesure la distance (en cm) entre lui et la cabine.</li>
+            <li>Le capteur à ultrasons mesure la distance (cm) entre lui et la cabine.</li>
             
-            <li>En analysant des relevés, on peut associer une plage de distances à une position de la cabine et utiliser ces valeurs dans le programme.</li>
+            <li>On associe une plage de distances à une position, puis on l’utilise dans des conditions.</li>
             
         </ul>
         
@@ -176,7 +176,7 @@
         <h2>Ce que tu vas apprendre à faire</h2>
         <ul>
             
-            <li>Analyser des relevés de mesures.</li>
+            <li>Analyser des relevés.</li>
             
             <li>En déduire une modification du programme.</li>
             
@@ -185,7 +185,7 @@
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séance 35, tu as vu que le capteur à ultrasons est relié à P2.</p><p>Aujourd’hui, tu analyses ce qu’il mesure pendant un trajet de la cabine.</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séance 35, tu as vu que le capteur à ultrasons est relié à P2.</p><p>Aujourd’hui, tu analyses ce qu’il mesure pendant un trajet.</p></div></section>
     
     
     
@@ -207,20 +207,21 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Les relevés</h2>
+        <h2>Lire les relevés</h2>
         
         
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas lire les mesures du capteur à ultrasons du monte-charge pendant un trajet (document 1). On attend le sens du déplacement de la cabine et un calcul de distance parcourue.</p></div>
         
         
 
         
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Distance mesurée pendant un trajet (valeurs d’exemple)</caption><thead><tr><th scope="col">Temps (s)</th><th scope="col">0</th><th scope="col">1</th><th scope="col">2</th><th scope="col">3</th><th scope="col">4</th><th scope="col">5</th><th scope="col">6</th></tr></thead><tbody><tr><td>Distance (cm)</td><td>4</td><td>8</td><td>13</td><td>18</td><td>23</td><td>27</td><td>28</td></tr></tbody></table></div>
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Distance mesurée pendant un trajet (exemple)</caption><thead><tr><th scope="col">Temps (s)</th><th scope="col">0</th><th scope="col">1</th><th scope="col">2</th><th scope="col">3</th><th scope="col">4</th><th scope="col">5</th><th scope="col">6</th></tr></thead><tbody><tr><td>Distance (cm)</td><td>4</td><td>8</td><td>13</td><td>18</td><td>23</td><td>27</td><td>28</td></tr></tbody></table></div>
     
 
-<p>Le capteur est fixé en haut de la cage. Plus la cabine est basse, plus la distance mesurée est grande.</p>
+<ol><li>Lis le document 1.</li><li>Retiens : le capteur est en haut de la cage.</li><li>Plus la distance est grande, plus la cabine est basse.</li><li>Réponds aux questions.</li></ol>
+    
+
+<p>Pourquoi la position du capteur compte-t-elle ? La même valeur ne veut pas dire la même chose selon l’endroit d’où l’on mesure.</p>
     
 
 
@@ -229,12 +230,12 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — D’après le document 1, la distance augmente avec le temps. Si le capteur est en haut, la cabine…</h3>
+            <h3 id="a01-q01-label">Question 1 — La distance augmente avec le temps. La cabine…</h3>
             
 
             
             
-                <select id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><option value="">Choisis une réponse</option><option value="a">… s’éloigne du capteur : elle descend.</option><option value="b">… monte.</option><option value="c">… ne bouge pas.</option></select>
+                <select id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><option value="">Choisis une réponse</option><option value="a">… descend.</option><option value="b">… monte.</option><option value="c">… ne bouge pas.</option></select>
 
                 
             <details><summary>Un coup de pouce</summary><p>Relis l’exemple expliqué.</p></details>
@@ -245,7 +246,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — D’après le document 1, de combien de centimètres la cabine se déplace-t-elle entre 1 s et 4 s ?</h3>
+            <h3 id="a01-q02-label">Question 2 — De combien la cabine se déplace-t-elle entre 1 s et 4 s ?</h3>
             
 
             
@@ -269,15 +270,19 @@
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Associer distance et position</h2>
         
-        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais lire les relevés. Associe-les à des positions.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas associer les distances mesurées par le capteur aux positions de la cabine (haut, milieu, bas). On attend une plage de distances pour chaque position.</p></div>
         
         
 
         
+<p>Mesures complémentaires : cabine en haut → 4 cm ; au milieu → 16 cm ; en bas → 28 cm.</p>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Mesures complémentaires : cabine en haut → 4 cm ; cabine au milieu → 16 cm ; cabine en bas → 28 cm.</p>
+<ol><li>Lis les mesures complémentaires.</li><li>Choisis une limite entre « haut » et « milieu », puis entre « milieu » et « bas ».</li><li>Écris les trois plages.</li></ol>
+    
+
+<p>Pourquoi des plages ? Une mesure n’est jamais exactement la même : une plage tolère les petites variations.</p>
     
 
 
@@ -286,7 +291,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Propose une plage de distances pour chaque position.</h3>
+            <h3 id="a02-q01-label">Question 1 — Propose une plage de distances mesurées par le capteur pour chaque position de la cabine.</h3>
             
 
             
@@ -298,7 +303,7 @@
                                 
                                 <th>Position</th>
                                 
-                                <th>Plage de distances (cm)</th>
+                                <th>Plage (cm)</th>
                                 
                             </tr>
                         </thead>
@@ -315,7 +320,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Associer distance et position — Plage de distances (cm) — En haut">
+                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Associer distance et position — Plage (cm) — En haut">
                                     
                                 </td>
                                 
@@ -332,7 +337,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Associer distance et position — Plage de distances (cm) — Au milieu">
+                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Associer distance et position — Plage (cm) — Au milieu">
                                     
                                 </td>
                                 
@@ -349,7 +354,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a02_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Associer distance et position — Plage de distances (cm) — En bas">
+                                    <input type="text" data-answer-id="a02_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Associer distance et position — Plage (cm) — En bas">
                                     
                                 </td>
                                 
@@ -359,7 +364,7 @@
                     </table>
                 </div>
             
-            <details><summary>Un coup de pouce</summary><p>Ligne × colonne.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Attendu ou observé ?</p></details>
             
             
         </div>
@@ -373,22 +378,27 @@
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Modifier le programme</h2>
+        <h2>Écrire la modification</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu connais les plages. Utilise-les dans le programme.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas écrire la partie du programme qui affiche la position de la cabine à partir de la distance mesurée. On attend une condition SI … SINON SI … SINON en langage naturel.</p></div>
         
         
 
         
+<ol><li>Reprends tes plages.</li><li>Écris une condition SI … SINON SI … SINON.</li><li>Vérifie avec 5, 16 et 26 cm.</li></ol>
+    
 
-        
-        
+<p>Pourquoi « sinon si » ? Il y a trois cas : une seule condition ne suffit pas.</p>
+    
+
+
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Écris en langage naturel la partie de programme qui affiche « HAUT », « MILIEU » ou « BAS » selon la distance.</h3>
+            <h3 id="a03-q01-label">Question 1 — Écris en langage naturel la partie qui affiche « HAUT », « MILIEU » ou « BAS ».</h3>
             
 
             
@@ -396,7 +406,7 @@
                 <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Bloc par bloc (réflexe n° 9).</p></details>
+            <details><summary>Un coup de pouce</summary><p>Combien d’éléments sont demandés ?</p></details>
             
             
         </div>
@@ -410,17 +420,15 @@
     
     <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
+        <h2>Pour aller plus loin</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
         
-
         
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Une mesure à ultrasons peut parfois être fausse (0 ou 400 cm).</p>
+<p>Une mesure à ultrasons peut être fausse (0 ou 400 cm).</p>
     
 
 
@@ -429,7 +437,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Comment ton programme pourrait-il ignorer une mesure absurde ?</h3>
+            <h3 id="a04-q01-label">Question 1 — Comment ignorer une mesure absurde ?</h3>
             
 
             
@@ -437,7 +445,7 @@
                 <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Bloc par bloc (réflexe n° 9).</p></details>
+            <details><summary>Un coup de pouce</summary><p>Attendu ou observé ?</p></details>
             
             
         </div>
@@ -456,10 +464,8 @@
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as exploité des mesures. Il reste à répondre au problème de départ.</p>
         
         
-
         
 
-        
         
         
         
@@ -494,7 +500,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Le capteur à ultrasons mesure une distance (cm).</li><li>Plages de distances → position → conditions dans le programme .</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Le capteur à ultrasons mesure une distance (cm).</li><li>Plages → position → conditions.</li></ul>
     
 </section>
 

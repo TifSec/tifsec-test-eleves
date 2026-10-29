@@ -46,7 +46,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Identifier ou authentifier ?</a></li><li><a href="#a02">Un mot de passe solide</a></li><li><a href="#a03">La double authentification</a></li><li><a href="#a04">Défi — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Identifier ou authentifier ?</a></li><li><a href="#a02">Un mot de passe solide</a></li><li><a href="#a03">La double authentification</a></li><li><a href="#a04">Je m’entraîne</a></li><li><a href="#a05">Pour aller plus loin — facultatif</a></li><li><a href="#a06">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -168,7 +168,7 @@
             
             <li>L’identification dit qui je suis (identifiant) ; l’authentification le prouve (mot de passe, code reçu, empreinte).</li>
             
-            <li>La double authentification demande deux preuves différentes : quelque chose que je sais et quelque chose que j’ai (téléphone).</li>
+            <li>La double authentification demande deux preuves différentes : quelque chose que je sais et quelque chose que j’ai.</li>
             
         </ul>
         
@@ -178,14 +178,14 @@
             
             <li>Distinguer identification et authentification.</li>
             
-            <li>Juger la solidité d’un mot de passe et proposer une méthode pour en créer un.</li>
+            <li>Créer un mot de passe solide avec une méthode.</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En 5e, tu as vu ce qu’est un mot de passe solide et comment repérer l’hameçonnage.</p><p>En 4e, tu vas plus loin : comment le site vérifie qui tu es, et comment ajouter une deuxième protection.</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En 5e, tu as appris ce qu’est un mot de passe solide et comment repérer l’hameçonnage.</p><p>En 4e, tu vas plus loin : comment le site vérifie qui tu es, et comment ajouter une deuxième protection.</p></div></section>
     
     
     
@@ -210,14 +210,18 @@
         <h2>Identifier ou authentifier ?</h2>
         
         
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas apprendre la différence entre s’identifier et s’authentifier, à partir de l’exemple du site de cours. On attend, pour chaque élément du tableau, le bon mot.</p></div>
         
         
 
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Exemple expliqué : sur le site de cours, ton adresse e-mail t’identifie (elle dit qui tu prétends être) ; ton mot de passe t’authentifie (il prouve que c’est bien toi).</p>
+    
+
+<ol><li>Lis l’exemple expliqué.</li><li>Pour chaque élément du tableau, demande-toi : dit-il qui je suis, ou le prouve-t-il ?</li><li>Écris « identification » ou « authentification ».</li></ol>
+    
+
+<p>Pourquoi deux étapes ? Tout le monde peut connaître ton identifiant ; seule la preuve (mot de passe, code) montre que c’est vraiment toi.</p>
     
 
 
@@ -333,17 +337,21 @@
         <h2>Un mot de passe solide</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais comment le site te reconnaît. Le mot de passe reste la première protection.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas comparer la solidité de mots de passe (document 1) et apprendre la méthode des phrases. On attend le mot de passe le plus solide et un exemple inventé (jamais ton vrai mot de passe).</p></div>
         
         
 
         
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Méthode des phrases : on choisit une phrase facile à retenir et on garde la première lettre de chaque mot, avec les chiffres et la ponctuation. « Mon chat Tigrou a 3 ans et adore le lait ! » → « McTa3aeall! »</p>
+<p>Méthode des phrases : « Mon chat Tigrou a 3 ans et adore le lait ! » → « McTa3aeall! »</p>
     
 
 <div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1</caption><thead><tr><th scope="col">Mot de passe</th><th scope="col">Longueur</th><th scope="col">Types de caractères</th></tr></thead><tbody><tr><td>soleil</td><td>6</td><td>minuscules</td></tr><tr><td>Soleil2012</td><td>10</td><td>minuscules, majuscule, chiffres</td></tr><tr><td>McTa3aeall!</td><td>11</td><td>minuscules, majuscules, chiffre, symbole</td></tr></tbody></table></div>
+    
+
+<ol><li>Lis la méthode des phrases.</li><li>Invente une phrase que tu retiendras (pas un vrai mot de passe !).</li><li>Garde la première lettre de chaque mot, les chiffres et la ponctuation.</li><li>Compare avec le document 1.</li></ol>
+    
+
+<p>Pourquoi une phrase ? Elle donne un mot de passe long et varié, mais facile à retenir : on n’a pas besoin de l’écrire sur un papier.</p>
     
 
 
@@ -368,7 +376,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Invente une phrase et transforme-la en mot de passe avec la méthode (n’utilise pas un vrai mot de passe !).</h3>
+            <h3 id="a02-q02-label">Question 2 — Écris ta phrase inventée et le mot de passe obtenu avec la méthode.</h3>
             
 
             
@@ -393,14 +401,18 @@
         <h2>La double authentification</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Un mot de passe peut être volé. Il existe une deuxième protection.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas comprendre la double authentification à partir du principe expliqué ci-dessous. On attend une explication de la protection qu’elle apporte et la bonne réaction face à une demande de code.</p></div>
         
         
 
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Avec la double authentification, après le mot de passe, le site envoie un code sur ton téléphone, valable quelques minutes.</p>
+    
+
+<ol><li>Lis le principe ci-dessous.</li><li>Imagine qu’un pirate connaît ton mot de passe : que lui manque-t-il ?</li><li>Réponds aux deux questions.</li></ol>
+    
+
+<p>Pourquoi deux preuves ? Même si l’une est volée, le pirate n’a pas l’autre : ton compte reste protégé.</p>
     
 
 
@@ -409,7 +421,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Un pirate a volé ton mot de passe. Explique pourquoi la double authentification l’empêche quand même d’entrer.</h3>
+            <h3 id="a03-q01-label">Question 1 — Un pirate a volé ton mot de passe. Explique pourquoi la double authentification l’empêche d’entrer.</h3>
             
 
             
@@ -430,7 +442,7 @@
 
             
             
-                <select id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label"><option value="">Choisis une réponse</option><option value="a">Je ne donne jamais ce code et je raccroche.</option><option value="b">Je le donne car il travaille pour le site.</option><option value="c">Je donne seulement la moitié du code.</option></select>
+                <select id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label"><option value="">Choisis une réponse</option><option value="a">Je ne le donne jamais et je raccroche.</option><option value="b">Je le donne.</option><option value="c">Je donne la moitié du code.</option></select>
 
                 
             <details><summary>Un coup de pouce</summary><p>Élimine d’abord les réponses impossibles.</p></details>
@@ -446,18 +458,22 @@
     </article>
     
     <article class="cours-activite" id="a04" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
-        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Je m’entraîne</h2>
         
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as compris la méthode. Applique-la seul sur un cas nouveau.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas appliquer seul ce que tu as appris sur un cas nouveau : les comptes de Noa, décrits ci-dessous. On attend deux conseils précis, chacun expliqué.</p></div>
         
         
 
         
+<blockquote>Noa utilise le même mot de passe « noa2012 » pour ses jeux, sa messagerie et son ENT. Il l’a noté dans les notes de son téléphone.</blockquote>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Un gestionnaire de mots de passe retient tous tes mots de passe derrière un seul mot de passe maître.</p>
+<ol><li>Lis la situation de Noa.</li><li>Repère ce qui est dangereux.</li><li>Propose deux conseils précis.</li></ol>
+    
+
+<p>Pourquoi un cas pratique ? Savoir conseiller quelqu’un montre que tu as compris les règles de protection.</p>
     
 
 
@@ -466,15 +482,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Quel est l’avantage et le risque d’un gestionnaire de mots de passe ?</h3>
+            <h3 id="a04-q01-label">Question 1 — Donne deux conseils à Noa pour mieux protéger ses comptes, et explique-les.</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Une phrase complète qui reprend les mots de la question.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Une idée + « car » + une raison tirée de la séance.</p></details>
             
             
         </div>
@@ -487,28 +503,65 @@
     </article>
     
     <article class="cours-activite" id="a05" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Pour aller plus loin</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        
+        
+        
+        
+
+        
+<p>Un gestionnaire de mots de passe retient tous tes mots de passe derrière un seul mot de passe maître.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a05-q01-label">Question 1 — Quel est l’avantage et le risque d’un gestionnaire de mots de passe ?</h3>
+            
+
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="false" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Une phrase complète qui reprend les mots de la question.</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
+            <a class="course-mission-next" href="#a06">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a06" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as compris comment un compte est protégé. Il reste à répondre au problème de départ.</p>
         
         
-
         
 
-        
         
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment un site sait-il que c’est bien toi, et comment protéger tes comptes ?</h3>
+            <h3 id="a06-q01-label">Question 1 — Réponds au problème du jour : comment un site sait-il que c’est bien toi, et comment protéger tes comptes ? Cite au moins trois protections.</h3>
             
 
             
             
-                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a06-q01" data-answer-id="a06_q01" data-required="true" aria-labelledby="a06-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème et de « Ce que je retiens », avec un exemple de la séance.</p></details>
@@ -518,7 +571,7 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a04">← Étape précédente</a>
+            <a class="course-mission-back" href="#a05">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -563,7 +616,7 @@
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a06">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

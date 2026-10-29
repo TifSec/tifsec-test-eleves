@@ -46,7 +46,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Le dossier (30 minutes)</a></li><li><a href="#a02">Correction et bilan</a></li><li><a href="#a03">Défi — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Analyser le système (10 minutes)</a></li><li><a href="#a02">Exploiter les mesures (10 minutes)</a></li><li><a href="#a03">Protocole et environnement (10 minutes)</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -166,7 +166,7 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Un dossier mêle évolution, chaîne d’information et d’énergie, réseau, programme, mesures.</li>
+            <li>Un dossier mêle chaîne d’information et d’énergie, algorithme, mesures, protocole et environnement.</li>
             
         </ul>
         
@@ -181,7 +181,7 @@
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Toute l’année, tu as enrichi tes réflexes.</p><p>Aujourd’hui, un dossier complet en 30 minutes sur un arrosage automatique connecté (situation inventée), puis correction.</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Toute l’année, tu as enrichi tes réflexes.</p><p>Aujourd’hui, un dossier complet en 30 minutes sur l’arrosage automatique connecté du potager (situation inventée), puis correction.</p></div></section>
     
     
     
@@ -203,17 +203,15 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Le dossier (30 minutes)</h2>
+        <h2>Analyser le système (10 minutes)</h2>
         
         
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas t’entraîner au brevet sur un dossier complet : l’arrosage automatique connecté du potager du collège (documents 1 et 2, situation inventée). Partie 1 : on attend la fonction de trois constituants et l’algorithme de l’arrosage. Garde 10 minutes pour cette partie.</p></div>
         
         
 
         
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<h4>Document 1 — L’arrosage connecté du potager du collège</h4>
+<h4>Document 1 — L’arrosage connecté du potager du collège (situation inventée)</h4>
     
 
 <blockquote>Un capteur d’humidité planté dans la terre mesure l’humidité (0 = sec, 100 = très humide). Si l’humidité est inférieure à 30 et qu’il ne pleut pas (capteur de pluie), la carte ouvre l’électrovanne pendant 10 minutes. Un panneau solaire charge une batterie qui alimente le système. Toutes les heures, la carte envoie l’humidité par radio à une carte placée dans la salle de technologie.</blockquote>
@@ -225,13 +223,19 @@
 <div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Jour</th><th scope="col">Lundi</th><th scope="col">Mardi</th><th scope="col">Mercredi</th><th scope="col">Jeudi</th><th scope="col">Vendredi</th></tr></thead><tbody><tr><td>Humidité à 8 h</td><td>45</td><td>32</td><td>25</td><td>60</td><td>28</td></tr><tr><td>Pluie ?</td><td>Non</td><td>Non</td><td>Non</td><td>Oui</td><td>Oui</td></tr></tbody></table></div>
     
 
+<ol><li>Lis tout le document 1 une première fois, sans répondre.</li><li>Repère les constituants : capteurs, carte, électrovanne, panneau, batterie.</li><li>Classe-les (chaîne d’information ou d’énergie) et écris l’algorithme.</li></ol>
+    
+
+<p>Pourquoi un temps par partie ? Au brevet, on gère son temps (R10) : 10 minutes par partie évitent de bloquer sur une question.</p>
+    
+
 
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — D’après le document 1, classe chaque constituant.</h3>
+            <h3 id="a01-q01-label">Question 1 — D’après le document 1, écris la chaîne et la fonction de chaque constituant de l’arrosage connecté.</h3>
             
 
             
@@ -260,7 +264,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Le dossier (30 minutes) — Chaîne et fonction — Capteur d’humidité">
+                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Analyser le système (10 minutes) — Chaîne et fonction — Capteur d’humidité">
                                     
                                 </td>
                                 
@@ -277,7 +281,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Le dossier (30 minutes) — Chaîne et fonction — Électrovanne">
+                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Analyser le système (10 minutes) — Chaîne et fonction — Électrovanne">
                                     
                                 </td>
                                 
@@ -294,7 +298,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Le dossier (30 minutes) — Chaîne et fonction — Panneau solaire">
+                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Analyser le système (10 minutes) — Chaîne et fonction — Panneau solaire">
                                     
                                 </td>
                                 
@@ -312,7 +316,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Écris l’algorithme de l’arrosage en langage naturel (R12).</h3>
+            <h3 id="a01-q02-label">Question 2 — D’après le document 1, écris l’algorithme de l’arrosage en langage naturel (R12).</h3>
             
 
             
@@ -320,55 +324,7 @@
                 <textarea id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Combien d’éléments sont demandés ?</p></details>
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q03">
-            
-            
-            <h3 id="a01-q03-label">Question 3 — D’après les documents 1 et 2, quel jour l’arrosage se déclenche-t-il ?</h3>
-            
-
-            
-            
-                <select id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label"><option value="">Choisis une réponse</option><option value="a">Mercredi seulement.</option><option value="b">Mercredi et vendredi.</option><option value="c">Mardi.</option></select>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Relis l’exemple expliqué.</p></details>
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q04">
-            
-            
-            <h3 id="a01-q04-label">Question 4 — Propose un protocole pour vérifier que le capteur d’humidité donne des mesures fiables (R15).</h3>
-            
-
-            
-            
-                <textarea id="a01-q04" data-answer-id="a01_q04" data-required="true" aria-labelledby="a01-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Attendu ou observé ?</p></details>
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q05">
-            
-            
-            <h3 id="a01-q05-label">Question 5 — Donne un avantage pour l’environnement de ce système par rapport à un arrosage à heure fixe. Justifie (R4).</h3>
-            
-
-            
-            
-                <textarea id="a01-q05" data-answer-id="a01_q05" data-required="true" aria-labelledby="a01-q05-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Pense à « car » (réflexe n° 4).</p></details>
+            <details><summary>Un coup de pouce</summary><p>« D’après le document… » (réflexe n° 2).</p></details>
             
             
         </div>
@@ -382,17 +338,18 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Correction et bilan</h2>
+        <h2>Exploiter les mesures (10 minutes)</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le temps est écoulé. Corrigeons.</p>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as compris le système. Utilise maintenant les mesures.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Partie 2 du dossier : tu vas utiliser les mesures d’une semaine (document 2) et l’algorithme de la partie 1 pour savoir quand l’arrosage se déclenche. On attend des réponses qui citent les valeurs. Garde 10 minutes.</p></div>
         
         
 
         
+<ol><li>Lis le document 2, jour par jour.</li><li>Pour chaque jour, vérifie les deux conditions : humidité &lt; 30 ? pas de pluie ?</li><li>Écris ta réponse en citant les valeurs.</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Correction collective.</p>
+<p>Pourquoi vérifier les deux conditions ? Avec un ET, il faut que les deux soient vraies : une seule ne suffit pas.</p>
     
 
 
@@ -401,15 +358,31 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Comment as-tu réparti tes 30 minutes ? Que changerais-tu ?</h3>
+            <h3 id="a02-q01-label">Question 1 — D’après les documents 1 et 2, quel jour l’arrosage du potager se déclenche-t-il ?</h3>
             
 
             
             
-                <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <select id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label"><option value="">Choisis une réponse</option><option value="a">Mercredi seulement.</option><option value="b">Mercredi et vendredi.</option><option value="c">Mardi.</option></select>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Relis l’exemple expliqué.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a02-q02-label">Question 2 — La carte du potager envoie l’humidité toutes les heures. Combien de messages envoie-t-elle en une journée ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><p>Unité : messages</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>N’oublie pas l’unité (réflexe n° 5).</p></details>
             
             
         </div>
@@ -422,18 +395,19 @@
     </article>
     
     <article class="cours-activite" id="a03" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
-        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Protocole et environnement (10 minutes)</h2>
         
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Il reste la dernière partie du dossier.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Partie 3 du dossier : tu vas proposer un protocole pour vérifier le capteur d’humidité, puis comparer l’arrosage connecté à un arrosage à heure fixe. On attend un protocole en trois points et un avantage justifié. Garde du temps pour relire.</p></div>
         
         
 
         
+<ol><li>Écris un protocole pour vérifier le capteur d’humidité (R15) : je change, je mesure, je garde identique.</li><li>Compare avec un arrosage à heure fixe et justifie avec « car » (R4).</li><li>Relis toutes tes réponses (R16).</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>L’humidité est envoyée toutes les heures.</p>
+<p>Pourquoi relire ? Les dernières minutes servent à vérifier les unités et les justifications : ce sont des points faciles à gagner.</p>
     
 
 
@@ -442,15 +416,31 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Combien de messages en une semaine ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Propose un protocole pour vérifier que le capteur d’humidité du potager donne des mesures fiables (R15).</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Attendu ou observé ?</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a03-q02-label">Question 2 — Donne un avantage pour l’environnement de l’arrosage connecté par rapport à un arrosage à heure fixe. Justifie avec « car » (R4).</h3>
+            
+
+            
+            
+                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Pense à « car » (réflexe n° 4).</p></details>
             
             
         </div>
@@ -463,28 +453,65 @@
     </article>
     
     <article class="cours-activite" id="a04" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Pour aller plus loin</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        
+        
+        
+        
+
+        
+<p>Le potager reçoit aussi un capteur de température.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Ajoute une condition à l’algorithme pour ne pas arroser s’il gèle.</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Bloc par bloc (réflexe n° 9).</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a05" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Fais le point.</p>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le temps est écoulé. Fais le point.</p>
+        
         
         
 
-        
-
-        
         
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Quel réflexe de 4e (R11 à R16) t’a été le plus utile aujourd’hui ? Donne un exemple de ta copie.</h3>
+            <h3 id="a05-q01-label">Question 1 — Quel réflexe de 4e (R11 à R16) t’a été le plus utile dans le dossier de l’arrosage ? Donne un exemple de ta copie, puis dis comment tu as réparti tes 30 minutes.</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème (réflexe n° 3).</p></details>
@@ -494,7 +521,7 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -539,7 +566,7 @@
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

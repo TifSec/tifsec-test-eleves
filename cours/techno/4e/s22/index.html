@@ -46,7 +46,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Les données</a></li><li><a href="#a02">Le besoin</a></li><li><a href="#a03">Et l’environnement ?</a></li><li><a href="#a04">Défi — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Lire les données</a></li><li><a href="#a02">Choisir pour le besoin</a></li><li><a href="#a03">Et l’environnement ?</a></li><li><a href="#a04">Je m’entraîne</a></li><li><a href="#a05">Pour aller plus loin — facultatif</a></li><li><a href="#a06">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -148,7 +148,7 @@
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Quelle source d’énergie choisir pour alimenter un petit capteur dans la cour : l’éolienne ou le panneau solaire ?</p>
+        <p>Quelle source d’énergie choisir pour alimenter un petit capteur dans la cour ?</p>
     </section>
     
 
@@ -166,9 +166,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>On compare deux solutions avec des critères nommés et des chiffres : production, coût, entretien, impact sur l’environnement.</li>
+            <li>On compare deux solutions avec des critères nommés et des chiffres : production, coût, entretien, impact.</li>
             
-            <li>Une solution peut être meilleure sur un critère et moins bonne sur un autre : on pondère selon le besoin.</li>
+            <li>Le choix dépend du besoin.</li>
             
         </ul>
         
@@ -185,7 +185,7 @@
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séance 21, tu as mesuré la production de l’éolienne. En 5e, tu as étudié le panneau du tracker.</p><p>Aujourd’hui, tu compares ces deux sources pour un besoin précis.</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séance 21, tu as mesuré l’éolienne. En 5e, tu as étudié le panneau du tracker.</p><p>Aujourd’hui, tu compares ces deux sources pour un besoin précis.</p></div></section>
     
     
     
@@ -207,20 +207,24 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Les données</h2>
+        <h2>Lire les données</h2>
         
         
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas comparer deux sources d’énergie pour alimenter un petit capteur dans la cour : l’éolienne et le panneau solaire du tracker, à partir du document 1. On attend la meilleure solution pour chaque critère.</p></div>
         
         
 
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <blockquote>Réflexe brevet n° 14 : je compare avec des chiffres et je nomme le critère.</blockquote>
     
 
-<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Données comparées (valeurs inventées pour l’exercice)</caption><thead><tr><th scope="col">Critère</th><th scope="col">Petite éolienne</th><th scope="col">Petit panneau solaire</th></tr></thead><tbody><tr><td>Production moyenne par jour dans la cour</td><td>2 Wh</td><td>5 Wh</td></tr><tr><td>Prix</td><td>40 €</td><td>25 €</td></tr><tr><td>Pièces en mouvement (usure)</td><td>Oui</td><td>Non</td></tr><tr><td>Production la nuit</td><td>Oui, s’il y a du vent</td><td>Non</td></tr></tbody></table></div>
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 (valeurs inventées)</caption><thead><tr><th scope="col">Critère</th><th scope="col">Petite éolienne</th><th scope="col">Petit panneau solaire</th></tr></thead><tbody><tr><td>Production moyenne par jour</td><td>2 Wh</td><td>5 Wh</td></tr><tr><td>Prix</td><td>40 €</td><td>25 €</td></tr><tr><td>Pièces en mouvement (usure)</td><td>Oui</td><td>Non</td></tr><tr><td>Production la nuit</td><td>Oui, s’il y a du vent</td><td>Non</td></tr></tbody></table></div>
+    
+
+<ol><li>Lis le réflexe R14.</li><li>Lis le document 1 critère par critère.</li><li>Pour chaque critère, désigne la meilleure solution.</li></ol>
+    
+
+<p>Pourquoi critère par critère ? Une solution est rarement la meilleure partout : on compare d’abord, on choisit ensuite.</p>
     
 
 
@@ -229,7 +233,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — D’après le document 1, quelle solution est la meilleure pour chaque critère ?</h3>
+            <h3 id="a01-q01-label">Question 1 — Quelle solution est la meilleure pour chaque critère ?</h3>
             
 
             
@@ -258,7 +262,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Les données — Meilleure solution — Production par jour">
+                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Lire les données — Meilleure solution — Production par jour">
                                     
                                 </td>
                                 
@@ -275,7 +279,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Les données — Meilleure solution — Prix">
+                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Lire les données — Meilleure solution — Prix">
                                     
                                 </td>
                                 
@@ -292,7 +296,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Les données — Meilleure solution — Usure">
+                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Lire les données — Meilleure solution — Usure">
                                     
                                 </td>
                                 
@@ -309,7 +313,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r3_c1" data-required="true" data-row="3" data-col="1" aria-label="Les données — Meilleure solution — Nuit">
+                                    <input type="text" data-answer-id="a01_q01_r3_c1" data-required="true" data-row="3" data-col="1" aria-label="Lire les données — Meilleure solution — Nuit">
                                     
                                 </td>
                                 
@@ -333,17 +337,21 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Le besoin</h2>
+        <h2>Choisir pour le besoin</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as comparé les solutions. Le choix dépend du besoin.</p>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as comparé. Le choix dépend du besoin.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas choisir la source qui répond au besoin du capteur de la cour (3 Wh par jour, de jour comme de nuit), décrit ci-dessous. On attend un choix justifié par deux critères chiffrés et le rôle de la batterie.</p></div>
         
         
 
         
+<p>Le capteur de la cour consomme 3 Wh par jour et doit envoyer une mesure toutes les heures, de jour comme de nuit. Il a une petite batterie.</p>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Le capteur de la cour consomme 3 Wh par jour et doit envoyer une mesure toutes les heures, de jour comme de nuit. Il y a une petite batterie.</p>
+<ol><li>Lis le besoin du capteur.</li><li>Vérifie quelle source couvre 3 Wh par jour.</li><li>Pense à la nuit : que faut-il ajouter ?</li><li>Écris ton choix avec deux critères chiffrés.</li></ol>
+    
+
+<p>Pourquoi partir du besoin ? La « meilleure » solution est celle qui répond au besoin, pas celle qui gagne le plus de critères.</p>
     
 
 
@@ -352,7 +360,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Quelle source choisis-tu ? Justifie avec au moins deux critères et des chiffres.</h3>
+            <h3 id="a02-q01-label">Question 1 — Quelle source choisis-tu ? Justifie avec au moins deux critères chiffrés.</h3>
             
 
             
@@ -368,12 +376,12 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Pourquoi la batterie est-elle nécessaire avec le panneau solaire ?</h3>
+            <h3 id="a02-q02-label">Question 2 — Pourquoi la batterie est-elle nécessaire avec le panneau ?</h3>
             
 
             
             
-                <select id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><option value="">Choisis une réponse</option><option value="a">Parce que le panneau ne produit pas la nuit.</option><option value="b">Pour faire joli.</option><option value="c">Pour augmenter le prix.</option></select>
+                <select id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><option value="">Choisis une réponse</option><option value="a">Le panneau ne produit pas la nuit.</option><option value="b">Pour faire joli.</option><option value="c">Pour augmenter le prix.</option></select>
 
                 
             <details><summary>Un coup de pouce</summary><p>Relis l’exemple expliqué.</p></details>
@@ -393,13 +401,18 @@
         <h2>Et l’environnement ?</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Il reste un critère : l’environnement.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas réfléchir à l’impact sur l’environnement de l’éolienne et du panneau solaire, de leur fabrication à leur fin de vie. On attend un impact pour chacune.</p></div>
         
         
 
         
+<ol><li>Pense à la fabrication de chaque solution (matières, métaux).</li><li>Pense à sa fin de vie.</li><li>Écris un impact pour chacune.</li></ol>
+    
 
-        
-        
+<p>Pourquoi l’environnement ? Une source d’énergie « verte » a quand même un impact à sa fabrication.</p>
+    
+
+
         
         
         <div class="cours-question" data-question="q01">
@@ -426,18 +439,19 @@
     </article>
     
     <article class="cours-activite" id="a04" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
-        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Je m’entraîne</h2>
         
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as compris la méthode. Applique-la seul sur un cas nouveau.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas appliquer seul la méthode sur un cas nouveau : une lampe de jardin qui consomme 1 Wh par nuit. On attend un choix de source justifié par un chiffre du document 1.</p></div>
         
         
 
         
+<ol><li>Lis le besoin de la lampe de jardin.</li><li>Compare les deux solutions avec un critère chiffré.</li><li>Choisis et justifie.</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>On peut combiner les deux sources.</p>
+<p>Pourquoi un autre besoin ? Le choix dépend du besoin : un autre besoin peut donner un autre choix.</p>
     
 
 
@@ -446,15 +460,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Dans quelle situation combinerais-tu éolienne et panneau ?</h3>
+            <h3 id="a04-q01-label">Question 1 — Pour une lampe de jardin qui s’allume 4 h chaque nuit (1 Wh), quelle source choisis-tu ? Justifie avec un chiffre.</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Pense à « car » (réflexe n° 4).</p></details>
             
             
         </div>
@@ -467,28 +481,65 @@
     </article>
     
     <article class="cours-activite" id="a05" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Pour aller plus loin</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        
+        
+        
+        
+
+        
+<p>On peut combiner les deux sources.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a05-q01-label">Question 1 — Dans quelle situation combinerais-tu éolienne et panneau ?</h3>
+            
+
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="false" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
+            <a class="course-mission-next" href="#a06">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a06" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as comparé et choisi. Il reste à répondre au problème de départ.</p>
         
         
-
         
 
-        
         
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : quelle source choisir pour le capteur de la cour ? Argumente.</h3>
+            <h3 id="a06-q01-label">Question 1 — Réponds au problème du jour : quelle source choisir pour le capteur de la cour ? Argumente avec des chiffres.</h3>
             
 
             
             
-                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a06-q01" data-answer-id="a06_q01" data-required="true" aria-labelledby="a06-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème (réflexe n° 3).</p></details>
@@ -498,7 +549,7 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a04">← Étape précédente</a>
+            <a class="course-mission-back" href="#a05">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -511,7 +562,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Comparer des solutions : critères nommés + chiffres ; le choix dépend du besoin.</li><li>Réflexe R14.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Comparer : critères nommés + chiffres ; le choix dépend du besoin.</li><li>Réflexe R14.</li></ul>
     
 </section>
 
@@ -543,7 +594,7 @@
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a06">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

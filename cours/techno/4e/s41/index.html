@@ -46,7 +46,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Le besoin</a></li><li><a href="#a02">Le cahier des charges (Writer n° 2)</a></li><li><a href="#a03">Le planning du groupe</a></li><li><a href="#a04">Défi — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Le besoin</a></li><li><a href="#a02">Le cahier des charges (Writer n° 2)</a></li><li><a href="#a03">Le planning du groupe</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -212,14 +212,18 @@
         <h2>Le besoin</h2>
         
         
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas formuler le besoin à l’origine du projet de l’année : rendre le tracker solaire du collège « communicant ». Tu t’appuies sur la demande de l’utilisateur ci-dessous. On attend une phrase de besoin et la fonction à ajouter.</p></div>
         
         
 
         
+<blockquote>La personne qui s’occupe du tracker veut savoir, depuis la salle, si le tracker reçoit du soleil et vers où il est tourné, sans aller dans la cour.</blockquote>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>La personne qui s’occupe de l’installation veut savoir, depuis la salle, si le tracker reçoit du soleil et vers où il est tourné, sans aller dans la cour.</p>
+<ol><li>Lis la demande de l’utilisateur ci-dessous.</li><li>Écris ce qu’il veut, en commençant par « Je voudrais… », sans parler de technique.</li><li>Puis écris la fonction à ajouter au tracker pour y répondre.</li></ol>
+    
+
+<p>Pourquoi séparer besoin et fonction ? Le besoin, c’est ce que veut l’utilisateur ; la fonction, c’est ce que l’objet devra faire pour y répondre.</p>
     
 
 
@@ -228,7 +232,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Formule le besoin en une phrase (« Je voudrais… ») et la fonction à ajouter.</h3>
+            <h3 id="a01-q01-label">Question 1 — Formule le besoin de l’utilisateur du tracker en une phrase (« Je voudrais… »), puis la fonction à ajouter au tracker.</h3>
             
 
             
@@ -252,21 +256,22 @@
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Le cahier des charges (Writer n° 2)</h2>
         
-        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le besoin est clair. Écris-le dans un vrai document.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas rédiger dans Writer le cahier des charges du tracker communicant, sous forme de tableau (fonction, critère, niveau), en t’aidant de l’exemple de ligne. On attend un fichier enregistré et deux lignes complètes recopiées.</p></div>
         
         
 
         
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<ol><li>Ouvre Writer, enregistre sous 4e_S41_groupe.odt.</li><li>Titre « Cahier des charges du tracker communicant » en style Titre.</li><li>Insère un tableau de 3 colonnes : Fonction, Critère, Niveau.</li><li>Ajoute un en-tête avec les noms du groupe.</li></ol>
-    
-
 <p>Exemple de ligne : Fonction « Envoyer la luminosité » ; critère « distance de réception » ; niveau « au moins 10 m ».</p>
     
 
 <p>Rappel de la séance 6 : styles de titres et en-tête.</p>
+    
+
+<ol><li>Ouvre Writer et enregistre sous 4e_S41_groupe.odt.</li><li>Écris le titre « Cahier des charges du tracker communicant » en style Titre.</li><li>Insère un tableau de 3 colonnes : Fonction, Critère, Niveau (Tableau &gt; Insérer un tableau).</li><li>Remplis au moins deux lignes, puis ajoute un en-tête avec les noms du groupe.</li></ol>
+    
+
+<p>Pourquoi un critère et un niveau ? « Envoyer la luminosité » ne suffit pas : il faut dire comment on vérifiera (la distance) et la valeur à atteindre (10 m).</p>
     
 
 
@@ -275,7 +280,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Recopie deux lignes de ton cahier des charges.</h3>
+            <h3 id="a02-q01-label">Question 1 — Recopie deux lignes du cahier des charges du tracker communicant que tu as écrit dans Writer.</h3>
             
 
             
@@ -362,14 +367,18 @@
         <h2>Le planning du groupe</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le cahier des charges est prêt. Organisez le travail du groupe.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas organiser le travail de ton groupe pour le projet du tracker communicant, à partir du planning proposé (séances 42 à 48). On attend une répartition des rôles et ton propre rôle.</p></div>
         
         
 
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <div class="cours-table-wrapper"><table class="cours-table"><caption>Planning proposé</caption><thead><tr><th scope="col">Séance</th><th scope="col">Tâche</th></tr></thead><tbody><tr><td>42</td><td>Découvrir la radio dans le simulateur</td></tr><tr><td>43</td><td>Identifier les constituants manquants</td></tr><tr><td>44</td><td>Programmer émetteur et récepteur</td></tr><tr><td>45</td><td>Tester la liaison</td></tr><tr><td>46</td><td>Exploiter les mesures (Calc)</td></tr><tr><td>47-48</td><td>Préparer et présenter la revue de projet</td></tr></tbody></table></div>
+    
+
+<ol><li>Lis le planning proposé (séances 42 à 48).</li><li>Liste les rôles utiles : programmeur émetteur, programmeur récepteur, testeur, rédacteur…</li><li>Répartissez-les dans le groupe.</li></ol>
+    
+
+<p>Pourquoi des rôles ? Chacun sait ce qu’il doit faire à chaque séance, et rien n’est oublié.</p>
     
 
 
@@ -378,7 +387,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Répartissez les rôles dans le groupe (au moins deux rôles) et écris le tien.</h3>
+            <h3 id="a03-q01-label">Question 1 — Pour le projet du tracker communicant, répartissez les rôles dans le groupe (au moins deux rôles) et écris le tien.</h3>
             
 
             
@@ -400,15 +409,13 @@
     
     <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
+        <h2>Pour aller plus loin</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
         
-
         
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>La radio de la micro:bit fonctionne sur un « groupe » (un canal) de 0 à 255.</p>
     
@@ -446,17 +453,15 @@
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le projet est lancé. Il reste à répondre au problème de départ.</p>
         
         
-
         
 
-        
         
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : quel besoin justifie la nouvelle fonction, et comment l’as-tu écrite dans le cahier des charges ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : quel besoin justifie la nouvelle fonction du tracker, et comment l’as-tu écrite dans le cahier des charges ?</h3>
             
 
             

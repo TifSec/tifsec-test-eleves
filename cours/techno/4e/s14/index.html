@@ -46,7 +46,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Le jeu du facteur (activité débranchée)</a></li><li><a href="#a02">Lire une adresse IP</a></li><li><a href="#a03">Choisir une adresse</a></li><li><a href="#a04">Défi — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Le jeu du facteur (activité débranchée)</a></li><li><a href="#a02">Lire une adresse IP</a></li><li><a href="#a03">Choisir une adresse</a></li><li><a href="#a04">Je m’entraîne</a></li><li><a href="#a05">Pour aller plus loin — facultatif</a></li><li><a href="#a06">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -168,7 +168,7 @@
             
             <li>Chaque appareil d’un réseau a une adresse IP, par exemple 192.168.1.15 : quatre nombres de 0 à 255.</li>
             
-            <li>Dans un petit réseau local, les appareils dont les trois premiers nombres sont identiques (ici 192.168.1) sont dans le même réseau et peuvent communiquer directement.</li>
+            <li>Dans un petit réseau local, les appareils dont les trois premiers nombres sont identiques sont dans le même réseau.</li>
             
         </ul>
         
@@ -210,17 +210,15 @@
         <h2>Le jeu du facteur (activité débranchée)</h2>
         
         
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas comprendre, par un jeu en classe (le facteur et les cartes-adresses), pourquoi chaque appareil d’un réseau a une adresse. On attend ce qui se passe avec deux adresses identiques et pourquoi on indique l’expéditeur.</p></div>
         
         
 
         
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Le professeur distribue à chaque élève une carte avec une adresse (rue, numéro). Un « facteur » doit livrer des lettres. Sans adresse, impossible ; avec deux fois la même adresse, il se trompe.</p>
+<ol><li>Le professeur distribue une carte-adresse à chaque élève.</li><li>Le « facteur » distribue des lettres avec une adresse de destination et une adresse d’expéditeur.</li><li>On essaie avec une lettre sans adresse, puis avec deux élèves ayant la même adresse.</li></ol>
     
 
-<p>Exemple expliqué : dans un réseau, c’est pareil. Un message contient l’adresse IP de l’expéditeur et celle du destinataire. Deux appareils ne doivent jamais avoir la même adresse dans un réseau.</p>
+<p>Pourquoi une adresse unique ? Si deux appareils ont la même, les messages peuvent arriver au mauvais : c’est un conflit d’adresse.</p>
     
 
 
@@ -234,7 +232,7 @@
 
             
             
-                <select id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><option value="">Choisis une réponse</option><option value="a">Les messages risquent d’arriver au mauvais ordinateur : c’est un conflit d’adresse.</option><option value="b">Ils vont deux fois plus vite.</option><option value="c">Rien.</option></select>
+                <select id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><option value="">Choisis une réponse</option><option value="a">Les messages risquent d’arriver au mauvais ordinateur.</option><option value="b">Ils vont plus vite.</option><option value="c">Rien.</option></select>
 
                 
             <details><summary>Un coup de pouce</summary><p>Élimine d’abord les réponses impossibles.</p></details>
@@ -245,7 +243,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Pourquoi un message doit-il contenir l’adresse de l’expéditeur, en plus de celle du destinataire ?</h3>
+            <h3 id="a01-q02-label">Question 2 — Pourquoi un message contient-il aussi l’adresse de l’expéditeur ?</h3>
             
 
             
@@ -269,18 +267,19 @@
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Lire une adresse IP</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as compris le rôle de l’adresse. Apprends à lire une adresse IP.</p>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as compris le rôle de l’adresse. Apprends à la lire.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas apprendre à lire une adresse IP à partir des exemples du document 1. On attend, pour chaque paire d’appareils, s’ils sont dans le même réseau local, et l’adresse impossible.</p></div>
         
         
 
         
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Quelques adresses (exemple)</caption><thead><tr><th scope="col">Appareil</th><th scope="col">Adresse IP</th></tr></thead><tbody><tr><td>Poste 1</td><td>192.168.1.11</td></tr><tr><td>Poste 2</td><td>192.168.1.12</td></tr><tr><td>Imprimante</td><td>192.168.1.50</td></tr><tr><td>Poste du CDI</td><td>192.168.2.11</td></tr></tbody></table></div>
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Exemple</caption><thead><tr><th scope="col">Appareil</th><th scope="col">Adresse IP</th></tr></thead><tbody><tr><td>Poste 1</td><td>192.168.1.11</td></tr><tr><td>Poste 2</td><td>192.168.1.12</td></tr><tr><td>Imprimante</td><td>192.168.1.50</td></tr><tr><td>Poste du CDI</td><td>192.168.2.11</td></tr></tbody></table></div>
     
 
-<p>Règle de la séance : si les trois premiers nombres sont identiques, les appareils sont dans le même réseau local.</p>
+<ol><li>Lis le document 1.</li><li>Pour chaque paire d’appareils, compare les trois premiers nombres.</li><li>S’ils sont identiques, les appareils sont dans le même réseau local.</li></ol>
+    
+
+<p>Pourquoi les trois premiers nombres ? Dans les petits réseaux, ils désignent le réseau ; le dernier désigne l’appareil, comme un nom de rue et un numéro.</p>
     
 
 
@@ -289,7 +288,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — D’après le document 1, ces appareils sont-ils dans le même réseau local ? Écris « oui » ou « non ».</h3>
+            <h3 id="a02-q01-label">Question 1 — Ces appareils sont-ils dans le même réseau local ? Écris « oui » ou « non ».</h3>
             
 
             
@@ -394,15 +393,16 @@
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Choisir une adresse</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais lire une adresse. Choisis-en une pour un nouvel appareil.</p>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais lire une adresse. Choisis-en une.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas choisir l’adresse IP d’un nouveau poste de la salle, sachant que les adresses 192.168.1.11 à 192.168.1.25 sont prises. On attend une adresse valable, justifiée.</p></div>
         
         
 
         
+<ol><li>Lis la situation : les adresses 192.168.1.11 à 192.168.1.25 sont prises.</li><li>Garde les trois premiers nombres (même réseau).</li><li>Choisis un dernier nombre libre, entre 0 et 255.</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>On ajoute un poste dans la salle (réseau 192.168.1). Les adresses 192.168.1.11 à 192.168.1.25 sont déjà prises.</p>
+<p>Pourquoi cette méthode ? Elle garantit que le nouveau poste est dans le bon réseau et qu’il n’entre pas en conflit avec un autre.</p>
     
 
 
@@ -411,28 +411,12 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Propose une adresse IP pour le nouveau poste et justifie ton choix.</h3>
+            <h3 id="a03-q01-label">Question 1 — Propose une adresse IP pour un nouveau poste de la salle et justifie.</h3>
             
 
             
             
                 <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Une idée + « car » + une raison tirée de la séance.</p></details>
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a03-q02-label">Question 2 — Pourquoi utilise-t-on des adresses en nombres plutôt que des noms comme « poste-de-Lea » ?</h3>
-            
-
-            
-            
-                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Une idée + « car » + une raison tirée de la séance.</p></details>
@@ -448,18 +432,22 @@
     </article>
     
     <article class="cours-activite" id="a04" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
-        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Je m’entraîne</h2>
         
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as compris la méthode. Applique-la seul sur un cas nouveau.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas appliquer seul la méthode sur un cas nouveau : les adresses de la salle B, dans le tableau ci-dessous. On attend les deux erreurs trouvées et une correction pour chacune.</p></div>
         
         
 
         
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Salle B</caption><thead><tr><th scope="col">Poste</th><th scope="col">Adresse</th></tr></thead><tbody><tr><td>PC 1</td><td>192.168.5.11</td></tr><tr><td>PC 2</td><td>192.168.5.12</td></tr><tr><td>PC 3</td><td>192.168.5.12</td></tr><tr><td>PC 4</td><td>192.168.6.14</td></tr></tbody></table></div>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Les adresses IPv4 (quatre nombres) commencent à manquer ; on utilise aussi IPv6.</p>
+<ol><li>Lis les adresses de la salle B.</li><li>Repère l’adresse en double et l’adresse d’un autre réseau.</li><li>Propose une correction pour chacune.</li></ol>
+    
+
+<p>Pourquoi s’entraîner ? Repérer une erreur d’adresse est la première étape d’un dépannage réseau.</p>
     
 
 
@@ -468,15 +456,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Combien d’adresses différentes peut-on écrire avec quatre nombres de 0 à 255 ?</h3>
+            <h3 id="a04-q01-label">Question 1 — Trouve les deux erreurs dans ces adresses et propose une correction.</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Une phrase complète qui reprend les mots de la question.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Une idée réaliste + « Cela permet de… ».</p></details>
             
             
         </div>
@@ -489,28 +477,65 @@
     </article>
     
     <article class="cours-activite" id="a05" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Pour aller plus loin</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        
+        
+        
+        
+
+        
+<p>Les adresses IPv4 commencent à manquer.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a05-q01-label">Question 1 — Combien d’adresses différentes peut-on écrire avec quatre nombres de 0 à 255 ?</h3>
+            
+
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="false" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Une phrase complète qui reprend les mots de la question.</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
+            <a class="course-mission-next" href="#a06">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a06" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais comment les messages trouvent leur chemin. Il reste à répondre au problème de départ.</p>
         
         
-
         
 
-        
         
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment un message trouve-t-il le bon appareil dans un réseau ?</h3>
+            <h3 id="a06-q01-label">Question 1 — Réponds au problème du jour : comment un message trouve-t-il le bon appareil dans un réseau ?</h3>
             
 
             
             
-                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a06-q01" data-answer-id="a06_q01" data-required="true" aria-labelledby="a06-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème et de « Ce que je retiens », avec un exemple de la séance.</p></details>
@@ -520,7 +545,7 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a04">← Étape précédente</a>
+            <a class="course-mission-back" href="#a05">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -533,7 +558,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Adresse IP : quatre nombres de 0 à 255, unique dans un réseau.</li><li>Même début (ici les trois premiers nombres) = même réseau local.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Adresse IP : quatre nombres de 0 à 255, unique dans un réseau.</li><li>Même début = même réseau local.</li></ul>
     
 </section>
 
@@ -565,7 +590,7 @@
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a06">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

@@ -46,7 +46,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Le modèle fourni</a></li><li><a href="#a02">Modifier</a></li><li><a href="#a03">Anticiper</a></li><li><a href="#a04">Défi — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Choisir un objectif</a></li><li><a href="#a02">Modifier</a></li><li><a href="#a03">Anticiper un inconvénient</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -166,9 +166,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>On part d’un modèle existant (le rotor fourni) et on modifie une seule caractéristique à la fois : longueur, largeur ou angle de la pale.</li>
+            <li>On part d’un modèle existant et on modifie une seule caractéristique (longueur, largeur ou angle de la pale).</li>
             
-            <li>Une modification se justifie par un objectif (plus de prise au vent, moins de masse).</li>
+            <li>Une modification se justifie par un objectif.</li>
             
         </ul>
         
@@ -207,20 +207,21 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Le modèle fourni</h2>
+        <h2>Choisir un objectif</h2>
         
         
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas choisir un objectif d’amélioration pour la pale du rotor de l’éolienne, à partir du modèle 3D fourni par le professeur. On attend un objectif clair (plus de prise au vent, pale plus légère…).</p></div>
         
         
 
         
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Le professeur partage le modèle du rotor : un moyeu de 20 mm et 3 pales de 60 mm de long, 15 mm de large, inclinées de 20°.</p>
+<p>Modèle fourni : moyeu de 20 mm, 3 pales de 60 mm de long, 15 mm de large, inclinées de 20° (valeurs d’exemple).</p>
     
 
-<p>Exemple expliqué : un groupe veut plus de prise au vent. Il élargit les pales de 15 à 20 mm, sans rien changer d’autre. Il pourra comparer avec le rotor d’origine.</p>
+<ol><li>Ouvre le modèle du rotor partagé par le professeur.</li><li>Mesure une pale : longueur, largeur, angle.</li><li>Choisis un objectif : plus de prise au vent, pale plus légère, démarrage par vent faible…</li></ol>
+    
+
+<p>Pourquoi un objectif d’abord ? Sans objectif, on modifie au hasard et on ne sait pas si c’est mieux.</p>
     
 
 
@@ -234,12 +235,12 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Pourquoi ne modifier qu’une seule caractéristique à la fois ?</h3>
+            <h3 id="a01-q01-label">Question 1 — Pourquoi ne modifier qu’une caractéristique à la fois ?</h3>
             
 
             
             
-                <select id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><option value="">Choisis une réponse</option><option value="a">Pour savoir quel changement explique la différence de production.</option><option value="b">Parce que Tinkercad l’interdit.</option><option value="c">Pour aller plus vite.</option></select>
+                <select id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><option value="">Choisis une réponse</option><option value="a">Pour savoir quel changement explique la différence.</option><option value="b">Tinkercad l’impose.</option><option value="c">Pour aller vite.</option></select>
 
                 
             <details><summary>Un coup de pouce</summary><p>Relis l’exemple expliqué.</p></details>
@@ -250,7 +251,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Choisis un objectif pour ta pale (plus de prise au vent, plus légère, démarrage avec un vent faible…). Écris-le.</h3>
+            <h3 id="a01-q02-label">Question 2 — Écris l’objectif de ton groupe pour la nouvelle pale du rotor de l’éolienne.</h3>
             
 
             
@@ -258,7 +259,7 @@
                 <textarea id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Ton idée répond-elle au besoin ?</p></details>
+            <details><summary>Un coup de pouce</summary><p>Combien d’éléments sont demandés ?</p></details>
             
             
         </div>
@@ -275,14 +276,15 @@
         <h2>Modifier</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Ton objectif est fixé. Modifie le modèle.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas modifier dans Tinkercad une seule caractéristique des pales du modèle, pour atteindre ton objectif. On attend la modification (avant / après) et une justification avec « car ».</p></div>
         
         
 
         
+<ol><li>Copie le modèle dans ta conception.</li><li>Modifie UNE caractéristique de la pale.</li><li>Applique la même modification aux trois pales.</li><li>Prends une capture d’écran (facultatif).</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<ol><li>Copie le modèle du rotor dans ta conception.</li><li>Modifie UNE caractéristique de la pale (longueur, largeur ou angle).</li><li>Applique la même modification aux trois pales.</li><li>Exporte une capture d’écran (facultatif).</li></ol>
+<p>Pourquoi les trois pales pareilles ? Un rotor déséquilibré vibre et s’use : les pales doivent être identiques.</p>
     
 
 
@@ -296,7 +298,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Décris ta modification.</h3>
+            <h3 id="a02-q01-label">Question 1 — Décris la modification que tu as faite sur la pale du rotor.</h3>
             
 
             
@@ -373,22 +375,27 @@
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Anticiper</h2>
+        <h2>Anticiper un inconvénient</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Une modification a souvent un prix.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas prévoir un inconvénient de ta modification de la pale avant de la fabriquer. On attend l’inconvénient et un moyen de le vérifier.</p></div>
         
         
 
         
+<ol><li>Pense aux effets de ta modification sur la masse, la solidité, le démarrage.</li><li>Choisis un inconvénient possible.</li><li>Propose comment le vérifier.</li></ol>
+    
 
-        
-        
+<p>Pourquoi chercher un inconvénient ? Un bon concepteur anticipe les défauts avant de fabriquer.</p>
+    
+
+
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Ta modification peut avoir un inconvénient. Lequel ? Comment le vérifier ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Quel inconvénient ta modification peut-elle avoir ? Comment le vérifier ?</h3>
             
 
             
@@ -410,15 +417,13 @@
     
     <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
+        <h2>Pour aller plus loin</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
         
-
         
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Les grandes éoliennes ont trois pales.</p>
     
@@ -456,10 +461,8 @@
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as proposé une nouvelle pale. Il reste à répondre au problème de départ.</p>
         
         
-
         
 
-        
         
         
         
@@ -494,7 +497,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Modifier un modèle : une caractéristique à la fois, avec un objectif.</li><li>Une modification a souvent un inconvénient à vérifier.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Modifier un modèle : une caractéristique à la fois, avec un objectif.</li><li>Anticiper les inconvénients.</li></ul>
     
 </section>
 

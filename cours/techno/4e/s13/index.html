@@ -46,7 +46,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Les équipements</a></li><li><a href="#a02">La topologie</a></li><li><a href="#a03">Réseau local et Internet</a></li><li><a href="#a04">Défi — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Les équipements du réseau</a></li><li><a href="#a02">La topologie de la salle</a></li><li><a href="#a03">Le chemin d’une recherche sur Internet</a></li><li><a href="#a04">Je m’entraîne</a></li><li><a href="#a05">Pour aller plus loin — facultatif</a></li><li><a href="#a06">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -166,11 +166,11 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Un réseau informatique relie des terminaux (ordinateurs, imprimantes, tablettes) par des liaisons (câbles, Wi-Fi).</li>
+            <li>Un réseau relie des terminaux (ordinateurs, imprimantes) par des liaisons (câbles, Wi-Fi).</li>
             
-            <li>Le commutateur (switch) relie les appareils d’un même réseau local ; le point d’accès Wi-Fi relie les appareils sans fil ; le routeur relie le réseau du collège à Internet.</li>
+            <li>Le commutateur (switch) relie les appareils d’un réseau local ; le point d’accès Wi-Fi relie les appareils sans fil ; le routeur relie le réseau du collège à Internet.</li>
             
-            <li>Quand tous les appareils sont reliés à un même commutateur, on parle de topologie en étoile.</li>
+            <li>Quand tous les appareils sont reliés au même commutateur, on parle de topologie en étoile.</li>
             
         </ul>
         
@@ -209,20 +209,21 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Les équipements</h2>
+        <h2>Les équipements du réseau</h2>
         
         
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas découvrir les équipements du réseau du collège (ordinateur, commutateur, routeur, point d’accès…) à partir du document 1 et des photos projetées. On attend que tu associes chaque photo à son équipement et que tu dises si une impression passe par Internet.</p></div>
         
         
 
         
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Les équipements d’un réseau</caption><thead><tr><th scope="col">Équipement</th><th scope="col">Rôle</th></tr></thead><tbody><tr><td>Terminal (ordinateur, imprimante)</td><td>Envoie ou reçoit des données.</td></tr><tr><td>Commutateur (switch)</td><td>Relie les appareils d’un même réseau local et transmet chaque message au bon destinataire.</td></tr><tr><td>Point d’accès Wi-Fi</td><td>Relie les appareils sans fil au réseau.</td></tr><tr><td>Routeur (ou box)</td><td>Relie le réseau local à un autre réseau, par exemple Internet.</td></tr><tr><td>Serveur</td><td>Ordinateur qui rend un service aux autres (fichiers, impression).</td></tr></tbody></table></div>
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1</caption><thead><tr><th scope="col">Équipement</th><th scope="col">Rôle</th></tr></thead><tbody><tr><td>Terminal (ordinateur, imprimante)</td><td>Envoie ou reçoit des données.</td></tr><tr><td>Commutateur (switch)</td><td>Relie les appareils d’un réseau local et envoie chaque message au bon destinataire.</td></tr><tr><td>Point d’accès Wi-Fi</td><td>Relie les appareils sans fil au réseau.</td></tr><tr><td>Routeur (ou box)</td><td>Relie le réseau local à un autre réseau, comme Internet.</td></tr><tr><td>Serveur</td><td>Ordinateur qui rend un service aux autres.</td></tr></tbody></table></div>
     
 
-<p>Exemple expliqué : quand tu imprimes depuis un poste de la salle de technologie, ton fichier passe par le câble, puis par le commutateur de la salle, qui l’envoie à l’imprimante. Il ne sort pas sur Internet.</p>
+<ol><li>Lis le document 1 : le rôle de chaque équipement.</li><li>Observe les photos projetées (décrites dans le tableau de la question).</li><li>Associe chaque photo à son équipement.</li></ol>
+    
+
+<p>Pourquoi connaître ces équipements ? Quand « Internet ne marche plus », savoir lequel est en cause permet de trouver la panne.</p>
     
 
 
@@ -254,30 +255,13 @@
                                 
                                 <td>
                                     
-                                    Boîtier avec 24 prises réseau et des voyants qui clignotent, dans une armoire
+                                    Boîtier avec 24 prises et des voyants, dans une armoire
                                     
                                 </td>
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Les équipements — Équipement — Boîtier avec 24 prises réseau et des voyants qui clignotent, dans une armoire">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Petit boîtier blanc fixé au plafond, avec un logo d’ondes
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Les équipements — Équipement — Petit boîtier blanc fixé au plafond, avec un logo d’ondes">
+                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Les équipements du réseau — Équipement — Boîtier avec 24 prises et des voyants, dans une armoire">
                                     
                                 </td>
                                 
@@ -288,13 +272,30 @@
                                 
                                 <td>
                                     
-                                    Boîtier qui relie le collège à la fibre de l’opérateur
+                                    Petit boîtier blanc fixé au plafond, logo d’ondes
                                     
                                 </td>
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Les équipements — Équipement — Boîtier qui relie le collège à la fibre de l’opérateur">
+                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Les équipements du réseau — Équipement — Petit boîtier blanc fixé au plafond, logo d’ondes">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Boîtier qui relie le collège à la fibre
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Les équipements du réseau — Équipement — Boîtier qui relie le collège à la fibre">
                                     
                                 </td>
                                 
@@ -317,7 +318,7 @@
 
             
             
-                <select id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><option value="">Choisis une réponse</option><option value="a">Non : il reste dans le réseau local (ordinateur → commutateur → imprimante).</option><option value="b">Oui, toujours.</option><option value="c">Seulement s’il est en couleur.</option></select>
+                <select id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><option value="">Choisis une réponse</option><option value="a">Non : il reste dans le réseau local.</option><option value="b">Oui, toujours.</option><option value="c">Seulement en couleur.</option></select>
 
                 
             <details><summary>Un coup de pouce</summary><p>Élimine d’abord les réponses impossibles.</p></details>
@@ -334,17 +335,21 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>La topologie</h2>
+        <h2>La topologie de la salle</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu connais les équipements. Voyons comment ils sont reliés.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas étudier l’organisation du réseau de la salle de technologie, décrite ci-dessous (15 ordinateurs, une imprimante, un commutateur). On attend le nom de cette organisation et ce qui se passe en cas de panne d’un câble ou du commutateur.</p></div>
         
         
 
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Dans la salle de technologie, les 15 ordinateurs et l’imprimante sont chacun reliés par un câble au même commutateur.</p>
+    
+
+<ol><li>Lis la description de la salle.</li><li>Dessine dans ta tête le commutateur au centre et les ordinateurs autour.</li><li>Imagine qu’un câble est débranché, puis que le commutateur tombe en panne.</li></ol>
+    
+
+<p>Pourquoi parler de topologie ? La forme du réseau dit ce qui se passe en cas de panne : un seul poste coupé, ou toute la salle.</p>
     
 
 
@@ -369,7 +374,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Que se passe-t-il pour les autres ordinateurs si le câble d’un seul ordinateur est débranché ? Et si le commutateur tombe en panne ?</h3>
+            <h3 id="a02-q02-label">Question 2 — Que se passe-t-il si le câble d’un seul ordinateur est débranché ? Et si le commutateur tombe en panne ?</h3>
             
 
             
@@ -391,16 +396,21 @@
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Réseau local et Internet</h2>
+        <h2>Le chemin d’une recherche sur Internet</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le réseau de la salle est relié au reste du monde. Par où passe une recherche sur Internet ?</p>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le réseau de la salle est relié au reste du monde.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas suivre le trajet d’une recherche sur Internet, depuis un poste de la salle jusqu’au site, en utilisant les équipements du document 1. On attend les équipements cités dans l’ordre, aller et retour.</p></div>
         
         
 
         
+<ol><li>Pars du poste de la salle.</li><li>Cite les équipements traversés dans l’ordre, jusqu’au site.</li><li>N’oublie pas que la réponse revient.</li></ol>
+    
 
-        
-        
+<p>Pourquoi suivre le chemin ? C’est la base pour comprendre Internet, que tu étudieras en 3e.</p>
+    
+
+
         
         
         <div class="cours-question" data-question="q01">
@@ -427,18 +437,22 @@
     </article>
     
     <article class="cours-activite" id="a04" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
-        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Je m’entraîne</h2>
         
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as compris la méthode. Applique-la seul sur un cas nouveau.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas appliquer seul ce que tu as appris sur un cas nouveau : le réseau d’une maison, décrit ci-dessous. On attend le rôle de chaque équipement et ce qui se passe si la box tombe en panne.</p></div>
         
         
 
         
+<blockquote>À la maison, une box est reliée à la fibre. Elle fait aussi point d’accès Wi-Fi : deux ordinateurs, une console et deux téléphones s’y connectent.</blockquote>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Le Wi-Fi et le câble transportent tous les deux des données.</p>
+<ol><li>Lis la description du réseau de la maison.</li><li>Repère chaque équipement et son rôle.</li><li>Réponds aux deux questions.</li></ol>
+    
+
+<p>Pourquoi la maison ? C’est le même principe qu’au collège, en plus petit : un bon test pour vérifier ta compréhension.</p>
     
 
 
@@ -447,15 +461,79 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Donne un avantage et un inconvénient du Wi-Fi par rapport au câble.</h3>
+            <h3 id="a04-q01-label">Question 1 — Donne le rôle de chaque équipement de la maison.</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Équipement</th>
+                                
+                                <th>Rôle</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    La box
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a04_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Je m’entraîne — Rôle — La box">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Le Wi-Fi de la box
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a04_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Je m’entraîne — Rôle — Le Wi-Fi de la box">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            <details><summary>Un coup de pouce</summary><p>Une case à la fois : la ligne croise la colonne (réflexe n° 6).</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a04-q02-label">Question 2 — La box tombe en panne. Les deux ordinateurs de la maison peuvent-ils encore aller sur Internet ?</h3>
+            
+
+            
+            
+                <select id="a04-q02" data-answer-id="a04_q02" data-required="true" aria-labelledby="a04-q02-label"><option value="">Choisis une réponse</option><option value="a">Non.</option><option value="b">Oui.</option><option value="c">Un seul.</option></select>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Compte les éléments demandés, puis cherche-les dans les documents de la mission.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Élimine d’abord les réponses impossibles.</p></details>
             
             
         </div>
@@ -468,28 +546,65 @@
     </article>
     
     <article class="cours-activite" id="a05" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Pour aller plus loin</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        
+        
+        
+        
+
+        
+<p>Le Wi-Fi et le câble transportent tous les deux des données.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a05-q01-label">Question 1 — Donne un avantage et un inconvénient du Wi-Fi par rapport au câble.</h3>
+            
+
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="false" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Compte les éléments demandés, puis cherche-les dans les documents de la mission.</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
+            <a class="course-mission-next" href="#a06">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a06" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as exploré le réseau du collège. Il reste à répondre au problème de départ.</p>
         
         
-
         
 
-        
         
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : quels équipements relient les ordinateurs du collège entre eux et à Internet ?</h3>
+            <h3 id="a06-q01-label">Question 1 — Réponds au problème du jour : quels équipements relient les ordinateurs du collège entre eux et à Internet ?</h3>
             
 
             
             
-                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a06-q01" data-answer-id="a06_q01" data-required="true" aria-labelledby="a06-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème et de « Ce que je retiens », avec un exemple de la séance.</p></details>
@@ -499,7 +614,7 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a04">← Étape précédente</a>
+            <a class="course-mission-back" href="#a05">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -512,7 +627,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Terminaux + liaisons (câble, Wi-Fi) + commutateur = réseau local ; le routeur relie à Internet.</li><li>Topologie en étoile : tous les appareils reliés au même commutateur.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Terminaux + liaisons + commutateur = réseau local ; le routeur relie à Internet.</li><li>Topologie en étoile : tous reliés au même commutateur.</li></ul>
     
 </section>
 
@@ -544,7 +659,7 @@
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a06">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

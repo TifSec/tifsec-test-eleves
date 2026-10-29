@@ -46,7 +46,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Construire</a></li><li><a href="#a02">Vérifier avec ping</a></li><li><a href="#a03">Ajouter un appareil</a></li><li><a href="#a04">Défi — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Construire le réseau</a></li><li><a href="#a02">Vérifier avec ping</a></li><li><a href="#a03">Provoquer une erreur</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -166,9 +166,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Dans Filius, on place des ordinateurs et un commutateur, on les relie par des câbles, puis on donne une adresse IP à chaque ordinateur.</li>
+            <li>Dans Filius, on place des ordinateurs et un commutateur, on les relie, puis on donne une adresse IP à chaque ordinateur.</li>
             
-            <li>La commande ping envoie un petit message à une adresse et attend une réponse : elle vérifie que deux appareils communiquent.</li>
+            <li>La commande ping envoie un petit message et attend une réponse : elle vérifie que deux appareils communiquent.</li>
             
         </ul>
         
@@ -180,14 +180,14 @@
             
             <li>Paramétrer les adresses IP.</li>
             
-            <li>Vérifier la communication avec ping.</li>
+            <li>Vérifier avec ping.</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séances 13 et 14, tu as vu les équipements et les adresses.</p><p>Aujourd’hui, tu construis toi-même un réseau, dans le simulateur Filius.</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séances 13 et 14, tu as vu les équipements et les adresses.</p><p>Aujourd’hui, tu construis toi-même un réseau dans le simulateur Filius.</p></div></section>
     
     
     
@@ -209,17 +209,18 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Construire</h2>
+        <h2>Construire le réseau</h2>
         
         
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas construire dans le logiciel Filius un petit réseau de trois ordinateurs reliés à un commutateur, en suivant les étapes. On attend le paramétrage (adresses, masque) de tes ordinateurs.</p></div>
         
         
 
         
+<ol><li>Ouvre Filius en mode conception (icône du marteau).</li><li>Place trois ordinateurs et un commutateur.</li><li>Relie chaque ordinateur au commutateur avec un câble.</li><li>Double-clique sur chaque ordinateur : adresses 192.168.1.1, 192.168.1.2, 192.168.1.3 ; masque 255.255.255.0.</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<ol><li>Ouvre Filius (mode conception, icône du marteau).</li><li>Place trois ordinateurs et un commutateur.</li><li>Relie chaque ordinateur au commutateur avec un câble.</li><li>Double-clique sur chaque ordinateur et donne-lui une adresse : 192.168.1.1, 192.168.1.2, 192.168.1.3 (masque 255.255.255.0).</li></ol>
+<p>Pourquoi un simulateur ? On peut construire, casser et réparer un réseau sans risque pour celui du collège.</p>
     
 
 
@@ -262,7 +263,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Construire — Adresse IP — PC 1">
+                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Construire le réseau — Adresse IP — PC 1">
                                     
                                 </td>
                                 
@@ -279,7 +280,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Construire — Adresse IP — PC 2">
+                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Construire le réseau — Adresse IP — PC 2">
                                     
                                 </td>
                                 
@@ -296,7 +297,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Construire — Adresse IP — PC 3">
+                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Construire le réseau — Adresse IP — PC 3">
                                     
                                 </td>
                                 
@@ -339,14 +340,15 @@
         <h2>Vérifier avec ping</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Ton réseau est construit. Vérifie qu’il fonctionne.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas vérifier avec la commande ping, dans Filius, que tes ordinateurs communiquent. On attend une ligne de réponse recopiée et l’explication du chemin suivi par les messages.</p></div>
         
         
 
         
+<ol><li>Passe en mode simulation (triangle vert).</li><li>Sur PC 1, installe le logiciel « Ligne de commande ».</li><li>Tape : ping 192.168.1.3 puis Entrée.</li><li>Observe les réponses et les câbles qui clignotent.</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<ol><li>Passe en mode simulation (icône du triangle vert).</li><li>Sur PC 1, installe le logiciel « Ligne de commande ».</li><li>Tape : ping 192.168.1.3 puis Entrée.</li><li>Observe les réponses et les câbles qui clignotent.</li></ol>
+<p>Pourquoi ping ? C’est le premier test des techniciens réseau : il dit tout de suite si deux appareils se parlent.</p>
     
 
 
@@ -360,7 +362,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Recopie ce qu’affiche Filius après le ping (au moins une ligne), et dis si les ordinateurs communiquent.</h3>
+            <h3 id="a02-q01-label">Question 1 — Recopie une ligne affichée par le ping et dis si les ordinateurs communiquent.</h3>
             
 
             
@@ -376,7 +378,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Pendant le ping, quels câbles clignotent ? Que montre ce chemin ?</h3>
+            <h3 id="a02-q02-label">Question 2 — Quels câbles clignotent pendant le ping ? Que montre ce chemin ?</h3>
             
 
             
@@ -398,17 +400,18 @@
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Ajouter un appareil</h2>
+        <h2>Provoquer une erreur</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Ton réseau marche. Que se passe-t-il si on fait une erreur d’adresse ?</p>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Ton réseau marche. Que se passe-t-il si on se trompe d’adresse ?</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas provoquer volontairement une erreur dans ton réseau Filius : un quatrième ordinateur avec une adresse déjà prise. On attend ce que tu observes, son explication et la correction.</p></div>
         
         
 
         
+<ol><li>Ajoute un quatrième ordinateur avec l’adresse 192.168.1.2 (déjà prise).</li><li>Fais un ping vers 192.168.1.2.</li><li>Observe, puis corrige l’adresse.</li></ol>
+    
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Ajoute un quatrième ordinateur avec l’adresse 192.168.1.2 (déjà utilisée !), puis fais un ping vers 192.168.1.2.</p>
+<p>Pourquoi provoquer une erreur ? Voir une panne volontaire aide à la reconnaître quand elle arrive pour de vrai.</p>
     
 
 
@@ -444,15 +447,13 @@
     
     <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Défi</h2>
+        <h2>Pour aller plus loin</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
         
-
         
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
 <p>Dans Filius, on peut ajouter un serveur web.</p>
     
@@ -468,7 +469,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Installe un serveur web sur PC 3 et un navigateur sur PC 1. Que dois-tu taper dans le navigateur ?</h3>
+            <h3 id="a04-q01-label">Question 1 — Installe un serveur web sur PC 3 et un navigateur sur PC 1. Que tapes-tu dans le navigateur ?</h3>
             
 
             
@@ -495,17 +496,15 @@
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as construit et testé un réseau. Il reste à répondre au problème de départ.</p>
         
         
-
         
 
-        
         
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment construire, paramétrer et vérifier un petit réseau local ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment construire, paramétrer et vérifier un petit réseau local ? Cite les étapes dans l’ordre.</h3>
             
 
             
@@ -533,7 +532,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Construire : ordinateurs + commutateur + câbles. Paramétrer : une adresse IP unique par ordinateur.</li><li>Vérifier : ping envoie un message et attend la réponse.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Construire : ordinateurs + commutateur + câbles. Paramétrer : une adresse unique par ordinateur.</li><li>Vérifier : ping.</li></ul>
     
 </section>
 
