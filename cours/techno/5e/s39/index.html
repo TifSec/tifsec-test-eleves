@@ -63,7 +63,7 @@
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261029-steps-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261029-pix-1">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
@@ -303,7 +303,7 @@
                     </table>
                 </div>
             
-            
+            <details><summary>Un coup de pouce</summary><p>Ligne × colonne.</p></details>
             
             
         </div>
@@ -344,7 +344,7 @@
                 <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            
+            <details><summary>Un coup de pouce</summary><p>« D’après le document… » (réflexe n° 2).</p></details>
             
             
         </div>
@@ -360,7 +360,7 @@
                 <select id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><option value="">Choisis une réponse</option><option value="a">L’éolienne (et le tracker).</option><option value="b">Aucune.</option><option value="c">Le téléphone du professeur.</option></select>
 
                 
-            
+            <details><summary>Un coup de pouce</summary><p>Relis l’exemple expliqué.</p></details>
             
             
         </div>
@@ -401,7 +401,7 @@
                 <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            
+            <details><summary>Un coup de pouce</summary><p>Pense à « car » (réflexe n° 4).</p></details>
             
             
         </div>
@@ -442,7 +442,7 @@
                 <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            
+            <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
             
             
         </div>
@@ -479,7 +479,7 @@
                 <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            
+            <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème (réflexe n° 3).</p></details>
             
             
         </div>
@@ -514,6 +514,23 @@
         <p id="course-submit-status" role="status" aria-live="polite"></p>
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
+    
+<section class="course-pix" id="course-pix" aria-labelledby="course-pix-title" data-etablissement="college" data-matiere="techno" data-classe="5e" data-seance="S39">
+    <h2 id="course-pix-title">Aujourd’hui, c’était une séance Pix ?</h2>
+    <p>Si ton professeur t’a fait travailler sur Pix à la place du cours, ta séance de technologie t’attend ici : tu la reprendras la prochaine fois, rien n’est perdu. Quand tu as fini sur Pix, clique sur le bouton pour le signaler.</p>
+    <details><summary>Que faire pendant une séance Pix ?</summary>
+        <ol>
+            <li>Ouvre Pix depuis l’ENT (ou sur pix.fr, « Se connecter »).</li>
+            <li>Saisis le code de campagne donné par ton professeur et vérifie ton prénom et ton nom.</li>
+            <li>Travaille seul et sérieusement : Pix sert à savoir où tu en es.</li>
+            <li>Ne recopie jamais ton mot de passe ni les réponses de Pix sur ce site.</li>
+        </ol>
+        <p><a href="https://pix.fr/" target="_blank" rel="noopener noreferrer">Ouvrir Pix</a></p>
+    </details>
+    <button type="button" id="course-pix-declare" disabled>J’ai fait ma séance Pix</button>
+    <p id="course-pix-status" role="status" aria-live="polite"></p>
+</section>
+
     <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
@@ -534,6 +551,7 @@
 
 
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/pix-declaration.js"></script>
 
 
     </main>

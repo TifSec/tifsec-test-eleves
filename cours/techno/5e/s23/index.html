@@ -63,7 +63,7 @@
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261029-steps-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261029-pix-1">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Le parcours Pix</a></li><li><a href="#a02">Un mot de passe solide</a></li><li><a href="#a03">Mes règles de protection</a></li><li><a href="#a04">Encore un peu de Pix — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Vrai ou faux message ?</a></li><li><a href="#a02">Un mot de passe solide</a></li><li><a href="#a03">Mes règles de protection</a></li><li><a href="#a04">Défi — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -134,7 +134,7 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Technologie · 5e · S23</span></div>
-    <h1>Séance 23 : PIX n° 2 : protéger mes données et ranger mes fichiers</h1>
+    <h1>Séance 23 : Comment protéger mes données et mes comptes ?</h1>
     
 
     
@@ -168,6 +168,8 @@
             
             <li>Un mot de passe solide est long, mélange lettres, chiffres et symboles, et n’est utilisé que pour un seul compte.</li>
             
+            <li>L’hameçonnage est un faux message qui imite un vrai site pour voler un mot de passe ; on le repère à l’adresse de l’expéditeur, au lien et à l’urgence demandée.</li>
+            
             <li>Les données personnelles (nom, adresse, photos) doivent être partagées avec prudence.</li>
             
         </ul>
@@ -176,7 +178,9 @@
         <h2>Ce que tu vas apprendre à faire</h2>
         <ul>
             
-            <li>Réaliser un parcours Pix sur la protection et la sécurité.</li>
+            <li>Repérer un message d’hameçonnage.</li>
+            
+            <li>Juger la solidité d’un mot de passe.</li>
             
             <li>Appliquer des règles pour protéger ses comptes et ses données.</li>
             
@@ -185,7 +189,7 @@
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séance 8, tu as fait le parcours de rentrée Pix. En séance 13, tu as vu qui peut lire ou modifier une information.</p><p>Aujourd’hui, tu travailles la compétence « protection et sécurité » avec Pix, puis tu en tires des règles pour toi.</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séance 13, tu as vu qui peut lire ou modifier une information, et que notre site de cours protège tes réponses avec ton compte.</p><p>Aujourd’hui, tu apprends à protéger toi-même tes comptes et tes données, comme un enquêteur qui repère les pièges.</p></div></section>
     
     
     
@@ -207,7 +211,7 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Le parcours Pix</h2>
+        <h2>Vrai ou faux message ?</h2>
         
         
         
@@ -217,32 +221,113 @@
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<ol><li>Connecte-toi à Pix (ENT ou pix.fr) avec ton compte personnel.</li><li>Saisis le code du parcours donné par le professeur.</li><li>Fais le parcours sans aide extérieure.</li></ol>
+<h4>Document 1 — Un message reçu par Léa (inventé)</h4>
     
 
-<p>Comme d’habitude, tu ne recopies ni ton mot de passe ni les réponses de Pix sur ce site.</p>
+<blockquote>De : support-ent@ent-colleges-gratuit.com
+Objet : URGENT ! Ton compte sera supprimé dans 1 heure
+Bonjour, ton compte ENT a un problème. Clique vite ici et écris ton identifiant et ton mot de passe pour le garder : http://ent-connexion-verif.biz</blockquote>
+    
+
+<p>Exemple expliqué : un vrai service ne demande jamais ton mot de passe par message. Trois indices trahissent ce faux message : l’adresse de l’expéditeur n’est pas celle de l’ENT, le lien mène vers un autre site, et on te presse (« URGENT », « 1 heure »).</p>
     
 
 
-        <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
-<p><a href="https://pix.fr/" target="_blank" rel="noopener noreferrer">Pix — se connecter</a></p>
-
-
-</div></details>
-
+        
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Cite une chose que tu as apprise pendant le parcours sur la protection des données, avec tes mots.</h3>
+            <h3 id="a01-q01-label">Question 1 — D’après le document 1, relève trois indices qui montrent que ce message est un piège.</h3>
             
 
             
             
-                <textarea id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Indice</th>
+                                
+                                <th>Ce que je relève</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Expéditeur
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Vrai ou faux message ? — Ce que je relève — Expéditeur">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Lien
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Vrai ou faux message ? — Ce que je relève — Lien">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Ton du message
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Vrai ou faux message ? — Ce que je relève — Ton du message">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            <details><summary>Un coup de pouce</summary><p>Ligne × colonne.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a01-q02-label">Question 2 — Que doit faire Léa ?</h3>
+            
+
+            
+            
+                <select id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><option value="">Choisis une réponse</option><option value="a">Ne pas cliquer, supprimer le message et prévenir un adulte.</option><option value="b">Cliquer vite pour sauver son compte.</option><option value="c">Répondre en donnant seulement son identifiant.</option></select>
 
                 
-            
+            <details><summary>Un coup de pouce</summary><p>Relis l’exemple expliqué.</p></details>
             
             
         </div>
@@ -258,7 +343,7 @@
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Un mot de passe solide</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Pix t’a fait réfléchir à la sécurité. Le premier geste de protection, c’est un bon mot de passe.</p>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais repérer un piège. Le deuxième geste de protection, c’est un bon mot de passe.</p>
         
         
 
@@ -270,7 +355,12 @@
     
 
 
-        
+        <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
+<p><a href="https://www.cnil.fr/fr/mots-de-passe-des-recommandations-de-securite-minimales-pour-les-entreprises-et-les-particuliers" target="_blank" rel="noopener noreferrer">CNIL — Les conseils pour un bon mot de passe</a></p>
+
+
+</div></details>
+
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
@@ -348,7 +438,7 @@
                     </table>
                 </div>
             
-            
+            <details><summary>Un coup de pouce</summary><p>Ligne × colonne.</p></details>
             
             
         </div>
@@ -364,7 +454,7 @@
                 <select id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><option value="">Choisis une réponse</option><option value="a">Si un site se fait voler ses mots de passe, tous tes comptes sont en danger.</option><option value="b">Parce que c’est interdit par la loi.</option><option value="c">Parce que les sites refusent les mots de passe déjà utilisés.</option></select>
 
                 
-            
+            <details><summary>Un coup de pouce</summary><p>Relis l’exemple expliqué.</p></details>
             
             
         </div>
@@ -405,7 +495,7 @@
                 <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            
+            <details><summary>Un coup de pouce</summary><p>Pense à « car » (réflexe n° 4).</p></details>
             
             
         </div>
@@ -419,7 +509,7 @@
     
     <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Encore un peu de Pix</h2>
+        <h2>Défi</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
@@ -429,7 +519,7 @@
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Si tu as fini, le professeur peut te proposer un autre parcours.</p>
+<p>Certaines adresses de sites imitent les vraies : « faceb00k.com », « ent-college.fr.verif.biz »…</p>
     
 
 
@@ -438,7 +528,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Quel parcours as-tu commencé ? Qu’y as-tu découvert ?</h3>
+            <h3 id="a04-q01-label">Question 1 — Invente un exemple de fausse adresse qui imite un site que tu connais, et explique comment la repérer.</h3>
             
 
             
@@ -446,7 +536,7 @@
                 <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            
+            <details><summary>Un coup de pouce</summary><p>Pense à « car » (réflexe n° 4).</p></details>
             
             
         </div>
@@ -462,7 +552,7 @@
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as travaillé avec Pix et rédigé tes règles. Il reste à répondre au problème de départ.</p>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as repéré un piège et rédigé tes règles. Il reste à répondre au problème de départ.</p>
         
         
 
@@ -483,7 +573,7 @@
                 <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            
+            <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème (réflexe n° 3).</p></details>
             
             
         </div>
@@ -503,12 +593,15 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Mot de passe solide : long, varié, unique pour chaque compte, jamais partagé.</li><li>Partager ses données personnelles avec prudence ; se déconnecter sur un poste partagé.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Mot de passe solide : long, varié, unique pour chaque compte, jamais partagé.</li><li>Hameçonnage : faux message pressant qui demande un mot de passe ; on ne clique pas, on signale.</li><li>Partager ses données personnelles avec prudence ; se déconnecter sur un poste partagé.</li></ul>
     
 </section>
 
 <section class="cours-sources course-info-card" aria-labelledby="course-sources-title"><h2 id="course-sources-title">Sources et ressources officielles</h2>
 <p><a href="https://www.education.gouv.fr/media/160767/download" target="_blank" rel="noopener noreferrer">Ministère de l’Éducation nationale — Programme de technologie du cycle 4 (BO n° 9 du 29 février 2024)</a></p>
+
+
+<p><a href="https://www.cnil.fr/fr/mots-de-passe-des-recommandations-de-securite-minimales-pour-les-entreprises-et-les-particuliers" target="_blank" rel="noopener noreferrer">CNIL — Les conseils pour un bon mot de passe</a></p>
 
 
 </section>
@@ -518,6 +611,23 @@
         <p id="course-submit-status" role="status" aria-live="polite"></p>
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
+    
+<section class="course-pix" id="course-pix" aria-labelledby="course-pix-title" data-etablissement="college" data-matiere="techno" data-classe="5e" data-seance="S23">
+    <h2 id="course-pix-title">Aujourd’hui, c’était une séance Pix ?</h2>
+    <p>Si ton professeur t’a fait travailler sur Pix à la place du cours, ta séance de technologie t’attend ici : tu la reprendras la prochaine fois, rien n’est perdu. Quand tu as fini sur Pix, clique sur le bouton pour le signaler.</p>
+    <details><summary>Que faire pendant une séance Pix ?</summary>
+        <ol>
+            <li>Ouvre Pix depuis l’ENT (ou sur pix.fr, « Se connecter »).</li>
+            <li>Saisis le code de campagne donné par ton professeur et vérifie ton prénom et ton nom.</li>
+            <li>Travaille seul et sérieusement : Pix sert à savoir où tu en es.</li>
+            <li>Ne recopie jamais ton mot de passe ni les réponses de Pix sur ce site.</li>
+        </ol>
+        <p><a href="https://pix.fr/" target="_blank" rel="noopener noreferrer">Ouvrir Pix</a></p>
+    </details>
+    <button type="button" id="course-pix-declare" disabled>J’ai fait ma séance Pix</button>
+    <p id="course-pix-status" role="status" aria-live="polite"></p>
+</section>
+
     <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
@@ -538,6 +648,7 @@
 
 
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/pix-declaration.js"></script>
 
 
     </main>

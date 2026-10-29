@@ -19,7 +19,7 @@
 
     <title>
         
-        Comment modifier une forme selon une contrainte ? | BAC À SABLE — Portail pédagogique (comptes fictifs)
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
         
     </title>
 
@@ -63,7 +63,7 @@
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261029-steps-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261029-pix-1">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
@@ -95,7 +95,7 @@
 
 
 
-<div id="course-work" data-etablissement="college" data-matiere="techno" data-classe="4e" data-seance="S43" data-saving-enabled="false" data-collaboration-enabled="false">
+<div id="course-work" data-etablissement="college" data-matiere="techno" data-classe="4e" data-seance="S43" data-saving-enabled="true" data-collaboration-enabled="true">
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
         <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">1. Comprendre la mission</a></li><li><a href="#a02">2. À toi d’essayer</a></li><li><a href="#a03">3. Réutiliser la méthode</a></li><li><a href="#a04">4. Ce que tu retiens</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Inventaire</a></li><li><a href="#a02">Choisir l’alimentation</a></li><li><a href="#a03">Le schéma du prototype</a></li><li><a href="#a04">Défi — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -134,24 +134,29 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Technologie · 4e · S43</span></div>
-    <h1>Comment modifier une forme selon une contrainte ?</h1>
+    <h1>Séance 43 : Que manque-t-il au prototype ?</h1>
     
 
     
     
     <section class="course-info-card cours-theme">
-        <h2>Thème du programme</h2>
-        <p>Prototyper et vérifier</p>
+        <h2>Thèmes du programme</h2>
+        <ul><li>Structure, fonctionnement, comportement : des objets et des systèmes techniques à comprendre</li><li>Création, conception, réalisation, innovations : des objets à concevoir et à réaliser</li></ul>
     </section>
     
 
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Comment modifier une forme selon une contrainte ?</p>
+        <p>Quels constituants faut-il ajouter au tracker pour qu’il communique ?</p>
     </section>
     
 
+    
+    <section class="course-info-card cours-competences-bo">
+        <h2>Compétence travaillée</h2>
+        <ul><li>Imaginer, concevoir et réaliser une ou des solutions en réponse à un besoin, à des exigences (de développement durable, par exemple) ou à la nécessité d’améliorations dans une démarche de créativité</li></ul>
+    </section>
     
 
     
@@ -161,7 +166,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Une modification respecte la dimension demandée et conserve les parties utiles.</li>
+            <li>Le tracker a déjà une carte (émettrice possible), des capteurs et un servomoteur. Il manque une carte réceptrice (notre deuxième micro:bit), son affichage (écran à LED intégré) et son alimentation (boîtier piles ou câble USB).</li>
+            
+            <li>On vérifie que l’ajout respecte le cahier des charges (distance, autonomie).</li>
             
         </ul>
         
@@ -169,43 +176,24 @@
         <h2>Ce que tu vas apprendre à faire</h2>
         <ul>
             
-            <li>Modifier une cote précise sur la pièce fournie puis vérifier le résultat dans Onshape.</li>
+            <li>Identifier les constituants manquants d’un prototype.</li>
+            
+            <li>Choisir une alimentation adaptée.</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><p>Une modification respecte la dimension demandée et conserve les parties utiles.</p></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séance 42, la radio a fonctionné dans le simulateur.</p><p>Pour le vrai prototype, il faut faire l’inventaire : qu’a-t-on, que manque-t-il ?</p></div></section>
     
-    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Un modèle numérique permet de préparer une forme avant de la fabriquer.</p></section>
-    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>Après Comment repérer une cote dans une pièce Onshape ?, une nouvelle mission t’aide à réutiliser tes méthodes.</p></section>
-    <section class="course-info-card course-info-prerequisites"><h2>Ce qui va nous servir</h2><ul><li>Tu peux relire la séance précédente (Comment repérer une cote dans une pièce Onshape ?) si nécessaire.</li></ul></section>
-    <section class="course-info-card cours-notions"><h2>Les repères pour comprendre</h2><h3>Un exemple expliqué</h3><p>Une plaque doit mesurer 50 mm. Je modifie la cote, vérifie l’aperçu puis valide l’extrusion. Je ne change pas les autres cotes sans consigne.</p></section>
     
-<p>Ce que tu vas apprendre : Une modification respecte la dimension demandée et conserve les parties utiles.</p>
     
-
-<p>Ce que tu vas apprendre à faire : Modifier une cote précise sur la pièce fournie puis vérifier le résultat dans Onshape.</p>
     
-
-<p>Dans la vie réelle : Un modèle numérique permet de préparer une forme avant de la fabriquer.</p>
     
-
-
     
-    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
-<p>Programme de Technologie cycle 4 : cette séance travaille une modification respecte la dimension demandée et conserve les parties utiles.. Elle contribue progressivement aux compétences de fin de cycle.</p>
     
-
-<p><a href="https://www.education.gouv.fr/bo/2024/Hebdo9/MENE2402802A" target="_blank" rel="noopener noreferrer">Ministère — Programme de Technologie du cycle 4, BO 2024</a></p>
-
-
-<p><a href="https://cad.onshape.com/help/Content/PartStudio/extrude.htm" target="_blank" rel="noopener noreferrer">Onshape — aide officielle, extrusion</a></p>
-
-
-</div></details>
-
+    
     
     <nav class="course-mission-controls course-intro-controls" aria-label="Commencer la séance"><a class="course-mission-next" href="#a01">J’ai compris l’objectif : commencer la première mission <span aria-hidden="true">→</span></a></nav>
 </header>
@@ -219,17 +207,17 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>1. Comprendre la mission</h2>
+        <h2>Inventaire</h2>
         
         
-        <p><strong>Pourquoi cette activité ?</strong> On commence par un exemple guidé : il montre une méthode avant que tu l’essaies.</p>
-        <h3>Comment procéder ?</h3><ol><li>Lis la situation.</li><li>Suis les étapes de l’exemple.</li><li>Repère la donnée qui aide à répondre.</li></ol>
+        
+        
 
         
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Une plaque doit mesurer 50 mm. Je modifie la cote, vérifie l’aperçu puis valide l’extrusion. Je ne change pas les autres cotes sans consigne.</p>
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1</caption><thead><tr><th scope="col">Constituant</th><th scope="col">Présent sur le tracker ?</th></tr></thead><tbody><tr><td>Carte micro:bit avec radio</td><td>Oui</td></tr><tr><td>Capteurs de lumière</td><td>Oui</td></tr><tr><td>Servomoteur</td><td>Oui</td></tr><tr><td>Deuxième carte (récepteur)</td><td>Non (la carte libre de la classe)</td></tr><tr><td>Alimentation du récepteur</td><td>Non</td></tr></tbody></table></div>
     
 
 
@@ -238,31 +226,63 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Qu’as-tu vérifié avant de valider la modification ?</h3>
+            <h3 id="a01-q01-label">Question 1 — D’après le document 1, écris le rôle de chaque constituant manquant.</h3>
             
 
             
             
-                <textarea id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Relis l’exemple et repère l’information qui répond à la question.</p></details>
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Constituant manquant</th>
+                                
+                                <th>Rôle</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Deuxième carte
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Inventaire — Rôle — Deuxième carte">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Alimentation du récepteur
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Inventaire — Rôle — Alimentation du récepteur">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
             
-            
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a01-q02-label">Question 2 — Explique ta réponse en citant une donnée ou un indice du cours.</h3>
-            
-
-            
-            
-                <textarea id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Une ou deux phrases suffisent.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Ligne × colonne.</p></details>
             
             
         </div>
@@ -276,29 +296,26 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>2. À toi d’essayer</h2>
+        <h2>Choisir l’alimentation</h2>
         
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais ce qui manque. Choisis l’alimentation du récepteur.</p>
         
-        <p><strong>Pourquoi cette activité ?</strong> Tu as vu la méthode ; maintenant, applique-la dans une tâche que tu peux vérifier.</p>
-        <h3>Comment procéder ?</h3><ol><li>Réalise les étapes dans l’ordre.</li><li>Note le résultat attendu.</li><li>Compare-le au résultat observé.</li></ol>
-
-        
-        <p>Modifier une cote précise sur la pièce fournie puis vérifier le résultat dans Onshape.</p>
         
 
         
+
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-        <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
-<p><a href="https://cad.onshape.com/help/Content/PartStudio/extrude.htm" target="_blank" rel="noopener noreferrer">Onshape — aide officielle, extrusion</a></p>
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 2</caption><thead><tr><th scope="col">Solution</th><th scope="col">Autonomie</th><th scope="col">Mobilité</th></tr></thead><tbody><tr><td>Câble USB sur l’ordinateur</td><td>Illimitée</td><td>Faible (près de l’ordinateur)</td></tr><tr><td>Boîtier 2 piles AAA</td><td>Plusieurs jours</td><td>Bonne</td></tr></tbody></table></div>
+    
 
 
-</div></details>
-
+        
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Quel résultat observes-tu ? Décris ton essai.</h3>
+            <h3 id="a02-q01-label">Question 1 — La carte réceptrice doit pouvoir être posée n’importe où dans la salle. Quelle alimentation choisis-tu ? Justifie avec le document 2.</h3>
             
 
             
@@ -306,7 +323,7 @@
                 <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            
+            <details><summary>Un coup de pouce</summary><p>Pense à « car » (réflexe n° 4).</p></details>
             
             
         </div>
@@ -314,15 +331,15 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Explique ta réponse en citant une donnée ou un indice du cours.</h3>
+            <h3 id="a02-q02-label">Question 2 — Pourquoi le récepteur n’a-t-il pas besoin de capteur de lumière ?</h3>
             
 
             
             
-                <textarea id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <select id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><option value="">Choisis une réponse</option><option value="a">Il reçoit la mesure par radio : il ne mesure rien lui-même.</option><option value="b">Parce qu’il est à l’ombre.</option><option value="c">Il en a besoin.</option></select>
 
                 
-            
+            <details><summary>Un coup de pouce</summary><p>Relis l’exemple expliqué.</p></details>
             
             
         </div>
@@ -336,34 +353,69 @@
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>3. Réutiliser la méthode</h2>
+        <h2>Le schéma du prototype</h2>
         
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Il reste à dessiner la nouvelle chaîne d’information.</p>
         
-        <p><strong>Pourquoi cette activité ?</strong> Un nouvel exemple t’aide à voir où cette méthode peut encore servir.</p>
         
 
         
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Reprends la méthode avec une nouvelle valeur, un autre document ou une autre situation du dossier.</p>
-    
-
-
+        
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Quelle information permet de justifier ta conclusion ? Quelle limite reste à vérifier ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Complète la chaîne d’information du tracker communicant.</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Acquérir</th>
+                                
+                                <th>Traiter et émettre</th>
+                                
+                                <th>Recevoir et communiquer</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a03_q01_r0_c0" data-required="true" data-row="0" data-col="0" aria-label="Le schéma du prototype — Acquérir — ">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a03_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Le schéma du prototype — Traiter et émettre — ">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a03_q01_r0_c2" data-required="true" data-row="0" data-col="2" aria-label="Le schéma du prototype — Recevoir et communiquer — ">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
             
+            <details><summary>Un coup de pouce</summary><p>Ligne × colonne.</p></details>
             
             
         </div>
@@ -376,23 +428,79 @@
     </article>
     
     <article class="cours-activite" id="a04" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>4. Ce que tu retiens</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Défi</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
-        <p><strong>Pourquoi cette activité ?</strong> Tu termines en gardant une idée et une méthode pour la prochaine séance.</p>
-        <h3>Comment procéder ?</h3><ol><li>Relis les deux éléments à retenir.</li><li>Note une méthode que tu pourras réutiliser.</li></ol>
+        
 
         
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
+<p>Le récepteur pourrait aussi émettre un son quand la lumière est faible.</p>
+    
+
 
         
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Quel constituant ajouterais-tu, et quel bloc ?</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Bloc par bloc (réflexe n° 9).</p></details>
+            
+            
+        </div>
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a05" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Conclusion de ton travail</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> L’inventaire est fait. Il reste à répondre au problème de départ.</p>
+        
+        
+
+        
+
+        
+        
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : quels constituants faut-il ajouter au tracker pour qu’il communique ?</h3>
+            
+
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème (réflexe n° 3).</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -405,18 +513,39 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Une modification respecte la dimension demandée et conserve les parties utiles.</li><li>Pour vérifier, je compare une réponse ou un essai à une donnée précise.</li></ul>
-    <h3>Faire le point</h3><p>Je peux expliquer ce que j’ai appris et montrer une réponse ou un essai comme preuve.</p>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Inventaire du prototype : ce qu’on a, ce qui manque, choix argumenté.</li><li>Récepteur : deuxième micro:bit + alimentation.</li></ul>
+    
 </section>
 
+<section class="cours-sources course-info-card" aria-labelledby="course-sources-title"><h2 id="course-sources-title">Sources et ressources officielles</h2>
+<p><a href="https://www.education.gouv.fr/media/160767/download" target="_blank" rel="noopener noreferrer">Ministère de l’Éducation nationale — Programme de technologie du cycle 4 (BO n° 9 du 29 février 2024)</a></p>
 
+
+</section>
 
     <div class="course-submit-panel">
         <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
         <p id="course-submit-status" role="status" aria-live="polite"></p>
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    
+<section class="course-pix" id="course-pix" aria-labelledby="course-pix-title" data-etablissement="college" data-matiere="techno" data-classe="4e" data-seance="S43">
+    <h2 id="course-pix-title">Aujourd’hui, c’était une séance Pix ?</h2>
+    <p>Si ton professeur t’a fait travailler sur Pix à la place du cours, ta séance de technologie t’attend ici : tu la reprendras la prochaine fois, rien n’est perdu. Quand tu as fini sur Pix, clique sur le bouton pour le signaler.</p>
+    <details><summary>Que faire pendant une séance Pix ?</summary>
+        <ol>
+            <li>Ouvre Pix depuis l’ENT (ou sur pix.fr, « Se connecter »).</li>
+            <li>Saisis le code de campagne donné par ton professeur et vérifie ton prénom et ton nom.</li>
+            <li>Travaille seul et sérieusement : Pix sert à savoir où tu en es.</li>
+            <li>Ne recopie jamais ton mot de passe ni les réponses de Pix sur ce site.</li>
+        </ol>
+        <p><a href="https://pix.fr/" target="_blank" rel="noopener noreferrer">Ouvrir Pix</a></p>
+    </details>
+    <button type="button" id="course-pix-declare" disabled>J’ai fait ma séance Pix</button>
+    <p id="course-pix-status" role="status" aria-live="polite"></p>
+</section>
+
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>
@@ -436,6 +565,7 @@
 
 
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/pix-declaration.js"></script>
 
 
     </main>

@@ -19,7 +19,7 @@
 
     <title>
         
-        Pix : retrouver mon parcours et mon aide | BAC À SABLE — Portail pédagogique (comptes fictifs)
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
         
     </title>
 
@@ -63,7 +63,7 @@
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261029-steps-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261029-pix-1">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
@@ -95,7 +95,7 @@
 
 
 
-<div id="course-work" data-etablissement="college" data-matiere="techno" data-classe="4e" data-seance="S15" data-saving-enabled="false" data-collaboration-enabled="false">
+<div id="course-work" data-etablissement="college" data-matiere="techno" data-classe="4e" data-seance="S15" data-saving-enabled="true" data-collaboration-enabled="true">
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
         <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">1. Comprendre la mission</a></li><li><a href="#a02">2. À toi d’essayer</a></li><li><a href="#a03">3. Réutiliser la méthode</a></li><li><a href="#a04">4. Ce que tu retiens</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Construire</a></li><li><a href="#a02">Vérifier avec ping</a></li><li><a href="#a03">Ajouter un appareil</a></li><li><a href="#a04">Défi — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -134,24 +134,29 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Technologie · 4e · S15</span></div>
-    <h1>Pix : retrouver mon parcours et mon aide</h1>
+    <h1>Séance 15 : Construire un petit réseau en simulation</h1>
     
 
     
     
     <section class="course-info-card cours-theme">
         <h2>Thème du programme</h2>
-        <p>Word et recherche technique</p>
+        <p>Structure, fonctionnement, comportement : des objets et des systèmes techniques à comprendre</p>
     </section>
     
 
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Pix : retrouver mon parcours et mon aide</p>
+        <p>Comment construire, paramétrer et vérifier un petit réseau local ?</p>
     </section>
     
 
+    
+    <section class="course-info-card cours-competences-bo">
+        <h2>Compétences travaillées</h2>
+        <ul><li>Décrire et caractériser l’organisation interne d’un objet ou d’un système technique et ses échanges avec son environnement (énergies, données)</li><li>Valider les solutions techniques par des simulations ou par des protocoles de tests</li></ul>
+    </section>
     
 
     
@@ -161,7 +166,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Un parcours Pix est personnel ; son explication aide à apprendre une méthode.</li>
+            <li>Dans Filius, on place des ordinateurs et un commutateur, on les relie par des câbles, puis on donne une adresse IP à chaque ordinateur.</li>
+            
+            <li>La commande ping envoie un petit message à une adresse et attend une réponse : elle vérifie que deux appareils communiquent.</li>
             
         </ul>
         
@@ -169,43 +176,26 @@
         <h2>Ce que tu vas apprendre à faire</h2>
         <ul>
             
-            <li>Réaliser la campagne de rentrée ou le parcours indiqué, puis noter une méthode apprise sans recopier de réponse secrète.</li>
+            <li>Construire un réseau dans un simulateur.</li>
+            
+            <li>Paramétrer les adresses IP.</li>
+            
+            <li>Vérifier la communication avec ping.</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><p>Un parcours Pix est personnel ; son explication aide à apprendre une méthode.</p></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séances 13 et 14, tu as vu les équipements et les adresses.</p><p>Aujourd’hui, tu construis toi-même un réseau, dans le simulateur Filius.</p></div></section>
     
-    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Un document clair aide une autre personne à retrouver une information technique.</p></section>
-    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>Après Comment écrire une procédure que quelqu’un peut suivre ?, une nouvelle mission t’aide à réutiliser tes méthodes.</p></section>
-    <section class="course-info-card course-info-prerequisites"><h2>Ce qui va nous servir</h2><ul><li>Tu peux relire la séance précédente (Comment écrire une procédure que quelqu’un peut suivre ?) si nécessaire.</li></ul></section>
-    <section class="course-info-card cours-notions"><h2>Les repères pour comprendre</h2><h3>Un exemple expliqué</h3><p>Après une erreur dans Pix, je lis l’explication et note une méthode à réutiliser. Je garde mon mot de passe privé.</p></section>
     
-<p>Ce que tu vas apprendre : Un parcours Pix est personnel ; son explication aide à apprendre une méthode.</p>
     
-
-<p>Ce que tu vas apprendre à faire : Réaliser la campagne de rentrée ou le parcours indiqué, puis noter une méthode apprise sans recopier de réponse secrète.</p>
     
-
-<p>Dans la vie réelle : Un document clair aide une autre personne à retrouver une information technique.</p>
     
-
-
     
-    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
-<p>Programme de Technologie cycle 4 : cette séance travaille un parcours pix est personnel ; son explication aide à apprendre une méthode.. Elle contribue progressivement aux compétences de fin de cycle.</p>
     
-
-<p><a href="https://www.education.gouv.fr/bo/2024/Hebdo9/MENE2402802A" target="_blank" rel="noopener noreferrer">Ministère — Programme de Technologie du cycle 4, BO 2024</a></p>
-
-
-<p><a href="https://pix.fr/eleve/" target="_blank" rel="noopener noreferrer">Pix — Espace élève</a></p>
-
-
-</div></details>
-
+    
     
     <nav class="course-mission-controls course-intro-controls" aria-label="Commencer la séance"><a class="course-mission-next" href="#a01">J’ai compris l’objectif : commencer la première mission <span aria-hidden="true">→</span></a></nav>
 </header>
@@ -219,34 +209,104 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>1. Comprendre la mission</h2>
+        <h2>Construire</h2>
         
         
-        <p><strong>Pourquoi cette activité ?</strong> On commence par un exemple guidé : il montre une méthode avant que tu l’essaies.</p>
-        <h3>Comment procéder ?</h3><ol><li>Lis la situation.</li><li>Suis les étapes de l’exemple.</li><li>Repère la donnée qui aide à répondre.</li></ol>
+        
+        
 
         
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Après une erreur dans Pix, je lis l’explication et note une méthode à réutiliser. Je garde mon mot de passe privé.</p>
+<ol><li>Ouvre Filius (mode conception, icône du marteau).</li><li>Place trois ordinateurs et un commutateur.</li><li>Relie chaque ordinateur au commutateur avec un câble.</li><li>Double-clique sur chaque ordinateur et donne-lui une adresse : 192.168.1.1, 192.168.1.2, 192.168.1.3 (masque 255.255.255.0).</li></ol>
     
 
 
-        
+        <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
+<p><a href="https://www.lernsoftware-filius.de/Herunterladen" target="_blank" rel="noopener noreferrer">Filius — logiciel libre de simulation de réseau (site officiel)</a></p>
+
+
+</div></details>
+
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Que peux-tu noter après avoir lu une explication Pix ?</h3>
+            <h3 id="a01-q01-label">Question 1 — Recopie le paramétrage de tes ordinateurs.</h3>
             
 
             
             
-                <textarea id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Relis l’exemple et repère l’information qui répond à la question.</p></details>
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Ordinateur</th>
+                                
+                                <th>Adresse IP</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    PC 1
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Construire — Adresse IP — PC 1">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    PC 2
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Construire — Adresse IP — PC 2">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    PC 3
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Construire — Adresse IP — PC 3">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            <details><summary>Un coup de pouce</summary><p>Une case à la fois : la ligne croise la colonne (réflexe n° 6).</p></details>
             
             
         </div>
@@ -254,15 +314,15 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Explique ta réponse en citant une donnée ou un indice du cours.</h3>
+            <h3 id="a01-q02-label">Question 2 — Quel équipement relie tes trois ordinateurs ?</h3>
             
 
             
             
-                <textarea id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <select id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><option value="">Choisis une réponse</option><option value="a">Le commutateur.</option><option value="b">Le routeur.</option><option value="c">L’imprimante.</option></select>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Une ou deux phrases suffisent.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Élimine d’abord les réponses impossibles.</p></details>
             
             
         </div>
@@ -276,20 +336,22 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>2. À toi d’essayer</h2>
+        <h2>Vérifier avec ping</h2>
         
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Ton réseau est construit. Vérifie qu’il fonctionne.</p>
         
-        <p><strong>Pourquoi cette activité ?</strong> Tu as vu la méthode ; maintenant, applique-la dans une tâche que tu peux vérifier.</p>
-        <h3>Comment procéder ?</h3><ol><li>Réalise les étapes dans l’ordre.</li><li>Note le résultat attendu.</li><li>Compare-le au résultat observé.</li></ol>
-
-        
-        <p>Réaliser la campagne de rentrée ou le parcours indiqué, puis noter une méthode apprise sans recopier de réponse secrète.</p>
         
 
         
+
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
+<ol><li>Passe en mode simulation (icône du triangle vert).</li><li>Sur PC 1, installe le logiciel « Ligne de commande ».</li><li>Tape : ping 192.168.1.3 puis Entrée.</li><li>Observe les réponses et les câbles qui clignotent.</li></ol>
+    
+
+
         <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
-<p><a href="https://pix.fr/eleve/" target="_blank" rel="noopener noreferrer">Pix — Espace élève</a></p>
+<p><a href="https://www.lernsoftware-filius.de/Herunterladen" target="_blank" rel="noopener noreferrer">Filius — logiciel libre de simulation de réseau (site officiel)</a></p>
 
 
 </div></details>
@@ -298,7 +360,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Quel résultat observes-tu ? Décris ton essai.</h3>
+            <h3 id="a02-q01-label">Question 1 — Recopie ce qu’affiche Filius après le ping (au moins une ligne), et dis si les ordinateurs communiquent.</h3>
             
 
             
@@ -306,7 +368,7 @@
                 <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            
+            <details><summary>Un coup de pouce</summary><p>Une phrase complète qui reprend les mots de la question.</p></details>
             
             
         </div>
@@ -314,7 +376,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Explique ta réponse en citant une donnée ou un indice du cours.</h3>
+            <h3 id="a02-q02-label">Question 2 — Pendant le ping, quels câbles clignotent ? Que montre ce chemin ?</h3>
             
 
             
@@ -322,7 +384,7 @@
                 <textarea id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            
+            <details><summary>Un coup de pouce</summary><p>Une phrase complète qui reprend les mots de la question.</p></details>
             
             
         </div>
@@ -336,26 +398,31 @@
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>3. Réutiliser la méthode</h2>
+        <h2>Ajouter un appareil</h2>
         
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Ton réseau marche. Que se passe-t-il si on fait une erreur d’adresse ?</p>
         
-        <p><strong>Pourquoi cette activité ?</strong> Un nouvel exemple t’aide à voir où cette méthode peut encore servir.</p>
         
 
         
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Reprends la méthode avec une nouvelle valeur, un autre document ou une autre situation du dossier.</p>
+<p>Ajoute un quatrième ordinateur avec l’adresse 192.168.1.2 (déjà utilisée !), puis fais un ping vers 192.168.1.2.</p>
     
 
 
-        
+        <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
+<p><a href="https://www.lernsoftware-filius.de/Herunterladen" target="_blank" rel="noopener noreferrer">Filius — logiciel libre de simulation de réseau (site officiel)</a></p>
+
+
+</div></details>
+
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Quelle information permet de justifier ta conclusion ? Quelle limite reste à vérifier ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Que se passe-t-il ? Explique et propose une correction.</h3>
             
 
             
@@ -363,7 +430,7 @@
                 <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            
+            <details><summary>Un coup de pouce</summary><p>Une idée + « car » + une raison tirée de la séance.</p></details>
             
             
         </div>
@@ -376,23 +443,84 @@
     </article>
     
     <article class="cours-activite" id="a04" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>4. Ce que tu retiens</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Défi</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
-        <p><strong>Pourquoi cette activité ?</strong> Tu termines en gardant une idée et une méthode pour la prochaine séance.</p>
-        <h3>Comment procéder ?</h3><ol><li>Relis les deux éléments à retenir.</li><li>Note une méthode que tu pourras réutiliser.</li></ol>
+        
 
         
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
+<p>Dans Filius, on peut ajouter un serveur web.</p>
+    
+
+
+        <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
+<p><a href="https://www.lernsoftware-filius.de/Herunterladen" target="_blank" rel="noopener noreferrer">Filius — logiciel libre de simulation de réseau (site officiel)</a></p>
+
+
+</div></details>
 
         
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Installe un serveur web sur PC 3 et un navigateur sur PC 1. Que dois-tu taper dans le navigateur ?</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Une phrase complète qui reprend les mots de la question.</p></details>
+            
+            
+        </div>
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a05" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Conclusion de ton travail</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as construit et testé un réseau. Il reste à répondre au problème de départ.</p>
+        
+        
+
+        
+
+        
+        
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment construire, paramétrer et vérifier un petit réseau local ?</h3>
+            
+
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème et de « Ce que je retiens », avec un exemple de la séance.</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -405,18 +533,39 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Un parcours Pix est personnel ; son explication aide à apprendre une méthode.</li><li>Pour vérifier, je compare une réponse ou un essai à une donnée précise.</li></ul>
-    <h3>Faire le point</h3><p>Je peux expliquer ce que j’ai appris et montrer une réponse ou un essai comme preuve.</p>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Construire : ordinateurs + commutateur + câbles. Paramétrer : une adresse IP unique par ordinateur.</li><li>Vérifier : ping envoie un message et attend la réponse.</li></ul>
+    
 </section>
 
+<section class="cours-sources course-info-card" aria-labelledby="course-sources-title"><h2 id="course-sources-title">Sources et ressources officielles</h2>
+<p><a href="https://www.education.gouv.fr/media/160767/download" target="_blank" rel="noopener noreferrer">Ministère de l’Éducation nationale — Programme de technologie du cycle 4 (BO n° 9 du 29 février 2024)</a></p>
 
+
+</section>
 
     <div class="course-submit-panel">
         <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
         <p id="course-submit-status" role="status" aria-live="polite"></p>
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    
+<section class="course-pix" id="course-pix" aria-labelledby="course-pix-title" data-etablissement="college" data-matiere="techno" data-classe="4e" data-seance="S15">
+    <h2 id="course-pix-title">Aujourd’hui, c’était une séance Pix ?</h2>
+    <p>Si ton professeur t’a fait travailler sur Pix à la place du cours, ta séance de technologie t’attend ici : tu la reprendras la prochaine fois, rien n’est perdu. Quand tu as fini sur Pix, clique sur le bouton pour le signaler.</p>
+    <details><summary>Que faire pendant une séance Pix ?</summary>
+        <ol>
+            <li>Ouvre Pix depuis l’ENT (ou sur pix.fr, « Se connecter »).</li>
+            <li>Saisis le code de campagne donné par ton professeur et vérifie ton prénom et ton nom.</li>
+            <li>Travaille seul et sérieusement : Pix sert à savoir où tu en es.</li>
+            <li>Ne recopie jamais ton mot de passe ni les réponses de Pix sur ce site.</li>
+        </ol>
+        <p><a href="https://pix.fr/" target="_blank" rel="noopener noreferrer">Ouvrir Pix</a></p>
+    </details>
+    <button type="button" id="course-pix-declare" disabled>J’ai fait ma séance Pix</button>
+    <p id="course-pix-status" role="status" aria-live="polite"></p>
+</section>
+
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>
@@ -436,6 +585,7 @@
 
 
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/pix-declaration.js"></script>
 
 
     </main>

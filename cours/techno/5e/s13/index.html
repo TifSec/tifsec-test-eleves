@@ -63,7 +63,7 @@
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261029-steps-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261029-pix-1">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
@@ -265,7 +265,7 @@
                 <select id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><option value="">Choisis une réponse</option><option value="a">Pour les retrouver facilement.</option><option value="b">Pour qu’ils prennent moins de place.</option><option value="c">Pour qu’ils s’ouvrent plus vite.</option></select>
 
                 
-            
+            <details><summary>Un coup de pouce</summary><p>Élimine d’abord les réponses impossibles.</p></details>
             
             
         </div>
@@ -391,7 +391,7 @@
                     </table>
                 </div>
             
-            
+            <details><summary>Un coup de pouce</summary><p>Méthode : 1) clique dans la cellule du résultat ; 2) tape « = » puis le nom de la fonction (SOMME, MOYENNE…) ; 3) écris la plage entre parenthèses, par exemple (B2:B10) ; 4) appuie sur Entrée et vérifie que le résultat est vraisemblable.</p></details>
             
             
         </div>
@@ -441,7 +441,7 @@
                 <select id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label"><option value="">Choisis une réponse</option><option value="a">Seulement le professeur.</option><option value="b">Tous les élèves.</option><option value="c">Tout le monde sur Internet.</option></select>
 
                 
-            
+            <details><summary>Un coup de pouce</summary><p>Élimine d’abord les réponses impossibles.</p></details>
             
             
         </div>
@@ -457,7 +457,7 @@
                 <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            
+            <details><summary>Un coup de pouce</summary><p>Retrouve la phrase ou la ligne utile du document, puis commence par « D’après le document… ».</p></details>
             
             
         </div>
@@ -473,7 +473,7 @@
                 <textarea id="a03-q03" data-answer-id="a03_q03" data-required="true" aria-labelledby="a03-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            
+            <details><summary>Un coup de pouce</summary><p>Une idée + « car » + une raison tirée de la séance.</p></details>
             
             
         </div>
@@ -514,7 +514,7 @@
                 <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            
+            <details><summary>Un coup de pouce</summary><p>Une idée réaliste + « Cela permet de… ».</p></details>
             
             
         </div>
@@ -551,7 +551,7 @@
                 <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            
+            <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème et de « Ce que je retiens », avec un exemple de la séance.</p></details>
             
             
         </div>
@@ -586,6 +586,23 @@
         <p id="course-submit-status" role="status" aria-live="polite"></p>
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
+    
+<section class="course-pix" id="course-pix" aria-labelledby="course-pix-title" data-etablissement="college" data-matiere="techno" data-classe="5e" data-seance="S13">
+    <h2 id="course-pix-title">Aujourd’hui, c’était une séance Pix ?</h2>
+    <p>Si ton professeur t’a fait travailler sur Pix à la place du cours, ta séance de technologie t’attend ici : tu la reprendras la prochaine fois, rien n’est perdu. Quand tu as fini sur Pix, clique sur le bouton pour le signaler.</p>
+    <details><summary>Que faire pendant une séance Pix ?</summary>
+        <ol>
+            <li>Ouvre Pix depuis l’ENT (ou sur pix.fr, « Se connecter »).</li>
+            <li>Saisis le code de campagne donné par ton professeur et vérifie ton prénom et ton nom.</li>
+            <li>Travaille seul et sérieusement : Pix sert à savoir où tu en es.</li>
+            <li>Ne recopie jamais ton mot de passe ni les réponses de Pix sur ce site.</li>
+        </ol>
+        <p><a href="https://pix.fr/" target="_blank" rel="noopener noreferrer">Ouvrir Pix</a></p>
+    </details>
+    <button type="button" id="course-pix-declare" disabled>J’ai fait ma séance Pix</button>
+    <p id="course-pix-status" role="status" aria-live="polite"></p>
+</section>
+
     <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
@@ -606,6 +623,7 @@
 
 
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/pix-declaration.js"></script>
 
 
     </main>

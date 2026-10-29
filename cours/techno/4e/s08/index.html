@@ -63,7 +63,7 @@
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261029-steps-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261029-pix-1">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a02">Compétence visée</a></li><li><a href="#a04">Production attendue</a></li><li><a href="#a05">1. Créer votre document de travail</a></li><li><a href="#a06">2. Un symptôme suffit-il pour connaître la panne ?</a></li><li><a href="#a07">3. Du symptôme à la cause probable</a></li><li><a href="#a08">4. Une réparation est-elle possible ?</a></li><li><a href="#a09">5. Qu’est-ce qui rend un produit réparable ?</a></li><li><a href="#a10">6. Trois situations, trois décisions</a></li><li><a href="#a11">7. Réparer est-il toujours préférable ?</a></li><li><a href="#a12">8. Concevoir un robot plus facile à réparer</a></li><li><a href="#a13">9. Revenons à votre première décision</a></li><li><a href="#a14">10. Mettons des mots sur ce que nous avons découvert</a></li><li><a href="#a15">11. Conclusion</a></li><li><a href="#a16">12. Rendu de fin de séance</a></li><li><a href="#a17">Références pédagogiques</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Identifier ou authentifier ?</a></li><li><a href="#a02">Un mot de passe solide</a></li><li><a href="#a03">La double authentification</a></li><li><a href="#a04">Défi — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -134,24 +134,29 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Technologie · 4e · S08</span></div>
-    <h1>Faut-il réparer ou remplacer ?</h1>
+    <h1>Séance 8 : Comment protéger un compte ?</h1>
     
 
     
     
     <section class="course-info-card cours-theme">
         <h2>Thème du programme</h2>
-        <p>Les objets et les systèmes techniques : leurs usages et leurs interactions à découvrir et à analyser</p>
+        <p>Les objets et les systèmes techniques : leurs usages et leurs interactions à découvrir et analyser</p>
     </section>
     
 
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Faut-il réparer ou remplacer ?</p>
+        <p>Comment un site sait-il que c’est bien moi, et comment protéger mes comptes ?</p>
     </section>
     
 
+    
+    <section class="course-info-card cours-competences-bo">
+        <h2>Compétence travaillée</h2>
+        <ul><li>Décrire les liens entre usages et évolutions technologiques des objets et des systèmes techniques</li></ul>
+    </section>
     
 
     
@@ -161,13 +166,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Comprendre qu’un symptôme ne permet pas toujours d’identifier immédiatement la cause d’une panne.</li>
+            <li>L’identification dit qui je suis (identifiant) ; l’authentification le prouve (mot de passe, code reçu, empreinte).</li>
             
-            <li>Comprendre qu’une panne ne signifie pas forcément que l’objet doit être remplacé.</li>
-            
-            <li>Comprendre que la réparabilité dépend notamment du démontage, des pièces disponibles et de la documentation.</li>
-            
-            <li>Comprendre qu’une décision de réparation dépend de critères techniques, économiques et environnementaux.</li>
+            <li>La double authentification demande deux preuves différentes : quelque chose que je sais et quelque chose que j’ai (téléphone).</li>
             
         </ul>
         
@@ -175,59 +176,26 @@
         <h2>Ce que tu vas apprendre à faire</h2>
         <ul>
             
-            <li>analyser un symptôme ;</li>
+            <li>Distinguer identification et authentification.</li>
             
-            <li>proposer plusieurs causes possibles ;</li>
-            
-            <li>imaginer des vérifications simples avant de conclure ;</li>
-            
-            <li>comparer réparation et remplacement ;</li>
-            
-            <li>justifier une décision à partir de plusieurs critères.</li>
+            <li>Juger la solidité d’un mot de passe et proposer une méthode pour en créer un.</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><p>Objectif de cette séance : Comprendre qu’un symptôme ne permet pas toujours d’identifier immédiatement la cause d’une panne.</p></section>
-    
-    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Les situations et les valeurs suivantes sont fictives et simplifiées pour l’activité pédagogique.</p></section>
-    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En 5e, tu as vu ce qu’est un mot de passe solide et comment repérer l’hameçonnage.</p><p>En 4e, tu vas plus loin : comment le site vérifie qui tu es, et comment ajouter une deuxième protection.</p></div></section>
     
     
     
-<p>Problématique : Comment décider s’il vaut mieux réparer un objet en panne ou le remplacer ?</p>
     
-
-<h4>Objectifs d’apprentissage</h4>
     
-
-<p>Ce que vous allez apprendre :</p>
     
-
-<ul><li>Comprendre qu’un symptôme ne permet pas toujours d’identifier immédiatement la cause d’une panne.</li><li>Comprendre qu’une panne ne signifie pas forcément que l’objet doit être remplacé.</li><li>Comprendre que la réparabilité dépend notamment du démontage, des pièces disponibles et de la documentation.</li><li>Comprendre qu’une décision de réparation dépend de critères techniques, économiques et environnementaux.</li></ul>
     
-
-<p>Ce que vous allez apprendre à faire :</p>
     
-
-<ul><li>analyser un symptôme ;</li><li>proposer plusieurs causes possibles ;</li><li>imaginer des vérifications simples avant de conclure ;</li><li>comparer réparation et remplacement ;</li><li>justifier une décision à partir de plusieurs critères.</li></ul>
     
-
-
-    
-    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
-<p>Dans cette page du ministère, retrouve le programme ou le référentiel de ta formation. Les objectifs précis étudiés aujourd’hui sont indiqués dans le cours.</p>
-    
-
-<p><a href="https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4" target="_blank" rel="noopener noreferrer">Consulter les programmes et attendus officiels</a></p>
-
-
-</div></details>
-
-    
-    <nav class="course-mission-controls course-intro-controls" aria-label="Commencer la séance"><a class="course-mission-next" href="#a02">J’ai compris l’objectif : commencer la première mission <span aria-hidden="true">→</span></a></nav>
+    <nav class="course-mission-controls course-intro-controls" aria-label="Commencer la séance"><a class="course-mission-next" href="#a01">J’ai compris l’objectif : commencer la première mission <span aria-hidden="true">→</span></a></nav>
 </header>
 
 
@@ -237,9 +205,9 @@
 
 <section class="cours-activites">
     
-    <article class="cours-activite" id="a02" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>Compétence visée</h2>
+    <article class="cours-activite" id="a01" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Identifier ou authentifier ?</h2>
         
         
         
@@ -249,106 +217,7 @@
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Analyser les choix liés à la durée de vie, à la maintenance et à la réparabilité d’un objet ou d’un système technique.</p>
-    
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#course-intro">← Revoir l’objectif</a>
-            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a04" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>Production attendue</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Vous devez produire un document LibreOffice Writer contenant votre première décision, une démarche de diagnostic, l’analyse de trois situations, une recherche sur la réparabilité et une conclusion argumentée.</p>
-    
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a02">← Étape précédente</a>
-            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a05" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>1. Créer votre document de travail</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Créez dès maintenant un document LibreOffice Writer nommé :</p>
-    
-
-<p>4e_S8_nom.odt</p>
-    
-
-<p>Remplacez nom par votre nom.</p>
-    
-
-<p>Indiquez :</p>
-    
-
-<ul><li>votre nom et votre prénom ;</li><li>la date ;</li><li>le titre : Séance 8 : Faut-il réparer ou remplacer ?</li></ul>
-    
-
-<p>Votre document doit permettre de comprendre non seulement votre décision finale, mais aussi comment vous êtes arrivé à cette décision.</p>
-    
-
-<p>Le fichier devra être rendu en fin d’heure, même s’il n’est pas terminé.</p>
-    
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a04">← Étape précédente</a>
-            <a class="course-mission-next" href="#a06">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a06" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>2. Un symptôme suffit-il pour connaître la panne ?</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Votre robot aspirateur a trois ans.</p>
-    
-
-<p>Lorsqu’il est complètement chargé, il fonctionne maintenant seulement environ 15 minutes, alors qu’il fonctionnait beaucoup plus longtemps auparavant.</p>
-    
-
-<p>Sans rechercher sur Internet, répondez :</p>
+<p>Exemple expliqué : sur le site de cours, ton adresse e-mail t’identifie (elle dit qui tu prétends être) ; ton mot de passe t’authentifie (il prouve que c’est bien toi).</p>
     
 
 
@@ -357,353 +226,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a06-q01-label">Question 1 — Quel est le symptôme observé ?</h3>
-            
-
-            
-            
-                <textarea id="a06-q01" data-answer-id="a06_q01" data-required="true" aria-labelledby="a06-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a06-q02-label">Question 2 — Quelle cause vous semble la plus probable ?</h3>
-            
-
-            
-            
-                <textarea id="a06-q02" data-answer-id="a06_q02" data-required="true" aria-labelledby="a06-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-
-        </div>
-        
-        <div class="cours-question" data-question="q03">
-            
-            
-            <h3 id="a06-q03-label">Question 3 — Existe-t-il d’autres causes possibles ? Donnez-en au moins une.</h3>
-            
-
-            
-            
-                <textarea id="a06-q03" data-answer-id="a06_q03" data-required="true" aria-labelledby="a06-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-
-        </div>
-        
-        <div class="cours-question" data-question="q04">
-            
-            
-            <h3 id="a06-q04-label">Question 4 — Que faudrait-il vérifier avant d’acheter une nouvelle batterie ?</h3>
-            
-
-            
-            
-                <textarea id="a06-q04" data-answer-id="a06_q04" data-required="true" aria-labelledby="a06-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-<p>Terminez par une première décision :</p>
-    
-
-<p>À ce stade, je choisirais de... parce que...</p>
-    
-
-<h4>Besoin d’un indice ?</h4>
-    
-
-<p>Pensez à la batterie, mais aussi à la recharge, aux contacts électriques, au chargeur ou à l’utilisation de l’appareil.</p>
-    
-
-
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a05">← Étape précédente</a>
-            <a class="course-mission-next" href="#a07">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a07" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 5</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>3. Du symptôme à la cause probable</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Une démarche de diagnostic peut être organisée ainsi :</p>
-    
-
-<p>Symptôme → causes possibles → vérifications → causes éliminées → cause probable → intervention → nouveau test</p>
-    
-
-<p>Appliquez cette méthode au problème précédent.</p>
-    
-
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a07-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
-            
-
-            
-            
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Étape</th>
-                                
-                                <th>Votre proposition</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Symptôme observé
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a07_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="3. Du symptôme à la cause probable — Votre proposition — Symptôme observé">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Cause possible 1
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a07_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="3. Du symptôme à la cause probable — Votre proposition — Cause possible 1">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Cause possible 2
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a07_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="3. Du symptôme à la cause probable — Votre proposition — Cause possible 2">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Vérification à effectuer
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a07_q01_r3_c1" data-required="true" data-row="3" data-col="1" aria-label="3. Du symptôme à la cause probable — Votre proposition — Vérification à effectuer">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Cause probable si la vérification confirme l’hypothèse
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a07_q01_r4_c1" data-required="true" data-row="4" data-col="1" aria-label="3. Du symptôme à la cause probable — Votre proposition — Cause probable si la vérification confirme l’hypothèse">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Intervention possible
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a07_q01_r5_c1" data-required="true" data-row="5" data-col="1" aria-label="3. Du symptôme à la cause probable — Votre proposition — Intervention possible">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Test après intervention
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a07_q01_r6_c1" data-required="true" data-row="6" data-col="1" aria-label="3. Du symptôme à la cause probable — Votre proposition — Test après intervention">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            
-            
-            
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a06">← Étape précédente</a>
-            <a class="course-mission-next" href="#a08">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a08" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 6</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>4. Une réparation est-elle possible ?</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Une cause probable ne suffit pas : il faut aussi savoir si la pièce peut être remplacée.</p>
-    
-
-<p>Consultez : iFixit – Pièces détachées pour robots Roomba .</p>
-    
-
-<p><a href="https://www.ifixit.com/fr-fr/Parts/Roomba" target="_blank" rel="noopener noreferrer">iFixit – Pièces détachées pour robots Roomba</a></p>
-
-
-<p>Recherchez :</p>
-    
-
-<ol><li>au moins trois types de pièces disponibles ;</li><li>un exemple de batterie ;</li><li>un exemple de roue ou de roulette ;</li><li>le prix de deux pièces de votre choix.</li></ol>
-    
-
-<p>Attention : la disponibilité et le prix des pièces dépendent du modèle et peuvent évoluer.</p>
-    
-
-<p>Répondez ensuite :</p>
-    
-
-<p>Pourquoi la disponibilité d’une pièce détachée peut-elle modifier la décision de réparer ou remplacer ?</p>
-    
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a07">← Étape précédente</a>
-            <a class="course-mission-next" href="#a09">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a09" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 7</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>5. Qu’est-ce qui rend un produit réparable ?</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>La réparabilité ne dépend pas uniquement de la présence d’une pièce détachée.</p>
-    
-
-<p>Consultez : Ministère de la Transition écologique – Indice de réparabilité .</p>
-    
-
-<p><a href="https://www.ecologie.gouv.fr/politiques-publiques/indice-reparabilite" target="_blank" rel="noopener noreferrer">Ministère de la Transition écologique – Indice de réparabilité</a></p>
-
-
-<p>Les aspirateurs font partie des catégories concernées par l’indice de réparabilité.</p>
-    
-
-<p>Relevez dans la ressource quatre éléments utilisés pour évaluer la réparabilité d’un produit.</p>
-    
-
-<p>Puis classez-les dans le tableau :</p>
-    
-
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a09-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
+            <h3 id="a01-q01-label">Question 1 — Pour chaque élément, écris « identification » ou « authentification ».</h3>
             
 
             
@@ -715,7 +238,7 @@
                                 
                                 <th>Élément</th>
                                 
-                                <th>Pourquoi facilite-t-il ou limite-t-il une réparation ?</th>
+                                <th>Rôle</th>
                                 
                             </tr>
                         </thead>
@@ -726,30 +249,13 @@
                                 
                                 <td>
                                     
-                                    Documentation
+                                    Nom d’utilisateur
                                     
                                 </td>
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a09_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="5. Qu’est-ce qui rend un produit réparable ? — Pourquoi facilite-t-il ou limite-t-il une réparation ? — Documentation">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Démontabilité
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a09_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="5. Qu’est-ce qui rend un produit réparable ? — Pourquoi facilite-t-il ou limite-t-il une réparation ? — Démontabilité">
+                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Identifier ou authentifier ? — Rôle — Nom d’utilisateur">
                                     
                                 </td>
                                 
@@ -760,13 +266,13 @@
                                 
                                 <td>
                                     
-                                    Disponibilité des pièces
+                                    Mot de passe
                                     
                                 </td>
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a09_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="5. Qu’est-ce qui rend un produit réparable ? — Pourquoi facilite-t-il ou limite-t-il une réparation ? — Disponibilité des pièces">
+                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Identifier ou authentifier ? — Rôle — Mot de passe">
                                     
                                 </td>
                                 
@@ -777,13 +283,30 @@
                                 
                                 <td>
                                     
-                                    Prix des pièces
+                                    Code reçu par SMS
                                     
                                 </td>
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a09_q01_r3_c1" data-required="true" data-row="3" data-col="1" aria-label="5. Qu’est-ce qui rend un produit réparable ? — Pourquoi facilite-t-il ou limite-t-il une réparation ? — Prix des pièces">
+                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Identifier ou authentifier ? — Rôle — Code reçu par SMS">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Empreinte digitale
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r3_c1" data-required="true" data-row="3" data-col="1" aria-label="Identifier ou authentifier ? — Rôle — Empreinte digitale">
                                     
                                 </td>
                                 
@@ -793,23 +316,23 @@
                     </table>
                 </div>
             
-            
+            <details><summary>Un coup de pouce</summary><p>Une case à la fois : la ligne croise la colonne (réflexe n° 6).</p></details>
             
             
         </div>
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a08">← Étape précédente</a>
-            <a class="course-mission-next" href="#a10">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+            <a class="course-mission-back" href="#course-intro">← Revoir l’objectif</a>
+            <a class="course-mission-next" href="#a02">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a10" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 8</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>6. Trois situations, trois décisions</h2>
+    <article class="cours-activite" id="a02" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Un mot de passe solide</h2>
         
-        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais comment le site te reconnaît. Le mot de passe reste la première protection.</p>
         
         
 
@@ -817,28 +340,10 @@
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Les situations et les valeurs suivantes sont fictives et simplifiées pour l’activité pédagogique.</p>
+<p>Méthode des phrases : on choisit une phrase facile à retenir et on garde la première lettre de chaque mot, avec les chiffres et la ponctuation. « Mon chat Tigrou a 3 ans et adore le lait ! » → « McTa3aeall! »</p>
     
 
-<h4>Cas A : autonomie fortement réduite</h4>
-    
-
-<ul><li>robot âgé de 3 ans ;</li><li>bon état général ;</li><li>batterie diagnostiquée comme usée ;</li><li>batterie compatible disponible : 60 € ;</li><li>robot neuf équivalent : 320 € ;</li><li>remplacement de la batterie relativement simple.</li></ul>
-    
-
-<h4>Cas B : roue motrice défectueuse</h4>
-    
-
-<ul><li>robot âgé de 5 ans ;</li><li>batterie encore correcte ;</li><li>module de roue diagnostiqué comme défectueux ;</li><li>module disponible : 45 € ;</li><li>robot neuf équivalent : 350 € ;</li><li>appareil en état général correct.</li></ul>
-    
-
-<h4>Cas C : plusieurs éléments usés</h4>
-    
-
-<ul><li>robot âgé de 8 ans ;</li><li>carte électronique diagnostiquée comme défaillante ;</li><li>carte difficile à trouver : environ 160 € ;</li><li>batterie très usée ;</li><li>brosses également à remplacer ;</li><li>robot neuf équivalent : environ 250 €.</li></ul>
-    
-
-<p>Pour chaque cas, complétez :</p>
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1</caption><thead><tr><th scope="col">Mot de passe</th><th scope="col">Longueur</th><th scope="col">Types de caractères</th></tr></thead><tbody><tr><td>soleil</td><td>6</td><td>minuscules</td></tr><tr><td>Soleil2012</td><td>10</td><td>minuscules, majuscule, chiffres</td></tr><tr><td>McTa3aeall!</td><td>11</td><td>minuscules, majuscules, chiffre, symbole</td></tr></tbody></table></div>
     
 
 
@@ -847,267 +352,103 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a10-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
+            <h3 id="a02-q01-label">Question 1 — D’après le document 1, quel mot de passe est le plus solide ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Cas</th>
-                                
-                                <th>Réparation envisagée</th>
-                                
-                                <th>Coût approximatif</th>
-                                
-                                <th>État général</th>
-                                
-                                <th>Durée supplémentaire espérée</th>
-                                
-                                <th>Décision</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    A
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a10_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="6. Trois situations, trois décisions — Réparation envisagée — A">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a10_q01_r0_c2" data-required="true" data-row="0" data-col="2" aria-label="6. Trois situations, trois décisions — Coût approximatif — A">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a10_q01_r0_c3" data-required="true" data-row="0" data-col="3" aria-label="6. Trois situations, trois décisions — État général — A">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a10_q01_r0_c4" data-required="true" data-row="0" data-col="4" aria-label="6. Trois situations, trois décisions — Durée supplémentaire espérée — A">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a10_q01_r0_c5" data-required="true" data-row="0" data-col="5" aria-label="6. Trois situations, trois décisions — Décision — A">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    B
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a10_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="6. Trois situations, trois décisions — Réparation envisagée — B">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a10_q01_r1_c2" data-required="true" data-row="1" data-col="2" aria-label="6. Trois situations, trois décisions — Coût approximatif — B">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a10_q01_r1_c3" data-required="true" data-row="1" data-col="3" aria-label="6. Trois situations, trois décisions — État général — B">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a10_q01_r1_c4" data-required="true" data-row="1" data-col="4" aria-label="6. Trois situations, trois décisions — Durée supplémentaire espérée — B">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a10_q01_r1_c5" data-required="true" data-row="1" data-col="5" aria-label="6. Trois situations, trois décisions — Décision — B">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    C
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a10_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="6. Trois situations, trois décisions — Réparation envisagée — C">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a10_q01_r2_c2" data-required="true" data-row="2" data-col="2" aria-label="6. Trois situations, trois décisions — Coût approximatif — C">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a10_q01_r2_c3" data-required="true" data-row="2" data-col="3" aria-label="6. Trois situations, trois décisions — État général — C">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a10_q01_r2_c4" data-required="true" data-row="2" data-col="4" aria-label="6. Trois situations, trois décisions — Durée supplémentaire espérée — C">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a10_q01_r2_c5" data-required="true" data-row="2" data-col="5" aria-label="6. Trois situations, trois décisions — Décision — C">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            
-            
-            
-<p>Pour chaque décision, donnez au moins deux arguments.</p>
-    
-
-
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a09">← Étape précédente</a>
-            <a class="course-mission-next" href="#a11">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a11" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 9</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>7. Réparer est-il toujours préférable ?</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Reprenez le cas C.</p>
-    
-
-<p>Imaginez maintenant que la carte électronique soit disponible pour seulement 30 €.</p>
-    
-
-<p>Répondez :</p>
-    
-
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a11-q01-label">Question 1 — Votre décision changerait-elle automatiquement ?</h3>
-            
-
-            
-            
-                <textarea id="a11-q01" data-answer-id="a11_q01" data-required="true" aria-labelledby="a11-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <select id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label"><option value="">Choisis une réponse</option><option value="a">McTa3aeall!</option><option value="b">Soleil2012</option><option value="c">soleil</option></select>
 
                 
+            <details><summary>Un coup de pouce</summary><p>Élimine d’abord les réponses impossibles.</p></details>
             
             
-            
-
         </div>
         
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a11-q02-label">Question 2 — Quels autres éléments devriez-vous encore prendre en compte ?</h3>
+            <h3 id="a02-q02-label">Question 2 — Invente une phrase et transforme-la en mot de passe avec la méthode (n’utilise pas un vrai mot de passe !).</h3>
             
 
             
             
-                <textarea id="a11-q02" data-answer-id="a11_q02" data-required="true" aria-labelledby="a11-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-
-        </div>
-        
-        <div class="cours-question" data-question="q03">
-            
-            
-            <h3 id="a11-q03-label">Question 3 — Pourquoi le prix de la pièce ne suffit-il pas pour décider ?</h3>
-            
-
-            
-            
-                <textarea id="a11-q03" data-answer-id="a11_q03" data-required="true" aria-labelledby="a11-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
+            <details><summary>Un coup de pouce</summary><p>Une idée réaliste + « Cela permet de… ».</p></details>
             
             
-            
-<h4>Besoin d’un indice ?</h4>
-    
-
-<p>Pensez à l’âge du robot, à la batterie, aux autres composants usés, au temps de réparation et à la durée d’utilisation supplémentaire espérée.</p>
-    
-
-
         </div>
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a10">← Étape précédente</a>
-            <a class="course-mission-next" href="#a12">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+            <a class="course-mission-back" href="#a01">← Étape précédente</a>
+            <a class="course-mission-next" href="#a03">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a12" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 10</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>8. Concevoir un robot plus facile à réparer</h2>
+    <article class="cours-activite" id="a03" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>La double authentification</h2>
         
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Un mot de passe peut être volé. Il existe une deuxième protection.</p>
+        
+        
+
+        
+
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
+        
+<p>Avec la double authentification, après le mot de passe, le site envoie un code sur ton téléphone, valable quelques minutes.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a03-q01-label">Question 1 — Un pirate a volé ton mot de passe. Explique pourquoi la double authentification l’empêche quand même d’entrer.</h3>
+            
+
+            
+            
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Une idée + « car » + une raison tirée de la séance.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a03-q02-label">Question 2 — Quelqu’un t’appelle en disant travailler pour le site et te demande le code reçu par SMS. Que fais-tu ?</h3>
+            
+
+            
+            
+                <select id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label"><option value="">Choisis une réponse</option><option value="a">Je ne donne jamais ce code et je raccroche.</option><option value="b">Je le donne car il travaille pour le site.</option><option value="c">Je donne seulement la moitié du code.</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Élimine d’abord les réponses impossibles.</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a02">← Étape précédente</a>
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a04" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Défi</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
         
@@ -1116,209 +457,68 @@
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Imaginez maintenant une nouvelle génération de robot aspirateur conçue pour pouvoir être utilisée longtemps.</p>
-    
-
-<p>Proposez deux améliorations qui faciliteraient son entretien ou sa réparation.</p>
-    
-
-<p>Pour chacune :</p>
-    
-
-<ul><li>Modification proposée : ...</li><li>Pièce ou partie concernée : ...</li><li>Pourquoi la réparation serait plus facile : ...</li><li>Nouvelle contrainte possible : ...</li></ul>
-    
-
-<p>Vous pouvez vous appuyer sur les critères de l’indice de réparabilité étudiés précédemment.</p>
+<p>Un gestionnaire de mots de passe retient tous tes mots de passe derrière un seul mot de passe maître.</p>
     
 
 
         
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Quel est l’avantage et le risque d’un gestionnaire de mots de passe ?</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Une phrase complète qui reprend les mots de la question.</p></details>
+            
+            
+        </div>
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a11">← Étape précédente</a>
-            <a class="course-mission-next" href="#a13">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a13" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 11</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>9. Revenons à votre première décision</h2>
+    <article class="cours-activite" id="a05" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Conclusion de ton travail</h2>
         
-        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as compris comment un compte est protégé. Il reste à répondre au problème de départ.</p>
         
         
 
         
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Reprenez votre réponse de la partie 2.</p>
-    
-
-<p>Complétez :</p>
-    
-
-<ul><li>Ma première décision était : ...</li><li>Maintenant, je choisirais : ...</li><li>Ma réponse a changé / n’a pas changé parce que : ...</li><li>Les trois critères qui me semblent les plus importants sont : ...</li></ul>
-    
-
-<p>Changer d’avis après avoir obtenu de nouvelles informations fait partie du raisonnement technique.</p>
-    
-
-
         
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment un site sait-il que c’est bien toi, et comment protéger tes comptes ?</h3>
+            
+
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème et de « Ce que je retiens », avec un exemple de la séance.</p></details>
+            
+            
+        </div>
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a12">← Étape précédente</a>
-            <a class="course-mission-next" href="#a14">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a14" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 12</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>10. Mettons des mots sur ce que nous avons découvert</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Un symptôme est ce que l’on observe lorsqu’un système ne fonctionne pas normalement.</p>
-    
-
-<p>Le diagnostic consiste à rechercher la cause probable du dysfonctionnement à l’aide d’observations et de vérifications.</p>
-    
-
-<p>La maintenance regroupe les opérations permettant de conserver ou de remettre un objet en état de fonctionner.</p>
-    
-
-<p>La réparabilité dépend notamment :</p>
-    
-
-<ul><li>de la possibilité de diagnostiquer la panne ;</li><li>de la facilité de démontage ;</li><li>de la documentation disponible ;</li><li>de la disponibilité des pièces ;</li><li>du prix des pièces.</li></ul>
-    
-
-<p>Pour décider de réparer ou remplacer, il faut également prendre en compte :</p>
-    
-
-<ul><li>l’état général et l’âge du produit ;</li><li>le coût de la réparation ;</li><li>la difficulté ou la sécurité de l’intervention ;</li><li>la durée d’utilisation supplémentaire espérée ;</li><li>les conséquences liées au remplacement de l’appareil.</li></ul>
-    
-
-<p>Une panne ne signifie donc pas automatiquement qu’il faut remplacer l’objet, mais réparer n’est pas non plus toujours la solution la plus pertinente.</p>
-    
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a13">← Étape précédente</a>
-            <a class="course-mission-next" href="#a15">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a15" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 13</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>11. Conclusion</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Rédigez quelques phrases pour répondre à la problématique :</p>
-    
-
-<p>Comment décider s’il vaut mieux réparer un objet en panne ou le remplacer ?</p>
-    
-
-<p>Votre conclusion doit expliquer :</p>
-    
-
-<ul><li>pourquoi il faut commencer par diagnostiquer la panne ;</li><li>pourquoi le prix n’est pas le seul critère ;</li><li>pourquoi la réparabilité du produit est importante ;</li><li>pourquoi la décision dépend de la situation.</li></ul>
-    
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a14">← Étape précédente</a>
-            <a class="course-mission-next" href="#a16">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a16" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 14</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>12. Rendu de fin de séance</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>À la fin du cours, votre fichier doit être rendu, même s’il n’est pas terminé.</p>
-    
-
-<p>Déposez :</p>
-    
-
-<p>4e_S8_nom.odt</p>
-    
-
-<p>Avant de le rendre, vérifiez :</p>
-    
-
-<ul><li>votre nom, la date et le titre ;</li><li>votre démarche de diagnostic ;</li><li>les informations relevées dans les sources ;</li><li>votre tableau des trois situations ;</li><li>vos décisions et leurs justifications ;</li><li>la comparaison entre votre première et votre dernière décision ;</li><li>votre conclusion.</li></ul>
-    
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a15">← Étape précédente</a>
-            <a class="course-mission-next" href="#a17">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a17" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 15</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>Références pédagogiques</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<ul><li>Ministère de l’Éducation nationale – Programme de technologie du cycle 4, BO n°9 du 29 février 2024</li><li>Éduscol STI – Guide d’accompagnement du programme de technologie au cycle 4</li></ul>
-    
-
-<p><a href="https://www.education.gouv.fr/bo/2024/Hebdo9/MENE2402802A" target="_blank" rel="noopener noreferrer">Ministère de l’Éducation nationale – Programme de technologie du cycle 4, BO n°9 du 29 février 2024</a></p>
-
-
-<p><a href="https://sti.eduscol.education.fr/textes/guide-daccompagnement-du-programme-de-technologie-en-cycle-4-mai-2024" target="_blank" rel="noopener noreferrer">Éduscol STI – Guide d’accompagnement du programme de technologie au cycle 4</a></p>
-
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a16">← Étape précédente</a>
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -1331,18 +531,39 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">Faire le point</h2>
-    <p>Relis tes réponses et vérifie les points demandés dans le bilan du cours. Tu peux revenir sur ton travail tant que le professeur ne l’a pas clôturé.</p>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Identifier (qui je suis) ≠ authentifier (je le prouve).</li><li>Double authentification : deux preuves ; on ne donne jamais un code reçu.</li></ul>
+    
 </section>
 
+<section class="cours-sources course-info-card" aria-labelledby="course-sources-title"><h2 id="course-sources-title">Sources et ressources officielles</h2>
+<p><a href="https://www.education.gouv.fr/media/160767/download" target="_blank" rel="noopener noreferrer">Ministère de l’Éducation nationale — Programme de technologie du cycle 4 (BO n° 9 du 29 février 2024)</a></p>
 
+
+</section>
 
     <div class="course-submit-panel">
         <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
         <p id="course-submit-status" role="status" aria-live="polite"></p>
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a17">← Étape précédente</a></nav>
+    
+<section class="course-pix" id="course-pix" aria-labelledby="course-pix-title" data-etablissement="college" data-matiere="techno" data-classe="4e" data-seance="S08">
+    <h2 id="course-pix-title">Aujourd’hui, c’était une séance Pix ?</h2>
+    <p>Si ton professeur t’a fait travailler sur Pix à la place du cours, ta séance de technologie t’attend ici : tu la reprendras la prochaine fois, rien n’est perdu. Quand tu as fini sur Pix, clique sur le bouton pour le signaler.</p>
+    <details><summary>Que faire pendant une séance Pix ?</summary>
+        <ol>
+            <li>Ouvre Pix depuis l’ENT (ou sur pix.fr, « Se connecter »).</li>
+            <li>Saisis le code de campagne donné par ton professeur et vérifie ton prénom et ton nom.</li>
+            <li>Travaille seul et sérieusement : Pix sert à savoir où tu en es.</li>
+            <li>Ne recopie jamais ton mot de passe ni les réponses de Pix sur ce site.</li>
+        </ol>
+        <p><a href="https://pix.fr/" target="_blank" rel="noopener noreferrer">Ouvrir Pix</a></p>
+    </details>
+    <button type="button" id="course-pix-declare" disabled>J’ai fait ma séance Pix</button>
+    <p id="course-pix-status" role="status" aria-live="polite"></p>
+</section>
+
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>
@@ -1362,6 +583,7 @@
 
 
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/pix-declaration.js"></script>
 
 
     </main>

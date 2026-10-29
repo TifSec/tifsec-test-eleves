@@ -63,7 +63,7 @@
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261029-steps-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261029-pix-1">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a05">Production attendue</a></li><li><a href="#a06">1. Préparez votre document de travail</a></li><li><a href="#a07">2. Comment les ordinateurs du collège peuvent-ils communiquer ?</a></li><li><a href="#a08">3. Comment savoir à quelle machine envoyer les données ?</a></li><li><a href="#a09">4. Que se passe-t-il lorsque deux ordinateurs communiquent dans la même salle ?</a></li><li><a href="#a10">5. Et si la destination se trouve dans un autre réseau ?</a></li><li><a href="#a11">6. Deux réseaux différents</a></li><li><a href="#a12">7. Une donnée traverse-t-elle toujours un seul routeur ?</a></li><li><a href="#a13">8. Attention aux représentations trop simples</a></li><li><a href="#a14">9. Mini-question type DNB</a></li><li><a href="#a15">10. Conclusion du travail</a></li><li><a href="#a16">Rendu attendu</a></li><li><a href="#a17">À retenir</a></li><li><a href="#a18">Sources générales</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Le chemin</a></li><li><a href="#a02">Les paquets</a></li><li><a href="#a03">Un réseau de réseaux</a></li><li><a href="#a04">Défi — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -134,7 +134,7 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Technologie · 3e · S08</span></div>
-    <h1>Comment une information circule-t-elle dans un réseau ?</h1>
+    <h1>Séance 8 : Quel chemin suit mon message ?</h1>
     
 
     
@@ -148,10 +148,15 @@
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Comment une donnée sait-elle où aller lorsqu&#39;elle circule dans un réseau informatique ?</p>
+        <p>Par où passe un message envoyé à un ami à l’autre bout de la France ?</p>
     </section>
     
 
+    
+    <section class="course-info-card cours-competences-bo">
+        <h2>Compétence travaillée</h2>
+        <ul><li>Décrire et caractériser l’organisation interne d’un objet ou d’un système technique et ses échanges avec son environnement (énergies, données)</li></ul>
+    </section>
     
 
     
@@ -161,64 +166,36 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Un réseau informatique permet à plusieurs équipements de communiquer et d&#39;échanger des données.</li>
+            <li>Internet est un réseau de réseaux : un message part du téléphone, passe par le réseau local (box ou antenne), puis par des routeurs de fournisseurs d’accès, jusqu’au serveur de l’application, puis jusqu’au destinataire.</li>
             
-            <li>Un réseau local comporte des terminaux, des équipements de communication et des liaisons.</li>
-            
-            <li>Chaque interface réseau doit pouvoir être identifiée.</li>
-            
-            <li>Une adresse IP permet d&#39;identifier une interface dans un réseau utilisant le protocole IP.</li>
-            
-            <li>Un commutateur relie les équipements d&#39;un même réseau local.</li>
-            
-            <li>Un routeur permet de faire communiquer plusieurs réseaux.</li>
-            
-            <li>Internet est constitué d&#39;un grand nombre de réseaux interconnectés.</li>
+            <li>Le message est découpé en paquets qui peuvent prendre des chemins différents ; ils sont rassemblés à l’arrivée.</li>
             
         </ul>
         
         
+        <h2>Ce que tu vas apprendre à faire</h2>
+        <ul>
+            
+            <li>Représenter la circulation d’une information sur Internet.</li>
+            
+            <li>Expliquer le découpage en paquets.</li>
+            
+        </ul>
+        
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><p>Objectif de cette séance : Un réseau informatique permet à plusieurs équipements de communiquer et d&#39;échanger des données.</p></section>
-    
-    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
-    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En 4e, tu as étudié le réseau local du collège.</p><p>En 3e, tu sors du collège : comment un message traverse-t-il Internet ?</p></div></section>
     
     
     
-<h4>Compétence visée : Identifier les éléments d&#39;un réseau et expliquer simplement la circulation des données</h4>
     
-
-<h4>Objectifs d’apprentissage</h4>
     
-
-<p>Ce que les élèves vont apprendre :</p>
     
-
-<ul><li>Un réseau informatique permet à plusieurs équipements de communiquer et d&#39;échanger des données.</li><li>Un réseau local comporte des terminaux, des équipements de communication et des liaisons.</li><li>Chaque interface réseau doit pouvoir être identifiée.</li><li>Une adresse IP permet d&#39;identifier une interface dans un réseau utilisant le protocole IP.</li><li>Un commutateur relie les équipements d&#39;un même réseau local.</li><li>Un routeur permet de faire communiquer plusieurs réseaux.</li><li>Internet est constitué d&#39;un grand nombre de réseaux interconnectés.</li></ul>
     
-
-<p>Ce qu&#39;ils vont apprendre à faire :</p>
     
-
-<ul><li>Identifier les principaux équipements d&#39;un réseau informatique.</li><li>Associer un équipement à son rôle.</li><li>Repérer une adresse IP dans un document technique.</li><li>Reconstituer le trajet simplifié d&#39;une donnée.</li><li>Distinguer communication dans un réseau local et communication entre plusieurs réseaux.</li><li>Justifier une réponse à partir d&#39;un schéma ou d&#39;adresses IP.</li></ul>
     
-
-
-    
-    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
-<p>Dans cette page du ministère, retrouve le programme ou le référentiel de ta formation. Les objectifs précis étudiés aujourd’hui sont indiqués dans le cours.</p>
-    
-
-<p><a href="https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4" target="_blank" rel="noopener noreferrer">Consulter les programmes et attendus officiels</a></p>
-
-
-</div></details>
-
-    
-    <nav class="course-mission-controls course-intro-controls" aria-label="Commencer la séance"><a class="course-mission-next" href="#a05">J’ai compris l’objectif : commencer la première mission <span aria-hidden="true">→</span></a></nav>
+    <nav class="course-mission-controls course-intro-controls" aria-label="Commencer la séance"><a class="course-mission-next" href="#a01">J’ai compris l’objectif : commencer la première mission <span aria-hidden="true">→</span></a></nav>
 </header>
 
 
@@ -228,9 +205,9 @@
 
 <section class="cours-activites">
     
-    <article class="cours-activite" id="a05" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>Production attendue</h2>
+    <article class="cours-activite" id="a01" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Le chemin</h2>
         
         
         
@@ -240,41 +217,7 @@
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<ul><li>Un fichier LibreOffice Writer nommé 3e_S08_nom.odt.</li><li>Un tableau présentant les principaux équipements d&#39;un réseau.</li><li>L&#39;analyse de plusieurs adresses IP.</li><li>Des trajets simplifiés de données.</li><li>Une conclusion répondant à la problématique.</li></ul>
-    
-
-<p>Le fichier devra être déposé en fin de séance, même s&#39;il n&#39;est pas entièrement terminé.</p>
-    
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#course-intro">← Revoir l’objectif</a>
-            <a class="course-mission-next" href="#a06">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a06" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>1. Préparez votre document de travail</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Ouvrez LibreOffice Writer.</p>
-    
-
-<p>Créez un nouveau document.</p>
-    
-
-<p>Enregistrez-le immédiatement sous le nom : 3e_S08_nom.odt.</p>
+<p>Exemple expliqué : Léa envoie une photo depuis son téléphone en Wi-Fi. Photo → box de Léa → réseau de son fournisseur → routeurs d’Internet → serveur de l’application de messagerie → réseau mobile de Tom → téléphone de Tom.</p>
     
 
 
@@ -283,94 +226,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a06-q01-label">Question 1 — Écrivez votre nom, votre prénom et le titre : Séance 8 – Comment une information circule-t-elle dans un réseau ?</h3>
-            
-
-            
-            
-                <textarea id="a06-q01" data-answer-id="a06_q01" data-required="true" aria-labelledby="a06-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a05">← Étape précédente</a>
-            <a class="course-mission-next" href="#a07">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a07" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>2. Comment les ordinateurs du collège peuvent-ils communiquer ?</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Une salle du collège possède :</p>
-    
-
-<ul><li>12 ordinateurs ;</li><li>un serveur ;</li><li>une borne Wi-Fi ;</li><li>un commutateur ;</li><li>un routeur ;</li><li>une connexion vers Internet.</li></ul>
-    
-
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a07-q01-label">Question 1 — Q1 : Selon vous, peut-on simplement relier tous les ordinateurs directement à Internet ?</h3>
-            
-
-            
-            
-                <textarea id="a07-q01" data-answer-id="a07_q01" data-required="true" aria-labelledby="a07-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a07-q02-label">Question 2 — Q2 : Quels équipements semblent nécessaires pour permettre aux ordinateurs de la salle :</h3>
-            
-
-            
-            
-                <textarea id="a07-q02" data-answer-id="a07_q02" data-required="true" aria-labelledby="a07-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-<ul><li>de communiquer entre eux ;</li><li>d&#39;accéder à un serveur ;</li><li>d&#39;accéder à Internet ?</li></ul>
-    
-
-<h4>Mise en commun : les équipements du réseau</h4>
-    
-
-<p>Complétez le tableau :</p>
-    
-
-
-        </div>
-        
-        <div class="cours-question" data-question="q03">
-            
-            
-            <h3 id="a07-q03-label">Question 3 — Complète le tableau ci-dessous.</h3>
+            <h3 id="a01-q01-label">Question 1 — Remets dans l’ordre le trajet d’un message (1 à 5).</h3>
             
 
             
@@ -380,9 +236,9 @@
                         <thead>
                             <tr>
                                 
-                                <th>Équipement</th>
+                                <th>Étape</th>
                                 
-                                <th>Rôle principal</th>
+                                <th>Numéro</th>
                                 
                             </tr>
                         </thead>
@@ -393,30 +249,13 @@
                                 
                                 <td>
                                     
-                                    Ordinateur
+                                    Serveur de l’application
                                     
                                 </td>
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a07_q03_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="2. Comment les ordinateurs du collège peuvent-ils communiquer ? — Rôle principal — Ordinateur">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Commutateur
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a07_q03_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="2. Comment les ordinateurs du collège peuvent-ils communiquer ? — Rôle principal — Commutateur">
+                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Le chemin — Numéro — Serveur de l’application">
                                     
                                 </td>
                                 
@@ -427,30 +266,13 @@
                                 
                                 <td>
                                     
-                                    Routeur
+                                    Téléphone de l’expéditeur
                                     
                                 </td>
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a07_q03_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="2. Comment les ordinateurs du collège peuvent-ils communiquer ? — Rôle principal — Routeur">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Serveur
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a07_q03_r3_c1" data-required="true" data-row="3" data-col="1" aria-label="2. Comment les ordinateurs du collège peuvent-ils communiquer ? — Rôle principal — Serveur">
+                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Le chemin — Numéro — Téléphone de l’expéditeur">
                                     
                                 </td>
                                 
@@ -461,13 +283,47 @@
                                 
                                 <td>
                                     
-                                    Borne Wi-Fi
+                                    Téléphone du destinataire
                                     
                                 </td>
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a07_q03_r4_c1" data-required="true" data-row="4" data-col="1" aria-label="2. Comment les ordinateurs du collège peuvent-ils communiquer ? — Rôle principal — Borne Wi-Fi">
+                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Le chemin — Numéro — Téléphone du destinataire">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Box ou antenne de l’expéditeur
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r3_c1" data-required="true" data-row="3" data-col="1" aria-label="Le chemin — Numéro — Box ou antenne de l’expéditeur">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Routeurs d’Internet
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r4_c1" data-required="true" data-row="4" data-col="1" aria-label="Le chemin — Numéro — Routeurs d’Internet">
                                     
                                 </td>
                                 
@@ -477,30 +333,23 @@
                     </table>
                 </div>
             
+            <details><summary>Un coup de pouce</summary><p>Une case à la fois : la ligne croise la colonne (réflexe n° 6).</p></details>
             
             
-            
-<p>Ressource officielle : Éduscol STI – Qu&#39;est-ce qu&#39;un réseau informatique ?</p>
-    
-
-<p><a href="https://sti.eduscol.education.fr/ressources_pedagogiques/quest-ce-quun-reseau-informatique" target="_blank" rel="noopener noreferrer">Éduscol STI – Qu&#39;est-ce qu&#39;un réseau informatique ?</a></p>
-
-
-
         </div>
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a06">← Étape précédente</a>
-            <a class="course-mission-next" href="#a08">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+            <a class="course-mission-back" href="#course-intro">← Revoir l’objectif</a>
+            <a class="course-mission-next" href="#a02">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a08" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>3. Comment savoir à quelle machine envoyer les données ?</h2>
+    <article class="cours-activite" id="a02" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Les paquets</h2>
         
-        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu connais le chemin. Le message voyage-t-il en un seul morceau ?</p>
         
         
 
@@ -508,13 +357,7 @@
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Dans la salle, plusieurs machines sont connectées au même réseau.</p>
-    
-
-<p>Voici leurs adresses :</p>
-    
-
-<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Équipement</th><th scope="col">Adresse IP</th></tr></thead><tbody><tr><td>Ordinateur 1</td><td>192.168.1.10</td></tr><tr><td>Ordinateur 2</td><td>192.168.1.11</td></tr><tr><td>Serveur</td><td>192.168.1.20</td></tr><tr><td>Routeur</td><td>192.168.1.1</td></tr></tbody></table></div>
+<p>Une photo de 3 Mo est découpée en environ 2 000 paquets. Chaque paquet contient une partie de la photo, l’adresse de destination et son numéro.</p>
     
 
 
@@ -523,15 +366,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a08-q01-label">Question 1 — Q3 : Quelle est l&#39;adresse IP de l&#39;ordinateur 2 ?</h3>
+            <h3 id="a02-q01-label">Question 1 — Pourquoi chaque paquet porte-t-il un numéro ?</h3>
             
 
             
             
-                <textarea id="a08-q01" data-answer-id="a08_q01" data-required="true" aria-labelledby="a08-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            
+            <details><summary>Un coup de pouce</summary><p>Une idée + « car » + une raison tirée de la séance.</p></details>
             
             
         </div>
@@ -539,75 +382,67 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a08-q02-label">Question 2 — Q4 : Quelle est l&#39;adresse IP du serveur ?</h3>
+            <h3 id="a02-q02-label">Question 2 — Un paquet se perd en route. Que se passe-t-il ?</h3>
             
 
             
             
-                <textarea id="a08-q02" data-answer-id="a08_q02" data-required="true" aria-labelledby="a08-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q03">
-            
-            
-            <h3 id="a08-q03-label">Question 3 — Q5 : Que remarquez-vous dans les adresses des quatre équipements ?</h3>
-            
-
-            
-            
-                <textarea id="a08-q03" data-answer-id="a08_q03" data-required="true" aria-labelledby="a08-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <select id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><option value="">Choisis une réponse</option><option value="a">Le destinataire le redemande, et il est renvoyé.</option><option value="b">La photo est perdue pour toujours.</option><option value="c">Tout le message est renvoyé à chaque fois.</option></select>
 
                 
+            <details><summary>Un coup de pouce</summary><p>Élimine d’abord les réponses impossibles.</p></details>
             
             
-            
-        </div>
-        
-        <div class="cours-question" data-question="q04">
-            
-            
-            <h3 id="a08-q04-label">Question 4 — Q6 : Pourquoi chaque interface doit-elle disposer d&#39;une adresse adaptée au réseau ?</h3>
-            
-
-            
-            
-                <textarea id="a08-q04" data-answer-id="a08_q04" data-required="true" aria-labelledby="a08-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-<h4>Mise en commun : l&#39;adresse IP</h4>
-    
-
-<p>Dans un réseau utilisant le protocole IP, une adresse IP permet d&#39;identifier une interface réseau afin de permettre les communications.</p>
-    
-
-<p>Ressource officielle : Éduscol – L&#39;adresse IP</p>
-    
-
-<p><a href="https://eduscol.education.fr/document/22366/download" target="_blank" rel="noopener noreferrer">Éduscol – L&#39;adresse IP</a></p>
-
-
-
         </div>
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a07">← Étape précédente</a>
-            <a class="course-mission-next" href="#a09">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+            <a class="course-mission-back" href="#a01">← Étape précédente</a>
+            <a class="course-mission-next" href="#a03">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a09" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 5</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>4. Que se passe-t-il lorsque deux ordinateurs communiquent dans la même salle ?</h2>
+    <article class="cours-activite" id="a03" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Un réseau de réseaux</h2>
         
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tous ces réseaux sont reliés.</p>
+        
+        
+
+        
+
+        
+        
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a03-q01-label">Question 1 — Pourquoi dit-on qu’Internet est un « réseau de réseaux » ? Appuie-toi sur le réseau du collège vu en 4e.</h3>
+            
+
+            
+            
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Une idée + « car » + une raison tirée de la séance.</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a02">← Étape précédente</a>
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a04" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Défi</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
         
@@ -616,16 +451,7 @@
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>L&#39;ordinateur 1 veut envoyer un fichier à l&#39;ordinateur 2.</p>
-    
-
-<p>Ils sont connectés au même commutateur et appartiennent au même réseau local.</p>
-    
-
-<p>Complétez :</p>
-    
-
-<p>Ordinateur 1 → ................................ → Ordinateur 2</p>
+<p>Plus de 95 % des communications entre continents passent par des câbles sous-marins.</p>
     
 
 
@@ -634,441 +460,59 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a09-q01-label">Question 1 — Q7 : Le routeur est-il nécessaire pour cet échange simplifié ? Justifiez.</h3>
+            <h3 id="a04-q01-label">Question 1 — Pourquoi pas par satellite ?</h3>
             
 
             
             
-                <textarea id="a09-q01" data-answer-id="a09_q01" data-required="true" aria-labelledby="a09-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            
+            <details><summary>Un coup de pouce</summary><p>Une idée + « car » + une raison tirée de la séance.</p></details>
             
             
         </div>
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a08">← Étape précédente</a>
-            <a class="course-mission-next" href="#a10">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a10" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 6</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>5. Et si la destination se trouve dans un autre réseau ?</h2>
+    <article class="cours-activite" id="a05" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Conclusion de ton travail</h2>
         
-        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as suivi un message. Il reste à répondre au problème de départ.</p>
         
         
 
         
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>L&#39;ordinateur 1 souhaite maintenant accéder à un serveur situé sur Internet.</p>
-    
-
-<p>Complétez le trajet simplifié :</p>
-    
-
-<p>Ordinateur → ................................ → ................................ → Internet → serveur distant</p>
-    
-
-
+        
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a10-q01-label">Question 1 — Q8 : Pourquoi le routeur devient-il nécessaire dans cette situation ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : par où passe un message envoyé à un ami loin ?</h3>
             
 
             
             
-                <textarea id="a10-q01" data-answer-id="a10_q01" data-required="true" aria-labelledby="a10-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-<h4>Mise en commun : réseau local et routage</h4>
-    
-
-<p>Le commutateur permet principalement de relier les équipements d&#39;un réseau local.</p>
-    
-
-<p>Le routeur permet de transmettre des données entre plusieurs réseaux.</p>
-    
-
-<p>Internet est constitué d&#39;un très grand nombre de réseaux reliés entre eux.</p>
-    
-
-<p>Ressource officielle : Éduscol STI – Comprendre le fonctionnement d&#39;un réseau informatique</p>
-    
-
-<p><a href="https://sti.eduscol.education.fr/technologie_college/ressources_pedagogiques/comprendre-le-fonctionnement-dun-reseau-informatique" target="_blank" rel="noopener noreferrer">Éduscol STI – Comprendre le fonctionnement d&#39;un réseau informatique</a></p>
-
-
-
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a09">← Étape précédente</a>
-            <a class="course-mission-next" href="#a11">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a11" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 7</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>6. Deux réseaux différents</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>On observe maintenant :</p>
-    
-
-<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Réseau A</th><th scope="col">Réseau B</th></tr></thead><tbody><tr><td>192.168.1.10</td><td>192.168.2.10</td></tr><tr><td>192.168.1.11</td><td>192.168.2.11</td></tr></tbody></table></div>
-    
-
-<p>Pour cet exercice, on vous indique que 192.168.1.x et 192.168.2.x correspondent à deux réseaux différents.</p>
-    
-
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a11-q01-label">Question 1 — Q9 : Les deux groupes d&#39;adresses sont-ils identiques ?</h3>
-            
-
-            
-            
-                <textarea id="a11-q01" data-answer-id="a11_q01" data-required="true" aria-labelledby="a11-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a11-q02-label">Question 2 — Q10 : Quel équipement doit relier les deux réseaux ?</h3>
-            
-
-            
-            
-                <textarea id="a11-q02" data-answer-id="a11_q02" data-required="true" aria-labelledby="a11-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q03">
-            
-            
-            <h3 id="a11-q03-label">Question 3 — Q11 : Expliquez son rôle en une ou deux phrases.</h3>
-            
-
-            
-            
-                <textarea id="a11-q03" data-answer-id="a11_q03" data-required="true" aria-labelledby="a11-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
+            <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème et de « Ce que je retiens », avec un exemple de la séance.</p></details>
             
             
         </div>
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a10">← Étape précédente</a>
-            <a class="course-mission-next" href="#a12">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a12" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 8</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>7. Une donnée traverse-t-elle toujours un seul routeur ?</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Un ordinateur envoie des données à un serveur distant.</p>
-    
-
-<p>Le trajet simplifié observé est :</p>
-    
-
-<p>Ordinateur → commutateur → routeur A → routeur B → routeur C → serveur</p>
-    
-
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a12-q01-label">Question 1 — Q12 : Pourquoi plusieurs routeurs peuvent-ils être traversés ?</h3>
-            
-
-            
-            
-                <textarea id="a12-q01" data-answer-id="a12_q01" data-required="true" aria-labelledby="a12-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a11">← Étape précédente</a>
-            <a class="course-mission-next" href="#a13">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a13" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 9</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>8. Attention aux représentations trop simples</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Un élève dessine :</p>
-    
-
-<p>Mon ordinateur → Internet → site web</p>
-    
-
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a13-q01-label">Question 1 — Q13 : Cette représentation est-elle totalement fausse ?</h3>
-            
-
-            
-            
-                <textarea id="a13-q01" data-answer-id="a13_q01" data-required="true" aria-labelledby="a13-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a13-q02-label">Question 2 — Q14 : Pourquoi est-elle cependant insuffisante pour expliquer réellement la circulation des données ?</h3>
-            
-
-            
-            
-                <textarea id="a13-q02" data-answer-id="a13_q02" data-required="true" aria-labelledby="a13-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a12">← Étape précédente</a>
-            <a class="course-mission-next" href="#a14">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a14" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 10</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>9. Mini-question type DNB</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Un ordinateur doit envoyer une donnée à un serveur distant.</p>
-    
-
-<p>Le trajet est :</p>
-    
-
-<p>Ordinateur → commutateur → routeur A → routeur B → serveur</p>
-    
-
-<p>Justifiez pourquoi le routeur A est nécessaire.</p>
-    
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a13">← Étape précédente</a>
-            <a class="course-mission-next" href="#a15">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a15" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 11</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>10. Conclusion du travail</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Complétez :</p>
-    
-
-<ul><li>Un réseau informatique permet de .................................................................................. .</li><li>Une adresse IP sert à ....................................................................................................... .</li><li>Un commutateur sert à ...................................................................................................... .</li><li>Un routeur sert à ............................................................................................................... .</li><li>Internet est ........................................................................................................................ .</li></ul>
-    
-
-<p>Répondez maintenant à la problématique en 4 à 6 lignes :</p>
-    
-
-<p>Comment une donnée sait-elle où aller lorsqu&#39;elle circule dans un réseau informatique ?</p>
-    
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a14">← Étape précédente</a>
-            <a class="course-mission-next" href="#a16">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a16" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 12</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>Rendu attendu</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>À la fin de la séance, déposez votre fichier 3e_S08_nom.odt.</p>
-    
-
-<p>Le fichier doit être rendu même si toutes les activités ne sont pas terminées.</p>
-    
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a15">← Étape précédente</a>
-            <a class="course-mission-next" href="#a17">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a17" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 13</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>À retenir</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Un réseau informatique permet à plusieurs équipements de communiquer et d&#39;échanger des données.</p>
-    
-
-<p>Une adresse IP permet d&#39;identifier une interface sur un réseau utilisant le protocole IP.</p>
-    
-
-<p>Le commutateur relie les équipements d&#39;un réseau local.</p>
-    
-
-<p>Le routeur permet de transmettre les données entre plusieurs réseaux.</p>
-    
-
-<p>Internet est un ensemble de réseaux interconnectés.</p>
-    
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a16">← Étape précédente</a>
-            <a class="course-mission-next" href="#a18">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a18" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 14</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>Sources générales</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<ul><li>Ministère de l&#39;Éducation nationale – Programme de technologie du cycle 4</li><li>Éduscol STI – Qu&#39;est-ce qu&#39;un réseau informatique ?</li><li>Éduscol STI – Comprendre le fonctionnement d&#39;un réseau informatique</li></ul>
-    
-
-<p><a href="https://www.education.gouv.fr/bo/2024/Hebdo9/MENE2402802A" target="_blank" rel="noopener noreferrer">Programme de technologie du cycle 4</a></p>
-
-
-<p><a href="https://sti.eduscol.education.fr/ressources_pedagogiques/quest-ce-quun-reseau-informatique" target="_blank" rel="noopener noreferrer">Qu&#39;est-ce qu&#39;un réseau informatique ?</a></p>
-
-
-<p><a href="https://sti.eduscol.education.fr/technologie_college/ressources_pedagogiques/comprendre-le-fonctionnement-dun-reseau-informatique" target="_blank" rel="noopener noreferrer">Comprendre le fonctionnement d&#39;un réseau informatique</a></p>
-
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a17">← Étape précédente</a>
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -1081,18 +525,39 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">Faire le point</h2>
-    <p>Relis tes réponses et vérifie les points demandés dans le bilan du cours. Tu peux revenir sur ton travail tant que le professeur ne l’a pas clôturé.</p>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Internet : réseau de réseaux reliés par des routeurs.</li><li>Les messages sont découpés en paquets numérotés.</li></ul>
+    
 </section>
 
+<section class="cours-sources course-info-card" aria-labelledby="course-sources-title"><h2 id="course-sources-title">Sources et ressources officielles</h2>
+<p><a href="https://www.education.gouv.fr/media/160767/download" target="_blank" rel="noopener noreferrer">Ministère de l’Éducation nationale — Programme de technologie du cycle 4 (BO n° 9 du 29 février 2024)</a></p>
 
+
+</section>
 
     <div class="course-submit-panel">
         <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
         <p id="course-submit-status" role="status" aria-live="polite"></p>
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a18">← Étape précédente</a></nav>
+    
+<section class="course-pix" id="course-pix" aria-labelledby="course-pix-title" data-etablissement="college" data-matiere="techno" data-classe="3e" data-seance="S08">
+    <h2 id="course-pix-title">Aujourd’hui, c’était une séance Pix ?</h2>
+    <p>Si ton professeur t’a fait travailler sur Pix à la place du cours, ta séance de technologie t’attend ici : tu la reprendras la prochaine fois, rien n’est perdu. Quand tu as fini sur Pix, clique sur le bouton pour le signaler.</p>
+    <details><summary>Que faire pendant une séance Pix ?</summary>
+        <ol>
+            <li>Ouvre Pix depuis l’ENT (ou sur pix.fr, « Se connecter »).</li>
+            <li>Saisis le code de campagne donné par ton professeur et vérifie ton prénom et ton nom.</li>
+            <li>Travaille seul et sérieusement : Pix sert à savoir où tu en es.</li>
+            <li>Ne recopie jamais ton mot de passe ni les réponses de Pix sur ce site.</li>
+        </ol>
+        <p><a href="https://pix.fr/" target="_blank" rel="noopener noreferrer">Ouvrir Pix</a></p>
+    </details>
+    <button type="button" id="course-pix-declare" disabled>J’ai fait ma séance Pix</button>
+    <p id="course-pix-status" role="status" aria-live="polite"></p>
+</section>
+
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>
@@ -1112,6 +577,7 @@
 
 
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/pix-declaration.js"></script>
 
 
     </main>

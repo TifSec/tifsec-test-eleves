@@ -63,7 +63,7 @@
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261029-steps-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261029-pix-1">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
@@ -336,7 +336,7 @@
                 <select id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><option value="">Choisis une réponse</option><option value="a">Tailler un crayon.</option><option value="b">Il est rouge et en plastique.</option><option value="c">On l’achète au supermarché.</option></select>
 
                 
-            
+            <details><summary>Un coup de pouce</summary><p>Méthode : 1) lis toutes les réponses avant de choisir ; 2) élimine celles qui sont impossibles ; 3) vérifie ton choix avec le document ou l’exemple expliqué de la mission.</p></details>
             
             
         </div>
@@ -469,7 +469,7 @@
                 <select id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><option value="">Choisis une réponse</option><option value="couper">Couper.</option><option value="mesurer">Mesurer.</option><option value="coller">Coller.</option></select>
 
                 
-            
+            <details><summary>Un coup de pouce</summary><p>Méthode : 1) lis toutes les réponses avant de choisir ; 2) élimine celles qui sont impossibles ; 3) vérifie ton choix avec le document ou l’exemple expliqué de la mission.</p></details>
             
             
         </div>
@@ -519,7 +519,7 @@
                 <select id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label"><option value="">Choisis une réponse</option><option value="a">Aux élèves et aux étudiants.</option><option value="b">Aux peintres.</option><option value="c">Aux cuisiniers.</option></select>
 
                 
-            
+            <details><summary>Un coup de pouce</summary><p>Méthode : 1) lis toutes les réponses avant de choisir ; 2) élimine celles qui sont impossibles ; 3) vérifie ton choix avec le document ou l’exemple expliqué de la mission.</p></details>
             
             
         </div>
@@ -664,6 +664,23 @@
         <p id="course-submit-status" role="status" aria-live="polite"></p>
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
+    
+<section class="course-pix" id="course-pix" aria-labelledby="course-pix-title" data-etablissement="college" data-matiere="techno" data-classe="5e" data-seance="S03">
+    <h2 id="course-pix-title">Aujourd’hui, c’était une séance Pix ?</h2>
+    <p>Si ton professeur t’a fait travailler sur Pix à la place du cours, ta séance de technologie t’attend ici : tu la reprendras la prochaine fois, rien n’est perdu. Quand tu as fini sur Pix, clique sur le bouton pour le signaler.</p>
+    <details><summary>Que faire pendant une séance Pix ?</summary>
+        <ol>
+            <li>Ouvre Pix depuis l’ENT (ou sur pix.fr, « Se connecter »).</li>
+            <li>Saisis le code de campagne donné par ton professeur et vérifie ton prénom et ton nom.</li>
+            <li>Travaille seul et sérieusement : Pix sert à savoir où tu en es.</li>
+            <li>Ne recopie jamais ton mot de passe ni les réponses de Pix sur ce site.</li>
+        </ol>
+        <p><a href="https://pix.fr/" target="_blank" rel="noopener noreferrer">Ouvrir Pix</a></p>
+    </details>
+    <button type="button" id="course-pix-declare" disabled>J’ai fait ma séance Pix</button>
+    <p id="course-pix-status" role="status" aria-live="polite"></p>
+</section>
+
     <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
@@ -684,6 +701,7 @@
 
 
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/pix-declaration.js"></script>
 
 
     </main>

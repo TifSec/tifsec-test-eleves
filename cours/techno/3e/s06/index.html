@@ -63,7 +63,7 @@
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261029-steps-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261029-pix-1">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a05">Production attendue</a></li><li><a href="#a06">1. Préparez votre document de travail</a></li><li><a href="#a07">2. Votre protocole peut-il réellement être utilisé ?</a></li><li><a href="#a08">3. Préparez le banc d&#39;essai</a></li><li><a href="#a09">4. Réalisez les mesures</a></li><li><a href="#a10">5. Qu&#39;indiquent réellement vos mesures ?</a></li><li><a href="#a11">6. Peut-on affirmer que seul le nombre de pales explique le résultat ?</a></li><li><a href="#a12">7. Votre protocole résiste-t-il à la réalité ?</a></li><li><a href="#a13">8. Une mauvaise expérience peut-elle donner un résultat convaincant ?</a></li><li><a href="#a14">9. Conclusion du travail</a></li><li><a href="#a15">Rendu attendu</a></li><li><a href="#a16">À retenir</a></li><li><a href="#a17">Sources générales</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Un entraînement biaisé</a></li><li><a href="#a02">Des biais dans la réalité</a></li><li><a href="#a03">Défi — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -134,24 +134,29 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Technologie · 3e · S06</span></div>
-    <h1>Comment comparer expérimentalement plusieurs solutions ?</h1>
+    <h1>Séance 6 : L’IA peut-elle se tromper ?</h1>
     
 
     
     
     <section class="course-info-card cours-theme">
         <h2>Thème du programme</h2>
-        <p>Création, conception, réalisation, innovations : des objets à concevoir et à réaliser</p>
+        <p>Les objets et les systèmes techniques : leurs usages et leurs interactions à découvrir et analyser</p>
     </section>
     
 
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Comment réaliser une expérience suffisamment fiable pour comparer plusieurs solutions techniques ?</p>
+        <p>Pourquoi une IA peut-elle se tromper, et quelles précautions prendre ?</p>
     </section>
     
 
+    
+    <section class="course-info-card cours-competences-bo">
+        <h2>Compétence travaillée</h2>
+        <ul><li>Décrire les liens entre usages et évolutions technologiques des objets et des systèmes techniques</li></ul>
+    </section>
     
 
     
@@ -161,60 +166,36 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Un protocole doit être suffisamment précis pour pouvoir être reproduit.</li>
+            <li>Un biais : si les exemples d’entraînement sont mal choisis (déséquilibrés, avec un détail commun), l’IA apprend une mauvaise règle.</li>
             
-            <li>Une expérience réelle peut révéler des défauts dans un protocole pourtant correct sur le papier.</li>
-            
-            <li>Pour comparer plusieurs solutions, une seule caractéristique doit être modifiée à la fois.</li>
-            
-            <li>Les autres conditions de l&#39;expérience doivent rester aussi constantes que possible.</li>
-            
-            <li>Plusieurs mesures permettent d&#39;obtenir un résultat plus représentatif.</li>
+            <li>Une IA doit être testée, ses résultats vérifiés par un humain, surtout quand la décision est importante.</li>
             
         </ul>
         
         
+        <h2>Ce que tu vas apprendre à faire</h2>
+        <ul>
+            
+            <li>Mettre en évidence un biais.</li>
+            
+            <li>Proposer des précautions.</li>
+            
+        </ul>
+        
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><p>Objectif de cette séance : Un protocole doit être suffisamment précis pour pouvoir être reproduit.</p></section>
-    
-    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
-    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séance 5, tu as entraîné un modèle avec des exemples variés.</p><p>Aujourd’hui, on fait exprès de mal l’entraîner pour comprendre d’où viennent les erreurs.</p></div></section>
     
     
     
-<h4>Compétence visée : Mettre en œuvre, analyser et améliorer un protocole expérimental</h4>
     
-
-<h4>Objectifs d’apprentissage</h4>
     
-
-<p>Ce que les élèves vont apprendre :</p>
     
-
-<ul><li>Un protocole doit être suffisamment précis pour pouvoir être reproduit.</li><li>Une expérience réelle peut révéler des défauts dans un protocole pourtant correct sur le papier.</li><li>Pour comparer plusieurs solutions, une seule caractéristique doit être modifiée à la fois.</li><li>Les autres conditions de l&#39;expérience doivent rester aussi constantes que possible.</li><li>Plusieurs mesures permettent d&#39;obtenir un résultat plus représentatif.</li></ul>
     
-
-<p>Ce qu&#39;ils vont apprendre à faire :</p>
     
-
-<ul><li>Mettre en œuvre un protocole préparé précédemment.</li><li>Mesurer une tension électrique avec un multimètre.</li><li>Réaliser plusieurs essais dans les mêmes conditions.</li><li>Calculer une moyenne.</li><li>Identifier les limites d&#39;une expérience.</li><li>Modifier un protocole après l&#39;avoir confronté au réel.</li><li>Conclure à partir de mesures expérimentales.</li></ul>
     
-
-
-    
-    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
-<p>Dans cette page du ministère, retrouve le programme ou le référentiel de ta formation. Les objectifs précis étudiés aujourd’hui sont indiqués dans le cours.</p>
-    
-
-<p><a href="https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4" target="_blank" rel="noopener noreferrer">Consulter les programmes et attendus officiels</a></p>
-
-
-</div></details>
-
-    
-    <nav class="course-mission-controls course-intro-controls" aria-label="Commencer la séance"><a class="course-mission-next" href="#a05">J’ai compris l’objectif : commencer la première mission <span aria-hidden="true">→</span></a></nav>
+    <nav class="course-mission-controls course-intro-controls" aria-label="Commencer la séance"><a class="course-mission-next" href="#a01">J’ai compris l’objectif : commencer la première mission <span aria-hidden="true">→</span></a></nav>
 </header>
 
 
@@ -224,9 +205,9 @@
 
 <section class="cours-activites">
     
-    <article class="cours-activite" id="a05" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>Production attendue</h2>
+    <article class="cours-activite" id="a01" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Un entraînement biaisé</h2>
         
         
         
@@ -236,27 +217,61 @@
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<ul><li>Un fichier LibreOffice Writer nommé 3e_S06_nom.odt.</li><li>Le protocole corrigé de la séance précédente.</li><li>Les mesures réalisées avec les rotors à 3, 4 et 5 pales.</li><li>Les moyennes calculées.</li><li>Une analyse des résultats et des limites de l&#39;expérience.</li><li>Une conclusion argumentée.</li></ul>
+<p>Lot fourni : toutes les photos d’eau claire sont sur fond bleu, toutes les photos d’eau trouble sur fond blanc. Entraîne le modèle, puis teste avec un verre d’eau claire sur fond blanc.</p>
     
 
-<p>Le fichier devra être déposé à la fin de la séance, même s&#39;il n&#39;est pas entièrement terminé.</p>
-    
 
+        <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
+<p><a href="https://teachablemachine.withgoogle.com/" target="_blank" rel="noopener noreferrer">Teachable Machine (Google) — apprentissage automatique dans le navigateur</a></p>
+
+
+</div></details>
 
         
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a01-q01-label">Question 1 — Que répond le modèle ? Explique pourquoi.</h3>
+            
+
+            
+            
+                <textarea id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Une idée + « car » + une raison tirée de la séance.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a01-q02-label">Question 2 — Comment appelle-t-on ce défaut ?</h3>
+            
+
+            
+            
+                <select id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><option value="">Choisis une réponse</option><option value="a">Un biais.</option><option value="b">Un virus.</option><option value="c">Une panne.</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Élimine d’abord les réponses impossibles.</p></details>
+            
+            
+        </div>
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#course-intro">← Revoir l’objectif</a>
-            <a class="course-mission-next" href="#a06">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+            <a class="course-mission-next" href="#a02">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a06" data-course-step>
+    <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>1. Préparez votre document de travail</h2>
+        <h2>Des biais dans la réalité</h2>
         
-        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Ce défaut existe aussi dans de vraies IA.</p>
         
         
 
@@ -264,13 +279,7 @@
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Ouvrez LibreOffice Writer.</p>
-    
-
-<p>Créez un nouveau document.</p>
-    
-
-<p>Enregistrez-le immédiatement sous le nom : 3e_S06_nom.odt.</p>
+<p>Exemple : un logiciel de recrutement entraîné surtout avec des CV d’hommes a défavorisé les CV de femmes ; il a été abandonné.</p>
     
 
 
@@ -279,350 +288,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a06-q01-label">Question 1 — Écrivez votre nom, votre prénom et le titre : Séance 6 – Comment comparer expérimentalement plusieurs solutions ?</h3>
+            <h3 id="a02-q01-label">Question 1 — Explique comment ce biais s’est produit, en le comparant à l’expérience de la mission 1.</h3>
             
 
             
             
-                <textarea id="a06-q01" data-answer-id="a06_q01" data-required="true" aria-labelledby="a06-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            
-            
-            
-
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a05">← Étape précédente</a>
-            <a class="course-mission-next" href="#a07">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a07" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>2. Votre protocole peut-il réellement être utilisé ?</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Lors de la séance précédente, vous avez proposé un protocole permettant d&#39;étudier l&#39;influence du nombre de pales sur une petite éolienne.</p>
-    
-
-<p>Relisez-le sans encore toucher au matériel.</p>
-    
-
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a07-q01-label">Question 1 — Q1 : Si un autre groupe devait réaliser votre expérience uniquement en lisant votre protocole, saurait-il exactement :</h3>
-            
-
-            
-            
-                <textarea id="a07-q01" data-answer-id="a07_q01" data-required="true" aria-labelledby="a07-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-<ul><li>quel rotor installer ;</li><li>où placer l&#39;éolienne ;</li><li>comment régler la source d&#39;air ;</li><li>quelle grandeur mesurer ;</li><li>comment utiliser l&#39;appareil de mesure ;</li><li>quand relever la valeur ;</li><li>combien de mesures effectuer ?</li></ul>
-    
-
-<p>Corrigez votre protocole si certaines informations manquent.</p>
-    
-
-<h4>Mise en commun : un protocole reproductible</h4>
-    
-
-<p>Un protocole est reproductible lorsqu&#39;une autre personne peut refaire l&#39;expérience dans les mêmes conditions en suivant uniquement les instructions données.</p>
-    
-
-
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a06">← Étape précédente</a>
-            <a class="course-mission-next" href="#a08">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a08" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>3. Préparez le banc d&#39;essai</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Vous allez comparer trois rotors :</p>
-    
-
-<ul><li>3 pales ;</li><li>4 pales ;</li><li>5 pales.</li></ul>
-    
-
-<p>Avant toute mesure, vérifiez avec le professeur :</p>
-    
-
-<ul><li>que la génératrice est correctement fixée ;</li><li>que le rotor peut tourner librement ;</li><li>que la source d&#39;air est correctement positionnée ;</li><li>que le multimètre est réglé pour mesurer une tension continue en volts ;</li><li>que les câbles de mesure sont correctement branchés.</li></ul>
-    
-
-<p>Ne modifiez pas la position du ventilateur ou de la soufflerie pendant les essais.</p>
-    
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a07">← Étape précédente</a>
-            <a class="course-mission-next" href="#a09">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a09" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 5</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>4. Réalisez les mesures</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Pour chaque rotor :</p>
-    
-
-<p>installez le rotor ;</p>
-    
-
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a09-q01-label">Question 1 — vérifiez qu&#39;il tourne librement ;</h3>
-            
-
-            
-            
-                <textarea id="a09-q01" data-answer-id="a09_q01" data-required="true" aria-labelledby="a09-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-<p>mettez en fonctionnement la source d&#39;air ;</p>
-    
-
-<p>attendez quelques secondes que la rotation se stabilise ;</p>
-    
-
-<p>relevez la tension indiquée par le multimètre ;</p>
-    
-
-<p>arrêtez puis recommencez l&#39;essai afin d&#39;obtenir trois mesures.</p>
-    
-
-
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a09-q02-label">Question 2 — Complète le tableau ci-dessous.</h3>
-            
-
-            
-            
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Rotor</th>
-                                
-                                <th>Mesure 1</th>
-                                
-                                <th>Mesure 2</th>
-                                
-                                <th>Mesure 3</th>
-                                
-                                <th>Tension moyenne</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    3 pales
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a09_q02_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="4. Réalisez les mesures — Mesure 1 — 3 pales">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a09_q02_r0_c2" data-required="true" data-row="0" data-col="2" aria-label="4. Réalisez les mesures — Mesure 2 — 3 pales">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a09_q02_r0_c3" data-required="true" data-row="0" data-col="3" aria-label="4. Réalisez les mesures — Mesure 3 — 3 pales">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a09_q02_r0_c4" data-required="true" data-row="0" data-col="4" aria-label="4. Réalisez les mesures — Tension moyenne — 3 pales">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    4 pales
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a09_q02_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="4. Réalisez les mesures — Mesure 1 — 4 pales">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a09_q02_r1_c2" data-required="true" data-row="1" data-col="2" aria-label="4. Réalisez les mesures — Mesure 2 — 4 pales">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a09_q02_r1_c3" data-required="true" data-row="1" data-col="3" aria-label="4. Réalisez les mesures — Mesure 3 — 4 pales">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a09_q02_r1_c4" data-required="true" data-row="1" data-col="4" aria-label="4. Réalisez les mesures — Tension moyenne — 4 pales">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    5 pales
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a09_q02_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="4. Réalisez les mesures — Mesure 1 — 5 pales">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a09_q02_r2_c2" data-required="true" data-row="2" data-col="2" aria-label="4. Réalisez les mesures — Mesure 2 — 5 pales">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a09_q02_r2_c3" data-required="true" data-row="2" data-col="3" aria-label="4. Réalisez les mesures — Mesure 3 — 5 pales">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a09_q02_r2_c4" data-required="true" data-row="2" data-col="4" aria-label="4. Réalisez les mesures — Tension moyenne — 5 pales">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            
-            
-            
-<p>Unité : indiquez toutes les tensions en volts (V).</p>
-    
-
-
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a08">← Étape précédente</a>
-            <a class="course-mission-next" href="#a10">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a10" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 6</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>5. Qu&#39;indiquent réellement vos mesures ?</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a10-q01-label">Question 1 — Q2 : Quel rotor obtient la tension moyenne la plus élevée ?</h3>
-            
-
-            
-            
-                <textarea id="a10-q01" data-answer-id="a10_q01" data-required="true" aria-labelledby="a10-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
+            <details><summary>Un coup de pouce</summary><p>Une idée + « car » + une raison tirée de la séance.</p></details>
             
             
         </div>
@@ -630,62 +304,30 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a10-q02-label">Question 2 — Q3 : Justifiez avec les valeurs obtenues.</h3>
+            <h3 id="a02-q02-label">Question 2 — Propose deux précautions avant d’utiliser une IA pour une décision importante.</h3>
             
 
             
             
-                <textarea id="a10-q02" data-answer-id="a10_q02" data-required="true" aria-labelledby="a10-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q03">
-            
-            
-            <h3 id="a10-q03-label">Question 3 — Q4 : Les trois mesures réalisées avec un même rotor sont-elles exactement identiques ?</h3>
-            
-
-            
-            
-                <textarea id="a10-q03" data-answer-id="a10_q03" data-required="true" aria-labelledby="a10-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q04">
-            
-            
-            <h3 id="a10-q04-label">Question 4 — Q5 : Proposez au moins deux raisons pouvant expliquer les éventuels écarts.</h3>
-            
-
-            
-            
-                <textarea id="a10-q04" data-answer-id="a10_q04" data-required="true" aria-labelledby="a10-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
+            <details><summary>Un coup de pouce</summary><p>Une idée réaliste + « Cela permet de… ».</p></details>
             
             
         </div>
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a09">← Étape précédente</a>
-            <a class="course-mission-next" href="#a11">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+            <a class="course-mission-back" href="#a01">← Étape précédente</a>
+            <a class="course-mission-next" href="#a03">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a11" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 7</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>6. Peut-on affirmer que seul le nombre de pales explique le résultat ?</h2>
-        
+    <article class="cours-activite" id="a03" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Défi</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
         
@@ -694,10 +336,7 @@
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Votre objectif était de modifier uniquement le nombre de pales.</p>
-    
-
-<p>Mais observez maintenant votre expérience réelle.</p>
+<p>Les IA qui génèrent du texte peuvent inventer des informations.</p>
     
 
 
@@ -706,327 +345,59 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a11-q01-label">Question 1 — Q6 : Toutes les autres caractéristiques étaient-elles réellement identiques ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Pourquoi faut-il vérifier une réponse donnée par une IA conversationnelle ?</h3>
             
 
             
             
-                <textarea id="a11-q01" data-answer-id="a11_q01" data-required="true" aria-labelledby="a11-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-<p>Examinez notamment :</p>
-    
-
-<ul><li>la forme des pales ;</li><li>leur angle ;</li><li>leur masse ;</li><li>la qualité de l&#39;impression ;</li><li>leur équilibrage ;</li><li>leur position par rapport au flux d&#39;air.</li></ul>
-    
-
-
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a11-q02-label">Question 2 — Q7 : Peut-on conclure que le nombre de pales est forcément la seule cause des différences observées ? Justifiez.</h3>
-            
-
-            
-            
-                <textarea id="a11-q02" data-answer-id="a11_q02" data-required="true" aria-labelledby="a11-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            
+            <details><summary>Un coup de pouce</summary><p>Une idée + « car » + une raison tirée de la séance.</p></details>
             
             
         </div>
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a10">← Étape précédente</a>
-            <a class="course-mission-next" href="#a12">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+            <a class="course-mission-back" href="#a02">← Étape précédente</a>
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a12" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 8</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>7. Votre protocole résiste-t-il à la réalité ?</h2>
+    <article class="cours-activite" id="a04" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Conclusion de ton travail</h2>
         
-        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu connais les limites de l’IA. Il reste à répondre au problème de départ.</p>
         
         
 
         
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Reprenez le protocole que vous aviez écrit avant l&#39;expérience.</p>
-    
-
-<p>Indiquez au moins deux améliorations que vous apporteriez maintenant.</p>
-    
-
-
+        
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a12-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
+            <h3 id="a04-q01-label">Question 1 — Réponds au problème du jour : pourquoi une IA peut-elle se tromper, et quelles précautions prendre ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Problème observé</th>
-                                
-                                <th>Amélioration proposée</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a12_q01_r0_c0" data-required="true" data-row="0" data-col="0" aria-label="7. Votre protocole résiste-t-il à la réalité ? — Problème observé — ">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a12_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="7. Votre protocole résiste-t-il à la réalité ? — Amélioration proposée — ">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a12_q01_r1_c0" data-required="true" data-row="1" data-col="0" aria-label="7. Votre protocole résiste-t-il à la réalité ? — Problème observé — ">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a12_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="7. Votre protocole résiste-t-il à la réalité ? — Amélioration proposée — ">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            
-            
-            
-<h4>Mise en commun : expérience et amélioration</h4>
-    
-
-<p>Une expérience réelle permet souvent de découvrir des éléments qui n&#39;avaient pas été prévus lors de la rédaction du protocole.</p>
-    
-
-<p>Une démarche expérimentale consiste donc aussi à observer les limites du test puis améliorer la méthode.</p>
-    
-
-
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a11">← Étape précédente</a>
-            <a class="course-mission-next" href="#a13">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a13" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 9</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>8. Une mauvaise expérience peut-elle donner un résultat convaincant ?</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Un groupe annonce :</p>
-    
-
-<ul><li>3 pales : 0,42 V ;</li><li>4 pales : 0,61 V ;</li><li>5 pales : 0,37 V.</li></ul>
-    
-
-<p>Mais il indique ensuite :</p>
-    
-
-<ul><li>avoir déplacé le ventilateur entre les essais ;</li><li>avoir utilisé une vitesse différente pour le rotor à 4 pales ;</li><li>n&#39;avoir effectué qu&#39;une seule mesure avec chaque rotor.</li></ul>
-    
-
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a13-q01-label">Question 1 — Q8 : Peut-on conclure que le rotor à 4 pales est le meilleur ? Justifiez.</h3>
-            
-
-            
-            
-                <textarea id="a13-q01" data-answer-id="a13_q01" data-required="true" aria-labelledby="a13-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            
+            <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème et de « Ce que je retiens », avec un exemple de la séance.</p></details>
             
             
         </div>
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a12">← Étape précédente</a>
-            <a class="course-mission-next" href="#a14">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a14" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 10</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>9. Conclusion du travail</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Rédigez une conclusion de 4 à 6 lignes.</p>
-    
-
-<p>Elle doit obligatoirement comporter :</p>
-    
-
-<ul><li>le rotor ayant obtenu la meilleure tension moyenne ;</li><li>la valeur mesurée ;</li><li>une comparaison avec les autres rotors ;</li><li>au moins une limite de l&#39;expérience.</li></ul>
-    
-
-<p>Commencez votre conclusion par :</p>
-    
-
-<p>« Dans nos conditions d&#39;essai... »</p>
-    
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a13">← Étape précédente</a>
-            <a class="course-mission-next" href="#a15">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a15" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 11</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>Rendu attendu</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>À la fin de la séance, déposez votre fichier 3e_S06_nom.odt.</p>
-    
-
-<p>Le fichier doit être rendu même si toutes les activités ne sont pas terminées.</p>
-    
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a14">← Étape précédente</a>
-            <a class="course-mission-next" href="#a16">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a16" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 12</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>À retenir</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Pour comparer expérimentalement plusieurs solutions, il faut modifier un seul paramètre et conserver les autres conditions aussi constantes que possible.</p>
-    
-
-<p>Réaliser plusieurs mesures permet de mieux représenter le comportement réel du système.</p>
-    
-
-<p>Une conclusion expérimentale doit toujours être liée aux conditions dans lesquelles les essais ont été réalisés.</p>
-    
-
-<p>Un protocole peut être corrigé et amélioré après l&#39;expérience.</p>
-    
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a15">← Étape précédente</a>
-            <a class="course-mission-next" href="#a17">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a17" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 13</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>Sources générales</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<ul><li>Ministère de l&#39;Éducation nationale – Programme de technologie du cycle 4</li><li>Éduscol – Ressources d&#39;accompagnement du programme de technologie</li></ul>
-    
-
-<p><a href="https://www.education.gouv.fr/bo/2024/Hebdo9/MENE2402802A" target="_blank" rel="noopener noreferrer">Programme de technologie du cycle 4</a></p>
-
-
-<p><a href="https://eduscol.education.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4" target="_blank" rel="noopener noreferrer">Ressources d&#39;accompagnement du programme de technologie</a></p>
-
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a16">← Étape précédente</a>
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -1039,18 +410,39 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">Faire le point</h2>
-    <p>Relis tes réponses et vérifie les points demandés dans le bilan du cours. Tu peux revenir sur ton travail tant que le professeur ne l’a pas clôturé.</p>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Biais : exemples mal choisis → mauvaise règle apprise.</li><li>Précautions : exemples variés, tests, contrôle humain.</li></ul>
+    
 </section>
 
+<section class="cours-sources course-info-card" aria-labelledby="course-sources-title"><h2 id="course-sources-title">Sources et ressources officielles</h2>
+<p><a href="https://www.education.gouv.fr/media/160767/download" target="_blank" rel="noopener noreferrer">Ministère de l’Éducation nationale — Programme de technologie du cycle 4 (BO n° 9 du 29 février 2024)</a></p>
 
+
+</section>
 
     <div class="course-submit-panel">
         <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
         <p id="course-submit-status" role="status" aria-live="polite"></p>
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a17">← Étape précédente</a></nav>
+    
+<section class="course-pix" id="course-pix" aria-labelledby="course-pix-title" data-etablissement="college" data-matiere="techno" data-classe="3e" data-seance="S06">
+    <h2 id="course-pix-title">Aujourd’hui, c’était une séance Pix ?</h2>
+    <p>Si ton professeur t’a fait travailler sur Pix à la place du cours, ta séance de technologie t’attend ici : tu la reprendras la prochaine fois, rien n’est perdu. Quand tu as fini sur Pix, clique sur le bouton pour le signaler.</p>
+    <details><summary>Que faire pendant une séance Pix ?</summary>
+        <ol>
+            <li>Ouvre Pix depuis l’ENT (ou sur pix.fr, « Se connecter »).</li>
+            <li>Saisis le code de campagne donné par ton professeur et vérifie ton prénom et ton nom.</li>
+            <li>Travaille seul et sérieusement : Pix sert à savoir où tu en es.</li>
+            <li>Ne recopie jamais ton mot de passe ni les réponses de Pix sur ce site.</li>
+        </ol>
+        <p><a href="https://pix.fr/" target="_blank" rel="noopener noreferrer">Ouvrir Pix</a></p>
+    </details>
+    <button type="button" id="course-pix-declare" disabled>J’ai fait ma séance Pix</button>
+    <p id="course-pix-status" role="status" aria-live="polite"></p>
+</section>
+
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>
@@ -1070,6 +462,7 @@
 
 
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/pix-declaration.js"></script>
 
 
     </main>

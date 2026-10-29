@@ -19,7 +19,7 @@
 
     <title>
         
-        Protéger ses comptes et ses données | BAC À SABLE — Portail pédagogique (comptes fictifs)
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
         
     </title>
 
@@ -63,7 +63,7 @@
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261029-steps-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261029-pix-1">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Choisir comment protéger un compte</a></li><li><a href="#a02">Examiner une demande inhabituelle</a></li><li><a href="#a03">Réagir et expliquer</a></li><li><a href="#a04">Pour aller plus loin, si tu as terminé — facultatif</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Le binaire</a></li><li><a href="#a02">Le code ASCII</a></li><li><a href="#a03">Défi — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -134,24 +134,29 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Technologie · 3e · S10</span></div>
-    <h1>Ancien essai court — protéger l’accès à ses comptes</h1>
+    <h1>Séance 10 : Comment l’ordinateur écrit-il un mot ?</h1>
     
 
     
     
     <section class="course-info-card cours-theme">
         <h2>Thème du programme</h2>
-        <p>Les objets et les systèmes techniques : leurs usages et leurs interactions</p>
+        <p>Structure, fonctionnement, comportement : des objets et des systèmes techniques à comprendre</p>
     </section>
     
 
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Comment utiliser un service en ligne sans donner accès à son compte à une autre personne ?</p>
+        <p>Comment un ordinateur représente-t-il des nombres et des lettres avec seulement des 0 et des 1 ?</p>
     </section>
     
 
+    
+    <section class="course-info-card cours-competences-bo">
+        <h2>Compétence travaillée</h2>
+        <ul><li>Décrire et caractériser l’organisation interne d’un objet ou d’un système technique et ses échanges avec son environnement (énergies, données)</li></ul>
+    </section>
     
 
     
@@ -161,11 +166,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Un identifiant et un moyen d’authentification n’ont pas le même rôle.</li>
+            <li>Un bit vaut 0 ou 1. En binaire, chaque position vaut le double de la précédente : 1, 2, 4, 8, 16, 32, 64, 128. Exemple : 1010 en binaire = 8 + 2 = 10.</li>
             
-            <li>La protection d’un compte combine des moyens techniques et des choix de l’utilisateur.</li>
-            
-            <li>Une demande urgente peut chercher à nous faire agir sans vérifier.</li>
+            <li>Le code ASCII associe un nombre à chaque caractère : A = 65, B = 66… ; a = 97.</li>
             
         </ul>
         
@@ -173,23 +176,21 @@
         <h2>Ce que tu vas apprendre à faire</h2>
         <ul>
             
-            <li>Choisir des protections adaptées et expliquer leur utilité.</li>
+            <li>Convertir un nombre binaire en décimal (et inversement, petits nombres).</li>
             
-            <li>Repérer des indices dans un message et vérifier par un autre chemin.</li>
-            
-            <li>Proposer des actions dans un ordre utile lorsqu’un compte est menacé.</li>
+            <li>Coder un mot avec le code ASCII.</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><p>Un réseau peut fonctionner correctement alors qu’un utilisateur se fait tromper. Nous allons apprendre à choisir une réaction et à l’expliquer, plutôt qu’à mémoriser une liste de dangers.</p></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En 5e, tu as vu les octets et les tailles de fichiers.</p><p>Aujourd’hui, tu découvres comment les 0 et les 1 deviennent des nombres et des lettres.</p></div></section>
     
-    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Ces réflexes servent pour l’ENT, une messagerie, un jeu en ligne ou un réseau social. Nous travaillons uniquement sur des situations inventées : ne saisis jamais un vrai mot de passe ni un code personnel dans tes réponses.</p></section>
-    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>En S09, vous avez étudié comment des réseaux communiquent. Rappelle oralement le rôle du routeur. Puis discutez : pouvoir joindre un service prouve-t-il que la personne qui demande à se connecter est autorisée ? Si les réseaux restent difficiles, le professeur reprend un exemple avant de poursuivre.</p></section>
-    <section class="course-info-card course-info-prerequisites"><h2>Ce qui va nous servir</h2><ul><li>Un service en ligne échange des données par un réseau.</li><li>Pour cette séance, aucune configuration réseau ni création de compte n’est nécessaire.</li></ul></section>
-    <section class="course-info-card cours-notions"><h2>Les repères pour comprendre</h2><h3>Indiquer son identité et la vérifier</h3><p>Un identifiant indique le compte demandé : par exemple un nom d’utilisateur. L’authentification sert à vérifier le droit d’utiliser ce compte, par exemple avec un mot de passe. Connaître un identifiant ne donne donc pas, à lui seul, le droit d’entrer.</p><h3>Plusieurs protections se complètent</h3><p>Un mot de passe long et difficile à deviner doit être différent pour chaque service. Un gestionnaire de mots de passe peut aider. Quand elle est proposée, la double authentification ajoute une vérification : par exemple un code temporaire sur un appareil que l’on possède. Ce code reste secret et cette protection ne rend pas toutes les tromperies impossibles.</p><h3>Prendre le temps de vérifier</h3><p>L’hameçonnage est une tromperie qui cherche à obtenir des informations ou une action en imitant un service connu. Une urgence, un logo ou le nom affiché de l’expéditeur ne prouvent pas l’origine du message. En cas de doute, ouvre toi-même l’application habituelle ou contacte le service par un moyen déjà connu. Sur un ordinateur partagé, déconnecte ton compte après usage.</p></section>
+    
+    
+    
+    
     
     
     
@@ -206,30 +207,34 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Choisir comment protéger un compte</h2>
+        <h2>Le binaire</h2>
         
         
-        <p><strong>Pourquoi cette activité ?</strong> Comprendre ce que chaque protection apporte, pour ne pas compter sur une seule précaution.</p>
-        <h3>Comment procéder ?</h3><ol><li>Lis les repères. Explique oralement à ton voisin la différence entre identifiant et authentification.</li><li>Réponds au choix proposé, puis explique les deux protections de la situation suivante en deux à quatre phrases.</li><li>En groupe, chacun doit pouvoir expliquer l’une des protections ; une seule réponse commune est enregistrée.</li></ol>
+        
+        
 
         
 
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-        
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Exemple expliqué : 00001010 = 8 + 2 = 10</caption><thead><tr><th scope="col">128</th><th scope="col">64</th><th scope="col">32</th><th scope="col">16</th><th scope="col">8</th><th scope="col">4</th><th scope="col">2</th><th scope="col">1</th></tr></thead><tbody><tr><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td></tr></tbody></table></div>
+    
+
+
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Sam saisit son nom d’utilisateur puis un code secret pour accéder à son compte. Quel élément sert à vérifier son droit d’accès ?</h3>
+            <h3 id="a01-q01-label">Question 1 — Que vaut 00000101 en décimal ?</h3>
             
 
             
             
-                <select id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><option value="">Choisis une réponse</option><option value="identifiant">Le nom d’utilisateur seul.</option><option value="code">Le code secret.</option><option value="reseau">Le fait d’avoir une connexion à Internet.</option></select>
+                <input type="text" inputmode="decimal" id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label">
 
                 
-            
+            <details><summary>Un coup de pouce</summary><p>Écris l’opération, calcule, vérifie l’unité.</p></details>
             
             
         </div>
@@ -237,15 +242,31 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Un mot de passe utilisé sur un jeu a été volé. Alex utilise un mot de passe différent pour sa messagerie et y a activé la double authentification. Explique ce que chacune de ces deux précautions apporte à sa messagerie.</h3>
+            <h3 id="a01-q02-label">Question 2 — Que vaut 00001111 en décimal ?</h3>
             
 
             
             
-                <textarea id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label">
 
                 
-            <details><summary>Un coup de pouce</summary><p>Fais deux phrases : « Un mot de passe différent sert à… » puis « La deuxième vérification sert à… ». Aucune protection ne garantit un risque nul.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Écris l’opération, calcule, vérifie l’unité.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a01-q03-label">Question 3 — Écris 12 en binaire sur 8 bits et explique ta méthode.</h3>
+            
+
+            
+            
+                <textarea id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Une idée + « car » + une raison tirée de la séance.</p></details>
             
             
         </div>
@@ -259,32 +280,99 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Examiner une demande inhabituelle</h2>
+        <h2>Le code ASCII</h2>
         
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les nombres sont codés. Et les lettres ?</p>
         
-        <p><strong>Pourquoi cette activité ?</strong> Apprendre à justifier un doute et à vérifier sans utiliser le chemin proposé par le message.</p>
-        <h3>Comment procéder ?</h3><ol><li>Lis silencieusement le message. Repère ce qu’il demande de faire et ce qui pousse à se dépêcher.</li><li>Compare tes observations avec ton voisin avant de rédiger. Explique tes indices avec tes mots.</li><li>Si tu hésites, demande au professeur la ressource officielle sur l’hameçonnage. Cherche seulement comment vérifier une demande, puis reviens à la situation.</li></ol>
-
-        
-        <p>Message fictif, sans lien à ouvrir : « Assistance de ton ENT — Ton compte sera supprimé dans dix minutes. Pour le conserver, réponds immédiatement avec ton mot de passe et le code reçu sur ton téléphone. Ne contacte pas le collège : cela retarderait la vérification. »</p>
         
 
         
+
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Extrait de la table ASCII</caption><thead><tr><th scope="col">Caractère</th><th scope="col">A</th><th scope="col">B</th><th scope="col">C</th><th scope="col">E</th><th scope="col">O</th><th scope="col">T</th></tr></thead><tbody><tr><td>Code</td><td>65</td><td>66</td><td>67</td><td>69</td><td>79</td><td>84</td></tr></tbody></table></div>
+    
+
+
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Relève deux indices différents qui doivent t’alerter, explique pourquoi, puis propose un moyen de vérifier la demande sans y répondre. Quatre à cinq phrases suffisent.</h3>
+            <h3 id="a02-q01-label">Question 1 — Code le mot « EAU » en ASCII.</h3>
             
 
             
             
-                <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Tu peux observer le délai, les informations demandées ou la consigne de ne contacter personne. Pour vérifier, cherche un chemin que tu connaissais avant ce message.</p></details>
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Lettre</th>
+                                
+                                <th>Code</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    E
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Le code ASCII — Code — E">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    A
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Le code ASCII — Code — A">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    U (code 85)
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Le code ASCII — Code — U (code 85)">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            <details><summary>Un coup de pouce</summary><p>Une case à la fois : la ligne croise la colonne (réflexe n° 6).</p></details>
             
             
         </div>
@@ -292,15 +380,15 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Un autre message affiche le vrai logo du collège et ne contient aucune faute. Que peux-tu en conclure ?</h3>
+            <h3 id="a02-q02-label">Question 2 — Décode le message 84 79 84 79 avec le document 1.</h3>
             
 
             
             
-                <select id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><option value="">Choisis une réponse</option><option value="certain">Il vient forcément du collège.</option><option value="verifier">Cela ne suffit pas : je dois encore vérifier une demande inhabituelle par un moyen connu.</option><option value="faux">Il est forcément frauduleux parce qu’il ne contient aucune faute.</option></select>
+                <textarea id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            
+            <details><summary>Un coup de pouce</summary><p>Une phrase complète qui reprend les mots de la question.</p></details>
             
             
         </div>
@@ -313,31 +401,35 @@
     </article>
     
     <article class="cours-activite" id="a03" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Réagir et expliquer</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Défi</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
-        <p><strong>Pourquoi cette activité ?</strong> Transformer les précautions du cours en une courte démarche utilisable dans une situation nouvelle.</p>
-        <h3>Comment procéder ?</h3><ol><li>Imagine les premières actions utiles, sans ouvrir de compte réel ni modifier tes réglages personnels.</li><li>Écris trois étapes numérotées et explique brièvement leur utilité. Relis ensuite les réponses de la séance.</li></ol>
-
         
 
         
+
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
+<p>Un octet = 8 bits.</p>
+    
+
+
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Lou a communiqué le mot de passe de l’ENT à un faux service d’assistance. Lou peut encore ouvrir l’application habituelle. Propose trois actions utiles, dans un ordre cohérent, pour demander de l’aide et protéger le compte. Explique à quoi sert chaque action.</h3>
+            <h3 id="a03-q01-label">Question 1 — Combien de valeurs différentes un octet peut-il représenter ?</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Pense à qui prévenir, au chemin sûr pour accéder au compte et à ce qui permettrait à l’intrus de continuer à l’utiliser. Si le compte n’est plus accessible, l’assistance de l’établissement est nécessaire.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Une phrase complète qui reprend les mots de la question.</p></details>
             
             
         </div>
@@ -350,18 +442,34 @@
     </article>
     
     <article class="cours-activite" id="a04" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>Pour aller plus loin, si tu as terminé</h2>
-        <p class="course-optional">Pour aller plus loin — activité facultative.</p>
+        <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Conclusion de ton travail</h2>
         
-        <p><strong>Pourquoi cette activité ?</strong> Réutiliser les réflexes dans une autre situation, sans ajouter de travail obligatoire.</p>
-        <h3>Comment procéder ?</h3><ol><li>Imagine oralement une demande inhabituelle dans un jeu en ligne, sans utiliser de données personnelles.</li><li>Demande à un camarade quel indice il vérifierait et par quel autre chemin.</li></ol>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais coder en binaire. Il reste à répondre au problème de départ.</p>
+        
+        
 
         
 
         
         
         
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Réponds au problème du jour : comment un ordinateur représente-t-il nombres et lettres avec des 0 et des 1 ?</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème et de « Ce que je retiens », avec un exemple de la séance.</p></details>
+            
+            
+        </div>
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
@@ -378,17 +486,38 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Un identifiant désigne le compte ; l’authentification vérifie le droit d’y accéder.</li><li>Des mots de passe différents et une deuxième vérification protègent de façons complémentaires.</li><li>Face à une demande inhabituelle, je prends le temps de vérifier par un moyen connu.</li></ul>
-    <h3>Faire le point</h3><p>Sans recopier les repères, explique oralement un réflexe que tu pourrais utiliser et ce qu’il protège. Indique ensuite au professeur ce qui reste difficile.</p>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Binaire : positions 1, 2, 4, 8, 16, 32, 64, 128.</li><li>ASCII : un code par caractère (A = 65).</li></ul>
+    
 </section>
 
+<section class="cours-sources course-info-card" aria-labelledby="course-sources-title"><h2 id="course-sources-title">Sources et ressources officielles</h2>
+<p><a href="https://www.education.gouv.fr/media/160767/download" target="_blank" rel="noopener noreferrer">Ministère de l’Éducation nationale — Programme de technologie du cycle 4 (BO n° 9 du 29 février 2024)</a></p>
 
+
+</section>
 
     <div class="course-submit-panel">
         <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
         <p id="course-submit-status" role="status" aria-live="polite"></p>
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
+    
+<section class="course-pix" id="course-pix" aria-labelledby="course-pix-title" data-etablissement="college" data-matiere="techno" data-classe="3e" data-seance="S10">
+    <h2 id="course-pix-title">Aujourd’hui, c’était une séance Pix ?</h2>
+    <p>Si ton professeur t’a fait travailler sur Pix à la place du cours, ta séance de technologie t’attend ici : tu la reprendras la prochaine fois, rien n’est perdu. Quand tu as fini sur Pix, clique sur le bouton pour le signaler.</p>
+    <details><summary>Que faire pendant une séance Pix ?</summary>
+        <ol>
+            <li>Ouvre Pix depuis l’ENT (ou sur pix.fr, « Se connecter »).</li>
+            <li>Saisis le code de campagne donné par ton professeur et vérifie ton prénom et ton nom.</li>
+            <li>Travaille seul et sérieusement : Pix sert à savoir où tu en es.</li>
+            <li>Ne recopie jamais ton mot de passe ni les réponses de Pix sur ce site.</li>
+        </ol>
+        <p><a href="https://pix.fr/" target="_blank" rel="noopener noreferrer">Ouvrir Pix</a></p>
+    </details>
+    <button type="button" id="course-pix-declare" disabled>J’ai fait ma séance Pix</button>
+    <p id="course-pix-status" role="status" aria-live="polite"></p>
+</section>
+
     <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
     </section>
 </div></div>
@@ -409,6 +538,7 @@
 
 
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/pix-declaration.js"></script>
 
 
     </main>

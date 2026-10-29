@@ -19,7 +19,7 @@
 
     <title>
         
-        Comment répartir le travail dans un petit projet ? | BAC À SABLE — Portail pédagogique (comptes fictifs)
+        BAC À SABLE — Portail pédagogique (comptes fictifs)
         
     </title>
 
@@ -63,7 +63,7 @@
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261029-steps-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261029-pix-1">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
@@ -95,7 +95,7 @@
 
 
 
-<div id="course-work" data-etablissement="college" data-matiere="techno" data-classe="4e" data-seance="S41" data-saving-enabled="false" data-collaboration-enabled="false">
+<div id="course-work" data-etablissement="college" data-matiere="techno" data-classe="4e" data-seance="S41" data-saving-enabled="true" data-collaboration-enabled="true">
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
         <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">1. Comprendre la mission</a></li><li><a href="#a02">2. À toi d’essayer</a></li><li><a href="#a03">3. Réutiliser la méthode</a></li><li><a href="#a04">4. Ce que tu retiens</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Le besoin</a></li><li><a href="#a02">Le cahier des charges (Writer n° 2)</a></li><li><a href="#a03">Le planning du groupe</a></li><li><a href="#a04">Défi — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -134,24 +134,29 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Technologie · 4e · S41</span></div>
-    <h1>Comment répartir le travail dans un petit projet ?</h1>
+    <h1>Séance 41 : Quelle nouvelle fonction pour le tracker ?</h1>
     
 
     
     
     <section class="course-info-card cours-theme">
         <h2>Thème du programme</h2>
-        <p>Prototyper et vérifier</p>
+        <p>Création, conception, réalisation, innovations : des objets à concevoir et à réaliser</p>
     </section>
     
 
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Comment répartir le travail dans un petit projet ?</p>
+        <p>Quel besoin justifie d’ajouter une fonction au tracker, et comment l’écrire dans un cahier des charges ?</p>
     </section>
     
 
+    
+    <section class="course-info-card cours-competences-bo">
+        <h2>Compétence travaillée</h2>
+        <ul><li>Imaginer, concevoir et réaliser une ou des solutions en réponse à un besoin, à des exigences (de développement durable, par exemple) ou à la nécessité d’améliorations dans une démarche de créativité</li></ul>
+    </section>
     
 
     
@@ -161,7 +166,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Une planification nomme les tâches, leur ordre et le temps nécessaire.</li>
+            <li>Ajouter une fonction : le tracker enverra par radio sa luminosité et son angle à une deuxième carte micro:bit, qui les affichera.</li>
+            
+            <li>Un cahier des charges liste les fonctions, les critères (ce qu’on mesure) et les niveaux (la valeur à atteindre).</li>
             
         </ul>
         
@@ -169,43 +176,26 @@
         <h2>Ce que tu vas apprendre à faire</h2>
         <ul>
             
-            <li>Classer les tâches du projet fourni et proposer une durée réaliste pour chacune.</li>
+            <li>Formuler le besoin et les fonctions d’un objet.</li>
+            
+            <li>Rédiger un cahier des charges simple dans Writer (tableau, styles).</li>
+            
+            <li>Organiser le planning du groupe.</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><p>Une planification nomme les tâches, leur ordre et le temps nécessaire.</p></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En 5e, tu as modifié le comportement du tracker. En séance 2, tu as vu les étapes d’un projet.</p><p>En 4e, ton groupe va ajouter une vraie nouvelle fonction au tracker : communiquer à distance.</p></div></section>
     
-    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Un modèle numérique permet de préparer une forme avant de la fabriquer.</p></section>
-    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>Après Pix : quelle compétence numérique dois-je renforcer ?, une nouvelle mission t’aide à réutiliser tes méthodes.</p></section>
-    <section class="course-info-card course-info-prerequisites"><h2>Ce qui va nous servir</h2><ul><li>Tu peux relire la séance précédente (Pix : quelle compétence numérique dois-je renforcer ?) si nécessaire.</li></ul></section>
-    <section class="course-info-card cours-notions"><h2>Les repères pour comprendre</h2><h3>Un exemple expliqué</h3><p>Pour une fiche : choisir les informations, créer le document, vérifier les sources, puis relire. La mise en page vient après le choix du contenu.</p></section>
     
-<p>Ce que tu vas apprendre : Une planification nomme les tâches, leur ordre et le temps nécessaire.</p>
     
-
-<p>Ce que tu vas apprendre à faire : Classer les tâches du projet fourni et proposer une durée réaliste pour chacune.</p>
     
-
-<p>Dans la vie réelle : Un modèle numérique permet de préparer une forme avant de la fabriquer.</p>
     
-
-
     
-    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
-<p>Programme de Technologie cycle 4 : cette séance travaille une planification nomme les tâches, leur ordre et le temps nécessaire.. Elle contribue progressivement aux compétences de fin de cycle.</p>
     
-
-<p><a href="https://www.education.gouv.fr/bo/2024/Hebdo9/MENE2402802A" target="_blank" rel="noopener noreferrer">Ministère — Programme de Technologie du cycle 4, BO 2024</a></p>
-
-
-<p><a href="https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4" target="_blank" rel="noopener noreferrer">Éduscol — Technologie au cycle 4</a></p>
-
-
-</div></details>
-
+    
     
     <nav class="course-mission-controls course-intro-controls" aria-label="Commencer la séance"><a class="course-mission-next" href="#a01">J’ai compris l’objectif : commencer la première mission <span aria-hidden="true">→</span></a></nav>
 </header>
@@ -219,17 +209,17 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>1. Comprendre la mission</h2>
+        <h2>Le besoin</h2>
         
         
-        <p><strong>Pourquoi cette activité ?</strong> On commence par un exemple guidé : il montre une méthode avant que tu l’essaies.</p>
-        <h3>Comment procéder ?</h3><ol><li>Lis la situation.</li><li>Suis les étapes de l’exemple.</li><li>Repère la donnée qui aide à répondre.</li></ol>
+        
+        
 
         
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Pour une fiche : choisir les informations, créer le document, vérifier les sources, puis relire. La mise en page vient après le choix du contenu.</p>
+<p>La personne qui s’occupe de l’installation veut savoir, depuis la salle, si le tracker reçoit du soleil et vers où il est tourné, sans aller dans la cour.</p>
     
 
 
@@ -238,7 +228,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Quelle tâche doit être faite avant la mise en page ?</h3>
+            <h3 id="a01-q01-label">Question 1 — Formule le besoin en une phrase (« Je voudrais… ») et la fonction à ajouter.</h3>
             
 
             
@@ -246,23 +236,7 @@
                 <textarea id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Relis l’exemple et repère l’information qui répond à la question.</p></details>
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a01-q02-label">Question 2 — Explique ta réponse en citant une donnée ou un indice du cours.</h3>
-            
-
-            
-            
-                <textarea id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Une ou deux phrases suffisent.</p></details>
+            <details><summary>Un coup de pouce</summary><p>« = » + fonction + plage.</p></details>
             
             
         </div>
@@ -276,53 +250,102 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>2. À toi d’essayer</h2>
+        <h2>Le cahier des charges (Writer n° 2)</h2>
         
         
-        <p><strong>Pourquoi cette activité ?</strong> Tu as vu la méthode ; maintenant, applique-la dans une tâche que tu peux vérifier.</p>
-        <h3>Comment procéder ?</h3><ol><li>Réalise les étapes dans l’ordre.</li><li>Note le résultat attendu.</li><li>Compare-le au résultat observé.</li></ol>
-
         
-        <p>Classer les tâches du projet fourni et proposer une durée réaliste pour chacune.</p>
         
 
         
+
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-        <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
-<p><a href="https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4" target="_blank" rel="noopener noreferrer">Éduscol — Technologie au cycle 4</a></p>
+<ol><li>Ouvre Writer, enregistre sous 4e_S41_groupe.odt.</li><li>Titre « Cahier des charges du tracker communicant » en style Titre.</li><li>Insère un tableau de 3 colonnes : Fonction, Critère, Niveau.</li><li>Ajoute un en-tête avec les noms du groupe.</li></ol>
+    
+
+<p>Exemple de ligne : Fonction « Envoyer la luminosité » ; critère « distance de réception » ; niveau « au moins 10 m ».</p>
+    
+
+<p>Rappel de la séance 6 : styles de titres et en-tête.</p>
+    
 
 
-</div></details>
-
+        
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Quel résultat observes-tu ? Décris ton essai.</h3>
+            <h3 id="a02-q01-label">Question 1 — Recopie deux lignes de ton cahier des charges.</h3>
             
 
             
             
-                <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Fonction</th>
+                                
+                                <th>Critère</th>
+                                
+                                <th>Niveau</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r0_c0" data-required="true" data-row="0" data-col="0" aria-label="Le cahier des charges (Writer n° 2) — Fonction — ">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Le cahier des charges (Writer n° 2) — Critère — ">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r0_c2" data-required="true" data-row="0" data-col="2" aria-label="Le cahier des charges (Writer n° 2) — Niveau — ">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r1_c0" data-required="true" data-row="1" data-col="0" aria-label="Le cahier des charges (Writer n° 2) — Fonction — ">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Le cahier des charges (Writer n° 2) — Critère — ">
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r1_c2" data-required="true" data-row="1" data-col="2" aria-label="Le cahier des charges (Writer n° 2) — Niveau — ">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
             
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a02-q02-label">Question 2 — Explique ta réponse en citant une donnée ou un indice du cours.</h3>
-            
-
-            
-            
-                <textarea id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
+            <details><summary>Un coup de pouce</summary><p>Ligne × colonne.</p></details>
             
             
         </div>
@@ -336,17 +359,17 @@
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>3. Réutiliser la méthode</h2>
+        <h2>Le planning du groupe</h2>
         
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le cahier des charges est prêt. Organisez le travail du groupe.</p>
         
-        <p><strong>Pourquoi cette activité ?</strong> Un nouvel exemple t’aide à voir où cette méthode peut encore servir.</p>
         
 
         
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Reprends la méthode avec une nouvelle valeur, un autre document ou une autre situation du dossier.</p>
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Planning proposé</caption><thead><tr><th scope="col">Séance</th><th scope="col">Tâche</th></tr></thead><tbody><tr><td>42</td><td>Découvrir la radio dans le simulateur</td></tr><tr><td>43</td><td>Identifier les constituants manquants</td></tr><tr><td>44</td><td>Programmer émetteur et récepteur</td></tr><tr><td>45</td><td>Tester la liaison</td></tr><tr><td>46</td><td>Exploiter les mesures (Calc)</td></tr><tr><td>47-48</td><td>Préparer et présenter la revue de projet</td></tr></tbody></table></div>
     
 
 
@@ -355,7 +378,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Quelle information permet de justifier ta conclusion ? Quelle limite reste à vérifier ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Répartissez les rôles dans le groupe (au moins deux rôles) et écris le tien.</h3>
             
 
             
@@ -363,7 +386,7 @@
                 <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            
+            <details><summary>Un coup de pouce</summary><p>Combien d’éléments sont demandés ?</p></details>
             
             
         </div>
@@ -376,23 +399,79 @@
     </article>
     
     <article class="cours-activite" id="a04" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>4. Ce que tu retiens</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Défi</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
-        <p><strong>Pourquoi cette activité ?</strong> Tu termines en gardant une idée et une méthode pour la prochaine séance.</p>
-        <h3>Comment procéder ?</h3><ol><li>Relis les deux éléments à retenir.</li><li>Note une méthode que tu pourras réutiliser.</li></ol>
+        
 
         
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
+<p>La radio de la micro:bit fonctionne sur un « groupe » (un canal) de 0 à 255.</p>
+    
+
 
         
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Pourquoi chaque groupe de la classe doit-il choisir un numéro de groupe radio différent ?</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Pense à « car » (réflexe n° 4).</p></details>
+            
+            
+        </div>
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a05" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Conclusion de ton travail</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le projet est lancé. Il reste à répondre au problème de départ.</p>
+        
+        
+
+        
+
+        
+        
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : quel besoin justifie la nouvelle fonction, et comment l’as-tu écrite dans le cahier des charges ?</h3>
+            
+
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème (réflexe n° 3).</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -405,18 +484,39 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Une planification nomme les tâches, leur ordre et le temps nécessaire.</li><li>Pour vérifier, je compare une réponse ou un essai à une donnée précise.</li></ul>
-    <h3>Faire le point</h3><p>Je peux expliquer ce que j’ai appris et montrer une réponse ou un essai comme preuve.</p>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Ajouter une fonction : partir d’un besoin.</li><li>Cahier des charges : fonction, critère, niveau.</li></ul>
+    
 </section>
 
+<section class="cours-sources course-info-card" aria-labelledby="course-sources-title"><h2 id="course-sources-title">Sources et ressources officielles</h2>
+<p><a href="https://www.education.gouv.fr/media/160767/download" target="_blank" rel="noopener noreferrer">Ministère de l’Éducation nationale — Programme de technologie du cycle 4 (BO n° 9 du 29 février 2024)</a></p>
 
+
+</section>
 
     <div class="course-submit-panel">
         <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
         <p id="course-submit-status" role="status" aria-live="polite"></p>
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    
+<section class="course-pix" id="course-pix" aria-labelledby="course-pix-title" data-etablissement="college" data-matiere="techno" data-classe="4e" data-seance="S41">
+    <h2 id="course-pix-title">Aujourd’hui, c’était une séance Pix ?</h2>
+    <p>Si ton professeur t’a fait travailler sur Pix à la place du cours, ta séance de technologie t’attend ici : tu la reprendras la prochaine fois, rien n’est perdu. Quand tu as fini sur Pix, clique sur le bouton pour le signaler.</p>
+    <details><summary>Que faire pendant une séance Pix ?</summary>
+        <ol>
+            <li>Ouvre Pix depuis l’ENT (ou sur pix.fr, « Se connecter »).</li>
+            <li>Saisis le code de campagne donné par ton professeur et vérifie ton prénom et ton nom.</li>
+            <li>Travaille seul et sérieusement : Pix sert à savoir où tu en es.</li>
+            <li>Ne recopie jamais ton mot de passe ni les réponses de Pix sur ce site.</li>
+        </ol>
+        <p><a href="https://pix.fr/" target="_blank" rel="noopener noreferrer">Ouvrir Pix</a></p>
+    </details>
+    <button type="button" id="course-pix-declare" disabled>J’ai fait ma séance Pix</button>
+    <p id="course-pix-status" role="status" aria-live="polite"></p>
+</section>
+
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>
@@ -436,6 +536,7 @@
 
 
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/pix-declaration.js"></script>
 
 
     </main>

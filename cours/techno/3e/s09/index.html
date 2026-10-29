@@ -63,7 +63,7 @@
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261029-steps-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261029-pix-1">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a05">Production attendue</a></li><li><a href="#a06">1. Préparez votre document de travail</a></li><li><a href="#a07">2. Construisez un premier réseau local</a></li><li><a href="#a08">3. Comment vérifier que le réseau fonctionne ?</a></li><li><a href="#a09">4. Une mauvaise adresse peut-elle provoquer une panne ?</a></li><li><a href="#a10">5. Construisez maintenant deux réseaux</a></li><li><a href="#a11">6. Comment relier les deux réseaux ?</a></li><li><a href="#a12">7. Pourquoi le routeur ne suffit-il pas ?</a></li><li><a href="#a13">8. Observez réellement le trajet des données</a></li><li><a href="#a14">9. Mission dépannage</a></li><li><a href="#a15">10. Et si le ping ne fonctionne pas ?</a></li><li><a href="#a16">11. Conclusion du travail</a></li><li><a href="#a17">Rendu attendu</a></li><li><a href="#a18">À retenir</a></li><li><a href="#a19">Sources générales</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Lire une table de routage</a></li><li><a href="#a02">Le jeu des routeurs (débranché)</a></li><li><a href="#a03">Défi — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -134,7 +134,7 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Technologie · 3e · S09</span></div>
-    <h1>Comment faire communiquer plusieurs réseaux ?</h1>
+    <h1>Séance 9 : Pourquoi des routeurs ?</h1>
     
 
     
@@ -148,10 +148,15 @@
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Pourquoi deux réseaux qui fonctionnent séparément ne peuvent-ils pas forcément communiquer entre eux ?</p>
+        <p>Comment un routeur choisit-il par où envoyer un paquet ?</p>
     </section>
     
 
+    
+    <section class="course-info-card cours-competences-bo">
+        <h2>Compétence travaillée</h2>
+        <ul><li>Décrire et caractériser l’organisation interne d’un objet ou d’un système technique et ses échanges avec son environnement (énergies, données)</li></ul>
+    </section>
     
 
     
@@ -161,62 +166,36 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Deux équipements appartenant au même réseau local peuvent communiquer directement par l&#39;intermédiaire d&#39;un commutateur.</li>
+            <li>Un routeur relie plusieurs réseaux. Il lit l’adresse de destination du paquet et consulte sa table de routage : pour chaque réseau de destination, elle indique la sortie (l’interface) à utiliser.</li>
             
-            <li>Les adresses IP et le masque permettent de configurer les interfaces réseau.</li>
-            
-            <li>Un routeur relie plusieurs réseaux différents.</li>
-            
-            <li>Une passerelle indique à un équipement vers quel routeur envoyer les données destinées à un autre réseau.</li>
-            
-            <li>Une erreur d&#39;adresse, de masque ou de passerelle peut empêcher la communication.</li>
-            
-            <li>La commande ping permet de tester si une machine est joignable.</li>
+            <li>S’il existe plusieurs chemins, un routeur peut contourner une liaison en panne.</li>
             
         </ul>
         
         
+        <h2>Ce que tu vas apprendre à faire</h2>
+        <ul>
+            
+            <li>Lire une table de routage.</li>
+            
+            <li>Suivre le chemin d’un paquet.</li>
+            
+        </ul>
+        
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><p>PC1 sait communiquer avec les machines de son réseau local.</p></section>
-    
-    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
-    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séance 8, tu as vu que les paquets traversent des routeurs.</p><p>Aujourd’hui, activité débranchée : tu joues le rôle des routeurs.</p></div></section>
     
     
     
-<h4>Compétence visée : Configurer, tester et dépanner un réseau informatique simulé</h4>
     
-
-<h4>Objectifs d’apprentissage</h4>
     
-
-<p>Ce que les élèves vont apprendre :</p>
     
-
-<ul><li>Deux équipements appartenant au même réseau local peuvent communiquer directement par l&#39;intermédiaire d&#39;un commutateur.</li><li>Les adresses IP et le masque permettent de configurer les interfaces réseau.</li><li>Un routeur relie plusieurs réseaux différents.</li><li>Une passerelle indique à un équipement vers quel routeur envoyer les données destinées à un autre réseau.</li><li>Une erreur d&#39;adresse, de masque ou de passerelle peut empêcher la communication.</li><li>La commande ping permet de tester si une machine est joignable.</li></ul>
     
-
-<p>Ce qu&#39;ils vont apprendre à faire :</p>
     
-
-<ul><li>Construire un réseau simple avec Filius.</li><li>Configurer des adresses IP et des masques.</li><li>Utiliser la commande ping.</li><li>Identifier une erreur de configuration.</li><li>Relier deux réseaux avec un routeur.</li><li>Configurer une passerelle.</li><li>Observer le trajet des données dans une simulation.</li></ul>
     
-
-
-    
-    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
-<p>Dans cette page du ministère, retrouve le programme ou le référentiel de ta formation. Les objectifs précis étudiés aujourd’hui sont indiqués dans le cours.</p>
-    
-
-<p><a href="https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4" target="_blank" rel="noopener noreferrer">Consulter les programmes et attendus officiels</a></p>
-
-
-</div></details>
-
-    
-    <nav class="course-mission-controls course-intro-controls" aria-label="Commencer la séance"><a class="course-mission-next" href="#a05">J’ai compris l’objectif : commencer la première mission <span aria-hidden="true">→</span></a></nav>
+    <nav class="course-mission-controls course-intro-controls" aria-label="Commencer la séance"><a class="course-mission-next" href="#a01">J’ai compris l’objectif : commencer la première mission <span aria-hidden="true">→</span></a></nav>
 </header>
 
 
@@ -226,9 +205,9 @@
 
 <section class="cours-activites">
     
-    <article class="cours-activite" id="a05" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>Production attendue</h2>
+    <article class="cours-activite" id="a01" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Lire une table de routage</h2>
         
         
         
@@ -238,41 +217,10 @@
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<ul><li>Un fichier LibreOffice Writer nommé 3e_S09_nom.odt.</li><li>Une capture du premier réseau local fonctionnel.</li><li>Les résultats de plusieurs tests ping.</li><li>Une capture des deux réseaux reliés par un routeur.</li><li>Une courte mission de dépannage.</li></ul>
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Table de routage du routeur R1</caption><thead><tr><th scope="col">Réseau de destination</th><th scope="col">Sortie à utiliser</th></tr></thead><tbody><tr><td>Réseau A</td><td>Sortie 1 (vers R2)</td></tr><tr><td>Réseau B</td><td>Sortie 2 (vers R3)</td></tr><tr><td>Réseau C</td><td>Sortie 2 (vers R3)</td></tr><tr><td>Autre</td><td>Sortie 3 (vers Internet)</td></tr></tbody></table></div>
     
 
-<p>Le fichier devra être déposé à la fin de la séance, même s&#39;il n&#39;est pas entièrement terminé.</p>
-    
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#course-intro">← Revoir l’objectif</a>
-            <a class="course-mission-next" href="#a06">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a06" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>1. Préparez votre document de travail</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Ouvrez LibreOffice Writer.</p>
-    
-
-<p>Créez un nouveau document.</p>
-    
-
-<p>Enregistrez-le immédiatement sous le nom : 3e_S09_nom.odt.</p>
+<p>Exemple expliqué : un paquet arrive à R1 pour le réseau B. R1 lit la ligne « Réseau B » : il l’envoie par la sortie 2, vers R3.</p>
     
 
 
@@ -281,315 +229,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a06-q01-label">Question 1 — Écrivez votre nom, votre prénom et le titre : Séance 9 – Comment faire communiquer plusieurs réseaux ?</h3>
-            
-
-            
-            
-                <textarea id="a06-q01" data-answer-id="a06_q01" data-required="true" aria-labelledby="a06-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-<p>Ouvrez ensuite Filius.</p>
-    
-
-<p>Ressource officielle : Éduscol STI – Comprendre le fonctionnement d&#39;un réseau informatique</p>
-    
-
-<p><a href="https://sti.eduscol.education.fr/technologie_college/ressources_pedagogiques/comprendre-le-fonctionnement-dun-reseau-informatique" target="_blank" rel="noopener noreferrer">Éduscol STI – Comprendre le fonctionnement d&#39;un réseau informatique</a></p>
-
-
-
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a05">← Étape précédente</a>
-            <a class="course-mission-next" href="#a07">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a07" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>2. Construisez un premier réseau local</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Dans Filius, restez d&#39;abord en mode conception.</p>
-    
-
-<p>Placez :</p>
-    
-
-<ul><li>deux ordinateurs ;</li><li>un commutateur ;</li><li>les câbles permettant de relier chaque ordinateur au commutateur.</li></ul>
-    
-
-<p>Configurez les deux ordinateurs :</p>
-    
-
-<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Machine</th><th scope="col">Adresse IP</th><th scope="col">Masque</th></tr></thead><tbody><tr><td>PC1</td><td>192.168.1.10</td><td>255.255.255.0</td></tr><tr><td>PC2</td><td>192.168.1.11</td><td>255.255.255.0</td></tr></tbody></table></div>
-    
-
-<p>Où configurer l&#39;adresse ?</p>
-    
-
-<p>En mode conception, cliquez sur l&#39;ordinateur.</p>
-    
-
-<p>Repérez les paramètres de son interface réseau.</p>
-    
-
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a07-q01-label">Question 1 — Indiquez l&#39;adresse IP et le masque demandés.</h3>
-            
-
-            
-            
-                <textarea id="a07-q01" data-answer-id="a07_q01" data-required="true" aria-labelledby="a07-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a06">← Étape précédente</a>
-            <a class="course-mission-next" href="#a08">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a08" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>3. Comment vérifier que le réseau fonctionne ?</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Vous allez utiliser la commande ping.</p>
-    
-
-<p>Pour ouvrir la ligne de commande dans Filius :</p>
-    
-
-<ol><li>Passez en mode simulation avec la flèche verte.</li><li>Cliquez sur PC1.</li><li>Ouvrez Installation des logiciels.</li><li>Sélectionnez Ligne de commande dans les logiciels disponibles.</li><li>Utilisez la flèche vers la gauche pour l&#39;installer.</li><li>Cliquez sur Appliquer les modifications.</li><li>Ouvrez ensuite Ligne de commande.</li></ol>
-    
-
-<p>Saisissez :</p>
-    
-
-<pre class="cours-code"><code>ping 192.168.1.11</code></pre>
-    
-
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a08-q01-label">Question 1 — Q1 : PC1 reçoit-il une réponse de PC2 ?</h3>
-            
-
-            
-            
-                <textarea id="a08-q01" data-answer-id="a08_q01" data-required="true" aria-labelledby="a08-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-<p>Ajoutez une capture d&#39;écran du réseau et du résultat du test dans votre document.</p>
-    
-
-<p>Pour observer les échanges : pendant la simulation, faites un clic droit sur la machine cible puis activez Voir l&#39;échange de données, puis relancez le ping.</p>
-    
-
-
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a08-q02-label">Question 2 — Q2 : Que voyez-vous circuler entre les machines ?</h3>
-            
-
-            
-            
-                <textarea id="a08-q02" data-answer-id="a08_q02" data-required="true" aria-labelledby="a08-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a07">← Étape précédente</a>
-            <a class="course-mission-next" href="#a09">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a09" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 5</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>4. Une mauvaise adresse peut-elle provoquer une panne ?</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Retournez en mode conception.</p>
-    
-
-<p>Modifiez PC2 :</p>
-    
-
-<p>PC2 = 192.168.1.10</p>
-    
-
-<p>PC1 et PC2 possèdent donc maintenant la même adresse.</p>
-    
-
-<p>Retournez en mode simulation et recommencez le test.</p>
-    
-
-<p>Dans votre document :</p>
-    
-
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a09-q01-label">Question 1 — décrivez ce que vous observez ;</h3>
-            
-
-            
-            
-                <textarea id="a09-q01" data-answer-id="a09_q01" data-required="true" aria-labelledby="a09-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a09-q02-label">Question 2 — identifiez ce qui est incorrect dans la configuration ;</h3>
-            
-
-            
-            
-                <textarea id="a09-q02" data-answer-id="a09_q02" data-required="true" aria-labelledby="a09-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-
-        </div>
-        
-        <div class="cours-question" data-question="q03">
-            
-            
-            <h3 id="a09-q03-label">Question 3 — proposez la correction ;</h3>
-            
-
-            
-            
-                <textarea id="a09-q03" data-answer-id="a09_q03" data-required="true" aria-labelledby="a09-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-<p>corrigez PC2 avant de continuer.</p>
-    
-
-
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a08">← Étape précédente</a>
-            <a class="course-mission-next" href="#a10">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a10" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 6</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>5. Construisez maintenant deux réseaux</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Ajoutez deux ordinateurs et un second commutateur.</p>
-    
-
-<p>Construisez :</p>
-    
-
-<p>Réseau A :</p>
-    
-
-<ul><li>PC1 : 192.168.1.10 / 255.255.255.0</li><li>PC2 : 192.168.1.11 / 255.255.255.0</li></ul>
-    
-
-<p>Réseau B :</p>
-    
-
-<ul><li>PC3 : 192.168.2.10 / 255.255.255.0</li><li>PC4 : 192.168.2.11 / 255.255.255.0</li></ul>
-    
-
-<p>PC1 et PC2 doivent être reliés au premier commutateur.</p>
-    
-
-<p>PC3 et PC4 doivent être reliés au second.</p>
-    
-
-<p>Testez :</p>
-    
-
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a10-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
+            <h3 id="a01-q01-label">Question 1 — D’après le document 1, par quelle sortie R1 envoie-t-il chaque paquet ?</h3>
             
 
             
@@ -599,9 +239,9 @@
                         <thead>
                             <tr>
                                 
-                                <th>Test</th>
+                                <th>Destination du paquet</th>
                                 
-                                <th>Fonctionne ?</th>
+                                <th>Sortie</th>
                                 
                             </tr>
                         </thead>
@@ -612,30 +252,13 @@
                                 
                                 <td>
                                     
-                                    PC1 → PC2
+                                    Réseau A
                                     
                                 </td>
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a10_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="5. Construisez maintenant deux réseaux — Fonctionne ? — PC1 → PC2">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    PC3 → PC4
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a10_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="5. Construisez maintenant deux réseaux — Fonctionne ? — PC3 → PC4">
+                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Lire une table de routage — Sortie — Réseau A">
                                     
                                 </td>
                                 
@@ -646,13 +269,30 @@
                                 
                                 <td>
                                     
-                                    PC1 → PC3
+                                    Réseau C
                                     
                                 </td>
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a10_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="5. Construisez maintenant deux réseaux — Fonctionne ? — PC1 → PC3">
+                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Lire une table de routage — Sortie — Réseau C">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Un site inconnu
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Lire une table de routage — Sortie — Un site inconnu">
                                     
                                 </td>
                                 
@@ -662,23 +302,23 @@
                     </table>
                 </div>
             
-            
+            <details><summary>Un coup de pouce</summary><p>Une case à la fois : la ligne croise la colonne (réflexe n° 6).</p></details>
             
             
         </div>
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a09">← Étape précédente</a>
-            <a class="course-mission-next" href="#a11">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+            <a class="course-mission-back" href="#course-intro">← Revoir l’objectif</a>
+            <a class="course-mission-next" href="#a02">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a11" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 7</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>6. Comment relier les deux réseaux ?</h2>
+    <article class="cours-activite" id="a02" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Le jeu des routeurs (débranché)</h2>
         
-        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais lire une table. Joue maintenant les routeurs.</p>
         
         
 
@@ -686,147 +326,7 @@
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a11-q01-label">Question 1 — Q3 : Quel équipement étudié lors de la séance précédente permet de relier deux réseaux différents ?</h3>
-            
-
-            
-            
-                <textarea id="a11-q01" data-answer-id="a11_q01" data-required="true" aria-labelledby="a11-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-<p>Ajoutez un routeur entre les deux commutateurs.</p>
-    
-
-<p>Activez deux interfaces sur le routeur et configurez-les :</p>
-    
-
-<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Interface du routeur</th><th scope="col">Adresse</th><th scope="col">Masque</th></tr></thead><tbody><tr><td>Vers réseau A</td><td>192.168.1.1</td><td>255.255.255.0</td></tr><tr><td>Vers réseau B</td><td>192.168.2.1</td><td>255.255.255.0</td></tr></tbody></table></div>
-    
-
-<p>Reliez chaque interface au commutateur correspondant.</p>
-    
-
-<p>Refaites maintenant :</p>
-    
-
-<pre class="cours-code"><code>ping 192.168.2.10</code></pre>
-    
-
-
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a11-q02-label">Question 2 — Q4 : Le test fonctionne-t-il maintenant ?</h3>
-            
-
-            
-            
-                <textarea id="a11-q02" data-answer-id="a11_q02" data-required="true" aria-labelledby="a11-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a10">← Étape précédente</a>
-            <a class="course-mission-next" href="#a12">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a12" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 8</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>7. Pourquoi le routeur ne suffit-il pas ?</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>PC1 sait communiquer avec les machines de son réseau local.</p>
-    
-
-<p>Mais lorsqu&#39;il veut atteindre 192.168.2.10, il doit savoir à quel équipement transmettre les données pour sortir de son réseau.</p>
-    
-
-<p>Sur PC1, configurez :</p>
-    
-
-<p>Passerelle : 192.168.1.1</p>
-    
-
-<p>Sur PC2 :</p>
-    
-
-<p>Passerelle : 192.168.1.1</p>
-    
-
-<p>Sur PC3 et PC4 :</p>
-    
-
-<p>Passerelle : 192.168.2.1</p>
-    
-
-<p>Refaites le test entre PC1 et PC3.</p>
-    
-
-<h4>Mise en commun : la passerelle</h4>
-    
-
-<p>Une passerelle indique à une machine vers quel équipement envoyer les données lorsqu&#39;elles doivent quitter son réseau local.</p>
-    
-
-<p>Dans notre réseau, cette passerelle correspond à l&#39;interface du routeur présente dans le même réseau que l&#39;ordinateur.</p>
-    
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a11">← Étape précédente</a>
-            <a class="course-mission-next" href="#a13">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a13" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 9</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>8. Observez réellement le trajet des données</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Restez en mode simulation.</p>
-    
-
-<p>Activez si nécessaire Voir l&#39;échange de données puis lancez un ping de PC1 vers PC3.</p>
-    
-
-<p>Complétez :</p>
-    
-
-<p>PC1 → ................................ → ................................ → ................................ → PC3</p>
+<p>Quatre élèves jouent R1, R2, R3, R4 avec leurs tables. Des paquets (papiers) circulent. Puis on coupe la liaison R1-R3.</p>
     
 
 
@@ -835,62 +335,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a13-q01-label">Question 1 — Q5 : Quel équipement permet aux données de passer du réseau 192.168.1.x au réseau 192.168.2.x ?</h3>
+            <h3 id="a02-q01-label">Question 1 — Quand la liaison R1-R3 est coupée, comment le paquet pour le réseau B peut-il encore arriver ? Que faut-il changer dans la table de R1 ?</h3>
             
 
             
             
-                <textarea id="a13-q01" data-answer-id="a13_q01" data-required="true" aria-labelledby="a13-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a12">← Étape précédente</a>
-            <a class="course-mission-next" href="#a14">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a14" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 10</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>9. Mission dépannage</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Un réseau possède la configuration suivante :</p>
-    
-
-<ul><li>PC1 : 192.168.1.10</li><li>masque : 255.255.255.0</li><li>passerelle configurée : 192.168.1.254</li><li>interface du routeur dans ce réseau : 192.168.1.1</li></ul>
-    
-
-<p>PC1 communique avec les machines de son réseau local mais n&#39;arrive pas à joindre PC3 situé dans l&#39;autre réseau.</p>
-    
-
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a14-q01-label">Question 1 — Q6 : Identifiez la cause de la panne.</h3>
-            
-
-            
-            
-                <textarea id="a14-q01" data-answer-id="a14_q01" data-required="true" aria-labelledby="a14-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            
+            <details><summary>Un coup de pouce</summary><p>Une phrase complète qui reprend les mots de la question.</p></details>
             
             
         </div>
@@ -898,30 +351,30 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a14-q02-label">Question 2 — Q7 : Indiquez précisément la correction à effectuer.</h3>
+            <h3 id="a02-q02-label">Question 2 — Pourquoi Internet a-t-il beaucoup de chemins possibles entre deux points ?</h3>
             
 
             
             
-                <textarea id="a14-q02" data-answer-id="a14_q02" data-required="true" aria-labelledby="a14-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <select id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><option value="">Choisis une réponse</option><option value="a">Pour continuer à fonctionner si une liaison tombe en panne.</option><option value="b">Pour être plus joli.</option><option value="c">Par hasard.</option></select>
 
                 
-            
+            <details><summary>Un coup de pouce</summary><p>Élimine d’abord les réponses impossibles.</p></details>
             
             
         </div>
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a13">← Étape précédente</a>
-            <a class="course-mission-next" href="#a15">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+            <a class="course-mission-back" href="#a01">← Étape précédente</a>
+            <a class="course-mission-next" href="#a03">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a15" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 11</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>10. Et si le ping ne fonctionne pas ?</h2>
-        
+    <article class="cours-activite" id="a03" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Défi</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
         
@@ -930,10 +383,7 @@
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Avant de modifier plusieurs paramètres au hasard, utilisez une méthode de diagnostic.</p>
-    
-
-<p>Vérifiez dans cet ordre :</p>
+<p>Les vrais routeurs mettent à jour leurs tables automatiquement.</p>
     
 
 
@@ -942,247 +392,59 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a15-q01-label">Question 1 — les connexions : les câbles sont-ils correctement placés ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Quel avantage par rapport à une mise à jour à la main ?</h3>
             
 
             
             
-                <textarea id="a15-q01" data-answer-id="a15_q01" data-required="true" aria-labelledby="a15-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a15-q02-label">Question 2 — les adresses IP : sont-elles correctes et différentes ?</h3>
-            
-
-            
-            
-                <textarea id="a15-q02" data-answer-id="a15_q02" data-required="true" aria-labelledby="a15-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
+            <details><summary>Un coup de pouce</summary><p>Une phrase complète qui reprend les mots de la question.</p></details>
             
             
-            
-
-        </div>
-        
-        <div class="cours-question" data-question="q03">
-            
-            
-            <h3 id="a15-q03-label">Question 3 — les masques : correspondent-ils à la configuration demandée ?</h3>
-            
-
-            
-            
-                <textarea id="a15-q03" data-answer-id="a15_q03" data-required="true" aria-labelledby="a15-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-
-        </div>
-        
-        <div class="cours-question" data-question="q04">
-            
-            
-            <h3 id="a15-q04-label">Question 4 — le routeur : ses deux interfaces sont-elles correctement configurées ?</h3>
-            
-
-            
-            
-                <textarea id="a15-q04" data-answer-id="a15_q04" data-required="true" aria-labelledby="a15-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-
-        </div>
-        
-        <div class="cours-question" data-question="q05">
-            
-            
-            <h3 id="a15-q05-label">Question 5 — les passerelles : correspondent-elles aux interfaces du routeur ?</h3>
-            
-
-            
-            
-                <textarea id="a15-q05" data-answer-id="a15_q05" data-required="true" aria-labelledby="a15-q05-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-
-        </div>
-        
-        <div class="cours-question" data-question="q06">
-            
-            
-            <h3 id="a15-q06-label">Question 6 — le ping : l&#39;adresse saisie est-elle bien celle de la machine cible ?</h3>
-            
-
-            
-            
-                <textarea id="a15-q06" data-answer-id="a15_q06" data-required="true" aria-labelledby="a15-q06-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-
         </div>
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a14">← Étape précédente</a>
-            <a class="course-mission-next" href="#a16">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+            <a class="course-mission-back" href="#a02">← Étape précédente</a>
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a16" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 12</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>11. Conclusion du travail</h2>
+    <article class="cours-activite" id="a04" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Conclusion de ton travail</h2>
         
-        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as joué les routeurs. Il reste à répondre au problème de départ.</p>
         
         
 
         
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Complétez :</p>
-    
-
-<ul><li>Dans un même réseau, les interfaces doivent posséder ........................................................ .</li><li>La commande ping permet de ............................................................................................. .</li><li>Un commutateur permet de ............................................................................................... .</li><li>Un routeur permet de ........................................................................................................ .</li><li>Une passerelle indique ........................................................................................................ .</li></ul>
-    
-
-<p>Répondez maintenant à la problématique en 4 à 6 lignes :</p>
-    
-
-<p>Pourquoi deux réseaux qui fonctionnent séparément ne peuvent-ils pas forcément communiquer entre eux ?</p>
-    
-
-
         
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Réponds au problème du jour : comment un routeur choisit-il par où envoyer un paquet ?</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème et de « Ce que je retiens », avec un exemple de la séance.</p></details>
+            
+            
+        </div>
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a15">← Étape précédente</a>
-            <a class="course-mission-next" href="#a17">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a17" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 13</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>Rendu attendu</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>À la fin de la séance, déposez votre fichier 3e_S09_nom.odt.</p>
-    
-
-<p>Il doit contenir au minimum :</p>
-    
-
-<ul><li>une capture du premier réseau local fonctionnel ;</li><li>le résultat d&#39;un ping réussi ;</li><li>le résultat de vos tests entre les deux réseaux ;</li><li>une capture du réseau complet avec le routeur ;</li><li>votre réponse à la mission dépannage.</li></ul>
-    
-
-<p>Le fichier doit être rendu même si toutes les activités ne sont pas terminées.</p>
-    
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a16">← Étape précédente</a>
-            <a class="course-mission-next" href="#a18">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a18" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 14</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>À retenir</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Deux machines d&#39;un même réseau local peuvent communiquer si leur configuration réseau est correcte.</p>
-    
-
-<p>La commande ping permet de vérifier qu&#39;une machine est joignable.</p>
-    
-
-<p>Pour relier plusieurs réseaux, il faut utiliser un routeur.</p>
-    
-
-<p>La passerelle indique à un ordinateur vers quel routeur envoyer les données qui doivent quitter son réseau local.</p>
-    
-
-<p>Une panne réseau peut souvent être trouvée en vérifiant méthodiquement les connexions, adresses IP, masques, interfaces du routeur et passerelles.</p>
-    
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a17">← Étape précédente</a>
-            <a class="course-mission-next" href="#a19">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a19" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 15</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>Sources générales</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<ul><li>Éduscol STI – Comprendre le fonctionnement d&#39;un réseau informatique</li><li>Académie de Toulouse – Didacticiel Réseau – Filius</li><li>Filius – Site du logiciel Filius</li></ul>
-    
-
-<p><a href="https://sti.eduscol.education.fr/technologie_college/ressources_pedagogiques/comprendre-le-fonctionnement-dun-reseau-informatique" target="_blank" rel="noopener noreferrer">Comprendre le fonctionnement d&#39;un réseau informatique</a></p>
-
-
-<p><a href="https://pedagogie.ac-toulouse.fr/sii/didacticiel-reseau" target="_blank" rel="noopener noreferrer">Didacticiel Réseau – Filius</a></p>
-
-
-<p><a href="https://www.lernsoftware-filius.de/" target="_blank" rel="noopener noreferrer">Site du logiciel Filius</a></p>
-
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a18">← Étape précédente</a>
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -1195,18 +457,39 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">Faire le point</h2>
-    <p>Relis tes réponses et vérifie les points demandés dans le bilan du cours. Tu peux revenir sur ton travail tant que le professeur ne l’a pas clôturé.</p>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Routeur : relie des réseaux ; table de routage : destination → sortie.</li><li>Plusieurs chemins : Internet résiste aux pannes.</li></ul>
+    
 </section>
 
+<section class="cours-sources course-info-card" aria-labelledby="course-sources-title"><h2 id="course-sources-title">Sources et ressources officielles</h2>
+<p><a href="https://www.education.gouv.fr/media/160767/download" target="_blank" rel="noopener noreferrer">Ministère de l’Éducation nationale — Programme de technologie du cycle 4 (BO n° 9 du 29 février 2024)</a></p>
 
+
+</section>
 
     <div class="course-submit-panel">
         <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
         <p id="course-submit-status" role="status" aria-live="polite"></p>
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a19">← Étape précédente</a></nav>
+    
+<section class="course-pix" id="course-pix" aria-labelledby="course-pix-title" data-etablissement="college" data-matiere="techno" data-classe="3e" data-seance="S09">
+    <h2 id="course-pix-title">Aujourd’hui, c’était une séance Pix ?</h2>
+    <p>Si ton professeur t’a fait travailler sur Pix à la place du cours, ta séance de technologie t’attend ici : tu la reprendras la prochaine fois, rien n’est perdu. Quand tu as fini sur Pix, clique sur le bouton pour le signaler.</p>
+    <details><summary>Que faire pendant une séance Pix ?</summary>
+        <ol>
+            <li>Ouvre Pix depuis l’ENT (ou sur pix.fr, « Se connecter »).</li>
+            <li>Saisis le code de campagne donné par ton professeur et vérifie ton prénom et ton nom.</li>
+            <li>Travaille seul et sérieusement : Pix sert à savoir où tu en es.</li>
+            <li>Ne recopie jamais ton mot de passe ni les réponses de Pix sur ce site.</li>
+        </ol>
+        <p><a href="https://pix.fr/" target="_blank" rel="noopener noreferrer">Ouvrir Pix</a></p>
+    </details>
+    <button type="button" id="course-pix-declare" disabled>J’ai fait ma séance Pix</button>
+    <p id="course-pix-status" role="status" aria-live="polite"></p>
+</section>
+
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>
@@ -1226,6 +509,7 @@
 
 
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/pix-declaration.js"></script>
 
 
     </main>

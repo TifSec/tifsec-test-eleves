@@ -63,7 +63,7 @@
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261029-steps-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261029-pix-1">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a02">Compétence visée</a></li><li><a href="#a04">Production attendue</a></li><li><a href="#a05">1. Créer votre document de travail</a></li><li><a href="#a06">2. Avant de simuler : qu’est-ce qui influence la déformation ?</a></li><li><a href="#a07">3. Ouvrir le laboratoire virtuel</a></li><li><a href="#a08">4. Expérience 1 : le matériau influence-t-il la déformation ?</a></li><li><a href="#a09">5. Expérience 2 : l’épaisseur change-t-elle beaucoup le résultat ?</a></li><li><a href="#a10">6. Expérience 3 : pourquoi la longueur compte-t-elle ?</a></li><li><a href="#a11">7. Synthétiser les expériences</a></li><li><a href="#a12">8. Rigide ne signifie pas incassable</a></li><li><a href="#a13">9. Défi de conception</a></li><li><a href="#a14">10. Mettons des mots sur ce que nous avons découvert</a></li><li><a href="#a15">11. Revenons aux hypothèses du début</a></li><li><a href="#a16">12. Rendu de fin de séance</a></li><li><a href="#a17">Références pédagogiques</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Les cookies</a></li><li><a href="#a02">La géolocalisation</a></li><li><a href="#a03">Mes réglages</a></li><li><a href="#a04">Défi — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -134,24 +134,29 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Technologie · 4e · S09</span></div>
-    <h1>Qu’est-ce qui rend une pièce plus rigide ?</h1>
+    <h1>Séance 9 : Quelles traces je laisse sans le savoir ?</h1>
     
 
     
     
     <section class="course-info-card cours-theme">
         <h2>Thème du programme</h2>
-        <p>Structure, fonctionnement, comportement : des objets et des systèmes techniques à comprendre</p>
+        <p>Les objets et les systèmes techniques : leurs usages et leurs interactions à découvrir et analyser</p>
     </section>
     
 
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Qu’est-ce qui rend une pièce plus rigide ?</p>
+        <p>Quelles traces laissons-nous en naviguant, et comment les limiter ?</p>
     </section>
     
 
+    
+    <section class="course-info-card cours-competences-bo">
+        <h2>Compétence travaillée</h2>
+        <ul><li>Décrire les liens entre usages et évolutions technologiques des objets et des systèmes techniques</li></ul>
+    </section>
     
 
     
@@ -161,13 +166,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Comprendre que tous les matériaux ne se déforment pas de la même manière.</li>
+            <li>Un cookie (témoin de connexion) est un petit fichier déposé par un site pour se souvenir de toi : panier, langue, mais aussi publicité ciblée.</li>
             
-            <li>Comprendre que les dimensions d’une pièce influencent fortement sa déformation.</li>
-            
-            <li>Comprendre qu’une pièce plus rigide se déforme moins sous un même effort.</li>
-            
-            <li>Comprendre qu’un concepteur doit rechercher un compromis entre rigidité, dimensions et quantité de matière.</li>
+            <li>La géolocalisation donne ta position ; des applications l’enregistrent parfois en permanence. On peut refuser les cookies non nécessaires et couper la localisation.</li>
             
         </ul>
         
@@ -175,59 +176,26 @@
         <h2>Ce que tu vas apprendre à faire</h2>
         <ul>
             
-            <li>utiliser une simulation pour étudier le comportement d’une pièce ;</li>
+            <li>Expliquer le rôle d’un cookie.</li>
             
-            <li>modifier un seul paramètre à la fois ;</li>
-            
-            <li>relever et comparer des valeurs ;</li>
-            
-            <li>faire évoluer une hypothèse à partir des résultats ;</li>
-            
-            <li>proposer une amélioration en utilisant les résultats obtenus.</li>
+            <li>Proposer des réglages pour limiter ses traces.</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><p>Testez une pièce courte, une pièce intermédiaire et une pièce longue.</p></section>
-    
-    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
-    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séance 8, tu as protégé tes comptes.</p><p>Mais même sans compte, tu laisses des traces. Aujourd’hui, tu enquêtes sur ces traces invisibles.</p></div></section>
     
     
     
-<p>Problématique : Comment réduire la déformation d’une pièce sans simplement utiliser davantage de matière ?</p>
     
-
-<h4>Objectifs d’apprentissage</h4>
     
-
-<p>Ce que vous allez apprendre :</p>
     
-
-<ul><li>Comprendre que tous les matériaux ne se déforment pas de la même manière.</li><li>Comprendre que les dimensions d’une pièce influencent fortement sa déformation.</li><li>Comprendre qu’une pièce plus rigide se déforme moins sous un même effort.</li><li>Comprendre qu’un concepteur doit rechercher un compromis entre rigidité, dimensions et quantité de matière.</li></ul>
     
-
-<p>Ce que vous allez apprendre à faire :</p>
     
-
-<ul><li>utiliser une simulation pour étudier le comportement d’une pièce ;</li><li>modifier un seul paramètre à la fois ;</li><li>relever et comparer des valeurs ;</li><li>faire évoluer une hypothèse à partir des résultats ;</li><li>proposer une amélioration en utilisant les résultats obtenus.</li></ul>
     
-
-
-    
-    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
-<p>Dans cette page du ministère, retrouve le programme ou le référentiel de ta formation. Les objectifs précis étudiés aujourd’hui sont indiqués dans le cours.</p>
-    
-
-<p><a href="https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4" target="_blank" rel="noopener noreferrer">Consulter les programmes et attendus officiels</a></p>
-
-
-</div></details>
-
-    
-    <nav class="course-mission-controls course-intro-controls" aria-label="Commencer la séance"><a class="course-mission-next" href="#a02">J’ai compris l’objectif : commencer la première mission <span aria-hidden="true">→</span></a></nav>
+    <nav class="course-mission-controls course-intro-controls" aria-label="Commencer la séance"><a class="course-mission-next" href="#a01">J’ai compris l’objectif : commencer la première mission <span aria-hidden="true">→</span></a></nav>
 </header>
 
 
@@ -237,9 +205,9 @@
 
 <section class="cours-activites">
     
-    <article class="cours-activite" id="a02" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>Compétence visée</h2>
+    <article class="cours-activite" id="a01" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Les cookies</h2>
         
         
         
@@ -249,23 +217,217 @@
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Paramétrer une simulation pour comparer le comportement mécanique de plusieurs solutions.</p>
+<p>Exemple expliqué : tu ajoutes des baskets au panier d’un site, tu fermes la page, tu reviens le lendemain : le panier est toujours là. Le site a déposé un cookie sur ton ordinateur pour s’en souvenir.</p>
+    
+
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Des exemples de cookies</caption><thead><tr><th scope="col">Cookie</th><th scope="col">Sert à…</th><th scope="col">Nécessaire ?</th></tr></thead><tbody><tr><td>Panier</td><td>Retenir les articles choisis</td><td>Oui</td></tr><tr><td>Langue</td><td>Afficher le site en français</td><td>Oui</td></tr><tr><td>Publicité</td><td>Montrer des publicités selon les sites visités</td><td>Non</td></tr><tr><td>Statistiques</td><td>Compter les visites</td><td>Non (souvent)</td></tr></tbody></table></div>
     
 
 
         
         
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a01-q01-label">Question 1 — D’après le document 1, quel cookie peux-tu refuser sans gêner l’utilisation du site ?</h3>
+            
+
+            
+            
+                <select id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><option value="">Choisis une réponse</option><option value="a">Le cookie de publicité.</option><option value="b">Le cookie du panier.</option><option value="c">Le cookie de langue.</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Élimine d’abord les réponses impossibles.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a01-q02-label">Question 2 — Explique pourquoi tu vois des publicités de baskets après avoir visité un site de chaussures.</h3>
+            
+
+            
+            
+                <textarea id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Une idée + « car » + une raison tirée de la séance.</p></details>
+            
+            
+        </div>
+        
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#course-intro">← Revoir l’objectif</a>
+            <a class="course-mission-next" href="#a02">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a02" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>La géolocalisation</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les cookies ne sont pas les seules traces. Ton téléphone sait aussi où tu es.</p>
+        
+        
+
+        
+
+        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
+        
+<p>Un téléphone connaît sa position grâce au GPS, au Wi-Fi et aux antennes. Une application de photos peut enregistrer le lieu dans chaque photo.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a02-q01-label">Question 1 — Pour chaque application, la localisation est-elle utile ? Écris « utile » ou « inutile ».</h3>
+            
+
+            
+            
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Application</th>
+                                
+                                <th>Localisation</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Carte et itinéraire
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="La géolocalisation — Localisation — Carte et itinéraire">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Lampe de poche
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="La géolocalisation — Localisation — Lampe de poche">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Météo
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="La géolocalisation — Localisation — Météo">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            <details><summary>Un coup de pouce</summary><p>Une case à la fois : la ligne croise la colonne (réflexe n° 6).</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a02-q02-label">Question 2 — Pourquoi peut-il être dangereux de publier une photo qui contient le lieu où elle a été prise ?</h3>
+            
+
+            
+            
+                <textarea id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Une idée + « car » + une raison tirée de la séance.</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a01">← Étape précédente</a>
+            <a class="course-mission-next" href="#a03">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a03" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Mes réglages</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu connais les traces. À toi de les limiter.</p>
+        
+        
+
+        
+
+        
+        
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a03-q01-label">Question 1 — Propose trois réglages pour limiter tes traces, et explique chacun.</h3>
+            
+
+            
+            
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Une idée + « car » + une raison tirée de la séance.</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a02">← Étape précédente</a>
             <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
         </nav>
     </article>
     
     <article class="cours-activite" id="a04" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>Production attendue</h2>
-        
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Défi</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
         
@@ -274,1058 +436,73 @@
 
         <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
         
-<p>Vous devez produire un document LibreOffice Writer contenant vos hypothèses, trois tableaux de résultats issus du simulateur, une synthèse et une proposition d’amélioration argumentée.</p>
+<p>Le RGPD est une loi européenne sur les données personnelles.</p>
     
 
 
+        <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
+<p><a href="https://www.cnil.fr/fr/les-droits-pour-maitriser-vos-donnees-personnelles" target="_blank" rel="noopener noreferrer">CNIL — Les droits pour maîtriser vos données</a></p>
+
+
+</div></details>
+
         
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Cherche un droit que le RGPD donne aux utilisateurs.</h3>
+            
+
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Compte les éléments demandés, puis cherche-les dans les documents de la mission.</p></details>
+            
+            
+        </div>
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a02">← Étape précédente</a>
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
             <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
         </nav>
     </article>
     
     <article class="cours-activite" id="a05" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>1. Créer votre document de travail</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Conclusion de ton travail</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as enquêté sur tes traces. Il reste à répondre au problème de départ.</p>
+        
+        
+
+        
+
         
         
         
         
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : quelles traces laissons-nous en naviguant, et comment les limiter ?</h3>
+            
 
-        
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Créez dès maintenant un document LibreOffice Writer nommé :</p>
-    
-
-<p>4e_S9_nom.odt</p>
-    
-
-<p>Remplacez nom par votre nom.</p>
-    
-
-<p>Indiquez :</p>
-    
-
-<ul><li>votre nom et votre prénom ;</li><li>la date ;</li><li>le titre : Séance 9 : Qu’est-ce qui rend une pièce plus rigide ?</li></ul>
-    
-
-<p>Conservez dans votre document vos premières hypothèses, vos résultats et vos corrections.</p>
-    
-
-<p>Le fichier devra être rendu en fin d’heure, même s’il n’est pas terminé.</p>
-    
-
-
-        
+                
+            <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème et de « Ce que je retiens », avec un exemple de la séance.</p></details>
+            
+            
+        </div>
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#a04">← Étape précédente</a>
-            <a class="course-mission-next" href="#a06">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a06" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>2. Avant de simuler : qu’est-ce qui influence la déformation ?</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Imaginez un support maintenant le moteur ou une roue d’un robot.</p>
-    
-
-<p>Cette pièce ne doit pas se déformer excessivement lorsqu’elle subit un effort.</p>
-    
-
-<p>Sans utiliser le simulateur, indiquez si vous êtes d’accord ou non avec les affirmations suivantes et justifiez :</p>
-    
-
-<ol><li>Deux pièces de mêmes dimensions mais fabriquées avec des matériaux différents se déforment forcément de la même manière.</li><li>Une pièce plus épaisse se déforme généralement moins.</li><li>Une pièce plus longue se déforme généralement davantage.</li><li>Pour rendre une pièce plus rigide, il suffit toujours de choisir un meilleur matériau.</li></ol>
-    
-
-<p>Conservez vos réponses : vous les reprendrez à la fin de la séance.</p>
-    
-
-<h4>Besoin d’un indice ?</h4>
-    
-
-<p>Pensez à une règle en plastique ou en métal : sa matière compte, mais sa longueur et son épaisseur peuvent-elles également changer la facilité avec laquelle elle se plie ?</p>
-    
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a05">← Étape précédente</a>
-            <a class="course-mission-next" href="#a07">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a07" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 5</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>3. Ouvrir le laboratoire virtuel</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Ouvrez : Explerify – Young’s Modulus Simulator .</p>
-    
-
-<p><a href="https://explerify.com/simulator-youngs-modulus/" target="_blank" rel="noopener noreferrer">Explerify – Young’s Modulus Simulator</a></p>
-
-
-<p>Le simulateur représente une poutre soumise à un effort. Il permet de modifier plusieurs caractéristiques et d’observer la déformation obtenue.</p>
-    
-
-<p>Pour cette séance, repérez seulement les réglages suivants :</p>
-    
-
-<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Terme dans le simulateur</th><th scope="col">Signification</th></tr></thead><tbody><tr><td>Material</td><td>Matériau</td></tr><tr><td>Length</td><td>Longueur</td></tr><tr><td>Width</td><td>Largeur</td></tr><tr><td>Height</td><td>Hauteur / épaisseur</td></tr><tr><td>Load / Applied Force</td><td>Charge ou force appliquée</td></tr><tr><td>Deflection</td><td>Déformation / flèche</td></tr></tbody></table></div>
-    
-
-<p>Règle pour toutes les comparaisons : ne modifiez qu’un seul paramètre à la fois.</p>
-    
-
-<p>Le module de Young caractérise la réponse élastique d’un matériau : pour des conditions comparables, un matériau ayant un module plus élevé se déforme moins. Pour aller plus loin : MIT OpenCourseWare – Mechanics of Materials .</p>
-    
-
-<p><a href="https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/" target="_blank" rel="noopener noreferrer">MIT OpenCourseWare – Mechanics of Materials</a></p>
-
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a06">← Étape précédente</a>
-            <a class="course-mission-next" href="#a08">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a08" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 6</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>4. Expérience 1 : le matériau influence-t-il la déformation ?</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Choisissez une configuration de départ.</p>
-    
-
-<p>Notez :</p>
-    
-
-<ul><li>la longueur ;</li><li>la largeur ;</li><li>l’épaisseur ;</li><li>la charge appliquée.</li></ul>
-    
-
-<p>Ne modifiez plus ces quatre valeurs.</p>
-    
-
-<p>Testez ensuite trois matériaux différents.</p>
-    
-
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a08-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
-            
-
-            
-            
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Matériau</th>
-                                
-                                <th>Déformation obtenue</th>
-                                
-                                <th>Classement</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a08_q01_r0_c0" data-required="true" data-row="0" data-col="0" aria-label="4. Expérience 1 : le matériau influence-t-il la déformation ? — Matériau — ">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a08_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="4. Expérience 1 : le matériau influence-t-il la déformation ? — Déformation obtenue — ">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a08_q01_r0_c2" data-required="true" data-row="0" data-col="2" aria-label="4. Expérience 1 : le matériau influence-t-il la déformation ? — Classement — ">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a08_q01_r1_c0" data-required="true" data-row="1" data-col="0" aria-label="4. Expérience 1 : le matériau influence-t-il la déformation ? — Matériau — ">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a08_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="4. Expérience 1 : le matériau influence-t-il la déformation ? — Déformation obtenue — ">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a08_q01_r1_c2" data-required="true" data-row="1" data-col="2" aria-label="4. Expérience 1 : le matériau influence-t-il la déformation ? — Classement — ">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a08_q01_r2_c0" data-required="true" data-row="2" data-col="0" aria-label="4. Expérience 1 : le matériau influence-t-il la déformation ? — Matériau — ">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a08_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="4. Expérience 1 : le matériau influence-t-il la déformation ? — Déformation obtenue — ">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a08_q01_r2_c2" data-required="true" data-row="2" data-col="2" aria-label="4. Expérience 1 : le matériau influence-t-il la déformation ? — Classement — ">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            
-            
-            
-<p>Répondez :</p>
-    
-
-
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a08-q02-label">Question 2 — Quel matériau se déforme le moins ?</h3>
-            
-
-            
-            
-                <textarea id="a08-q02" data-answer-id="a08_q02" data-required="true" aria-labelledby="a08-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-
-        </div>
-        
-        <div class="cours-question" data-question="q03">
-            
-            
-            <h3 id="a08-q03-label">Question 3 — Quel matériau se déforme le plus ?</h3>
-            
-
-            
-            
-                <textarea id="a08-q03" data-answer-id="a08_q03" data-required="true" aria-labelledby="a08-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-
-        </div>
-        
-        <div class="cours-question" data-question="q04">
-            
-            
-            <h3 id="a08-q04-label">Question 4 — Pourquoi était-il important de conserver les mêmes dimensions et la même charge ?</h3>
-            
-
-            
-            
-                <textarea id="a08-q04" data-answer-id="a08_q04" data-required="true" aria-labelledby="a08-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-
-        </div>
-        
-        <div class="cours-question" data-question="q05">
-            
-            
-            <h3 id="a08-q05-label">Question 5 — Votre première hypothèse sur le matériau est-elle confirmée ?</h3>
-            
-
-            
-            
-                <textarea id="a08-q05" data-answer-id="a08_q05" data-required="true" aria-labelledby="a08-q05-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a07">← Étape précédente</a>
-            <a class="course-mission-next" href="#a09">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a09" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 7</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>5. Expérience 2 : l’épaisseur change-t-elle beaucoup le résultat ?</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Choisissez un seul matériau.</p>
-    
-
-<p>Conservez :</p>
-    
-
-<ul><li>le même matériau ;</li><li>la même longueur ;</li><li>la même largeur ;</li><li>la même charge.</li></ul>
-    
-
-<p>Modifiez uniquement Height.</p>
-    
-
-<p>Testez trois valeurs : fine, intermédiaire et plus épaisse.</p>
-    
-
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a09-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
-            
-
-            
-            
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Épaisseur</th>
-                                
-                                <th>Déformation obtenue</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a09_q01_r0_c0" data-required="true" data-row="0" data-col="0" aria-label="5. Expérience 2 : l’épaisseur change-t-elle beaucoup le résultat ? — Épaisseur — ">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a09_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="5. Expérience 2 : l’épaisseur change-t-elle beaucoup le résultat ? — Déformation obtenue — ">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a09_q01_r1_c0" data-required="true" data-row="1" data-col="0" aria-label="5. Expérience 2 : l’épaisseur change-t-elle beaucoup le résultat ? — Épaisseur — ">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a09_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="5. Expérience 2 : l’épaisseur change-t-elle beaucoup le résultat ? — Déformation obtenue — ">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a09_q01_r2_c0" data-required="true" data-row="2" data-col="0" aria-label="5. Expérience 2 : l’épaisseur change-t-elle beaucoup le résultat ? — Épaisseur — ">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a09_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="5. Expérience 2 : l’épaisseur change-t-elle beaucoup le résultat ? — Déformation obtenue — ">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            
-            
-            
-<p>Répondez :</p>
-    
-
-
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a09-q02-label">Question 2 — Que devient la déformation lorsque l’épaisseur augmente ?</h3>
-            
-
-            
-            
-                <textarea id="a09-q02" data-answer-id="a09_q02" data-required="true" aria-labelledby="a09-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-
-        </div>
-        
-        <div class="cours-question" data-question="q03">
-            
-            
-            <h3 id="a09-q03-label">Question 3 — L’effet semble-t-il faible ou important ?</h3>
-            
-
-            
-            
-                <textarea id="a09-q03" data-answer-id="a09_q03" data-required="true" aria-labelledby="a09-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-
-        </div>
-        
-        <div class="cours-question" data-question="q04">
-            
-            
-            <h3 id="a09-q04-label">Question 4 — Quelle solution proposeriez-vous à un concepteur dont une pièce est trop souple ?</h3>
-            
-
-            
-            
-                <textarea id="a09-q04" data-answer-id="a09_q04" data-required="true" aria-labelledby="a09-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a08">← Étape précédente</a>
-            <a class="course-mission-next" href="#a10">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a10" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 8</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>6. Expérience 3 : pourquoi la longueur compte-t-elle ?</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Conservez maintenant :</p>
-    
-
-<ul><li>le même matériau ;</li><li>la même largeur ;</li><li>la même épaisseur ;</li><li>la même charge.</li></ul>
-    
-
-<p>Modifiez uniquement Length.</p>
-    
-
-<p>Testez une pièce courte, une pièce intermédiaire et une pièce longue.</p>
-    
-
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a10-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
-            
-
-            
-            
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Longueur</th>
-                                
-                                <th>Déformation obtenue</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a10_q01_r0_c0" data-required="true" data-row="0" data-col="0" aria-label="6. Expérience 3 : pourquoi la longueur compte-t-elle ? — Longueur — ">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a10_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="6. Expérience 3 : pourquoi la longueur compte-t-elle ? — Déformation obtenue — ">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a10_q01_r1_c0" data-required="true" data-row="1" data-col="0" aria-label="6. Expérience 3 : pourquoi la longueur compte-t-elle ? — Longueur — ">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a10_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="6. Expérience 3 : pourquoi la longueur compte-t-elle ? — Déformation obtenue — ">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a10_q01_r2_c0" data-required="true" data-row="2" data-col="0" aria-label="6. Expérience 3 : pourquoi la longueur compte-t-elle ? — Longueur — ">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a10_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="6. Expérience 3 : pourquoi la longueur compte-t-elle ? — Déformation obtenue — ">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            
-            
-            
-<p>Répondez :</p>
-    
-
-
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a10-q02-label">Question 2 — Que devient la déformation lorsque la longueur augmente ?</h3>
-            
-
-            
-            
-                <textarea id="a10-q02" data-answer-id="a10_q02" data-required="true" aria-labelledby="a10-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-
-        </div>
-        
-        <div class="cours-question" data-question="q03">
-            
-            
-            <h3 id="a10-q03-label">Question 3 — Pourquoi un concepteur doit-il éviter une pièce inutilement longue lorsqu’elle doit rester rigide ?</h3>
-            
-
-            
-            
-                <textarea id="a10-q03" data-answer-id="a10_q03" data-required="true" aria-labelledby="a10-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-
-        </div>
-        
-        <div class="cours-question" data-question="q04">
-            
-            
-            <h3 id="a10-q04-label">Question 4 — Votre hypothèse de départ est-elle confirmée, corrigée ou infirmée ?</h3>
-            
-
-            
-            
-                <textarea id="a10-q04" data-answer-id="a10_q04" data-required="true" aria-labelledby="a10-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            
-            
-            
-
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a09">← Étape précédente</a>
-            <a class="course-mission-next" href="#a11">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a11" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 9</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>7. Synthétiser les expériences</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Complétez maintenant :</p>
-    
-
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a11-q01-label">Question 1 — Complète le tableau ci-dessous.</h3>
-            
-
-            
-            
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Paramètre étudié</th>
-                                
-                                <th>Observation</th>
-                                
-                                <th>Conséquence pour le concepteur</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Matériau
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a11_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="7. Synthétiser les expériences — Observation — Matériau">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a11_q01_r0_c2" data-required="true" data-row="0" data-col="2" aria-label="7. Synthétiser les expériences — Conséquence pour le concepteur — Matériau">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Épaisseur
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a11_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="7. Synthétiser les expériences — Observation — Épaisseur">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a11_q01_r1_c2" data-required="true" data-row="1" data-col="2" aria-label="7. Synthétiser les expériences — Conséquence pour le concepteur — Épaisseur">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Longueur
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a11_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="7. Synthétiser les expériences — Observation — Longueur">
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a11_q01_r2_c2" data-required="true" data-row="2" data-col="2" aria-label="7. Synthétiser les expériences — Conséquence pour le concepteur — Longueur">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            
-            
-            
-<p>Utilisez au moins deux valeurs numériques obtenues dans vos essais pour justifier vos observations.</p>
-    
-
-
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a10">← Étape précédente</a>
-            <a class="course-mission-next" href="#a12">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a12" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 10</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>8. Rigide ne signifie pas incassable</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Le simulateur permet essentiellement d’étudier la déformation de la poutre.</p>
-    
-
-<p>Une pièce qui se déforme peu sous un même effort est considérée ici comme plus rigide.</p>
-    
-
-<p>Mais une pièce très rigide peut malgré tout casser dans certaines conditions.</p>
-    
-
-<p>Dans votre document, expliquez avec vos propres mots la différence entre :</p>
-    
-
-<ul><li>une pièce qui se déforme peu ;</li><li>une pièce qui résiste à la rupture.</li></ul>
-    
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a11">← Étape précédente</a>
-            <a class="course-mission-next" href="#a13">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a13" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 11</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>9. Défi de conception</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Un support de moteur de robot se déforme trop lorsqu’il fonctionne.</p>
-    
-
-<p>Votre objectif est de réduire sa déformation sans simplement augmenter fortement toutes ses dimensions.</p>
-    
-
-<p>Choisissez une configuration de départ dans le simulateur et relevez sa déformation.</p>
-    
-
-<p>Vous pouvez ensuite modifier :</p>
-    
-
-<ul><li>le matériau ;</li><li>la longueur ;</li><li>l’épaisseur.</li></ul>
-    
-
-<p>Présentez votre solution :</p>
-    
-
-<ul><li>Configuration de départ : ...</li><li>Déformation initiale : ...</li><li>Modification choisie : ...</li><li>Nouvelle déformation : ...</li><li>Pourquoi ce choix : ...</li><li>Nouvelle contrainte possible : ...</li></ul>
-    
-
-<p>Il n’existe pas une seule bonne réponse. Votre proposition doit être justifiée par les résultats obtenus.</p>
-    
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a12">← Étape précédente</a>
-            <a class="course-mission-next" href="#a14">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a14" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 12</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>10. Mettons des mots sur ce que nous avons découvert</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>La rigidité caractérise ici la capacité d’une pièce à limiter sa déformation lorsqu’elle subit un effort.</p>
-    
-
-<p>La déformation dépend notamment :</p>
-    
-
-<ul><li>du matériau ;</li><li>des dimensions de la pièce ;</li><li>de sa longueur ;</li><li>de l’effort appliqué.</li></ul>
-    
-
-<p>Le concepteur doit donc agir à la fois sur le matériau et sur la géométrie de la pièce.</p>
-    
-
-<p>Augmenter l’épaisseur peut limiter la déformation, mais peut aussi augmenter :</p>
-    
-
-<ul><li>la quantité de matière ;</li><li>la masse ;</li><li>l’encombrement ;</li><li>le coût.</li></ul>
-    
-
-<p>La conception nécessite donc souvent un compromis entre plusieurs contraintes.</p>
-    
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a13">← Étape précédente</a>
-            <a class="course-mission-next" href="#a15">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a15" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 13</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>11. Revenons aux hypothèses du début</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>Relisez vos quatre réponses de la partie 2.</p>
-    
-
-<p>Pour chacune, indiquez :</p>
-    
-
-<ul><li>confirmée ;</li><li>infirmée ;</li><li>ou à préciser.</li></ul>
-    
-
-<p>Justifiez au moins deux réponses avec une valeur obtenue dans le simulateur.</p>
-    
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a14">← Étape précédente</a>
-            <a class="course-mission-next" href="#a16">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a16" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 14</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>12. Rendu de fin de séance</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<p>À la fin du cours, votre fichier doit être rendu, même s’il n’est pas terminé.</p>
-    
-
-<p>Déposez :</p>
-    
-
-<p>4e_S9_nom.odt</p>
-    
-
-<p>Avant de le rendre, vérifiez :</p>
-    
-
-<ul><li>votre nom, la date et le titre ;</li><li>vos hypothèses initiales ;</li><li>les trois tableaux de simulation ;</li><li>les valeurs et unités relevées ;</li><li>votre synthèse ;</li><li>votre proposition de conception ;</li><li>la comparaison entre vos hypothèses et les résultats.</li></ul>
-    
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a15">← Étape précédente</a>
-            <a class="course-mission-next" href="#a17">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a17" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 15</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>Références pédagogiques</h2>
-        
-        
-        
-        
-
-        
-
-        <p class="course-learning-label">Lis les repères et observe ce qui est montré</p>
-        
-<ul><li>Ministère de l’Éducation nationale – Programme de technologie du cycle 4, BO n°9 du 29 février 2024</li><li>Ministère de l’Éducation nationale – Annexe du programme de technologie du cycle 4</li></ul>
-    
-
-<p><a href="https://www.education.gouv.fr/bo/2024/Hebdo9/MENE2402802A" target="_blank" rel="noopener noreferrer">Ministère de l’Éducation nationale – Programme de technologie du cycle 4, BO n°9 du 29 février 2024</a></p>
-
-
-<p><a href="https://www.education.gouv.fr/media/160767/download" target="_blank" rel="noopener noreferrer">Ministère de l’Éducation nationale – Annexe du programme de technologie du cycle 4</a></p>
-
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a16">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -1338,18 +515,39 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">Faire le point</h2>
-    <p>Relis tes réponses et vérifie les points demandés dans le bilan du cours. Tu peux revenir sur ton travail tant que le professeur ne l’a pas clôturé.</p>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Cookie : petit fichier déposé par un site ; utile (panier) ou publicitaire (refusable).</li><li>Géolocalisation : à couper pour les applications qui n’en ont pas besoin.</li></ul>
+    
 </section>
 
+<section class="cours-sources course-info-card" aria-labelledby="course-sources-title"><h2 id="course-sources-title">Sources et ressources officielles</h2>
+<p><a href="https://www.education.gouv.fr/media/160767/download" target="_blank" rel="noopener noreferrer">Ministère de l’Éducation nationale — Programme de technologie du cycle 4 (BO n° 9 du 29 février 2024)</a></p>
 
+
+</section>
 
     <div class="course-submit-panel">
         <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
         <p id="course-submit-status" role="status" aria-live="polite"></p>
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a17">← Étape précédente</a></nav>
+    
+<section class="course-pix" id="course-pix" aria-labelledby="course-pix-title" data-etablissement="college" data-matiere="techno" data-classe="4e" data-seance="S09">
+    <h2 id="course-pix-title">Aujourd’hui, c’était une séance Pix ?</h2>
+    <p>Si ton professeur t’a fait travailler sur Pix à la place du cours, ta séance de technologie t’attend ici : tu la reprendras la prochaine fois, rien n’est perdu. Quand tu as fini sur Pix, clique sur le bouton pour le signaler.</p>
+    <details><summary>Que faire pendant une séance Pix ?</summary>
+        <ol>
+            <li>Ouvre Pix depuis l’ENT (ou sur pix.fr, « Se connecter »).</li>
+            <li>Saisis le code de campagne donné par ton professeur et vérifie ton prénom et ton nom.</li>
+            <li>Travaille seul et sérieusement : Pix sert à savoir où tu en es.</li>
+            <li>Ne recopie jamais ton mot de passe ni les réponses de Pix sur ce site.</li>
+        </ol>
+        <p><a href="https://pix.fr/" target="_blank" rel="noopener noreferrer">Ouvrir Pix</a></p>
+    </details>
+    <button type="button" id="course-pix-declare" disabled>J’ai fait ma séance Pix</button>
+    <p id="course-pix-status" role="status" aria-live="polite"></p>
+</section>
+
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>
@@ -1369,6 +567,7 @@
 
 
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/pix-declaration.js"></script>
 
 
     </main>
