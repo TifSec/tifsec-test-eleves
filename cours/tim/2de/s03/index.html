@@ -67,6 +67,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/theme-contrast.css?v=20261029-contrast-1">
     
 </head>
 
@@ -91,6 +92,7 @@
 </header>
 
     <main class="student-course-main" id="student-course-main">
+
 
 
 
@@ -122,7 +124,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a03">1. Créer le document de la séance</a></li><li><a href="#a04">2. Situation de départ</a></li><li><a href="#a05">3. Le phishing</a></li><li><a href="#a06">4. Protéger ses comptes</a></li><li><a href="#a07">5. Mission : que feriez-vous ?</a></li><li><a href="#a08">6. Et si l&#39;ordinateur tombe en panne ?</a></li><li><a href="#a09">7. Ma fiche réflexe</a></li><li><a href="#a10">À retenir</a></li><li><a href="#a11">Travail à rendre</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Un mot de passe solide</a></li><li><a href="#a02">Le poste partagé de l’écurie</a></li><li><a href="#a03">La sauvegarde</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -134,7 +136,7 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">TIM · 2de Pro · S03</span></div>
-    <h1>Protéger ses données et son environnement numérique</h1>
+    <h1>Séance 3 : Protéger ses données et son poste de travail</h1>
     
     <aside class="course-learning-sequence" aria-label="Comment avancer dans le cours">
         <strong>Pour avancer</strong>
@@ -151,18 +153,23 @@
     
     
     <section class="course-info-card cours-theme">
-        <h2>Thème du programme</h2>
-        <p>TIM — Protéger ses données et son environnement numérique</p>
+        <h2>Thèmes du programme</h2>
+        <ul><li>EG4, objectif 3-1 — Utiliser de manière pertinente les outils bureautiques et les outils de communication</li><li>EG4, objectif 3-2 — Situer les TIC dans l’environnement social et culturel</li></ul>
     </section>
     
 
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Protéger ses données et son environnement numérique</p>
+        <p>Comment protéger ses comptes et ses fichiers au centre comme en stage ?</p>
     </section>
     
 
+    
+    <section class="course-info-card cours-competences-bo">
+        <h2>Compétences travaillées</h2>
+        <ul><li>EG4, objectif 3-1 — Utiliser de manière pertinente les outils bureautiques et les outils de communication</li><li>EG4, objectif 3-2 — Situer les TIC dans l’environnement social et culturel</li></ul>
+    </section>
     
 
     
@@ -172,61 +179,36 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Un message reçu sur Internet n&#39;est pas forcément fiable.</li>
+            <li>Un mot de passe solide est long, unique, gardé secret ; la double authentification ajoute un code.</li>
             
-            <li>Le phishing cherche à obtenir des informations ou provoquer une action en se faisant passer pour un interlocuteur légitime.</li>
-            
-            <li>Un mot de passe doit être suffisamment robuste et ne doit jamais être partagé.</li>
-            
-            <li>Les fichiers téléchargés et les liens peuvent présenter un risque.</li>
-            
-            <li>La sauvegarde permet de limiter les conséquences de la perte ou de la destruction de données.</li>
+            <li>On verrouille sa session quand on quitte le poste (Windows + L) et on fait des sauvegardes.</li>
             
         </ul>
         
         
+        <h2>Ce que tu vas apprendre à faire</h2>
+        <ul>
+            
+            <li>Évaluer et construire un mot de passe solide.</li>
+            
+            <li>Appliquer les bons réflexes sur un poste partagé.</li>
+            
+        </ul>
+        
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><p>Objectif de cette séance : Un message reçu sur Internet n&#39;est pas forcément fiable.</p></section>
-    
-    <section class="course-info-card course-info-everyday"><h2>Dans la vie quotidienne</h2><p>Utilise les situations et les documents de la séance pour mettre les notions en pratique.</p></section>
-    <section class="course-info-card course-info-previous"><h2>Pour commencer</h2><p>Reprends les méthodes des séances précédentes si elles te sont utiles ; les rappels du cours t’accompagnent.</p></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En S02, tu as rangé tes fichiers.</p><p>En stage, tu utiliseras peut-être l’ordinateur de l’écurie : comment ne pas exposer tes données ni celles des clients ?</p></div></section>
     
     
     
-<h4>Compétence visée : Identifier les principaux risques numériques et adopter des comportements responsables</h4>
     
-
-<p>Objectifs d’apprentissage</p>
     
-
-<ul><li>Un message reçu sur Internet n&#39;est pas forcément fiable.</li><li>Le phishing cherche à obtenir des informations ou provoquer une action en se faisant passer pour un interlocuteur légitime.</li><li>Un mot de passe doit être suffisamment robuste et ne doit jamais être partagé.</li><li>Les fichiers téléchargés et les liens peuvent présenter un risque.</li><li>La sauvegarde permet de limiter les conséquences de la perte ou de la destruction de données.</li></ul>
     
-
-<p>Ce que les élèves vont savoir faire :</p>
     
-
-<ul><li>Repérer plusieurs indices permettant d&#39;identifier un message suspect.</li><li>Adopter les bons réflexes face à un lien ou une pièce jointe.</li><li>Expliquer les principes permettant de protéger un compte.</li><li>Proposer une réaction adaptée à une situation numérique.</li></ul>
     
-
-
-    <section><h2>Ressources du cours</h2>
-<p>Réalise les manipulations dans le logiciel demandé. Conserve tes fichiers sur ton espace habituel. Le site enregistre seulement tes réponses écrites, tes résultats, tes formules et tes démarches ; aucun fichier n’est téléversé.</p>
     
-
-</section>
-    <details class="cours-ressources"><summary>Les attendus officiels</summary><div>
-<p>Dans cette page du ministère, retrouve le programme ou le référentiel de ta formation. Les objectifs précis étudiés aujourd’hui sont indiqués dans le cours.</p>
-    
-
-<p><a href="https://chlorofil.fr/diplomes/secondaire/bac-pro/2nde-pro" target="_blank" rel="noopener noreferrer">Consulter les programmes et attendus officiels</a></p>
-
-
-</div></details>
-
-    
-    <nav class="course-mission-controls course-intro-controls" aria-label="Commencer la séance"><a class="course-mission-next" href="#a03">J’ai compris l’objectif : commencer la première mission <span aria-hidden="true">→</span></a></nav>
+    <nav class="course-mission-controls course-intro-controls" aria-label="Commencer la séance"><a class="course-mission-next" href="#a01">J’ai compris l’objectif : commencer la première mission <span aria-hidden="true">→</span></a></nav>
 </header>
 
 
@@ -236,58 +218,23 @@
 
 <section class="cours-activites">
     
-    <article class="cours-activite" id="a03" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>1. Créer le document de la séance</h2>
+    <article class="cours-activite" id="a01" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Un mot de passe solide</h2>
         
         
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas évaluer trois mots de passe avec les critères du document 1. On attend « solide » ou « faible » pour chacun.</p></div>
         
         
 
         
-<p>Créez votre document de travail et enregistrez-le dans TIM/Travaux.</p>
+<ul><li>Au moins 12 caractères.</li><li>Majuscules, minuscules, chiffres, symboles.</li><li>Pas de mot du dictionnaire seul, ni de date de naissance.</li><li>Un mot de passe différent par compte.</li></ul>
     
 
-<p>Nom du fichier :</p>
+<ol><li>Lis les critères (document 1).</li><li>Évalue chaque mot de passe.</li><li>Réponds.</li></ol>
     
 
-<p>2nde_S03_NOM_Prenom</p>
-    
-
-<p>Ajoutez le titre :</p>
-    
-
-<p>Séance 3 : Protéger ses données et son environnement numérique</p>
-    
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#course-intro">← Revoir l’objectif</a>
-            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a04" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>2. Situation de départ</h2>
-        
-        
-        
-        
-        
-
-        
-<p>La responsable d&#39;une structure équestre reçoit le message suivant :</p>
-    
-
-<blockquote>URGENT : votre compte professionnel sera supprimé dans 24 heures. Nous avons détecté un problème avec votre compte. Cliquez immédiatement sur le lien suivant pour conserver votre accès. ecurie-securite-login.xyz</blockquote>
-    
-
-<p>Dans votre document, répondez sans rechercher la solution :</p>
+<p>Pourquoi ces critères ? Les logiciels de piratage testent d’abord les mots courts, les prénoms, les dates.</p>
     
 
 
@@ -296,52 +243,273 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Que feriez-vous en recevant ce message ?</h3>
+            <h3 id="a01-q01-label">Question 1 — D’après le document 1, ces mots de passe sont-ils solides ou faibles ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Mot de passe</th>
+                                
+                                <th>Solide ou faible ?</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    ecurie2026
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Un mot de passe solide — Solide ou faible ? — ecurie2026">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Mon-Ch3val-Aime-Les-Pommes!
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Un mot de passe solide — Solide ou faible ? — Mon-Ch3val-Aime-Les-Pommes!">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    azerty
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Un mot de passe solide — Solide ou faible ? — azerty">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            <details><summary>Un coup de pouce</summary><p>Une case à la fois : la ligne croise la colonne.</p></details>
             
             
-            
-
         </div>
         
-        <div class="cours-question" data-question="q02">
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#course-intro">← Revoir l’objectif</a>
+            <a class="course-mission-next" href="#a02">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a02" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Le poste partagé de l’écurie</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais créer un mot de passe. Encore faut-il bien l’utiliser.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas repérer les trois imprudences de Lucas sur l’ordinateur de l’écurie (document 2) et proposer un bon réflexe pour chacune. On attend trois corrections.</p></div>
+        
+        
+
+        
+<p>Document 2 — Lucas, stagiaire, consulte sa messagerie sur l’ordinateur de l’accueil. Il laisse la session ouverte pour aller nourrir les chevaux. Son mot de passe est sur un post-it collé à l’écran. Le navigateur lui a proposé de retenir son mot de passe : il a accepté.</p>
+    
+
+<ol><li>Lis la situation (document 2).</li><li>Repère les trois imprudences.</li><li>Propose une correction pour chacune.</li></ol>
+    
+
+<p>Pourquoi ce poste est-il à risque ? Plusieurs personnes l’utilisent : clients, employés, stagiaires.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            
-            <h3 id="a04-q02-label">Question 2 — Vous semble-t-il fiable ? Pourquoi ?</h3>
+            <h3 id="a02-q01-label">Question 1 — D’après le document 2, corrige les imprudences de Lucas.</h3>
             
 
             
             
-                <textarea id="a04-q02" data-answer-id="a04_q02" data-required="true" aria-labelledby="a04-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Imprudence</th>
+                                
+                                <th>Bon réflexe</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Session restée ouverte
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Le poste partagé de l’écurie — Bon réflexe — Session restée ouverte">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Mot de passe sur un post-it
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Le poste partagé de l’écurie — Bon réflexe — Mot de passe sur un post-it">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Navigateur qui retient son mot de passe
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Le poste partagé de l’écurie — Bon réflexe — Navigateur qui retient son mot de passe">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            <details><summary>Un coup de pouce</summary><p>Une case à la fois : la ligne croise la colonne.</p></details>
             
             
-            
-
         </div>
         
-        <div class="cours-question" data-question="q03">
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a01">← Étape précédente</a>
+            <a class="course-mission-next" href="#a03">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a03" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>La sauvegarde</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le poste est sécurisé. Il reste à protéger les données en cas de panne.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas appliquer la règle de sauvegarde 3-2-1 au registre des soins de l’écurie. On attend une organisation qui respecte les trois chiffres.</p></div>
+        
+        
+
+        
+<ol><li>Lis la règle 3-2-1 : 3 copies, 2 supports différents, 1 hors du lieu.</li><li>Applique-la au registre des soins de l’écurie.</li><li>Réponds.</li></ol>
+    
+
+<p>Pourquoi sauvegarder ? Un ordinateur peut tomber en panne, être volé ou attaqué : sans copie, tout est perdu.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            
-            <h3 id="a04-q03-label">Question 3 — Quels éléments vous paraissent éventuellement suspects ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Propose une organisation de sauvegarde du registre des soins qui respecte la règle 3-2-1.</h3>
             
 
             
             
-                <textarea id="a04-q03" data-answer-id="a04_q03" data-required="true" aria-labelledby="a04-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
+            <details><summary>Un coup de pouce</summary><p>Une idée réaliste + « Cela permet de… ».</p></details>
             
             
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a02">← Étape précédente</a>
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a04" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Pour aller plus loin</h2>
+        <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
+        
+        
+        
+        
+
+        
+<p>La double authentification envoie un code sur le téléphone.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a04-q01-label">Question 1 — Pourquoi protège-t-elle même si le mot de passe est volé ?</h3>
             
 
+            
+            
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Méthode : 1) écris ton idée en une phrase ; 2) ajoute la raison avec « car » ou « parce que » ; 3) appuie-toi sur un fait vu dans la séance ou un document. Exemple de début : « … car … ».</p></details>
+            
+            
         </div>
         
         
@@ -352,258 +520,36 @@
     </article>
     
     <article class="cours-activite" id="a05" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>3. Le phishing</h2>
+        <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Conclusion de ton travail</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais protéger tes données. Il reste à répondre au problème de départ.</p>
         
         
         
-        
-        
 
         
-<p>Le phishing, ou hameçonnage, consiste à se faire passer pour une personne ou une organisation connue afin d&#39;obtenir une information ou de provoquer une action.</p>
-    
-
-<p>Par exemple :</p>
-    
-
-<ul><li>récupérer un mot de passe ;</li><li>obtenir des coordonnées bancaires ;</li><li>faire télécharger un fichier ;</li><li>faire ouvrir un lien dangereux.</li></ul>
-    
-
-<p>Quelques éléments doivent attirer votre attention :</p>
-    
-
-<ul><li>une demande très urgente ;</li><li>un expéditeur inhabituel ;</li><li>une adresse étrange ;</li><li>un lien différent du site habituel ;</li><li>une pièce jointe inattendue ;</li><li>une demande de mot de passe ou d&#39;informations personnelles.</li></ul>
-    
-
-<p>Reprenez maintenant votre réponse de départ et indiquez ce que vous modifieriez après avoir lu ces informations.</p>
-    
-
-
         
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment protéger ses comptes et ses fichiers au centre comme en stage ?</h3>
+            
+
+            
+            
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème et de « Ce que je retiens », avec un exemple de la séance.</p></details>
+            
+            
+        </div>
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#a04">← Étape précédente</a>
-            <a class="course-mission-next" href="#a06">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a06" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>4. Protéger ses comptes</h2>
-        
-        
-        
-        
-        
-
-        
-<p>Un mot de passe protège l&#39;accès à un compte.</p>
-    
-
-<p>Il doit notamment être :</p>
-    
-
-<ul><li>suffisamment long ;</li><li>difficile à deviner ;</li><li>différent d&#39;un compte important à un autre ;</li><li>gardé secret.</li></ul>
-    
-
-<p>N&#39;utilisez jamais votre véritable mot de passe dans un exercice scolaire.</p>
-    
-
-<p>La double authentification ajoute une deuxième vérification lors de la connexion et permet d&#39;améliorer la sécurité du compte.</p>
-    
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a05">← Étape précédente</a>
-            <a class="course-mission-next" href="#a07">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a07" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 5</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>5. Mission : que feriez-vous ?</h2>
-        
-        
-        
-        
-        
-
-        
-<p>Pour chaque situation, indiquez dans votre document :</p>
-    
-
-<p>Je le fais / Je ne le fais pas / Je vérifie d&#39;abord</p>
-    
-
-<p>Puis justifiez votre réponse en une phrase.</p>
-    
-
-<h4>Situation 1</h4>
-    
-
-<p>Vous recevez un message d&#39;une personne inconnue avec le fichier photos_concours.exe.</p>
-    
-
-<h4>Situation 2</h4>
-    
-
-<p>Un camarade vous demande votre mot de passe afin de déposer votre travail à votre place.</p>
-    
-
-<h4>Situation 3</h4>
-    
-
-<p>Le système de l&#39;ordinateur indique qu&#39;une mise à jour officielle est disponible.</p>
-    
-
-<h4>Situation 4</h4>
-    
-
-<p>Une fenêtre apparaît soudainement et annonce : 17 VIRUS DÉTECTÉS ! CLIQUEZ ICI IMMÉDIATEMENT !</p>
-    
-
-<h4>Situation 5</h4>
-    
-
-<p>Vous quittez un ordinateur partagé pendant 20 minutes en laissant votre session ouverte.</p>
-    
-
-<h4>Situation 6</h4>
-    
-
-<p>Un ami vous envoie soudainement un lien inhabituel sans aucun message d&#39;explication.</p>
-    
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a06">← Étape précédente</a>
-            <a class="course-mission-next" href="#a08">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a08" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 6</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>6. Et si l&#39;ordinateur tombe en panne ?</h2>
-        
-        
-        
-        
-        
-
-        
-<p>Les données peuvent être perdues à cause :</p>
-    
-
-<ul><li>d&#39;une panne ;</li><li>d&#39;une suppression accidentelle ;</li><li>d&#39;un vol ;</li><li>d&#39;un logiciel malveillant ;</li><li>d&#39;une mauvaise manipulation.</li></ul>
-    
-
-<p>Dans votre document, proposez au moins deux solutions permettant d&#39;éviter de perdre définitivement un document important.</p>
-    
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a07">← Étape précédente</a>
-            <a class="course-mission-next" href="#a09">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a09" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 7</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>7. Ma fiche réflexe</h2>
-        
-        
-        
-        
-        
-
-        
-<p>Terminez votre document par le titre :</p>
-    
-
-<p>Mes 5 règles de sécurité numérique</p>
-    
-
-<p>Rédigez vous-même cinq règles que vous souhaitez retenir de cette séance.</p>
-    
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a08">← Étape précédente</a>
-            <a class="course-mission-next" href="#a10">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a10" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 8</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>À retenir</h2>
-        
-        
-        
-        
-        
-
-        
-<p>Sur Internet, il faut éviter d&#39;agir trop rapidement.</p>
-    
-
-<p>Avant de cliquer, télécharger ou transmettre une information :</p>
-    
-
-<p>j&#39;observe → je vérifie → puis j&#39;agis.</p>
-    
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a09">← Étape précédente</a>
-            <a class="course-mission-next" href="#a11">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a11" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 9</span><span class="course-step-counter" data-course-step-counter></span></div>
-        <h2>Travail à rendre</h2>
-        
-        
-        
-        
-        
-
-        
-<p>Votre document doit contenir :</p>
-    
-
-<ul><li>votre réponse initiale ;</li><li>votre réponse corrigée après le cours ;</li><li>l&#39;analyse des six situations ;</li><li>vos solutions pour protéger les données ;</li><li>vos cinq règles de sécurité.</li></ul>
-    
-
-<p>Nom du fichier à rendre : 2nde_S03_NOM_Prenom</p>
-    
-
-<p>Le document doit être rendu même s&#39;il n&#39;est pas terminé.</p>
-    
-
-
-        
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a10">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -616,11 +562,15 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">Faire le point</h2>
-    <p>Relis tes réponses et vérifie les points demandés dans le bilan du cours. Tu peux revenir sur ton travail tant que le professeur ne l’a pas clôturé.</p>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Mot de passe solide, unique, secret.</li><li>Verrouiller (Windows + L) ; sauvegarde 3-2-1.</li></ul>
+    
 </section>
 
+<section class="cours-sources course-info-card" aria-labelledby="course-sources-title"><h2 id="course-sources-title">Sources et ressources officielles</h2>
+<p><a href="https://chlorofil.fr/fileadmin/user_upload/02-diplomes/referentiels/secondaire/2nde-pro/2nde-pro-da-EG4.pdf" target="_blank" rel="noopener noreferrer">ChloroFil — Seconde professionnelle, document d’accompagnement du module EG4</a></p>
 
+
+</section>
 
     <div class="course-submit-panel">
         <button type="button" id="course-submit" data-enabled="true" hidden disabled>J’ai terminé — remettre ma copie</button>
@@ -628,14 +578,14 @@
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
     
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a11">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>
 <noscript><p>Active JavaScript pour charger ta copie et enregistrer tes réponses.</p></noscript>
 
 <script id="classes-data" type="application/json">
-{"college":{"nom":"Collège","classes":[{"id":"5e","nom":"5e","matieres":["techno"]},{"id":"4e","nom":"4e","matieres":["techno"]},{"id":"3e","nom":"3e","matieres":["techno"]}]},"mfr":{"nom":"MFR","classes":[{"id":"4e","nom":"4e MFR","matieres":["tim","maths"]},{"id":"3e","nom":"3e MFR","matieres":["tim","maths"]},{"id":"cap1","nom":"CAP 1","matieres":["tim"]},{"id":"cap2","nom":"CAP 2","matieres":["tim"]},{"id":"2de","nom":"2de Pro","matieres":["tim","maths"]},{"id":"1re","nom":"Bac Pro 1","matieres":["tim","maths"]},{"id":"term","nom":"Bac Pro 2","matieres":["tim","maths"]},{"id":"bts1","nom":"BTS 1","matieres":["tim"]},{"id":"bts2","nom":"BTS 2","matieres":["tim"]}]}}
+{"college":{"nom":"Collège","classes":[{"id":"5e","nom":"5e","matieres":["techno"]},{"id":"4e","nom":"4e","matieres":["techno"]},{"id":"3e","nom":"3e","matieres":["techno"]}]},"mfr":{"nom":"MFR","classes":[{"id":"4e","nom":"4e MFR","matieres":["tim"]},{"id":"3e","nom":"3e MFR","matieres":["tim"]},{"id":"cap1","nom":"CAPa 1","matieres":["tim"]},{"id":"cap2","nom":"CAPa 2","matieres":["tim"]},{"id":"2de","nom":"2de Pro","matieres":["tim","maths"]},{"id":"1re","nom":"Bac Pro 1","matieres":["tim","maths"]},{"id":"bts1","nom":"BTSA ACS'AGRI 1","matieres":["tim"]},{"id":"bts2","nom":"BTSA ACS'AGRI 2","matieres":["tim"]}]}}
 </script>
 <script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
 
