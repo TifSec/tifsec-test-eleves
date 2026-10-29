@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Les constituants (poste maquette)</a></li><li><a href="#a02">Lire le programme</a></li><li><a href="#a03">Défi — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Les constituants (poste maquette)</a></li><li><a href="#a02">Lire le programme</a></li><li><a href="#a03">Fonction et amélioration</a></li><li><a href="#a04">Défi — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -210,7 +210,7 @@
         <h2>Les constituants (poste maquette)</h2>
         
         
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas observer le tracker (au poste maquette ou avec le document 1) et trouver la fonction de chacun de ses constituants. On attend une fonction par constituant.</p></div>
         
         
 
@@ -221,13 +221,19 @@
 <div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Les constituants du tracker</caption><thead><tr><th scope="col">Constituant</th><th scope="col">Rôle</th></tr></thead><tbody><tr><td>Capteur de lumière gauche (Grove)</td><td>Mesure la lumière à gauche.</td></tr><tr><td>Capteur de lumière droit (Grove)</td><td>Mesure la lumière à droite.</td></tr><tr><td>Carte micro:bit V1 et son shield Grove</td><td>Lit les capteurs, exécute le programme et commande le servomoteur.</td></tr><tr><td>Servomoteur (Grove)</td><td>Fait tourner la tête à un angle précis (de 20° à 160°).</td></tr><tr><td>Petit panneau solaire (de lampe de jardin)</td><td>Produit de l’électricité à partir de la lumière.</td></tr><tr><td>Socle et tête imprimés en 3D</td><td>Supportent et protègent les constituants.</td></tr></tbody></table></div>
     
 
+<ol><li>Observe le tracker sans rien débrancher (ou lis le document 1).</li><li>Pour chaque constituant, demande-toi : capte-t-il, décide-t-il, agit-il, ou convertit-il l’énergie ?</li><li>Écris sa fonction.</li></ol>
+    
+
+<p>Pourquoi les fonctions ? Pour modifier le programme, il faut savoir quel constituant fait quoi.</p>
+    
+
 
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Pour chaque constituant, écris sa fonction : acquérir, traiter, communiquer (agir) ou convertir l’énergie.</h3>
+            <h3 id="a01-q01-label">Question 1 — Pour chaque constituant du tracker (document 1), écris sa fonction : acquérir, traiter, communiquer (agir) ou convertir l’énergie.</h3>
             
 
             
@@ -334,7 +340,7 @@
         <h2>Lire le programme</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu connais les constituants. Regarde maintenant comment le programme les utilise.</p>
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas lire le programme du tracker (version simplifiée) et prévoir ce qu’il fait dans deux situations. On attend deux prévisions précises.</p></div>
         
         
 
@@ -365,6 +371,12 @@ fonction chercherSoleil
     
 
 <p>Rappel du réflexe n° 9 : bloc par bloc. Rappel de la séance 32 : une condition « si … alors ».</p>
+    
+
+<ol><li>Lis le programme bloc par bloc (réflexe n° 9).</li><li>Repère la condition sur l’écart de 30.</li><li>Applique-la aux valeurs des questions.</li></ol>
+    
+
+<p>Pourquoi un écart de 30 ? Sans lui, le tracker bougerait sans arrêt pour de toutes petites différences de lumière.</p>
     
 
 
@@ -407,15 +419,41 @@ fonction chercherSoleil
             
         </div>
         
-        <div class="cours-question" data-question="q03">
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a01">← Étape précédente</a>
+            <a class="course-mission-next" href="#a03">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a03" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Fonction et amélioration</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais comment le tracker suit la lumière. Prépare maintenant ton amélioration.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas repérer dans le programme du tracker la fonction chercherSoleil et l’endroit que ton groupe modifiera pour son amélioration. On attend le rôle de la fonction et l’endroit précis à modifier.</p></div>
+        
+        
+
+        
+<ol><li>Repère la ligne « appeler chercherSoleil » et la définition de la fonction.</li><li>Relis l’amélioration choisie par ton groupe (séance 43).</li><li>Cherche le bloc du programme qui concerne ton amélioration.</li></ol>
+    
+
+<p>Pourquoi repérer avant de modifier ? Dans un programme qui marche, on ne touche qu’à l’endroit nécessaire, pour ne rien casser.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            
-            <h3 id="a02-q03-label">Question 3 — À quoi sert la fonction chercherSoleil, et quand est-elle appelée ?</h3>
+            <h3 id="a03-q01-label">Question 1 — À quoi sert la fonction chercherSoleil, et quand est-elle appelée ?</h3>
             
 
             
             
-                <textarea id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
@@ -423,15 +461,15 @@ fonction chercherSoleil
             
         </div>
         
-        <div class="cours-question" data-question="q04">
+        <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q04-label">Question 4 — Repère, dans le programme, l’endroit que ton groupe devra modifier pour son amélioration (A, B ou C). Explique.</h3>
+            <h3 id="a03-q02-label">Question 2 — Repère, dans le programme, l’endroit que ton groupe devra modifier pour son amélioration (A, B ou C). Explique.</h3>
             
 
             
             
-                <textarea id="a02-q04" data-answer-id="a02_q04" data-required="true" aria-labelledby="a02-q04-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Bloc par bloc (réflexe n° 9).</p></details>
@@ -441,12 +479,12 @@ fonction chercherSoleil
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a01">← Étape précédente</a>
-            <a class="course-mission-next" href="#a03">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+            <a class="course-mission-back" href="#a02">← Étape précédente</a>
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a03" data-course-step>
+    <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Défi</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
@@ -465,12 +503,12 @@ fonction chercherSoleil
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Pour le mode nuit (amélioration A), quelle valeur de luminosité (gauche + droite) choisirais-tu comme seuil « il fait nuit » ? Comment le vérifier ?</h3>
+            <h3 id="a04-q01-label">Question 1 — Pour le mode nuit (amélioration A), quelle valeur de luminosité (gauche + droite) choisirais-tu comme seuil « il fait nuit » ? Comment le vérifier ?</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Repère le verbe de la question.</p></details>
@@ -480,12 +518,12 @@ fonction chercherSoleil
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a02">← Étape précédente</a>
-            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a04" data-course-step>
+    <article class="cours-activite" id="a05" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
@@ -500,12 +538,12 @@ fonction chercherSoleil
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Réponds au problème du jour : quels constituants permettent au tracker de suivre la lumière, et comment son programme les utilise-t-il ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : quels constituants permettent au tracker de suivre la lumière, et comment son programme les utilise-t-il ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème (réflexe n° 3).</p></details>
@@ -515,7 +553,7 @@ fonction chercherSoleil
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -560,7 +598,7 @@ fonction chercherSoleil
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

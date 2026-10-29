@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Le monte-plats</a></li><li><a href="#a02">Lire le programme</a></li><li><a href="#a03">Défi — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Le monte-plats</a></li><li><a href="#a02">Lire le programme</a></li><li><a href="#a03">Tester le programme du monte-plats</a></li><li><a href="#a04">Défi — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -206,7 +206,7 @@
         <h2>Le monte-plats</h2>
         
         
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas analyser un nouvel objet, le monte-plats d’un restaurant (documents 1 et 2), avec ce que tu as appris sur le monte-charge. On attend sa chaîne d’information et sa transmission du mouvement.</p></div>
         
         
 
@@ -226,6 +226,12 @@
             faire tourner le moteur à la vitesse 120
         arrêter le moteur
         allumer le voyant de la salle</code></pre>
+    
+
+<ol><li>Lis le document 1.</li><li>Range les constituants comme pour le monte-charge (séance 33).</li><li>Compare sa transmission avec celle du monte-charge (séance 34).</li></ol>
+    
+
+<p>Pourquoi un nouvel objet ? C’est le bilan : tu montres que tu sais appliquer seul tes méthodes.</p>
     
 
 
@@ -331,7 +337,7 @@
         <div class="cours-question" data-question="q03">
             
             
-            <h3 id="a01-q03-label">Question 3 — Complète la transmission du mouvement.</h3>
+            <h3 id="a01-q03-label">Question 3 — D’après le document 1, complète la transmission du mouvement du monte-plats.</h3>
             
 
             
@@ -438,12 +444,18 @@
         <h2>Lire le programme</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as reconnu les chaînes. Lis maintenant son programme, comme celui du monte-charge.</p>
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas lire le programme du monte-plats (document 2) bloc par bloc. On attend les conditions de démarrage et le rôle du voyant de la salle.</p></div>
         
         
 
         
 <p>Rappel du réflexe n° 9 : bloc par bloc.</p>
+    
+
+<ol><li>Lis le programme bloc par bloc (réflexe n° 9).</li><li>Repère la condition qui démarre le moteur.</li><li>Repère quand le voyant s’allume.</li></ol>
+    
+
+<p>Pourquoi lire bloc par bloc ? Comme une recette, un programme s’exécute dans l’ordre : on le comprend ligne après ligne.</p>
     
 
 
@@ -481,15 +493,41 @@
             
         </div>
         
-        <div class="cours-question" data-question="q03">
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a01">← Étape précédente</a>
+            <a class="course-mission-next" href="#a03">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a03" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Tester le programme du monte-plats</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as lu le programme. Prépare maintenant sa vérification.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas préparer deux tests pour vérifier le programme du monte-plats (document 2), comme en séance 37. On attend deux tests avec leur résultat attendu.</p></div>
+        
+        
+
+        
+<ol><li>Choisis une situation où le moteur doit démarrer, et une où il ne doit pas démarrer.</li><li>Pour chacune, écris l’action et le résultat attendu d’après le document 2.</li></ol>
+    
+
+<p>Pourquoi un test où rien ne doit se passer ? Un programme juste doit aussi savoir ne rien faire quand les conditions ne sont pas réunies.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            
-            <h3 id="a02-q03-label">Question 3 — Écris le résultat attendu de deux tests pour vérifier ce programme.</h3>
+            <h3 id="a03-q01-label">Question 1 — Écris le résultat attendu de deux tests pour vérifier ce programme.</h3>
             
 
             
             
-                <textarea id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Bloc par bloc (réflexe n° 9).</p></details>
@@ -499,12 +537,12 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a01">← Étape précédente</a>
-            <a class="course-mission-next" href="#a03">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+            <a class="course-mission-back" href="#a02">← Étape précédente</a>
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a03" data-course-step>
+    <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Défi</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
@@ -523,12 +561,12 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Écris en « si … alors … » la partie de programme pour faire redescendre la cabine.</h3>
+            <h3 id="a04-q01-label">Question 1 — Écris en « si … alors … » la partie de programme pour faire redescendre la cabine.</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Bloc par bloc (réflexe n° 9).</p></details>
@@ -538,12 +576,12 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a02">← Étape précédente</a>
-            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a04" data-course-step>
+    <article class="cours-activite" id="a05" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
@@ -558,12 +596,12 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Explique en 4 ou 5 phrases comment fonctionne le monte-charge du collège, des boutons jusqu’au moteur.</h3>
+            <h3 id="a05-q01-label">Question 1 — Explique en 4 ou 5 phrases comment fonctionne le monte-charge du collège, des boutons jusqu’au moteur.</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème (réflexe n° 3).</p></details>
@@ -573,7 +611,7 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -618,7 +656,7 @@
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

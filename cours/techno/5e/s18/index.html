@@ -122,7 +122,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Tester des propriétés</a></li><li><a href="#a02">La pale va-t-elle tenir ?</a></li><li><a href="#a03">Défi — facultatif</a></li><li><a href="#a04">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Tester des propriétés</a></li><li><a href="#a02">La pale va-t-elle tenir ?</a></li><li><a href="#a03">Choisir la pale</a></li><li><a href="#a04">Défi — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -212,7 +212,7 @@
         <h2>Tester des propriétés</h2>
         
         
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas tester (ou observer) trois échantillons pour découvrir des propriétés des matériaux. On attend des propriétés reliées à un usage.</p></div>
         
         
 
@@ -224,6 +224,12 @@
     
 
 <p>Exemple expliqué : l’aimant attire la règle en métal (acier) mais pas la règle en plastique : seule l’acier est attirée par un aimant.</p>
+    
+
+<ol><li>Observe les tests du jour : plier, aimanter, peser.</li><li>Note ce que fait chaque échantillon.</li><li>Associe chaque propriété à un usage où elle est indispensable.</li></ol>
+    
+
+<p>Pourquoi des propriétés ? On choisit un matériau pour ce qu’il sait faire : être léger, rigide, conduire l’électricité…</p>
     
 
 
@@ -338,7 +344,7 @@
         <h2>La pale va-t-elle tenir ?</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les propriétés aident à choisir un matériau. Mais il faut aussi vérifier que la pièce, avec sa forme, tiendra : c’est le rôle de la simulation.</p>
-        
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas vérifier, avec les résultats d’une simulation (document 1), si des pales d’éolienne respectent une exigence du cahier des charges. On attend « oui » ou « non » pour chaque pale.</p></div>
         
         
 
@@ -355,13 +361,19 @@
 <p>Exemple expliqué : la pale A se déforme de 8 mm. 8 mm est plus grand que 4 mm : elle ne respecte pas l’exigence.</p>
     
 
+<ol><li>Lis l’exigence : 4 mm de déformation au plus.</li><li>Lis l’exemple expliqué de la pale A.</li><li>Compare la déformation de chaque pale à 4 mm.</li></ol>
+    
+
+<p>Pourquoi une simulation ? Elle évite de fabriquer des pales qui casseraient : on vérifie avant de fabriquer.</p>
+    
+
 
         
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Pour chaque pale, écris si elle respecte l’exigence (oui ou non).</h3>
+            <h3 id="a02-q01-label">Question 1 — D’après le document 1, écris pour chaque pale si elle respecte l’exigence de 4 mm au plus (oui ou non).</h3>
             
 
             
@@ -422,15 +434,41 @@
             
         </div>
         
-        <div class="cours-question" data-question="q02">
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a01">← Étape précédente</a>
+            <a class="course-mission-next" href="#a03">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a03" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Choisir la pale</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais quelles pales respectent l’exigence. Il faut maintenant en choisir une.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas choisir entre les pales B et C, qui respectent toutes les deux l’exigence, à partir des résultats de la simulation (document 1). On attend un choix justifié par des valeurs et l’intérêt de la simulation.</p></div>
+        
+        
+
+        
+<ol><li>Relis les déformations des pales B et C dans le document 1.</li><li>Tiens compte de la masse : une pale plus épaisse est plus lourde.</li><li>Justifie ton choix avec des valeurs et leur unité (réflexes n° 4 et 5).</li></ol>
+    
+
+<p>Pourquoi ne pas prendre la plus épaisse ? La plus rigide n’est pas toujours la meilleure : une pale lourde démarre moins bien avec peu de vent.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            
-            <h3 id="a02-q02-label">Question 2 — Les pales B et C respectent l’exigence. Laquelle choisirais-tu, sachant qu’une pale plus épaisse est plus lourde ? Justifie avec des valeurs (réflexes n° 4 et 5).</h3>
+            <h3 id="a03-q01-label">Question 1 — Les pales B et C respectent l’exigence. Laquelle choisirais-tu, sachant qu’une pale plus épaisse est plus lourde ? Justifie avec des valeurs (réflexes n° 4 et 5).</h3>
             
 
             
             
-                <textarea id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Une idée + « car » + une raison tirée de la séance.</p></details>
@@ -438,15 +476,15 @@
             
         </div>
         
-        <div class="cours-question" data-question="q03">
+        <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q03-label">Question 3 — Quel est l’intérêt de la simulation ?</h3>
+            <h3 id="a03-q02-label">Question 2 — Quel est l’intérêt de la simulation ?</h3>
             
 
             
             
-                <select id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label"><option value="">Choisis une réponse</option><option value="a">Vérifier la pièce avant de la fabriquer, sans gaspiller de matière.</option><option value="b">Rendre la pale plus solide.</option><option value="c">Imprimer la pale plus vite.</option></select>
+                <select id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label"><option value="">Choisis une réponse</option><option value="a">Vérifier la pièce avant de la fabriquer, sans gaspiller de matière.</option><option value="b">Rendre la pale plus solide.</option><option value="c">Imprimer la pale plus vite.</option></select>
 
                 
             <details><summary>Un coup de pouce</summary><p>Élimine d’abord les réponses impossibles.</p></details>
@@ -456,12 +494,12 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a01">← Étape précédente</a>
-            <a class="course-mission-next" href="#a03">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+            <a class="course-mission-back" href="#a02">← Étape précédente</a>
+            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a03" data-course-step>
+    <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Défi</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
@@ -480,12 +518,12 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Pourquoi la déformation n’est-elle pas simplement divisée par deux quand l’épaisseur double ? Propose une explication.</h3>
+            <h3 id="a04-q01-label">Question 1 — Pourquoi la déformation n’est-elle pas simplement divisée par deux quand l’épaisseur double ? Propose une explication.</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Une idée + « car » + une raison tirée de la séance.</p></details>
@@ -495,12 +533,12 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a02">← Étape précédente</a>
-            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a04" data-course-step>
+    <article class="cours-activite" id="a05" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
@@ -515,12 +553,12 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Réponds au problème du jour : comment les propriétés d’un matériau guident-elles son choix, et comment vérifier qu’une pièce tiendra ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment les propriétés d’un matériau guident-elles son choix, et comment vérifier qu’une pièce tiendra ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Reprends les mots du problème et de « Ce que je retiens », avec un exemple de la séance.</p></details>
@@ -530,7 +568,7 @@
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a03">← Étape précédente</a>
+            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -575,7 +613,7 @@
     <p id="course-pix-status" role="status" aria-live="polite"></p>
 </section>
 
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>
