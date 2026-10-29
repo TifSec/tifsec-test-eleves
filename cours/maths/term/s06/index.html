@@ -62,7 +62,7 @@
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261022-quest-ui-2">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261029-steps-1">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
@@ -372,8 +372,8 @@ C(3) = 5(3 − 4)² + 180
 
 <section class="cours-activites">
     
-    <article class="cours-activite" id="a01">
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+    <article class="cours-activite" id="a01" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Automatismes — Les carrés</h2>
         
         
@@ -445,8 +445,8 @@ C(3) = 5(3 − 4)² + 180
         </nav>
     </article>
     
-    <article class="cours-activite" id="a02">
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+    <article class="cours-activite" id="a02" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Rappel de cours — Image, minimum et symétrie</h2>
         
         
@@ -576,8 +576,8 @@ x² − 8x = (x − 4)² − 16</code></pre>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a03">
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+    <article class="cours-activite" id="a03" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Lecture graphique — Retrouver une information</h2>
         
         
@@ -660,8 +660,8 @@ x² − 8x = (x − 4)² − 16</code></pre>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a04">
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+    <article class="cours-activite" id="a04" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Méthode — Résoudre une équation</h2>
         
         
@@ -728,8 +728,8 @@ x = 3 ou x = 5.</code></pre>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a05">
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 5</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+    <article class="cours-activite" id="a05" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 5</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Application — Ne pas dépasser un budget</h2>
         
         
@@ -807,8 +807,8 @@ x = 3 ou x = 5.</code></pre>
         </nav>
     </article>
     
-    <article class="cours-activite" id="a06">
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 6</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+    <article class="cours-activite" id="a06" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 6</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Exercice de transfert — Un autre contrat</h2>
         
         
@@ -884,6 +884,9 @@ x = 3 ou x = 5.</code></pre>
 
     </fieldset>
     
+    <section class="course-final-step" id="course-final" data-course-step aria-label="Fin de la séance">
+    <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
+    
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
     <h2 id="course-summary-title">À retenir</h2><ul><li>Une image est le résultat C(x) ; un antécédent est une valeur de x donnant un résultat fixé.</li><li>Résoudre C(x) = b : chercher un coût exactement égal à b. Résoudre C(x) ≤ b : chercher tous les coûts qui ne dépassent pas b.</li><li>Pour A² = k &gt; 0, penser aux deux signes : A = −√k ou A = √k.</li><li>Un carré est positif ou nul : une équation A² = k &lt; 0 n’a pas de solution réelle.</li><li>Les solutions mathématiques doivent respecter le domaine du modèle et les contraintes du problème.</li></ul>
     <h3>Faire le point</h3><p>Je sais lire une parabole, résoudre une équation simple à partir d’un carré et distinguer un coût exact d’un budget maximal. Je vérifie les unités, les bornes et les contraintes avant de conclure.</p>
@@ -896,6 +899,8 @@ x = 3 ou x = 5.</code></pre>
         <p id="course-submit-status" role="status" aria-live="polite"></p>
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a06">← Étape précédente</a></nav>
+    </section>
 </div></div>
 </div>
 <noscript><p>Active JavaScript pour charger ta copie et enregistrer tes réponses.</p></noscript>
@@ -908,6 +913,7 @@ x = 3 ou x = 5.</code></pre>
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
 
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-steps.js?v=20261029-steps-1"></script>
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
 

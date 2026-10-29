@@ -62,7 +62,7 @@
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261022-quest-ui-2">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261029-steps-1">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
@@ -212,8 +212,8 @@
 
 <section class="cours-activites">
     
-    <article class="cours-activite" id="a01">
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+    <article class="cours-activite" id="a01" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Un même problème, des solutions différentes</h2>
         
         
@@ -370,6 +370,9 @@
 
     </fieldset>
     
+    <section class="course-final-step" id="course-final" data-course-step aria-label="Fin de la séance">
+    <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
+    
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
     <h2 id="course-summary-title">À retenir</h2><ul><li>Un même besoin peut être satisfait par différentes solutions techniques.</li><li>Les solutions techniques évoluent pour répondre aux besoins et améliorer les performances.</li></ul>
     <h3>Faire le point</h3><p>Choisis un exemple du tableau et explique avec tes mots la différence entre le besoin et la solution technique. Relis ensuite ta justification.</p>
@@ -382,6 +385,8 @@
         <p id="course-submit-status" role="status" aria-live="polite"></p>
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a01">← Étape précédente</a></nav>
+    </section>
 </div></div>
 </div>
 <noscript><p>Active JavaScript pour charger ta copie et enregistrer tes réponses.</p></noscript>
@@ -394,6 +399,7 @@
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
 
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-steps.js?v=20261029-steps-1"></script>
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
 
 

@@ -62,7 +62,7 @@
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme.css?v=20261022-avatar-shop-1">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-theme-worlds.css?v=20261022-avatar-shop-1">
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261022-quest-ui-2">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-quest-ui.css?v=20261029-steps-1">
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
@@ -211,8 +211,8 @@
 
 <section class="cours-activites">
     
-    <article class="cours-activite" id="a01">
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span></div>
+    <article class="cours-activite" id="a01" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span></div>
         <h2>1. Du défi de la feuille aux objets du quotidien — 4 min</h2>
         
         
@@ -247,8 +247,8 @@
         </nav>
     </article>
     
-    <article class="cours-activite" id="a02">
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+    <article class="cours-activite" id="a02" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>2. Naturel ou technique ? — 8 min</h2>
         
         
@@ -315,8 +315,8 @@
         </nav>
     </article>
     
-    <article class="cours-activite" id="a03">
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+    <article class="cours-activite" id="a03" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>3. Le besoin et les usages du vélo — 10 min</h2>
         
         
@@ -389,8 +389,8 @@
         </nav>
     </article>
     
-    <article class="cours-activite" id="a04">
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+    <article class="cours-activite" id="a04" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 4</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>4. Ce qui est dedans et ce qui est dehors — 10 min</h2>
         
         
@@ -511,8 +511,8 @@
         </nav>
     </article>
     
-    <article class="cours-activite" id="a05">
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 5</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+    <article class="cours-activite" id="a05" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 5</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>5. Construire un schéma compréhensible — 12 min</h2>
         
         
@@ -690,8 +690,8 @@
         </nav>
     </article>
     
-    <article class="cours-activite" id="a06">
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 6</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+    <article class="cours-activite" id="a06" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 6</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>6. Réutiliser la méthode avec un monte-charge — 6 min</h2>
         
         
@@ -745,8 +745,8 @@
         </nav>
     </article>
     
-    <article class="cours-activite" id="a07">
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 7</span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+    <article class="cours-activite" id="a07" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 7</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Pour aller plus loin — facultatif</h2>
         <p class="course-optional">Pour aller plus loin — activité facultative.</p>
         
@@ -796,6 +796,9 @@
 
     </fieldset>
     
+    <section class="course-final-step" id="course-final" data-course-step aria-label="Fin de la séance">
+    <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
+    
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
     <h2 id="course-summary-title">À retenir</h2><ul><li>Un objet technique est conçu ou transformé par les êtres humains pour répondre à un besoin.</li><li>Le besoin indique ce que l’on cherche à satisfaire. L’usage décrit ce que l’on fait avec l’objet dans une situation précise.</li><li>Le vélo permet notamment de se déplacer. On peut l’utiliser pour aller au collège, se promener ou transporter des courses.</li><li>Un interacteur extérieur est un élément extérieur à l’objet, en relation avec lui ou avec son utilisation.</li><li>Le cycliste est extérieur au vélo. Une roue et le guidon sont des pièces du vélo.</li><li>Un schéma utile nomme les éléments et explique les relations. Il n’a pas besoin de ressembler à une photographie.</li></ul>
     <h3>Faire le point</h3><p>Je peux expliquer le besoin auquel répond le vélo, donner deux usages et nommer des éléments extérieurs avec leur rôle. En séance 3, nous regarderons les pièces du vélo pour comprendre comment elles permettent de se déplacer, de se diriger et de s’arrêter.</p>
@@ -808,6 +811,8 @@
         <p id="course-submit-status" role="status" aria-live="polite"></p>
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a07">← Étape précédente</a></nav>
+    </section>
 </div></div>
 </div>
 <noscript><p>Active JavaScript pour charger ta copie et enregistrer tes réponses.</p></noscript>
@@ -820,6 +825,7 @@
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
 
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-steps.js?v=20261029-steps-1"></script>
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
 
 
