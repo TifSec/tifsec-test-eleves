@@ -220,10 +220,7 @@
 <p class="cours-fichier"><a href="/tifsec-test-eleves/assets/fichiers/tim/2de/foin.ods" download>Télécharger le fichier : rations de foin des 8 chevaux (si tu n’as plus ton fichier de S11)</a> <span>(foin.ods)</span></p>
     
 
-<ol><li>Ouvre ton fichier foin de S11.</li><li>En E1, écris le prix : 0,18 (€/kg).</li><li>En E2, écris =D2*E1 puis recopie vers le bas.</li><li>Observe les lignes 3 et suivantes.</li></ol>
-    
-
-<p>Pourquoi 0 ou une erreur ? En recopiant, E1 devient E2, E3… qui ne contiennent pas le prix.</p>
+<ol><li>Lis l’exemple : =D2*E1 recopiée vers le bas devient =D3*E2, puis =D4*E3…</li><li>La référence au prix (E1) glisse avec les lignes : le calcul n’utilise plus le prix.</li><li>À toi : ouvre ton fichier foin de S11.</li><li>En E1, écris le prix : 0,18 (€/kg).</li><li>En E2, écris =D2*E1 puis recopie vers le bas.</li><li>Observe les lignes 3 et suivantes.</li><li>Pourquoi 0 ou une erreur ? En recopiant, E1 devient E2, E3… qui ne contiennent pas le prix.</li></ol>
     
 
 
@@ -278,10 +275,7 @@
         
 
         
-<ol><li>Corrige E2 : =D2*$E$1 (touche F4 après E1).</li><li>Recopie vers le bas.</li><li>Format monétaire sur la colonne E.</li></ol>
-    
-
-<p>Pourquoi le $ ? Il fige la colonne et la ligne : toutes les lignes utilisent la même cellule E1.</p>
+<ol><li>Lis l’exemple : =D2*$E$1.</li><li>Recopiée, elle devient =D3*$E$1 : seule la ligne de D change, E1 reste bloquée.</li><li>Avec 200 kg en D3 et 0,18 € en E1 : 200 × 0,18 = 36 €.</li><li>À toi : corrige E2 : =D2*$E$1 (touche F4 après E1).</li><li>Recopie vers le bas.</li><li>Format monétaire sur la colonne E.</li><li>Pourquoi le $ ? Il fige la colonne et la ligne : toutes les lignes utilisent la même cellule E1.</li></ol>
     
 
 
@@ -336,10 +330,7 @@
         
 
         
-<ol><li>Le fournisseur passe à 0,21 €/kg : modifie seulement E1.</li><li>Ajoute en E11 le total : =SOMME(E2:E9).</li><li>Compare avec l’ancien total.</li></ol>
-    
-
-<p>Pourquoi une seule cellule ? Changer un prix dans 8 formules serait long et risqué.</p>
+<ol><li>Lis l’exemple : si le prix en E1 passe de 0,18 à 0,20 €, toutes les cellules qui utilisent $E$1 se recalculent.</li><li>On ne modifie qu’une seule cellule : c’est l’intérêt de bloquer la référence.</li><li>À toi : le fournisseur passe à 0,21 €/kg : modifie seulement E1.</li><li>Ajoute en E11 le total : =SOMME(E2:E9).</li><li>Compare avec l’ancien total.</li><li>Pourquoi une seule cellule ? Changer un prix dans 8 formules serait long et risqué.</li></ol>
     
 
 

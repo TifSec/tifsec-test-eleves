@@ -217,10 +217,7 @@
         
 
         
-<ol><li>Exigences : aucun centre, plus de 2 000 ha, moins de 30 km de la ville.</li><li>Écris =NB.SI.ENS(C2:C38;0;D2:D38;&quot;&gt;2000&quot;;E2:E38;&quot;&lt;30&quot;).</li><li>Lis le résultat.</li></ol>
-    
-
-<p>Pourquoi .ENS ? Toutes les conditions doivent être vraies en même temps.</p>
+<ol><li>Lis l’exemple : =NB.SI.ENS(C2:C6;0;E2:E6;&quot;&lt;20&quot;).</li><li>Calc compte les lignes qui respectent les deux conditions à la fois : 0 centre ET moins de 20 km.</li><li>On ajoute autant de couples (plage ; condition) que de critères.</li><li>À toi : exigences : aucun centre, plus de 2 000 ha, moins de 30 km de la ville.</li><li>Écris =NB.SI.ENS(C2:C38;0;D2:D38;&quot;&gt;2000&quot;;E2:E38;&quot;&lt;30&quot;).</li><li>Lis le résultat.</li><li>Pourquoi .ENS ? Toutes les conditions doivent être vraies en même temps.</li></ol>
     
 
 
@@ -275,10 +272,7 @@
         
 
         
-<ol><li>Ajoute une colonne « Score » : =SI(C2=0;1;0)+SI(D2&gt;2000;1;0)+SI(E2&lt;30;1;0).</li><li>Recopie ; trie par score décroissant.</li></ol>
-    
-
-<p>Pourquoi un score ? On classe toutes les communes, même celles qui ne cochent pas tout.</p>
+<ol><li>Lis l’exemple : une commune avec 0 centre, 2 500 ha, 40 km.</li><li>SI(C2=0;1;0) → 1 ; SI(D2&gt;2000;1;0) → 1 ; SI(E2&lt;30;1;0) → 0.</li><li>Score : 1 + 1 + 0 = 2 critères sur 3.</li><li>À toi : ajoute une colonne « Score » : =SI(C2=0;1;0)+SI(D2&gt;2000;1;0)+SI(E2&lt;30;1;0).</li><li>Recopie ; trie par score décroissant.</li><li>Pourquoi un score ? On classe toutes les communes, même celles qui ne cochent pas tout.</li></ol>
     
 
 
@@ -333,10 +327,7 @@
         
 
         
-<ol><li>Sélectionne la colonne Score.</li><li>Format &gt; Conditionnel &gt; Échelle de couleurs (ou conditions : 3 vert, 2 orange, ≤1 gris).</li><li>Vérifie que le texte reste lisible (texte foncé sur fond clair).</li></ol>
-    
-
-<p>Pourquoi des couleurs ? Le porteur voit les meilleures communes en un coup d’œil.</p>
+<ol><li>Sélectionne la colonne Score.</li><li>Format &gt; Conditionnel &gt; Échelle de couleurs (ou conditions : 3 vert, 2 orange, ≤1 gris).</li><li>Vérifie que le texte reste lisible (texte foncé sur fond clair).</li><li>Pourquoi des couleurs ? Le porteur voit les meilleures communes en un coup d’œil.</li></ol>
     
 
 

@@ -220,10 +220,7 @@
 <div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Suivi des vermifuges (fictif)</caption><thead><tr><th scope="col"></th><th scope="col">A</th><th scope="col">B</th><th scope="col">C</th></tr></thead><tbody><tr><td>1</td><td>Cheval</td><td>Jours depuis le vermifuge</td><td>À faire ?</td></tr><tr><td>2</td><td>Tango</td><td>120</td><td></td></tr><tr><td>3</td><td>Iris</td><td>45</td><td></td></tr><tr><td>4</td><td>Nuage</td><td>90</td><td></td></tr><tr><td>5</td><td>Galopin</td><td>200</td><td></td></tr></tbody></table></div>
     
 
-<ol><li>Lis la règle : vermifuger si plus de 90 jours se sont écoulés.</li><li>Pour chaque cheval du document 1, fais le test de tête.</li><li>Écris VRAI ou FAUX.</li></ol>
-    
-
-<p>Pourquoi un test vrai ou faux ? Le tableur décide comme toi : il compare, puis choisit.</p>
+<ol><li>Lis la règle : vermifuger si plus de 90 jours se sont écoulés.</li><li>Pour chaque cheval du document 1, fais le test de tête.</li><li>Écris VRAI ou FAUX.</li><li>Pourquoi un test vrai ou faux ? Le tableur décide comme toi : il compare, puis choisit.</li></ol>
     
 
 
@@ -327,10 +324,7 @@
         
 
         
-<ol><li>Ouvre Calc, recopie le document 1, enregistre sous 3e_S06_tonprenom.ods.</li><li>En C2, écris =SI(B2&gt;90;&quot;VERMIFUGER&quot;;&quot;OK&quot;).</li><li>Recopie jusqu’en C5.</li><li>Vérifie avec tes réponses de la mission 1.</li></ol>
-    
-
-<p>Pourquoi des guillemets ? Ils indiquent un texte à afficher ; sans eux, Calc cherche un nom de fonction.</p>
+<ol><li>Lis l’exemple : en B2, le nombre de jours depuis le dernier parage : 50.</li><li>En C2 : =SI(B2&gt;45;&quot;PARAGE&quot;;&quot;OK&quot;).</li><li>Calc teste : 50 &gt; 45 ? Oui, donc il affiche PARAGE.</li><li>Avec 40 en B2 : 40 &gt; 45 ? Non, donc il affiche OK.</li><li>Structure : =SI(test;&quot;si oui&quot;;&quot;si non&quot;).</li><li>À toi : ouvre Calc, recopie le document 1, enregistre sous 3e_S06_tonprenom.ods.</li><li>En C2, écris =SI(B2&gt;90;&quot;VERMIFUGER&quot;;&quot;OK&quot;).</li><li>Recopie jusqu’en C5.</li><li>Vérifie avec tes réponses de la mission 1.</li><li>Pourquoi des guillemets ? Ils indiquent un texte à afficher ; sans eux, Calc cherche un nom de fonction.</li></ol>
     
 
 
@@ -388,10 +382,7 @@
 <div class="cours-table-wrapper"><table class="cours-table"><caption>Document 2 — Opérateurs de comparaison</caption><thead><tr><th scope="col">Opérateur</th><th scope="col">Signification</th></tr></thead><tbody><tr><td>&gt;</td><td>strictement supérieur</td></tr><tr><td>&gt;=</td><td>supérieur ou égal</td></tr><tr><td>&lt;</td><td>strictement inférieur</td></tr><tr><td>&lt;=</td><td>inférieur ou égal</td></tr><tr><td>=</td><td>égal</td></tr><tr><td>&lt;&gt;</td><td>différent</td></tr></tbody></table></div>
     
 
-<ol><li>Lis le tableau des opérateurs (document 2).</li><li>Le vétérinaire change la règle : vermifuger à partir de 90 jours (90 compris).</li><li>Corrige la formule et observe Nuage.</li></ol>
-    
-
-<p>Pourquoi l’opérateur compte ? « &gt; » et « &gt;= » ne donnent pas le même résultat pour la valeur limite.</p>
+<ol><li>Lis l’exemple : avec 45 en B2, =SI(B2&gt;45;…) affiche OK, car 45 n’est pas strictement plus grand que 45.</li><li>Avec &gt;= (« supérieur ou égal »), =SI(B2&gt;=45;…) affiche PARAGE pour 45.</li><li>À toi : lis le tableau des opérateurs (document 2).</li><li>Le vétérinaire change la règle : vermifuger à partir de 90 jours (90 compris).</li><li>Corrige la formule et observe Nuage.</li><li>Pourquoi l’opérateur compte ? « &gt; » et « &gt;= » ne donnent pas le même résultat pour la valeur limite.</li></ol>
     
 
 

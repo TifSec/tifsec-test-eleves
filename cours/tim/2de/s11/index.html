@@ -223,10 +223,7 @@
 <div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Contenu de foin.ods (fictif)</caption><thead><tr><th scope="col">Cheval</th><th scope="col">Poids (kg)</th><th scope="col">Foin par jour (kg)</th></tr></thead><tbody><tr><td>Tango</td><td>550</td><td>9</td></tr><tr><td>Iris</td><td>480</td><td>8</td></tr><tr><td>Nuage</td><td>300</td><td>5</td></tr><tr><td>Galopin</td><td>600</td><td>10</td></tr><tr><td>Pacha</td><td>520</td><td>8,5</td></tr><tr><td>Réglisse</td><td>250</td><td>4</td></tr><tr><td>Belle</td><td>500</td><td>8</td></tr><tr><td>Éclair</td><td>420</td><td>7</td></tr></tbody></table></div>
     
 
-<ol><li>Ouvre le fichier foin.ods (à télécharger ci-dessus) ; enregistre sous 2de_TIM_foin.ods.</li><li>En D2 : =C2*30 (consommation du mois).</li><li>Recopie jusqu’à la ligne 9.</li><li>Contrôle une valeur de tête.</li></ol>
-    
-
-<p>Pourquoi contrôler de tête ? Une formule fausse recopiée donne 8 résultats faux.</p>
+<ol><li>Lis l’exemple : un poney mange 4 kg de foin par jour (en C2).</li><li>En D2 : =C2*30 → Calc affiche 120 kg pour le mois.</li><li>Recopiée en D3, la formule devient =C3*30.</li><li>À toi : ouvre le fichier foin.ods (à télécharger ci-dessus) ; enregistre sous 2de_TIM_foin.ods.</li><li>En D2 : =C2*30 (consommation du mois).</li><li>Recopie jusqu’à la ligne 9.</li><li>Contrôle une valeur de tête.</li><li>Pourquoi contrôler de tête ? Une formule fausse recopiée donne 8 résultats faux.</li></ol>
     
 
 
@@ -281,10 +278,7 @@
         
 
         
-<ol><li>En D11 : =SOMME(D2:D9).</li><li>En C12 : =MOYENNE(C2:C9) ; en C13 : =MIN(C2:C9) ; en C14 : =MAX(C2:C9) ; en C15 : =NB(C2:C9).</li><li>Écris un titre en colonne B pour chaque résultat.</li></ol>
-    
-
-<p>Pourquoi des fonctions ? Elles résument 8 lignes (ou 800) en un seul nombre utile.</p>
+<ol><li>Lis l’exemple : rations 4, 6 et 8 kg en C2:C4.</li><li>=SOMME(C2:C4) → 18 ; =MOYENNE(C2:C4) → 6 ; =MIN(C2:C4) → 4 ; =MAX(C2:C4) → 8 ; =NB(C2:C4) → 3.</li><li>À toi : en D11 : =SOMME(D2:D9).</li><li>En C12 : =MOYENNE(C2:C9) ; en C13 : =MIN(C2:C9) ; en C14 : =MAX(C2:C9) ; en C15 : =NB(C2:C9).</li><li>Écris un titre en colonne B pour chaque résultat.</li><li>Pourquoi des fonctions ? Elles résument 8 lignes (ou 800) en un seul nombre utile.</li></ol>
     
 
 
@@ -404,10 +398,7 @@
         
 
         
-<ol><li>Une botte de foin pèse 250 kg (botte ronde, ordre de grandeur).</li><li>En D16 : =D11/250.</li><li>Arrondis au supérieur avec =ARRONDI.SUP(D11/250;0).</li></ol>
-    
-
-<p>Pourquoi arrondir au supérieur ? On n’achète pas 7,14 bottes : il en faut 8 pour ne pas manquer.</p>
+<ol><li>Lis l’exemple : 1 100 kg de foin, bottes de 250 kg.</li><li>=1100/250 → 4,4 bottes.</li><li>=ARRONDI.SUP(1100/250;0) → 5 bottes : on arrondit au nombre entier supérieur (0 décimale).</li><li>À toi : une botte de foin pèse 250 kg (botte ronde, ordre de grandeur).</li><li>En D16 : =D11/250.</li><li>Arrondis au supérieur avec =ARRONDI.SUP(D11/250;0).</li><li>Pourquoi arrondir au supérieur ? On n’achète pas 7,14 bottes : il en faut 8 pour ne pas manquer.</li></ol>
     
 
 

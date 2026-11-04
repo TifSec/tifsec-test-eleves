@@ -220,10 +220,7 @@
 <div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Grille tarifaire (fictive)</caption><thead><tr><th scope="col">Formule</th><th scope="col">Prix mensuel (€)</th><th scope="col">Journée supplémentaire (€)</th></tr></thead><tbody><tr><td>Box</td><td>380</td><td>15</td></tr><tr><td>Box paddock</td><td>420</td><td>17</td></tr><tr><td>Pré</td><td>260</td><td>10</td></tr><tr><td>Retraite</td><td>220</td><td>9</td></tr></tbody></table></div>
     
 
-<ol><li>Dans Paramètres, crée la grille (document 1) en A10:C13.</li><li>Lis la grille : formule, prix mensuel, prix de la journée supplémentaire.</li></ol>
-    
-
-<p>Pourquoi une grille séparée ? Changer un tarif se fait à un seul endroit.</p>
+<ol><li>Dans Paramètres, crée la grille (document 1) en A10:C13.</li><li>Lis la grille : formule, prix mensuel, prix de la journée supplémentaire.</li><li>Pourquoi une grille séparée ? Changer un tarif se fait à un seul endroit.</li></ol>
     
 
 
@@ -278,10 +275,7 @@
         
 
         
-<ol><li>Dans Données, colonne Tarif : =RECHERCHEV(C2;Paramètres.$A$10:$C$13;2;0).</li><li>Recopie ; teste en changeant une formule de pension.</li></ol>
-    
-
-<p>Pourquoi 0 ? Sans correspondance exacte, le tableur peut renvoyer le tarif d’une autre formule.</p>
+<ol><li>Lis l’exemple : en C2 « Pré » ; la grille de tarifs est en Paramètres.A10:C13.</li><li>=RECHERCHEV(C2;Paramètres.$A$10:$C$13;2;0) cherche « Pré » dans la 1re colonne de la grille et renvoie la valeur de la 2e colonne.</li><li>Le 0 final impose une correspondance exacte.</li><li>À toi : dans Données, colonne Tarif : =RECHERCHEV(C2;Paramètres.$A$10:$C$13;2;0).</li><li>Recopie ; teste en changeant une formule de pension.</li><li>Pourquoi 0 ? Sans correspondance exacte, le tableur peut renvoyer le tarif d’une autre formule.</li></ol>
     
 
 
@@ -336,10 +330,7 @@
         
 
         
-<ol><li>Tape « box » (minuscule, espace en trop) pour un cheval.</li><li>Observe #N/D.</li><li>Propose une solution.</li></ol>
-    
-
-<p>Pourquoi #N/D ? La valeur cherchée n’existe pas exactement dans la grille.</p>
+<ol><li>Tape « box » (minuscule, espace en trop) pour un cheval.</li><li>Observe #N/D.</li><li>Propose une solution.</li><li>Pourquoi #N/D ? La valeur cherchée n’existe pas exactement dans la grille.</li></ol>
     
 
 

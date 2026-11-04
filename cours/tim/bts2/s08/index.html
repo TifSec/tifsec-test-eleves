@@ -220,10 +220,7 @@
 <p class="cours-fichier"><a href="/tifsec-test-eleves/assets/fichiers/tim/bts2/elevage_complet.odb" download>Télécharger le fichier : base complète de l’élevage</a> <span>(elevage_complet.odb)</span></p>
     
 
-<ol><li>Requête : Étalon + Saillie ; regroupement par nom d’étalon.</li><li>Fonctions : Nombre(id_saillie).</li><li>Ajoute un critère d’année 2026.</li></ol>
-    
-
-<p>Pourquoi regrouper ? On obtient une ligne par étalon au lieu d’une ligne par saillie.</p>
+<ol><li>Requête : Étalon + Saillie ; regroupement par nom d’étalon.</li><li>Fonctions : Nombre(id_saillie).</li><li>Ajoute un critère d’année 2026.</li><li>Pourquoi regrouper ? On obtient une ligne par étalon au lieu d’une ligne par saillie.</li></ol>
     
 
 
@@ -262,10 +259,7 @@
         
 
         
-<ol><li>Ajoute un champ : SUM(CASE WHEN resultat = &#39;pleine&#39; THEN 1 ELSE 0 END).</li><li>Calcule le taux = pleines / saillies (dans la requête ou dans Calc après export).</li></ol>
-    
-
-<p>Pourquoi un taux ? Un étalon avec 12 saillies et 10 juments pleines fait mieux qu’un autre avec 8 et 4.</p>
+<ol><li>Ajoute un champ : SUM(CASE WHEN resultat = &#39;pleine&#39; THEN 1 ELSE 0 END).</li><li>Calcule le taux = pleines / saillies (dans la requête ou dans Calc après export).</li><li>Pourquoi un taux ? Un étalon avec 12 saillies et 10 juments pleines fait mieux qu’un autre avec 8 et 4.</li></ol>
     
 
 
@@ -320,10 +314,7 @@
         
 
         
-<ol><li>Ugo : 2 saillies, 2 pleines (100 %).</li><li>Discute : Ugo est-il le meilleur étalon ?</li></ol>
-    
-
-<p>Pourquoi la prudence ? Un taux calculé sur très peu de cas n’est pas fiable.</p>
+<ol><li>Ugo : 2 saillies, 2 pleines (100 %).</li><li>Discute : Ugo est-il le meilleur étalon ?</li><li>Pourquoi la prudence ? Un taux calculé sur très peu de cas n’est pas fiable.</li></ol>
     
 
 

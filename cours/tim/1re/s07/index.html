@@ -215,10 +215,7 @@
         
 
         
-<ol><li>Ajoute en colonne H une colonne « Concurrence » (titre en H1).</li><li>Écris =SI(C2=0;&quot;aucune&quot;;&quot;présente&quot;) et recopie.</li><li>Filtre sur « aucune ».</li></ol>
-    
-
-<p>Pourquoi SI ? Le tableur classe chaque commune automatiquement.</p>
+<ol><li>Lis l’exemple : en C2, le nombre de centres : 2.</li><li>=SI(C2=0;&quot;aucune&quot;;&quot;présente&quot;) → présente ; avec 0 → aucune.</li><li>À toi : ajoute en colonne H une colonne « Concurrence » (titre en H1).</li><li>Écris =SI(C2=0;&quot;aucune&quot;;&quot;présente&quot;) et recopie.</li><li>Filtre sur « aucune ».</li><li>Pourquoi SI ? Le tableur classe chaque commune automatiquement.</li></ol>
     
 
 
@@ -273,10 +270,7 @@
         
 
         
-<ol><li>Dans une feuille « Analyse », écris =NB.SI(Données.C2:C38;0).</li><li>Compare avec ton filtre.</li><li>Compte les communes de plus de 3 000 ha de prairies : =NB.SI(Données.D2:D38;&quot;&gt;3000&quot;).</li></ol>
-    
-
-<p>Pourquoi NB.SI ? Le résultat se met à jour si les données changent ; le filtre, non.</p>
+<ol><li>Lis l’exemple : =NB.SI(C2:C6;0) compte les cellules égales à 0.</li><li>=NB.SI(D2:D6;&quot;&gt;3000&quot;) compte celles supérieures à 3 000 : la condition s’écrit entre guillemets.</li><li>Pour une autre feuille, on écrit son nom devant : Données.C2:C38.</li><li>À toi : dans une feuille « Analyse », écris =NB.SI(Données.C2:C38;0).</li><li>Compare avec ton filtre.</li><li>Compte les communes de plus de 3 000 ha de prairies : =NB.SI(Données.D2:D38;&quot;&gt;3000&quot;).</li><li>Pourquoi NB.SI ? Le résultat se met à jour si les données changent ; le filtre, non.</li></ol>
     
 
 
@@ -331,10 +325,7 @@
         
 
         
-<ol><li>Calcule la surface totale de prairies des communes sans concurrence : =SOMME.SI(Données.H2:H38;&quot;aucune&quot;;Données.D2:D38).</li><li>Compare avec le total du département.</li></ol>
-    
-
-<p>Pourquoi SOMME.SI ? On additionne seulement les lignes qui nous intéressent.</p>
+<ol><li>Lis l’exemple : =SOMME.SI(H2:H6;&quot;aucune&quot;;D2:D6).</li><li>Calc additionne les valeurs de D seulement sur les lignes où H vaut « aucune ».</li><li>À toi : calcule la surface totale de prairies des communes sans concurrence : =SOMME.SI(Données.H2:H38;&quot;aucune&quot;;Données.D2:D38).</li><li>Compare avec le total du département.</li><li>Pourquoi SOMME.SI ? On additionne seulement les lignes qui nous intéressent.</li></ol>
     
 
 

@@ -220,10 +220,7 @@
 <div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Ration de foin selon le poids (ordre de grandeur 1,5 % du poids)</caption><thead><tr><th scope="col"></th><th scope="col">A</th><th scope="col">B</th><th scope="col">C</th><th scope="col">D</th><th scope="col">E</th></tr></thead><tbody><tr><td>1</td><td>Cheval</td><td>Poids (kg)</td><td>Foin par jour (kg)</td><td>Taux :</td><td>0,015</td></tr><tr><td>2</td><td>Tango</td><td>520</td><td></td><td></td><td></td></tr><tr><td>3</td><td>Iris</td><td>450</td><td></td><td></td><td></td></tr><tr><td>4</td><td>Galopin</td><td>600</td><td></td><td></td><td></td></tr></tbody></table></div>
     
 
-<ol><li>Lis le document 1 : la ration de foin vaut environ 1,5 % du poids par jour.</li><li>Regarde la formule de Lisa en C2 : =B2*E1.</li><li>Imagine-la recopiée en C3.</li></ol>
-    
-
-<p>Pourquoi ça casse ? En descendant d’une ligne, E1 devient E2, qui est vide.</p>
+<ol><li>Lis l’exemple : en C2, =B2*E1.</li><li>Recopiée d’une ligne vers le bas, chaque référence descend d’une ligne : =B3*E2.</li><li>Si E2 est vide, Calc multiplie par 0 : le résultat est 0.</li><li>À toi : lis le document 1 : la ration de foin vaut environ 1,5 % du poids par jour.</li><li>Regarde la formule de Lisa en C2 : =B2*E1.</li><li>Imagine-la recopiée en C3.</li><li>Pourquoi ça casse ? En descendant d’une ligne, E1 devient E2, qui est vide.</li></ol>
     
 
 
@@ -281,10 +278,7 @@
 <blockquote>Réflexe DNB M5 : j’écris l’unité de mes résultats.</blockquote>
     
 
-<ol><li>Recopie le document 1 dans Calc ; enregistre sous 3e_S07_tonprenom.ods.</li><li>En C2, écris =B2*$E$1 (ou appuie sur F4 après E1).</li><li>Recopie jusqu’en C4.</li><li>Vérifie les résultats.</li></ol>
-    
-
-<p>Pourquoi $ ? Il bloque la colonne et la ligne : E1 reste E1 sur toutes les lignes.</p>
+<ol><li>Lis l’exemple : le prix est en E1 pour toutes les lignes.</li><li>On écrit =B2*$E$1 : le $ bloque la colonne E et la ligne 1.</li><li>Recopiée en C3, la formule devient =B3*$E$1 : B change, E1 reste fixe.</li><li>Astuce : clique dans E1 dans la formule, puis appuie sur F4 pour ajouter les $.</li><li>À toi : recopie le document 1 dans Calc ; enregistre sous 3e_S07_tonprenom.ods.</li><li>En C2, écris =B2*$E$1 (ou appuie sur F4 après E1).</li><li>Recopie jusqu’en C4.</li><li>Vérifie les résultats.</li><li>Pourquoi $ ? Il bloque la colonne et la ligne : E1 reste E1 sur toutes les lignes.</li></ol>
     
 
 
@@ -339,10 +333,7 @@
         
 
         
-<ol><li>Le vétérinaire conseille 2 % pour un cheval au travail intense : tape 0,02 en E1.</li><li>Observe toutes les rations.</li><li>Explique.</li></ol>
-    
-
-<p>Pourquoi une seule cellule ? Changer une valeur commune met à jour toutes les lignes d’un coup.</p>
+<ol><li>Le vétérinaire conseille 2 % pour un cheval au travail intense : tape 0,02 en E1.</li><li>Observe toutes les rations.</li><li>Explique.</li><li>Pourquoi une seule cellule ? Changer une valeur commune met à jour toutes les lignes d’un coup.</li></ol>
     
 
 

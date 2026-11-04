@@ -220,10 +220,7 @@
 <p class="cours-fichier"><a href="/tifsec-test-eleves/assets/fichiers/tim/bts2/elevage_complet.odb" download>Télécharger le fichier : base complète de l’élevage : 25 juments, 3 saisons</a> <span>(elevage_complet.odb)</span></p>
     
 
-<ol><li>Requêtes &gt; Ébauche : table Jument ; champs nom, race, date_naissance.</li><li>Critère : race = &#39;Selle Français&#39; ; tri par nom.</li><li>Exécute (F5).</li></ol>
-    
-
-<p>Pourquoi un critère ? On ne garde que les lignes utiles.</p>
+<ol><li>Requêtes &gt; Ébauche : table Jument ; champs nom, race, date_naissance.</li><li>Critère : race = &#39;Selle Français&#39; ; tri par nom.</li><li>Exécute (F5).</li><li>Pourquoi un critère ? On ne garde que les lignes utiles.</li></ol>
     
 
 
@@ -278,10 +275,7 @@
         
 
         
-<ol><li>Ajoute Jument et Saillie (la relation apparaît).</li><li>Champs : nom, date_saillie, resultat ; critères : resultat = &#39;pleine&#39; et année 2026.</li><li>Ajoute un champ calculé : date de terme ≈ date_saillie + 340 jours.</li></ol>
-    
-
-<p>Pourquoi + 340 ? La gestation d’une jument dure environ 11 mois (≈ 340 jours) : on prévoit la surveillance.</p>
+<ol><li>Ajoute Jument et Saillie (la relation apparaît).</li><li>Champs : nom, date_saillie, resultat ; critères : resultat = &#39;pleine&#39; et année 2026.</li><li>Ajoute un champ calculé : date de terme ≈ date_saillie + 340 jours.</li><li>Pourquoi + 340 ? La gestation d’une jument dure environ 11 mois (≈ 340 jours) : on prévoit la surveillance.</li></ol>
     
 
 
@@ -320,10 +314,7 @@
         
 
         
-<ol><li>Remplace la date du critère par un paramètre :date_limite.</li><li>Exécute avec deux dates différentes.</li></ol>
-    
-
-<p>Pourquoi un paramètre ? La même requête sert toute la saison.</p>
+<ol><li>Remplace la date du critère par un paramètre :date_limite.</li><li>Exécute avec deux dates différentes.</li><li>Pourquoi un paramètre ? La même requête sert toute la saison.</li></ol>
     
 
 
