@@ -67,7 +67,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/theme-contrast.css?v=20261104-contrast-3">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/theme-contrast.css?v=20261104-contrast-4">
     
 </head>
 
@@ -202,15 +202,67 @@
 
 <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
     <article class="course-paper-sheet">
-        <header><p class="course-paper-kicker">Cours à compléter puis exercices</p><h2 id="course-paper-title">Laisser le tableur calculer les indicateurs</h2><p>Comment obtenir rapidement les indicateurs d’une grande série avec le tableur ?</p></header>
+        <header><p class="course-paper-kicker">Cours et exercices — version papier</p><h2 id="course-paper-title">Laisser le tableur calculer les indicateurs</h2><p>Comment obtenir rapidement les indicateurs d’une grande série avec le tableur ?</p></header>
+        
+        <section class="course-paper-section">
+            <h3>Le cours en bref</h3>
+            
+<p>Le problème à résoudre : Comment obtenir rapidement les indicateurs d’une grande série avec le tableur ?</p>
+    
+
+<h4>Ce que tu vas apprendre</h4>
+    
+
+<ul><li>Fonctions : MOYENNE, MEDIANE, MIN, MAX, QUARTILE(plage;1) et QUARTILE(plage;3), NB.</li><li>Le tableur traite des centaines de valeurs sans erreur de calcul.</li></ul>
+    
+
+<h4>Ce que tu vas savoir faire</h4>
+    
+
+<ul><li>Utiliser les fonctions statistiques du tableur.</li><li>Contrôler un résultat.</li></ul>
+    
+
+<h4>Pourquoi cette séance ?</h4>
+    
+
+<p>De S11 à S15, tu as calculé à la main sur de petites séries. Le fichier des pesées de l’élevage compte 120 valeurs : le tableur est indispensable.</p>
+    
+
+<p>Comment utiliser cette fiche : pour chaque partie, lis la méthode et l’exemple, complète les points clés, puis fais l’exercice. Réponds sur les lignes.</p>
+    
+
+
+            
+        </section>
         
         <section class="course-paper-section">
             <h3>I. Les fonctions</h3>
             
-<ul><li>Automatisme : calcule 250 − 248,6.</li></ul>
+<ul><li>Automatisme : calcule 251 − 250,4.</li></ul>
     
 
-<h4>Points clés</h4>
+<h4>Ce que tu vas faire</h4>
+    
+
+<p>Tu vas calculer avec les fonctions du tableur les indicateurs principaux des 120 pesées de poulains. On attend trois résultats.</p>
+    
+
+<h4>Méthode</h4>
+    
+
+<ol><li>Ouvre le fichier pesees.ods (à télécharger ci-dessus) (120 poids de poulains à 6 mois).</li><li>Calcule : NB, MOYENNE, MEDIANE, MIN, MAX.</li></ol>
+    
+
+<p>Pourquoi NB d’abord ? On vérifie qu’on a bien les 120 valeurs.</p>
+    
+
+<h4>Exemple et documents</h4>
+    
+
+<p class="cours-fichier"><a href="/tifsec-test-eleves/assets/fichiers/maths/2de/pesees.ods" download>Télécharger le fichier : pesées de 120 poulains à 6 mois</a> <span>(pesees.ods)</span></p>
+    
+
+<h4>Points clés à compléter</h4>
     
 
 <ul><li>=MOYENNE(plage) calcule la …… .</li><li>=NB(plage) compte les cellules qui contiennent un …… .</li></ul>
@@ -229,7 +281,22 @@
         <section class="course-paper-section">
             <h3>II. Les quartiles</h3>
             
-<h4>Points clés</h4>
+<h4>Ce que tu vas faire</h4>
+    
+
+<p>Tu vas calculer les quartiles et l’écart interquartile des pesées avec le tableur. On attend les valeurs et une formule.</p>
+    
+
+<h4>Méthode</h4>
+    
+
+<ol><li>Calcule QUARTILE(plage;1) et QUARTILE(plage;3).</li><li>Calcule l’écart interquartile.</li></ol>
+    
+
+<p>Pourquoi cette fonction ? Elle évite de ranger 120 valeurs à la main.</p>
+    
+
+<h4>Points clés à compléter</h4>
     
 
 <ul><li>=QUARTILE(plage;1) donne le …… quartile.</li><li>=QUARTILE(plage;3) donne le …… quartile.</li></ul>
@@ -245,7 +312,22 @@
         <section class="course-paper-section">
             <h3>III. Contrôler</h3>
             
-<h4>Points clés</h4>
+<h4>Ce que tu vas faire</h4>
+    
+
+<p>Tu vas contrôler la plausibilité des indicateurs et repérer une valeur suspecte. On attend la valeur et ton action.</p>
+    
+
+<h4>Méthode</h4>
+    
+
+<ol><li>Vérifie l’ordre de grandeur : la moyenne est-elle entre MIN et MAX ?</li><li>Repère une valeur suspecte (erreur de saisie).</li></ol>
+    
+
+<p>Pourquoi contrôler ? Un poids de 2 480 kg tapé à la place de 248 fausse la moyenne.</p>
+    
+
+<h4>Points clés à compléter</h4>
     
 
 <ul><li>On vérifie qu’un résultat est …… (ordre de grandeur).</li><li>Une erreur de saisie fausse surtout la …… .</li></ul>
@@ -256,6 +338,36 @@
 
 
             <ol class="course-paper-questions"><li><span>As-tu trouvé une valeur suspecte ? Que fais-tu ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Conclusion</h3>
+            
+<p>Avec ce que tu as fait dans les parties précédentes, réponds en quelques phrases complètes.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Réponds au problème du jour : comment obtenir rapidement les indicateurs d’une grande série avec le tableur ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Pour aller plus loin (facultatif)</h3>
+            
+<p>Le tableur peut tracer une boîte à moustaches (selon la version).</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Que montre-t-elle ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>À retenir</h3>
+            
+<ul><li>=MOYENNE, =MEDIANE, =QUARTILE(plage;1).</li><li>Contrôler l’ordre de grandeur.</li></ul>
+    
+
+
+            
         </section>
         
         <section class="course-paper-section course-paper-break">
@@ -298,13 +410,16 @@
         
 
         
+<p class="cours-fichier"><a href="/tifsec-test-eleves/assets/fichiers/maths/2de/pesees.ods" download>Télécharger le fichier : pesées de 120 poulains à 6 mois</a> <span>(pesees.ods)</span></p>
+    
+
 <h4>Exemple</h4>
     
 
-<ul><li>Automatisme : calcule 250 − 248,6.</li></ul>
+<ul><li>Automatisme : calcule 251 − 250,4.</li></ul>
     
 
-<ol><li>Ouvre le fichier fourni pesees.ods (120 poids de poulains à 6 mois).</li><li>Calcule : NB, MOYENNE, MEDIANE, MIN, MAX.</li></ol>
+<ol><li>Ouvre le fichier pesees.ods (à télécharger ci-dessus) (120 poids de poulains à 6 mois).</li><li>Calcule : NB, MOYENNE, MEDIANE, MIN, MAX.</li></ol>
     
 
 <p>Pourquoi NB d’abord ? On vérifie qu’on a bien les 120 valeurs.</p>

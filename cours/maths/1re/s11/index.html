@@ -67,7 +67,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/theme-contrast.css?v=20261104-contrast-3">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/theme-contrast.css?v=20261104-contrast-4">
     
 </head>
 
@@ -202,7 +202,38 @@
 
 <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
     <article class="course-paper-sheet">
-        <header><p class="course-paper-kicker">Cours à compléter puis exercices</p><h2 id="course-paper-title">L’écart-type : quand l’utiliser ?</h2><p>Comment interpréter l’écart-type d’une série « en cloche » ?</p></header>
+        <header><p class="course-paper-kicker">Cours et exercices — version papier</p><h2 id="course-paper-title">L’écart-type : quand l’utiliser ?</h2><p>Comment interpréter l’écart-type d’une série « en cloche » ?</p></header>
+        
+        <section class="course-paper-section">
+            <h3>Le cours en bref</h3>
+            
+<p>Le problème à résoudre : Comment interpréter l’écart-type d’une série « en cloche » ?</p>
+    
+
+<h4>Ce que tu vas apprendre</h4>
+    
+
+<ul><li>L’écart-type σ mesure la dispersion autour de la moyenne ; il s’utilise avec la moyenne.</li><li>Pour une série en cloche : environ 68 % des valeurs dans [x̄ − σ ; x̄ + σ], 95 % dans [x̄ − 2σ ; x̄ + 2σ], 99 % dans [x̄ − 3σ ; x̄ + 3σ].</li></ul>
+    
+
+<h4>Ce que tu vas savoir faire</h4>
+    
+
+<ul><li>Calculer un écart-type au tableur.</li><li>Utiliser les intervalles 68-95-99 %.</li></ul>
+    
+
+<h4>Pourquoi cette séance ?</h4>
+    
+
+<p>En S08, tu as calculé un écart-type sans l’interpréter. Les tailles au garrot d’une race suivent souvent une répartition en cloche.</p>
+    
+
+<p>Comment utiliser cette fiche : pour chaque partie, lis la méthode et l’exemple, complète les points clés, puis fais l’exercice. Réponds sur les lignes.</p>
+    
+
+
+            
+        </section>
         
         <section class="course-paper-section">
             <h3>I. Les intervalles</h3>
@@ -210,7 +241,22 @@
 <ul><li>Automatisme : 165 − 2 × 4 = ?</li></ul>
     
 
-<h4>Points clés</h4>
+<h4>Ce que tu vas faire</h4>
+    
+
+<p>Tu vas calculer les intervalles à un et deux écarts-types pour les tailles d’une race. On attend les deux intervalles.</p>
+    
+
+<h4>Méthode</h4>
+    
+
+<ol><li>Tailles d’une race : moyenne 165 cm, écart-type 4 cm, répartition en cloche.</li><li>Calcule les intervalles.</li></ol>
+    
+
+<p>Pourquoi ces intervalles ? Ils disent ce qui est « normal » et ce qui est exceptionnel.</p>
+    
+
+<h4>Points clés à compléter</h4>
     
 
 <ul><li>Environ 68 % des valeurs sont dans [x̄ − σ ; x̄ + …… ].</li><li>Environ …… % sont dans [x̄ − 2σ ; x̄ + 2σ].</li></ul>
@@ -229,7 +275,22 @@
         <section class="course-paper-section">
             <h3>II. Un cheval exceptionnel ?</h3>
             
-<h4>Points clés</h4>
+<h4>Ce que tu vas faire</h4>
+    
+
+<p>Tu vas dire si un cheval de 175 cm est exceptionnel pour sa race. On attend une réponse justifiée par l’intervalle.</p>
+    
+
+<h4>Méthode</h4>
+    
+
+<ol><li>Un cheval de la race mesure 175 cm.</li><li>Est-il dans l’intervalle à 95 % ?</li></ol>
+    
+
+<p>Pourquoi ? On repère les valeurs rares.</p>
+    
+
+<h4>Points clés à compléter</h4>
     
 
 <ul><li>Une valeur hors de x̄ ± 2σ est …… .</li><li>x̄ + 2σ = 165 + 2 × 4 = …… .</li></ul>
@@ -245,7 +306,28 @@
         <section class="course-paper-section">
             <h3>III. Au tableur</h3>
             
-<h4>Points clés</h4>
+<h4>Ce que tu vas faire</h4>
+    
+
+<p>Tu vas vérifier au tableur la règle des 68 % sur 200 tailles. On attend le pourcentage obtenu et ta conclusion.</p>
+    
+
+<h4>Méthode</h4>
+    
+
+<ol><li>Ouvre tailles_race.ods (200 valeurs).</li><li>Calcule moyenne et ECARTYPEP ; compte les valeurs dans [x̄ − σ ; x̄ + σ] avec NB.SI.ENS.</li></ol>
+    
+
+<p>Pourquoi vérifier ? Le 68 % n’est vrai que si la série est vraiment en cloche.</p>
+    
+
+<h4>Exemple et documents</h4>
+    
+
+<p class="cours-fichier"><a href="/tifsec-test-eleves/assets/fichiers/maths/1re/tailles_race.ods" download>Télécharger le fichier : tailles au garrot de 200 chevaux d’une race</a> <span>(tailles_race.ods)</span></p>
+    
+
+<h4>Points clés à compléter</h4>
     
 
 <ul><li>Ces règles valent pour une série en …… .</li><li>Au tableur, l’écart-type se calcule avec …… .</li></ul>
@@ -256,6 +338,36 @@
 
 
             <ol class="course-paper-questions"><li><span>Quel pourcentage des valeurs est dans [x̄ − σ ; x̄ + σ] ? Est-ce proche de 68 % ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Conclusion</h3>
+            
+<p>Avec ce que tu as fait dans les parties précédentes, réponds en quelques phrases complètes.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Réponds au problème du jour : comment interpréter l’écart-type d’une série « en cloche » ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Pour aller plus loin (facultatif)</h3>
+            
+<p>Pour des prix de chevaux (très dissymétriques), la règle 68-95 % s’applique-t-elle ?</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Pourquoi ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>À retenir</h3>
+            
+<ul><li>x̄ ± σ ≈ 68 % ; x̄ ± 2σ ≈ 95 %.</li><li>Seulement pour une série en cloche.</li></ul>
+    
+
+
+            
         </section>
         
         <section class="course-paper-section course-paper-break">
@@ -564,6 +676,9 @@
         
 
         
+<p class="cours-fichier"><a href="/tifsec-test-eleves/assets/fichiers/maths/1re/tailles_race.ods" download>Télécharger le fichier : tailles au garrot de 200 chevaux d’une race</a> <span>(tailles_race.ods)</span></p>
+    
+
 <ol><li>Ouvre tailles_race.ods (200 valeurs).</li><li>Calcule moyenne et ECARTYPEP ; compte les valeurs dans [x̄ − σ ; x̄ + σ] avec NB.SI.ENS.</li></ol>
     
 
