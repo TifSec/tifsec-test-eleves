@@ -47,7 +47,7 @@
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
-    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css?v=20261104-maths-1">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
@@ -67,7 +67,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/theme-contrast.css?v=20261029-contrast-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/theme-contrast.css?v=20261104-contrast-2">
     
 </head>
 
@@ -101,7 +101,7 @@
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
         <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
-        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-paper-toggle">Version papier</button><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
     </div>
     <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
         <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
@@ -200,6 +200,96 @@
     <nav class="course-mission-controls course-intro-controls" aria-label="Commencer la séance"><a class="course-mission-next" href="#a01">J’ai compris l’objectif : commencer la première mission <span aria-hidden="true">→</span></a></nav>
 </header>
 
+<section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
+    <article class="course-paper-sheet">
+        <header><p class="course-paper-kicker">Cours à compléter puis exercices</p><h2 id="course-paper-title">Les données sont-elles regroupées ou dispersées ?</h2><p>Comment mesurer la dispersion d’une série ?</p></header>
+        
+        <section class="course-paper-section">
+            <h3>I. L’étendue</h3>
+            
+<h4>Points clés</h4>
+    
+
+<ul><li>Étendue = valeur maximale − valeur …… .</li><li>L’étendue dépend seulement des valeurs …… .</li></ul>
+    
+
+<h4>Exemple</h4>
+    
+
+<ul><li>Automatisme : range 25, 12, 18 dans l’ordre croissant.</li></ul>
+    
+
+<p>Document 1 — Durées (min), rangées : 12, 14, 15, 15, 16, 18, 18, 20, 21, 22, 25, 30.</p>
+    
+
+<p>Données fictives créées pour l’exercice (ordres de grandeur réalistes).</p>
+    
+
+<h4>Exercice 1 — L’étendue</h4>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Quelle est l’étendue ? (en min)</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>II. Les quartiles</h3>
+            
+<h4>Points clés</h4>
+    
+
+<ul><li>Q1 : au moins …… % des valeurs sont inférieures ou égales.</li><li>Écart interquartile = Q3 − …… .</li></ul>
+    
+
+<h4>Exercice 2 — Les quartiles</h4>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Q1 ? (en min)</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Q3 ? (en min)</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Écart interquartile ? (en min)</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>III. Interpréter</h3>
+            
+<h4>Points clés</h4>
+    
+
+<ul><li>Plus l’écart interquartile est petit, plus la série est …… .</li><li>On compare deux séries de même …… par leur dispersion.</li></ul>
+    
+
+<h4>Exercice 3 — Interpréter</h4>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Quel groupe est le plus homogène ? Justifie.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section course-paper-break">
+            <h2 class="course-paper-part">Fiche d’exercices</h2><h3>Exercice 1 — Dispersion</h3>
+            
+<p>Durées de curage (min), rangées : 8, 9, 10, 10, 11, 12, 14, 18.</p>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Étendue ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Q1 et Q3 ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Écart interquartile ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Exercice 2 — Interpréter</h3>
+            
+
+            <ol class="course-paper-questions"><li><span>Un autre groupe a un écart interquartile de 7 min. Lequel est le plus homogène ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Exercice 3 — Valeur extrême</h3>
+            
+
+            <ol class="course-paper-questions"><li><span>Si 18 devient 30, quels indicateurs changent ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+    </article>
+</section>
 
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
@@ -217,6 +307,9 @@
         
 
         
+<h4>Exemple</h4>
+    
+
 <ul><li>Automatisme : range 25, 12, 18 dans l’ordre croissant.</li></ul>
     
 
@@ -238,12 +331,76 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Quelle est l’étendue ?</h3>
+            <h3 id="a01-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><p>Unité : min</p>
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Point clé</th>
+                                
+                                <th>Mot(s) manquant(s)</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Étendue = valeur maximale − valeur …… .
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="L’étendue — Mot(s) manquant(s) — Étendue = valeur maximale − valeur …… .">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    L’étendue dépend seulement des valeurs …… .
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="L’étendue — Mot(s) manquant(s) — L’étendue dépend seulement des valeurs …… .">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            <details><summary>Un coup de pouce</summary><p>Une case à la fois : la ligne croise la colonne.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a01-q02-label">Question 2 — Quelle est l’étendue ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><p>Unité : min</p>
 
                 
             <details><summary>Un coup de pouce</summary><p>Écris l’opération, calcule, vérifie l’unité.</p></details>
@@ -280,15 +437,63 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Q1 ?</h3>
+            <h3 id="a02-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label"><p>Unité : min</p>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Écris l’opération, calcule, vérifie l’unité.</p></details>
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Point clé</th>
+                                
+                                <th>Mot(s) manquant(s)</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Q1 : au moins …… % des valeurs sont inférieures ou égales.
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Les quartiles — Mot(s) manquant(s) — Q1 : au moins …… % des valeurs sont inférieures ou égales.">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Écart interquartile = Q3 − …… .
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Les quartiles — Mot(s) manquant(s) — Écart interquartile = Q3 − …… .">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            <details><summary>Un coup de pouce</summary><p>Une case à la fois : la ligne croise la colonne.</p></details>
             
             
         </div>
@@ -296,7 +501,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Q3 ?</h3>
+            <h3 id="a02-q02-label">Question 2 — Q1 ?</h3>
             
 
             
@@ -312,12 +517,28 @@
         <div class="cours-question" data-question="q03">
             
             
-            <h3 id="a02-q03-label">Question 3 — Écart interquartile ?</h3>
+            <h3 id="a02-q03-label">Question 3 — Q3 ?</h3>
             
 
             
             
                 <input type="text" inputmode="decimal" id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label"><p>Unité : min</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris l’opération, calcule, vérifie l’unité.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a02-q04-label">Question 4 — Écart interquartile ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q04" data-answer-id="a02_q04" data-required="true" aria-labelledby="a02-q04-label"><p>Unité : min</p>
 
                 
             <details><summary>Un coup de pouce</summary><p>Écris l’opération, calcule, vérifie l’unité.</p></details>
@@ -354,12 +575,76 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Quel groupe est le plus homogène ? Justifie.</h3>
+            <h3 id="a03-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Point clé</th>
+                                
+                                <th>Mot(s) manquant(s)</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Plus l’écart interquartile est petit, plus la série est …… .
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a03_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Interpréter — Mot(s) manquant(s) — Plus l’écart interquartile est petit, plus la série est …… .">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    On compare deux séries de même …… par leur dispersion.
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a03_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Interpréter — Mot(s) manquant(s) — On compare deux séries de même …… par leur dispersion.">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            <details><summary>Un coup de pouce</summary><p>Une case à la fois : la ligne croise la colonne.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a03-q02-label">Question 2 — Quel groupe est le plus homogène ? Justifie.</h3>
+            
+
+            
+            
+                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Une idée + « car » + une raison tirée de la séance.</p></details>
@@ -488,7 +773,7 @@
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-steps.js?v=20261029-steps-1"></script>
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
-
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
 
 
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>

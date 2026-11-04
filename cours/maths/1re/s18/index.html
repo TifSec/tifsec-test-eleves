@@ -47,7 +47,7 @@
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
-    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css?v=20261104-maths-1">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
@@ -67,7 +67,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/theme-contrast.css?v=20261029-contrast-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/theme-contrast.css?v=20261104-contrast-2">
     
 </head>
 
@@ -101,7 +101,7 @@
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
         <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
-        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-paper-toggle">Version papier</button><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
     </div>
     <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
         <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
@@ -200,6 +200,87 @@
     <nav class="course-mission-controls course-intro-controls" aria-label="Commencer la séance"><a class="course-mission-next" href="#a01">J’ai compris l’objectif : commencer la première mission <span aria-hidden="true">→</span></a></nav>
 </header>
 
+<section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
+    <article class="course-paper-sheet">
+        <header><p class="course-paper-kicker">Cours à compléter puis exercices</p><h2 id="course-paper-title">Le prix de la pension augmente de 3 % par an</h2><p>Comment modéliser une quantité qui augmente chaque année du même pourcentage ?</p></header>
+        
+        <section class="course-paper-section">
+            <h3>I. Les premiers termes</h3>
+            
+<h4>Points clés</h4>
+    
+
+<ul><li>Suite géométrique : uₙ₊₁ = q × …… .</li><li>+3 % par an : q = …… .</li></ul>
+    
+
+<h4>Exemple</h4>
+    
+
+<ul><li>Automatisme : 3 % de 400 de tête.</li></ul>
+    
+
+<h4>Exercice 1 — Les premiers termes</h4>
+    
+
+
+            <ol class="course-paper-questions"><li><span>u₁ ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>u₂ ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>II. Le terme général</h3>
+            
+<h4>Points clés</h4>
+    
+
+<ul><li>Terme général : uₙ = u₀ × q puissance …… .</li><li>400 × 1,03¹⁰ ≈ …… €.</li></ul>
+    
+
+<h4>Exercice 2 — Le terme général</h4>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Prix en 2036 (au centime) ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Hausse totale en % sur 10 ans (au dixième) ? (en %)</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>III. Comparer avec une hausse fixe</h3>
+            
+<h4>Points clés</h4>
+    
+
+<ul><li>Une hausse fixe donne une suite …… .</li><li>À long terme, la suite géométrique augmente de plus en plus …… .</li></ul>
+    
+
+<h4>Exercice 3 — Comparer avec une hausse fixe</h4>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Prix en 2036 avec l’option B ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Quelle option est la plus favorable au client sur 10 ans ? Et sur le long terme ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section course-paper-break">
+            <h2 class="course-paper-part">Fiche d’exercices</h2><h3>Exercice 1 — Suite géométrique</h3>
+            
+
+            <ol class="course-paper-questions"><li><span>u₀ = 500, q = 1,04 : u₁, u₂ ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>u₅ (au centime) ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Exercice 2 — Baisse</h3>
+            
+
+            <ol class="course-paper-questions"><li><span>Un matériel de 2 000 € perd 15 % par an : valeur après 3 ans ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Exercice 3 — Comparer</h3>
+            
+
+            <ol class="course-paper-questions"><li><span>+4 % par an ou +20 € par an sur 500 € : lequel est plus cher après 10 ans ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+    </article>
+</section>
 
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
@@ -217,6 +298,9 @@
         
 
         
+<h4>Exemple</h4>
+    
+
 <ul><li>Automatisme : 3 % de 400 de tête.</li></ul>
     
 
@@ -232,15 +316,63 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — u₁ ?</h3>
+            <h3 id="a01-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><p>Unité : €</p>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Écris l’opération, calcule, vérifie l’unité.</p></details>
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Point clé</th>
+                                
+                                <th>Mot(s) manquant(s)</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Suite géométrique : uₙ₊₁ = q × …… .
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Les premiers termes — Mot(s) manquant(s) — Suite géométrique : uₙ₊₁ = q × …… .">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    +3 % par an : q = …… .
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Les premiers termes — Mot(s) manquant(s) — +3 % par an : q = …… .">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            <details><summary>Un coup de pouce</summary><p>Une case à la fois : la ligne croise la colonne.</p></details>
             
             
         </div>
@@ -248,12 +380,28 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — u₂ ?</h3>
+            <h3 id="a01-q02-label">Question 2 — u₁ ?</h3>
             
 
             
             
                 <input type="text" inputmode="decimal" id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><p>Unité : €</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris l’opération, calcule, vérifie l’unité.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a01-q03-label">Question 3 — u₂ ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label"><p>Unité : €</p>
 
                 
             <details><summary>Un coup de pouce</summary><p>Écris l’opération, calcule, vérifie l’unité.</p></details>
@@ -290,15 +438,63 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Prix en 2036 (au centime) ?</h3>
+            <h3 id="a02-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label"><p>Unité : €</p>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Écris l’opération, calcule, vérifie l’unité.</p></details>
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Point clé</th>
+                                
+                                <th>Mot(s) manquant(s)</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Terme général : uₙ = u₀ × q puissance …… .
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Le terme général — Mot(s) manquant(s) — Terme général : uₙ = u₀ × q puissance …… .">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    400 × 1,03¹⁰ ≈ …… €.
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Le terme général — Mot(s) manquant(s) — 400 × 1,03¹⁰ ≈ …… €.">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            <details><summary>Un coup de pouce</summary><p>Une case à la fois : la ligne croise la colonne.</p></details>
             
             
         </div>
@@ -306,12 +502,28 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Hausse totale en % sur 10 ans (au dixième) ?</h3>
+            <h3 id="a02-q02-label">Question 2 — Prix en 2036 (au centime) ?</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><p>Unité : %</p>
+                <input type="text" inputmode="decimal" id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><p>Unité : €</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris l’opération, calcule, vérifie l’unité.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a02-q03-label">Question 3 — Hausse totale en % sur 10 ans (au dixième) ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label"><p>Unité : %</p>
 
                 
             <details><summary>Un coup de pouce</summary><p>Écris l’opération, calcule, vérifie l’unité.</p></details>
@@ -348,15 +560,63 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Prix en 2036 avec l’option B ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label"><p>Unité : €</p>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Écris l’opération, calcule, vérifie l’unité.</p></details>
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Point clé</th>
+                                
+                                <th>Mot(s) manquant(s)</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Une hausse fixe donne une suite …… .
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a03_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Comparer avec une hausse fixe — Mot(s) manquant(s) — Une hausse fixe donne une suite …… .">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    À long terme, la suite géométrique augmente de plus en plus …… .
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a03_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Comparer avec une hausse fixe — Mot(s) manquant(s) — À long terme, la suite géométrique augmente de plus en plus …… .">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            <details><summary>Un coup de pouce</summary><p>Une case à la fois : la ligne croise la colonne.</p></details>
             
             
         </div>
@@ -364,12 +624,28 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a03-q02-label">Question 2 — Quelle option est la plus favorable au client sur 10 ans ? Et sur le long terme ?</h3>
+            <h3 id="a03-q02-label">Question 2 — Prix en 2036 avec l’option B ?</h3>
             
 
             
             
-                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label"><p>Unité : €</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris l’opération, calcule, vérifie l’unité.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a03-q03-label">Question 3 — Quelle option est la plus favorable au client sur 10 ans ? Et sur le long terme ?</h3>
+            
+
+            
+            
+                <textarea id="a03-q03" data-answer-id="a03_q03" data-required="true" aria-labelledby="a03-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Une phrase complète qui reprend les mots de la question.</p></details>
@@ -498,7 +774,7 @@
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-steps.js?v=20261029-steps-1"></script>
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
-
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
 
 
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>

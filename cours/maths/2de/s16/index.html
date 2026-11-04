@@ -47,7 +47,7 @@
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
-    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css?v=20261104-maths-1">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
@@ -67,7 +67,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/theme-contrast.css?v=20261029-contrast-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/theme-contrast.css?v=20261104-contrast-2">
     
 </head>
 
@@ -101,7 +101,7 @@
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
         <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
-        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-paper-toggle">Version papier</button><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
     </div>
     <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
         <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
@@ -200,6 +200,90 @@
     <nav class="course-mission-controls course-intro-controls" aria-label="Commencer la séance"><a class="course-mission-next" href="#a01">J’ai compris l’objectif : commencer la première mission <span aria-hidden="true">→</span></a></nav>
 </header>
 
+<section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
+    <article class="course-paper-sheet">
+        <header><p class="course-paper-kicker">Cours à compléter puis exercices</p><h2 id="course-paper-title">Laisser le tableur calculer les indicateurs</h2><p>Comment obtenir rapidement les indicateurs d’une grande série avec le tableur ?</p></header>
+        
+        <section class="course-paper-section">
+            <h3>I. Les fonctions</h3>
+            
+<h4>Points clés</h4>
+    
+
+<ul><li>=MOYENNE(plage) calcule la …… .</li><li>=NB(plage) compte les cellules qui contiennent un …… .</li></ul>
+    
+
+<h4>Exemple</h4>
+    
+
+<ul><li>Automatisme : calcule 250 − 248,6.</li></ul>
+    
+
+<h4>Exercice 1 — Les fonctions</h4>
+    
+
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Indicateur</th><th scope="col">Valeur</th></tr></thead><tbody><tr><td>NB</td><td></td></tr><tr><td>MOYENNE (kg, au dixième)</td><td></td></tr><tr><td>MEDIANE (kg)</td><td></td></tr></tbody></table></div>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Écris les résultats.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>II. Les quartiles</h3>
+            
+<h4>Points clés</h4>
+    
+
+<ul><li>=QUARTILE(plage;1) donne le …… quartile.</li><li>=QUARTILE(plage;3) donne le …… quartile.</li></ul>
+    
+
+<h4>Exercice 2 — Les quartiles</h4>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Écris Q1, Q3 et l’écart interquartile.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Écris la formule de Q1 (valeurs en B2:B121).</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>III. Contrôler</h3>
+            
+<h4>Points clés</h4>
+    
+
+<ul><li>On vérifie qu’un résultat est …… (ordre de grandeur).</li><li>Une erreur de saisie fausse surtout la …… .</li></ul>
+    
+
+<h4>Exercice 3 — Contrôler</h4>
+    
+
+
+            <ol class="course-paper-questions"><li><span>As-tu trouvé une valeur suspecte ? Que fais-tu ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section course-paper-break">
+            <h2 class="course-paper-part">Fiche d’exercices</h2><h3>Exercice 1 — Formules</h3>
+            
+
+            <ol class="course-paper-questions"><li><span>Écris la formule de la moyenne des cellules B2 à B51.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Et du premier quartile ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Exercice 2 — Contrôle</h3>
+            
+
+            <ol class="course-paper-questions"><li><span>MIN = 180, MAX = 320, MOYENNE = 412. Est-ce possible ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Exercice 3 — Comptage</h3>
+            
+
+            <ol class="course-paper-questions"><li><span>Quelle fonction compte les cellules qui contiennent un nombre ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+    </article>
+</section>
 
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
@@ -217,6 +301,9 @@
         
 
         
+<h4>Exemple</h4>
+    
+
 <ul><li>Automatisme : calcule 250 − 248,6.</li></ul>
     
 
@@ -232,7 +319,71 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Écris les résultats.</h3>
+            <h3 id="a01-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            
+
+            
+            
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Point clé</th>
+                                
+                                <th>Mot(s) manquant(s)</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    =MOYENNE(plage) calcule la …… .
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Les fonctions — Mot(s) manquant(s) — =MOYENNE(plage) calcule la …… .">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    =NB(plage) compte les cellules qui contiennent un …… .
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Les fonctions — Mot(s) manquant(s) — =NB(plage) compte les cellules qui contiennent un …… .">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            <details><summary>Un coup de pouce</summary><p>Une case à la fois : la ligne croise la colonne.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a01-q02-label">Question 2 — Écris les résultats.</h3>
             
 
             
@@ -261,7 +412,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Les fonctions — Valeur — NB">
+                                    <input type="text" data-answer-id="a01_q02_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Les fonctions — Valeur — NB">
                                     
                                 </td>
                                 
@@ -278,7 +429,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Les fonctions — Valeur — MOYENNE (kg, au dixième)">
+                                    <input type="text" data-answer-id="a01_q02_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Les fonctions — Valeur — MOYENNE (kg, au dixième)">
                                     
                                 </td>
                                 
@@ -295,7 +446,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Les fonctions — Valeur — MEDIANE (kg)">
+                                    <input type="text" data-answer-id="a01_q02_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Les fonctions — Valeur — MEDIANE (kg)">
                                     
                                 </td>
                                 
@@ -339,15 +490,63 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Écris Q1, Q3 et l’écart interquartile.</h3>
+            <h3 id="a02-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
             
 
             
             
-                <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Compte les éléments demandés, puis cherche-les dans les documents de la mission.</p></details>
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Point clé</th>
+                                
+                                <th>Mot(s) manquant(s)</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    =QUARTILE(plage;1) donne le …… quartile.
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Les quartiles — Mot(s) manquant(s) — =QUARTILE(plage;1) donne le …… quartile.">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    =QUARTILE(plage;3) donne le …… quartile.
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Les quartiles — Mot(s) manquant(s) — =QUARTILE(plage;3) donne le …… quartile.">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            <details><summary>Un coup de pouce</summary><p>Une case à la fois : la ligne croise la colonne.</p></details>
             
             
         </div>
@@ -355,12 +554,28 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Écris la formule de Q1 (valeurs en B2:B121).</h3>
+            <h3 id="a02-q02-label">Question 2 — Écris Q1, Q3 et l’écart interquartile.</h3>
             
 
             
             
                 <textarea id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Compte les éléments demandés, puis cherche-les dans les documents de la mission.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a02-q03-label">Question 3 — Écris la formule de Q1 (valeurs en B2:B121).</h3>
+            
+
+            
+            
+                <textarea id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Une formule commence par « = », puis la fonction et la plage (ex. =MOYENNE(B2:B10)).</p></details>
@@ -397,12 +612,76 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — As-tu trouvé une valeur suspecte ? Que fais-tu ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Point clé</th>
+                                
+                                <th>Mot(s) manquant(s)</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    On vérifie qu’un résultat est …… (ordre de grandeur).
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a03_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Contrôler — Mot(s) manquant(s) — On vérifie qu’un résultat est …… (ordre de grandeur).">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Une erreur de saisie fausse surtout la …… .
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a03_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Contrôler — Mot(s) manquant(s) — Une erreur de saisie fausse surtout la …… .">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            <details><summary>Un coup de pouce</summary><p>Une case à la fois : la ligne croise la colonne.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a03-q02-label">Question 2 — As-tu trouvé une valeur suspecte ? Que fais-tu ?</h3>
+            
+
+            
+            
+                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Une phrase complète qui reprend les mots de la question.</p></details>
@@ -531,7 +810,7 @@
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-steps.js?v=20261029-steps-1"></script>
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
-
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
 
 
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>

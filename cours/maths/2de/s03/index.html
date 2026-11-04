@@ -47,7 +47,7 @@
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
-    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css?v=20261104-maths-1">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
@@ -67,7 +67,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/theme-contrast.css?v=20261029-contrast-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/theme-contrast.css?v=20261104-contrast-2">
     
 </head>
 
@@ -101,7 +101,7 @@
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
         <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
-        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-paper-toggle">Version papier</button><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
     </div>
     <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
         <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
@@ -211,6 +211,108 @@
     <nav class="course-mission-controls course-intro-controls" aria-label="Commencer la séance"><a class="course-mission-next" href="#a01">J’ai compris l’objectif : commencer la première mission <span aria-hidden="true">→</span></a></nav>
 </header>
 
+<section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
+    <article class="course-paper-sheet">
+        <header><p class="course-paper-kicker">Cours à compléter puis exercices</p><h2 id="course-paper-title">La ration est-elle proportionnelle au poids du cheval ?</h2><p>Comment savoir si deux grandeurs sont proportionnelles ?</p></header>
+        
+        <section class="course-paper-section">
+            <h3>I. Le tableau du foin</h3>
+            
+<h4>Points clés</h4>
+    
+
+<ul><li>Deux grandeurs sont proportionnelles si on multiplie toujours par le même …… .</li><li>Dans un tableau de proportionnalité, les …… y ÷ x sont égaux.</li></ul>
+    
+
+<h4>Exemple</h4>
+    
+
+<ul><li>Automatisme : calcule 0,02 × 500 de tête.</li></ul>
+    
+
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Tableau 1 — Foin selon le poids (règle simplifiée)</caption><thead><tr><th scope="col">Poids (kg)</th><th scope="col">300</th><th scope="col">450</th><th scope="col">600</th></tr></thead><tbody><tr><td>Foin (kg/jour)</td><td>6</td><td>9</td><td>12</td></tr></tbody></table></div>
+    
+
+<h4>Exercice 1 — Le tableau du foin</h4>
+    
+
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Poids (kg)</th><th scope="col">Foin ÷ poids</th></tr></thead><tbody><tr><td>300 (6 kg)</td><td></td></tr><tr><td>450 (9 kg)</td><td></td></tr><tr><td>600 (12 kg)</td><td></td></tr></tbody></table></div>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Calcule foin ÷ poids.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Ce tableau est-il de proportionnalité ? (a) Oui, le coefficient est toujours 0,02. ; (b) Non. ; (c) On ne peut pas savoir.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>II. Un contre-exemple : le prix de la pension</h3>
+            
+<h4>Points clés</h4>
+    
+
+<ul><li>Des frais fixes rendent une situation …… proportionnelle.</li><li>Si les quotients sont différents, la situation n’est …… proportionnelle.</li></ul>
+    
+
+<h4>Exemple</h4>
+    
+
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Tableau 2 — Pension temporaire (fictive)</caption><thead><tr><th scope="col">Jours</th><th scope="col">5</th><th scope="col">10</th></tr></thead><tbody><tr><td>Prix (€)</td><td>110</td><td>170</td></tr></tbody></table></div>
+    
+
+<h4>Exercice 2 — Un contre-exemple : le prix de la pension</h4>
+    
+
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Jours</th><th scope="col">Prix ÷ jours</th></tr></thead><tbody><tr><td>5 (110 €)</td><td></td></tr><tr><td>10 (170 €)</td><td></td></tr></tbody></table></div>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Calcule prix ÷ jours (arrondi au centime).</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Ce tableau est-il de proportionnalité ? Justifie.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>III. Sur un graphique</h3>
+            
+<h4>Points clés</h4>
+    
+
+<ul><li>Le graphique d’une situation de proportionnalité est une …… .</li><li>Cette droite passe par l’…… du repère.</li></ul>
+    
+
+<h4>Exercice 3 — Sur un graphique</h4>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Décris le graphique obtenu et ce qu’il prouve.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section course-paper-break">
+            <h2 class="course-paper-part">Fiche d’exercices</h2><h3>Exercice 1 — Proportionnel ou non ?</h3>
+            
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Poids (kg)</th><th scope="col">400</th><th scope="col">500</th><th scope="col">600</th></tr></thead><tbody><tr><td>Granulés (kg)</td><td>2</td><td>2,5</td><td>3</td></tr></tbody></table></div>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Calcule les quotients granulés ÷ poids. Est-ce proportionnel ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Exercice 2 — Une pension</h3>
+            
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Mois</th><th scope="col">1</th><th scope="col">2</th><th scope="col">3</th></tr></thead><tbody><tr><td>Prix (€)</td><td>350</td><td>700</td><td>1050</td></tr></tbody></table></div>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Est-ce proportionnel ? Quel coefficient ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Exercice 3 — Avec des frais fixes</h3>
+            
+
+            <ol class="course-paper-questions"><li><span>Un transport coûte 40 € + 1,5 € par km. Le prix est-il proportionnel au nombre de km ? Pourquoi ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+    </article>
+</section>
 
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
@@ -228,6 +330,9 @@
         
 
         
+<h4>Exemple</h4>
+    
+
 <ul><li>Automatisme : calcule 0,02 × 500 de tête.</li></ul>
     
 
@@ -246,7 +351,71 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Calcule foin ÷ poids.</h3>
+            <h3 id="a01-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            
+
+            
+            
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Point clé</th>
+                                
+                                <th>Mot(s) manquant(s)</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Deux grandeurs sont proportionnelles si on multiplie toujours par le même …… .
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Le tableau du foin — Mot(s) manquant(s) — Deux grandeurs sont proportionnelles si on multiplie toujours par le même …… .">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Dans un tableau de proportionnalité, les …… y ÷ x sont égaux.
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Le tableau du foin — Mot(s) manquant(s) — Dans un tableau de proportionnalité, les …… y ÷ x sont égaux.">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            <details><summary>Un coup de pouce</summary><p>Une case à la fois : la ligne croise la colonne.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a01-q02-label">Question 2 — Calcule foin ÷ poids.</h3>
             
 
             
@@ -275,7 +444,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Le tableau du foin — Foin ÷ poids — 300 (6 kg)">
+                                    <input type="text" data-answer-id="a01_q02_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Le tableau du foin — Foin ÷ poids — 300 (6 kg)">
                                     
                                 </td>
                                 
@@ -292,7 +461,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Le tableau du foin — Foin ÷ poids — 450 (9 kg)">
+                                    <input type="text" data-answer-id="a01_q02_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Le tableau du foin — Foin ÷ poids — 450 (9 kg)">
                                     
                                 </td>
                                 
@@ -309,7 +478,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Le tableau du foin — Foin ÷ poids — 600 (12 kg)">
+                                    <input type="text" data-answer-id="a01_q02_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Le tableau du foin — Foin ÷ poids — 600 (12 kg)">
                                     
                                 </td>
                                 
@@ -324,15 +493,15 @@
             
         </div>
         
-        <div class="cours-question" data-question="q02">
+        <div class="cours-question" data-question="q03">
             
             
-            <h3 id="a01-q02-label">Question 2 — Ce tableau est-il de proportionnalité ?</h3>
+            <h3 id="a01-q03-label">Question 3 — Ce tableau est-il de proportionnalité ?</h3>
             
 
             
             
-                <select id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><option value="">Choisis une réponse</option><option value="a">Oui, le coefficient est toujours 0,02.</option><option value="b">Non.</option><option value="c">On ne peut pas savoir.</option></select>
+                <select id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label"><option value="">Choisis une réponse</option><option value="a">Oui, le coefficient est toujours 0,02.</option><option value="b">Non.</option><option value="c">On ne peut pas savoir.</option></select>
 
                 
             <details><summary>Un coup de pouce</summary><p>Méthode : 1) lis toutes les réponses avant de choisir ; 2) élimine celles qui sont impossibles ; 3) vérifie ton choix avec le document ou l’exemple expliqué de la mission.</p></details>
@@ -357,6 +526,9 @@
         
 
         
+<h4>Exemple</h4>
+    
+
 <div class="cours-table-wrapper"><table class="cours-table"><caption>Tableau 2 — Pension temporaire (fictive)</caption><thead><tr><th scope="col">Jours</th><th scope="col">5</th><th scope="col">10</th></tr></thead><tbody><tr><td>Prix (€)</td><td>110</td><td>170</td></tr></tbody></table></div>
     
 
@@ -372,7 +544,71 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Calcule prix ÷ jours (arrondi au centime).</h3>
+            <h3 id="a02-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            
+
+            
+            
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Point clé</th>
+                                
+                                <th>Mot(s) manquant(s)</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Des frais fixes rendent une situation …… proportionnelle.
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Un contre-exemple : le prix de la pension — Mot(s) manquant(s) — Des frais fixes rendent une situation …… proportionnelle.">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Si les quotients sont différents, la situation n’est …… proportionnelle.
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Un contre-exemple : le prix de la pension — Mot(s) manquant(s) — Si les quotients sont différents, la situation n’est …… proportionnelle.">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            <details><summary>Un coup de pouce</summary><p>Une case à la fois : la ligne croise la colonne.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a02-q02-label">Question 2 — Calcule prix ÷ jours (arrondi au centime).</h3>
             
 
             
@@ -401,7 +637,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Un contre-exemple : le prix de la pension — Prix ÷ jours — 5 (110 €)">
+                                    <input type="text" data-answer-id="a02_q02_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Un contre-exemple : le prix de la pension — Prix ÷ jours — 5 (110 €)">
                                     
                                 </td>
                                 
@@ -418,7 +654,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Un contre-exemple : le prix de la pension — Prix ÷ jours — 10 (170 €)">
+                                    <input type="text" data-answer-id="a02_q02_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Un contre-exemple : le prix de la pension — Prix ÷ jours — 10 (170 €)">
                                     
                                 </td>
                                 
@@ -433,15 +669,15 @@
             
         </div>
         
-        <div class="cours-question" data-question="q02">
+        <div class="cours-question" data-question="q03">
             
             
-            <h3 id="a02-q02-label">Question 2 — Ce tableau est-il de proportionnalité ? Justifie.</h3>
+            <h3 id="a02-q03-label">Question 3 — Ce tableau est-il de proportionnalité ? Justifie.</h3>
             
 
             
             
-                <textarea id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Méthode : 1) écris ton idée en une phrase ; 2) ajoute la raison avec « car » ou « parce que » ; 3) appuie-toi sur un fait vu dans la séance ou un document. Exemple de début : « … car … ».</p></details>
@@ -478,12 +714,76 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Décris le graphique obtenu et ce qu’il prouve.</h3>
+            <h3 id="a03-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
             
 
             
             
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Point clé</th>
+                                
+                                <th>Mot(s) manquant(s)</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Le graphique d’une situation de proportionnalité est une …… .
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a03_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Sur un graphique — Mot(s) manquant(s) — Le graphique d’une situation de proportionnalité est une …… .">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Cette droite passe par l’…… du repère.
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a03_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Sur un graphique — Mot(s) manquant(s) — Cette droite passe par l’…… du repère.">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            <details><summary>Un coup de pouce</summary><p>Une case à la fois : la ligne croise la colonne.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a03-q02-label">Question 2 — Décris le graphique obtenu et ce qu’il prouve.</h3>
+            
+
+            
+            
+                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Une formule commence par « = », puis la fonction et la plage (ex. =MOYENNE(B2:B10)).</p></details>
@@ -612,7 +912,7 @@
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-steps.js?v=20261029-steps-1"></script>
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
-
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
 
 
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>

@@ -47,7 +47,7 @@
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
-    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css?v=20261104-maths-1">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
@@ -67,7 +67,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/theme-contrast.css?v=20261029-contrast-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/theme-contrast.css?v=20261104-contrast-2">
     
 </head>
 
@@ -101,7 +101,7 @@
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
         <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
-        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-paper-toggle">Version papier</button><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
     </div>
     <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
         <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
@@ -200,6 +200,96 @@
     <nav class="course-mission-controls course-intro-controls" aria-label="Commencer la séance"><a class="course-mission-next" href="#a01">J’ai compris l’objectif : commencer la première mission <span aria-hidden="true">→</span></a></nav>
 </header>
 
+<section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
+    <article class="course-paper-sheet">
+        <header><p class="course-paper-kicker">Cours à compléter puis exercices</p><h2 id="course-paper-title">Prix HT, TVA, remise : la facture de la sellerie</h2><p>Comment calculer une facture complète avec remise et TVA ?</p></header>
+        
+        <section class="course-paper-section">
+            <h3>I. La facture</h3>
+            
+<h4>Points clés</h4>
+    
+
+<ul><li>La remise se calcule sur le prix …… .</li><li>La TVA se calcule sur le HT …… .</li></ul>
+    
+
+<h4>Exemple</h4>
+    
+
+<ul><li>Automatisme : 10 % de 1 000 ; 20 % de 900.</li></ul>
+    
+
+<ul><li>6 tapis à 50 € HT.</li><li>4 filets à 125 € HT.</li><li>Remise club : 10 % sur le HT.</li><li>TVA : 20 %.</li></ul>
+    
+
+<p>Données fictives créées pour l’exercice (ordres de grandeur réalistes).</p>
+    
+
+<h4>Exercice 1 — La facture</h4>
+    
+
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Ligne</th><th scope="col">Montant (€)</th></tr></thead><tbody><tr><td>Total HT</td><td></td></tr><tr><td>Remise 10 %</td><td></td></tr><tr><td>HT net</td><td></td></tr><tr><td>TVA 20 %</td><td></td></tr><tr><td>TTC</td><td></td></tr></tbody></table></div>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Complète la facture.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>II. Retrouver le HT</h3>
+            
+<h4>Points clés</h4>
+    
+
+<ul><li>HT = TTC ÷ …… (TVA 20 %).</li><li>Retirer 20 % du TTC donne un résultat …… .</li></ul>
+    
+
+<h4>Exercice 2 — Retrouver le HT</h4>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Prix HT ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>III. Quelle remise ?</h3>
+            
+<h4>Points clés</h4>
+    
+
+<ul><li>Taux de remise = 1 − nouveau prix ÷ …… prix.</li><li>Un coefficient de 0,85 correspond à −…… %.</li></ul>
+    
+
+<h4>Exercice 3 — Quelle remise ?</h4>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Taux de remise ? (en %)</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section course-paper-break">
+            <h2 class="course-paper-part">Fiche d’exercices</h2><h3>Exercice 1 — Facture</h3>
+            
+
+            <ol class="course-paper-questions"><li><span>10 brosses à 8 € HT, remise 15 %, TVA 20 % : TTC ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Exercice 2 — Retrouver le HT</h3>
+            
+
+            <ol class="course-paper-questions"><li><span>Un tapis payé 54 € TTC (TVA 20 %) : HT ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Exercice 3 — Remise</h3>
+            
+
+            <ol class="course-paper-questions"><li><span>Une selle passe de 1 200 € à 1 020 €. Taux de remise ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+    </article>
+</section>
 
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
@@ -217,6 +307,9 @@
         
 
         
+<h4>Exemple</h4>
+    
+
 <ul><li>Automatisme : 10 % de 1 000 ; 20 % de 900.</li></ul>
     
 
@@ -238,7 +331,71 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Complète la facture.</h3>
+            <h3 id="a01-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            
+
+            
+            
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Point clé</th>
+                                
+                                <th>Mot(s) manquant(s)</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    La remise se calcule sur le prix …… .
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="La facture — Mot(s) manquant(s) — La remise se calcule sur le prix …… .">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    La TVA se calcule sur le HT …… .
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="La facture — Mot(s) manquant(s) — La TVA se calcule sur le HT …… .">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            <details><summary>Un coup de pouce</summary><p>Une case à la fois : la ligne croise la colonne.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a01-q02-label">Question 2 — Complète la facture.</h3>
             
 
             
@@ -267,7 +424,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="La facture — Montant (€) — Total HT">
+                                    <input type="text" data-answer-id="a01_q02_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="La facture — Montant (€) — Total HT">
                                     
                                 </td>
                                 
@@ -284,7 +441,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="La facture — Montant (€) — Remise 10 %">
+                                    <input type="text" data-answer-id="a01_q02_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="La facture — Montant (€) — Remise 10 %">
                                     
                                 </td>
                                 
@@ -301,7 +458,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="La facture — Montant (€) — HT net">
+                                    <input type="text" data-answer-id="a01_q02_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="La facture — Montant (€) — HT net">
                                     
                                 </td>
                                 
@@ -318,7 +475,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r3_c1" data-required="true" data-row="3" data-col="1" aria-label="La facture — Montant (€) — TVA 20 %">
+                                    <input type="text" data-answer-id="a01_q02_r3_c1" data-required="true" data-row="3" data-col="1" aria-label="La facture — Montant (€) — TVA 20 %">
                                     
                                 </td>
                                 
@@ -335,7 +492,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r4_c1" data-required="true" data-row="4" data-col="1" aria-label="La facture — Montant (€) — TTC">
+                                    <input type="text" data-answer-id="a01_q02_r4_c1" data-required="true" data-row="4" data-col="1" aria-label="La facture — Montant (€) — TTC">
                                     
                                 </td>
                                 
@@ -379,12 +536,76 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Prix HT ?</h3>
+            <h3 id="a02-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label"><p>Unité : €</p>
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Point clé</th>
+                                
+                                <th>Mot(s) manquant(s)</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    HT = TTC ÷ …… (TVA 20 %).
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Retrouver le HT — Mot(s) manquant(s) — HT = TTC ÷ …… (TVA 20 %).">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Retirer 20 % du TTC donne un résultat …… .
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Retrouver le HT — Mot(s) manquant(s) — Retirer 20 % du TTC donne un résultat …… .">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            <details><summary>Un coup de pouce</summary><p>Une case à la fois : la ligne croise la colonne.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a02-q02-label">Question 2 — Prix HT ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><p>Unité : €</p>
 
                 
             <details><summary>Un coup de pouce</summary><p>Écris l’opération, calcule, vérifie l’unité.</p></details>
@@ -421,12 +642,76 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Taux de remise ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label"><p>Unité : %</p>
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Point clé</th>
+                                
+                                <th>Mot(s) manquant(s)</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Taux de remise = 1 − nouveau prix ÷ …… prix.
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a03_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Quelle remise ? — Mot(s) manquant(s) — Taux de remise = 1 − nouveau prix ÷ …… prix.">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Un coefficient de 0,85 correspond à −…… %.
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a03_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Quelle remise ? — Mot(s) manquant(s) — Un coefficient de 0,85 correspond à −…… %.">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            <details><summary>Un coup de pouce</summary><p>Une case à la fois : la ligne croise la colonne.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a03-q02-label">Question 2 — Taux de remise ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label"><p>Unité : %</p>
 
                 
             <details><summary>Un coup de pouce</summary><p>Écris l’opération, calcule, vérifie l’unité.</p></details>
@@ -555,7 +840,7 @@
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-steps.js?v=20261029-steps-1"></script>
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
-
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
 
 
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>

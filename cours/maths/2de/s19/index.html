@@ -47,7 +47,7 @@
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
-    
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css?v=20261104-maths-1">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
@@ -67,7 +67,7 @@
     
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/theme-harmonization.css?v=20261022-theme-palette-4">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/theme-contrast.css?v=20261029-contrast-1">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/theme-contrast.css?v=20261104-contrast-2">
     
 </head>
 
@@ -101,7 +101,7 @@
     <div class="course-save-panel course-toolbar">
         <p id="course-identity" hidden></p>
         <p id="course-save-status" role="status" aria-live="polite">Préparation de la séance…</p>
-        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
+        <div class="course-toolbar-actions"><span id="course-copy-kind" hidden></span><button type="button" id="course-paper-toggle">Version papier</button><button type="button" id="course-group-toggle" aria-expanded="false" aria-controls="course-collaboration" hidden>Travailler ensemble</button><button type="button" id="course-retry" hidden>Réessayer</button><button type="button" id="course-reload" hidden>Recharger la copie enregistrée</button></div>
     </div>
     <section id="course-collaboration" class="collaboration-panel" hidden aria-labelledby="course-group-heading" data-enabled="true">
         <div class="course-group-heading"><h2 id="course-group-heading" tabindex="-1">Travailler ensemble</h2><button type="button" id="course-group-close">Revenir au cours</button></div>
@@ -200,6 +200,96 @@
     <nav class="course-mission-controls course-intro-controls" aria-label="Commencer la séance"><a class="course-mission-next" href="#a01">J’ai compris l’objectif : commencer la première mission <span aria-hidden="true">→</span></a></nav>
 </header>
 
+<section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
+    <article class="course-paper-sheet">
+        <header><p class="course-paper-kicker">Cours à compléter puis exercices</p><h2 id="course-paper-title">Le poids d’un poulain au fil des mois</h2><p>Comment représenter une grandeur qui dépend d’une autre ?</p></header>
+        
+        <section class="course-paper-section">
+            <h3>I. Le tableau de valeurs</h3>
+            
+<h4>Points clés</h4>
+    
+
+<ul><li>Une fonction associe à chaque x une …… valeur f(x).</li><li>f(x) se lit « f …… x ».</li></ul>
+    
+
+<h4>Exemple</h4>
+    
+
+<ul><li>Automatisme : place le point (3 ; 175) dans un repère.</li></ul>
+    
+
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Pesées d’un poulain (fictives)</caption><thead><tr><th scope="col">Âge x (mois)</th><th scope="col">0</th><th scope="col">1</th><th scope="col">2</th><th scope="col">3</th><th scope="col">4</th><th scope="col">6</th></tr></thead><tbody><tr><td>Poids f(x) (kg)</td><td>55</td><td>100</td><td>140</td><td>175</td><td>205</td><td>260</td></tr></tbody></table></div>
+    
+
+<h4>Exercice 1 — Le tableau de valeurs</h4>
+    
+
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Élément</th><th scope="col">Réponse</th></tr></thead><tbody><tr><td>Variable x</td><td></td></tr><tr><td>f(x)</td><td></td></tr><tr><td>f(3)</td><td></td></tr></tbody></table></div>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Complète.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>II. La courbe</h3>
+            
+<h4>Points clés</h4>
+    
+
+<ul><li>Sur le graphique, x est sur l’axe …… .</li><li>f(x) est sur l’axe …… .</li></ul>
+    
+
+<h4>Exercice 2 — La courbe</h4>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Décris ta courbe : croissante ou décroissante ? régulière ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>III. Lire la courbe</h3>
+            
+<h4>Points clés</h4>
+    
+
+<ul><li>On lit une valeur entre deux points grâce à la …… .</li><li>Prévoir loin des mesures s’appelle …… .</li></ul>
+    
+
+<h4>Exercice 3 — Lire la courbe</h4>
+    
+
+
+            <ol class="course-paper-questions"><li><span>Poids estimé à 5 mois ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>À quel âge le poulain pèse-t-il 150 kg environ ? (en mois)</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section course-paper-break">
+            <h2 class="course-paper-part">Fiche d’exercices</h2><h3>Exercice 1 — Tableau de valeurs</h3>
+            
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Âge (mois)</th><th scope="col">0</th><th scope="col">2</th><th scope="col">4</th><th scope="col">6</th></tr></thead><tbody><tr><td>Poids (kg)</td><td>50</td><td>130</td><td>200</td><td>250</td></tr></tbody></table></div>
+    
+
+
+            <ol class="course-paper-questions"><li><span>f(4) ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Quelle est la variable ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Exercice 2 — Courbe</h3>
+            
+
+            <ol class="course-paper-questions"><li><span>Trace la courbe et estime le poids à 3 mois.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+        <section class="course-paper-section">
+            <h3>Exercice 3 — Vocabulaire</h3>
+            
+
+            <ol class="course-paper-questions"><li><span>Que représente f(6) ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+        </section>
+        
+    </article>
+</section>
 
     <fieldset id="course-answers" class="course-answer-fields" disabled>
         <legend>Réponses aux activités</legend>
@@ -217,6 +307,9 @@
         
 
         
+<h4>Exemple</h4>
+    
+
 <ul><li>Automatisme : place le point (3 ; 175) dans un repère.</li></ul>
     
 
@@ -235,7 +328,71 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Complète.</h3>
+            <h3 id="a01-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            
+
+            
+            
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Point clé</th>
+                                
+                                <th>Mot(s) manquant(s)</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Une fonction associe à chaque x une …… valeur f(x).
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Le tableau de valeurs — Mot(s) manquant(s) — Une fonction associe à chaque x une …… valeur f(x).">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    f(x) se lit « f …… x ».
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Le tableau de valeurs — Mot(s) manquant(s) — f(x) se lit « f …… x ».">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            <details><summary>Un coup de pouce</summary><p>Une case à la fois : la ligne croise la colonne.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a01-q02-label">Question 2 — Complète.</h3>
             
 
             
@@ -264,7 +421,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Le tableau de valeurs — Réponse — Variable x">
+                                    <input type="text" data-answer-id="a01_q02_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Le tableau de valeurs — Réponse — Variable x">
                                     
                                 </td>
                                 
@@ -281,7 +438,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Le tableau de valeurs — Réponse — f(x)">
+                                    <input type="text" data-answer-id="a01_q02_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Le tableau de valeurs — Réponse — f(x)">
                                     
                                 </td>
                                 
@@ -298,7 +455,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Le tableau de valeurs — Réponse — f(3)">
+                                    <input type="text" data-answer-id="a01_q02_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Le tableau de valeurs — Réponse — f(3)">
                                     
                                 </td>
                                 
@@ -342,12 +499,76 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Décris ta courbe : croissante ou décroissante ? régulière ?</h3>
+            <h3 id="a02-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
             
 
             
             
-                <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Point clé</th>
+                                
+                                <th>Mot(s) manquant(s)</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Sur le graphique, x est sur l’axe …… .
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="La courbe — Mot(s) manquant(s) — Sur le graphique, x est sur l’axe …… .">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    f(x) est sur l’axe …… .
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="La courbe — Mot(s) manquant(s) — f(x) est sur l’axe …… .">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            <details><summary>Un coup de pouce</summary><p>Une case à la fois : la ligne croise la colonne.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a02-q02-label">Question 2 — Décris ta courbe : croissante ou décroissante ? régulière ?</h3>
+            
+
+            
+            
+                <textarea id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Compte les éléments demandés, puis cherche-les dans les documents de la mission.</p></details>
@@ -384,15 +605,63 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Poids estimé à 5 mois ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label"><p>Unité : kg</p>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Écris l’opération, calcule, vérifie l’unité.</p></details>
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Point clé</th>
+                                
+                                <th>Mot(s) manquant(s)</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    On lit une valeur entre deux points grâce à la …… .
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a03_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Lire la courbe — Mot(s) manquant(s) — On lit une valeur entre deux points grâce à la …… .">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Prévoir loin des mesures s’appelle …… .
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a03_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Lire la courbe — Mot(s) manquant(s) — Prévoir loin des mesures s’appelle …… .">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            <details><summary>Un coup de pouce</summary><p>Une case à la fois : la ligne croise la colonne.</p></details>
             
             
         </div>
@@ -400,12 +669,28 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a03-q02-label">Question 2 — À quel âge le poulain pèse-t-il 150 kg environ ?</h3>
+            <h3 id="a03-q02-label">Question 2 — Poids estimé à 5 mois ?</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label"><p>Unité : mois</p>
+                <input type="text" inputmode="decimal" id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris l’opération, calcule, vérifie l’unité.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a03-q03-label">Question 3 — À quel âge le poulain pèse-t-il 150 kg environ ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q03" data-answer-id="a03_q03" data-required="true" aria-labelledby="a03-q03-label"><p>Unité : mois</p>
 
                 
             <details><summary>Un coup de pouce</summary><p>Écris l’opération, calcule, vérifie l’unité.</p></details>
@@ -534,7 +819,7 @@
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-steps.js?v=20261029-steps-1"></script>
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-progress.js"></script>
-
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/course-paper-version.js?v=20261022-paper-tab-1"></script>
 
 
 <script type="module" src="/tifsec-test-eleves/assets/js/eleve/student-theme.js"></script>
