@@ -124,7 +124,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Lire une table de routage</a></li><li><a href="#a02">Le jeu des routeurs (débranché)</a></li><li><a href="#a03">Plusieurs chemins</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">L’image</a></li><li><a href="#a02">Le son</a></li><li><a href="#a03">Lien avec le réseau</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -136,7 +136,7 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Technologie · 3e · S09</span></div>
-    <h1>Séance 9 : Pourquoi des routeurs ?</h1>
+    <h1>Séance 9 : Combien pèsent une photo et un son ?</h1>
     
 
     
@@ -150,7 +150,7 @@
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Comment un routeur choisit-il par où envoyer un paquet ?</p>
+        <p>Comment une photo et un son sont-ils numérisés, et pourquoi pèsent-ils si lourd ?</p>
     </section>
     
 
@@ -168,9 +168,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Un routeur relie plusieurs réseaux. Il lit l’adresse de destination du paquet et consulte sa table de routage : pour chaque réseau de destination, elle indique la sortie (l’interface) à utiliser.</li>
+            <li>Une photo numérique est un tableau de pixels ; chaque pixel est codé par trois nombres (rouge, vert, bleu), soit 3 octets. Une photo de 4 000 × 3 000 pixels pèse 36 Mo sans compression.</li>
             
-            <li>S’il existe plusieurs chemins, un routeur peut contourner une liaison en panne.</li>
+            <li>Un son est numérisé en prenant des mesures (échantillons) très souvent : 44 100 fois par seconde pour un CD. La compression (JPEG, MP3) réduit la taille.</li>
             
         </ul>
         
@@ -178,16 +178,16 @@
         <h2>Ce que tu vas apprendre à faire</h2>
         <ul>
             
-            <li>Lire une table de routage.</li>
+            <li>Calculer la taille d’une image non compressée.</li>
             
-            <li>Suivre le chemin d’un paquet.</li>
+            <li>Expliquer la numérisation d’un son et l’intérêt de la compression.</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séance 8, tu as vu que les paquets traversent des routeurs.</p><p>Aujourd’hui, activité débranchée : tu joues le rôle des routeurs.</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En séance 8, tu as codé des nombres et des lettres. En 4e, tu as calculé des durées d’envoi.</p><p>Aujourd’hui : images et sons.</p></div></section>
     
     
     
@@ -209,24 +209,21 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Lire une table de routage</h2>
+        <h2>L’image</h2>
         
         
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas apprendre à lire la table de routage d’un routeur (document 1). On attend la sortie choisie par le routeur R1 pour trois paquets.</p></div>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas calculer la taille d’une image numérique non compressée, à partir de l’exemple expliqué. On attend un calcul en octets et le sens des 3 octets par pixel.</p></div>
         
         
 
         
-<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Table de routage du routeur R1</caption><thead><tr><th scope="col">Réseau de destination</th><th scope="col">Sortie à utiliser</th></tr></thead><tbody><tr><td>Réseau A</td><td>Sortie 1 (vers R2)</td></tr><tr><td>Réseau B</td><td>Sortie 2 (vers R3)</td></tr><tr><td>Réseau C</td><td>Sortie 2 (vers R3)</td></tr><tr><td>Autre</td><td>Sortie 3 (vers Internet)</td></tr></tbody></table></div>
+<p>Exemple expliqué : une image de 100 × 100 pixels contient 10 000 pixels ; à 3 octets par pixel, elle pèse 30 000 octets, soit 30 ko.</p>
     
 
-<p>Exemple expliqué : un paquet arrive à R1 pour le réseau B. R1 lit la ligne « Réseau B » : il l’envoie par la sortie 2, vers R3.</p>
+<ol><li>Lis l’exemple expliqué.</li><li>Calcule le nombre de pixels : largeur × hauteur.</li><li>Multiplie par 3 octets (rouge, vert, bleu).</li></ol>
     
 
-<ol><li>Lis l’exemple expliqué.</li><li>Pour chaque paquet, cherche la ligne de sa destination dans le document 1.</li><li>Si la destination n’est pas dans la table, utilise la ligne « Autre ».</li></ol>
-    
-
-<p>Pourquoi une ligne « Autre » ? Un routeur ne connaît pas tous les réseaux du monde : ce qu’il ne connaît pas, il l’envoie vers Internet.</p>
+<p>Pourquoi 3 octets par pixel ? Chaque pixel mélange trois lumières : rouge, verte et bleue, chacune codée par un nombre de 0 à 255.</p>
     
 
 
@@ -235,80 +232,31 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — D’après le document 1, par quelle sortie le routeur R1 envoie-t-il chaque paquet ?</h3>
+            <h3 id="a01-q01-label">Question 1 — Combien d’octets pèse une image de 200 × 100 pixels non compressée ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Destination du paquet</th>
-                                
-                                <th>Sortie</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Réseau A
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Lire une table de routage — Sortie — Réseau A">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Réseau C
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Lire une table de routage — Sortie — Réseau C">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Un site inconnu
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Lire une table de routage — Sortie — Un site inconnu">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
+                <input type="text" inputmode="decimal" id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><p>Unité : octets</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris l’opération, calcule, vérifie l’unité.</p></details>
             
-            <details><summary>Un coup de pouce</summary><p>Une case à la fois : la ligne croise la colonne (réflexe n° 6).</p></details>
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a01-q02-label">Question 2 — Pourquoi compte-t-on 3 octets par pixel dans une image en couleur ?</h3>
+            
+
+            
+            
+                <select id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><option value="">Choisis une réponse</option><option value="a">Un octet pour chaque couleur : rouge, vert, bleu.</option><option value="b">Par hasard.</option><option value="c">Pour la luminosité seulement.</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Élimine d’abord les réponses impossibles.</p></details>
             
             
         </div>
@@ -322,18 +270,21 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Le jeu des routeurs (débranché)</h2>
+        <h2>Le son</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais lire une table. Joue maintenant les routeurs.</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas jouer, avec toute la classe, le trajet de paquets entre quatre routeurs, puis gérer une panne de liaison. On attend un nouveau chemin et la modification de la table de R1.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Une image se calcule. Et un son ?</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas comprendre comment un son est transformé en nombres, et l’intérêt de la compression MP3, à partir du texte ci-dessous. On attend deux explications.</p></div>
         
         
 
         
-<ol><li>Quatre élèves jouent les routeurs R1, R2, R3, R4, chacun avec sa table.</li><li>Des paquets (papiers) circulent dans la classe.</li><li>Le professeur coupe la liaison R1-R3 : observe ce qui bloque.</li></ol>
+<p>Un microphone transforme le son en signal électrique ; la carte son mesure ce signal 44 100 fois par seconde et code chaque mesure en nombre.</p>
     
 
-<p>Pourquoi couper une liaison ? Pour voir comment Internet continue à fonctionner quand un câble ou un routeur tombe en panne.</p>
+<ol><li>Lis comment un son est numérisé.</li><li>Pense à un dessin fait avec peu de points : il perd des détails.</li><li>Lis les tailles d’une chanson en qualité CD et en MP3, et compare.</li></ol>
+    
+
+<p>Pourquoi compresser ? Un fichier 10 fois plus léger se stocke et s’envoie 10 fois plus vite, au prix d’un peu de qualité.</p>
     
 
 
@@ -342,12 +293,28 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Dans le jeu, la liaison R1-R3 est coupée. Comment le paquet pour le réseau B peut-il encore arriver ? Que faut-il changer dans la table de R1 (document 1) ?</h3>
+            <h3 id="a02-q01-label">Question 1 — Pourquoi la carte son mesure-t-elle le son 44 100 fois par seconde ?</h3>
             
 
             
             
                 <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Action → résultat attendu → résultat observé ; une seule chose à la fois.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a02-q02-label">Question 2 — Une chanson de 3 min pèse environ 30 Mo en qualité CD et 3 Mo en MP3. Quel est l’intérêt de la compression ? Y a-t-il un inconvénient ?</h3>
+            
+
+            
+            
+                <textarea id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
             <details><summary>Un coup de pouce</summary><p>Une phrase complète qui reprend les mots de la question.</p></details>
@@ -364,18 +331,18 @@
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Plusieurs chemins</h2>
+        <h2>Lien avec le réseau</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> La panne a été contournée. Pourquoi est-ce possible ?</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas expliquer pourquoi Internet résiste aux pannes, à partir de ce que tu as observé dans le jeu des routeurs. On attend l’intérêt d’avoir plusieurs chemins.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Ces fichiers doivent voyager sur Internet.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas calculer le temps d’envoi d’une photo non compressée, avec la méthode de la 4e (× 8, ÷ débit). On attend une durée en secondes.</p></div>
         
         
 
         
-<ol><li>Repense au jeu : combien de chemins menaient au réseau B ?</li><li>Imagine qu’il n’y en ait qu’un seul.</li><li>Explique l’intérêt d’avoir plusieurs chemins.</li></ol>
+<ol><li>Reprends la photo de 36 Mo (4 000 × 3 000 pixels).</li><li>Convertis en mégabits (× 8), comme en 4e.</li><li>Divise par le débit.</li></ol>
     
 
-<p>Pourquoi plusieurs chemins ? C’est la redondance : si un chemin tombe, un autre prend le relais.</p>
+<p>Pourquoi relier au réseau ? Ces fichiers lourds voyagent sur Internet : leur taille décide du temps d’envoi.</p>
     
 
 
@@ -384,31 +351,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Pourquoi Internet a-t-il beaucoup de chemins possibles entre deux points ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Combien de secondes faut-il pour envoyer la photo de 36 Mo avec un débit de 8 Mbit/s ?</h3>
             
 
             
             
-                <select id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label"><option value="">Choisis une réponse</option><option value="a">Pour continuer à fonctionner si une liaison tombe en panne.</option><option value="b">Pour être plus joli.</option><option value="c">Par hasard.</option></select>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Élimine d’abord les réponses impossibles.</p></details>
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a03-q02-label">Question 2 — Dans le jeu des routeurs, que se serait-il passé s’il n’y avait eu qu’un seul chemin vers le réseau B ?</h3>
-            
-
-            
-            
-                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label"><p>Unité : s</p>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Une phrase complète qui reprend les mots de la question.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Écris l’opération, calcule, vérifie l’unité.</p></details>
             
             
         </div>
@@ -430,7 +381,7 @@
         
 
         
-<p>Les vrais routeurs mettent à jour leurs tables automatiquement.</p>
+<p>Le JPEG peut diviser la taille d’une photo par 10.</p>
     
 
 
@@ -439,7 +390,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Quel avantage par rapport à une mise à jour à la main ?</h3>
+            <h3 id="a04-q01-label">Question 1 — Combien pèserait alors la photo de 36 Mo ?</h3>
             
 
             
@@ -463,7 +414,7 @@
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as joué les routeurs. Il reste à répondre au problème de départ.</p>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais pourquoi les fichiers pèsent lourd. Il reste à répondre au problème de départ.</p>
         
         
         
@@ -474,7 +425,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment un routeur choisit-il par où envoyer un paquet ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment une photo et un son sont-ils numérisés, et pourquoi pèsent-ils lourd ?</h3>
             
 
             
@@ -502,7 +453,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Routeur : relie des réseaux ; table de routage : destination → sortie.</li><li>Plusieurs chemins : Internet résiste aux pannes.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Image : pixels × 3 octets (RVB).</li><li>Son : échantillonné (44 100 fois par seconde) ; compression = fichier plus léger, un peu de qualité perdue.</li></ul>
     
 </section>
 

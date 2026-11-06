@@ -124,7 +124,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Le chemin</a></li><li><a href="#a02">Les paquets</a></li><li><a href="#a03">Un réseau de réseaux</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Du binaire au décimal</a></li><li><a href="#a02">Du décimal au binaire</a></li><li><a href="#a03">Le code ASCII</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -136,7 +136,7 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Technologie · 3e · S08</span></div>
-    <h1>Séance 8 : Quel chemin suit mon message ?</h1>
+    <h1>Séance 8 : Comment l’ordinateur écrit-il un mot ?</h1>
     
 
     
@@ -150,7 +150,7 @@
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Par où passe un message envoyé à un ami à l’autre bout de la France ?</p>
+        <p>Comment un ordinateur représente-t-il des nombres et des lettres avec seulement des 0 et des 1 ?</p>
     </section>
     
 
@@ -168,9 +168,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Internet est un réseau de réseaux : un message part du téléphone, passe par le réseau local (box ou antenne), puis par des routeurs de fournisseurs d’accès, jusqu’au serveur de l’application, puis jusqu’au destinataire.</li>
+            <li>Un bit vaut 0 ou 1. En binaire, chaque position vaut le double de la précédente : 1, 2, 4, 8, 16, 32, 64, 128. Exemple : 1010 en binaire = 8 + 2 = 10.</li>
             
-            <li>Le message est découpé en paquets qui peuvent prendre des chemins différents ; ils sont rassemblés à l’arrivée.</li>
+            <li>Le code ASCII associe un nombre à chaque caractère : A = 65, B = 66… ; a = 97.</li>
             
         </ul>
         
@@ -178,16 +178,16 @@
         <h2>Ce que tu vas apprendre à faire</h2>
         <ul>
             
-            <li>Représenter la circulation d’une information sur Internet.</li>
+            <li>Convertir un nombre binaire en décimal (et inversement, petits nombres).</li>
             
-            <li>Expliquer le découpage en paquets.</li>
+            <li>Coder un mot avec le code ASCII.</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En 4e, tu as étudié le réseau local du collège.</p><p>En 3e, tu sors du collège : comment un message traverse-t-il Internet ?</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En 5e, tu as vu les octets et les tailles de fichiers. Avant de suivre tes données sur Internet, tu découvres comment elles sont codées.</p><p>Aujourd’hui, tu découvres comment les 0 et les 1 deviennent des nombres et des lettres.</p></div></section>
     
     
     
@@ -209,21 +209,21 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Le chemin</h2>
+        <h2>Du binaire au décimal</h2>
         
         
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas suivre le trajet d’une photo envoyée par Léa à Tom sur une messagerie, à partir de l’exemple expliqué. On attend les étapes du trajet remises dans l’ordre.</p></div>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas apprendre à lire un nombre écrit en binaire (avec des 0 et des 1), à l’aide de l’exemple expliqué. On attend deux nombres binaires convertis en décimal.</p></div>
         
         
 
         
-<p>Exemple expliqué : Léa envoie une photo depuis son téléphone en Wi-Fi. Photo → box de Léa → réseau de son fournisseur → routeurs d’Internet → serveur de l’application de messagerie → réseau mobile de Tom → téléphone de Tom.</p>
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Exemple expliqué : 00001010 = 8 + 2 = 10</caption><thead><tr><th scope="col">128</th><th scope="col">64</th><th scope="col">32</th><th scope="col">16</th><th scope="col">8</th><th scope="col">4</th><th scope="col">2</th><th scope="col">1</th></tr></thead><tbody><tr><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td></tr></tbody></table></div>
     
 
-<ol><li>Lis l’exemple expliqué : la photo de Léa.</li><li>Repère chaque équipement traversé, dans l’ordre.</li><li>Numérote les étapes du tableau de 1 à 5.</li></ol>
+<ol><li>Lis l’exemple expliqué : chaque case a une valeur (128, 64, … 1).</li><li>Pour un nombre binaire, repère les cases qui contiennent 1.</li><li>Additionne leurs valeurs.</li></ol>
     
 
-<p>Pourquoi passer par un serveur ? Le message n’est pas envoyé directement au téléphone de Tom : le serveur de l’application le garde et le transmet quand Tom est connecté.</p>
+<p>Pourquoi des 0 et des 1 ? Dans un ordinateur, un fil est soit sous tension, soit non : deux états seulement, qu’on note 1 et 0.</p>
     
 
 
@@ -232,7 +232,110 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Remets dans l’ordre (1 à 5) le trajet d’un message envoyé par messagerie.</h3>
+            <h3 id="a01-q01-label">Question 1 — Que vaut le nombre binaire 00000101 en décimal ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris l’opération, calcule, vérifie l’unité.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a01-q02-label">Question 2 — Que vaut le nombre binaire 00001111 en décimal ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écris l’opération, calcule, vérifie l’unité.</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#course-intro">← Revoir l’objectif</a>
+            <a class="course-mission-next" href="#a02">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a02" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Du décimal au binaire</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais lire le binaire. Fais l’inverse.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas écrire un nombre décimal (12) en binaire, avec la méthode des plus grandes valeurs. On attend le nombre sur 8 bits et la méthode.</p></div>
+        
+        
+
+        
+<ol><li>Prends le nombre 12.</li><li>Cherche la plus grande valeur du tableau qui tient dans 12 (8) : mets 1 dans sa case.</li><li>Recommence avec le reste (12 − 8 = 4).</li><li>Mets 0 dans les autres cases.</li></ol>
+    
+
+<p>Pourquoi commencer par la plus grande valeur ? Comme pour rendre la monnaie : on prend d’abord les gros billets.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a02-q01-label">Question 1 — Écris le nombre 12 en binaire sur 8 bits et explique ta méthode.</h3>
+            
+
+            
+            
+                <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Une idée + « car » + une raison tirée de la séance.</p></details>
+            
+            
+        </div>
+        
+        
+        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
+            <a class="course-mission-back" href="#a01">← Étape précédente</a>
+            <a class="course-mission-next" href="#a03">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
+        </nav>
+    </article>
+    
+    <article class="cours-activite" id="a03" data-course-step>
+        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
+        <h2>Le code ASCII</h2>
+        
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les nombres sont codés. Et les lettres ?</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas coder et décoder des mots avec le code ASCII, à partir de l’extrait de table du document 1. On attend un mot codé et un message décodé.</p></div>
+        
+        
+
+        
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Extrait de la table ASCII</caption><thead><tr><th scope="col">Caractère</th><th scope="col">A</th><th scope="col">B</th><th scope="col">C</th><th scope="col">E</th><th scope="col">O</th><th scope="col">T</th></tr></thead><tbody><tr><td>Code</td><td>65</td><td>66</td><td>67</td><td>69</td><td>79</td><td>84</td></tr></tbody></table></div>
+    
+
+<ol><li>Lis le document 1 : le code de quelques lettres.</li><li>Pour coder un mot, remplace chaque lettre par son code.</li><li>Pour décoder, fais l’inverse.</li></ol>
+    
+
+<p>Pourquoi un code commun ? Tous les ordinateurs utilisent la même table : un texte écrit sur l’un se lit sur l’autre.</p>
+    
+
+
+        
+        
+        <div class="cours-question" data-question="q01">
+            <p class="course-learning-label">À toi d’essayer avec les questions</p>
+            
+            <h3 id="a03-q01-label">Question 1 — Code le mot « EAU » avec la table ASCII du document 1.</h3>
             
 
             
@@ -242,9 +345,9 @@
                         <thead>
                             <tr>
                                 
-                                <th>Étape</th>
+                                <th>Lettre</th>
                                 
-                                <th>Numéro</th>
+                                <th>Code</th>
                                 
                             </tr>
                         </thead>
@@ -255,30 +358,13 @@
                                 
                                 <td>
                                     
-                                    Serveur de l’application
+                                    E
                                     
                                 </td>
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Le chemin — Numéro — Serveur de l’application">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Téléphone de l’expéditeur
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Le chemin — Numéro — Téléphone de l’expéditeur">
+                                    <input type="text" data-answer-id="a03_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Le code ASCII — Code — E">
                                     
                                 </td>
                                 
@@ -289,30 +375,13 @@
                                 
                                 <td>
                                     
-                                    Téléphone du destinataire
+                                    A
                                     
                                 </td>
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Le chemin — Numéro — Téléphone du destinataire">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Box ou antenne de l’expéditeur
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r3_c1" data-required="true" data-row="3" data-col="1" aria-label="Le chemin — Numéro — Box ou antenne de l’expéditeur">
+                                    <input type="text" data-answer-id="a03_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Le code ASCII — Code — A">
                                     
                                 </td>
                                 
@@ -323,13 +392,13 @@
                                 
                                 <td>
                                     
-                                    Routeurs d’Internet
+                                    U (code 85)
                                     
                                 </td>
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r4_c1" data-required="true" data-row="4" data-col="1" aria-label="Le chemin — Numéro — Routeurs d’Internet">
+                                    <input type="text" data-answer-id="a03_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Le code ASCII — Code — U (code 85)">
                                     
                                 </td>
                                 
@@ -344,105 +413,18 @@
             
         </div>
         
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#course-intro">← Revoir l’objectif</a>
-            <a class="course-mission-next" href="#a02">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a02" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Les paquets</h2>
-        
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu connais le chemin. Le message voyage-t-il en un seul morceau ?</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas comprendre pourquoi un message est découpé en paquets numérotés, à partir du texte ci-dessous. On attend le rôle du numéro et ce qui se passe quand un paquet se perd.</p></div>
-        
-        
-
-        
-<p>Une photo de 3 Mo est découpée en environ 2 000 paquets. Chaque paquet contient une partie de la photo, l’adresse de destination et son numéro.</p>
-    
-
-<ol><li>Lis le texte sur les paquets.</li><li>Imagine 2 000 morceaux qui prennent des routes différentes.</li><li>Demande-toi comment les remettre dans l’ordre, et que faire si un morceau se perd.</li></ol>
-    
-
-<p>Pourquoi découper ? Un gros fichier découpé passe par plusieurs chemins en même temps, et une erreur oblige à renvoyer un seul petit morceau, pas tout.</p>
-    
-
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a02-q01-label">Question 1 — La photo de Léa est découpée en paquets. Pourquoi chaque paquet porte-t-il un numéro ?</h3>
-            
-
-            
-            
-                <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Une idée + « car » + une raison tirée de la séance.</p></details>
-            
-            
-        </div>
-        
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Un paquet de la photo se perd en route. Que se passe-t-il ?</h3>
+            <h3 id="a03-q02-label">Question 2 — Décode le message 84 79 84 79 avec le document 1.</h3>
             
 
             
             
-                <select id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><option value="">Choisis une réponse</option><option value="a">Le destinataire le redemande, et il est renvoyé.</option><option value="b">La photo est perdue pour toujours.</option><option value="c">Tout le message est renvoyé à chaque fois.</option></select>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Élimine d’abord les réponses impossibles.</p></details>
-            
-            
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a01">← Étape précédente</a>
-            <a class="course-mission-next" href="#a03">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a03" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Un réseau de réseaux</h2>
-        
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tous ces réseaux sont reliés.</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas expliquer l’expression « réseau de réseaux » en t’appuyant sur le réseau du collège étudié en 4e. On attend une explication avec le rôle des routeurs et l’exemple du collège.</p></div>
-        
-        
-
-        
-<ol><li>Rappelle-toi le réseau du collège (4e) : ordinateurs, commutateur, routeur.</li><li>Imagine des milliers de réseaux comme lui.</li><li>Explique ce qui les relie.</li></ol>
-    
-
-<p>Pourquoi « réseau de réseaux » ? Personne ne possède Internet en entier : chaque réseau garde son organisation et se relie aux autres par des routeurs.</p>
-    
-
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a03-q01-label">Question 1 — Pourquoi dit-on qu’Internet est un « réseau de réseaux » ? Appuie-toi sur le réseau du collège vu en 4e.</h3>
-            
-
-            
-            
-                <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Une idée + « car » + une raison tirée de la séance.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Une phrase complète qui reprend les mots de la question.</p></details>
             
             
         </div>
@@ -464,7 +446,7 @@
         
 
         
-<p>Plus de 95 % des communications entre continents passent par des câbles sous-marins.</p>
+<p>Un octet = 8 bits.</p>
     
 
 
@@ -473,7 +455,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Pourquoi pas par satellite ?</h3>
+            <h3 id="a04-q01-label">Question 1 — Combien de valeurs différentes un octet peut-il représenter ?</h3>
             
 
             
@@ -481,7 +463,7 @@
                 <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Une idée + « car » + une raison tirée de la séance.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Une phrase complète qui reprend les mots de la question.</p></details>
             
             
         </div>
@@ -497,7 +479,7 @@
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as suivi un message. Il reste à répondre au problème de départ.</p>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais coder en binaire. Il reste à répondre au problème de départ.</p>
         
         
         
@@ -508,7 +490,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : par où passe un message envoyé à un ami loin de chez toi ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment un ordinateur représente-t-il nombres et lettres avec des 0 et des 1 ?</h3>
             
 
             
@@ -536,7 +518,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Internet : réseau de réseaux reliés par des routeurs.</li><li>Les messages sont découpés en paquets numérotés.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Binaire : positions 1, 2, 4, 8, 16, 32, 64, 128.</li><li>ASCII : un code par caractère (A = 65).</li></ul>
     
 </section>
 

@@ -124,7 +124,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Construire le réseau</a></li><li><a href="#a02">Vérifier avec ping</a></li><li><a href="#a03">Provoquer une erreur</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Construire le réseau</a></li><li><a href="#a02">Vérifier avec ping</a></li><li><a href="#a03">Ajouter un objet connecté</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -171,6 +171,8 @@
             <li>Dans Filius, on place des ordinateurs et un commutateur, on les relie, puis on donne une adresse IP à chaque ordinateur.</li>
             
             <li>La commande ping envoie un petit message et attend une réponse : elle vérifie que deux appareils communiquent.</li>
+            
+            <li>Un objet connecté reçoit une adresse IP fixe, libre et du même réseau, pour être toujours joignable.</li>
             
         </ul>
         
@@ -402,32 +404,27 @@
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Provoquer une erreur</h2>
+        <h2>Ajouter un objet connecté</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Ton réseau marche. Que se passe-t-il si on se trompe d’adresse ?</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas provoquer volontairement une erreur dans ton réseau Filius : un quatrième ordinateur avec une adresse déjà prise. On attend ce que tu observes, son explication et la correction.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Ton réseau fonctionne. Ajoute-lui un objet connecté.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas ajouter un objet connecté (la station météo, simulée par un ordinateur) à ton réseau Filius, en lui donnant une adresse IP fixe. On attend l’explication du conflit d’adresses et le paramétrage qui fonctionne.</p></div>
         
         
 
         
-<ol><li>Ajoute un quatrième ordinateur avec l’adresse 192.168.1.2 (déjà prise).</li><li>Fais un ping vers 192.168.1.2.</li><li>Observe, puis corrige l’adresse.</li></ol>
+<ol><li>Ajoute un quatrième appareil : la « station météo » du collège (un ordinateur dans Filius joue son rôle).</li><li>Donne-lui d’abord l’adresse 192.168.1.2, déjà prise : fais un ping et observe.</li><li>Corrige : donne-lui une adresse IP fixe libre (par exemple 192.168.1.10) et le même masque, puis refais le ping depuis PC 1.</li></ol>
     
 
-<p>Pourquoi provoquer une erreur ? Voir une panne volontaire aide à la reconnaître quand elle arrive pour de vrai.</p>
+<p>Pourquoi une adresse fixe ? Un objet connecté (station, imprimante, caméra) doit toujours garder la même adresse pour que les autres appareils le retrouvent.</p>
     
 
 
-        <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
-<p><a href="https://www.lernsoftware-filius.de/Herunterladen" target="_blank" rel="noopener noreferrer">Filius — logiciel libre de simulation de réseau (site officiel)</a></p>
-
-
-</div></details>
-
+        
         
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Que se passe-t-il ? Explique et propose une correction.</h3>
+            <h3 id="a03-q01-label">Question 1 — Avec l’adresse 192.168.1.2, que se passe-t-il ? Explique pourquoi.</h3>
             
 
             
@@ -436,6 +433,87 @@
 
                 
             <details><summary>Un coup de pouce</summary><p>Une idée + « car » + une raison tirée de la séance.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a03-q02-label">Question 2 — Écris le paramétrage fixe que tu as donné à la station météo pour qu’elle rejoigne le réseau.</h3>
+            
+
+            
+            
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Paramètre</th>
+                                
+                                <th>Valeur</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Adresse IP
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a03_q02_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Ajouter un objet connecté — Valeur — Adresse IP">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Masque
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a03_q02_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Ajouter un objet connecté — Valeur — Masque">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Résultat du ping depuis PC 1
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a03_q02_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Ajouter un objet connecté — Valeur — Résultat du ping depuis PC 1">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            <details><summary>Un coup de pouce</summary><p>Une case à la fois : la ligne croise la colonne (réflexe n° 6).</p></details>
             
             
         </div>

@@ -172,6 +172,8 @@
             
             <li>La double authentification demande deux preuves différentes : quelque chose que je sais et quelque chose que j’ai.</li>
             
+            <li>L’hameçonnage est un faux message qui imite un vrai service pour voler un mot de passe : on ne clique pas, on signale.</li>
+            
         </ul>
         
         
@@ -187,7 +189,7 @@
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En 5e, tu as appris ce qu’est un mot de passe solide et comment repérer l’hameçonnage.</p><p>En 4e, tu vas plus loin : comment le site vérifie qui tu es, et comment ajouter une deuxième protection.</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En 5e, tu as vu qui peut lire ou modifier une information (droits) et que ton compte du site de cours protège tes réponses.</p><p>En 4e, tu vas plus loin : comment le site vérifie qui tu es, et comment ajouter une deuxième protection.</p></div></section>
     
     
     
@@ -464,18 +466,23 @@
         <h2>Je m’entraîne</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as compris la méthode. Applique-la seul sur un cas nouveau.</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas appliquer seul ce que tu as appris sur un cas nouveau : les comptes de Noa, décrits ci-dessous. On attend deux conseils précis, chacun expliqué.</p></div>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas appliquer seul ce que tu as appris sur un cas nouveau : un faux message reçu par Léa (document 1, inventé). On attend trois indices de l’hameçonnage et ce que Léa doit faire.</p></div>
         
         
 
         
-<blockquote>Noa utilise le même mot de passe « noa2012 » pour ses jeux, sa messagerie et son ENT. Il l’a noté dans les notes de son téléphone.</blockquote>
+<h4>Document 1 — Un message reçu par Léa (inventé)</h4>
     
 
-<ol><li>Lis la situation de Noa.</li><li>Repère ce qui est dangereux.</li><li>Propose deux conseils précis.</li></ol>
+<blockquote>De : support-ent@ent-colleges-gratuit.com
+Objet : URGENT ! Ton compte sera supprimé dans 1 heure
+Bonjour, ton compte ENT a un problème. Clique vite ici et écris ton identifiant et ton mot de passe pour le garder : http://ent-connexion-verif.biz</blockquote>
     
 
-<p>Pourquoi un cas pratique ? Savoir conseiller quelqu’un montre que tu as compris les règles de protection.</p>
+<ol><li>Lis le message reçu par Léa (document 1).</li><li>Cherche trois indices : l’expéditeur, le lien, le ton du message.</li><li>Dis ce que Léa doit faire.</li></ol>
+    
+
+<p>Pourquoi s’entraîner sur ce message ? L’hameçonnage est le piège le plus courant pour voler un mot de passe : même le meilleur mot de passe ne protège pas si on le donne.</p>
     
 
 
@@ -484,15 +491,96 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Donne deux conseils à Noa pour mieux protéger ses comptes, et explique-les.</h3>
+            <h3 id="a04-q01-label">Question 1 — D’après le document 1, relève trois indices qui montrent que ce message est un piège.</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="true" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <div class="cours-table-wrapper">
+                    <table class="cours-table">
+                        <thead>
+                            <tr>
+                                
+                                <th>Indice</th>
+                                
+                                <th>Ce que je relève</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Expéditeur
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a04_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Je m’entraîne — Ce que je relève — Expéditeur">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Lien
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a04_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Je m’entraîne — Ce que je relève — Lien">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Ton du message
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a04_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Je m’entraîne — Ce que je relève — Ton du message">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            
+            <details><summary>Un coup de pouce</summary><p>Une case à la fois : la ligne croise la colonne (réflexe n° 6).</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a04-q02-label">Question 2 — Que doit faire Léa ?</h3>
+            
+
+            
+            
+                <select id="a04-q02" data-answer-id="a04_q02" data-required="true" aria-labelledby="a04-q02-label"><option value="">Choisis une réponse</option><option value="a">Ne pas cliquer, supprimer le message et prévenir un adulte.</option><option value="b">Cliquer vite pour sauver son compte.</option><option value="c">Répondre en donnant seulement son identifiant.</option></select>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Une idée + « car » + une raison tirée de la séance.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Élimine d’abord les réponses impossibles.</p></details>
             
             
         </div>
