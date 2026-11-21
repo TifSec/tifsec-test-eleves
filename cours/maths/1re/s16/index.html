@@ -238,6 +238,39 @@
         <section class="course-paper-section">
             <h3>I. Les premiers termes</h3>
             
+<h4>La situation</h4>
+    
+
+<p>L’écurie a 6 000 kg de foin au jour 0 et en utilise 180 kg chaque jour. Combien en restera-t-il les jours suivants ?</p>
+    
+
+<h4>Ce que c’est</h4>
+    
+
+<p>Une suite est une liste de nombres numérotés u₀, u₁, u₂… : le terme uₙ est la valeur au rang n (ici le stock au jour n). Dans une suite arithmétique, on passe d’un terme au suivant en ajoutant toujours le même nombre.</p>
+    
+
+<h4>À quoi ça sert</h4>
+    
+
+<ul><li>Suivre une quantité jour après jour, mois après mois : stock, économies, nombre d’adhérents.</li><li>Prévoir à quel moment une quantité atteint un seuil.</li></ul>
+    
+
+<h4>Comment ça marche</h4>
+    
+
+<ol><li>u₀ est la valeur de départ (jour 0).</li><li>Pour obtenir le terme suivant, on ajoute la même quantité r (ici on enlève 180, donc on ajoute −180).</li><li>On calcule les termes un par un : u₁, puis u₂ à partir de u₁, etc.</li></ol>
+    
+
+<p>À retenir : Suite arithmétique : uₙ₊₁ = uₙ + r ; u₀ est le terme initial.</p>
+    
+
+<h4>Exemple fait ensemble en classe</h4>
+    
+
+<div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    
+
 <ul><li>Automatisme : 6 000 − 180 = ?</li></ul>
     
 
@@ -247,10 +280,10 @@
 <p>Tu vas calculer les trois premiers termes de la suite du stock de foin. On attend u₁, u₂, u₃.</p>
     
 
-<h4>Méthode</h4>
+<h4>Ta mission</h4>
     
 
-<ol><li>Lis l’exemple : un stock de granulés u₀ = 500 kg, qui baisse de 20 kg par jour.</li><li>u₁ = 500 − 20 = 480 ; u₂ = 480 − 20 = 460 ; u₃ = 460 − 20 = 440.</li><li>À toi : u₀ = 6 000 kg (jour 0), chaque jour −180 kg. Calcule u₁, u₂, u₃.</li><li>Pourquoi une suite ? On suit la valeur jour après jour.</li></ol>
+<ol><li>À toi : u₀ = 6 000 kg (jour 0), chaque jour −180 kg. Calcule u₁, u₂, u₃.</li><li>Pourquoi une suite ? On suit la valeur jour après jour.</li></ol>
     
 
 <h4>Points clés à compléter</h4>
@@ -266,22 +299,55 @@
     
 
 
-            <ol class="course-paper-questions"><li><span>Calcule.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Entraînement — u₀ = 100 et chaque terme augmente de 15. Calcule u₁, u₂, u₃.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — u₀ = 2 000 et chaque jour −250. Calcule u₁ et u₂.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Calcule.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>II. La relation de récurrence</h3>
             
+<h4>La situation</h4>
+    
+
+<p>Plutôt que d’écrire « on enlève 180 » à chaque fois, on veut une écriture mathématique courte.</p>
+    
+
+<h4>Ce que c’est</h4>
+    
+
+<p>La relation de récurrence dit comment calculer un terme à partir du précédent. Le nombre ajouté à chaque étape s’appelle la raison r.</p>
+    
+
+<h4>À quoi ça sert</h4>
+    
+
+<ul><li>Décrire la suite en une ligne.</li><li>Savoir tout de suite si la quantité augmente ou diminue.</li></ul>
+    
+
+<h4>Comment ça marche</h4>
+    
+
+<ol><li>On écrit uₙ₊₁ = uₙ + r, en remplaçant r par sa valeur.</li><li>Si r est positif, la suite est croissante ; si r est négatif, elle est décroissante.</li></ol>
+    
+
+<p>À retenir : r &gt; 0 : suite croissante ; r &lt; 0 : suite décroissante.</p>
+    
+
+<h4>Exemple fait ensemble en classe</h4>
+    
+
+<div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    
+
 <h4>Ce que tu vas faire</h4>
     
 
 <p>Tu vas écrire la relation de récurrence de la suite du stock et donner sa raison. On attend la relation, la raison et le sens de variation.</p>
     
 
-<h4>Méthode</h4>
+<h4>Ta mission</h4>
     
 
-<ol><li>Lis l’exemple des granulés : chaque terme = le précédent − 20.</li><li>On l’écrit : uₙ₊₁ = uₙ − 20. Le nombre ajouté (−20) s’appelle la raison r.</li><li>Raison négative : la suite diminue ; positive : elle augmente.</li><li>À toi : écris la relation de récurrence du stock de foin et donne la raison.</li><li>Pourquoi « récurrence » ? Chaque terme se calcule à partir du précédent.</li></ol>
+<ol><li>À toi : écris la relation de récurrence du stock de foin et donne la raison.</li><li>Pourquoi « récurrence » ? Chaque terme se calcule à partir du précédent.</li></ol>
     
 
 <h4>Points clés à compléter</h4>
@@ -294,22 +360,55 @@
     
 
 
-            <ol class="course-paper-questions"><li><span>Écris la relation de récurrence et donne la raison.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Cette suite est-elle croissante ou décroissante ? (a) Décroissante (r &lt; 0) ; (b) Croissante ; (c) Constante</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Entraînement — Écris la relation de récurrence d’une suite qui commence à 50 et augmente de 12 à chaque étape.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — uₙ₊₁ = uₙ − 7 : la suite est-elle croissante ou décroissante ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Écris la relation de récurrence et donne la raison.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Cette suite est-elle croissante ou décroissante ? (a) Décroissante (r &lt; 0) ; (b) Croissante ; (c) Constante</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>III. Au tableur</h3>
             
+<h4>La situation</h4>
+    
+
+<p>Combien restera-t-il au jour 30 ? À quel jour le foin sera-t-il épuisé ? Calculer 40 termes à la main serait long.</p>
+    
+
+<h4>Ce que c’est</h4>
+    
+
+<p>Au tableur, une formule recopiée vers le bas calcule chaque terme à partir du précédent : c’est la relation de récurrence.</p>
+    
+
+<h4>À quoi ça sert</h4>
+    
+
+<ul><li>Calculer beaucoup de termes d’un coup.</li><li>Repérer le jour où un seuil est atteint (stock épuisé, il faut commander).</li></ul>
+    
+
+<h4>Comment ça marche</h4>
+    
+
+<ol><li>Colonne A : le jour (A2 : 0, puis =A2+1).</li><li>Colonne B : le stock (B2 : u₀, puis =B2 + r).</li><li>On sélectionne la 2e ligne de formules et on tire vers le bas.</li><li>On lit le terme voulu ; un stock négatif signifie que le modèle n’est plus valable.</li></ol>
+    
+
+<p>À retenir : Un terme impossible (stock négatif) montre la limite du modèle.</p>
+    
+
+<h4>Exemple fait ensemble en classe</h4>
+    
+
+<div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    
+
 <h4>Ce que tu vas faire</h4>
     
 
 <p>Tu vas faire calculer au tableur le stock de foin jour après jour. On attend le stock au jour 30 et le jour où il s’épuise.</p>
     
 
-<h4>Méthode</h4>
+<h4>Ta mission</h4>
     
 
-<ol><li>Lis l’exemple : A2 : 0 ; B2 : 500 ; A3 : =A2+1 ; B3 : =B2-20.</li><li>Sélectionne A3:B3, puis tire la poignée vers le bas : le tableur calcule chaque jour.</li><li>À toi : A2 : 0 ; B2 : 6 000 ; A3 : =A2+1 ; B3 : =B2-180 ; recopie jusqu’au jour 40, puis lis le stock au jour 30.</li><li>Pourquoi le tableur ? 40 calculs en une recopie.</li></ol>
+<ol><li>À toi : A2 : 0 ; B2 : 6 000 ; A3 : =A2+1 ; B3 : =B2-180 ; recopie jusqu’au jour 40, puis lis le stock au jour 30.</li><li>Pourquoi le tableur ? 40 calculs en une recopie.</li></ol>
     
 
 <h4>Points clés à compléter</h4>
@@ -322,7 +421,7 @@
     
 
 
-            <ol class="course-paper-questions"><li><span>Stock au jour 30 ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>À quel jour le stock devient-il négatif (impossible) ? Que signifie-t-il ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Entraînement — u₀ = 1 000, r = −120. Quel est le terme u₅ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — Avec cette suite, à partir de quel rang le terme devient-il négatif ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Stock au jour 30 ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>À quel jour le stock devient-il négatif (impossible) ? Que signifie-t-il ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
@@ -332,7 +431,7 @@
     
 
 
-            <ol class="course-paper-questions"><li><span>Réponds au problème du jour : comment modéliser une quantité qui diminue chaque jour de la même valeur ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Réponds au problème du jour : comment modéliser une quantité qui diminue chaque jour de la même valeur ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
@@ -342,7 +441,7 @@
     
 
 
-            <ol class="course-paper-questions"><li><span>Le modèle reste-t-il une suite arithmétique ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Le modèle reste-t-il une suite arithmétique ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
@@ -359,21 +458,21 @@
             <h2 class="course-paper-part">Fiche d’exercices</h2><h3>Exercice 1 — Suite arithmétique</h3>
             
 
-            <ol class="course-paper-questions"><li><span>u₀ = 500, r = −20 : u₁, u₂, u₃ ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Relation de récurrence ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+            <ol class="course-paper-questions"><li><span>u₀ = 500, r = −20 : u₁, u₂, u₃ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Relation de récurrence ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>Exercice 2 — Stock</h3>
             
 
-            <ol class="course-paper-questions"><li><span>Stock 2 400 kg, 120 kg/jour : stock au jour 10 ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Stock 2 400 kg, 120 kg/jour : stock au jour 10 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>Exercice 3 — Sens</h3>
             
 
-            <ol class="course-paper-questions"><li><span>La suite est-elle croissante ou décroissante ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+            <ol class="course-paper-questions"><li><span>La suite est-elle croissante ou décroissante ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
     </article>
@@ -395,10 +494,52 @@
         
 
         
+<h4>La situation</h4>
+    
+
+<p>L’écurie a 6 000 kg de foin au jour 0 et en utilise 180 kg chaque jour. Combien en restera-t-il les jours suivants ?</p>
+    
+
+<h4>Ce que c’est</h4>
+    
+
+<p>Une suite est une liste de nombres numérotés u₀, u₁, u₂… : le terme uₙ est la valeur au rang n (ici le stock au jour n). Dans une suite arithmétique, on passe d’un terme au suivant en ajoutant toujours le même nombre.</p>
+    
+
+<h4>À quoi ça sert</h4>
+    
+
+<ul><li>Suivre une quantité jour après jour, mois après mois : stock, économies, nombre d’adhérents.</li><li>Prévoir à quel moment une quantité atteint un seuil.</li></ul>
+    
+
+<h4>Comment ça marche</h4>
+    
+
+<ol><li>u₀ est la valeur de départ (jour 0).</li><li>Pour obtenir le terme suivant, on ajoute la même quantité r (ici on enlève 180, donc on ajoute −180).</li><li>On calcule les termes un par un : u₁, puis u₂ à partir de u₁, etc.</li></ol>
+    
+
+<p>À retenir : Suite arithmétique : uₙ₊₁ = uₙ + r ; u₀ est le terme initial.</p>
+    
+
+<h4>Exemple fait ensemble en classe</h4>
+    
+
+<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+    
+
+<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+    
+
+<ol><li>u₀ = 100 et chaque terme augmente de 15. Calcule u₁, u₂, u₃.</li><li>u₀ = 2 000 et chaque jour −250. Calcule u₁ et u₂.</li></ol>
+    
+
 <ul><li>Automatisme : 6 000 − 180 = ?</li></ul>
     
 
-<ol><li>Lis l’exemple : un stock de granulés u₀ = 500 kg, qui baisse de 20 kg par jour.</li><li>u₁ = 500 − 20 = 480 ; u₂ = 480 − 20 = 460 ; u₃ = 460 − 20 = 440.</li><li>À toi : u₀ = 6 000 kg (jour 0), chaque jour −180 kg. Calcule u₁, u₂, u₃.</li><li>Pourquoi une suite ? On suit la valeur jour après jour.</li></ol>
+<h4>Ta mission</h4>
+    
+
+<ol><li>À toi : u₀ = 6 000 kg (jour 0), chaque jour −180 kg. Calcule u₁, u₂, u₃.</li><li>Pourquoi une suite ? On suit la valeur jour après jour.</li></ol>
     
 
 
@@ -566,7 +707,49 @@
         
 
         
-<ol><li>Lis l’exemple des granulés : chaque terme = le précédent − 20.</li><li>On l’écrit : uₙ₊₁ = uₙ − 20. Le nombre ajouté (−20) s’appelle la raison r.</li><li>Raison négative : la suite diminue ; positive : elle augmente.</li><li>À toi : écris la relation de récurrence du stock de foin et donne la raison.</li><li>Pourquoi « récurrence » ? Chaque terme se calcule à partir du précédent.</li></ol>
+<h4>La situation</h4>
+    
+
+<p>Plutôt que d’écrire « on enlève 180 » à chaque fois, on veut une écriture mathématique courte.</p>
+    
+
+<h4>Ce que c’est</h4>
+    
+
+<p>La relation de récurrence dit comment calculer un terme à partir du précédent. Le nombre ajouté à chaque étape s’appelle la raison r.</p>
+    
+
+<h4>À quoi ça sert</h4>
+    
+
+<ul><li>Décrire la suite en une ligne.</li><li>Savoir tout de suite si la quantité augmente ou diminue.</li></ul>
+    
+
+<h4>Comment ça marche</h4>
+    
+
+<ol><li>On écrit uₙ₊₁ = uₙ + r, en remplaçant r par sa valeur.</li><li>Si r est positif, la suite est croissante ; si r est négatif, elle est décroissante.</li></ol>
+    
+
+<p>À retenir : r &gt; 0 : suite croissante ; r &lt; 0 : suite décroissante.</p>
+    
+
+<h4>Exemple fait ensemble en classe</h4>
+    
+
+<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+    
+
+<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+    
+
+<ol><li>Écris la relation de récurrence d’une suite qui commence à 50 et augmente de 12 à chaque étape.</li><li>uₙ₊₁ = uₙ − 7 : la suite est-elle croissante ou décroissante ?</li></ol>
+    
+
+<h4>Ta mission</h4>
+    
+
+<ol><li>À toi : écris la relation de récurrence du stock de foin et donne la raison.</li><li>Pourquoi « récurrence » ? Chaque terme se calcule à partir du précédent.</li></ol>
     
 
 
@@ -685,7 +868,49 @@
         
 
         
-<ol><li>Lis l’exemple : A2 : 0 ; B2 : 500 ; A3 : =A2+1 ; B3 : =B2-20.</li><li>Sélectionne A3:B3, puis tire la poignée vers le bas : le tableur calcule chaque jour.</li><li>À toi : A2 : 0 ; B2 : 6 000 ; A3 : =A2+1 ; B3 : =B2-180 ; recopie jusqu’au jour 40, puis lis le stock au jour 30.</li><li>Pourquoi le tableur ? 40 calculs en une recopie.</li></ol>
+<h4>La situation</h4>
+    
+
+<p>Combien restera-t-il au jour 30 ? À quel jour le foin sera-t-il épuisé ? Calculer 40 termes à la main serait long.</p>
+    
+
+<h4>Ce que c’est</h4>
+    
+
+<p>Au tableur, une formule recopiée vers le bas calcule chaque terme à partir du précédent : c’est la relation de récurrence.</p>
+    
+
+<h4>À quoi ça sert</h4>
+    
+
+<ul><li>Calculer beaucoup de termes d’un coup.</li><li>Repérer le jour où un seuil est atteint (stock épuisé, il faut commander).</li></ul>
+    
+
+<h4>Comment ça marche</h4>
+    
+
+<ol><li>Colonne A : le jour (A2 : 0, puis =A2+1).</li><li>Colonne B : le stock (B2 : u₀, puis =B2 + r).</li><li>On sélectionne la 2e ligne de formules et on tire vers le bas.</li><li>On lit le terme voulu ; un stock négatif signifie que le modèle n’est plus valable.</li></ol>
+    
+
+<p>À retenir : Un terme impossible (stock négatif) montre la limite du modèle.</p>
+    
+
+<h4>Exemple fait ensemble en classe</h4>
+    
+
+<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+    
+
+<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+    
+
+<ol><li>u₀ = 1 000, r = −120. Quel est le terme u₅ ?</li><li>Avec cette suite, à partir de quel rang le terme devient-il négatif ?</li></ol>
+    
+
+<h4>Ta mission</h4>
+    
+
+<ol><li>À toi : A2 : 0 ; B2 : 6 000 ; A3 : =A2+1 ; B3 : =B2-180 ; recopie jusqu’au jour 40, puis lis le stock au jour 30.</li><li>Pourquoi le tableur ? 40 calculs en une recopie.</li></ol>
     
 
 

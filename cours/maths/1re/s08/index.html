@@ -170,7 +170,7 @@
             
             <li>Indicateurs de position : moyenne, médiane ; de dispersion : étendue, quartiles, écart interquartile, écart-type.</li>
             
-            <li>Fonctions : MOYENNE, MEDIANE, QUARTILE, ECARTYPEP, MIN, MAX.</li>
+            <li>Fonctions du tableur : NB, MOYENNE, MEDIANE, QUARTILE, ECARTYPEP, MIN, MAX.</li>
             
         </ul>
         
@@ -213,7 +213,7 @@
 <h4>Ce que tu vas apprendre</h4>
     
 
-<ul><li>Indicateurs de position : moyenne, médiane ; de dispersion : étendue, quartiles, écart interquartile, écart-type.</li><li>Fonctions : MOYENNE, MEDIANE, QUARTILE, ECARTYPEP, MIN, MAX.</li></ul>
+<ul><li>Indicateurs de position : moyenne, médiane ; de dispersion : étendue, quartiles, écart interquartile, écart-type.</li><li>Fonctions du tableur : NB, MOYENNE, MEDIANE, QUARTILE, ECARTYPEP, MIN, MAX.</li></ul>
     
 
 <h4>Ce que tu vas savoir faire</h4>
@@ -238,6 +238,39 @@
         <section class="course-paper-section">
             <h3>I. Les indicateurs</h3>
             
+<h4>La situation</h4>
+    
+
+<p>Un juge a noté 60 chevaux sur 20 pour leurs allures. Calculer la moyenne de 60 notes à la main serait long : le tableur le fait en une formule.</p>
+    
+
+<h4>Ce que c’est</h4>
+    
+
+<p>Un indicateur de position est un seul nombre qui dit autour de quelle valeur se situe la série : la moyenne (valeur d’équilibre) ou la médiane (valeur du milieu de la série rangée).</p>
+    
+
+<h4>À quoi ça sert</h4>
+    
+
+<ul><li>Résumer une longue série en un seul nombre.</li><li>Comparer le niveau de deux groupes, de deux années.</li></ul>
+    
+
+<h4>Comment ça marche</h4>
+    
+
+<ol><li>On sélectionne la plage des valeurs (par exemple B2:B61), sans le titre.</li><li>=NB(plage) compte les valeurs : on vérifie qu’il n’en manque pas.</li><li>=MOYENNE(plage) et =MEDIANE(plage) donnent la position ; =MIN et =MAX les extrêmes.</li></ol>
+    
+
+<p>À retenir : Moyenne et médiane sont des indicateurs de position.</p>
+    
+
+<h4>Exemple fait ensemble en classe</h4>
+    
+
+<div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    
+
 <ul><li>Automatisme : moyenne de 12, 14, 16.</li></ul>
     
 
@@ -247,10 +280,10 @@
 <p>Tu vas calculer au tableur les indicateurs de position des 60 notes de concours. On attend trois résultats.</p>
     
 
-<h4>Méthode</h4>
+<h4>Ta mission</h4>
     
 
-<ol><li>Lis l’exemple : 4 notes en B2:B5.</li><li>=NB(B2:B5) compte les valeurs : 4.</li><li>=MOYENNE(B2:B5), =MEDIANE(B2:B5), =MIN(B2:B5), =MAX(B2:B5) donnent les autres indicateurs.</li><li>À toi : ouvre le fichier modele_allures.ods (à télécharger ci-dessus, 60 notes sur 20) et calcule NB, MOYENNE, MEDIANE, MIN, MAX.</li><li>Pourquoi NB ? Vérifier qu’aucune note ne manque.</li></ol>
+<ol><li>À toi : ouvre le fichier modele_allures.ods (à télécharger ci-dessus, 60 notes sur 20) et calcule NB, MOYENNE, MEDIANE, MIN, MAX.</li><li>Pourquoi NB ? Vérifier qu’aucune note ne manque.</li></ol>
     
 
 <h4>Exemple et documents</h4>
@@ -272,22 +305,55 @@
     
 
 
-            <ol class="course-paper-questions"><li><span>Résultats.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Entraînement — Calcule de tête la moyenne et la médiane de 10 ; 12 ; 17.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — Quelle formule écrire pour la moyenne des cellules C2 à C30 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Résultats.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>II. La dispersion</h3>
             
+<h4>La situation</h4>
+    
+
+<p>Deux juges peuvent avoir la même moyenne, mais l’un met des notes très proches, l’autre des notes très écartées. Comment le mesurer ?</p>
+    
+
+<h4>Ce que c’est</h4>
+    
+
+<p>Un indicateur de dispersion dit si les valeurs sont serrées ou étalées. Les quartiles Q1 et Q3 coupent la série rangée en quatre parts égales ; l’écart interquartile Q3 − Q1 contient la moitié centrale des valeurs ; l’écart-type mesure l’écart moyen à la moyenne.</p>
+    
+
+<h4>À quoi ça sert</h4>
+    
+
+<ul><li>Savoir si un groupe est homogène ou hétérogène.</li><li>Compléter la moyenne, qui ne dit rien de la dispersion.</li></ul>
+    
+
+<h4>Comment ça marche</h4>
+    
+
+<ol><li>=QUARTILE(plage;1) donne Q1 ; =QUARTILE(plage;3) donne Q3.</li><li>Dans une autre cellule : =Q3 − Q1 (en cliquant sur les deux cellules) donne l’écart interquartile.</li><li>=ECARTYPEP(plage) donne l’écart-type : plus il est grand, plus les valeurs s’éloignent de la moyenne.</li></ol>
+    
+
+<p>À retenir : Écart interquartile = Q3 − Q1 ; un écart-type grand = série dispersée.</p>
+    
+
+<h4>Exemple fait ensemble en classe</h4>
+    
+
+<div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    
+
 <h4>Ce que tu vas faire</h4>
     
 
 <p>Tu vas calculer les quartiles, l’écart interquartile et l’écart-type des notes. On attend les quatre valeurs.</p>
     
 
-<h4>Méthode</h4>
+<h4>Ta mission</h4>
     
 
-<ol><li>Lis l’exemple : =QUARTILE(B2:B5;1) donne Q1, =QUARTILE(B2:B5;3) donne Q3.</li><li>Écart interquartile : Q3 − Q1 dans une autre cellule.</li><li>=ECARTYPEP(B2:B5) donne l’écart-type : plus il est grand, plus les notes s’éloignent de la moyenne.</li><li>À toi : calcule Q1, Q3, l’écart interquartile et ECARTYPEP pour les 60 notes.</li><li>Pourquoi l’écart-type ? Il mesure l’écart moyen à la moyenne.</li></ol>
+<ol><li>À toi : calcule Q1, Q3, l’écart interquartile et ECARTYPEP pour les 60 notes.</li><li>Pourquoi l’écart-type ? Il mesure l’écart moyen à la moyenne.</li></ol>
     
 
 <h4>Points clés à compléter</h4>
@@ -300,22 +366,55 @@
     
 
 
-            <ol class="course-paper-questions"><li><span>Écris Q1, Q3, l’écart interquartile et l’écart-type.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Entraînement — Q1 = 10 et Q3 = 16. Calcule l’écart interquartile.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — Série A : écart-type 1 ; série B : écart-type 4. Laquelle est la plus homogène ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Écris Q1, Q3, l’écart interquartile et l’écart-type.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>III. Interpréter</h3>
             
+<h4>La situation</h4>
+    
+
+<p>L’organisateur du concours veut savoir en deux phrases si le niveau était bon et si les chevaux étaient homogènes.</p>
+    
+
+<h4>Ce que c’est</h4>
+    
+
+<p>Interpréter, c’est traduire les indicateurs en phrases compréhensibles par quelqu’un qui n’a pas fait le calcul.</p>
+    
+
+<h4>À quoi ça sert</h4>
+    
+
+<ul><li>Communiquer un résultat à un juge, un éleveur, un client.</li><li>Prendre une décision à partir de chiffres.</li></ul>
+    
+
+<h4>Comment ça marche</h4>
+    
+
+<ol><li>Une phrase sur la position : « La moitié des chevaux a plus de … (médiane). »</li><li>Une phrase sur la dispersion : « La moitié centrale des notes est entre Q1 et Q3, soit un écart de … points. »</li><li>On conclut : série homogène ou dispersée.</li></ol>
+    
+
+<p>À retenir : Une phrase pour la position, une phrase pour la dispersion, toujours avec les chiffres.</p>
+    
+
+<h4>Exemple fait ensemble en classe</h4>
+    
+
+<div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    
+
 <h4>Ce que tu vas faire</h4>
     
 
 <p>Tu vas interpréter la position et la dispersion des notes en deux phrases. On attend les deux phrases.</p>
     
 
-<h4>Méthode</h4>
+<h4>Ta mission</h4>
     
 
-<ol><li>Lis l’exemple : médiane 12, Q1 = 10, Q3 = 14.</li><li>Position : « La moitié des chevaux a plus de 12 sur 20. »</li><li>Dispersion : « La moitié centrale des notes est entre 10 et 14 : écart de 4 points. »</li><li>À toi : rédige deux phrases avec tes résultats, une sur la position, une sur la dispersion.</li><li>Pourquoi deux phrases ? Un juge veut savoir le niveau moyen et si les chevaux sont homogènes.</li></ol>
+<ol><li>À toi : rédige deux phrases avec tes résultats, une sur la position, une sur la dispersion.</li><li>Pourquoi deux phrases ? Un juge veut savoir le niveau moyen et si les chevaux sont homogènes.</li></ol>
     
 
 <h4>Points clés à compléter</h4>
@@ -328,7 +427,7 @@
     
 
 
-            <ol class="course-paper-questions"><li><span>Rédige ton interprétation.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Entraînement — Médiane 15, Q1 = 14, Q3 = 16. Écris les deux phrases.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Rédige ton interprétation.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
@@ -338,7 +437,7 @@
     
 
 
-            <ol class="course-paper-questions"><li><span>Réponds au problème du jour : comment résumer rapidement une série avec des indicateurs au tableur ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Réponds au problème du jour : comment résumer rapidement une série avec des indicateurs au tableur ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
@@ -348,7 +447,7 @@
     
 
 
-            <ol class="course-paper-questions"><li><span>Quel indicateur bouge le plus : moyenne ou médiane ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Quel indicateur bouge le plus : moyenne ou médiane ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
@@ -368,21 +467,21 @@
     
 
 
-            <ol class="course-paper-questions"><li><span>Moyenne ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Médiane ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Moyenne ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Médiane ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>Exercice 2 — Dispersion</h3>
             
 
-            <ol class="course-paper-questions"><li><span>Étendue des notes ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Étendue des notes ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>Exercice 3 — Interpréter</h3>
             
 
-            <ol class="course-paper-questions"><li><span>Rédige une phrase sur la position et une sur la dispersion.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Rédige une phrase sur la position et une sur la dispersion.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
     </article>
@@ -404,13 +503,55 @@
         
 
         
+<h4>La situation</h4>
+    
+
+<p>Un juge a noté 60 chevaux sur 20 pour leurs allures. Calculer la moyenne de 60 notes à la main serait long : le tableur le fait en une formule.</p>
+    
+
+<h4>Ce que c’est</h4>
+    
+
+<p>Un indicateur de position est un seul nombre qui dit autour de quelle valeur se situe la série : la moyenne (valeur d’équilibre) ou la médiane (valeur du milieu de la série rangée).</p>
+    
+
+<h4>À quoi ça sert</h4>
+    
+
+<ul><li>Résumer une longue série en un seul nombre.</li><li>Comparer le niveau de deux groupes, de deux années.</li></ul>
+    
+
+<h4>Comment ça marche</h4>
+    
+
+<ol><li>On sélectionne la plage des valeurs (par exemple B2:B61), sans le titre.</li><li>=NB(plage) compte les valeurs : on vérifie qu’il n’en manque pas.</li><li>=MOYENNE(plage) et =MEDIANE(plage) donnent la position ; =MIN et =MAX les extrêmes.</li></ol>
+    
+
+<p>À retenir : Moyenne et médiane sont des indicateurs de position.</p>
+    
+
+<h4>Exemple fait ensemble en classe</h4>
+    
+
+<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+    
+
+<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+    
+
+<ol><li>Calcule de tête la moyenne et la médiane de 10 ; 12 ; 17.</li><li>Quelle formule écrire pour la moyenne des cellules C2 à C30 ?</li></ol>
+    
+
 <p class="cours-fichier"><a href="/tifsec-test-eleves/assets/fichiers/maths/1re/modele_allures.ods" download>Télécharger le fichier : notes de 60 chevaux en modèle et allures</a> <span>(modele_allures.ods)</span></p>
     
 
 <ul><li>Automatisme : moyenne de 12, 14, 16.</li></ul>
     
 
-<ol><li>Lis l’exemple : 4 notes en B2:B5.</li><li>=NB(B2:B5) compte les valeurs : 4.</li><li>=MOYENNE(B2:B5), =MEDIANE(B2:B5), =MIN(B2:B5), =MAX(B2:B5) donnent les autres indicateurs.</li><li>À toi : ouvre le fichier modele_allures.ods (à télécharger ci-dessus, 60 notes sur 20) et calcule NB, MOYENNE, MEDIANE, MIN, MAX.</li><li>Pourquoi NB ? Vérifier qu’aucune note ne manque.</li></ol>
+<h4>Ta mission</h4>
+    
+
+<ol><li>À toi : ouvre le fichier modele_allures.ods (à télécharger ci-dessus, 60 notes sur 20) et calcule NB, MOYENNE, MEDIANE, MIN, MAX.</li><li>Pourquoi NB ? Vérifier qu’aucune note ne manque.</li></ol>
     
 
 
@@ -578,7 +719,49 @@
         
 
         
-<ol><li>Lis l’exemple : =QUARTILE(B2:B5;1) donne Q1, =QUARTILE(B2:B5;3) donne Q3.</li><li>Écart interquartile : Q3 − Q1 dans une autre cellule.</li><li>=ECARTYPEP(B2:B5) donne l’écart-type : plus il est grand, plus les notes s’éloignent de la moyenne.</li><li>À toi : calcule Q1, Q3, l’écart interquartile et ECARTYPEP pour les 60 notes.</li><li>Pourquoi l’écart-type ? Il mesure l’écart moyen à la moyenne.</li></ol>
+<h4>La situation</h4>
+    
+
+<p>Deux juges peuvent avoir la même moyenne, mais l’un met des notes très proches, l’autre des notes très écartées. Comment le mesurer ?</p>
+    
+
+<h4>Ce que c’est</h4>
+    
+
+<p>Un indicateur de dispersion dit si les valeurs sont serrées ou étalées. Les quartiles Q1 et Q3 coupent la série rangée en quatre parts égales ; l’écart interquartile Q3 − Q1 contient la moitié centrale des valeurs ; l’écart-type mesure l’écart moyen à la moyenne.</p>
+    
+
+<h4>À quoi ça sert</h4>
+    
+
+<ul><li>Savoir si un groupe est homogène ou hétérogène.</li><li>Compléter la moyenne, qui ne dit rien de la dispersion.</li></ul>
+    
+
+<h4>Comment ça marche</h4>
+    
+
+<ol><li>=QUARTILE(plage;1) donne Q1 ; =QUARTILE(plage;3) donne Q3.</li><li>Dans une autre cellule : =Q3 − Q1 (en cliquant sur les deux cellules) donne l’écart interquartile.</li><li>=ECARTYPEP(plage) donne l’écart-type : plus il est grand, plus les valeurs s’éloignent de la moyenne.</li></ol>
+    
+
+<p>À retenir : Écart interquartile = Q3 − Q1 ; un écart-type grand = série dispersée.</p>
+    
+
+<h4>Exemple fait ensemble en classe</h4>
+    
+
+<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+    
+
+<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+    
+
+<ol><li>Q1 = 10 et Q3 = 16. Calcule l’écart interquartile.</li><li>Série A : écart-type 1 ; série B : écart-type 4. Laquelle est la plus homogène ?</li></ol>
+    
+
+<h4>Ta mission</h4>
+    
+
+<ol><li>À toi : calcule Q1, Q3, l’écart interquartile et ECARTYPEP pour les 60 notes.</li><li>Pourquoi l’écart-type ? Il mesure l’écart moyen à la moyenne.</li></ol>
     
 
 
@@ -681,7 +864,49 @@
         
 
         
-<ol><li>Lis l’exemple : médiane 12, Q1 = 10, Q3 = 14.</li><li>Position : « La moitié des chevaux a plus de 12 sur 20. »</li><li>Dispersion : « La moitié centrale des notes est entre 10 et 14 : écart de 4 points. »</li><li>À toi : rédige deux phrases avec tes résultats, une sur la position, une sur la dispersion.</li><li>Pourquoi deux phrases ? Un juge veut savoir le niveau moyen et si les chevaux sont homogènes.</li></ol>
+<h4>La situation</h4>
+    
+
+<p>L’organisateur du concours veut savoir en deux phrases si le niveau était bon et si les chevaux étaient homogènes.</p>
+    
+
+<h4>Ce que c’est</h4>
+    
+
+<p>Interpréter, c’est traduire les indicateurs en phrases compréhensibles par quelqu’un qui n’a pas fait le calcul.</p>
+    
+
+<h4>À quoi ça sert</h4>
+    
+
+<ul><li>Communiquer un résultat à un juge, un éleveur, un client.</li><li>Prendre une décision à partir de chiffres.</li></ul>
+    
+
+<h4>Comment ça marche</h4>
+    
+
+<ol><li>Une phrase sur la position : « La moitié des chevaux a plus de … (médiane). »</li><li>Une phrase sur la dispersion : « La moitié centrale des notes est entre Q1 et Q3, soit un écart de … points. »</li><li>On conclut : série homogène ou dispersée.</li></ol>
+    
+
+<p>À retenir : Une phrase pour la position, une phrase pour la dispersion, toujours avec les chiffres.</p>
+    
+
+<h4>Exemple fait ensemble en classe</h4>
+    
+
+<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+    
+
+<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+    
+
+<ol><li>Médiane 15, Q1 = 14, Q3 = 16. Écris les deux phrases.</li></ol>
+    
+
+<h4>Ta mission</h4>
+    
+
+<ol><li>À toi : rédige deux phrases avec tes résultats, une sur la position, une sur la dispersion.</li><li>Pourquoi deux phrases ? Un juge veut savoir le niveau moyen et si les chevaux sont homogènes.</li></ol>
     
 
 

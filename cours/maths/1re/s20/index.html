@@ -238,6 +238,39 @@
         <section class="course-paper-section">
             <h3>I. Les termes au tableur</h3>
             
+<h4>La situation</h4>
+    
+
+<p>Le client paie une pension tous les mois pendant 10 ans. Combien paie-t-il chaque année avec chaque option ?</p>
+    
+
+<h4>Ce que c’est</h4>
+    
+
+<p>Le coût annuel est le terme de la suite pour une année : 12 fois le prix mensuel de cette année-là.</p>
+    
+
+<h4>À quoi ça sert</h4>
+    
+
+<ul><li>Préparer le calcul du total sur plusieurs années.</li><li>Comparer deux contrats année par année.</li></ul>
+    
+
+<h4>Comment ça marche</h4>
+    
+
+<ol><li>Colonne A : le rang n de 0 à 9.</li><li>Option A : =12*400*1,03^A2 ; option B : =12*(400+12*A2).</li><li>On recopie vers le bas jusqu’à n = 9.</li></ol>
+    
+
+<p>À retenir : Coût annuel = 12 × coût mensuel.</p>
+    
+
+<h4>Exemple fait ensemble en classe</h4>
+    
+
+<div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    
+
 <ul><li>Automatisme : 12 × 508 = ?</li></ul>
     
 
@@ -247,10 +280,10 @@
 <p>Tu vas construire au tableur les coûts annuels des deux options de pension sur 10 ans. On attend deux coûts annuels.</p>
     
 
-<h4>Méthode</h4>
+<h4>Ta mission</h4>
     
 
-<ol><li>Lis l’exemple : un loyer de 100 € par mois, +2 % par an.</li><li>Coût annuel l’année n : 12 × 100 × 1,02ⁿ ; au tableur, en B2 : =12*100*1,02^A2.</li><li>Pour n = 0 : 12 × 100 = 1 200 €.</li><li>À toi : colonne A : n de 0 à 9 ; colonne B : 12 × 400 × 1,03ⁿ (option A) ; colonne C : 12 × (400 + 12n) (option B).</li><li>Pourquoi × 12 ? Le prix est mensuel, le coût annuel compte 12 mois.</li></ol>
+<ol><li>À toi : colonne A : n de 0 à 9 ; colonne B : 12 × 400 × 1,03ⁿ (option A) ; colonne C : 12 × (400 + 12n) (option B).</li><li>Pourquoi × 12 ? Le prix est mensuel, le coût annuel compte 12 mois.</li></ol>
     
 
 <h4>Points clés à compléter</h4>
@@ -263,22 +296,55 @@
     
 
 
-            <ol class="course-paper-questions"><li><span>Coût annuel de l’option A pour n = 0 ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Coût annuel de l’option B pour n = 9 ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Entraînement — Un loyer de 100 € par mois augmente de 2 % par an. Coût annuel pour n = 0 et n = 1 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Coût annuel de l’option A pour n = 0 ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Coût annuel de l’option B pour n = 9 ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>II. Les sommes</h3>
             
+<h4>La situation</h4>
+    
+
+<p>Ce qui compte pour le client, c’est ce qu’il paie en tout sur 10 ans.</p>
+    
+
+<h4>Ce que c’est</h4>
+    
+
+<p>La somme des termes est le total cumulé sur plusieurs périodes : u₀ + u₁ + … + u₉.</p>
+    
+
+<h4>À quoi ça sert</h4>
+    
+
+<ul><li>Connaître le coût total d’un contrat, d’un crédit, d’un abonnement.</li><li>Comparer des options sur toute leur durée.</li></ul>
+    
+
+<h4>Comment ça marche</h4>
+    
+
+<ol><li>Au tableur : =SOMME(B2:B11) additionne les 10 coûts annuels.</li><li>On fait de même pour l’autre option et on compare.</li><li>On peut aussi faire une colonne de cumul (chaque ligne = cumul précédent + terme).</li></ol>
+    
+
+<p>À retenir : Total payé = somme des termes.</p>
+    
+
+<h4>Exemple fait ensemble en classe</h4>
+    
+
+<div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    
+
 <h4>Ce que tu vas faire</h4>
     
 
 <p>Tu vas calculer avec le tableur le coût total de chaque option de pension sur 10 ans. On attend les deux totaux.</p>
     
 
-<h4>Méthode</h4>
+<h4>Ta mission</h4>
     
 
-<ol><li>Lis l’exemple : =SOMME(B2:B11) additionne les 10 coûts annuels de la colonne B.</li><li>C’est ce que le client paie en tout sur 10 ans.</li><li>À toi : calcule SOMME(B2:B11) et SOMME(C2:C11), puis compare.</li><li>Pourquoi la somme ? C’est ce que le client paie vraiment.</li></ol>
+<ol><li>À toi : calcule SOMME(B2:B11) et SOMME(C2:C11), puis compare.</li><li>Pourquoi la somme ? C’est ce que le client paie vraiment.</li></ol>
     
 
 <h4>Points clés à compléter</h4>
@@ -291,22 +357,55 @@
     
 
 
-            <ol class="course-paper-questions"><li><span>Coût total option A sur 10 ans (à l’euro près) ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Coût total option B ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Entraînement — Termes 100 ; 110 ; 120 ; 130. Quelle est leur somme ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — Quelle formule additionne les cellules C2 à C11 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Coût total option A sur 10 ans (à l’euro près) ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Coût total option B ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>III. Conseiller</h3>
             
+<h4>La situation</h4>
+    
+
+<p>Le client demande conseil : quelle option choisir ?</p>
+    
+
+<h4>Ce que c’est</h4>
+    
+
+<p>Un conseil chiffré donne une recommandation claire appuyée sur les totaux calculés.</p>
+    
+
+<h4>À quoi ça sert</h4>
+    
+
+<ul><li>Aider un client à décider ; défendre un choix devant un responsable.</li></ul>
+    
+
+<h4>Comment ça marche</h4>
+    
+
+<ol><li>On nomme l’option conseillée.</li><li>On donne les deux totaux et l’économie réalisée.</li><li>On ajoute une remarque sur le long terme.</li></ol>
+    
+
+<p>À retenir : On conseille l’option au coût total le plus faible, chiffres à l’appui.</p>
+    
+
+<h4>Exemple fait ensemble en classe</h4>
+    
+
+<div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    
+
 <h4>Ce que tu vas faire</h4>
     
 
 <p>Tu vas conseiller le client sur l’option de pension la moins chère sur 10 ans. On attend un conseil chiffré.</p>
     
 
-<h4>Méthode</h4>
+<h4>Ta mission</h4>
     
 
-<ol><li>Lis l’exemple de conseil : « Je vous conseille l’option … : … € sur 10 ans contre … €, soit … € d’économie. »</li><li>Ajoute une remarque sur le long terme.</li><li>À toi : rédige ton conseil au client avec les chiffres.</li><li>Pourquoi un conseil ? Le calcul sert la décision.</li></ol>
+<ol><li>À toi : rédige ton conseil au client avec les chiffres.</li><li>Pourquoi un conseil ? Le calcul sert la décision.</li></ol>
     
 
 <h4>Points clés à compléter</h4>
@@ -319,7 +418,7 @@
     
 
 
-            <ol class="course-paper-questions"><li><span>Quelle option conseilles-tu ? Justifie avec les totaux.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Entraînement — Option C : 30 000 € sur 5 ans ; option D : 29 400 €. Rédige le conseil.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Quelle option conseilles-tu ? Justifie avec les totaux.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
@@ -329,7 +428,7 @@
     
 
 
-            <ol class="course-paper-questions"><li><span>Réponds au problème du jour : comment calculer la somme des termes d’une suite avec le tableur ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Réponds au problème du jour : comment calculer la somme des termes d’une suite avec le tableur ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
@@ -339,7 +438,7 @@
     
 
 
-            <ol class="course-paper-questions"><li><span>Vérifie le total A.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Vérifie le total A.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
@@ -356,21 +455,21 @@
             <h2 class="course-paper-part">Fiche d’exercices</h2><h3>Exercice 1 — Somme</h3>
             
 
-            <ol class="course-paper-questions"><li><span>Termes 100, 110, 120, …, 190 (10 termes) : somme ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Formule tableur de la somme de B2 à B11 ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Termes 100, 110, 120, …, 190 (10 termes) : somme ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Formule tableur de la somme de B2 à B11 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>Exercice 2 — Coût total</h3>
             
 
-            <ol class="course-paper-questions"><li><span>Un abonnement de 30 € par mois augmente de 2 € chaque mois : total sur 12 mois ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Un abonnement de 30 € par mois augmente de 2 € chaque mois : total sur 12 mois ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>Exercice 3 — Comparer</h3>
             
 
-            <ol class="course-paper-questions"><li><span>Option A 4 800 € par an fixe, option B 4 500 € +5 % par an : laquelle est moins chère sur 3 ans ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Option A 4 800 € par an fixe, option B 4 500 € +5 % par an : laquelle est moins chère sur 3 ans ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
     </article>
@@ -392,10 +491,52 @@
         
 
         
+<h4>La situation</h4>
+    
+
+<p>Le client paie une pension tous les mois pendant 10 ans. Combien paie-t-il chaque année avec chaque option ?</p>
+    
+
+<h4>Ce que c’est</h4>
+    
+
+<p>Le coût annuel est le terme de la suite pour une année : 12 fois le prix mensuel de cette année-là.</p>
+    
+
+<h4>À quoi ça sert</h4>
+    
+
+<ul><li>Préparer le calcul du total sur plusieurs années.</li><li>Comparer deux contrats année par année.</li></ul>
+    
+
+<h4>Comment ça marche</h4>
+    
+
+<ol><li>Colonne A : le rang n de 0 à 9.</li><li>Option A : =12*400*1,03^A2 ; option B : =12*(400+12*A2).</li><li>On recopie vers le bas jusqu’à n = 9.</li></ol>
+    
+
+<p>À retenir : Coût annuel = 12 × coût mensuel.</p>
+    
+
+<h4>Exemple fait ensemble en classe</h4>
+    
+
+<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+    
+
+<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+    
+
+<ol><li>Un loyer de 100 € par mois augmente de 2 % par an. Coût annuel pour n = 0 et n = 1 ?</li></ol>
+    
+
 <ul><li>Automatisme : 12 × 508 = ?</li></ul>
     
 
-<ol><li>Lis l’exemple : un loyer de 100 € par mois, +2 % par an.</li><li>Coût annuel l’année n : 12 × 100 × 1,02ⁿ ; au tableur, en B2 : =12*100*1,02^A2.</li><li>Pour n = 0 : 12 × 100 = 1 200 €.</li><li>À toi : colonne A : n de 0 à 9 ; colonne B : 12 × 400 × 1,03ⁿ (option A) ; colonne C : 12 × (400 + 12n) (option B).</li><li>Pourquoi × 12 ? Le prix est mensuel, le coût annuel compte 12 mois.</li></ol>
+<h4>Ta mission</h4>
+    
+
+<ol><li>À toi : colonne A : n de 0 à 9 ; colonne B : 12 × 400 × 1,03ⁿ (option A) ; colonne C : 12 × (400 + 12n) (option B).</li><li>Pourquoi × 12 ? Le prix est mensuel, le coût annuel compte 12 mois.</li></ol>
     
 
 
@@ -514,7 +655,49 @@
         
 
         
-<ol><li>Lis l’exemple : =SOMME(B2:B11) additionne les 10 coûts annuels de la colonne B.</li><li>C’est ce que le client paie en tout sur 10 ans.</li><li>À toi : calcule SOMME(B2:B11) et SOMME(C2:C11), puis compare.</li><li>Pourquoi la somme ? C’est ce que le client paie vraiment.</li></ol>
+<h4>La situation</h4>
+    
+
+<p>Ce qui compte pour le client, c’est ce qu’il paie en tout sur 10 ans.</p>
+    
+
+<h4>Ce que c’est</h4>
+    
+
+<p>La somme des termes est le total cumulé sur plusieurs périodes : u₀ + u₁ + … + u₉.</p>
+    
+
+<h4>À quoi ça sert</h4>
+    
+
+<ul><li>Connaître le coût total d’un contrat, d’un crédit, d’un abonnement.</li><li>Comparer des options sur toute leur durée.</li></ul>
+    
+
+<h4>Comment ça marche</h4>
+    
+
+<ol><li>Au tableur : =SOMME(B2:B11) additionne les 10 coûts annuels.</li><li>On fait de même pour l’autre option et on compare.</li><li>On peut aussi faire une colonne de cumul (chaque ligne = cumul précédent + terme).</li></ol>
+    
+
+<p>À retenir : Total payé = somme des termes.</p>
+    
+
+<h4>Exemple fait ensemble en classe</h4>
+    
+
+<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+    
+
+<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+    
+
+<ol><li>Termes 100 ; 110 ; 120 ; 130. Quelle est leur somme ?</li><li>Quelle formule additionne les cellules C2 à C11 ?</li></ol>
+    
+
+<h4>Ta mission</h4>
+    
+
+<ol><li>À toi : calcule SOMME(B2:B11) et SOMME(C2:C11), puis compare.</li><li>Pourquoi la somme ? C’est ce que le client paie vraiment.</li></ol>
     
 
 
@@ -633,7 +816,49 @@
         
 
         
-<ol><li>Lis l’exemple de conseil : « Je vous conseille l’option … : … € sur 10 ans contre … €, soit … € d’économie. »</li><li>Ajoute une remarque sur le long terme.</li><li>À toi : rédige ton conseil au client avec les chiffres.</li><li>Pourquoi un conseil ? Le calcul sert la décision.</li></ol>
+<h4>La situation</h4>
+    
+
+<p>Le client demande conseil : quelle option choisir ?</p>
+    
+
+<h4>Ce que c’est</h4>
+    
+
+<p>Un conseil chiffré donne une recommandation claire appuyée sur les totaux calculés.</p>
+    
+
+<h4>À quoi ça sert</h4>
+    
+
+<ul><li>Aider un client à décider ; défendre un choix devant un responsable.</li></ul>
+    
+
+<h4>Comment ça marche</h4>
+    
+
+<ol><li>On nomme l’option conseillée.</li><li>On donne les deux totaux et l’économie réalisée.</li><li>On ajoute une remarque sur le long terme.</li></ol>
+    
+
+<p>À retenir : On conseille l’option au coût total le plus faible, chiffres à l’appui.</p>
+    
+
+<h4>Exemple fait ensemble en classe</h4>
+    
+
+<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+    
+
+<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+    
+
+<ol><li>Option C : 30 000 € sur 5 ans ; option D : 29 400 €. Rédige le conseil.</li></ol>
+    
+
+<h4>Ta mission</h4>
+    
+
+<ol><li>À toi : rédige ton conseil au client avec les chiffres.</li><li>Pourquoi un conseil ? Le calcul sert la décision.</li></ol>
     
 
 

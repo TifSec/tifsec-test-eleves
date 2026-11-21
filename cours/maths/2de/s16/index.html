@@ -238,6 +238,39 @@
         <section class="course-paper-section">
             <h3>I. Les fonctions</h3>
             
+<h4>La situation</h4>
+    
+
+<p>On a 120 pesées de poulains. Calculer la moyenne à la main prendrait longtemps, avec des risques d’erreur.</p>
+    
+
+<h4>Ce que c’est</h4>
+    
+
+<p>Une fonction du tableur est une formule toute prête qui calcule un indicateur sur une plage de cellules (par exemple B2:B121, « de B2 à B121 »).</p>
+    
+
+<h4>À quoi ça sert</h4>
+    
+
+<ul><li>Traiter des centaines de valeurs en quelques secondes.</li><li>Refaire le calcul automatiquement si une donnée change.</li></ul>
+    
+
+<h4>Comment ça marche</h4>
+    
+
+<ol><li>Dans une cellule vide, on tape = puis le nom de la fonction et la plage entre parenthèses.</li><li>=NB(plage) d’abord, pour vérifier le nombre de valeurs.</li><li>=MOYENNE, =MEDIANE, =MIN, =MAX donnent les autres indicateurs.</li></ol>
+    
+
+<p>À retenir : Une formule commence toujours par = ; la plage s’écrit B2:B121.</p>
+    
+
+<h4>Exemple fait ensemble en classe</h4>
+    
+
+<div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    
+
 <ul><li>Automatisme : calcule 251 − 250,4.</li></ul>
     
 
@@ -247,10 +280,10 @@
 <p>Tu vas calculer avec les fonctions du tableur les indicateurs principaux des 120 pesées de poulains. On attend trois résultats.</p>
     
 
-<h4>Méthode</h4>
+<h4>Ta mission</h4>
     
 
-<ol><li>Lis l’exemple : 5 poids en B2:B6.</li><li>Dans une cellule vide, tape =NB(B2:B6) puis Entrée : le tableur compte 5 valeurs.</li><li>=MOYENNE(B2:B6) donne la moyenne ; =MEDIANE(B2:B6) la médiane ; =MIN(B2:B6) et =MAX(B2:B6) la plus petite et la plus grande.</li><li>Une formule commence toujours par = ; la plage B2:B6 veut dire « de B2 à B6 ».</li><li>À toi : ouvre le fichier pesees.ods (à télécharger ci-dessus, 120 poids de poulains à 6 mois) et calcule NB, MOYENNE, MEDIANE, MIN, MAX.</li><li>Pourquoi NB d’abord ? On vérifie qu’on a bien les 120 valeurs.</li></ol>
+<ol><li>À toi : ouvre le fichier pesees.ods (à télécharger ci-dessus, 120 poids de poulains à 6 mois) et calcule NB, MOYENNE, MEDIANE, MIN, MAX.</li><li>Pourquoi NB d’abord ? On vérifie qu’on a bien les 120 valeurs.</li></ol>
     
 
 <h4>Exemple et documents</h4>
@@ -272,22 +305,55 @@
     
 
 
-            <ol class="course-paper-questions"><li><span>Écris les résultats.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Entraînement — Quelle formule pour la valeur maximale des cellules C2 à C50 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — Quelle formule pour compter les nombres de D2 à D30 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Écris les résultats.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>II. Les quartiles</h3>
             
+<h4>La situation</h4>
+    
+
+<p>Ranger 120 valeurs à la main pour trouver les quartiles serait très long.</p>
+    
+
+<h4>Ce que c’est</h4>
+    
+
+<p>La fonction QUARTILE donne directement Q1 ou Q3 : le 2e nombre indique lequel (1 ou 3).</p>
+    
+
+<h4>À quoi ça sert</h4>
+    
+
+<ul><li>Mesurer la dispersion d’une grande série sans la ranger.</li></ul>
+    
+
+<h4>Comment ça marche</h4>
+    
+
+<ol><li>=QUARTILE(plage;1) donne Q1 ; =QUARTILE(plage;3) donne Q3.</li><li>Dans une autre cellule : = (cellule de Q3) − (cellule de Q1) donne l’écart interquartile.</li></ol>
+    
+
+<p>À retenir : QUARTILE(plage;1) → Q1 ; QUARTILE(plage;3) → Q3.</p>
+    
+
+<h4>Exemple fait ensemble en classe</h4>
+    
+
+<div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    
+
 <h4>Ce que tu vas faire</h4>
     
 
 <p>Tu vas calculer les quartiles et l’écart interquartile des pesées avec le tableur. On attend les valeurs et une formule.</p>
     
 
-<h4>Méthode</h4>
+<h4>Ta mission</h4>
     
 
-<ol><li>Lis l’exemple : =QUARTILE(B2:B6;1) donne Q1 ; =QUARTILE(B2:B6;3) donne Q3.</li><li>Le 2e nombre dit quel quartile : 1 pour Q1, 3 pour Q3.</li><li>Écart interquartile : dans une autre cellule, tape =D3-D2 (si Q3 est en D3 et Q1 en D2).</li><li>À toi : calcule Q1, Q3 et l’écart interquartile des 120 poids.</li><li>Pourquoi cette fonction ? Elle évite de ranger 120 valeurs à la main.</li></ol>
+<ol><li>À toi : calcule Q1, Q3 et l’écart interquartile des 120 poids.</li><li>Pourquoi cette fonction ? Elle évite de ranger 120 valeurs à la main.</li></ol>
     
 
 <h4>Points clés à compléter</h4>
@@ -300,22 +366,55 @@
     
 
 
-            <ol class="course-paper-questions"><li><span>Écris Q1, Q3 et l’écart interquartile.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Écris la formule de Q1 (valeurs en B2:B121).</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Entraînement — Écris la formule de Q3 pour les cellules A2 à A41.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Écris Q1, Q3 et l’écart interquartile.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Écris la formule de Q1 (valeurs en B2:B121).</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>III. Contrôler</h3>
             
+<h4>La situation</h4>
+    
+
+<p>Le tableur ne se trompe pas dans ses calculs… mais si une donnée est mal tapée, le résultat est faux. Comment le repérer ?</p>
+    
+
+<h4>Ce que c’est</h4>
+    
+
+<p>Contrôler la plausibilité, c’est vérifier qu’un résultat a un ordre de grandeur réaliste.</p>
+    
+
+<h4>À quoi ça sert</h4>
+    
+
+<ul><li>Repérer une erreur de saisie avant de prendre une décision.</li></ul>
+    
+
+<h4>Comment ça marche</h4>
+    
+
+<ol><li>On compare MIN et MAX aux valeurs possibles (un poulain de 6 mois pèse environ 200 à 300 kg).</li><li>On vérifie que la moyenne est entre MIN et MAX et proche de la médiane.</li><li>On cherche la valeur suspecte et on la vérifie auprès de la source.</li></ol>
+    
+
+<p>À retenir : Une erreur de saisie fausse surtout la moyenne ; la médiane bouge peu.</p>
+    
+
+<h4>Exemple fait ensemble en classe</h4>
+    
+
+<div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    
+
 <h4>Ce que tu vas faire</h4>
     
 
 <p>Tu vas contrôler la plausibilité des indicateurs et repérer une valeur suspecte. On attend la valeur et ton action.</p>
     
 
-<h4>Méthode</h4>
+<h4>Ta mission</h4>
     
 
-<ol><li>Lis l’exemple : MIN = 210 kg, MAX = 2 300 kg pour des poulains de 6 mois.</li><li>Un poulain de 6 mois pèse environ 200 à 300 kg : 2 300 kg est impossible.</li><li>C’est sans doute une erreur de saisie (230 tapé avec un 0 de trop).</li><li>À toi : vérifie que la moyenne est entre MIN et MAX, puis repère la valeur suspecte.</li><li>Pourquoi contrôler ? Un poids de 2 480 kg tapé à la place de 248 fausse la moyenne.</li></ol>
+<ol><li>À toi : vérifie que la moyenne est entre MIN et MAX, puis repère la valeur suspecte.</li><li>Pourquoi contrôler ? Un poids de 2 480 kg tapé à la place de 248 fausse la moyenne.</li></ol>
     
 
 <h4>Points clés à compléter</h4>
@@ -328,7 +427,7 @@
     
 
 
-            <ol class="course-paper-questions"><li><span>As-tu trouvé une valeur suspecte ? Que fais-tu ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Entraînement — MIN = 1,2 kg pour des chevaux adultes. Que penses-tu ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>As-tu trouvé une valeur suspecte ? Que fais-tu ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
@@ -338,7 +437,7 @@
     
 
 
-            <ol class="course-paper-questions"><li><span>Réponds au problème du jour : comment obtenir rapidement les indicateurs d’une grande série avec le tableur ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Réponds au problème du jour : comment obtenir rapidement les indicateurs d’une grande série avec le tableur ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
@@ -348,7 +447,7 @@
     
 
 
-            <ol class="course-paper-questions"><li><span>Que montre-t-elle ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Que montre-t-elle ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
@@ -365,21 +464,21 @@
             <h2 class="course-paper-part">Fiche d’exercices</h2><h3>Exercice 1 — Formules</h3>
             
 
-            <ol class="course-paper-questions"><li><span>Écris la formule de la moyenne des cellules B2 à B51.</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li><li><span>Et du premier quartile ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Écris la formule de la moyenne des cellules B2 à B51.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Et du premier quartile ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>Exercice 2 — Contrôle</h3>
             
 
-            <ol class="course-paper-questions"><li><span>MIN = 180, MAX = 320, MOYENNE = 412. Est-ce possible ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+            <ol class="course-paper-questions"><li><span>MIN = 180, MAX = 320, MOYENNE = 412. Est-ce possible ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>Exercice 3 — Comptage</h3>
             
 
-            <ol class="course-paper-questions"><li><span>Quelle fonction compte les cellules qui contiennent un nombre ?</span><span class="course-paper-answer-lines" aria-hidden="true"></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Quelle fonction compte les cellules qui contiennent un nombre ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
     </article>
@@ -401,13 +500,55 @@
         
 
         
+<h4>La situation</h4>
+    
+
+<p>On a 120 pesées de poulains. Calculer la moyenne à la main prendrait longtemps, avec des risques d’erreur.</p>
+    
+
+<h4>Ce que c’est</h4>
+    
+
+<p>Une fonction du tableur est une formule toute prête qui calcule un indicateur sur une plage de cellules (par exemple B2:B121, « de B2 à B121 »).</p>
+    
+
+<h4>À quoi ça sert</h4>
+    
+
+<ul><li>Traiter des centaines de valeurs en quelques secondes.</li><li>Refaire le calcul automatiquement si une donnée change.</li></ul>
+    
+
+<h4>Comment ça marche</h4>
+    
+
+<ol><li>Dans une cellule vide, on tape = puis le nom de la fonction et la plage entre parenthèses.</li><li>=NB(plage) d’abord, pour vérifier le nombre de valeurs.</li><li>=MOYENNE, =MEDIANE, =MIN, =MAX donnent les autres indicateurs.</li></ol>
+    
+
+<p>À retenir : Une formule commence toujours par = ; la plage s’écrit B2:B121.</p>
+    
+
+<h4>Exemple fait ensemble en classe</h4>
+    
+
+<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+    
+
+<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+    
+
+<ol><li>Quelle formule pour la valeur maximale des cellules C2 à C50 ?</li><li>Quelle formule pour compter les nombres de D2 à D30 ?</li></ol>
+    
+
 <p class="cours-fichier"><a href="/tifsec-test-eleves/assets/fichiers/maths/2de/pesees.ods" download>Télécharger le fichier : pesées de 120 poulains à 6 mois</a> <span>(pesees.ods)</span></p>
     
 
 <ul><li>Automatisme : calcule 251 − 250,4.</li></ul>
     
 
-<ol><li>Lis l’exemple : 5 poids en B2:B6.</li><li>Dans une cellule vide, tape =NB(B2:B6) puis Entrée : le tableur compte 5 valeurs.</li><li>=MOYENNE(B2:B6) donne la moyenne ; =MEDIANE(B2:B6) la médiane ; =MIN(B2:B6) et =MAX(B2:B6) la plus petite et la plus grande.</li><li>Une formule commence toujours par = ; la plage B2:B6 veut dire « de B2 à B6 ».</li><li>À toi : ouvre le fichier pesees.ods (à télécharger ci-dessus, 120 poids de poulains à 6 mois) et calcule NB, MOYENNE, MEDIANE, MIN, MAX.</li><li>Pourquoi NB d’abord ? On vérifie qu’on a bien les 120 valeurs.</li></ol>
+<h4>Ta mission</h4>
+    
+
+<ol><li>À toi : ouvre le fichier pesees.ods (à télécharger ci-dessus, 120 poids de poulains à 6 mois) et calcule NB, MOYENNE, MEDIANE, MIN, MAX.</li><li>Pourquoi NB d’abord ? On vérifie qu’on a bien les 120 valeurs.</li></ol>
     
 
 
@@ -575,7 +716,49 @@
         
 
         
-<ol><li>Lis l’exemple : =QUARTILE(B2:B6;1) donne Q1 ; =QUARTILE(B2:B6;3) donne Q3.</li><li>Le 2e nombre dit quel quartile : 1 pour Q1, 3 pour Q3.</li><li>Écart interquartile : dans une autre cellule, tape =D3-D2 (si Q3 est en D3 et Q1 en D2).</li><li>À toi : calcule Q1, Q3 et l’écart interquartile des 120 poids.</li><li>Pourquoi cette fonction ? Elle évite de ranger 120 valeurs à la main.</li></ol>
+<h4>La situation</h4>
+    
+
+<p>Ranger 120 valeurs à la main pour trouver les quartiles serait très long.</p>
+    
+
+<h4>Ce que c’est</h4>
+    
+
+<p>La fonction QUARTILE donne directement Q1 ou Q3 : le 2e nombre indique lequel (1 ou 3).</p>
+    
+
+<h4>À quoi ça sert</h4>
+    
+
+<ul><li>Mesurer la dispersion d’une grande série sans la ranger.</li></ul>
+    
+
+<h4>Comment ça marche</h4>
+    
+
+<ol><li>=QUARTILE(plage;1) donne Q1 ; =QUARTILE(plage;3) donne Q3.</li><li>Dans une autre cellule : = (cellule de Q3) − (cellule de Q1) donne l’écart interquartile.</li></ol>
+    
+
+<p>À retenir : QUARTILE(plage;1) → Q1 ; QUARTILE(plage;3) → Q3.</p>
+    
+
+<h4>Exemple fait ensemble en classe</h4>
+    
+
+<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+    
+
+<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+    
+
+<ol><li>Écris la formule de Q3 pour les cellules A2 à A41.</li></ol>
+    
+
+<h4>Ta mission</h4>
+    
+
+<ol><li>À toi : calcule Q1, Q3 et l’écart interquartile des 120 poids.</li><li>Pourquoi cette fonction ? Elle évite de ranger 120 valeurs à la main.</li></ol>
     
 
 
@@ -694,7 +877,49 @@
         
 
         
-<ol><li>Lis l’exemple : MIN = 210 kg, MAX = 2 300 kg pour des poulains de 6 mois.</li><li>Un poulain de 6 mois pèse environ 200 à 300 kg : 2 300 kg est impossible.</li><li>C’est sans doute une erreur de saisie (230 tapé avec un 0 de trop).</li><li>À toi : vérifie que la moyenne est entre MIN et MAX, puis repère la valeur suspecte.</li><li>Pourquoi contrôler ? Un poids de 2 480 kg tapé à la place de 248 fausse la moyenne.</li></ol>
+<h4>La situation</h4>
+    
+
+<p>Le tableur ne se trompe pas dans ses calculs… mais si une donnée est mal tapée, le résultat est faux. Comment le repérer ?</p>
+    
+
+<h4>Ce que c’est</h4>
+    
+
+<p>Contrôler la plausibilité, c’est vérifier qu’un résultat a un ordre de grandeur réaliste.</p>
+    
+
+<h4>À quoi ça sert</h4>
+    
+
+<ul><li>Repérer une erreur de saisie avant de prendre une décision.</li></ul>
+    
+
+<h4>Comment ça marche</h4>
+    
+
+<ol><li>On compare MIN et MAX aux valeurs possibles (un poulain de 6 mois pèse environ 200 à 300 kg).</li><li>On vérifie que la moyenne est entre MIN et MAX et proche de la médiane.</li><li>On cherche la valeur suspecte et on la vérifie auprès de la source.</li></ol>
+    
+
+<p>À retenir : Une erreur de saisie fausse surtout la moyenne ; la médiane bouge peu.</p>
+    
+
+<h4>Exemple fait ensemble en classe</h4>
+    
+
+<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+    
+
+<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+    
+
+<ol><li>MIN = 1,2 kg pour des chevaux adultes. Que penses-tu ?</li></ol>
+    
+
+<h4>Ta mission</h4>
+    
+
+<ol><li>À toi : vérifie que la moyenne est entre MIN et MAX, puis repère la valeur suspecte.</li><li>Pourquoi contrôler ? Un poids de 2 480 kg tapé à la place de 248 fausse la moyenne.</li></ol>
     
 
 
