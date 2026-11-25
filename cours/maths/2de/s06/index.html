@@ -124,7 +124,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Du HT au TTC</a></li><li><a href="#a02">Du TTC au HT</a></li><li><a href="#a03">Vérifier une facture</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Partie 1 — La TVA et le prix TTC</a></li><li><a href="#a02">Partie 2 — Le prix TTC en un seul calcul</a></li><li><a href="#a03">Partie 3 — Retrouver le prix HT</a></li><li><a href="#a04">Encore des exercices (si tu as fini) — facultatif</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -136,7 +136,7 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Mathématiques · 2de Pro · S06</span></div>
-    <h1>Séance 6 : La facture du maréchal-ferrant : HT, TVA, TTC</h1>
+    <h1>Séance 6 : Prix HT, TVA et prix TTC</h1>
     
 
     
@@ -150,7 +150,7 @@
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Comment passer d’un prix hors taxes à un prix toutes taxes comprises ?</p>
+        <p>Comment passer d’un prix hors taxes à un prix toutes taxes comprises, et inversement ?</p>
     </section>
     
 
@@ -168,9 +168,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>TTC = HT × (1 + taux de TVA) ; HT = TTC ÷ (1 + taux).</li>
+            <li>TVA = HT × taux ; TTC = HT + TVA.</li>
             
-            <li>Les taux de TVA varient selon les activités équestres : on lit toujours celui indiqué sur la facture.</li>
+            <li>TTC = HT × (1 + taux) ; HT = TTC ÷ (1 + taux).</li>
             
         </ul>
         
@@ -178,7 +178,9 @@
         <h2>Ce que tu vas apprendre à faire</h2>
         <ul>
             
-            <li>Calculer un prix TTC et un prix HT.</li>
+            <li>Calculer une TVA et un prix TTC.</li>
+            
+            <li>Retrouver un prix HT à partir d’un prix TTC.</li>
             
             <li>Vérifier une facture.</li>
             
@@ -187,7 +189,7 @@
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En S05, tu as utilisé des coefficients.</p><p>La TVA est une augmentation en pourcentage : tu sais déjà la calculer.</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Aujourd’hui, trois notions : la TVA et le prix TTC, le calcul en un seul coup avec le coefficient, puis le retour au prix HT.</p><p>Pour chacune : la notion, la méthode, pourquoi ça marche, un exemple au tableau, puis beaucoup d’exercices.</p></div></section>
     
     
     
@@ -202,67 +204,45 @@
 
 <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
     <article class="course-paper-sheet">
-        <header><p class="course-paper-class">Mathématiques — 2de Pro</p><p class="course-paper-kicker">Cours et exercices — version papier</p><h2 id="course-paper-title"><span class="course-paper-number">Séance 6</span> — La facture du maréchal-ferrant : HT, TVA, TTC</h2><p>Comment passer d’un prix hors taxes à un prix toutes taxes comprises ?</p></header>
+        <header><p class="course-paper-class">Mathématiques — 2de Pro</p><p class="course-paper-kicker">Cours et exercices — version papier</p><h2 id="course-paper-title"><span class="course-paper-number">Séance 6</span> — Prix HT, TVA et prix TTC</h2><p>Trois notions : la TVA, le coefficient 1,2, le retour au prix HT. Pour chacune : la notion, la méthode, l’exemple au tableau, puis les exercices.</p></header>
         
         <section class="course-paper-section">
-            <h3>Le cours en bref</h3>
+            <h3>I. La TVA et le prix TTC</h3>
             
-<p>Le problème à résoudre : Comment passer d’un prix hors taxes à un prix toutes taxes comprises ?</p>
+<h4>La notion</h4>
     
 
-<h4>Ce que tu vas apprendre</h4>
+<p>Le prix HT (hors taxes) est le prix sans la taxe. La TVA est une taxe en pourcentage du prix HT.</p>
     
 
-<ul><li>TTC = HT × (1 + taux de TVA) ; HT = TTC ÷ (1 + taux).</li><li>Les taux de TVA varient selon les activités équestres : on lit toujours celui indiqué sur la facture.</li></ul>
+<p>Le prix TTC (toutes taxes comprises) est ce que le client paie vraiment : le HT plus la TVA.</p>
     
 
-<h4>Ce que tu vas savoir faire</h4>
+<h4>À retenir</h4>
     
 
-<ul><li>Calculer un prix TTC et un prix HT.</li><li>Vérifier une facture.</li></ul>
+<p>TVA = HT × taux ; TTC = HT + TVA.</p>
     
 
-<h4>Pourquoi cette séance ?</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<p>En S05, tu as utilisé des coefficients. La TVA est une augmentation en pourcentage : tu sais déjà la calculer.</p>
+<ol><li>Écris le taux de TVA en nombre décimal (20 % = 0,20 ; 10 % = 0,10 ; 5,5 % = 0,055).</li><li>Calcule la TVA = HT × taux.</li><li>Calcule le TTC = HT + TVA.</li><li>Contrôle : le TTC est toujours plus grand que le HT.</li></ol>
     
 
-<p>Comment utiliser cette fiche : pour chaque partie, lis la méthode et l’exemple, complète les points clés, puis fais l’exercice. Réponds sur les lignes.</p>
+<h4>Pourquoi ça marche</h4>
     
 
-
-            
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>I. Du HT au TTC</h3>
-            
-<h4>La situation</h4>
+<p>1. En raisonnant avec « sur 100 »</p>
     
 
-<p>Le maréchal-ferrant envoie sa facture hors taxes. Combien le propriétaire va-t-il vraiment payer ?</p>
+<ul><li>TVA de 20 % veut dire 20 € de taxe pour 100 € de prix HT.</li><li>Pour 50 € HT, c’est la moitié de 100 € : la TVA est la moitié de 20 €, soit 10 €.</li><li>Le client paie le prix et la taxe : 50 + 10 = 60 €.</li></ul>
     
 
-<h4>Ce que c’est</h4>
+<p>2. Pourquoi on multiplie par 0,20</p>
     
 
-<p>Le prix HT (hors taxes) est le prix sans la TVA. La TVA est une taxe en pourcentage du HT. Le prix TTC (toutes taxes comprises) est ce que paie le client.</p>
-    
-
-<h4>À quoi ça sert</h4>
-    
-
-<ul><li>Calculer et comprendre une facture de soins, de matériel, de pension.</li></ul>
-    
-
-<h4>Comment ça marche</h4>
-    
-
-<ol><li>On fait le total HT de la facture (chaque ligne : quantité × prix).</li><li>On multiplie le HT par (1 + taux) : × 1,2 pour une TVA de 20 %.</li><li>Vérification : TVA = HT × 20 ÷ 100, puis HT + TVA.</li></ol>
-    
-
-<p>À retenir : TTC = HT × (1 + taux) ; TVA 20 % → × 1,2.</p>
+<ul><li>20 % = 20/100 = 0,20.</li><li>Prendre 20 % d’un prix, c’est le multiplier par 0,20 : 50 × 0,20 = 10 €.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -271,71 +251,53 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<ul><li>Automatisme : calcule 20 % de 150 de tête.</li></ul>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<h4>Ce que tu vas faire</h4>
-    
-
-<p>Tu vas calculer le total HT puis TTC de la facture du maréchal-ferrant (document 1). On attend les deux totaux.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : lis la facture (document 1), fais le total HT, puis calcule le TTC.</li><li>Pourquoi × 1,2 ? La TVA ajoute 20 % au prix hors taxes.</li></ol>
-    
-
-<h4>Exemple et documents</h4>
-    
-
-<ul><li>Parage : 4 × 30 € HT.</li><li>Déplacement : 30 € HT.</li><li>TVA : 20 % (taux indiqué sur la facture fictive).</li></ul>
-    
-
-<p>Données fictives créées pour l’exercice (ordres de grandeur réalistes).</p>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>TTC = HT × (1 + <span class="cours-trou" aria-label="à compléter"></span> ).</li><li>Avec une TVA de 20 %, TTC = HT × <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 1 — Du HT au TTC</h4>
+<p>Calculatrice autorisée. Les prix sont en euros.</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — Une prestation coûte 70 € HT, TVA 20 %. Prix TTC ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — Une facture : 3 × 25 € HT + 15 € HT de déplacement, TVA 20 %. Total TTC ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>D’après le document 1, quel est le total HT ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Quel est le total TTC ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — Un parage coûte 40 € HT. TVA 20 %. Calcule la TVA. (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Un vermifuge coûte 15 € HT. TVA 20 %. Calcule la TVA. (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Une selle coûte 650 € HT. TVA 20 %. Calcule la TVA. (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — Un parage coûte 40 € HT. TVA 20 %. Calcule le prix TTC. (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Une selle coûte 650 € HT. TVA 20 %. Calcule le prix TTC. (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Un cours d’équitation coûte 30 € HT. TVA 5,5 %. Calcule la TVA. (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Une pension coûte 300 € HT. TVA 10 %. Calcule le prix TTC. (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>II. Du TTC au HT</h3>
+            <h3>II. Le prix TTC en un seul calcul</h3>
             
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Un client a payé 96 € TTC pour un ferrage. Pour sa comptabilité, le maréchal a besoin du prix HT.</p>
+<p>On peut passer du HT au TTC en une seule multiplication, avec un coefficient.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>Pour une TVA de 20 %, le coefficient est 1,2 : on garde le prix HT (1) et on ajoute 20 % (0,2).</p>
     
 
-<p>Retrouver le HT, c’est faire le chemin inverse du calcul du TTC.</p>
+<h4>À retenir</h4>
     
 
-<h4>À quoi ça sert</h4>
+<p>TTC = HT × (1 + taux). TVA 20 % → × 1,2 ; 10 % → × 1,1 ; 5,5 % → × 1,055.</p>
     
 
-<ul><li>Tenir une comptabilité en HT.</li><li>Comparer des prix affichés TTC.</li></ul>
+<h4>Comment ça fonctionne</h4>
     
 
-<h4>Comment ça marche</h4>
+<ol><li>Écris le taux en nombre décimal.</li><li>Ajoute 1 au taux pour obtenir le coefficient (1 + 0,20 = 1,2).</li><li>Multiplie le HT par ce coefficient.</li><li>Contrôle : tu dois trouver le même résultat qu’en deux étapes.</li></ol>
     
 
-<ol><li>Le TTC a été obtenu en multipliant le HT par 1,2.</li><li>Pour revenir au HT, on divise le TTC par 1,2.</li><li>On vérifie : HT × 1,2 doit redonner le TTC.</li></ol>
+<h4>Pourquoi ça marche</h4>
     
 
-<p>À retenir : HT = TTC ÷ (1 + taux) ; on ne retire pas 20 % du TTC.</p>
+<p>1. En raisonnant avec les pourcentages</p>
+    
+
+<ul><li>Le prix HT représente 100 % (soit 1).</li><li>Avec 20 % de TVA, le client paie 100 % + 20 % = 120 % du HT.</li><li>« 120 % de quelque chose » s’écrit 120/100, ce qui est égal à 1,2.</li></ul>
+    
+
+<p>2. En regroupant les deux étapes en une seule</p>
+    
+
+<ul><li>En deux étapes, pour 50 € HT : TTC = 50 (1 fois le prix) + 50 × 0,2 (0,2 fois le prix).</li><li>Si tu regroupes le nombre 50 (on appelle cela factoriser) : TTC = 50 × (1 + 0,2) = 50 × 1,2.</li><li>Le 1 garde le prix HT, et le 0,2 ajoute directement la TVA.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -344,59 +306,53 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<h4>Ce que tu vas faire</h4>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<p>Tu vas retrouver le prix HT d’un ferrage payé 96 € TTC. On attend le prix HT et l’erreur à éviter.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : un client paie 96 € TTC pour un ferrage (TVA 20 %). Calcule le prix HT.</li><li>Pourquoi diviser ? On fait le chemin inverse de la multiplication.</li></ol>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>Pour retrouver le HT, on <span class="cours-trou" aria-label="à compléter"></span> le TTC par 1,2.</li><li>On ne retire pas 20 % du <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 2 — Du TTC au HT</h4>
+<p>Calculatrice autorisée. Utilise le coefficient : un seul calcul.</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — Un client paie 60 € TTC (TVA 20 %). Prix HT ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — Un client paie 132 € TTC (TVA 10 %). Prix HT ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Quel est le prix HT ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Pourquoi ne faut-il pas enlever 20 % de 96 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — Quel est le coefficient pour passer du HT au TTC avec une TVA de 20 % ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Quel est le coefficient avec une TVA de 10 % ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Quel est le coefficient avec une TVA de 5,5 % ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — Un licol coûte 25 € HT. TVA 20 %. Calcule le TTC avec le coefficient. (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Une couverture coûte 120 € HT. TVA 20 %. Calcule le TTC. (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Une visite du vétérinaire coûte 75 € HT. TVA 20 %. Calcule le TTC. (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Une pension coûte 420 € HT. TVA 10 %. Calcule le TTC. (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>III. Vérifier une facture</h3>
+            <h3>III. Retrouver le prix HT</h3>
             
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Lucas a reçu une facture qui lui semble trop chère. Y a-t-il une erreur ?</p>
+<p>Sur un ticket, on voit souvent seulement le prix TTC. Pour retrouver le prix HT, on fait l’opération inverse.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>L’inverse de « multiplier par 1,2 », c’est « diviser par 1,2 ».</p>
     
 
-<p>Vérifier une facture, c’est refaire chaque calcul pour contrôler les montants.</p>
+<h4>À retenir</h4>
     
 
-<h4>À quoi ça sert</h4>
+<p>HT = TTC ÷ (1 + taux). TVA 20 % → ÷ 1,2.</p>
     
 
-<ul><li>Ne pas payer trop, ne pas perdre de client par une erreur.</li></ul>
+<h4>Comment ça fonctionne</h4>
     
 
-<h4>Comment ça marche</h4>
+<ol><li>Trouve le coefficient (1,2 pour 20 %).</li><li>Divise le TTC par ce coefficient.</li><li>Contrôle : multiplie ton HT par 1,2, tu dois retrouver le TTC.</li><li>Piège : on n’enlève jamais 20 % du TTC.</li></ol>
     
 
-<ol><li>On refait le total HT.</li><li>On recalcule la TVA sur le HT.</li><li>On refait HT + TVA et on compare au TTC annoncé.</li></ol>
+<h4>Pourquoi ça marche</h4>
     
 
-<p>À retenir : La TVA se calcule sur le prix HT.</p>
+<p>1. En raisonnant avec les pourcentages</p>
+    
+
+<ul><li>Le TTC représente 120 % du HT. On cherche les 100 %.</li><li>Si 120 % = 60 €, alors 1 % = 60 ÷ 120 = 0,50 €, et 100 % = 50 €.</li><li>C’est la même chose que 60 ÷ 1,2 = 50 €.</li></ul>
+    
+
+<p>2. Pourquoi on n’enlève pas 20 % du TTC</p>
+    
+
+<ul><li>20 % de TVA, c’est 20 % du HT, pas du TTC.</li><li>Si on enlève 20 % de 60 €, on enlève 12 € et on trouve 48 € : faux, car 48 × 1,2 = 57,60 €, pas 60 €.</li><li>Diviser par 1,2 défait exactement la multiplication par 1,2 : 50 × 1,2 = 60, donc 60 ÷ 1,2 = 50.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -405,86 +361,31 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<h4>Ce que tu vas faire</h4>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<p>Tu vas vérifier la facture de Lucas (document 2) et trouver l’erreur. On attend l’erreur et le bon total.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : lis la facture de Lucas (document 2), refais chaque calcul et trouve l’erreur.</li><li>Pourquoi vérifier ? Une erreur de facture fait perdre de l’argent ou un client.</li></ol>
-    
-
-<h4>Exemple et documents</h4>
-    
-
-<ul><li>Total HT : 200 €.</li><li>TVA 20 % : 42 €.</li><li>Total TTC : 242 €.</li></ul>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>Pour vérifier une facture, on <span class="cours-trou" aria-label="à compléter"></span> chaque calcul.</li><li>La TVA se calcule sur le prix <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 3 — Vérifier une facture</h4>
+<p>Calculatrice autorisée. Divise par le coefficient.</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — Facture : HT 300 €, TVA 20 % : 66 €, TTC 366 €. Où est l’erreur ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>D’après le document 2, quelle est l’erreur, et quel est le bon total TTC ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — Un filet coûte 36 € TTC, TVA 20 %. Calcule le prix HT. (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Une couverture coûte 96 € TTC, TVA 20 %. Calcule le prix HT. (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Une selle coûte 1 200 € TTC, TVA 20 %. Calcule le prix HT. (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Une pension coûte 385 € TTC, TVA 10 %. Calcule le prix HT. (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — Une selle coûte 1 200 € TTC, TVA 20 %. Combien de TVA contient ce prix ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Un élève dit : « 60 € TTC, j’enlève 20 %, donc le HT est 48 €. » A-t-il raison ? Choix : Oui, le HT est 48 €. / Non, le HT est 50 €. / Non, le HT est 72 €..</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>Conclusion</h3>
+            <h3>Encore des exercices (si tu as fini)</h3>
             
-<p>Avec ce que tu as fait dans les parties précédentes, réponds en quelques phrases complètes.</p>
-    
 
-
-            <ol class="course-paper-questions"><li><span>Réponds au problème du jour : comment passer d’un prix hors taxes à un prix toutes taxes comprises ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Pour aller plus loin (facultatif)</h3>
-            
-<p>Une remise de 10 % est faite sur le HT avant TVA.</p>
-    
-
-
-            <ol class="course-paper-questions"><li><span>Quel TTC pour 150 € HT ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Un ferrage coûte 90 € HT. TVA 20 %. Prix TTC ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Un cours coûte 20 € HT. TVA 5,5 %. Prix TTC ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Un tapis coûte 42 € TTC. TVA 20 %. Prix HT ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Une pension coûte 495 € TTC. TVA 10 %. Prix HT ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Un produit coûte 150 € HT et 180 € TTC. Quel est le taux de TVA en % ? (en %)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Facture : 3 fers à 24 € HT pièce, TVA 20 %. Total TTC ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>À retenir</h3>
             
-<ul><li>TTC = HT × 1,2 (TVA 20 %).</li><li>HT = TTC ÷ 1,2.</li></ul>
+<ul><li>HT : prix sans la taxe. TVA : la taxe. TTC : ce que paie le client.</li><li>TVA = HT × taux ; TTC = HT + TVA.</li><li>TTC = HT × (1 + taux) : × 1,2 pour 20 % ; × 1,1 pour 10 % ; × 1,055 pour 5,5 %.</li><li>HT = TTC ÷ (1 + taux). On ne retire jamais 20 % du TTC.</li></ul>
     
 
 
             
-        </section>
-        
-        <section class="course-paper-section course-paper-break">
-            <h2 class="course-paper-part">Fiche d’exercices</h2><h3>Exercice 1 — HT → TTC</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>Un parage coûte 40 € HT (TVA 20 %). TTC ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Une commande de 250 € HT : TTC ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Exercice 2 — TTC → HT</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>Un vermifuge coûte 21,60 € TTC (TVA 20 %). HT ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Exercice 3 — Vérifier</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>Facture : HT 80 €, TVA 20 % = 18 €, TTC 98 €. Trouve l’erreur.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
     </article>
@@ -498,66 +399,57 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Du HT au TTC</h2>
+        <h2>Partie 1 — La TVA et le prix TTC</h2>
         
         
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas calculer le total HT puis TTC de la facture du maréchal-ferrant (document 1). On attend les deux totaux.</p></div>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Le maréchal-ferrant envoie sa facture hors taxes. Combien le propriétaire va-t-il vraiment payer ?</p>
+<p>Le prix HT (hors taxes) est le prix sans la taxe. La TVA est une taxe en pourcentage du prix HT.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>Le prix TTC (toutes taxes comprises) est ce que le client paie vraiment : le HT plus la TVA.</p>
     
 
-<p>Le prix HT (hors taxes) est le prix sans la TVA. La TVA est une taxe en pourcentage du HT. Le prix TTC (toutes taxes comprises) est ce que paie le client.</p>
+<p>À retenir : TVA = HT × taux ; TTC = HT + TVA.</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Calculer et comprendre une facture de soins, de matériel, de pension.</li></ul>
+<ol><li>Écris le taux de TVA en nombre décimal (20 % = 0,20 ; 10 % = 0,10 ; 5,5 % = 0,055).</li><li>Calcule la TVA = HT × taux.</li><li>Calcule le TTC = HT + TVA.</li><li>Contrôle : le TTC est toujours plus grand que le HT.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>On fait le total HT de la facture (chaque ligne : quantité × prix).</li><li>On multiplie le HT par (1 + taux) : × 1,2 pour une TVA de 20 %.</li><li>Vérification : TVA = HT × 20 ÷ 100, puis HT + TVA.</li></ol>
+<p>1. En raisonnant avec « sur 100 »</p>
     
 
-<p>À retenir : TTC = HT × (1 + taux) ; TVA 20 % → × 1,2.</p>
+<ul><li>TVA de 20 % veut dire 20 € de taxe pour 100 € de prix HT.</li><li>Pour 50 € HT, c’est la moitié de 100 € : la TVA est la moitié de 20 €, soit 10 €.</li><li>Le client paie le prix et la taxe : 50 + 10 = 60 €.</li></ul>
+    
+
+<p>2. Pourquoi on multiplie par 0,20</p>
+    
+
+<ul><li>20 % = 20/100 = 0,20.</li><li>Prendre 20 % d’un prix, c’est le multiplier par 0,20 : 50 × 0,20 = 10 €.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>Une prestation coûte 70 € HT, TVA 20 %. Prix TTC ?</li><li>Une facture : 3 × 25 € HT + 15 € HT de déplacement, TVA 20 %. Total TTC ?</li></ol>
-    
-
-<ul><li>Automatisme : calcule 20 % de 150 de tête.</li></ul>
-    
-
-<ul><li>Parage : 4 × 30 € HT.</li><li>Déplacement : 30 € HT.</li><li>TVA : 20 % (taux indiqué sur la facture fictive).</li></ul>
-    
-
-<p>Données fictives créées pour l’exercice (ordres de grandeur réalistes).</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : lis la facture (document 1), fais le total HT, puis calcule le TTC.</li><li>Pourquoi × 1,2 ? La TVA ajoute 20 % au prix hors taxes.</li></ol>
+<p>Calculatrice autorisée. Les prix sont en euros.</p>
     
 
 
@@ -566,63 +458,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a01-q01-label">Question 1 — Série A — Un parage coûte 40 € HT. TVA 20 %. Calcule la TVA.</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    TTC = HT × (1 + …… ).
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Du HT au TTC — Mot(s) manquant(s) — TTC = HT × (1 + …… ).">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Avec une TVA de 20 %, TTC = HT × …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Du HT au TTC — Mot(s) manquant(s) — Avec une TVA de 20 %, TTC = HT × …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Relis l’exemple : HT × (1 + quoi) ? Et 1 + 20 %, ça fait quel coefficient ?</p></details>
+                <input type="text" inputmode="decimal" id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><p>Unité : €</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>TVA = HT × 0,20.</p></details>
             
             
         </div>
@@ -630,7 +474,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — D’après le document 1, quel est le total HT ?</h3>
+            <h3 id="a01-q02-label">Question 2 — Un vermifuge coûte 15 € HT. TVA 20 %. Calcule la TVA.</h3>
             
 
             
@@ -638,7 +482,7 @@
                 <input type="text" inputmode="decimal" id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><p>Unité : €</p>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Additionne les lignes HT de la facture du document 1 (quantité × prix unitaire pour chaque ligne).</p></details>
+            <details><summary>Un coup de pouce</summary><p>TVA = HT × 0,20.</p></details>
             
             
         </div>
@@ -646,7 +490,7 @@
         <div class="cours-question" data-question="q03">
             
             
-            <h3 id="a01-q03-label">Question 3 — Quel est le total TTC ?</h3>
+            <h3 id="a01-q03-label">Question 3 — Une selle coûte 650 € HT. TVA 20 %. Calcule la TVA.</h3>
             
 
             
@@ -654,7 +498,71 @@
                 <input type="text" inputmode="decimal" id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label"><p>Unité : €</p>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Multiplie le total HT par le coefficient de la TVA à 20 %.</p></details>
+            <details><summary>Un coup de pouce</summary><p>TVA = HT × 0,20.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a01-q04-label">Question 4 — Série B — Un parage coûte 40 € HT. TVA 20 %. Calcule le prix TTC.</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q04" data-answer-id="a01_q04" data-required="true" aria-labelledby="a01-q04-label"><p>Unité : €</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Calcule la TVA, puis ajoute-la au HT.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a01-q05-label">Question 5 — Une selle coûte 650 € HT. TVA 20 %. Calcule le prix TTC.</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q05" data-answer-id="a01_q05" data-required="true" aria-labelledby="a01-q05-label"><p>Unité : €</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>TTC = HT + TVA.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a01-q06-label">Question 6 — Un cours d’équitation coûte 30 € HT. TVA 5,5 %. Calcule la TVA.</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q06" data-answer-id="a01_q06" data-required="true" aria-labelledby="a01-q06-label"><p>Unité : €</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>5,5 % s’écrit 0,055. TVA = 30 × 0,055.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q07">
+            
+            
+            <h3 id="a01-q07-label">Question 7 — Une pension coûte 300 € HT. TVA 10 %. Calcule le prix TTC.</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q07" data-answer-id="a01_q07" data-required="true" aria-labelledby="a01-q07-label"><p>Unité : €</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>TVA = 300 × 0,10, puis TTC = HT + TVA.</p></details>
             
             
         </div>
@@ -668,57 +576,57 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Du TTC au HT</h2>
+        <h2>Partie 2 — Le prix TTC en un seul calcul</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais ajouter la TVA. Peux-tu l’enlever ?</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas retrouver le prix HT d’un ferrage payé 96 € TTC. On attend le prix HT et l’erreur à éviter.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais calculer le TTC en deux étapes. Deuxième notion : le faire en un seul calcul.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Un client a payé 96 € TTC pour un ferrage. Pour sa comptabilité, le maréchal a besoin du prix HT.</p>
+<p>On peut passer du HT au TTC en une seule multiplication, avec un coefficient.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>Pour une TVA de 20 %, le coefficient est 1,2 : on garde le prix HT (1) et on ajoute 20 % (0,2).</p>
     
 
-<p>Retrouver le HT, c’est faire le chemin inverse du calcul du TTC.</p>
+<p>À retenir : TTC = HT × (1 + taux). TVA 20 % → × 1,2 ; 10 % → × 1,1 ; 5,5 % → × 1,055.</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Tenir une comptabilité en HT.</li><li>Comparer des prix affichés TTC.</li></ul>
+<ol><li>Écris le taux en nombre décimal.</li><li>Ajoute 1 au taux pour obtenir le coefficient (1 + 0,20 = 1,2).</li><li>Multiplie le HT par ce coefficient.</li><li>Contrôle : tu dois trouver le même résultat qu’en deux étapes.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>Le TTC a été obtenu en multipliant le HT par 1,2.</li><li>Pour revenir au HT, on divise le TTC par 1,2.</li><li>On vérifie : HT × 1,2 doit redonner le TTC.</li></ol>
+<p>1. En raisonnant avec les pourcentages</p>
     
 
-<p>À retenir : HT = TTC ÷ (1 + taux) ; on ne retire pas 20 % du TTC.</p>
+<ul><li>Le prix HT représente 100 % (soit 1).</li><li>Avec 20 % de TVA, le client paie 100 % + 20 % = 120 % du HT.</li><li>« 120 % de quelque chose » s’écrit 120/100, ce qui est égal à 1,2.</li></ul>
+    
+
+<p>2. En regroupant les deux étapes en une seule</p>
+    
+
+<ul><li>En deux étapes, pour 50 € HT : TTC = 50 (1 fois le prix) + 50 × 0,2 (0,2 fois le prix).</li><li>Si tu regroupes le nombre 50 (on appelle cela factoriser) : TTC = 50 × (1 + 0,2) = 50 × 1,2.</li><li>Le 1 garde le prix HT, et le 0,2 ajoute directement la TVA.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>Un client paie 60 € TTC (TVA 20 %). Prix HT ?</li><li>Un client paie 132 € TTC (TVA 10 %). Prix HT ?</li></ol>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : un client paie 96 € TTC pour un ferrage (TVA 20 %). Calcule le prix HT.</li><li>Pourquoi diviser ? On fait le chemin inverse de la multiplication.</li></ol>
+<p>Calculatrice autorisée. Utilise le coefficient : un seul calcul.</p>
     
 
 
@@ -727,63 +635,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a02-q01-label">Question 1 — Série A — Quel est le coefficient pour passer du HT au TTC avec une TVA de 20 % ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Pour retrouver le HT, on …… le TTC par 1,2.
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Du TTC au HT — Mot(s) manquant(s) — Pour retrouver le HT, on …… le TTC par 1,2.">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    On ne retire pas 20 % du …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Du TTC au HT — Mot(s) manquant(s) — On ne retire pas 20 % du …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Pour revenir en arrière, on fait l’opération inverse de « × 1,2 ». Et sur quel prix se calcule la TVA ?</p></details>
+                <input type="text" inputmode="decimal" id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>1 + 0,20.</p></details>
             
             
         </div>
@@ -791,15 +651,15 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Quel est le prix HT ?</h3>
+            <h3 id="a02-q02-label">Question 2 — Quel est le coefficient avec une TVA de 10 % ?</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><p>Unité : €</p>
+                <input type="text" inputmode="decimal" id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label">
 
                 
-            <details><summary>Un coup de pouce</summary><p>Le prix TTC est 96 € : fais l’opération inverse de × 1,2.</p></details>
+            <details><summary>Un coup de pouce</summary><p>1 + 0,10.</p></details>
             
             
         </div>
@@ -807,15 +667,79 @@
         <div class="cours-question" data-question="q03">
             
             
-            <h3 id="a02-q03-label">Question 3 — Pourquoi ne faut-il pas enlever 20 % de 96 ?</h3>
+            <h3 id="a02-q03-label">Question 3 — Quel est le coefficient avec une TVA de 5,5 % ?</h3>
             
 
             
             
-                <textarea id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label">
 
                 
-            <details><summary>Un coup de pouce</summary><p>Les 20 % de TVA ont été calculés sur quel prix ? Vérifie : 76,80 × 1,2 donne-t-il 96 ?</p></details>
+            <details><summary>Un coup de pouce</summary><p>1 + 0,055.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a02-q04-label">Question 4 — Série B — Un licol coûte 25 € HT. TVA 20 %. Calcule le TTC avec le coefficient.</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q04" data-answer-id="a02_q04" data-required="true" aria-labelledby="a02-q04-label"><p>Unité : €</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>TTC = 25 × 1,2.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a02-q05-label">Question 5 — Une couverture coûte 120 € HT. TVA 20 %. Calcule le TTC.</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q05" data-answer-id="a02_q05" data-required="true" aria-labelledby="a02-q05-label"><p>Unité : €</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>TTC = 120 × 1,2.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a02-q06-label">Question 6 — Une visite du vétérinaire coûte 75 € HT. TVA 20 %. Calcule le TTC.</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q06" data-answer-id="a02_q06" data-required="true" aria-labelledby="a02-q06-label"><p>Unité : €</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>TTC = 75 × 1,2.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q07">
+            
+            
+            <h3 id="a02-q07-label">Question 7 — Une pension coûte 420 € HT. TVA 10 %. Calcule le TTC.</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q07" data-answer-id="a02_q07" data-required="true" aria-labelledby="a02-q07-label"><p>Unité : €</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>TTC = 420 × 1,1.</p></details>
             
             
         </div>
@@ -829,60 +753,57 @@
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Vérifier une facture</h2>
+        <h2>Partie 3 — Retrouver le prix HT</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu maîtrises les deux sens. Vérifie une vraie facture.</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas vérifier la facture de Lucas (document 2) et trouver l’erreur. On attend l’erreur et le bon total.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais aller du HT au TTC. Dernière notion : faire le chemin dans l’autre sens.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Lucas a reçu une facture qui lui semble trop chère. Y a-t-il une erreur ?</p>
+<p>Sur un ticket, on voit souvent seulement le prix TTC. Pour retrouver le prix HT, on fait l’opération inverse.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>L’inverse de « multiplier par 1,2 », c’est « diviser par 1,2 ».</p>
     
 
-<p>Vérifier une facture, c’est refaire chaque calcul pour contrôler les montants.</p>
+<p>À retenir : HT = TTC ÷ (1 + taux). TVA 20 % → ÷ 1,2.</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Ne pas payer trop, ne pas perdre de client par une erreur.</li></ul>
+<ol><li>Trouve le coefficient (1,2 pour 20 %).</li><li>Divise le TTC par ce coefficient.</li><li>Contrôle : multiplie ton HT par 1,2, tu dois retrouver le TTC.</li><li>Piège : on n’enlève jamais 20 % du TTC.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>On refait le total HT.</li><li>On recalcule la TVA sur le HT.</li><li>On refait HT + TVA et on compare au TTC annoncé.</li></ol>
+<p>1. En raisonnant avec les pourcentages</p>
     
 
-<p>À retenir : La TVA se calcule sur le prix HT.</p>
+<ul><li>Le TTC représente 120 % du HT. On cherche les 100 %.</li><li>Si 120 % = 60 €, alors 1 % = 60 ÷ 120 = 0,50 €, et 100 % = 50 €.</li><li>C’est la même chose que 60 ÷ 1,2 = 50 €.</li></ul>
+    
+
+<p>2. Pourquoi on n’enlève pas 20 % du TTC</p>
+    
+
+<ul><li>20 % de TVA, c’est 20 % du HT, pas du TTC.</li><li>Si on enlève 20 % de 60 €, on enlève 12 € et on trouve 48 € : faux, car 48 × 1,2 = 57,60 €, pas 60 €.</li><li>Diviser par 1,2 défait exactement la multiplication par 1,2 : 50 × 1,2 = 60, donc 60 ÷ 1,2 = 50.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>Facture : HT 300 €, TVA 20 % : 66 €, TTC 366 €. Où est l’erreur ?</li></ol>
-    
-
-<ul><li>Total HT : 200 €.</li><li>TVA 20 % : 42 €.</li><li>Total TTC : 242 €.</li></ul>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : lis la facture de Lucas (document 2), refais chaque calcul et trouve l’erreur.</li><li>Pourquoi vérifier ? Une erreur de facture fait perdre de l’argent ou un client.</li></ol>
+<p>Calculatrice autorisée. Divise par le coefficient.</p>
     
 
 
@@ -891,63 +812,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a03-q01-label">Question 1 — Série A — Un filet coûte 36 € TTC, TVA 20 %. Calcule le prix HT.</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Pour vérifier une facture, on …… chaque calcul.
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a03_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Vérifier une facture — Mot(s) manquant(s) — Pour vérifier une facture, on …… chaque calcul.">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    La TVA se calcule sur le prix …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a03_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Vérifier une facture — Mot(s) manquant(s) — La TVA se calcule sur le prix …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Vérifier une facture, c’est faire quoi avec chaque ligne ? Et la TVA se calcule sur HT ou TTC ?</p></details>
+                <input type="text" inputmode="decimal" id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label"><p>Unité : €</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>HT = TTC ÷ 1,2.</p></details>
             
             
         </div>
@@ -955,15 +828,79 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a03-q02-label">Question 2 — D’après le document 2, quelle est l’erreur, et quel est le bon total TTC ?</h3>
+            <h3 id="a03-q02-label">Question 2 — Une couverture coûte 96 € TTC, TVA 20 %. Calcule le prix HT.</h3>
             
 
             
             
-                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label"><p>Unité : €</p>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Dans le document 2, refais le total HT, puis la TVA à 20 % de ce total. Compare avec la facture.</p></details>
+            <details><summary>Un coup de pouce</summary><p>HT = TTC ÷ 1,2.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a03-q03-label">Question 3 — Une selle coûte 1 200 € TTC, TVA 20 %. Calcule le prix HT.</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q03" data-answer-id="a03_q03" data-required="true" aria-labelledby="a03-q03-label"><p>Unité : €</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>HT = TTC ÷ 1,2.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a03-q04-label">Question 4 — Une pension coûte 385 € TTC, TVA 10 %. Calcule le prix HT.</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q04" data-answer-id="a03_q04" data-required="true" aria-labelledby="a03-q04-label"><p>Unité : €</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>HT = TTC ÷ 1,1.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a03-q05-label">Question 5 — Série B — Une selle coûte 1 200 € TTC, TVA 20 %. Combien de TVA contient ce prix ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q05" data-answer-id="a03_q05" data-required="true" aria-labelledby="a03-q05-label"><p>Unité : €</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Calcule d’abord le HT, puis TVA = TTC − HT.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a03-q06-label">Question 6 — Un élève dit : « 60 € TTC, j’enlève 20 %, donc le HT est 48 €. » A-t-il raison ?</h3>
+            
+
+            
+            
+                <select id="a03-q06" data-answer-id="a03_q06" data-required="true" aria-labelledby="a03-q06-label"><option value="">Choisis une réponse</option><option value="a">Oui, le HT est 48 €.</option><option value="b">Non, le HT est 50 €.</option><option value="c">Non, le HT est 72 €.</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Fais le contrôle : multiplie 48 par 1,2. Retrouves-tu 60 ?</p></details>
             
             
         </div>
@@ -977,7 +914,7 @@
     
     <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Pour aller plus loin</h2>
+        <h2>Encore des exercices (si tu as fini)</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
@@ -985,7 +922,7 @@
         
 
         
-<p>Une remise de 10 % est faite sur le HT avant TVA.</p>
+<p>Tu as fini ? Entraîne-toi encore. Ces exercices ne comptent pas dans la note.</p>
     
 
 
@@ -994,15 +931,95 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Quel TTC pour 150 € HT ?</h3>
+            <h3 id="a04-q01-label">Question 1 — Un ferrage coûte 90 € HT. TVA 20 %. Prix TTC ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label"><p>Unité : €</p>
 
                 
-            <details><summary>Un coup de pouce</summary><p>La remise vient d’abord (× 0,9 sur le HT), puis la TVA (× 1,2).</p></details>
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a04-q02-label">Question 2 — Un cours coûte 20 € HT. TVA 5,5 %. Prix TTC ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a04-q02" data-answer-id="a04_q02" data-required="false" aria-labelledby="a04-q02-label"><p>Unité : €</p>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a04-q03-label">Question 3 — Un tapis coûte 42 € TTC. TVA 20 %. Prix HT ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a04-q03" data-answer-id="a04_q03" data-required="false" aria-labelledby="a04-q03-label"><p>Unité : €</p>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a04-q04-label">Question 4 — Une pension coûte 495 € TTC. TVA 10 %. Prix HT ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a04-q04" data-answer-id="a04_q04" data-required="false" aria-labelledby="a04-q04-label"><p>Unité : €</p>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a04-q05-label">Question 5 — Un produit coûte 150 € HT et 180 € TTC. Quel est le taux de TVA en % ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a04-q05" data-answer-id="a04_q05" data-required="false" aria-labelledby="a04-q05-label"><p>Unité : %</p>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a04-q06-label">Question 6 — Facture : 3 fers à 24 € HT pièce, TVA 20 %. Total TTC ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a04-q06" data-answer-id="a04_q06" data-required="false" aria-labelledby="a04-q06-label"><p>Unité : €</p>
+
+                
+            
             
             
         </div>
@@ -1010,41 +1027,6 @@
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#a03">← Étape précédente</a>
-            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a05" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Conclusion de ton travail</h2>
-        
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais calculer HT et TTC. Il reste à répondre au problème de départ.</p>
-        
-        
-        
-
-        
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment passer d’un prix hors taxes à un prix toutes taxes comprises ?</h3>
-            
-
-            
-            
-                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Donne les deux formules (HT vers TTC, TTC vers HT) et la méthode pour vérifier une facture.</p></details>
-            
-            
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -1057,7 +1039,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>TTC = HT × 1,2 (TVA 20 %).</li><li>HT = TTC ÷ 1,2.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>HT : prix sans la taxe. TVA : la taxe. TTC : ce que paie le client.</li><li>TVA = HT × taux ; TTC = HT + TVA.</li><li>TTC = HT × (1 + taux) : × 1,2 pour 20 % ; × 1,1 pour 10 % ; × 1,055 pour 5,5 %.</li><li>HT = TTC ÷ (1 + taux). On ne retire jamais 20 % du TTC.</li></ul>
     
 </section>
 
@@ -1073,7 +1055,7 @@
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
     
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

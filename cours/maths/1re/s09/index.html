@@ -124,7 +124,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Les centres de classes</a></li><li><a href="#a02">La moyenne estimée</a></li><li><a href="#a03">L’histogramme et la classe modale</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Partie 1 — Le centre d’une classe</a></li><li><a href="#a02">Partie 2 — La moyenne estimée</a></li><li><a href="#a03">Partie 3 — L’histogramme et la classe modale</a></li><li><a href="#a04">Encore des exercices (si tu as fini) — facultatif</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -136,7 +136,7 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Mathématiques · Bac Pro 1 · S09</span></div>
-    <h1>Séance 9 : Regrouper en classes et lire un histogramme</h1>
+    <h1>Séance 9 : Séries en classes : centres, moyenne estimée, histogramme</h1>
     
 
     
@@ -150,7 +150,7 @@
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Comment regrouper une série continue et estimer ses indicateurs ?</p>
+        <p>Comment calculer une moyenne quand les valeurs sont regroupées en classes, et lire un histogramme ?</p>
     </section>
     
 
@@ -168,9 +168,11 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Classe [a ; b[ : toutes les valeurs de a (compris) à b (non compris) ; centre = (a + b) ÷ 2.</li>
+            <li>Centre de [a ; b[ = (a + b) ÷ 2.</li>
             
-            <li>Moyenne estimée = Σ (centre × effectif) ÷ effectif total.</li>
+            <li>Moyenne estimée = somme (centre × effectif) ÷ effectif total.</li>
+            
+            <li>Classe modale : celle du plus grand effectif.</li>
             
         </ul>
         
@@ -178,16 +180,18 @@
         <h2>Ce que tu vas apprendre à faire</h2>
         <ul>
             
-            <li>Construire un tableau par classes.</li>
+            <li>Calculer les centres des classes.</li>
             
-            <li>Estimer une moyenne à partir des classes.</li>
+            <li>Calculer une moyenne estimée.</li>
+            
+            <li>Lire un histogramme et trouver la classe modale.</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En S08, tu avais toutes les valeurs.</p><p>Souvent, une publication ne donne que des classes : il faut estimer.</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Aujourd’hui, trois notions : les centres de classes, la moyenne estimée, l’histogramme.</p><p>Pour chacune : la notion, la méthode, pourquoi ça marche, un exemple au tableau, puis beaucoup d’exercices.</p></div></section>
     
     
     
@@ -202,67 +206,45 @@
 
 <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
     <article class="course-paper-sheet">
-        <header><p class="course-paper-class">Mathématiques — Bac Pro 1</p><p class="course-paper-kicker">Cours et exercices — version papier</p><h2 id="course-paper-title"><span class="course-paper-number">Séance 9</span> — Regrouper en classes et lire un histogramme</h2><p>Comment regrouper une série continue et estimer ses indicateurs ?</p></header>
+        <header><p class="course-paper-class">Mathématiques — Bac Pro 1</p><p class="course-paper-kicker">Cours et exercices — version papier</p><h2 id="course-paper-title"><span class="course-paper-number">Séance 9</span> — Séries en classes : centres, moyenne estimée, histogramme</h2><p>Trois notions : centres de classes, moyenne estimée, histogramme. Pour chacune : la notion, la méthode, l’exemple au tableau, puis les exercices.</p></header>
         
         <section class="course-paper-section">
-            <h3>Le cours en bref</h3>
+            <h3>I. Le centre d’une classe</h3>
             
-<p>Le problème à résoudre : Comment regrouper une série continue et estimer ses indicateurs ?</p>
+<h4>La notion</h4>
     
 
-<h4>Ce que tu vas apprendre</h4>
+<p>Quand une série est donnée en classes, on ne connaît plus les valeurs exactes.</p>
     
 
-<ul><li>Classe [a ; b[ : toutes les valeurs de a (compris) à b (non compris) ; centre = (a + b) ÷ 2.</li><li>Moyenne estimée = Σ (centre × effectif) ÷ effectif total.</li></ul>
+<p>Pour calculer, on remplace chaque classe par sa valeur du milieu : son centre.</p>
     
 
-<h4>Ce que tu vas savoir faire</h4>
+<h4>À retenir</h4>
     
 
-<ul><li>Construire un tableau par classes.</li><li>Estimer une moyenne à partir des classes.</li></ul>
+<p>Centre de [a ; b[ = (a + b) ÷ 2.</p>
     
 
-<h4>Pourquoi cette séance ?</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<p>En S08, tu avais toutes les valeurs. Souvent, une publication ne donne que des classes : il faut estimer.</p>
+<ol><li>Repère les deux bornes de la classe.</li><li>Additionne-les.</li><li>Divise par 2.</li><li>Contrôle : le centre est pile au milieu de la classe.</li></ol>
     
 
-<p>Comment utiliser cette fiche : pour chaque partie, lis la méthode et l’exemple, complète les points clés, puis fais l’exercice. Réponds sur les lignes.</p>
+<h4>Pourquoi ça marche</h4>
     
 
-
-            
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>I. Les centres de classes</h3>
-            
-<h4>La situation</h4>
+<p>1. Pourquoi le milieu</p>
     
 
-<p>On a pesé 50 chevaux. Écrire les 50 poids un par un serait illisible : on les range par tranches de 50 kg.</p>
+<ul><li>Dans [300 ; 350[, les valeurs sont quelque part entre 300 et 350.</li><li>Le milieu, 325, est la meilleure valeur « moyenne » quand on ne sait pas où elles sont.</li></ul>
     
 
-<h4>Ce que c’est</h4>
+<p>2. Pourquoi (a + b) ÷ 2</p>
     
 
-<p>Une classe est un intervalle de valeurs, noté [a ; b[ (de a compris à b non compris). Son centre est la valeur du milieu de l’intervalle.</p>
-    
-
-<h4>À quoi ça sert</h4>
-    
-
-<ul><li>Résumer une série de nombreuses valeurs mesurées (poids, tailles, temps).</li><li>Faire des calculs approchés quand on ne connaît pas chaque valeur.</li></ul>
-    
-
-<h4>Comment ça marche</h4>
-    
-
-<ol><li>On lit les bornes a et b de la classe.</li><li>On calcule le centre : (a + b) ÷ 2.</li><li>On remplacera toutes les valeurs de la classe par ce centre.</li></ol>
-    
-
-<p>À retenir : Centre de [a ; b[ = (a + b) ÷ 2.</p>
+<ul><li>C’est la moyenne des deux bornes.</li><li>300 + 25 = 325 : on ajoute la moitié de l’amplitude (50 ÷ 2).</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -271,71 +253,56 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<ul><li>Automatisme : (400 + 450) ÷ 2.</li></ul>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<h4>Ce que tu vas faire</h4>
+<p>Consommation mensuelle de foin de 20 chevaux :</p>
     
 
-<p>Tu vas calculer le centre de chaque classe de poids (document 1). On attend les quatre centres.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : lis le tableau des poids de 50 chevaux (document 1) et calcule le centre de chaque classe.</li><li>Pourquoi le centre ? On remplace toutes les valeurs d’une classe par sa valeur du milieu.</li></ol>
-    
-
-<h4>Exemple et documents</h4>
-    
-
-<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Poids de 50 chevaux (fictif)</caption><thead><tr><th scope="col">Classe (kg)</th><th scope="col">[400 ; 450[</th><th scope="col">[450 ; 500[</th><th scope="col">[500 ; 550[</th><th scope="col">[550 ; 600[</th></tr></thead><tbody><tr><td>Effectif</td><td>8</td><td>17</td><td>15</td><td>10</td></tr></tbody></table></div>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>Centre d’une classe [a ; b[ = (a + b) ÷ <span class="cours-trou" aria-label="à compléter"></span> .</li><li>On remplace les valeurs d’une classe par son <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 1 — Les centres de classes</h4>
-    
-
-<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Classe (kg)</th><th scope="col">Centre</th></tr></thead><tbody><tr><td>[400 ; 450[</td><td></td></tr><tr><td>[450 ; 500[</td><td></td></tr><tr><td>[500 ; 550[</td><td></td></tr><tr><td>[550 ; 600[</td><td></td></tr></tbody></table></div>
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Consommation (kg/mois)</th><th scope="col">[300 ; 350[</th><th scope="col">[350 ; 400[</th><th scope="col">[400 ; 450[</th><th scope="col">[450 ; 500[</th></tr></thead><tbody><tr><td>Effectif</td><td>4</td><td>6</td><td>8</td><td>2</td></tr></tbody></table></div>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — Centre de la classe [120 ; 140[ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — Centre de la classe [1,50 ; 1,60[ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Centres de classes.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — Centre de [300 ; 350[ ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Centre de [350 ; 400[ ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Centre de [400 ; 450[ ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Centre de [450 ; 500[ ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — Centre de [0 ; 15[ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Centre de [1,2 ; 1,6[ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>II. La moyenne estimée</h3>
             
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Quel est le poids moyen des 50 chevaux, si l’on ne connaît que les classes et leurs effectifs ?</p>
+<p>On fait comme si toutes les valeurs d’une classe étaient égales au centre.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>On obtient une estimation de la moyenne, pas la valeur exacte.</p>
     
 
-<p>La moyenne estimée est une moyenne calculée en remplaçant chaque valeur par le centre de sa classe. C’est une approximation.</p>
+<h4>À retenir</h4>
     
 
-<h4>À quoi ça sert</h4>
+<p>Moyenne estimée = somme des (centre × effectif) ÷ effectif total.</p>
     
 
-<ul><li>Avoir un ordre de grandeur fiable quand les données sont regroupées (enquêtes, statistiques officielles).</li></ul>
+<h4>Comment ça fonctionne</h4>
     
 
-<h4>Comment ça marche</h4>
+<ol><li>Pour chaque classe, multiplie le centre par l’effectif.</li><li>Additionne tous ces produits.</li><li>Divise par l’effectif total (pas par le nombre de classes).</li><li>Contrôle : le résultat est entre le plus petit et le plus grand centre.</li></ol>
     
 
-<ol><li>Pour chaque classe : centre × effectif.</li><li>On additionne tous ces produits (Σ).</li><li>On divise par l’effectif total (la somme des effectifs), pas par le nombre de classes.</li></ol>
+<h4>Pourquoi ça marche</h4>
     
 
-<p>À retenir : Moyenne estimée = Σ (centre × effectif) ÷ effectif total.</p>
+<p>1. Pourquoi centre × effectif</p>
+    
+
+<ul><li>4 chevaux dans [300 ; 350[ : on compte chacun pour 325 kg.</li><li>Ensemble, ils comptent 4 × 325 = 1 300 kg.</li></ul>
+    
+
+<p>2. Pourquoi diviser par 20</p>
+    
+
+<ul><li>On partage le total entre les 20 chevaux, pas entre les 4 classes.</li><li>Diviser par 4 donnerait une « moyenne » de 2 000 kg : absurde.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -344,59 +311,56 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<h4>Ce que tu vas faire</h4>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<p>Tu vas estimer la moyenne des poids à partir des classes. On attend la somme des produits et la moyenne.</p>
+<p>Même tableau (20 chevaux).</p>
     
 
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : calcule Σ centre × effectif pour les 50 chevaux, puis divise par 50.</li><li>Pourquoi « estimée » ? On ne connaît pas les vraies valeurs dans chaque classe.</li></ol>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>Moyenne estimée = Σ (centre × effectif) ÷ effectif <span class="cours-trou" aria-label="à compléter"></span> .</li><li>Elle est dite « estimée » car on ne connaît pas les vraies <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 2 — La moyenne estimée</h4>
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Consommation (kg/mois)</th><th scope="col">[300 ; 350[</th><th scope="col">[350 ; 400[</th><th scope="col">[400 ; 450[</th><th scope="col">[450 ; 500[</th></tr></thead><tbody><tr><td>Effectif</td><td>4</td><td>6</td><td>8</td><td>2</td></tr></tbody></table></div>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — Centres 10 et 20, effectifs 3 et 7. Moyenne estimée ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — Centres 125, 135, 145 ; effectifs 2, 5, 3. Moyenne estimée ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Somme des produits centre × effectif ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Moyenne estimée ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — Centre × effectif pour [300 ; 350[ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Centre × effectif pour [350 ; 400[ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Centre × effectif pour [400 ; 450[ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Centre × effectif pour [450 ; 500[ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Somme des quatre produits ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — Moyenne estimée de la consommation ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Pourquoi dit-on « estimée » ? Choix : Parce qu’on a arrondi / Parce qu’on a remplacé chaque valeur par le centre de sa classe.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>III. L’histogramme et la classe modale</h3>
             
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Comment voir d’un coup d’œil où se trouvent la plupart des chevaux ?</p>
+<p>Un histogramme représente une série en classes par des rectangles accolés : la base est la classe, la hauteur l’effectif.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>La classe modale est la classe qui a le plus grand effectif.</p>
     
 
-<p>Un histogramme représente une série regroupée en classes par des rectangles accolés : la largeur est la classe, la hauteur l’effectif. La classe modale est celle qui a le plus grand effectif.</p>
+<h4>À retenir</h4>
     
 
-<h4>À quoi ça sert</h4>
+<p>Effectif d’une classe = hauteur de son rectangle. Classe modale = le plus haut rectangle.</p>
     
 
-<ul><li>Voir la forme de la répartition : centrée, étalée, penchée d’un côté.</li><li>Repérer la classe la plus fréquente.</li></ul>
+<h4>Comment ça fonctionne</h4>
     
 
-<h4>Comment ça marche</h4>
+<ol><li>Comment le lire : repère la classe sur l’axe horizontal, monte au haut du rectangle, lis la hauteur à gauche.</li><li>Classe modale : cherche le plus haut rectangle.</li><li>Effectif total : additionne toutes les hauteurs.</li><li>Fréquence : effectif ÷ total × 100.</li></ol>
     
 
-<ol><li>On place les classes sur l’axe horizontal et les effectifs sur l’axe vertical.</li><li>Pour chaque classe, un rectangle de hauteur égale à l’effectif ; les rectangles se touchent.</li><li>Au tableur : diagramme en colonnes, espacement entre colonnes à 0 %.</li><li>On repère le rectangle le plus haut : c’est la classe modale.</li></ol>
+<h4>Pourquoi ça marche</h4>
     
 
-<p>À retenir : Classe modale = classe de plus grand effectif.</p>
+<p>1. Comment il est fait</p>
+    
+
+<ul><li>Un rectangle par classe, de la borne a à la borne b, de hauteur l’effectif.</li><li>Les rectangles se touchent car les classes se suivent.</li></ul>
+    
+
+<p>2. Comment le comprendre</p>
+    
+
+<ul><li>La forme montre où se concentrent les valeurs.</li><li>Ici, la plupart des poneys sont entre 12 et 16 dm.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -405,107 +369,34 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<h4>Ce que tu vas faire</h4>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<p>Tu vas tracer l’histogramme des poids et repérer la classe modale. On attend la classe et la forme.</p>
+<p>Hauteur au garrot des poneys du club :</p>
     
 
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : trace l’histogramme au tableur et repère la classe modale.</li><li>Pourquoi l’histogramme ? Il montre la forme de la répartition.</li></ol>
-    
-
-<h4>Le graphique : le faire, le lire, le comprendre</h4>
-    
-
-<figure class="cours-document"><img src="/tifsec-test-eleves/assets/images/graphiques/maths-1re-s09-histogramme.svg" alt="Histogramme des poids de 50 chevaux." loading="lazy" decoding="async"><figcaption>Histogramme des poids de 50 chevaux.</figcaption></figure>
-    
-
-<h4>Comment faire ce graphique</h4>
-    
-
-<ol><li>Au tableur : saisis les centres des classes et les effectifs, Insertion &gt; Diagramme &gt; Colonne, puis mets l’espacement entre colonnes à 0 %.</li></ol>
-    
-
-<h4>Comment le lire</h4>
-    
-
-<ul><li>Chaque rectangle est une classe de 50 kg ; sa hauteur est l’effectif.</li></ul>
-    
-
-<h4>Comment le comprendre</h4>
-    
-
-<ul><li>La classe modale est la plus haute ; la forme montre si la répartition est centrée ou dissymétrique.</li></ul>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>La classe de plus grand effectif est la classe <span class="cours-trou" aria-label="à compléter"></span> .</li><li>L’histogramme montre la <span class="cours-trou" aria-label="à compléter"></span> de la répartition.</li></ul>
-    
-
-<h4>Exercice 3 — L’histogramme et la classe modale</h4>
+<figure class="cours-document"><img src="/tifsec-test-eleves/assets/images/graphiques/maths-1re-s09-classique-poneys.svg" alt="Histogramme des hauteurs des poneys : [10 ; 12[ 3, [12 ; 14[ 7, [14 ; 16[ 9, [16 ; 18[ 4, [18 ; 20[ 2." loading="lazy" decoding="async"><figcaption>Histogramme des hauteurs des poneys : [10 ; 12[ 3, [12 ; 14[ 7, [14 ; 16[ 9, [16 ; 18[ 4, [18 ; 20[ 2.</figcaption></figure>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — Effectifs 5, 12, 9, 4. Quelle est la classe modale ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Quelle est la classe modale ? Décris la forme de l’histogramme.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — Effectif de [12 ; 14[ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Effectif de [18 ; 20[ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Borne de gauche de la classe modale ? (en dm)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Effectif total ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — Fréquence de la classe modale, en % ? (en %)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Moyenne estimée des hauteurs ? (en dm)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Combien de poneys mesurent 16 dm ou plus ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>Conclusion</h3>
+            <h3>Encore des exercices (si tu as fini)</h3>
             
-<p>Avec ce que tu as fait dans les parties précédentes, réponds en quelques phrases complètes.</p>
-    
 
-
-            <ol class="course-paper-questions"><li><span>Réponds au problème du jour : comment regrouper une série continue et estimer ses indicateurs ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Pour aller plus loin (facultatif)</h3>
-            
-<p>La vraie moyenne est 498 kg.</p>
-    
-
-
-            <ol class="course-paper-questions"><li><span>Pourquoi l’estimation diffère-t-elle ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Centre de [20 ; 30[ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Classes [0 ; 10[ : 2 ; [10 ; 20[ : 6 ; [20 ; 30[ : 2. Moyenne estimée ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Classes [100 ; 200[ : 5 ; [200 ; 300[ : 15. Moyenne estimée ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Poneys : fréquence de [10 ; 12[, en % ? (en %)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>À retenir</h3>
             
-<ul><li>Centre = (a + b) ÷ 2.</li><li>Moyenne estimée.</li></ul>
+<ul><li>Centre d’une classe [a ; b[ = (a + b) ÷ 2.</li><li>Moyenne estimée = (c₁ × n₁ + c₂ × n₂ + …) ÷ effectif total.</li><li>C’est une estimation : on fait comme si toutes les valeurs d’une classe valaient le centre.</li><li>Histogramme : hauteur = effectif ; classe modale = le plus haut rectangle.</li></ul>
     
 
 
             
-        </section>
-        
-        <section class="course-paper-section course-paper-break">
-            <h2 class="course-paper-part">Fiche d’exercices</h2><h3>Exercice 1 — Classes</h3>
-            
-<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Classe (kg)</th><th scope="col">[300 ; 350[</th><th scope="col">[350 ; 400[</th><th scope="col">[400 ; 450[</th></tr></thead><tbody><tr><td>Effectif</td><td>5</td><td>10</td><td>5</td></tr></tbody></table></div>
-    
-
-
-            <ol class="course-paper-questions"><li><span>Centres des classes ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Moyenne estimée ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Exercice 2 — Classe modale</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>Classe modale ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Exercice 3 — Histogramme</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>Trace l’histogramme.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
     </article>
@@ -519,63 +410,60 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Les centres de classes</h2>
+        <h2>Partie 1 — Le centre d’une classe</h2>
         
         
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas calculer le centre de chaque classe de poids (document 1). On attend les quatre centres.</p></div>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>On a pesé 50 chevaux. Écrire les 50 poids un par un serait illisible : on les range par tranches de 50 kg.</p>
+<p>Quand une série est donnée en classes, on ne connaît plus les valeurs exactes.</p>
     
 
-<h4>Ce que c’est</h4>
-    
-
-<p>Une classe est un intervalle de valeurs, noté [a ; b[ (de a compris à b non compris). Son centre est la valeur du milieu de l’intervalle.</p>
-    
-
-<h4>À quoi ça sert</h4>
-    
-
-<ul><li>Résumer une série de nombreuses valeurs mesurées (poids, tailles, temps).</li><li>Faire des calculs approchés quand on ne connaît pas chaque valeur.</li></ul>
-    
-
-<h4>Comment ça marche</h4>
-    
-
-<ol><li>On lit les bornes a et b de la classe.</li><li>On calcule le centre : (a + b) ÷ 2.</li><li>On remplacera toutes les valeurs de la classe par ce centre.</li></ol>
+<p>Pour calculer, on remplace chaque classe par sa valeur du milieu : son centre.</p>
     
 
 <p>À retenir : Centre de [a ; b[ = (a + b) ÷ 2.</p>
     
 
+<h4>Comment ça fonctionne</h4>
+    
+
+<ol><li>Repère les deux bornes de la classe.</li><li>Additionne-les.</li><li>Divise par 2.</li><li>Contrôle : le centre est pile au milieu de la classe.</li></ol>
+    
+
+<h4>Pourquoi ça marche</h4>
+    
+
+<p>1. Pourquoi le milieu</p>
+    
+
+<ul><li>Dans [300 ; 350[, les valeurs sont quelque part entre 300 et 350.</li><li>Le milieu, 325, est la meilleure valeur « moyenne » quand on ne sait pas où elles sont.</li></ul>
+    
+
+<p>2. Pourquoi (a + b) ÷ 2</p>
+    
+
+<ul><li>C’est la moyenne des deux bornes.</li><li>300 + 25 = 325 : on ajoute la moitié de l’amplitude (50 ÷ 2).</li></ul>
+    
+
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>Centre de la classe [120 ; 140[ ?</li><li>Centre de la classe [1,50 ; 1,60[ ?</li></ol>
+<p>Consommation mensuelle de foin de 20 chevaux :</p>
     
 
-<ul><li>Automatisme : (400 + 450) ÷ 2.</li></ul>
-    
-
-<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Poids de 50 chevaux (fictif)</caption><thead><tr><th scope="col">Classe (kg)</th><th scope="col">[400 ; 450[</th><th scope="col">[450 ; 500[</th><th scope="col">[500 ; 550[</th><th scope="col">[550 ; 600[</th></tr></thead><tbody><tr><td>Effectif</td><td>8</td><td>17</td><td>15</td><td>10</td></tr></tbody></table></div>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : lis le tableau des poids de 50 chevaux (document 1) et calcule le centre de chaque classe.</li><li>Pourquoi le centre ? On remplace toutes les valeurs d’une classe par sa valeur du milieu.</li></ol>
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Consommation (kg/mois)</th><th scope="col">[300 ; 350[</th><th scope="col">[350 ; 400[</th><th scope="col">[400 ; 450[</th><th scope="col">[450 ; 500[</th></tr></thead><tbody><tr><td>Effectif</td><td>4</td><td>6</td><td>8</td><td>2</td></tr></tbody></table></div>
     
 
 
@@ -584,63 +472,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a01-q01-label">Question 1 — Série A — Centre de [300 ; 350[ ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Centre d’une classe [a ; b[ = (a + b) ÷ …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Les centres de classes — Mot(s) manquant(s) — Centre d’une classe [a ; b[ = (a + b) ÷ …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    On remplace les valeurs d’une classe par son …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Les centres de classes — Mot(s) manquant(s) — On remplace les valeurs d’une classe par son …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Relis l’exemple [300 ; 350[ : on additionne les bornes puis on divise par… ? Et ensuite, par quoi remplace-t-on les valeurs de la classe ?</p></details>
+                <input type="text" inputmode="decimal" id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>(300 + 350) ÷ 2.</p></details>
             
             
         </div>
@@ -648,97 +488,79 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Centres de classes.</h3>
+            <h3 id="a01-q02-label">Question 2 — Centre de [350 ; 400[ ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Classe (kg)</th>
-                                
-                                <th>Centre</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    [400 ; 450[
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q02_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Les centres de classes — Centre — [400 ; 450[">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    [450 ; 500[
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q02_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Les centres de classes — Centre — [450 ; 500[">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    [500 ; 550[
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q02_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Les centres de classes — Centre — [500 ; 550[">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    [550 ; 600[
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q02_r3_c1" data-required="true" data-row="3" data-col="1" aria-label="Les centres de classes — Centre — [550 ; 600[">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
+                <input type="text" inputmode="decimal" id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>(350 + 400) ÷ 2.</p></details>
             
-            <details><summary>Un coup de pouce</summary><p>Pour chaque classe du document 1 : (borne gauche + borne droite) ÷ 2.</p></details>
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a01-q03-label">Question 3 — Centre de [400 ; 450[ ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>(400 + 450) ÷ 2.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a01-q04-label">Question 4 — Centre de [450 ; 500[ ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q04" data-answer-id="a01_q04" data-required="true" aria-labelledby="a01-q04-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>(450 + 500) ÷ 2.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a01-q05-label">Question 5 — Série B — Centre de [0 ; 15[ ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q05" data-answer-id="a01_q05" data-required="true" aria-labelledby="a01-q05-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>(0 + 15) ÷ 2.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a01-q06-label">Question 6 — Centre de [1,2 ; 1,6[ ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q06" data-answer-id="a01_q06" data-required="true" aria-labelledby="a01-q06-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>(1,2 + 1,6) ÷ 2.</p></details>
             
             
         </div>
@@ -752,57 +574,60 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>La moyenne estimée</h2>
+        <h2>Partie 2 — La moyenne estimée</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les centres sont prêts. Estime la moyenne.</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas estimer la moyenne des poids à partir des classes. On attend la somme des produits et la moyenne.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as les centres. Deuxième notion : calculer la moyenne avec eux.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Quel est le poids moyen des 50 chevaux, si l’on ne connaît que les classes et leurs effectifs ?</p>
+<p>On fait comme si toutes les valeurs d’une classe étaient égales au centre.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>On obtient une estimation de la moyenne, pas la valeur exacte.</p>
     
 
-<p>La moyenne estimée est une moyenne calculée en remplaçant chaque valeur par le centre de sa classe. C’est une approximation.</p>
+<p>À retenir : Moyenne estimée = somme des (centre × effectif) ÷ effectif total.</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Avoir un ordre de grandeur fiable quand les données sont regroupées (enquêtes, statistiques officielles).</li></ul>
+<ol><li>Pour chaque classe, multiplie le centre par l’effectif.</li><li>Additionne tous ces produits.</li><li>Divise par l’effectif total (pas par le nombre de classes).</li><li>Contrôle : le résultat est entre le plus petit et le plus grand centre.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>Pour chaque classe : centre × effectif.</li><li>On additionne tous ces produits (Σ).</li><li>On divise par l’effectif total (la somme des effectifs), pas par le nombre de classes.</li></ol>
+<p>1. Pourquoi centre × effectif</p>
     
 
-<p>À retenir : Moyenne estimée = Σ (centre × effectif) ÷ effectif total.</p>
+<ul><li>4 chevaux dans [300 ; 350[ : on compte chacun pour 325 kg.</li><li>Ensemble, ils comptent 4 × 325 = 1 300 kg.</li></ul>
+    
+
+<p>2. Pourquoi diviser par 20</p>
+    
+
+<ul><li>On partage le total entre les 20 chevaux, pas entre les 4 classes.</li><li>Diviser par 4 donnerait une « moyenne » de 2 000 kg : absurde.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>Centres 10 et 20, effectifs 3 et 7. Moyenne estimée ?</li><li>Centres 125, 135, 145 ; effectifs 2, 5, 3. Moyenne estimée ?</li></ol>
+<p>Même tableau (20 chevaux).</p>
     
 
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : calcule Σ centre × effectif pour les 50 chevaux, puis divise par 50.</li><li>Pourquoi « estimée » ? On ne connaît pas les vraies valeurs dans chaque classe.</li></ol>
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Consommation (kg/mois)</th><th scope="col">[300 ; 350[</th><th scope="col">[350 ; 400[</th><th scope="col">[400 ; 450[</th><th scope="col">[450 ; 500[</th></tr></thead><tbody><tr><td>Effectif</td><td>4</td><td>6</td><td>8</td><td>2</td></tr></tbody></table></div>
     
 
 
@@ -811,63 +636,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a02-q01-label">Question 1 — Série A — Centre × effectif pour [300 ; 350[ ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Moyenne estimée = Σ (centre × effectif) ÷ effectif …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="La moyenne estimée — Mot(s) manquant(s) — Moyenne estimée = Σ (centre × effectif) ÷ effectif …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Elle est dite « estimée » car on ne connaît pas les vraies …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="La moyenne estimée — Mot(s) manquant(s) — Elle est dite « estimée » car on ne connaît pas les vraies …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Moyenne estimée = somme des centre × effectif ÷ effectif… ? Et pourquoi « estimée » : que ne connaît-on pas ?</p></details>
+                <input type="text" inputmode="decimal" id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>325 × 4.</p></details>
             
             
         </div>
@@ -875,15 +652,15 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Somme des produits centre × effectif ?</h3>
+            <h3 id="a02-q02-label">Question 2 — Centre × effectif pour [350 ; 400[ ?</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><p>Unité : kg</p>
+                <input type="text" inputmode="decimal" id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label">
 
                 
-            <details><summary>Un coup de pouce</summary><p>Pour chaque classe, multiplie son centre par son effectif (document 1), puis additionne les 4 produits.</p></details>
+            <details><summary>Un coup de pouce</summary><p>375 × 6.</p></details>
             
             
         </div>
@@ -891,15 +668,79 @@
         <div class="cours-question" data-question="q03">
             
             
-            <h3 id="a02-q03-label">Question 3 — Moyenne estimée ?</h3>
+            <h3 id="a02-q03-label">Question 3 — Centre × effectif pour [400 ; 450[ ?</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label"><p>Unité : kg</p>
+                <input type="text" inputmode="decimal" id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label">
 
                 
-            <details><summary>Un coup de pouce</summary><p>Divise la somme trouvée par l’effectif total (50 chevaux).</p></details>
+            <details><summary>Un coup de pouce</summary><p>425 × 8.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a02-q04-label">Question 4 — Centre × effectif pour [450 ; 500[ ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q04" data-answer-id="a02_q04" data-required="true" aria-labelledby="a02-q04-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>475 × 2.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a02-q05-label">Question 5 — Somme des quatre produits ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q05" data-answer-id="a02_q05" data-required="true" aria-labelledby="a02-q05-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Additionne.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a02-q06-label">Question 6 — Série B — Moyenne estimée de la consommation ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q06" data-answer-id="a02_q06" data-required="true" aria-labelledby="a02-q06-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>7 900 ÷ 20.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q07">
+            
+            
+            <h3 id="a02-q07-label">Question 7 — Pourquoi dit-on « estimée » ?</h3>
+            
+
+            
+            
+                <select id="a02-q07" data-answer-id="a02_q07" data-required="true" aria-labelledby="a02-q07-label"><option value="">Choisis une réponse</option><option value="a">Parce qu’on a arrondi</option><option value="b">Parce qu’on a remplacé chaque valeur par le centre de sa classe</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Connaît-on les vraies valeurs ?</p></details>
             
             
         </div>
@@ -913,78 +754,60 @@
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>L’histogramme et la classe modale</h2>
+        <h2>Partie 3 — L’histogramme et la classe modale</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as une moyenne estimée. Regarde la forme.</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas tracer l’histogramme des poids et repérer la classe modale. On attend la classe et la forme.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Dernière notion : lire une série en classes sur un graphique.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Comment voir d’un coup d’œil où se trouvent la plupart des chevaux ?</p>
+<p>Un histogramme représente une série en classes par des rectangles accolés : la base est la classe, la hauteur l’effectif.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>La classe modale est la classe qui a le plus grand effectif.</p>
     
 
-<p>Un histogramme représente une série regroupée en classes par des rectangles accolés : la largeur est la classe, la hauteur l’effectif. La classe modale est celle qui a le plus grand effectif.</p>
+<p>À retenir : Effectif d’une classe = hauteur de son rectangle. Classe modale = le plus haut rectangle.</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Voir la forme de la répartition : centrée, étalée, penchée d’un côté.</li><li>Repérer la classe la plus fréquente.</li></ul>
+<ol><li>Comment le lire : repère la classe sur l’axe horizontal, monte au haut du rectangle, lis la hauteur à gauche.</li><li>Classe modale : cherche le plus haut rectangle.</li><li>Effectif total : additionne toutes les hauteurs.</li><li>Fréquence : effectif ÷ total × 100.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>On place les classes sur l’axe horizontal et les effectifs sur l’axe vertical.</li><li>Pour chaque classe, un rectangle de hauteur égale à l’effectif ; les rectangles se touchent.</li><li>Au tableur : diagramme en colonnes, espacement entre colonnes à 0 %.</li><li>On repère le rectangle le plus haut : c’est la classe modale.</li></ol>
+<p>1. Comment il est fait</p>
     
 
-<p>À retenir : Classe modale = classe de plus grand effectif.</p>
+<ul><li>Un rectangle par classe, de la borne a à la borne b, de hauteur l’effectif.</li><li>Les rectangles se touchent car les classes se suivent.</li></ul>
+    
+
+<p>2. Comment le comprendre</p>
+    
+
+<ul><li>La forme montre où se concentrent les valeurs.</li><li>Ici, la plupart des poneys sont entre 12 et 16 dm.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>Effectifs 5, 12, 9, 4. Quelle est la classe modale ?</li></ol>
+<p>Hauteur au garrot des poneys du club :</p>
     
 
-<figure class="cours-document"><img src="/tifsec-test-eleves/assets/images/graphiques/maths-1re-s09-histogramme.svg" alt="Histogramme des poids de 50 chevaux." loading="lazy" decoding="async"><figcaption>Histogramme des poids de 50 chevaux.</figcaption></figure>
-    
-
-<h4>Comment faire ce graphique</h4>
-    
-
-<ol><li>Au tableur : saisis les centres des classes et les effectifs, Insertion &gt; Diagramme &gt; Colonne, puis mets l’espacement entre colonnes à 0 %.</li></ol>
-    
-
-<h4>Comment le lire</h4>
-    
-
-<ul><li>Chaque rectangle est une classe de 50 kg ; sa hauteur est l’effectif.</li></ul>
-    
-
-<h4>Comment le comprendre</h4>
-    
-
-<ul><li>La classe modale est la plus haute ; la forme montre si la répartition est centrée ou dissymétrique.</li></ul>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : trace l’histogramme au tableur et repère la classe modale.</li><li>Pourquoi l’histogramme ? Il montre la forme de la répartition.</li></ol>
+<figure class="cours-document"><img src="/tifsec-test-eleves/assets/images/graphiques/maths-1re-s09-classique-poneys.svg" alt="Histogramme des hauteurs des poneys : [10 ; 12[ 3, [12 ; 14[ 7, [14 ; 16[ 9, [16 ; 18[ 4, [18 ; 20[ 2." loading="lazy" decoding="async"><figcaption>Histogramme des hauteurs des poneys : [10 ; 12[ 3, [12 ; 14[ 7, [14 ; 16[ 9, [16 ; 18[ 4, [18 ; 20[ 2.</figcaption></figure>
     
 
 
@@ -993,63 +816,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a03-q01-label">Question 1 — Série A — Effectif de [12 ; 14[ ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    La classe de plus grand effectif est la classe …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a03_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="L’histogramme et la classe modale — Mot(s) manquant(s) — La classe de plus grand effectif est la classe …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    L’histogramme montre la …… de la répartition.
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a03_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="L’histogramme et la classe modale — Mot(s) manquant(s) — L’histogramme montre la …… de la répartition.">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>La classe la plus haute a un nom (comme le mode). Et l’histogramme montre la… de la répartition.</p></details>
+                <input type="text" inputmode="decimal" id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Hauteur du 2e rectangle.</p></details>
             
             
         </div>
@@ -1057,15 +832,95 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a03-q02-label">Question 2 — Quelle est la classe modale ? Décris la forme de l’histogramme.</h3>
+            <h3 id="a03-q02-label">Question 2 — Effectif de [18 ; 20[ ?</h3>
             
 
             
             
-                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label">
 
                 
-            <details><summary>Un coup de pouce</summary><p>Cherche le plus grand effectif du document 1, puis décris l’histogramme : où est le sommet, est-il symétrique ?</p></details>
+            <details><summary>Un coup de pouce</summary><p>Hauteur du dernier rectangle.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a03-q03-label">Question 3 — Borne de gauche de la classe modale ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q03" data-answer-id="a03_q03" data-required="true" aria-labelledby="a03-q03-label"><p>Unité : dm</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Plus haut rectangle.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a03-q04-label">Question 4 — Effectif total ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q04" data-answer-id="a03_q04" data-required="true" aria-labelledby="a03-q04-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Additionne les hauteurs.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a03-q05-label">Question 5 — Série B — Fréquence de la classe modale, en % ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q05" data-answer-id="a03_q05" data-required="true" aria-labelledby="a03-q05-label"><p>Unité : %</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>9 ÷ 25 × 100.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a03-q06-label">Question 6 — Moyenne estimée des hauteurs ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q06" data-answer-id="a03_q06" data-required="true" aria-labelledby="a03-q06-label"><p>Unité : dm</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Centres 11, 13, 15, 17, 19.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q07">
+            
+            
+            <h3 id="a03-q07-label">Question 7 — Combien de poneys mesurent 16 dm ou plus ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q07" data-answer-id="a03_q07" data-required="true" aria-labelledby="a03-q07-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Additionne les deux derniers rectangles.</p></details>
             
             
         </div>
@@ -1079,7 +934,7 @@
     
     <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Pour aller plus loin</h2>
+        <h2>Encore des exercices (si tu as fini)</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
@@ -1087,7 +942,7 @@
         
 
         
-<p>La vraie moyenne est 498 kg.</p>
+<p>Tu as fini ? Entraîne-toi encore. Ces exercices ne comptent pas dans la note.</p>
     
 
 
@@ -1096,15 +951,63 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Pourquoi l’estimation diffère-t-elle ?</h3>
+            <h3 id="a04-q01-label">Question 1 — Centre de [20 ; 30[ ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label">
 
                 
-            <details><summary>Un coup de pouce</summary><p>Dans une classe, les chevaux ne pèsent pas tous la valeur du centre. Où sont-ils peut-être placés ?</p></details>
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a04-q02-label">Question 2 — Classes [0 ; 10[ : 2 ; [10 ; 20[ : 6 ; [20 ; 30[ : 2. Moyenne estimée ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a04-q02" data-answer-id="a04_q02" data-required="false" aria-labelledby="a04-q02-label">
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a04-q03-label">Question 3 — Classes [100 ; 200[ : 5 ; [200 ; 300[ : 15. Moyenne estimée ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a04-q03" data-answer-id="a04_q03" data-required="false" aria-labelledby="a04-q03-label">
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a04-q04-label">Question 4 — Poneys : fréquence de [10 ; 12[, en % ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a04-q04" data-answer-id="a04_q04" data-required="false" aria-labelledby="a04-q04-label"><p>Unité : %</p>
+
+                
+            
             
             
         </div>
@@ -1112,41 +1015,6 @@
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#a03">← Étape précédente</a>
-            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a05" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Conclusion de ton travail</h2>
-        
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais exploiter des classes. Il reste à répondre au problème de départ.</p>
-        
-        
-        
-
-        
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment regrouper une série continue et estimer ses indicateurs ?</h3>
-            
-
-            
-            
-                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Dis comment calculer les centres, la moyenne estimée et lire l’histogramme.</p></details>
-            
-            
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -1159,7 +1027,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Centre = (a + b) ÷ 2.</li><li>Moyenne estimée.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Centre d’une classe [a ; b[ = (a + b) ÷ 2.</li><li>Moyenne estimée = (c₁ × n₁ + c₂ × n₂ + …) ÷ effectif total.</li><li>C’est une estimation : on fait comme si toutes les valeurs d’une classe valaient le centre.</li><li>Histogramme : hauteur = effectif ; classe modale = le plus haut rectangle.</li></ul>
     
 </section>
 
@@ -1175,7 +1043,7 @@
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
     
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

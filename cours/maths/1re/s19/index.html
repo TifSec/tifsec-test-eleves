@@ -124,7 +124,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Tester les différences</a></li><li><a href="#a02">Tester les quotients</a></li><li><a href="#a03">Le nuage (n ; uₙ)</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Partie 1 — Reconnaître le type de suite</a></li><li><a href="#a02">Partie 2 — Modéliser une situation</a></li><li><a href="#a03">Partie 3 — Comparer deux évolutions</a></li><li><a href="#a04">Encore des exercices (si tu as fini) — facultatif</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -150,7 +150,7 @@
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Comment reconnaître le type de suite qui modélise une situation ?</p>
+        <p>Comment savoir si une situation se modélise par une suite arithmétique ou géométrique, et comparer deux évolutions ?</p>
     </section>
     
 
@@ -168,9 +168,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Arithmétique : différences constantes (uₙ₊₁ − uₙ = r) ; points alignés sur un nuage (n ; uₙ).</li>
+            <li>Même quantité ajoutée : arithmétique (uₙ = u₀ + n r).</li>
             
-            <li>Géométrique : quotients constants (uₙ₊₁ ÷ uₙ = q) ; courbe qui s’incurve.</li>
+            <li>Même pourcentage : géométrique (uₙ = u₀ × qⁿ).</li>
             
         </ul>
         
@@ -178,16 +178,18 @@
         <h2>Ce que tu vas apprendre à faire</h2>
         <ul>
             
-            <li>Tester différences et quotients.</li>
+            <li>Reconnaître le type d’une suite à partir de ses termes.</li>
             
-            <li>Choisir un modèle.</li>
+            <li>Modéliser une situation par la bonne suite.</li>
+            
+            <li>Comparer deux évolutions et dire quand l’une dépasse l’autre.</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En S16-S18, tu as vu deux types de suites.</p><p>Face à des données, laquelle choisir ?</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Aujourd’hui, trois notions : reconnaître le type de suite, modéliser une situation, comparer deux offres.</p><p>Pour chacune : la notion, la méthode, pourquoi ça marche, un exemple au tableau, puis beaucoup d’exercices.</p></div></section>
     
     
     
@@ -202,67 +204,45 @@
 
 <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
     <article class="course-paper-sheet">
-        <header><p class="course-paper-class">Mathématiques — Bac Pro 1</p><p class="course-paper-kicker">Cours et exercices — version papier</p><h2 id="course-paper-title"><span class="course-paper-number">Séance 19</span> — Arithmétique ou géométrique ?</h2><p>Comment reconnaître le type de suite qui modélise une situation ?</p></header>
+        <header><p class="course-paper-class">Mathématiques — Bac Pro 1</p><p class="course-paper-kicker">Cours et exercices — version papier</p><h2 id="course-paper-title"><span class="course-paper-number">Séance 19</span> — Arithmétique ou géométrique ?</h2><p>Trois notions : reconnaître, modéliser, comparer. Pour chacune : la notion, la méthode, l’exemple au tableau, puis les exercices.</p></header>
         
         <section class="course-paper-section">
-            <h3>Le cours en bref</h3>
+            <h3>I. Reconnaître le type de suite</h3>
             
-<p>Le problème à résoudre : Comment reconnaître le type de suite qui modélise une situation ?</p>
+<h4>La notion</h4>
     
 
-<h4>Ce que tu vas apprendre</h4>
+<p>Devant une liste de termes, on teste les deux possibilités : les différences, puis les quotients.</p>
     
 
-<ul><li>Arithmétique : différences constantes (uₙ₊₁ − uₙ = r) ; points alignés sur un nuage (n ; uₙ).</li><li>Géométrique : quotients constants (uₙ₊₁ ÷ uₙ = q) ; courbe qui s’incurve.</li></ul>
+<p>Si les différences sont égales : arithmétique. Si les quotients sont égaux : géométrique.</p>
     
 
-<h4>Ce que tu vas savoir faire</h4>
+<h4>À retenir</h4>
     
 
-<ul><li>Tester différences et quotients.</li><li>Choisir un modèle.</li></ul>
+<p>Différences égales → arithmétique ; quotients égaux → géométrique ; aucun des deux → ni l’une ni l’autre.</p>
     
 
-<h4>Pourquoi cette séance ?</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<p>En S16-S18, tu as vu deux types de suites. Face à des données, laquelle choisir ?</p>
+<ol><li>Calcule u₁ − u₀ et u₂ − u₁.</li><li>Égales ? Arithmétique.</li><li>Sinon, calcule u₁ ÷ u₀ et u₂ ÷ u₁.</li><li>Égaux ? Géométrique. Sinon : ni l’une ni l’autre.</li></ol>
     
 
-<p>Comment utiliser cette fiche : pour chaque partie, lis la méthode et l’exemple, complète les points clés, puis fais l’exercice. Réponds sur les lignes.</p>
+<h4>Pourquoi ça marche</h4>
     
 
-
-            
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>I. Tester les différences</h3>
-            
-<h4>La situation</h4>
+<p>1. Pourquoi tester deux fois</p>
     
 
-<p>On a relevé deux séries de valeurs sur 4 années. Quel modèle utiliser pour prévoir la suite ?</p>
+<ul><li>Une seule différence ne prouve rien : il faut qu’elle se répète.</li></ul>
     
 
-<h4>Ce que c’est</h4>
+<p>2. Pourquoi pas les deux à la fois</p>
     
 
-<p>Tester les différences, c’est calculer uₙ₊₁ − uₙ pour chaque paire de termes consécutifs. Si elles sont toutes égales, la suite est arithmétique et cette différence est la raison r.</p>
-    
-
-<h4>À quoi ça sert</h4>
-    
-
-<ul><li>Reconnaître une évolution d’une quantité fixe chaque période.</li></ul>
-    
-
-<h4>Comment ça marche</h4>
-    
-
-<ol><li>On calcule terme suivant − terme précédent, pour chaque paire.</li><li>Si toutes les différences sont égales : suite arithmétique de raison r.</li><li>Sinon : ce n’est pas une suite arithmétique.</li></ol>
-    
-
-<p>À retenir : Différences constantes : suite arithmétique.</p>
+<ul><li>Sauf si tous les termes sont égaux, une suite ne peut pas ajouter et multiplier par la même chose à chaque fois.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -271,68 +251,53 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<ul><li>Automatisme : 1 080 ÷ 1 200 = ?</li></ul>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<h4>Ce que tu vas faire</h4>
-    
-
-<p>Tu vas tester les différences successives de la série A (document 1). On attend les différences et ta conclusion.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : lis les deux séries (document 1) et calcule les différences successives de la série A.</li><li>Pourquoi les différences ? Si elles sont constantes, la suite est arithmétique.</li></ol>
-    
-
-<h4>Exemple et documents</h4>
-    
-
-<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Deux séries (fictives)</caption><thead><tr><th scope="col">n</th><th scope="col">0</th><th scope="col">1</th><th scope="col">2</th><th scope="col">3</th></tr></thead><tbody><tr><td>Série A</td><td>2 000</td><td>1 850</td><td>1 700</td><td>1 550</td></tr><tr><td>Série B</td><td>1 200</td><td>1 080</td><td>972</td><td>8748</td></tr></tbody></table></div>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>Différences constantes : suite <span class="cours-trou" aria-label="à compléter"></span> .</li><li>Différence = uₙ₊₁ − <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 1 — Tester les différences</h4>
+<p>Calculatrice autorisée.</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — Série 40 ; 55 ; 70 ; 85. Est-elle arithmétique ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — Série 10 ; 20 ; 40 ; 80. Est-elle arithmétique ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Calcule les différences de la série A. Est-elle arithmétique ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — 4 ; 7 ; 10 ; 13 : Choix : arithmétique / géométrique / ni l’une ni l’autre.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>3 ; 6 ; 12 ; 24 : Choix : arithmétique / géométrique / ni l’une ni l’autre.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>1 ; 4 ; 9 ; 16 : Choix : arithmétique / géométrique / ni l’une ni l’autre.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>500 ; 450 ; 405 : Choix : arithmétique / géométrique / ni l’une ni l’autre.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>80 ; 72 ; 64 ; 56 : Choix : arithmétique / géométrique / ni l’une ni l’autre.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — Raison de 100 ; 110 ; 121 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Raison de 80 ; 72 ; 64 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>II. Tester les quotients</h3>
+            <h3>II. Modéliser une situation</h3>
             
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>La série B ne semble pas avoir des différences constantes. Est-elle géométrique ?</p>
+<p>Dans un énoncé, le type d’évolution se lit dans les mots.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>« De 15 € par an » : on ajoute toujours 15 € → arithmétique. « De 3 % par an » : on multiplie toujours par 1,03 → géométrique.</p>
     
 
-<p>Tester les quotients, c’est calculer uₙ₊₁ ÷ uₙ pour chaque paire. S’ils sont tous égaux, la suite est géométrique et ce quotient est la raison q.</p>
+<h4>À retenir</h4>
     
 
-<h4>À quoi ça sert</h4>
+<p>Quantité fixe (€, kg, t) → arithmétique, r = cette quantité. Pourcentage fixe → géométrique, q = 1 ± t/100.</p>
     
 
-<ul><li>Reconnaître une évolution du même pourcentage chaque période, et retrouver ce pourcentage.</li></ul>
+<h4>Comment ça fonctionne</h4>
     
 
-<h4>Comment ça marche</h4>
+<ol><li>Cherche dans l’énoncé : une quantité ou un pourcentage ?</li><li>Écris u₀ (la valeur de départ).</li><li>Écris r ou q (avec le bon signe ou le bon coefficient).</li><li>Écris la formule de uₙ.</li></ol>
     
 
-<ol><li>On calcule terme suivant ÷ terme précédent, pour chaque paire.</li><li>Si tous les quotients sont égaux : suite géométrique de raison q.</li><li>On interprète q : q &gt; 1 hausse de (q − 1) × 100 % ; q &lt; 1 baisse de (1 − q) × 100 %.</li></ol>
+<h4>Pourquoi ça marche</h4>
     
 
-<p>À retenir : Quotients constants : suite géométrique.</p>
+<p>1. Pourquoi une quantité fixe donne une suite arithmétique</p>
+    
+
+<ul><li>Chaque année on ajoute 15 € : la différence entre deux années est toujours 15.</li></ul>
+    
+
+<p>2. Pourquoi un pourcentage fixe donne une suite géométrique</p>
+    
+
+<ul><li>3 % de plus, c’est × 1,03 : le quotient entre deux années est toujours 1,03.</li><li>L’augmentation en euros grandit chaque année (12 €, puis 12,36 €…).</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -341,59 +306,53 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<h4>Ce que tu vas faire</h4>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<p>Tu vas tester les quotients successifs de la série B. On attend les quotients, ta conclusion et une interprétation.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : calcule les quotients successifs de la série B.</li><li>Pourquoi les quotients ? S’ils sont constants, la suite est géométrique.</li></ol>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>Quotients constants : suite <span class="cours-trou" aria-label="à compléter"></span> .</li><li>Une baisse de 10 % donne q = <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 2 — Tester les quotients</h4>
+<p>Calculatrice autorisée.</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — Série 300 ; 330 ; 363. Calcule les quotients. Type et raison ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — Série 800 ; 600 ; 450. Type et raison ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Calcule les quotients de la série B. Est-elle géométrique ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Que pourrait représenter la série B ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — Une pension augmente de 20 € par an : Choix : arithmétique / géométrique.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Un tracteur perd 15 % de sa valeur par an : Choix : arithmétique / géométrique.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Raison q de ce tracteur ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Un stock de 3 000 kg baisse de 40 kg par jour. Raison r ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — Tracteur de 40 000 € : valeur dans 2 ans ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Stock de 3 000 kg : stock dans 25 jours ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Un club de 120 licenciés gagne 5 % par an. Licenciés dans 3 ans (arrondi) ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>III. Le nuage (n ; uₙ)</h3>
+            <h3>III. Comparer deux évolutions</h3>
             
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Peut-on deviner le type de suite d’un coup d’œil, avant de calculer ?</p>
+<p>Une hausse fixe ajoute toujours la même somme ; une hausse en % ajoute une somme de plus en plus grande.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>Au début, la hausse fixe peut être plus forte ; à long terme, la hausse en % la dépasse.</p>
     
 
-<p>Le nuage (n ; uₙ) place chaque terme comme un point : rang en abscisse, valeur en ordonnée. Sa forme révèle le type de suite.</p>
+<h4>À retenir</h4>
     
 
-<h4>À quoi ça sert</h4>
+<p>Pour comparer, on calcule les deux suites au même rang, ou on fait un tableau.</p>
     
 
-<ul><li>Deviner le modèle avant de faire les calculs.</li><li>Présenter une évolution de façon visuelle.</li></ul>
+<h4>Comment ça fonctionne</h4>
     
 
-<h4>Comment ça marche</h4>
+<ol><li>Écris les deux formules.</li><li>Calcule les deux valeurs au rang demandé.</li><li>Compare.</li><li>Pour savoir quand l’une dépasse l’autre, avance de rang en rang (tableau ou tableur).</li></ol>
     
 
-<ol><li>Au tableur : une colonne n, une colonne uₙ, diagramme XY (dispersion), points seuls.</li><li>Points alignés sur une droite : suite arithmétique.</li><li>Points sur une courbe qui s’incurve : suite géométrique.</li></ol>
+<h4>Pourquoi ça marche</h4>
     
 
-<p>À retenir : Arithmétique : droite ; géométrique : courbe.</p>
+<p>1. Pourquoi la hausse en % finit par gagner</p>
+    
+
+<ul><li>Offre A : + 15 € chaque année, toujours.</li><li>Offre B : + 3 % d’un prix qui grandit : 12 €, puis 12,36 €, 12,73 €… la hausse elle-même augmente.</li></ul>
+    
+
+<p>2. Ce que montre le tableau</p>
+    
+
+<ul><li>À 10 ans, A vaut 550 € et B environ 537,57 €.</li><li>À 15 ans, A vaut 625 € et B environ 623,19 € : presque égaux. Ensuite, B devient la plus chère.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -402,104 +361,34 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<h4>Ce que tu vas faire</h4>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<p>Tu vas tracer les nuages (n ; uₙ) des deux séries et décrire leur forme. On attend la description des deux formes.</p>
+<p>Prix annuel d’une pension selon deux offres (€) :</p>
     
 
-<h4>Ta mission</h4>
-    
-
-<ol><li>Au tableur : colonne n, colonne uₙ ; sélectionne, Insertion &gt; Diagramme &gt; XY (dispersion) &gt; Points seuls.</li><li>Regarde si les points forment une droite ou une courbe.</li><li>À toi : trace les deux nuages et compare leur forme.</li><li>Pourquoi le graphique ? Il permet de deviner le type avant de calculer.</li></ol>
-    
-
-<h4>Le graphique : le faire, le lire, le comprendre</h4>
-    
-
-<figure class="cours-document"><img src="/tifsec-test-eleves/assets/images/graphiques/maths-1re-s19-suites.svg" alt="Nuages (n ; uₙ) des deux séries." loading="lazy" decoding="async"><figcaption>Nuages (n ; uₙ) des deux séries.</figcaption></figure>
-    
-
-<h4>Comment faire ce graphique</h4>
-    
-
-<ol><li>Au tableur : colonne n, colonne uₙ, Insertion &gt; Diagramme &gt; XY (dispersion) &gt; Points seuls.</li></ol>
-    
-
-<h4>Comment le lire</h4>
-    
-
-<ul><li>Regarde si les points sont sur une droite ou sur une courbe.</li></ul>
-    
-
-<h4>Comment le comprendre</h4>
-    
-
-<ul><li>Points alignés : la suite varie toujours de la même quantité (arithmétique).</li><li>Points sur une courbe qui s’aplatit : la suite varie toujours du même pourcentage (géométrique).</li></ul>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>Nuage d’une suite arithmétique : points <span class="cours-trou" aria-label="à compléter"></span> .</li><li>Nuage d’une suite géométrique : une <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 3 — Le nuage (n ; uₙ)</h4>
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Année n</th><th scope="col">0</th><th scope="col">1</th><th scope="col">2</th><th scope="col">5</th><th scope="col">10</th><th scope="col">15</th></tr></thead><tbody><tr><td>Offre A : uₙ = 400 + 15n</td><td>40000</td><td>41500</td><td>43000</td><td>47500</td><td>55000</td><td>62500</td></tr><tr><td>Offre B : vₙ = 400 × 1,03ⁿ</td><td>40000</td><td>41200</td><td>42436</td><td>46371</td><td>53757</td><td>62319</td></tr></tbody></table></div>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — Un nuage (n ; uₙ) monte de plus en plus vite. Quel type de suite ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Décris la forme des deux nuages.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — Offre A au rang 10 ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Offre B au rang 10 (au centime) ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Au rang 10, quelle offre est la moins chère ? Choix : A / B.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Offre A au rang 20 ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — Offre B au rang 20 (au centime) ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Au rang 20, quelle offre est la moins chère ? Choix : A / B.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>Conclusion</h3>
+            <h3>Encore des exercices (si tu as fini)</h3>
             
-<p>Avec ce que tu as fait dans les parties précédentes, réponds en quelques phrases complètes.</p>
-    
 
-
-            <ol class="course-paper-questions"><li><span>Réponds au problème du jour : comment reconnaître le type de suite qui modélise une situation ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Pour aller plus loin (facultatif)</h3>
-            
-<p>Une série : 100, 110, 121, 133,1.</p>
-    
-
-
-            <ol class="course-paper-questions"><li><span>Type et raison ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>10 ; 15 ; 22,5 : Choix : arithmétique / géométrique.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Raison de 9 ; 6,5 ; 4 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Offre A au rang 15 ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Offre B au rang 15 (au centime) ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>À retenir</h3>
             
-<ul><li>Différences constantes : arithmétique.</li><li>Quotients constants : géométrique.</li></ul>
+<ul><li>Différences égales : arithmétique (raison r = différence).</li><li>Quotients égaux : géométrique (raison q = quotient).</li><li>« + 15 € par an » : arithmétique ; « + 3 % par an » : géométrique.</li><li>À long terme, une hausse en % finit par dépasser une hausse fixe.</li></ul>
     
 
 
             
-        </section>
-        
-        <section class="course-paper-section course-paper-break">
-            <h2 class="course-paper-part">Fiche d’exercices</h2><h3>Exercice 1 — Type de suite</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>80, 72, 64, 56 : type et raison ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>200, 220, 242, 266,2 : type et raison ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Exercice 2 — Nuage</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>Quelle forme a le nuage d’une suite arithmétique ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Exercice 3 — Modéliser</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>Une pension augmente de 2 % par an : quel type de suite ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
     </article>
@@ -513,63 +402,57 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Tester les différences</h2>
+        <h2>Partie 1 — Reconnaître le type de suite</h2>
         
         
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas tester les différences successives de la série A (document 1). On attend les différences et ta conclusion.</p></div>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>On a relevé deux séries de valeurs sur 4 années. Quel modèle utiliser pour prévoir la suite ?</p>
+<p>Devant une liste de termes, on teste les deux possibilités : les différences, puis les quotients.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>Si les différences sont égales : arithmétique. Si les quotients sont égaux : géométrique.</p>
     
 
-<p>Tester les différences, c’est calculer uₙ₊₁ − uₙ pour chaque paire de termes consécutifs. Si elles sont toutes égales, la suite est arithmétique et cette différence est la raison r.</p>
+<p>À retenir : Différences égales → arithmétique ; quotients égaux → géométrique ; aucun des deux → ni l’une ni l’autre.</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Reconnaître une évolution d’une quantité fixe chaque période.</li></ul>
+<ol><li>Calcule u₁ − u₀ et u₂ − u₁.</li><li>Égales ? Arithmétique.</li><li>Sinon, calcule u₁ ÷ u₀ et u₂ ÷ u₁.</li><li>Égaux ? Géométrique. Sinon : ni l’une ni l’autre.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>On calcule terme suivant − terme précédent, pour chaque paire.</li><li>Si toutes les différences sont égales : suite arithmétique de raison r.</li><li>Sinon : ce n’est pas une suite arithmétique.</li></ol>
+<p>1. Pourquoi tester deux fois</p>
     
 
-<p>À retenir : Différences constantes : suite arithmétique.</p>
+<ul><li>Une seule différence ne prouve rien : il faut qu’elle se répète.</li></ul>
+    
+
+<p>2. Pourquoi pas les deux à la fois</p>
+    
+
+<ul><li>Sauf si tous les termes sont égaux, une suite ne peut pas ajouter et multiplier par la même chose à chaque fois.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>Série 40 ; 55 ; 70 ; 85. Est-elle arithmétique ?</li><li>Série 10 ; 20 ; 40 ; 80. Est-elle arithmétique ?</li></ol>
-    
-
-<ul><li>Automatisme : 1 080 ÷ 1 200 = ?</li></ul>
-    
-
-<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Deux séries (fictives)</caption><thead><tr><th scope="col">n</th><th scope="col">0</th><th scope="col">1</th><th scope="col">2</th><th scope="col">3</th></tr></thead><tbody><tr><td>Série A</td><td>2 000</td><td>1 850</td><td>1 700</td><td>1 550</td></tr><tr><td>Série B</td><td>1 200</td><td>1 080</td><td>972</td><td>8748</td></tr></tbody></table></div>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : lis les deux séries (document 1) et calcule les différences successives de la série A.</li><li>Pourquoi les différences ? Si elles sont constantes, la suite est arithmétique.</li></ol>
+<p>Calculatrice autorisée.</p>
     
 
 
@@ -578,63 +461,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a01-q01-label">Question 1 — Série A — 4 ; 7 ; 10 ; 13 :</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Différences constantes : suite …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Tester les différences — Mot(s) manquant(s) — Différences constantes : suite …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Différence = uₙ₊₁ − …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Tester les différences — Mot(s) manquant(s) — Différence = uₙ₊₁ − …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Relis l’exemple 100 ; 130 ; 160 : les différences sont toutes égales, donc suite… ? Et la différence se calcule uₙ₊₁ moins… ?</p></details>
+                <select id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><option value="">Choisis une réponse</option><option value="a">arithmétique</option><option value="b">géométrique</option><option value="c">ni l’une ni l’autre</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Différences ?</p></details>
             
             
         </div>
@@ -642,15 +477,95 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Calcule les différences de la série A. Est-elle arithmétique ?</h3>
+            <h3 id="a01-q02-label">Question 2 — 3 ; 6 ; 12 ; 24 :</h3>
             
 
             
             
-                <textarea id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <select id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><option value="">Choisis une réponse</option><option value="a">arithmétique</option><option value="b">géométrique</option><option value="c">ni l’une ni l’autre</option></select>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Calcule 1 850 − 2 000, puis 1 700 − 1 850, puis 1 550 − 1 700. Sont-elles égales ?</p></details>
+            <details><summary>Un coup de pouce</summary><p>Quotients ?</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a01-q03-label">Question 3 — 1 ; 4 ; 9 ; 16 :</h3>
+            
+
+            
+            
+                <select id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label"><option value="">Choisis une réponse</option><option value="a">arithmétique</option><option value="b">géométrique</option><option value="c">ni l’une ni l’autre</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Différences 3, 5, 7 ; quotients 4 ; 2,25…</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a01-q04-label">Question 4 — 500 ; 450 ; 405 :</h3>
+            
+
+            
+            
+                <select id="a01-q04" data-answer-id="a01_q04" data-required="true" aria-labelledby="a01-q04-label"><option value="">Choisis une réponse</option><option value="a">arithmétique</option><option value="b">géométrique</option><option value="c">ni l’une ni l’autre</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Quotients ?</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a01-q05-label">Question 5 — 80 ; 72 ; 64 ; 56 :</h3>
+            
+
+            
+            
+                <select id="a01-q05" data-answer-id="a01_q05" data-required="true" aria-labelledby="a01-q05-label"><option value="">Choisis une réponse</option><option value="a">arithmétique</option><option value="b">géométrique</option><option value="c">ni l’une ni l’autre</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Différences ?</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a01-q06-label">Question 6 — Série B — Raison de 100 ; 110 ; 121 ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q06" data-answer-id="a01_q06" data-required="true" aria-labelledby="a01-q06-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Quotient.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q07">
+            
+            
+            <h3 id="a01-q07-label">Question 7 — Raison de 80 ; 72 ; 64 ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q07" data-answer-id="a01_q07" data-required="true" aria-labelledby="a01-q07-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Différence.</p></details>
             
             
         </div>
@@ -664,57 +579,57 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Tester les quotients</h2>
+        <h2>Partie 2 — Modéliser une situation</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> A est arithmétique. Et B ?</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas tester les quotients successifs de la série B. On attend les quotients, ta conclusion et une interprétation.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais reconnaître une liste. Deuxième notion : choisir la suite à partir d’une phrase.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>La série B ne semble pas avoir des différences constantes. Est-elle géométrique ?</p>
+<p>Dans un énoncé, le type d’évolution se lit dans les mots.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>« De 15 € par an » : on ajoute toujours 15 € → arithmétique. « De 3 % par an » : on multiplie toujours par 1,03 → géométrique.</p>
     
 
-<p>Tester les quotients, c’est calculer uₙ₊₁ ÷ uₙ pour chaque paire. S’ils sont tous égaux, la suite est géométrique et ce quotient est la raison q.</p>
+<p>À retenir : Quantité fixe (€, kg, t) → arithmétique, r = cette quantité. Pourcentage fixe → géométrique, q = 1 ± t/100.</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Reconnaître une évolution du même pourcentage chaque période, et retrouver ce pourcentage.</li></ul>
+<ol><li>Cherche dans l’énoncé : une quantité ou un pourcentage ?</li><li>Écris u₀ (la valeur de départ).</li><li>Écris r ou q (avec le bon signe ou le bon coefficient).</li><li>Écris la formule de uₙ.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>On calcule terme suivant ÷ terme précédent, pour chaque paire.</li><li>Si tous les quotients sont égaux : suite géométrique de raison q.</li><li>On interprète q : q &gt; 1 hausse de (q − 1) × 100 % ; q &lt; 1 baisse de (1 − q) × 100 %.</li></ol>
+<p>1. Pourquoi une quantité fixe donne une suite arithmétique</p>
     
 
-<p>À retenir : Quotients constants : suite géométrique.</p>
+<ul><li>Chaque année on ajoute 15 € : la différence entre deux années est toujours 15.</li></ul>
+    
+
+<p>2. Pourquoi un pourcentage fixe donne une suite géométrique</p>
+    
+
+<ul><li>3 % de plus, c’est × 1,03 : le quotient entre deux années est toujours 1,03.</li><li>L’augmentation en euros grandit chaque année (12 €, puis 12,36 €…).</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>Série 300 ; 330 ; 363. Calcule les quotients. Type et raison ?</li><li>Série 800 ; 600 ; 450. Type et raison ?</li></ol>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : calcule les quotients successifs de la série B.</li><li>Pourquoi les quotients ? S’ils sont constants, la suite est géométrique.</li></ol>
+<p>Calculatrice autorisée.</p>
     
 
 
@@ -723,63 +638,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a02-q01-label">Question 1 — Série A — Une pension augmente de 20 € par an :</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Quotients constants : suite …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Tester les quotients — Mot(s) manquant(s) — Quotients constants : suite …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Une baisse de 10 % donne q = …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Tester les quotients — Mot(s) manquant(s) — Une baisse de 10 % donne q = …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Relis l’exemple 500 ; 550 ; 605 : quotients égaux, donc suite… ? Et une baisse de 10 % donne q = 1 − combien ?</p></details>
+                <select id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label"><option value="">Choisis une réponse</option><option value="a">arithmétique</option><option value="b">géométrique</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Quantité ou pourcentage ?</p></details>
             
             
         </div>
@@ -787,15 +654,15 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Calcule les quotients de la série B. Est-elle géométrique ?</h3>
+            <h3 id="a02-q02-label">Question 2 — Un tracteur perd 15 % de sa valeur par an :</h3>
             
 
             
             
-                <textarea id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <select id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><option value="">Choisis une réponse</option><option value="a">arithmétique</option><option value="b">géométrique</option></select>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Calcule 1 080 ÷ 1 200, 972 ÷ 1 080, 874,8 ÷ 972. Sont-ils égaux ?</p></details>
+            <details><summary>Un coup de pouce</summary><p>Quantité ou pourcentage ?</p></details>
             
             
         </div>
@@ -803,15 +670,79 @@
         <div class="cours-question" data-question="q03">
             
             
-            <h3 id="a02-q03-label">Question 3 — Que pourrait représenter la série B ?</h3>
+            <h3 id="a02-q03-label">Question 3 — Raison q de ce tracteur ?</h3>
             
 
             
             
-                <textarea id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label">
 
                 
-            <details><summary>Un coup de pouce</summary><p>La série B perd le même pourcentage chaque année. Pense à quelque chose à l’écurie qui perd de la valeur ainsi (matériel, véhicule…).</p></details>
+            <details><summary>Un coup de pouce</summary><p>1 − 0,15.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a02-q04-label">Question 4 — Un stock de 3 000 kg baisse de 40 kg par jour. Raison r ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q04" data-answer-id="a02_q04" data-required="true" aria-labelledby="a02-q04-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Le stock baisse.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a02-q05-label">Question 5 — Série B — Tracteur de 40 000 € : valeur dans 2 ans ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q05" data-answer-id="a02_q05" data-required="true" aria-labelledby="a02-q05-label"><p>Unité : €</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>40 000 × 0,85².</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a02-q06-label">Question 6 — Stock de 3 000 kg : stock dans 25 jours ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q06" data-answer-id="a02_q06" data-required="true" aria-labelledby="a02-q06-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>3 000 − 25 × 40.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q07">
+            
+            
+            <h3 id="a02-q07-label">Question 7 — Un club de 120 licenciés gagne 5 % par an. Licenciés dans 3 ans (arrondi) ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q07" data-answer-id="a02_q07" data-required="true" aria-labelledby="a02-q07-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>120 × 1,05³.</p></details>
             
             
         </div>
@@ -825,78 +756,60 @@
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Le nuage (n ; uₙ)</h2>
+        <h2>Partie 3 — Comparer deux évolutions</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les calculs sont faits. Vérifie graphiquement.</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas tracer les nuages (n ; uₙ) des deux séries et décrire leur forme. On attend la description des deux formes.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Dernière notion : comparer une hausse fixe et une hausse en pourcentage.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Peut-on deviner le type de suite d’un coup d’œil, avant de calculer ?</p>
+<p>Une hausse fixe ajoute toujours la même somme ; une hausse en % ajoute une somme de plus en plus grande.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>Au début, la hausse fixe peut être plus forte ; à long terme, la hausse en % la dépasse.</p>
     
 
-<p>Le nuage (n ; uₙ) place chaque terme comme un point : rang en abscisse, valeur en ordonnée. Sa forme révèle le type de suite.</p>
+<p>À retenir : Pour comparer, on calcule les deux suites au même rang, ou on fait un tableau.</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Deviner le modèle avant de faire les calculs.</li><li>Présenter une évolution de façon visuelle.</li></ul>
+<ol><li>Écris les deux formules.</li><li>Calcule les deux valeurs au rang demandé.</li><li>Compare.</li><li>Pour savoir quand l’une dépasse l’autre, avance de rang en rang (tableau ou tableur).</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>Au tableur : une colonne n, une colonne uₙ, diagramme XY (dispersion), points seuls.</li><li>Points alignés sur une droite : suite arithmétique.</li><li>Points sur une courbe qui s’incurve : suite géométrique.</li></ol>
+<p>1. Pourquoi la hausse en % finit par gagner</p>
     
 
-<p>À retenir : Arithmétique : droite ; géométrique : courbe.</p>
+<ul><li>Offre A : + 15 € chaque année, toujours.</li><li>Offre B : + 3 % d’un prix qui grandit : 12 €, puis 12,36 €, 12,73 €… la hausse elle-même augmente.</li></ul>
+    
+
+<p>2. Ce que montre le tableau</p>
+    
+
+<ul><li>À 10 ans, A vaut 550 € et B environ 537,57 €.</li><li>À 15 ans, A vaut 625 € et B environ 623,19 € : presque égaux. Ensuite, B devient la plus chère.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>Un nuage (n ; uₙ) monte de plus en plus vite. Quel type de suite ?</li></ol>
+<p>Prix annuel d’une pension selon deux offres (€) :</p>
     
 
-<figure class="cours-document"><img src="/tifsec-test-eleves/assets/images/graphiques/maths-1re-s19-suites.svg" alt="Nuages (n ; uₙ) des deux séries." loading="lazy" decoding="async"><figcaption>Nuages (n ; uₙ) des deux séries.</figcaption></figure>
-    
-
-<h4>Comment faire ce graphique</h4>
-    
-
-<ol><li>Au tableur : colonne n, colonne uₙ, Insertion &gt; Diagramme &gt; XY (dispersion) &gt; Points seuls.</li></ol>
-    
-
-<h4>Comment le lire</h4>
-    
-
-<ul><li>Regarde si les points sont sur une droite ou sur une courbe.</li></ul>
-    
-
-<h4>Comment le comprendre</h4>
-    
-
-<ul><li>Points alignés : la suite varie toujours de la même quantité (arithmétique).</li><li>Points sur une courbe qui s’aplatit : la suite varie toujours du même pourcentage (géométrique).</li></ul>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>Au tableur : colonne n, colonne uₙ ; sélectionne, Insertion &gt; Diagramme &gt; XY (dispersion) &gt; Points seuls.</li><li>Regarde si les points forment une droite ou une courbe.</li><li>À toi : trace les deux nuages et compare leur forme.</li><li>Pourquoi le graphique ? Il permet de deviner le type avant de calculer.</li></ol>
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Année n</th><th scope="col">0</th><th scope="col">1</th><th scope="col">2</th><th scope="col">5</th><th scope="col">10</th><th scope="col">15</th></tr></thead><tbody><tr><td>Offre A : uₙ = 400 + 15n</td><td>40000</td><td>41500</td><td>43000</td><td>47500</td><td>55000</td><td>62500</td></tr><tr><td>Offre B : vₙ = 400 × 1,03ⁿ</td><td>40000</td><td>41200</td><td>42436</td><td>46371</td><td>53757</td><td>62319</td></tr></tbody></table></div>
     
 
 
@@ -905,63 +818,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a03-q01-label">Question 1 — Série A — Offre A au rang 10 ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Nuage d’une suite arithmétique : points …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a03_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Le nuage (n ; uₙ) — Mot(s) manquant(s) — Nuage d’une suite arithmétique : points …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Nuage d’une suite géométrique : une …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a03_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Le nuage (n ; uₙ) — Mot(s) manquant(s) — Nuage d’une suite géométrique : une …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Suite arithmétique : les points sont… ? Suite géométrique : les points forment une… ?</p></details>
+                <input type="text" inputmode="decimal" id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label"><p>Unité : €</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>400 + 15 × 10.</p></details>
             
             
         </div>
@@ -969,15 +834,79 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a03-q02-label">Question 2 — Décris la forme des deux nuages.</h3>
+            <h3 id="a03-q02-label">Question 2 — Offre B au rang 10 (au centime) ?</h3>
             
 
             
             
-                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label"><p>Unité : €</p>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Regarde les deux nuages tracés au tableur : lequel est sur une droite, lequel sur une courbe ?</p></details>
+            <details><summary>Un coup de pouce</summary><p>400 × 1,03¹⁰.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a03-q03-label">Question 3 — Au rang 10, quelle offre est la moins chère ?</h3>
+            
+
+            
+            
+                <select id="a03-q03" data-answer-id="a03_q03" data-required="true" aria-labelledby="a03-q03-label"><option value="">Choisis une réponse</option><option value="a">A</option><option value="b">B</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Compare 550 et 537,57.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a03-q04-label">Question 4 — Offre A au rang 20 ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q04" data-answer-id="a03_q04" data-required="true" aria-labelledby="a03-q04-label"><p>Unité : €</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>400 + 300.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a03-q05-label">Question 5 — Série B — Offre B au rang 20 (au centime) ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q05" data-answer-id="a03_q05" data-required="true" aria-labelledby="a03-q05-label"><p>Unité : €</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>400 × 1,03²⁰.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a03-q06-label">Question 6 — Au rang 20, quelle offre est la moins chère ?</h3>
+            
+
+            
+            
+                <select id="a03-q06" data-answer-id="a03_q06" data-required="true" aria-labelledby="a03-q06-label"><option value="">Choisis une réponse</option><option value="a">A</option><option value="b">B</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Compare 700 et 722,44.</p></details>
             
             
         </div>
@@ -991,7 +920,7 @@
     
     <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Pour aller plus loin</h2>
+        <h2>Encore des exercices (si tu as fini)</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
@@ -999,7 +928,7 @@
         
 
         
-<p>Une série : 100, 110, 121, 133,1.</p>
+<p>Tu as fini ? Entraîne-toi encore. Ces exercices ne comptent pas dans la note.</p>
     
 
 
@@ -1008,15 +937,63 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Type et raison ?</h3>
+            <h3 id="a04-q01-label">Question 1 — 10 ; 15 ; 22,5 :</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <select id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label"><option value="">Choisis une réponse</option><option value="a">arithmétique</option><option value="b">géométrique</option></select>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Teste les différences (10, 11, 12,1) puis les quotients : lesquels sont constants ?</p></details>
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a04-q02-label">Question 2 — Raison de 9 ; 6,5 ; 4 ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a04-q02" data-answer-id="a04_q02" data-required="false" aria-labelledby="a04-q02-label">
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a04-q03-label">Question 3 — Offre A au rang 15 ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a04-q03" data-answer-id="a04_q03" data-required="false" aria-labelledby="a04-q03-label"><p>Unité : €</p>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a04-q04-label">Question 4 — Offre B au rang 15 (au centime) ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a04-q04" data-answer-id="a04_q04" data-required="false" aria-labelledby="a04-q04-label"><p>Unité : €</p>
+
+                
+            
             
             
         </div>
@@ -1024,41 +1001,6 @@
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#a03">← Étape précédente</a>
-            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a05" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Conclusion de ton travail</h2>
-        
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais reconnaître une suite. Il reste à répondre au problème de départ.</p>
-        
-        
-        
-
-        
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment reconnaître le type de suite qui modélise une situation ?</h3>
-            
-
-            
-            
-                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Dis comment reconnaître une suite arithmétique ou géométrique, par le calcul et par le graphique.</p></details>
-            
-            
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -1071,7 +1013,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Différences constantes : arithmétique.</li><li>Quotients constants : géométrique.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Différences égales : arithmétique (raison r = différence).</li><li>Quotients égaux : géométrique (raison q = quotient).</li><li>« + 15 € par an » : arithmétique ; « + 3 % par an » : géométrique.</li><li>À long terme, une hausse en % finit par dépasser une hausse fixe.</li></ul>
     
 </section>
 
@@ -1087,7 +1029,7 @@
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
     
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

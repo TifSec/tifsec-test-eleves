@@ -124,7 +124,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Le terme général</a></li><li><a href="#a02">Trouver le rang</a></li><li><a href="#a03">Un autre contexte</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Partie 1 — La formule directe</a></li><li><a href="#a02">Partie 2 — Retrouver le rang</a></li><li><a href="#a03">Partie 3 — Résoudre un problème</a></li><li><a href="#a04">Encore des exercices (si tu as fini) — facultatif</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -136,7 +136,7 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Mathématiques · Bac Pro 1 · S17</span></div>
-    <h1>Séance 17 : Calculer directement le stock au 60e jour</h1>
+    <h1>Séance 17 : Calculer directement un terme d’une suite arithmétique</h1>
     
 
     
@@ -150,7 +150,7 @@
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Comment calculer n’importe quel terme d’une suite arithmétique sans calculer tous les précédents ?</p>
+        <p>Comment calculer directement le 60e terme d’une suite arithmétique, et savoir quand elle atteint une valeur ?</p>
     </section>
     
 
@@ -168,9 +168,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Terme général : uₙ = u₀ + n × r.</li>
+            <li>uₙ = u₀ + n × r.</li>
             
-            <li>On peut résoudre uₙ = valeur pour trouver n.</li>
+            <li>Pour trouver n : résoudre u₀ + n × r = valeur.</li>
             
         </ul>
         
@@ -178,16 +178,18 @@
         <h2>Ce que tu vas apprendre à faire</h2>
         <ul>
             
-            <li>Utiliser le terme général.</li>
+            <li>Calculer un terme de rang n directement.</li>
             
-            <li>Résoudre une équation pour trouver un rang.</li>
+            <li>Trouver le rang où la suite atteint ou dépasse une valeur.</li>
+            
+            <li>Résoudre un problème avec une suite arithmétique.</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En S16, le tableur calculait chaque jour.</p><p>Avec une formule, on obtient directement n’importe quel jour.</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Aujourd’hui, trois notions : la formule directe, retrouver le rang, résoudre un problème.</p><p>Pour chacune : la notion, la méthode, pourquoi ça marche, un exemple au tableau, puis beaucoup d’exercices.</p></div></section>
     
     
     
@@ -202,67 +204,45 @@
 
 <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
     <article class="course-paper-sheet">
-        <header><p class="course-paper-class">Mathématiques — Bac Pro 1</p><p class="course-paper-kicker">Cours et exercices — version papier</p><h2 id="course-paper-title"><span class="course-paper-number">Séance 17</span> — Calculer directement le stock au 60e jour</h2><p>Comment calculer n’importe quel terme d’une suite arithmétique sans calculer tous les précédents ?</p></header>
+        <header><p class="course-paper-class">Mathématiques — Bac Pro 1</p><p class="course-paper-kicker">Cours et exercices — version papier</p><h2 id="course-paper-title"><span class="course-paper-number">Séance 17</span> — Calculer directement un terme d’une suite arithmétique</h2><p>Trois notions : la formule uₙ = u₀ + n × r, retrouver le rang, résoudre un problème. Pour chacune : la notion, la méthode, l’exemple au tableau, puis les exercices.</p></header>
         
         <section class="course-paper-section">
-            <h3>Le cours en bref</h3>
+            <h3>I. La formule directe</h3>
             
-<p>Le problème à résoudre : Comment calculer n’importe quel terme d’une suite arithmétique sans calculer tous les précédents ?</p>
+<h4>La notion</h4>
     
 
-<h4>Ce que tu vas apprendre</h4>
+<p>Plutôt que d’ajouter r soixante fois, on peut calculer directement u₆₀.</p>
     
 
-<ul><li>Terme général : uₙ = u₀ + n × r.</li><li>On peut résoudre uₙ = valeur pour trouver n.</li></ul>
+<p>Après n étapes, on a ajouté n fois la raison au terme de départ.</p>
     
 
-<h4>Ce que tu vas savoir faire</h4>
+<h4>À retenir</h4>
     
 
-<ul><li>Utiliser le terme général.</li><li>Résoudre une équation pour trouver un rang.</li></ul>
+<p>uₙ = u₀ + n × r.</p>
     
 
-<h4>Pourquoi cette séance ?</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<p>En S16, le tableur calculait chaque jour. Avec une formule, on obtient directement n’importe quel jour.</p>
+<ol><li>Repère u₀ et r.</li><li>Remplace n par le rang demandé.</li><li>Calcule n × r d’abord, puis ajoute u₀.</li><li>Contrôle avec les premiers termes (n = 1, n = 2).</li></ol>
     
 
-<p>Comment utiliser cette fiche : pour chaque partie, lis la méthode et l’exemple, complète les points clés, puis fais l’exercice. Réponds sur les lignes.</p>
+<h4>Pourquoi ça marche</h4>
     
 
-
-            
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>I. Le terme général</h3>
-            
-<h4>La situation</h4>
+<p>1. En comptant les ajouts</p>
     
 
-<p>Combien restera-t-il de foin au jour 25 ? Calculer les 25 jours un par un serait long.</p>
+<ul><li>u₁ = u₀ + r ; u₂ = u₀ + r + r = u₀ + 2r ; u₃ = u₀ + 3r.</li><li>Pour aller jusqu’au rang n, on ajoute r exactement n fois : uₙ = u₀ + n × r.</li></ul>
     
 
-<h4>Ce que c’est</h4>
+<p>2. Pourquoi × avant +</p>
     
 
-<p>Le terme général est une formule qui donne directement n’importe quel terme uₙ à partir de u₀, de la raison r et du rang n.</p>
-    
-
-<h4>À quoi ça sert</h4>
-    
-
-<ul><li>Calculer un terme lointain sans calculer tous les précédents.</li><li>Faire des prévisions rapides : stock, poids, économies.</li></ul>
-    
-
-<h4>Comment ça marche</h4>
-    
-
-<ol><li>Pour aller de u₀ à uₙ, on ajoute n fois la raison r.</li><li>Donc uₙ = u₀ + n × r.</li><li>On remplace n par le rang voulu et on calcule (× avant +).</li></ol>
-    
-
-<p>À retenir : uₙ = u₀ + n × r.</p>
+<ul><li>On calcule d’abord tout ce qu’on a ajouté (n × r), puis on l’ajoute au départ.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -271,62 +251,53 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<ul><li>Automatisme : 180 × 25 = ?</li></ul>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<h4>Ce que tu vas faire</h4>
-    
-
-<p>Tu vas utiliser le terme général de la suite du stock pour calculer u₃ et u₂₅. On attend les deux valeurs.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : utilise uₙ = 6 000 − 180n pour calculer u₃ et u₂₅.</li><li>Pourquoi une formule directe ? Plus besoin de calculer les 59 jours précédents.</li></ol>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>Terme général : uₙ = u₀ + n × <span class="cours-trou" aria-label="à compléter"></span> .</li><li>u₂₅ = 6 000 − 180 × <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 1 — Le terme général</h4>
+<p>Calculatrice autorisée.</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — u₀ = 300 et r = 15. Calcule u₁₀.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — u₀ = 2 500 et r = −40. Calcule u₂₀.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Calcule u₃ avec la formule. (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Calcule u₂₅. (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — u₀ = 10, r = 3. Calcule u₅.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>u₀ = 10, r = 3. Calcule u₂₀.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>u₀ = 500, r = −12. Calcule u₁₀.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>u₀ = 2 000 kg, r = −25 kg par jour. Stock u₆₀ ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — u₀ = 320 €, r = 15 €. Prix u₈ ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>u₀ = 1,5, r = 0,4. Calcule u₁₀.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>u₀ = 80, r = −2,5. Calcule u₁₂.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>II. Trouver le rang</h3>
+            <h3>II. Retrouver le rang</h3>
             
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>À quel jour restera-t-il 1 860 kg ? Quand le stock passera-t-il sous le seuil d’alerte de 1 000 kg ?</p>
+<p>On connaît la valeur visée (par exemple un stock de 500 kg) et on cherche à quel rang elle est atteinte.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>On écrit l’équation u₀ + n × r = valeur et on cherche n.</p>
     
 
-<p>Trouver le rang, c’est chercher n quand on connaît la valeur du terme : on résout une équation (ou une inéquation).</p>
+<h4>À retenir</h4>
     
 
-<h4>À quoi ça sert</h4>
+<p>n = (valeur − u₀) ÷ r.</p>
     
 
-<ul><li>Prévoir le jour où il faut commander, où un objectif est atteint.</li></ul>
+<h4>Comment ça fonctionne</h4>
     
 
-<h4>Comment ça marche</h4>
+<ol><li>Écris u₀ + n × r = valeur.</li><li>Enlève u₀ des deux côtés : n × r = valeur − u₀.</li><li>Divise par r : n = (valeur − u₀) ÷ r.</li><li>Si n n’est pas entier, arrondis à l’entier au-dessus pour « atteindre » ou « passer sous ».</li></ol>
     
 
-<ol><li>On écrit u₀ + n × r = k.</li><li>On enlève u₀ des deux côtés, puis on divise par r.</li><li>Le rang est un nombre entier : pour un seuil, on arrondit au rang suivant.</li></ol>
+<h4>Pourquoi ça marche</h4>
     
 
-<p>À retenir : Pour trouver n, on résout uₙ = k.</p>
+<p>1. On défait les calculs</p>
+    
+
+<ul><li>La formule fait : × r, puis + u₀.</li><li>Pour revenir à n, on défait dans l’ordre inverse : − u₀, puis ÷ r.</li></ul>
+    
+
+<p>2. Pourquoi arrondir au-dessus</p>
+    
+
+<ul><li>n = 13,3 veut dire : au rang 13, pas encore ; au rang 14, c’est fait.</li><li>Le premier rang qui convient est 14.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -335,59 +306,53 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<h4>Ce que tu vas faire</h4>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<p>Tu vas trouver le jour où il reste 1 860 kg et celui où le stock passe sous le seuil d’alerte. On attend les deux jours.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : résous 6 000 − 180n = 1 860, puis cherche quand le stock passe sous 1 000 kg.</li><li>Pourquoi une équation ? On cherche le jour, pas le stock.</li></ol>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>Pour trouver n, on <span class="cours-trou" aria-label="à compléter"></span> l’équation uₙ = k.</li><li>Le rang est un nombre <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 2 — Trouver le rang</h4>
+<p>Calculatrice autorisée.</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — u₀ = 500 et r = −20. À quel rang le terme vaut-il 260 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — u₀ = 100 et r = 25. À partir de quel rang le terme dépasse-t-il 400 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Quel jour reste-t-il 1 860 kg ? (en jour)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Le stock passe sous 1 000 kg (seuil d’alerte) quel jour ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — u₀ = 10, r = 3. Pour quel n a-t-on uₙ = 40 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>u₀ = 500, r = −12. Pour quel n a-t-on uₙ = 260 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>u₀ = 2 000, r = −25. Pour quel n reste-t-il 500 kg ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>u₀ = 320, r = 15. Pour quel n le prix vaut-il 425 € ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — u₀ = 100, r = 7. Premier rang où uₙ dépasse 150 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>u₀ = 24, r = −2,5. Premier rang où le stock passe sous 5 t ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Un élève trouve n = 13,2 pour « dépasser 200 ». Quelle réponse donner ? Choix : n = 13 / n = 14 / n = 13,2.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>III. Un autre contexte</h3>
+            <h3>III. Résoudre un problème</h3>
             
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Un poulain pèse 55 kg à la naissance et prend environ 1,2 kg par jour pendant les premières semaines. Combien pèsera-t-il au jour 30 ?</p>
+<p>Dans un problème, il faut d’abord reconnaître la suite : valeur de départ, et quantité ajoutée ou retirée à chaque étape.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>Ensuite, on utilise la formule ou on cherche le rang.</p>
     
 
-<p>Le même outil s’applique à une suite croissante : ici, le poids augmente chaque jour de la même quantité (r &gt; 0).</p>
+<h4>À retenir</h4>
     
 
-<h4>À quoi ça sert</h4>
+<p>Identifier u₀ et r ; écrire uₙ = u₀ + n × r ; calculer ou résoudre.</p>
     
 
-<ul><li>Suivre la croissance d’un poulain et repérer un retard.</li><li>Comprendre qu’un modèle a un domaine de validité.</li></ul>
+<h4>Comment ça fonctionne</h4>
     
 
-<h4>Comment ça marche</h4>
+<ol><li>Écris u₀ (la valeur de départ) et r (le changement à chaque étape, avec son signe).</li><li>Écris uₙ = u₀ + n × r.</li><li>Calcule un terme ou cherche n selon la question.</li><li>Réponds par une phrase avec l’unité.</li></ol>
     
 
-<ol><li>On identifie u₀ (poids à la naissance) et r (gain par jour).</li><li>On écrit le terme général vₙ = v₀ + n × r.</li><li>On calcule le terme demandé et on se demande si le modèle reste réaliste.</li></ol>
+<h4>Pourquoi ça marche</h4>
     
 
-<p>À retenir : Un modèle n’est valable que sur un domaine limité.</p>
+<p>1. Pourquoi le modèle marche</p>
+    
+
+<ul><li>Une écurie qui utilise 30 kg de foin par jour fait baisser le stock de 30 chaque jour : c’est une suite arithmétique.</li></ul>
+    
+
+<p>2. Ses limites</p>
+    
+
+<ul><li>Si la consommation change (plus de chevaux, été au pré), la raison change : il faut un nouveau modèle.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -396,86 +361,31 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<h4>Ce que tu vas faire</h4>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<p>Tu vas écrire le terme général de la croissance d’un poulain et calculer son poids au jour 30. On attend la formule et la valeur.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : un poulain pèse 55 kg à la naissance et prend environ 1,2 kg par jour (modèle simplifié). Écris le terme général.</li><li>Pourquoi un autre contexte ? Une suite arithmétique croissante, cette fois.</li></ol>
-    
-
-<h4>Exemple et documents</h4>
-    
-
-<p>Modèle simplifié, valable seulement sur les premières semaines.</p>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>Croissance : vₙ = 55 + <span class="cours-trou" aria-label="à compléter"></span> n.</li><li>Un modèle a un domaine de <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 3 — Un autre contexte</h4>
+<p>Calculatrice autorisée.</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — Un poney pèse 20 kg à la naissance et prend 0,5 kg par jour. Écris vₙ et calcule v₂₀.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Écris vₙ (poids au jour n) et calcule v₃₀.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — 4 500 kg de foin, 45 kg par jour. Stock après 30 jours ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Même écurie : au bout de combien de jours le stock est-il vide ? (en jours)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Une pension coûte 350 € et augmente de 12 € par an. Prix dans 10 ans ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Dans combien d’années dépassera-t-elle 450 € ? (en ans)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — Un poulain pèse 50 kg et prend 1,2 kg par jour. Poids au jour 100 ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Pour le stock de foin, la raison est… Choix : 45 / −45 / 4 500.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>Conclusion</h3>
+            <h3>Encore des exercices (si tu as fini)</h3>
             
-<p>Avec ce que tu as fait dans les parties précédentes, réponds en quelques phrases complètes.</p>
-    
 
-
-            <ol class="course-paper-questions"><li><span>Réponds au problème du jour : comment calculer n’importe quel terme d’une suite arithmétique ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Pour aller plus loin (facultatif)</h3>
-            
-<p>Le modèle prévoit 493 kg au bout d’un an (n = 365).</p>
-    
-
-
-            <ol class="course-paper-questions"><li><span>Est-ce réaliste ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>u₀ = 7, r = 4 : u₁₀₀ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>u₀ = 90, r = −6 : rang où uₙ = 0 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>u₀ = 12, r = 0,5 : premier rang où uₙ dépasse 20 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>À retenir</h3>
             
-<ul><li>uₙ = u₀ + n × r.</li><li>Résoudre pour trouver n.</li></ul>
+<ul><li>uₙ = u₀ + n × r (si la suite commence à u₀).</li><li>Pour trouver n : n = (valeur − u₀) ÷ r.</li><li>Si n n’est pas entier, on arrondit à l’entier au-dessus pour « atteindre » ou « dépasser ».</li></ul>
     
 
 
             
-        </section>
-        
-        <section class="course-paper-section course-paper-break">
-            <h2 class="course-paper-part">Fiche d’exercices</h2><h3>Exercice 1 — Terme général</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>u₀ = 3 000, r = −150 : u₁₂ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Quel rang donne 0 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Exercice 2 — Croissance</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>v₀ = 50, r = 1,5 : v₂₀ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Exercice 3 — Seuil</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>u₀ = 3 000, r = −150 : premier rang où uₙ &lt; 500 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
     </article>
@@ -489,60 +399,57 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Le terme général</h2>
+        <h2>Partie 1 — La formule directe</h2>
         
         
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas utiliser le terme général de la suite du stock pour calculer u₃ et u₂₅. On attend les deux valeurs.</p></div>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Combien restera-t-il de foin au jour 25 ? Calculer les 25 jours un par un serait long.</p>
+<p>Plutôt que d’ajouter r soixante fois, on peut calculer directement u₆₀.</p>
     
 
-<h4>Ce que c’est</h4>
-    
-
-<p>Le terme général est une formule qui donne directement n’importe quel terme uₙ à partir de u₀, de la raison r et du rang n.</p>
-    
-
-<h4>À quoi ça sert</h4>
-    
-
-<ul><li>Calculer un terme lointain sans calculer tous les précédents.</li><li>Faire des prévisions rapides : stock, poids, économies.</li></ul>
-    
-
-<h4>Comment ça marche</h4>
-    
-
-<ol><li>Pour aller de u₀ à uₙ, on ajoute n fois la raison r.</li><li>Donc uₙ = u₀ + n × r.</li><li>On remplace n par le rang voulu et on calcule (× avant +).</li></ol>
+<p>Après n étapes, on a ajouté n fois la raison au terme de départ.</p>
     
 
 <p>À retenir : uₙ = u₀ + n × r.</p>
     
 
+<h4>Comment ça fonctionne</h4>
+    
+
+<ol><li>Repère u₀ et r.</li><li>Remplace n par le rang demandé.</li><li>Calcule n × r d’abord, puis ajoute u₀.</li><li>Contrôle avec les premiers termes (n = 1, n = 2).</li></ol>
+    
+
+<h4>Pourquoi ça marche</h4>
+    
+
+<p>1. En comptant les ajouts</p>
+    
+
+<ul><li>u₁ = u₀ + r ; u₂ = u₀ + r + r = u₀ + 2r ; u₃ = u₀ + 3r.</li><li>Pour aller jusqu’au rang n, on ajoute r exactement n fois : uₙ = u₀ + n × r.</li></ul>
+    
+
+<p>2. Pourquoi × avant +</p>
+    
+
+<ul><li>On calcule d’abord tout ce qu’on a ajouté (n × r), puis on l’ajoute au départ.</li></ul>
+    
+
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>u₀ = 300 et r = 15. Calcule u₁₀.</li><li>u₀ = 2 500 et r = −40. Calcule u₂₀.</li></ol>
-    
-
-<ul><li>Automatisme : 180 × 25 = ?</li></ul>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : utilise uₙ = 6 000 − 180n pour calculer u₃ et u₂₅.</li><li>Pourquoi une formule directe ? Plus besoin de calculer les 59 jours précédents.</li></ol>
+<p>Calculatrice autorisée.</p>
     
 
 
@@ -551,63 +458,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a01-q01-label">Question 1 — Série A — u₀ = 10, r = 3. Calcule u₅.</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Terme général : uₙ = u₀ + n × …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Le terme général — Mot(s) manquant(s) — Terme général : uₙ = u₀ + n × …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    u₂₅ = 6 000 − 180 × …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Le terme général — Mot(s) manquant(s) — u₂₅ = 6 000 − 180 × …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Relis l’exemple uₙ = 500 − 20n : on part de u₀ et on ajoute n fois la… ? Pour u₂₅, n vaut combien ?</p></details>
+                <input type="text" inputmode="decimal" id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>10 + 5 × 3.</p></details>
             
             
         </div>
@@ -615,15 +474,15 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Calcule u₃ avec la formule.</h3>
+            <h3 id="a01-q02-label">Question 2 — u₀ = 10, r = 3. Calcule u₂₀.</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><p>Unité : kg</p>
+                <input type="text" inputmode="decimal" id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label">
 
                 
-            <details><summary>Un coup de pouce</summary><p>Remplace n par 3 dans 6 000 − 180n. Compare avec la valeur trouvée en S16.</p></details>
+            <details><summary>Un coup de pouce</summary><p>10 + 20 × 3.</p></details>
             
             
         </div>
@@ -631,15 +490,79 @@
         <div class="cours-question" data-question="q03">
             
             
-            <h3 id="a01-q03-label">Question 3 — Calcule u₂₅.</h3>
+            <h3 id="a01-q03-label">Question 3 — u₀ = 500, r = −12. Calcule u₁₀.</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label"><p>Unité : kg</p>
+                <input type="text" inputmode="decimal" id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label">
 
                 
-            <details><summary>Un coup de pouce</summary><p>Remplace n par 25 : fais d’abord 180 × 25.</p></details>
+            <details><summary>Un coup de pouce</summary><p>500 + 10 × (−12).</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a01-q04-label">Question 4 — u₀ = 2 000 kg, r = −25 kg par jour. Stock u₆₀ ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q04" data-answer-id="a01_q04" data-required="true" aria-labelledby="a01-q04-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>2 000 − 60 × 25.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a01-q05-label">Question 5 — Série B — u₀ = 320 €, r = 15 €. Prix u₈ ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q05" data-answer-id="a01_q05" data-required="true" aria-labelledby="a01-q05-label"><p>Unité : €</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>320 + 8 × 15.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a01-q06-label">Question 6 — u₀ = 1,5, r = 0,4. Calcule u₁₀.</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q06" data-answer-id="a01_q06" data-required="true" aria-labelledby="a01-q06-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>1,5 + 10 × 0,4.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q07">
+            
+            
+            <h3 id="a01-q07-label">Question 7 — u₀ = 80, r = −2,5. Calcule u₁₂.</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q07" data-answer-id="a01_q07" data-required="true" aria-labelledby="a01-q07-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>80 − 12 × 2,5.</p></details>
             
             
         </div>
@@ -653,57 +576,57 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Trouver le rang</h2>
+        <h2>Partie 2 — Retrouver le rang</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu calcules un terme. Fais le chemin inverse.</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas trouver le jour où il reste 1 860 kg et celui où le stock passe sous le seuil d’alerte. On attend les deux jours.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais calculer un terme. Deuxième notion : chercher quand la suite atteint une valeur.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>À quel jour restera-t-il 1 860 kg ? Quand le stock passera-t-il sous le seuil d’alerte de 1 000 kg ?</p>
+<p>On connaît la valeur visée (par exemple un stock de 500 kg) et on cherche à quel rang elle est atteinte.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>On écrit l’équation u₀ + n × r = valeur et on cherche n.</p>
     
 
-<p>Trouver le rang, c’est chercher n quand on connaît la valeur du terme : on résout une équation (ou une inéquation).</p>
+<p>À retenir : n = (valeur − u₀) ÷ r.</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Prévoir le jour où il faut commander, où un objectif est atteint.</li></ul>
+<ol><li>Écris u₀ + n × r = valeur.</li><li>Enlève u₀ des deux côtés : n × r = valeur − u₀.</li><li>Divise par r : n = (valeur − u₀) ÷ r.</li><li>Si n n’est pas entier, arrondis à l’entier au-dessus pour « atteindre » ou « passer sous ».</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>On écrit u₀ + n × r = k.</li><li>On enlève u₀ des deux côtés, puis on divise par r.</li><li>Le rang est un nombre entier : pour un seuil, on arrondit au rang suivant.</li></ol>
+<p>1. On défait les calculs</p>
     
 
-<p>À retenir : Pour trouver n, on résout uₙ = k.</p>
+<ul><li>La formule fait : × r, puis + u₀.</li><li>Pour revenir à n, on défait dans l’ordre inverse : − u₀, puis ÷ r.</li></ul>
+    
+
+<p>2. Pourquoi arrondir au-dessus</p>
+    
+
+<ul><li>n = 13,3 veut dire : au rang 13, pas encore ; au rang 14, c’est fait.</li><li>Le premier rang qui convient est 14.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>u₀ = 500 et r = −20. À quel rang le terme vaut-il 260 ?</li><li>u₀ = 100 et r = 25. À partir de quel rang le terme dépasse-t-il 400 ?</li></ol>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : résous 6 000 − 180n = 1 860, puis cherche quand le stock passe sous 1 000 kg.</li><li>Pourquoi une équation ? On cherche le jour, pas le stock.</li></ol>
+<p>Calculatrice autorisée.</p>
     
 
 
@@ -712,63 +635,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a02-q01-label">Question 1 — Série A — u₀ = 10, r = 3. Pour quel n a-t-on uₙ = 40 ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Pour trouver n, on …… l’équation uₙ = k.
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Trouver le rang — Mot(s) manquant(s) — Pour trouver n, on …… l’équation uₙ = k.">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Le rang est un nombre …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Trouver le rang — Mot(s) manquant(s) — Le rang est un nombre …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Pour trouver le jour, on… l’équation uₙ = k. Et un numéro de jour est un nombre entier ou décimal ?</p></details>
+                <input type="text" inputmode="decimal" id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>(40 − 10) ÷ 3.</p></details>
             
             
         </div>
@@ -776,15 +651,15 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Quel jour reste-t-il 1 860 kg ?</h3>
+            <h3 id="a02-q02-label">Question 2 — u₀ = 500, r = −12. Pour quel n a-t-on uₙ = 260 ?</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><p>Unité : jour</p>
+                <input type="text" inputmode="decimal" id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label">
 
                 
-            <details><summary>Un coup de pouce</summary><p>Comme l’exemple 500 − 20n = 260 : écris 6 000 − 180n = 1 860, enlève 6 000, divise par −180.</p></details>
+            <details><summary>Un coup de pouce</summary><p>(260 − 500) ÷ (−12).</p></details>
             
             
         </div>
@@ -792,15 +667,79 @@
         <div class="cours-question" data-question="q03">
             
             
-            <h3 id="a02-q03-label">Question 3 — Le stock passe sous 1 000 kg (seuil d’alerte) quel jour ?</h3>
+            <h3 id="a02-q03-label">Question 3 — u₀ = 2 000, r = −25. Pour quel n reste-t-il 500 kg ?</h3>
             
 
             
             
-                <textarea id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label">
 
                 
-            <details><summary>Un coup de pouce</summary><p>Résous 6 000 − 180n = 1 000 ; si le résultat n’est pas entier, quel jour le stock passe-t-il vraiment sous 1 000 ?</p></details>
+            <details><summary>Un coup de pouce</summary><p>(500 − 2 000) ÷ (−25).</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a02-q04-label">Question 4 — u₀ = 320, r = 15. Pour quel n le prix vaut-il 425 € ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q04" data-answer-id="a02_q04" data-required="true" aria-labelledby="a02-q04-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>(425 − 320) ÷ 15.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a02-q05-label">Question 5 — Série B — u₀ = 100, r = 7. Premier rang où uₙ dépasse 150 ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q05" data-answer-id="a02_q05" data-required="true" aria-labelledby="a02-q05-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>(150 − 100) ÷ 7 ≈ 7,1 → arrondi au-dessus.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a02-q06-label">Question 6 — u₀ = 24, r = −2,5. Premier rang où le stock passe sous 5 t ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q06" data-answer-id="a02_q06" data-required="true" aria-labelledby="a02-q06-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>(5 − 24) ÷ (−2,5) = 7,6 → arrondi au-dessus.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q07">
+            
+            
+            <h3 id="a02-q07-label">Question 7 — Un élève trouve n = 13,2 pour « dépasser 200 ». Quelle réponse donner ?</h3>
+            
+
+            
+            
+                <select id="a02-q07" data-answer-id="a02_q07" data-required="true" aria-labelledby="a02-q07-label"><option value="">Choisis une réponse</option><option value="a">n = 13</option><option value="b">n = 14</option><option value="c">n = 13,2</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Un rang est entier ; au rang 13 on n’a pas encore dépassé.</p></details>
             
             
         </div>
@@ -814,60 +753,57 @@
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Un autre contexte</h2>
+        <h2>Partie 3 — Résoudre un problème</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu maîtrises la formule. Applique-la à la croissance.</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas écrire le terme général de la croissance d’un poulain et calculer son poids au jour 30. On attend la formule et la valeur.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Dernière notion : utiliser tout cela dans une situation.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Un poulain pèse 55 kg à la naissance et prend environ 1,2 kg par jour pendant les premières semaines. Combien pèsera-t-il au jour 30 ?</p>
+<p>Dans un problème, il faut d’abord reconnaître la suite : valeur de départ, et quantité ajoutée ou retirée à chaque étape.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>Ensuite, on utilise la formule ou on cherche le rang.</p>
     
 
-<p>Le même outil s’applique à une suite croissante : ici, le poids augmente chaque jour de la même quantité (r &gt; 0).</p>
+<p>À retenir : Identifier u₀ et r ; écrire uₙ = u₀ + n × r ; calculer ou résoudre.</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Suivre la croissance d’un poulain et repérer un retard.</li><li>Comprendre qu’un modèle a un domaine de validité.</li></ul>
+<ol><li>Écris u₀ (la valeur de départ) et r (le changement à chaque étape, avec son signe).</li><li>Écris uₙ = u₀ + n × r.</li><li>Calcule un terme ou cherche n selon la question.</li><li>Réponds par une phrase avec l’unité.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>On identifie u₀ (poids à la naissance) et r (gain par jour).</li><li>On écrit le terme général vₙ = v₀ + n × r.</li><li>On calcule le terme demandé et on se demande si le modèle reste réaliste.</li></ol>
+<p>1. Pourquoi le modèle marche</p>
     
 
-<p>À retenir : Un modèle n’est valable que sur un domaine limité.</p>
+<ul><li>Une écurie qui utilise 30 kg de foin par jour fait baisser le stock de 30 chaque jour : c’est une suite arithmétique.</li></ul>
+    
+
+<p>2. Ses limites</p>
+    
+
+<ul><li>Si la consommation change (plus de chevaux, été au pré), la raison change : il faut un nouveau modèle.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>Un poney pèse 20 kg à la naissance et prend 0,5 kg par jour. Écris vₙ et calcule v₂₀.</li></ol>
-    
-
-<p>Modèle simplifié, valable seulement sur les premières semaines.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : un poulain pèse 55 kg à la naissance et prend environ 1,2 kg par jour (modèle simplifié). Écris le terme général.</li><li>Pourquoi un autre contexte ? Une suite arithmétique croissante, cette fois.</li></ol>
+<p>Calculatrice autorisée.</p>
     
 
 
@@ -876,63 +812,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a03-q01-label">Question 1 — Série A — 4 500 kg de foin, 45 kg par jour. Stock après 30 jours ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Croissance : vₙ = 55 + …… n.
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a03_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Un autre contexte — Mot(s) manquant(s) — Croissance : vₙ = 55 + …… n.">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Un modèle a un domaine de …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a03_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Un autre contexte — Mot(s) manquant(s) — Un modèle a un domaine de …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Le poulain prend environ combien de kg par jour (voir « À toi ») ? Et un modèle est valable sur un domaine de… ?</p></details>
+                <input type="text" inputmode="decimal" id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>4 500 − 30 × 45.</p></details>
             
             
         </div>
@@ -940,15 +828,79 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a03-q02-label">Question 2 — Écris vₙ (poids au jour n) et calcule v₃₀.</h3>
+            <h3 id="a03-q02-label">Question 2 — Même écurie : au bout de combien de jours le stock est-il vide ?</h3>
             
 
             
             
-                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label"><p>Unité : jours</p>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Premier terme = poids à la naissance ; raison = gain par jour. Écris vₙ, puis remplace n par 30.</p></details>
+            <details><summary>Un coup de pouce</summary><p>4 500 ÷ 45.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a03-q03-label">Question 3 — Une pension coûte 350 € et augmente de 12 € par an. Prix dans 10 ans ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q03" data-answer-id="a03_q03" data-required="true" aria-labelledby="a03-q03-label"><p>Unité : €</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>350 + 10 × 12.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a03-q04-label">Question 4 — Dans combien d’années dépassera-t-elle 450 € ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q04" data-answer-id="a03_q04" data-required="true" aria-labelledby="a03-q04-label"><p>Unité : ans</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>(450 − 350) ÷ 12 ≈ 8,3 → arrondi au-dessus.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a03-q05-label">Question 5 — Série B — Un poulain pèse 50 kg et prend 1,2 kg par jour. Poids au jour 100 ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q05" data-answer-id="a03_q05" data-required="true" aria-labelledby="a03-q05-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>50 + 100 × 1,2.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a03-q06-label">Question 6 — Pour le stock de foin, la raison est…</h3>
+            
+
+            
+            
+                <select id="a03-q06" data-answer-id="a03_q06" data-required="true" aria-labelledby="a03-q06-label"><option value="">Choisis une réponse</option><option value="a">45</option><option value="b">−45</option><option value="c">4 500</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Le stock baisse.</p></details>
             
             
         </div>
@@ -962,7 +914,7 @@
     
     <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Pour aller plus loin</h2>
+        <h2>Encore des exercices (si tu as fini)</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
@@ -970,7 +922,7 @@
         
 
         
-<p>Le modèle prévoit 493 kg au bout d’un an (n = 365).</p>
+<p>Tu as fini ? Entraîne-toi encore. Ces exercices ne comptent pas dans la note.</p>
     
 
 
@@ -979,15 +931,47 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Est-ce réaliste ?</h3>
+            <h3 id="a04-q01-label">Question 1 — u₀ = 7, r = 4 : u₁₀₀ ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label">
 
                 
-            <details><summary>Un coup de pouce</summary><p>Compare 493 kg au poids d’un cheval adulte et à celui d’un poulain d’un an. La croissance reste-t-elle la même toute l’année ?</p></details>
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a04-q02-label">Question 2 — u₀ = 90, r = −6 : rang où uₙ = 0 ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a04-q02" data-answer-id="a04_q02" data-required="false" aria-labelledby="a04-q02-label">
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a04-q03-label">Question 3 — u₀ = 12, r = 0,5 : premier rang où uₙ dépasse 20 ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a04-q03" data-answer-id="a04_q03" data-required="false" aria-labelledby="a04-q03-label">
+
+                
+            
             
             
         </div>
@@ -995,41 +979,6 @@
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#a03">← Étape précédente</a>
-            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a05" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Conclusion de ton travail</h2>
-        
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais utiliser le terme général. Il reste à répondre au problème de départ.</p>
-        
-        
-        
-
-        
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment calculer n’importe quel terme d’une suite arithmétique ?</h3>
-            
-
-            
-            
-                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Dis la formule du terme général, comment trouver un rang, et la limite du modèle.</p></details>
-            
-            
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -1042,7 +991,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>uₙ = u₀ + n × r.</li><li>Résoudre pour trouver n.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>uₙ = u₀ + n × r (si la suite commence à u₀).</li><li>Pour trouver n : n = (valeur − u₀) ÷ r.</li><li>Si n n’est pas entier, on arrondit à l’entier au-dessus pour « atteindre » ou « dépasser ».</li></ul>
     
 </section>
 
@@ -1058,7 +1007,7 @@
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
     
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

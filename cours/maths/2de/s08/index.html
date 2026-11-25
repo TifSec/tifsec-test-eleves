@@ -124,7 +124,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">La vitesse moyenne</a></li><li><a href="#a02">Distance et durée</a></li><li><a href="#a03">Comparer des allures</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Partie 1 — La vitesse moyenne</a></li><li><a href="#a02">Partie 2 — Calculer une distance</a></li><li><a href="#a03">Partie 3 — Calculer une durée</a></li><li><a href="#a04">Encore des exercices (si tu as fini) — facultatif</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -136,7 +136,7 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Mathématiques · 2de Pro · S08</span></div>
-    <h1>Séance 8 : À quelle vitesse trotte mon cheval ?</h1>
+    <h1>Séance 8 : Vitesse, distance et durée</h1>
     
 
     
@@ -150,7 +150,7 @@
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Comment calculer une vitesse à partir d’une distance et d’une durée ?</p>
+        <p>Comment calculer une vitesse moyenne, une distance ou une durée ?</p>
     </section>
     
 
@@ -168,9 +168,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Vitesse = distance ÷ durée ; v = d / t.</li>
+            <li>v = d ÷ t ; d = v × t ; t = d ÷ v.</li>
             
-            <li>Unités : m/s, m/min, km/h ; on garde des unités cohérentes.</li>
+            <li>Les unités doivent aller ensemble : km et h donnent des km/h.</li>
             
         </ul>
         
@@ -180,14 +180,16 @@
             
             <li>Calculer une vitesse moyenne.</li>
             
-            <li>Calculer une distance ou une durée.</li>
+            <li>Calculer une distance parcourue.</li>
+            
+            <li>Calculer une durée de trajet.</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En 2de pro hippique, tu dois savoir calculer une vitesse (allures, entraînement).</p><p>Aujourd’hui : chronométrer le trot sur une piste de 400 m.</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Aujourd’hui, trois notions : la vitesse moyenne, la distance parcourue, la durée d’un trajet.</p><p>Pour chacune : la notion, la méthode, pourquoi ça marche, un exemple au tableau, puis beaucoup d’exercices.</p></div></section>
     
     
     
@@ -202,131 +204,45 @@
 
 <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
     <article class="course-paper-sheet">
-        <header><p class="course-paper-class">Mathématiques — 2de Pro</p><p class="course-paper-kicker">Cours et exercices — version papier</p><h2 id="course-paper-title"><span class="course-paper-number">Séance 8</span> — À quelle vitesse trotte mon cheval ?</h2><p>Comment calculer une vitesse à partir d’une distance et d’une durée ?</p></header>
-        
-        <section class="course-paper-section">
-            <h3>Le cours en bref</h3>
-            
-<p>Le problème à résoudre : Comment calculer une vitesse à partir d’une distance et d’une durée ?</p>
-    
-
-<h4>Ce que tu vas apprendre</h4>
-    
-
-<ul><li>Vitesse = distance ÷ durée ; v = d / t.</li><li>Unités : m/s, m/min, km/h ; on garde des unités cohérentes.</li></ul>
-    
-
-<h4>Ce que tu vas savoir faire</h4>
-    
-
-<ul><li>Calculer une vitesse moyenne.</li><li>Calculer une distance ou une durée.</li></ul>
-    
-
-<h4>Pourquoi cette séance ?</h4>
-    
-
-<p>En 2de pro hippique, tu dois savoir calculer une vitesse (allures, entraînement). Aujourd’hui : chronométrer le trot sur une piste de 400 m.</p>
-    
-
-<p>Comment utiliser cette fiche : pour chaque partie, lis la méthode et l’exemple, complète les points clés, puis fais l’exercice. Réponds sur les lignes.</p>
-    
-
-
-            
-        </section>
+        <header><p class="course-paper-class">Mathématiques — 2de Pro</p><p class="course-paper-kicker">Cours et exercices — version papier</p><h2 id="course-paper-title"><span class="course-paper-number">Séance 8</span> — Vitesse, distance et durée</h2><p>Trois notions : la vitesse, la distance, la durée. Pour chacune : la notion, la méthode, l’exemple au tableau, puis les exercices.</p></header>
         
         <section class="course-paper-section">
             <h3>I. La vitesse moyenne</h3>
             
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Un cheval trotte 400 m en 1 min 20 s. À quelle vitesse va-t-il ?</p>
+<p>La vitesse moyenne dit quelle distance on parcourt, en moyenne, en une unité de temps : en 1 heure, en 1 minute…</p>
     
 
-<h4>Ce que c’est</h4>
+<p>Un cheval au trot à 15 km/h parcourt 15 km en 1 heure.</p>
     
 
-<p>La vitesse moyenne est la distance parcourue pendant une unité de temps (en 1 seconde, en 1 minute, en 1 heure).</p>
+<h4>À retenir</h4>
     
 
-<h4>À quoi ça sert</h4>
+<p>Vitesse moyenne = distance ÷ durée. Distance en km et durée en h → vitesse en km/h.</p>
     
 
-<ul><li>Suivre l’entraînement d’un cheval, doser l’effort.</li><li>Préparer une balade ou un concours.</li></ul>
+<h4>Comment ça fonctionne</h4>
     
 
-<h4>Comment ça marche</h4>
+<ol><li>Repère la distance et la durée.</li><li>Vérifie les unités (km et h, ou m et min).</li><li>Divise la distance par la durée.</li><li>Écris l’unité : km/h (ou m/min).</li></ol>
     
 
-<ol><li>On convertit la durée dans une seule unité (secondes ou minutes).</li><li>On divise la distance par la durée.</li><li>L’unité de la vitesse vient des unités utilisées : m ÷ s = m/s ; m ÷ min = m/min.</li></ol>
+<h4>Pourquoi ça marche</h4>
     
 
-<p>À retenir : v = d / t, avec des unités cohérentes.</p>
+<p>1. En raisonnant avec « en 1 heure »</p>
     
 
-<h4>Exemple fait ensemble en classe</h4>
+<ul><li>Une jument fait 30 km en 2 h, à allure régulière.</li><li>En 1 h, elle fait la moitié : 30 ÷ 2 = 15 km. Sa vitesse est 15 km/h.</li></ul>
     
 
-<div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<p>2. Pourquoi « moyenne »</p>
     
 
-<ul><li>Automatisme : convertis 1 min 20 s en secondes.</li></ul>
-    
-
-<h4>Ce que tu vas faire</h4>
-    
-
-<p>Tu vas calculer la vitesse d’un cheval qui trotte 400 m en 1 min 20 s, en m/s et en m/min. On attend les deux vitesses.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : un cheval trotte 400 m en 1 min 20 s (80 s). Calcule sa vitesse en m/s, puis en m/min.</li><li>Pourquoi deux unités ? Les fiches d’entraînement utilisent souvent m/min.</li></ol>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>Vitesse = distance ÷ <span class="cours-trou" aria-label="à compléter"></span> .</li><li>v = d / t ; d s’exprime ici en mètres et t en <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 1 — La vitesse moyenne</h4>
-    
-
-
-            <ol class="course-paper-questions"><li><span>Entraînement — Un cheval parcourt 600 m en 2 min. Vitesse en m/min ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — Un poney parcourt 120 m en 1 min 30 s. Vitesse en m/s ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Vitesse en m/s ? (en m/s)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Vitesse en m/min ? (en m/min)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>II. Distance et durée</h3>
-            
-<h4>La situation</h4>
-    
-
-<p>On prépare une séance : quelle distance fera le cheval en 10 min de trot ? Combien de temps pour faire 1 800 m au galop ?</p>
-    
-
-<h4>Ce que c’est</h4>
-    
-
-<p>La formule v = d / t se transforme pour calculer une distance (d = v × t) ou une durée (t = d ÷ v).</p>
-    
-
-<h4>À quoi ça sert</h4>
-    
-
-<ul><li>Construire une séance d’entraînement.</li><li>Prévoir la durée d’une balade.</li></ul>
-    
-
-<h4>Comment ça marche</h4>
-    
-
-<ol><li>Distance : on multiplie la vitesse par la durée.</li><li>Durée : on divise la distance par la vitesse.</li><li>On vérifie que les unités vont ensemble (m/min avec des min et des m).</li></ol>
-    
-
-<p>À retenir : d = v × t ; t = d ÷ v.</p>
+<ul><li>Le cheval ne va pas toujours à la même allure (pas, trot, galop).</li><li>La vitesse moyenne, c’est la vitesse régulière qui ferait le même trajet dans le même temps.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -335,59 +251,53 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<h4>Ce que tu vas faire</h4>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<p>Tu vas calculer une distance et une durée à partir d’une vitesse donnée. On attend deux résultats avec leur unité.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : utilise d = v × t et t = d ÷ v pour les deux questions.</li><li>Pourquoi ces formules ? On prépare une séance : quelle distance en 10 min de trot ?</li></ol>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>Distance = vitesse × <span class="cours-trou" aria-label="à compléter"></span> .</li><li>Durée = distance ÷ <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 2 — Distance et durée</h4>
+<p>Calculatrice autorisée. Donne les vitesses en km/h, sauf si l’énoncé dit autre chose.</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — Au pas à 110 m/min pendant 20 min : quelle distance ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — 900 m à 300 m/min : combien de minutes ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>À 300 m/min, quelle distance en 10 min ? (en m)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Au galop de travail à 450 m/min, combien de minutes pour 1 800 m ? (en min)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — Un cheval parcourt 20 km en 2 h. Vitesse moyenne ? (en km/h)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Une randonnée de 36 km dure 4 h. Vitesse moyenne ? (en km/h)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Un trotteur fait 45 km en 3 h. Vitesse moyenne ? (en km/h)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Un cheval au pas fait 3 km en 0,5 h. Vitesse moyenne ? (en km/h)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Un cheval galope 1 000 m en 2 min. Vitesse en m/min ? (en m/min)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Une randonnée de 27 km dure 1,5 h. Vitesse moyenne ? (en km/h)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — Cheval A : 30 km en 3 h. Cheval B : 22 km en 2 h. Lequel est le plus rapide ? Choix : Le cheval A / Le cheval B / Ils vont aussi vite.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>III. Comparer des allures</h3>
+            <h3>II. Calculer une distance</h3>
             
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Le cheval de la mission 1 va à 300 m/min : est-ce du pas, du trot ou du galop ?</p>
+<p>Si on connaît la vitesse et la durée, on peut calculer la distance parcourue.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>À 12 km/h pendant 2 h, on fait 12 km la première heure et 12 km la deuxième.</p>
     
 
-<p>Des repères de vitesse (ordres de grandeur) associent une plage de vitesses à chaque allure.</p>
+<h4>À retenir</h4>
     
 
-<h4>À quoi ça sert</h4>
+<p>Distance = vitesse × durée (d = v × t).</p>
     
 
-<ul><li>Vérifier qu’un cheval travaille à la bonne allure.</li></ul>
+<h4>Comment ça fonctionne</h4>
     
 
-<h4>Comment ça marche</h4>
+<ol><li>Repère la vitesse et la durée.</li><li>Vérifie que les unités vont ensemble (km/h avec des heures).</li><li>Multiplie la vitesse par la durée.</li><li>Écris l’unité : km.</li></ol>
     
 
-<ol><li>On exprime la vitesse dans la même unité que le tableau de repères.</li><li>On cherche la ligne dont la plage contient la vitesse.</li></ol>
+<h4>Pourquoi ça marche</h4>
     
 
-<p>À retenir : On compare des vitesses dans la même unité.</p>
+<p>1. En raisonnant heure par heure</p>
+    
+
+<ul><li>À 12 km/h, chaque heure ajoute 12 km.</li><li>En 3 h : 12 + 12 + 12 = 3 × 12 = 36 km.</li></ul>
+    
+
+<p>2. Pourquoi c’est la même formule « retournée »</p>
+    
+
+<ul><li>v = d ÷ t veut dire : d partagé en t parts égales donne v.</li><li>Donc t parts de v redonnent d : d = v × t.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -396,86 +306,86 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<h4>Ce que tu vas faire</h4>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<p>Tu vas situer la vitesse calculée parmi les repères d’allures (document 1). On attend l’allure correspondante.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : lis les repères (document 1) et classe ton cheval de la mission 1.</li><li>Pourquoi des repères ? Ils aident à doser l’effort.</li></ol>
-    
-
-<h4>Exemple et documents</h4>
-    
-
-<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Repères de vitesse (ordres de grandeur)</caption><thead><tr><th scope="col">Allure</th><th scope="col">Vitesse (ordre de grandeur, m/min)</th></tr></thead><tbody><tr><td>Pas</td><td>100 à 120</td></tr><tr><td>Trot de travail</td><td>250 à 350</td></tr><tr><td>Galop de travail</td><td>350 à 500</td></tr></tbody></table></div>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>Le trot de travail est d’environ 250 à <span class="cours-trou" aria-label="à compléter"></span> m/min.</li><li>On compare des vitesses dans la même <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 3 — Comparer des allures</h4>
+<p>Calculatrice autorisée. Donne les distances en km.</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — À quelle allure correspond 420 m/min ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — Et 5 m/s ? (convertis d’abord en m/min)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>D’après le document 1, à quelle allure correspond 300 m/min ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — Un cheval va à 10 km/h pendant 3 h. Distance ? (en km)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Un cheval va à 6 km/h pendant 2 h. Distance ? (en km)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Un trotteur va à 15 km/h pendant 4 h. Distance ? (en km)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Un cheval va à 8 km/h pendant 0,5 h. Distance ? (en km)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Un cheval va à 12 km/h pendant 2,5 h. Distance ? (en km)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Un cheval galope à 600 m/min pendant 3 min. Distance en m ? (en m)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — Une randonnée : 2 h à 6 km/h, puis 1 h à 12 km/h. Distance totale ? (en km)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>Conclusion</h3>
+            <h3>III. Calculer une durée</h3>
             
-<p>Avec ce que tu as fait dans les parties précédentes, réponds en quelques phrases complètes.</p>
+<h4>La notion</h4>
+    
+
+<p>Si on connaît la distance et la vitesse, on peut calculer la durée du trajet.</p>
+    
+
+<p>On se demande : combien de fois la distance d’une heure tient-elle dans la distance totale ?</p>
+    
+
+<h4>À retenir</h4>
+    
+
+<p>Durée = distance ÷ vitesse (t = d ÷ v). km et km/h → durée en h.</p>
+    
+
+<h4>Comment ça fonctionne</h4>
+    
+
+<ol><li>Repère la distance et la vitesse.</li><li>Divise la distance par la vitesse.</li><li>Le résultat est en heures (si v est en km/h).</li><li>Contrôle : vitesse × durée doit redonner la distance.</li></ol>
+    
+
+<h4>Pourquoi ça marche</h4>
+    
+
+<p>1. En raisonnant avec « en 1 heure »</p>
+    
+
+<ul><li>À 10 km/h, on fait 10 km en 1 heure.</li><li>Pour 30 km, il faut 3 fois 10 km, donc 3 heures : 30 ÷ 10 = 3 h.</li></ul>
+    
+
+<p>2. Le triangle des trois formules</p>
+    
+
+<ul><li>d = v × t est la formule de départ.</li><li>Pour trouver t, on « défait » la multiplication par v : t = d ÷ v.</li></ul>
+    
+
+<h4>Exemple fait ensemble en classe</h4>
+    
+
+<div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    
+
+<h4>Exercices (calculatrice autorisée)</h4>
+    
+
+<p>Calculatrice autorisée. Donne les durées en heures (nombre décimal).</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Réponds au problème du jour : comment calculer une vitesse à partir d’une distance et d’une durée ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — 40 km à 10 km/h. Durée ? (en h)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>18 km à 6 km/h. Durée ? (en h)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>30 km à 12 km/h. Durée ? (en h)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>9 km à 6 km/h. Durée ? (en h)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>2 400 m au galop à 600 m/min. Durée en min ? (en min)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — Un élève trouve 2,5 h et écrit « 2 h 50 min ». A-t-il raison ? Choix : Oui / Non, 2,5 h = 2 h 30 min / Non, 2,5 h = 2 h 05 min.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>Pour aller plus loin (facultatif)</h3>
+            <h3>Encore des exercices (si tu as fini)</h3>
             
-<p>Un chronomètre a une erreur de ±1 s.</p>
-    
 
-
-            <ol class="course-paper-questions"><li><span>Quelle vitesse si le temps vaut 81 s au lieu de 80 s ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>48 km en 4 h. Vitesse ? (en km/h)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>9 km/h pendant 3 h. Distance ? (en km)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>25 km à 10 km/h. Durée en h ? (en h)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>16 km/h pendant 0,25 h. Distance ? (en km)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Un cheval fait 3 600 m en 6 min. Vitesse en m/min ? (en m/min)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>A : 40 km en 5 h ; B : 27 km en 3 h. Vitesse du plus rapide en km/h ? (en km/h)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>À retenir</h3>
             
-<ul><li>v = d / t ; d = v × t ; t = d / v.</li><li>Unités cohérentes.</li></ul>
+<ul><li>Vitesse = distance ÷ durée (v = d ÷ t).</li><li>Distance = vitesse × durée (d = v × t).</li><li>Durée = distance ÷ vitesse (t = d ÷ v).</li><li>Unités qui vont ensemble : km, h et km/h ; m, s et m/s ; m, min et m/min.</li></ul>
     
 
 
             
-        </section>
-        
-        <section class="course-paper-section course-paper-break">
-            <h2 class="course-paper-part">Fiche d’exercices</h2><h3>Exercice 1 — Vitesse</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>1 000 m en 4 min : vitesse en m/min ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Et en m/s (au dixième) ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Exercice 2 — Distance et durée</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>À 350 m/min pendant 6 min : distance ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>À 120 m/min (pas), durée pour 600 m ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Exercice 3 — Allure</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>Un cheval va à 420 m/min. Quelle allure (repères du cours) ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
     </article>
@@ -489,60 +399,57 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>La vitesse moyenne</h2>
+        <h2>Partie 1 — La vitesse moyenne</h2>
         
         
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas calculer la vitesse d’un cheval qui trotte 400 m en 1 min 20 s, en m/s et en m/min. On attend les deux vitesses.</p></div>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Un cheval trotte 400 m en 1 min 20 s. À quelle vitesse va-t-il ?</p>
+<p>La vitesse moyenne dit quelle distance on parcourt, en moyenne, en une unité de temps : en 1 heure, en 1 minute…</p>
     
 
-<h4>Ce que c’est</h4>
+<p>Un cheval au trot à 15 km/h parcourt 15 km en 1 heure.</p>
     
 
-<p>La vitesse moyenne est la distance parcourue pendant une unité de temps (en 1 seconde, en 1 minute, en 1 heure).</p>
+<p>À retenir : Vitesse moyenne = distance ÷ durée. Distance en km et durée en h → vitesse en km/h.</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Suivre l’entraînement d’un cheval, doser l’effort.</li><li>Préparer une balade ou un concours.</li></ul>
+<ol><li>Repère la distance et la durée.</li><li>Vérifie les unités (km et h, ou m et min).</li><li>Divise la distance par la durée.</li><li>Écris l’unité : km/h (ou m/min).</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>On convertit la durée dans une seule unité (secondes ou minutes).</li><li>On divise la distance par la durée.</li><li>L’unité de la vitesse vient des unités utilisées : m ÷ s = m/s ; m ÷ min = m/min.</li></ol>
+<p>1. En raisonnant avec « en 1 heure »</p>
     
 
-<p>À retenir : v = d / t, avec des unités cohérentes.</p>
+<ul><li>Une jument fait 30 km en 2 h, à allure régulière.</li><li>En 1 h, elle fait la moitié : 30 ÷ 2 = 15 km. Sa vitesse est 15 km/h.</li></ul>
+    
+
+<p>2. Pourquoi « moyenne »</p>
+    
+
+<ul><li>Le cheval ne va pas toujours à la même allure (pas, trot, galop).</li><li>La vitesse moyenne, c’est la vitesse régulière qui ferait le même trajet dans le même temps.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>Un cheval parcourt 600 m en 2 min. Vitesse en m/min ?</li><li>Un poney parcourt 120 m en 1 min 30 s. Vitesse en m/s ?</li></ol>
-    
-
-<ul><li>Automatisme : convertis 1 min 20 s en secondes.</li></ul>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : un cheval trotte 400 m en 1 min 20 s (80 s). Calcule sa vitesse en m/s, puis en m/min.</li><li>Pourquoi deux unités ? Les fiches d’entraînement utilisent souvent m/min.</li></ol>
+<p>Calculatrice autorisée. Donne les vitesses en km/h, sauf si l’énoncé dit autre chose.</p>
     
 
 
@@ -551,63 +458,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a01-q01-label">Question 1 — Série A — Un cheval parcourt 20 km en 2 h. Vitesse moyenne ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Vitesse = distance ÷ …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="La vitesse moyenne — Mot(s) manquant(s) — Vitesse = distance ÷ …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    v = d / t ; d s’exprime ici en mètres et t en …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="La vitesse moyenne — Mot(s) manquant(s) — v = d / t ; d s’exprime ici en mètres et t en …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Relis l’exemple : la vitesse se calcule avec la distance et quoi ? Si on veut des m/s, le temps est en quelle unité ?</p></details>
+                <input type="text" inputmode="decimal" id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><p>Unité : km/h</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>v = d ÷ t = 20 ÷ 2.</p></details>
             
             
         </div>
@@ -615,15 +474,15 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Vitesse en m/s ?</h3>
+            <h3 id="a01-q02-label">Question 2 — Une randonnée de 36 km dure 4 h. Vitesse moyenne ?</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><p>Unité : m/s</p>
+                <input type="text" inputmode="decimal" id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><p>Unité : km/h</p>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Divise la distance (en m) par la durée (en s) de l’énoncé.</p></details>
+            <details><summary>Un coup de pouce</summary><p>v = 36 ÷ 4.</p></details>
             
             
         </div>
@@ -631,15 +490,79 @@
         <div class="cours-question" data-question="q03">
             
             
-            <h3 id="a01-q03-label">Question 3 — Vitesse en m/min ?</h3>
+            <h3 id="a01-q03-label">Question 3 — Un trotteur fait 45 km en 3 h. Vitesse moyenne ?</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label"><p>Unité : m/min</p>
+                <input type="text" inputmode="decimal" id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label"><p>Unité : km/h</p>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Une minute = 60 s : en une minute, le cheval parcourt 60 fois plus qu’en une seconde.</p></details>
+            <details><summary>Un coup de pouce</summary><p>v = 45 ÷ 3.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a01-q04-label">Question 4 — Un cheval au pas fait 3 km en 0,5 h. Vitesse moyenne ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q04" data-answer-id="a01_q04" data-required="true" aria-labelledby="a01-q04-label"><p>Unité : km/h</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>v = 3 ÷ 0,5.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a01-q05-label">Question 5 — Un cheval galope 1 000 m en 2 min. Vitesse en m/min ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q05" data-answer-id="a01_q05" data-required="true" aria-labelledby="a01-q05-label"><p>Unité : m/min</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Ici, d en m et t en min : v en m/min.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a01-q06-label">Question 6 — Une randonnée de 27 km dure 1,5 h. Vitesse moyenne ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q06" data-answer-id="a01_q06" data-required="true" aria-labelledby="a01-q06-label"><p>Unité : km/h</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>v = 27 ÷ 1,5.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q07">
+            
+            
+            <h3 id="a01-q07-label">Question 7 — Série B — Cheval A : 30 km en 3 h. Cheval B : 22 km en 2 h. Lequel est le plus rapide ?</h3>
+            
+
+            
+            
+                <select id="a01-q07" data-answer-id="a01_q07" data-required="true" aria-labelledby="a01-q07-label"><option value="">Choisis une réponse</option><option value="a">Le cheval A</option><option value="b">Le cheval B</option><option value="c">Ils vont aussi vite</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Calcule les deux vitesses, puis compare.</p></details>
             
             
         </div>
@@ -653,57 +576,57 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Distance et durée</h2>
+        <h2>Partie 2 — Calculer une distance</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais calculer une vitesse. Calcule maintenant une distance et une durée.</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas calculer une distance et une durée à partir d’une vitesse donnée. On attend deux résultats avec leur unité.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais calculer une vitesse. Deuxième notion : trouver la distance quand on connaît la vitesse et la durée.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>On prépare une séance : quelle distance fera le cheval en 10 min de trot ? Combien de temps pour faire 1 800 m au galop ?</p>
+<p>Si on connaît la vitesse et la durée, on peut calculer la distance parcourue.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>À 12 km/h pendant 2 h, on fait 12 km la première heure et 12 km la deuxième.</p>
     
 
-<p>La formule v = d / t se transforme pour calculer une distance (d = v × t) ou une durée (t = d ÷ v).</p>
+<p>À retenir : Distance = vitesse × durée (d = v × t).</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Construire une séance d’entraînement.</li><li>Prévoir la durée d’une balade.</li></ul>
+<ol><li>Repère la vitesse et la durée.</li><li>Vérifie que les unités vont ensemble (km/h avec des heures).</li><li>Multiplie la vitesse par la durée.</li><li>Écris l’unité : km.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>Distance : on multiplie la vitesse par la durée.</li><li>Durée : on divise la distance par la vitesse.</li><li>On vérifie que les unités vont ensemble (m/min avec des min et des m).</li></ol>
+<p>1. En raisonnant heure par heure</p>
     
 
-<p>À retenir : d = v × t ; t = d ÷ v.</p>
+<ul><li>À 12 km/h, chaque heure ajoute 12 km.</li><li>En 3 h : 12 + 12 + 12 = 3 × 12 = 36 km.</li></ul>
+    
+
+<p>2. Pourquoi c’est la même formule « retournée »</p>
+    
+
+<ul><li>v = d ÷ t veut dire : d partagé en t parts égales donne v.</li><li>Donc t parts de v redonnent d : d = v × t.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>Au pas à 110 m/min pendant 20 min : quelle distance ?</li><li>900 m à 300 m/min : combien de minutes ?</li></ol>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : utilise d = v × t et t = d ÷ v pour les deux questions.</li><li>Pourquoi ces formules ? On prépare une séance : quelle distance en 10 min de trot ?</li></ol>
+<p>Calculatrice autorisée. Donne les distances en km.</p>
     
 
 
@@ -712,63 +635,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a02-q01-label">Question 1 — Série A — Un cheval va à 10 km/h pendant 3 h. Distance ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Distance = vitesse × …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Distance et durée — Mot(s) manquant(s) — Distance = vitesse × …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Durée = distance ÷ …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Distance et durée — Mot(s) manquant(s) — Durée = distance ÷ …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Si v = d ÷ t, comment retrouver d ? Et t ?</p></details>
+                <input type="text" inputmode="decimal" id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label"><p>Unité : km</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>d = v × t.</p></details>
             
             
         </div>
@@ -776,15 +651,15 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — À 300 m/min, quelle distance en 10 min ?</h3>
+            <h3 id="a02-q02-label">Question 2 — Un cheval va à 6 km/h pendant 2 h. Distance ?</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><p>Unité : m</p>
+                <input type="text" inputmode="decimal" id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><p>Unité : km</p>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Distance = vitesse × durée, avec la durée en minutes.</p></details>
+            <details><summary>Un coup de pouce</summary><p>d = 6 × 2.</p></details>
             
             
         </div>
@@ -792,15 +667,79 @@
         <div class="cours-question" data-question="q03">
             
             
-            <h3 id="a02-q03-label">Question 3 — Au galop de travail à 450 m/min, combien de minutes pour 1 800 m ?</h3>
+            <h3 id="a02-q03-label">Question 3 — Un trotteur va à 15 km/h pendant 4 h. Distance ?</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label"><p>Unité : min</p>
+                <input type="text" inputmode="decimal" id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label"><p>Unité : km</p>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Durée = distance ÷ vitesse : 1 800 m ÷ 450 m/min.</p></details>
+            <details><summary>Un coup de pouce</summary><p>d = 15 × 4.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a02-q04-label">Question 4 — Un cheval va à 8 km/h pendant 0,5 h. Distance ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q04" data-answer-id="a02_q04" data-required="true" aria-labelledby="a02-q04-label"><p>Unité : km</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>d = 8 × 0,5.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a02-q05-label">Question 5 — Un cheval va à 12 km/h pendant 2,5 h. Distance ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q05" data-answer-id="a02_q05" data-required="true" aria-labelledby="a02-q05-label"><p>Unité : km</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>d = 12 × 2,5.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a02-q06-label">Question 6 — Un cheval galope à 600 m/min pendant 3 min. Distance en m ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q06" data-answer-id="a02_q06" data-required="true" aria-labelledby="a02-q06-label"><p>Unité : m</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>d = v × t, en m.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q07">
+            
+            
+            <h3 id="a02-q07-label">Question 7 — Série B — Une randonnée : 2 h à 6 km/h, puis 1 h à 12 km/h. Distance totale ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q07" data-answer-id="a02_q07" data-required="true" aria-labelledby="a02-q07-label"><p>Unité : km</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Calcule les deux distances, puis additionne.</p></details>
             
             
         </div>
@@ -814,60 +753,57 @@
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Comparer des allures</h2>
+        <h2>Partie 3 — Calculer une durée</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as des vitesses. Que signifient-elles ?</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas situer la vitesse calculée parmi les repères d’allures (document 1). On attend l’allure correspondante.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Dernière notion : trouver le temps de trajet quand on connaît la distance et la vitesse.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Le cheval de la mission 1 va à 300 m/min : est-ce du pas, du trot ou du galop ?</p>
+<p>Si on connaît la distance et la vitesse, on peut calculer la durée du trajet.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>On se demande : combien de fois la distance d’une heure tient-elle dans la distance totale ?</p>
     
 
-<p>Des repères de vitesse (ordres de grandeur) associent une plage de vitesses à chaque allure.</p>
+<p>À retenir : Durée = distance ÷ vitesse (t = d ÷ v). km et km/h → durée en h.</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Vérifier qu’un cheval travaille à la bonne allure.</li></ul>
+<ol><li>Repère la distance et la vitesse.</li><li>Divise la distance par la vitesse.</li><li>Le résultat est en heures (si v est en km/h).</li><li>Contrôle : vitesse × durée doit redonner la distance.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>On exprime la vitesse dans la même unité que le tableau de repères.</li><li>On cherche la ligne dont la plage contient la vitesse.</li></ol>
+<p>1. En raisonnant avec « en 1 heure »</p>
     
 
-<p>À retenir : On compare des vitesses dans la même unité.</p>
+<ul><li>À 10 km/h, on fait 10 km en 1 heure.</li><li>Pour 30 km, il faut 3 fois 10 km, donc 3 heures : 30 ÷ 10 = 3 h.</li></ul>
+    
+
+<p>2. Le triangle des trois formules</p>
+    
+
+<ul><li>d = v × t est la formule de départ.</li><li>Pour trouver t, on « défait » la multiplication par v : t = d ÷ v.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>À quelle allure correspond 420 m/min ?</li><li>Et 5 m/s ? (convertis d’abord en m/min)</li></ol>
-    
-
-<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Repères de vitesse (ordres de grandeur)</caption><thead><tr><th scope="col">Allure</th><th scope="col">Vitesse (ordre de grandeur, m/min)</th></tr></thead><tbody><tr><td>Pas</td><td>100 à 120</td></tr><tr><td>Trot de travail</td><td>250 à 350</td></tr><tr><td>Galop de travail</td><td>350 à 500</td></tr></tbody></table></div>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : lis les repères (document 1) et classe ton cheval de la mission 1.</li><li>Pourquoi des repères ? Ils aident à doser l’effort.</li></ol>
+<p>Calculatrice autorisée. Donne les durées en heures (nombre décimal).</p>
     
 
 
@@ -876,63 +812,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a03-q01-label">Question 1 — Série A — 40 km à 10 km/h. Durée ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Le trot de travail est d’environ 250 à …… m/min.
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a03_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Comparer des allures — Mot(s) manquant(s) — Le trot de travail est d’environ 250 à …… m/min.">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    On compare des vitesses dans la même …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a03_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Comparer des allures — Mot(s) manquant(s) — On compare des vitesses dans la même …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Regarde le document 1 : quelle vitesse haute pour le trot de travail ? Et peut-on comparer des km/h avec des m/min ?</p></details>
+                <input type="text" inputmode="decimal" id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label"><p>Unité : h</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>t = d ÷ v.</p></details>
             
             
         </div>
@@ -940,15 +828,79 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a03-q02-label">Question 2 — D’après le document 1, à quelle allure correspond 300 m/min ?</h3>
+            <h3 id="a03-q02-label">Question 2 — 18 km à 6 km/h. Durée ?</h3>
             
 
             
             
-                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label"><p>Unité : h</p>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Cherche dans le document 1 la fourchette de vitesse qui contient 300 m/min.</p></details>
+            <details><summary>Un coup de pouce</summary><p>t = 18 ÷ 6.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a03-q03-label">Question 3 — 30 km à 12 km/h. Durée ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q03" data-answer-id="a03_q03" data-required="true" aria-labelledby="a03-q03-label"><p>Unité : h</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>t = 30 ÷ 12.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a03-q04-label">Question 4 — 9 km à 6 km/h. Durée ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q04" data-answer-id="a03_q04" data-required="true" aria-labelledby="a03-q04-label"><p>Unité : h</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>t = 9 ÷ 6.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a03-q05-label">Question 5 — 2 400 m au galop à 600 m/min. Durée en min ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q05" data-answer-id="a03_q05" data-required="true" aria-labelledby="a03-q05-label"><p>Unité : min</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Ici, m et m/min : la durée est en minutes.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a03-q06-label">Question 6 — Série B — Un élève trouve 2,5 h et écrit « 2 h 50 min ». A-t-il raison ?</h3>
+            
+
+            
+            
+                <select id="a03-q06" data-answer-id="a03_q06" data-required="true" aria-labelledby="a03-q06-label"><option value="">Choisis une réponse</option><option value="a">Oui</option><option value="b">Non, 2,5 h = 2 h 30 min</option><option value="c">Non, 2,5 h = 2 h 05 min</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>0,5 h, c’est une demi-heure. Combien de minutes dans une demi-heure ?</p></details>
             
             
         </div>
@@ -962,7 +914,7 @@
     
     <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Pour aller plus loin</h2>
+        <h2>Encore des exercices (si tu as fini)</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
@@ -970,7 +922,7 @@
         
 
         
-<p>Un chronomètre a une erreur de ±1 s.</p>
+<p>Tu as fini ? Entraîne-toi encore. Ces exercices ne comptent pas dans la note.</p>
     
 
 
@@ -979,15 +931,95 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Quelle vitesse si le temps vaut 81 s au lieu de 80 s ?</h3>
+            <h3 id="a04-q01-label">Question 1 — 48 km en 4 h. Vitesse ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label"><p>Unité : km/h</p>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Refais distance ÷ temps avec 81 s au lieu de 80 s et compare les deux vitesses.</p></details>
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a04-q02-label">Question 2 — 9 km/h pendant 3 h. Distance ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a04-q02" data-answer-id="a04_q02" data-required="false" aria-labelledby="a04-q02-label"><p>Unité : km</p>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a04-q03-label">Question 3 — 25 km à 10 km/h. Durée en h ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a04-q03" data-answer-id="a04_q03" data-required="false" aria-labelledby="a04-q03-label"><p>Unité : h</p>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a04-q04-label">Question 4 — 16 km/h pendant 0,25 h. Distance ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a04-q04" data-answer-id="a04_q04" data-required="false" aria-labelledby="a04-q04-label"><p>Unité : km</p>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a04-q05-label">Question 5 — Un cheval fait 3 600 m en 6 min. Vitesse en m/min ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a04-q05" data-answer-id="a04_q05" data-required="false" aria-labelledby="a04-q05-label"><p>Unité : m/min</p>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a04-q06-label">Question 6 — A : 40 km en 5 h ; B : 27 km en 3 h. Vitesse du plus rapide en km/h ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a04-q06" data-answer-id="a04_q06" data-required="false" aria-labelledby="a04-q06-label"><p>Unité : km/h</p>
+
+                
+            
             
             
         </div>
@@ -995,41 +1027,6 @@
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#a03">← Étape précédente</a>
-            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a05" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Conclusion de ton travail</h2>
-        
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais calculer une vitesse. Il reste à répondre au problème de départ.</p>
-        
-        
-        
-
-        
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment calculer une vitesse à partir d’une distance et d’une durée ?</h3>
-            
-
-            
-            
-                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Donne les trois formules (vitesse, distance, durée) et la règle sur les unités.</p></details>
-            
-            
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -1042,7 +1039,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>v = d / t ; d = v × t ; t = d / v.</li><li>Unités cohérentes.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Vitesse = distance ÷ durée (v = d ÷ t).</li><li>Distance = vitesse × durée (d = v × t).</li><li>Durée = distance ÷ vitesse (t = d ÷ v).</li><li>Unités qui vont ensemble : km, h et km/h ; m, s et m/s ; m, min et m/min.</li></ul>
     
 </section>
 
@@ -1058,7 +1055,7 @@
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
     
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

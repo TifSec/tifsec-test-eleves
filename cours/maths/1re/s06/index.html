@@ -124,7 +124,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Les conversions</a></li><li><a href="#a02">Une dose fictive</a></li><li><a href="#a03">L’écriture scientifique</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Partie 1 — Préfixes et conversions</a></li><li><a href="#a02">Partie 2 — Une dose en mg par kg</a></li><li><a href="#a03">Partie 3 — L’écriture scientifique</a></li><li><a href="#a04">Encore des exercices (si tu as fini) — facultatif</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -136,7 +136,7 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Mathématiques · Bac Pro 1 · S06</span></div>
-    <h1>Séance 6 : Des doses en mg par kg : unités et puissances de 10</h1>
+    <h1>Séance 6 : Unités, doses et puissances de 10</h1>
     
 
     
@@ -150,7 +150,7 @@
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Comment manipuler des unités et des puissances de 10 dans un calcul de dose ?</p>
+        <p>Comment convertir des unités avec les préfixes, calculer une dose en mg/kg et écrire un très grand ou très petit nombre ?</p>
     </section>
     
 
@@ -168,7 +168,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>1 g = 1 000 mg = 10³ mg ; 1 mg = 10⁻³ g ; 1 µg = 10⁻⁶ g.</li>
+            <li>k = 10³ = 1 000 ; m = 10⁻³ = 0,001 ; µ = 10⁻⁶.</li>
+            
+            <li>Dose = dose par kg × poids.</li>
             
             <li>Écriture scientifique : a × 10ⁿ avec 1 ≤ a &lt; 10.</li>
             
@@ -178,16 +180,18 @@
         <h2>Ce que tu vas apprendre à faire</h2>
         <ul>
             
-            <li>Convertir des masses et des volumes.</li>
+            <li>Convertir g, mg, kg et L, mL.</li>
             
-            <li>Utiliser l’écriture scientifique.</li>
+            <li>Calculer une dose de médicament à partir d’une posologie en mg/kg.</li>
+            
+            <li>Écrire un nombre en écriture scientifique.</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Les notices vétérinaires donnent des doses en mg/kg.</p><p>Il faut convertir sans erreur (calcul fictif, jamais une vraie prescription).</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Aujourd’hui, trois notions : les préfixes et conversions, les doses en mg/kg, l’écriture scientifique.</p><p>Pour chacune : la notion, la méthode, pourquoi ça marche, un exemple au tableau, puis beaucoup d’exercices.</p></div></section>
     
     
     
@@ -202,67 +206,45 @@
 
 <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
     <article class="course-paper-sheet">
-        <header><p class="course-paper-class">Mathématiques — Bac Pro 1</p><p class="course-paper-kicker">Cours et exercices — version papier</p><h2 id="course-paper-title"><span class="course-paper-number">Séance 6</span> — Des doses en mg par kg : unités et puissances de 10</h2><p>Comment manipuler des unités et des puissances de 10 dans un calcul de dose ?</p></header>
+        <header><p class="course-paper-class">Mathématiques — Bac Pro 1</p><p class="course-paper-kicker">Cours et exercices — version papier</p><h2 id="course-paper-title"><span class="course-paper-number">Séance 6</span> — Unités, doses et puissances de 10</h2><p>Trois notions : conversions, doses en mg/kg, écriture scientifique. Pour chacune : la notion, la méthode, l’exemple au tableau, puis les exercices.</p></header>
         
         <section class="course-paper-section">
-            <h3>Le cours en bref</h3>
+            <h3>I. Préfixes et conversions</h3>
             
-<p>Le problème à résoudre : Comment manipuler des unités et des puissances de 10 dans un calcul de dose ?</p>
+<h4>La notion</h4>
     
 
-<h4>Ce que tu vas apprendre</h4>
+<p>Les préfixes kilo (k), milli (m) et micro (µ) disent par combien on multiplie l’unité.</p>
     
 
-<ul><li>1 g = 1 000 mg = 10³ mg ; 1 mg = 10⁻³ g ; 1 µg = 10⁻⁶ g.</li><li>Écriture scientifique : a × 10ⁿ avec 1 ≤ a &lt; 10.</li></ul>
+<p>1 kg = 1 000 g ; 1 mg = 0,001 g ; 1 µg = 0,000 001 g.</p>
     
 
-<h4>Ce que tu vas savoir faire</h4>
+<h4>À retenir</h4>
     
 
-<ul><li>Convertir des masses et des volumes.</li><li>Utiliser l’écriture scientifique.</li></ul>
+<p>k = 10³ ; m = 10⁻³ ; µ = 10⁻⁶. Vers une unité plus petite : × ; vers une plus grande : ÷.</p>
     
 
-<h4>Pourquoi cette séance ?</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<p>Les notices vétérinaires donnent des doses en mg/kg. Il faut convertir sans erreur (calcul fictif, jamais une vraie prescription).</p>
+<ol><li>Repère l’unité de départ et l’unité d’arrivée.</li><li>Cherche le facteur entre les deux (1 000 entre g et mg).</li><li>Vers une unité plus petite, multiplie ; vers une plus grande, divise.</li><li>Contrôle : plus l’unité est petite, plus le nombre est grand.</li></ol>
     
 
-<p>Comment utiliser cette fiche : pour chaque partie, lis la méthode et l’exemple, complète les points clés, puis fais l’exercice. Réponds sur les lignes.</p>
+<h4>Pourquoi ça marche</h4>
     
 
-
-            
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>I. Les conversions</h3>
-            
-<h4>La situation</h4>
+<p>1. Pourquoi 1 000 entre g et mg</p>
     
 
-<p>Une notice parle en mg, la balance en g, la seringue en mL. Il faut passer d’une unité à l’autre sans erreur.</p>
+<ul><li>« milli » veut dire « millième » : 1 mg est un millième de gramme.</li><li>Il faut donc 1 000 mg pour faire 1 g.</li></ul>
     
 
-<h4>Ce que c’est</h4>
+<p>2. Pourquoi les puissances de 10</p>
     
 
-<p>Les préfixes indiquent une puissance de 10 : kilo = 10³ = 1 000, milli = 10⁻³ = un millième, micro = 10⁻⁶ = un millionième.</p>
-    
-
-<h4>À quoi ça sert</h4>
-    
-
-<ul><li>Passer d’une unité à l’autre sur une notice, une étiquette, une balance.</li><li>Éviter les erreurs de dosage.</li></ul>
-    
-
-<h4>Comment ça marche</h4>
-    
-
-<ol><li>On cherche combien de petites unités il y a dans une grande (1 g = 1 000 mg).</li><li>Grande unité → petite unité : on multiplie (× 1 000).</li><li>Petite unité → grande unité : on divise (÷ 1 000).</li><li>On vérifie l’ordre de grandeur : en petites unités, le nombre doit être plus grand.</li></ol>
-    
-
-<p>À retenir : 1 g = 1 000 mg = 10³ mg ; 1 L = 1 000 mL.</p>
+<ul><li>10³ = 10 × 10 × 10 = 1 000 : trois zéros, trois rangs.</li><li>10⁻³ = 1 ÷ 1 000 = 0,001 : trois rangs dans l’autre sens.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -271,71 +253,53 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<ul><li>Automatisme : 10³ = ? ; 10⁻² = ?</li></ul>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<h4>Ce que tu vas faire</h4>
-    
-
-<p>Tu vas convertir trois quantités (masses, volumes) avec les puissances de 10. On attend les trois conversions.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : lis le tableau des préfixes et convertis.</li><li>Pourquoi ? Une erreur d’un facteur 1 000 peut être grave.</li></ol>
-    
-
-<h4>Exemple et documents</h4>
-    
-
-<div class="cours-table-wrapper"><table class="cours-table"><caption>Préfixes</caption><thead><tr><th scope="col">Préfixe</th><th scope="col">Valeur</th></tr></thead><tbody><tr><td>kilo (k)</td><td>10³</td></tr><tr><td>milli (m)</td><td>10⁻³</td></tr><tr><td>micro (µ)</td><td>10⁻⁶</td></tr></tbody></table></div>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>1 g = <span class="cours-trou" aria-label="à compléter"></span> mg.</li><li>Le préfixe milli correspond à 10 puissance <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 1 — Les conversions</h4>
-    
-
-<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Quantité</th><th scope="col">Conversion</th></tr></thead><tbody><tr><td>2,5 g en mg</td><td></td></tr><tr><td>750 mg en g</td><td></td></tr><tr><td>0,02 L en mL</td><td></td></tr></tbody></table></div>
+<p>Sans calculatrice.</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — Convertis 4 g en mg.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — Convertis 250 mg en g.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — Convertis 1,5 L en mL.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Convertis.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — Convertis 4 g en mg. (en mg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Convertis 0,6 g en mg. (en mg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Convertis 2 500 mg en g. (en g)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Convertis 1,2 kg en g. (en g)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — Convertis 2 mg en µg. (en µg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Convertis 0,5 L en mL. (en mL)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Convertis 0,25 kg en mg. (en mg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>II. Une dose fictive</h3>
+            <h3>II. Une dose en mg par kg</h3>
             
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Une notice (fictive) indique 2 mg de produit par kg de cheval. Le produit contient 50 mg par mL. Quel volume pour un cheval de 500 kg ?</p>
+<p>Une posologie en mg/kg dit combien de milligrammes donner pour chaque kilogramme de l’animal.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>Un cheval plus lourd reçoit donc une dose plus grande : c’est de la proportionnalité.</p>
     
 
-<p>Une dose en mg/kg dit combien de milligrammes donner pour chaque kilo du cheval. La concentration en mg/mL dit combien de milligrammes il y a dans chaque millilitre de produit.</p>
+<h4>À retenir</h4>
     
 
-<h4>À quoi ça sert</h4>
+<p>Dose totale (mg) = posologie (mg/kg) × poids (kg).</p>
     
 
-<ul><li>Préparer un traitement adapté au poids du cheval.</li><li>Comprendre une notice vétérinaire (seul le vétérinaire prescrit).</li></ul>
+<h4>Comment ça fonctionne</h4>
     
 
-<h4>Comment ça marche</h4>
+<ol><li>Lis la posologie (mg/kg) et le poids (kg).</li><li>Multiplie les deux : la dose est en mg.</li><li>Convertis si besoin (mg → g : ÷ 1 000).</li><li>Pour un volume : dose (mg) ÷ concentration (mg/mL) = volume en mL.</li></ol>
     
 
-<ol><li>Étape 1, la masse : dose (mg/kg) × poids (kg) = masse en mg.</li><li>Étape 2, le volume : masse (mg) ÷ concentration (mg/mL) = volume en mL.</li><li>Les unités guident : mg/kg × kg = mg ; mg ÷ (mg/mL) = mL.</li></ol>
+<h4>Pourquoi ça marche</h4>
     
 
-<p>À retenir : Masse = dose × poids ; volume = masse ÷ concentration.</p>
+<p>1. En raisonnant kg par kg</p>
+    
+
+<ul><li>À 2 mg/kg, chaque kilogramme demande 2 mg.</li><li>Pour 500 kg : 500 fois 2 mg = 1 000 mg = 1 g.</li></ul>
+    
+
+<p>2. Pourquoi diviser par la concentration</p>
+    
+
+<ul><li>Un produit à 50 mg/mL contient 50 mg dans chaque millilitre.</li><li>Pour 1 000 mg, il faut 1 000 ÷ 50 = 20 mL.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -344,65 +308,53 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<h4>Ce que tu vas faire</h4>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<p>Tu vas calculer la masse et le volume d’un produit fictif pour un cheval de 500 kg. On attend la masse et le volume.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : notice fictive 2 mg par kg, produit à 50 mg/mL, cheval de 500 kg.</li><li>Pourquoi deux étapes ? On calcule la masse de produit, puis le volume.</li></ol>
-    
-
-<h4>Exemple et documents</h4>
-    
-
-<p>Notice inventée pour l’exercice ; seul le vétérinaire prescrit.</p>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>Masse de produit = dose en mg/kg × <span class="cours-trou" aria-label="à compléter"></span> .</li><li>Volume = masse ÷ <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 2 — Une dose fictive</h4>
+<p>Doses fictives, pour le calcul seulement. Calculatrice autorisée.</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — Notice fictive : 3 mg/kg, produit à 60 mg/mL, cheval de 400 kg. Masse et volume ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — Même produit pour un poney de 200 kg ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Masse de principe actif ? (en mg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Volume à prélever ? (en mL)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — 2 mg/kg pour un cheval de 500 kg : dose en mg ? (en mg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Convertis cette dose en g. (en g)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>5 mg/kg pour un poney de 280 kg : dose en mg ? (en mg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>0,5 mg/kg pour un cheval de 620 kg : dose en mg ? (en mg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — Un produit contient 50 mg/mL. Volume pour 1 000 mg ? (en mL)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Dose 1 400 mg, produit à 100 mg/mL : volume ? (en mL)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>3 mg/kg, cheval de 450 kg, produit à 90 mg/mL : volume ? (en mL)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>III. L’écriture scientifique</h3>
             
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Une analyse indique 0,000 35 g de résidu par kg. Ce nombre est difficile à lire : comment l’écrire plus simplement ?</p>
+<p>Les très grands nombres (1 020 000 équidés en France) et les très petits (0,000 8 g) sont difficiles à lire.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>L’écriture scientifique les écrit sous la forme a × 10ⁿ, avec un seul chiffre non nul avant la virgule.</p>
     
 
-<p>L’écriture scientifique écrit un nombre sous la forme a × 10ⁿ, avec un seul chiffre non nul avant la virgule (1 ≤ a &lt; 10).</p>
+<h4>À retenir</h4>
     
 
-<h4>À quoi ça sert</h4>
+<p>Écriture scientifique : a × 10ⁿ avec 1 ≤ a &lt; 10. n positif pour un grand nombre, négatif pour un petit.</p>
     
 
-<ul><li>Lire et comparer facilement de très petits ou très grands nombres.</li><li>Utiliser la calculatrice (touche ×10ˣ ou EE).</li></ul>
+<h4>Comment ça fonctionne</h4>
     
 
-<h4>Comment ça marche</h4>
+<ol><li>Place la virgule après le premier chiffre non nul : c’est a.</li><li>Compte de combien de rangs tu as décalé la virgule : c’est n.</li><li>Virgule décalée vers la gauche (grand nombre) : n positif. Vers la droite (petit nombre) : n négatif.</li><li>Contrôle : 1 ≤ a &lt; 10.</li></ol>
     
 
-<ol><li>On déplace la virgule pour n’avoir qu’un chiffre non nul devant elle.</li><li>On compte de combien de rangs on l’a déplacée : c’est la puissance de 10.</li><li>Virgule déplacée vers la droite (petit nombre) : puissance négative ; vers la gauche (grand nombre) : puissance positive.</li></ol>
+<h4>Pourquoi ça marche</h4>
     
 
-<p>À retenir : a × 10ⁿ avec 1 ≤ a &lt; 10.</p>
+<p>1. Pour un grand nombre</p>
+    
+
+<ul><li>1 020 000 = 1,02 × 1 000 000.</li><li>1 000 000 = 10⁶ (six zéros) : 1 020 000 = 1,02 × 10⁶.</li></ul>
+    
+
+<p>2. Pour un petit nombre</p>
+    
+
+<ul><li>0,000 8 = 8 × 0,000 1.</li><li>0,000 1 = 10⁻⁴ (quatre rangs) : 0,000 8 = 8 × 10⁻⁴.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -411,80 +363,31 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<h4>Ce que tu vas faire</h4>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<p>Tu vas écrire une quantité de résidu en écriture scientifique et la convertir en microgrammes. On attend l’écriture et la conversion.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : une analyse donne 0,000 35 g de résidu par kg ; écris-le en écriture scientifique et convertis en µg.</li><li>Pourquoi l’écriture scientifique ? Les très petits nombres sont lisibles.</li></ol>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>Écriture scientifique : a × 10ⁿ avec 1 ≤ a &lt; <span class="cours-trou" aria-label="à compléter"></span> .</li><li>0,000 35 = 3,5 × 10 puissance <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 3 — L’écriture scientifique</h4>
+<p>Pour n, tape le nombre entier (avec le signe moins s’il est négatif).</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — Écris 0,006 en écriture scientifique.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — Écris 45 000 en écriture scientifique.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — Convertis 0,002 g en µg.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Écris 0,000 35 en écriture scientifique.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Combien de µg par kg ? (en µg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — 3 000 = 3 × 10ⁿ. Que vaut n ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>52 000 = 5,2 × 10ⁿ. Que vaut n ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>1 020 000 = 1,02 × 10ⁿ. Que vaut n ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>0,004 = 4 × 10ⁿ. Que vaut n ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — 0,000 25 = 2,5 × 10ⁿ. Que vaut n ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Écris 7,3 × 10³ en écriture décimale.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>Conclusion</h3>
+            <h3>Encore des exercices (si tu as fini)</h3>
             
-<p>Avec ce que tu as fait dans les parties précédentes, réponds en quelques phrases complètes.</p>
-    
 
-
-            <ol class="course-paper-questions"><li><span>Réponds au problème du jour : comment manipuler des unités et des puissances de 10 dans un calcul de dose ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Pour aller plus loin (facultatif)</h3>
-            
-<p>Un poney de 250 kg avec la même notice.</p>
-    
-
-
-            <ol class="course-paper-questions"><li><span>Volume ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Convertis 3,5 g en mg. (en mg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Convertis 800 mg en g. (en g)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>4 mg/kg pour 350 kg : dose en mg ? (en mg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Dose 600 mg, produit à 40 mg/mL : volume ? (en mL)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Écris 6 × 10⁻² en écriture décimale.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>À retenir</h3>
             
-<ul><li>k = 10³ ; m = 10⁻³ ; µ = 10⁻⁶.</li><li>a × 10ⁿ, 1 ≤ a &lt; 10.</li></ul>
+<ul><li>k (kilo) = 1 000 ; m (milli) = 0,001 ; µ (micro) = 0,000 001.</li><li>1 g = 1 000 mg ; 1 kg = 1 000 g ; 1 L = 1 000 mL.</li><li>Dose totale = posologie (mg/kg) × poids (kg).</li><li>Écriture scientifique : a × 10ⁿ avec 1 ≤ a &lt; 10 ; n = nombre de rangs dont on décale la virgule.</li></ul>
     
 
 
             
-        </section>
-        
-        <section class="course-paper-section course-paper-break">
-            <h2 class="course-paper-part">Fiche d’exercices</h2><h3>Exercice 1 — Conversions</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>Convertis 0,75 g en mg.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Convertis 2 500 µg en mg.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Exercice 2 — Dose (notice fictive)</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>4 mg/kg, produit à 80 mg/mL, cheval de 600 kg : volume ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Exercice 3 — Écriture scientifique</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>Écris 0,000 042 en écriture scientifique.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
     </article>
@@ -498,63 +401,57 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Les conversions</h2>
+        <h2>Partie 1 — Préfixes et conversions</h2>
         
         
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas convertir trois quantités (masses, volumes) avec les puissances de 10. On attend les trois conversions.</p></div>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Une notice parle en mg, la balance en g, la seringue en mL. Il faut passer d’une unité à l’autre sans erreur.</p>
+<p>Les préfixes kilo (k), milli (m) et micro (µ) disent par combien on multiplie l’unité.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>1 kg = 1 000 g ; 1 mg = 0,001 g ; 1 µg = 0,000 001 g.</p>
     
 
-<p>Les préfixes indiquent une puissance de 10 : kilo = 10³ = 1 000, milli = 10⁻³ = un millième, micro = 10⁻⁶ = un millionième.</p>
+<p>À retenir : k = 10³ ; m = 10⁻³ ; µ = 10⁻⁶. Vers une unité plus petite : × ; vers une plus grande : ÷.</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Passer d’une unité à l’autre sur une notice, une étiquette, une balance.</li><li>Éviter les erreurs de dosage.</li></ul>
+<ol><li>Repère l’unité de départ et l’unité d’arrivée.</li><li>Cherche le facteur entre les deux (1 000 entre g et mg).</li><li>Vers une unité plus petite, multiplie ; vers une plus grande, divise.</li><li>Contrôle : plus l’unité est petite, plus le nombre est grand.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>On cherche combien de petites unités il y a dans une grande (1 g = 1 000 mg).</li><li>Grande unité → petite unité : on multiplie (× 1 000).</li><li>Petite unité → grande unité : on divise (÷ 1 000).</li><li>On vérifie l’ordre de grandeur : en petites unités, le nombre doit être plus grand.</li></ol>
+<p>1. Pourquoi 1 000 entre g et mg</p>
     
 
-<p>À retenir : 1 g = 1 000 mg = 10³ mg ; 1 L = 1 000 mL.</p>
+<ul><li>« milli » veut dire « millième » : 1 mg est un millième de gramme.</li><li>Il faut donc 1 000 mg pour faire 1 g.</li></ul>
+    
+
+<p>2. Pourquoi les puissances de 10</p>
+    
+
+<ul><li>10³ = 10 × 10 × 10 = 1 000 : trois zéros, trois rangs.</li><li>10⁻³ = 1 ÷ 1 000 = 0,001 : trois rangs dans l’autre sens.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>Convertis 4 g en mg.</li><li>Convertis 250 mg en g.</li><li>Convertis 1,5 L en mL.</li></ol>
-    
-
-<ul><li>Automatisme : 10³ = ? ; 10⁻² = ?</li></ul>
-    
-
-<div class="cours-table-wrapper"><table class="cours-table"><caption>Préfixes</caption><thead><tr><th scope="col">Préfixe</th><th scope="col">Valeur</th></tr></thead><tbody><tr><td>kilo (k)</td><td>10³</td></tr><tr><td>milli (m)</td><td>10⁻³</td></tr><tr><td>micro (µ)</td><td>10⁻⁶</td></tr></tbody></table></div>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : lis le tableau des préfixes et convertis.</li><li>Pourquoi ? Une erreur d’un facteur 1 000 peut être grave.</li></ol>
+<p>Sans calculatrice.</p>
     
 
 
@@ -563,63 +460,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a01-q01-label">Question 1 — Série A — Convertis 4 g en mg.</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    1 g = …… mg.
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Les conversions — Mot(s) manquant(s) — 1 g = …… mg.">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Le préfixe milli correspond à 10 puissance …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Les conversions — Mot(s) manquant(s) — Le préfixe milli correspond à 10 puissance …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Lis le tableau des préfixes : milli = 10 puissance quoi ? Donc combien de mg dans 1 g ?</p></details>
+                <input type="text" inputmode="decimal" id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><p>Unité : mg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>× 1 000.</p></details>
             
             
         </div>
@@ -627,80 +476,95 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Convertis.</h3>
+            <h3 id="a01-q02-label">Question 2 — Convertis 0,6 g en mg.</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Quantité</th>
-                                
-                                <th>Conversion</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    2,5 g en mg
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q02_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Les conversions — Conversion — 2,5 g en mg">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    750 mg en g
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q02_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Les conversions — Conversion — 750 mg en g">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    0,02 L en mL
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q02_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Les conversions — Conversion — 0,02 L en mL">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
+                <input type="text" inputmode="decimal" id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><p>Unité : mg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>× 1 000.</p></details>
             
-            <details><summary>Un coup de pouce</summary><p>Des g vers les mg : × 1 000. Des mg vers les g : ÷ 1 000. Des L vers les mL : × 1 000.</p></details>
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a01-q03-label">Question 3 — Convertis 2 500 mg en g.</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label"><p>Unité : g</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>÷ 1 000.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a01-q04-label">Question 4 — Convertis 1,2 kg en g.</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q04" data-answer-id="a01_q04" data-required="true" aria-labelledby="a01-q04-label"><p>Unité : g</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>× 1 000.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a01-q05-label">Question 5 — Série B — Convertis 2 mg en µg.</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q05" data-answer-id="a01_q05" data-required="true" aria-labelledby="a01-q05-label"><p>Unité : µg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>× 1 000.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a01-q06-label">Question 6 — Convertis 0,5 L en mL.</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q06" data-answer-id="a01_q06" data-required="true" aria-labelledby="a01-q06-label"><p>Unité : mL</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>× 1 000.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q07">
+            
+            
+            <h3 id="a01-q07-label">Question 7 — Convertis 0,25 kg en mg.</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q07" data-answer-id="a01_q07" data-required="true" aria-labelledby="a01-q07-label"><p>Unité : mg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>kg → g (× 1 000), puis g → mg (× 1 000).</p></details>
             
             
         </div>
@@ -714,60 +578,57 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Une dose fictive</h2>
+        <h2>Partie 2 — Une dose en mg par kg</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais convertir. Calcule une dose.</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas calculer la masse et le volume d’un produit fictif pour un cheval de 500 kg. On attend la masse et le volume.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais convertir. Deuxième notion : calculer une dose qui dépend du poids.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Une notice (fictive) indique 2 mg de produit par kg de cheval. Le produit contient 50 mg par mL. Quel volume pour un cheval de 500 kg ?</p>
+<p>Une posologie en mg/kg dit combien de milligrammes donner pour chaque kilogramme de l’animal.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>Un cheval plus lourd reçoit donc une dose plus grande : c’est de la proportionnalité.</p>
     
 
-<p>Une dose en mg/kg dit combien de milligrammes donner pour chaque kilo du cheval. La concentration en mg/mL dit combien de milligrammes il y a dans chaque millilitre de produit.</p>
+<p>À retenir : Dose totale (mg) = posologie (mg/kg) × poids (kg).</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Préparer un traitement adapté au poids du cheval.</li><li>Comprendre une notice vétérinaire (seul le vétérinaire prescrit).</li></ul>
+<ol><li>Lis la posologie (mg/kg) et le poids (kg).</li><li>Multiplie les deux : la dose est en mg.</li><li>Convertis si besoin (mg → g : ÷ 1 000).</li><li>Pour un volume : dose (mg) ÷ concentration (mg/mL) = volume en mL.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>Étape 1, la masse : dose (mg/kg) × poids (kg) = masse en mg.</li><li>Étape 2, le volume : masse (mg) ÷ concentration (mg/mL) = volume en mL.</li><li>Les unités guident : mg/kg × kg = mg ; mg ÷ (mg/mL) = mL.</li></ol>
+<p>1. En raisonnant kg par kg</p>
     
 
-<p>À retenir : Masse = dose × poids ; volume = masse ÷ concentration.</p>
+<ul><li>À 2 mg/kg, chaque kilogramme demande 2 mg.</li><li>Pour 500 kg : 500 fois 2 mg = 1 000 mg = 1 g.</li></ul>
+    
+
+<p>2. Pourquoi diviser par la concentration</p>
+    
+
+<ul><li>Un produit à 50 mg/mL contient 50 mg dans chaque millilitre.</li><li>Pour 1 000 mg, il faut 1 000 ÷ 50 = 20 mL.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>Notice fictive : 3 mg/kg, produit à 60 mg/mL, cheval de 400 kg. Masse et volume ?</li><li>Même produit pour un poney de 200 kg ?</li></ol>
-    
-
-<p>Notice inventée pour l’exercice ; seul le vétérinaire prescrit.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : notice fictive 2 mg par kg, produit à 50 mg/mL, cheval de 500 kg.</li><li>Pourquoi deux étapes ? On calcule la masse de produit, puis le volume.</li></ol>
+<p>Doses fictives, pour le calcul seulement. Calculatrice autorisée.</p>
     
 
 
@@ -776,63 +637,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a02-q01-label">Question 1 — Série A — 2 mg/kg pour un cheval de 500 kg : dose en mg ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Masse de produit = dose en mg/kg × …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Une dose fictive — Mot(s) manquant(s) — Masse de produit = dose en mg/kg × …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Volume = masse ÷ …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Une dose fictive — Mot(s) manquant(s) — Volume = masse ÷ …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Relis l’exemple du poney : mg/kg × kg donne des mg. Puis on divise la masse par quoi pour obtenir des mL ?</p></details>
+                <input type="text" inputmode="decimal" id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label"><p>Unité : mg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>2 × 500.</p></details>
             
             
         </div>
@@ -840,15 +653,15 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Masse de principe actif ?</h3>
+            <h3 id="a02-q02-label">Question 2 — Convertis cette dose en g.</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><p>Unité : mg</p>
+                <input type="text" inputmode="decimal" id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><p>Unité : g</p>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Dose de la notice (mg par kg) × poids du cheval de « À toi ».</p></details>
+            <details><summary>Un coup de pouce</summary><p>÷ 1 000.</p></details>
             
             
         </div>
@@ -856,15 +669,79 @@
         <div class="cours-question" data-question="q03">
             
             
-            <h3 id="a02-q03-label">Question 3 — Volume à prélever ?</h3>
+            <h3 id="a02-q03-label">Question 3 — 5 mg/kg pour un poney de 280 kg : dose en mg ?</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label"><p>Unité : mL</p>
+                <input type="text" inputmode="decimal" id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label"><p>Unité : mg</p>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Divise la masse trouvée par la concentration du produit (mg par mL).</p></details>
+            <details><summary>Un coup de pouce</summary><p>5 × 280.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a02-q04-label">Question 4 — 0,5 mg/kg pour un cheval de 620 kg : dose en mg ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q04" data-answer-id="a02_q04" data-required="true" aria-labelledby="a02-q04-label"><p>Unité : mg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>0,5 × 620.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a02-q05-label">Question 5 — Série B — Un produit contient 50 mg/mL. Volume pour 1 000 mg ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q05" data-answer-id="a02_q05" data-required="true" aria-labelledby="a02-q05-label"><p>Unité : mL</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>1 000 ÷ 50.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a02-q06-label">Question 6 — Dose 1 400 mg, produit à 100 mg/mL : volume ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q06" data-answer-id="a02_q06" data-required="true" aria-labelledby="a02-q06-label"><p>Unité : mL</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>1 400 ÷ 100.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q07">
+            
+            
+            <h3 id="a02-q07-label">Question 7 — 3 mg/kg, cheval de 450 kg, produit à 90 mg/mL : volume ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q07" data-answer-id="a02_q07" data-required="true" aria-labelledby="a02-q07-label"><p>Unité : mL</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Dose 1 350 mg, puis ÷ 90.</p></details>
             
             
         </div>
@@ -878,57 +755,57 @@
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>L’écriture scientifique</h2>
+        <h2>Partie 3 — L’écriture scientifique</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les doses sont calculées. Et les très petites quantités ?</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas écrire une quantité de résidu en écriture scientifique et la convertir en microgrammes. On attend l’écriture et la conversion.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Dernière notion : écrire simplement les nombres très grands ou très petits.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Une analyse indique 0,000 35 g de résidu par kg. Ce nombre est difficile à lire : comment l’écrire plus simplement ?</p>
+<p>Les très grands nombres (1 020 000 équidés en France) et les très petits (0,000 8 g) sont difficiles à lire.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>L’écriture scientifique les écrit sous la forme a × 10ⁿ, avec un seul chiffre non nul avant la virgule.</p>
     
 
-<p>L’écriture scientifique écrit un nombre sous la forme a × 10ⁿ, avec un seul chiffre non nul avant la virgule (1 ≤ a &lt; 10).</p>
+<p>À retenir : Écriture scientifique : a × 10ⁿ avec 1 ≤ a &lt; 10. n positif pour un grand nombre, négatif pour un petit.</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Lire et comparer facilement de très petits ou très grands nombres.</li><li>Utiliser la calculatrice (touche ×10ˣ ou EE).</li></ul>
+<ol><li>Place la virgule après le premier chiffre non nul : c’est a.</li><li>Compte de combien de rangs tu as décalé la virgule : c’est n.</li><li>Virgule décalée vers la gauche (grand nombre) : n positif. Vers la droite (petit nombre) : n négatif.</li><li>Contrôle : 1 ≤ a &lt; 10.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>On déplace la virgule pour n’avoir qu’un chiffre non nul devant elle.</li><li>On compte de combien de rangs on l’a déplacée : c’est la puissance de 10.</li><li>Virgule déplacée vers la droite (petit nombre) : puissance négative ; vers la gauche (grand nombre) : puissance positive.</li></ol>
+<p>1. Pour un grand nombre</p>
     
 
-<p>À retenir : a × 10ⁿ avec 1 ≤ a &lt; 10.</p>
+<ul><li>1 020 000 = 1,02 × 1 000 000.</li><li>1 000 000 = 10⁶ (six zéros) : 1 020 000 = 1,02 × 10⁶.</li></ul>
+    
+
+<p>2. Pour un petit nombre</p>
+    
+
+<ul><li>0,000 8 = 8 × 0,000 1.</li><li>0,000 1 = 10⁻⁴ (quatre rangs) : 0,000 8 = 8 × 10⁻⁴.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>Écris 0,006 en écriture scientifique.</li><li>Écris 45 000 en écriture scientifique.</li><li>Convertis 0,002 g en µg.</li></ol>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : une analyse donne 0,000 35 g de résidu par kg ; écris-le en écriture scientifique et convertis en µg.</li><li>Pourquoi l’écriture scientifique ? Les très petits nombres sont lisibles.</li></ol>
+<p>Pour n, tape le nombre entier (avec le signe moins s’il est négatif).</p>
     
 
 
@@ -937,63 +814,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a03-q01-label">Question 1 — Série A — 3 000 = 3 × 10ⁿ. Que vaut n ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Écriture scientifique : a × 10ⁿ avec 1 ≤ a &lt; …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a03_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="L’écriture scientifique — Mot(s) manquant(s) — Écriture scientifique : a × 10ⁿ avec 1 ≤ a &lt; …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    0,000 35 = 3,5 × 10 puissance …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a03_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="L’écriture scientifique — Mot(s) manquant(s) — 0,000 35 = 3,5 × 10 puissance …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Dans a × 10ⁿ, a est entre 1 et… ? Et pour 0,000 35, de combien de rangs déplace-t-on la virgule vers la droite ?</p></details>
+                <input type="text" inputmode="decimal" id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Combien de zéros ?</p></details>
             
             
         </div>
@@ -1001,15 +830,15 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a03-q02-label">Question 2 — Écris 0,000 35 en écriture scientifique.</h3>
+            <h3 id="a03-q02-label">Question 2 — 52 000 = 5,2 × 10ⁿ. Que vaut n ?</h3>
             
 
             
             
-                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label">
 
                 
-            <details><summary>Un coup de pouce</summary><p>Comme l’exemple 0,000 8 = 8 × 10⁻⁴ : déplace la virgule pour avoir un seul chiffre non nul devant, compte les rangs.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Virgule décalée de combien de rangs ?</p></details>
             
             
         </div>
@@ -1017,15 +846,63 @@
         <div class="cours-question" data-question="q03">
             
             
-            <h3 id="a03-q03-label">Question 3 — Combien de µg par kg ?</h3>
+            <h3 id="a03-q03-label">Question 3 — 1 020 000 = 1,02 × 10ⁿ. Que vaut n ?</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a03-q03" data-answer-id="a03_q03" data-required="true" aria-labelledby="a03-q03-label"><p>Unité : µg</p>
+                <input type="text" inputmode="decimal" id="a03-q03" data-answer-id="a03_q03" data-required="true" aria-labelledby="a03-q03-label">
 
                 
-            <details><summary>Un coup de pouce</summary><p>1 g = 1 000 000 µg : multiplie 0,000 35 par 1 000 000.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Compte les rangs.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a03-q04-label">Question 4 — 0,004 = 4 × 10ⁿ. Que vaut n ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q04" data-answer-id="a03_q04" data-required="true" aria-labelledby="a03-q04-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Petit nombre : n négatif.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a03-q05-label">Question 5 — Série B — 0,000 25 = 2,5 × 10ⁿ. Que vaut n ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q05" data-answer-id="a03_q05" data-required="true" aria-labelledby="a03-q05-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Compte les rangs vers la droite.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a03-q06-label">Question 6 — Écris 7,3 × 10³ en écriture décimale.</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q06" data-answer-id="a03_q06" data-required="true" aria-labelledby="a03-q06-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Avance la virgule de 3 rangs.</p></details>
             
             
         </div>
@@ -1039,7 +916,7 @@
     
     <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Pour aller plus loin</h2>
+        <h2>Encore des exercices (si tu as fini)</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
@@ -1047,7 +924,7 @@
         
 
         
-<p>Un poney de 250 kg avec la même notice.</p>
+<p>Tu as fini ? Entraîne-toi encore. Ces exercices ne comptent pas dans la note.</p>
     
 
 
@@ -1056,15 +933,79 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Volume ?</h3>
+            <h3 id="a04-q01-label">Question 1 — Convertis 3,5 g en mg.</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label"><p>Unité : mg</p>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Refais les deux étapes (masse puis volume) avec 250 kg et la même notice.</p></details>
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a04-q02-label">Question 2 — Convertis 800 mg en g.</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a04-q02" data-answer-id="a04_q02" data-required="false" aria-labelledby="a04-q02-label"><p>Unité : g</p>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a04-q03-label">Question 3 — 4 mg/kg pour 350 kg : dose en mg ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a04-q03" data-answer-id="a04_q03" data-required="false" aria-labelledby="a04-q03-label"><p>Unité : mg</p>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a04-q04-label">Question 4 — Dose 600 mg, produit à 40 mg/mL : volume ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a04-q04" data-answer-id="a04_q04" data-required="false" aria-labelledby="a04-q04-label"><p>Unité : mL</p>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a04-q05-label">Question 5 — Écris 6 × 10⁻² en écriture décimale.</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a04-q05" data-answer-id="a04_q05" data-required="false" aria-labelledby="a04-q05-label">
+
+                
+            
             
             
         </div>
@@ -1072,41 +1013,6 @@
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#a03">← Étape précédente</a>
-            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a05" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Conclusion de ton travail</h2>
-        
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais manipuler unités et puissances de 10. Il reste à répondre au problème de départ.</p>
-        
-        
-        
-
-        
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment manipuler des unités et des puissances de 10 dans un calcul de dose ?</h3>
-            
-
-            
-            
-                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Dis comment convertir avec les préfixes, calculer une dose et écrire un nombre en écriture scientifique.</p></details>
-            
-            
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -1119,7 +1025,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>k = 10³ ; m = 10⁻³ ; µ = 10⁻⁶.</li><li>a × 10ⁿ, 1 ≤ a &lt; 10.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>k (kilo) = 1 000 ; m (milli) = 0,001 ; µ (micro) = 0,000 001.</li><li>1 g = 1 000 mg ; 1 kg = 1 000 g ; 1 L = 1 000 mL.</li><li>Dose totale = posologie (mg/kg) × poids (kg).</li><li>Écriture scientifique : a × 10ⁿ avec 1 ≤ a &lt; 10 ; n = nombre de rangs dont on décale la virgule.</li></ul>
     
 </section>
 
@@ -1135,7 +1041,7 @@
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
     
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

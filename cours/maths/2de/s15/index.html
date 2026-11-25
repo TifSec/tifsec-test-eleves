@@ -124,7 +124,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Les indicateurs du lot A</a></li><li><a href="#a02">Le lot B</a></li><li><a href="#a03">Conclure</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Partie 1 — Résumer une série</a></li><li><a href="#a02">Partie 2 — Comparer deux séries</a></li><li><a href="#a03">Encore des exercices (si tu as fini) — facultatif</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -136,7 +136,7 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Mathématiques · 2de Pro · S15</span></div>
-    <h1>Séance 15 : Quel lot de poulains a la croissance la plus régulière ?</h1>
+    <h1>Séance 15 : Comparer deux séries</h1>
     
 
     
@@ -150,7 +150,7 @@
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Comment comparer deux séries avec des indicateurs ?</p>
+        <p>Comment comparer deux groupes avec un indicateur de position et un indicateur de dispersion ?</p>
     </section>
     
 
@@ -168,9 +168,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Comparer deux séries : un indicateur de position (moyenne ou médiane) et un de dispersion (étendue, écart interquartile).</li>
+            <li>Position : moyenne, médiane. Dispersion : étendue, écart interquartile.</li>
             
-            <li>On conclut avec des phrases chiffrées.</li>
+            <li>Pour comparer, on utilise un indicateur de chaque sorte.</li>
             
         </ul>
         
@@ -178,16 +178,16 @@
         <h2>Ce que tu vas apprendre à faire</h2>
         <ul>
             
-            <li>Calculer et comparer des indicateurs.</li>
+            <li>Calculer tous les indicateurs d’une série.</li>
             
-            <li>Rédiger une comparaison chiffrée.</li>
+            <li>Comparer deux séries et conclure avec des nombres.</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Un éleveur a deux lots de poulains nourris différemment.</p><p>Les gains de poids sur un mois sont-ils meilleurs et plus réguliers dans un lot ?</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Aujourd’hui, deux notions : résumer une série avec ses indicateurs, puis comparer deux séries.</p><p>Pour chacune : la notion, la méthode, pourquoi ça marche, un exemple au tableau, puis beaucoup d’exercices.</p></div></section>
     
     
     
@@ -202,67 +202,45 @@
 
 <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
     <article class="course-paper-sheet">
-        <header><p class="course-paper-class">Mathématiques — 2de Pro</p><p class="course-paper-kicker">Cours et exercices — version papier</p><h2 id="course-paper-title"><span class="course-paper-number">Séance 15</span> — Quel lot de poulains a la croissance la plus régulière ?</h2><p>Comment comparer deux séries avec des indicateurs ?</p></header>
+        <header><p class="course-paper-class">Mathématiques — 2de Pro</p><p class="course-paper-kicker">Cours et exercices — version papier</p><h2 id="course-paper-title"><span class="course-paper-number">Séance 15</span> — Comparer deux séries</h2><p>Deux notions : résumer une série, comparer deux séries. Pour chacune : la notion, la méthode, l’exemple au tableau, puis les exercices.</p></header>
         
         <section class="course-paper-section">
-            <h3>Le cours en bref</h3>
+            <h3>I. Résumer une série</h3>
             
-<p>Le problème à résoudre : Comment comparer deux séries avec des indicateurs ?</p>
+<h4>La notion</h4>
     
 
-<h4>Ce que tu vas apprendre</h4>
+<p>Pour résumer une série, on donne où se trouvent les valeurs (position) et si elles sont serrées ou étalées (dispersion).</p>
     
 
-<ul><li>Comparer deux séries : un indicateur de position (moyenne ou médiane) et un de dispersion (étendue, écart interquartile).</li><li>On conclut avec des phrases chiffrées.</li></ul>
+<p>Position : moyenne, médiane. Dispersion : étendue, écart interquartile (Q3 − Q1).</p>
     
 
-<h4>Ce que tu vas savoir faire</h4>
+<h4>À retenir</h4>
     
 
-<ul><li>Calculer et comparer des indicateurs.</li><li>Rédiger une comparaison chiffrée.</li></ul>
+<p>Résumé d’une série = un indicateur de position + un indicateur de dispersion.</p>
     
 
-<h4>Pourquoi cette séance ?</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<p>Un éleveur a deux lots de poulains nourris différemment. Les gains de poids sur un mois sont-ils meilleurs et plus réguliers dans un lot ?</p>
+<ol><li>Range la série et compte n.</li><li>Calcule la moyenne (somme ÷ n) et la médiane.</li><li>Calcule Q1, Q3 et l’écart interquartile.</li><li>Calcule l’étendue (max − min).</li></ol>
     
 
-<p>Comment utiliser cette fiche : pour chaque partie, lis la méthode et l’exemple, complète les points clés, puis fais l’exercice. Réponds sur les lignes.</p>
+<h4>Pourquoi ça marche</h4>
     
 
-
-            
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>I. Les indicateurs du lot A</h3>
-            
-<h4>La situation</h4>
+<p>1. Pourquoi deux sortes d’indicateurs</p>
     
 
-<p>Un éleveur nourrit deux lots de poulains avec deux aliments différents. Quel lot a la croissance la plus régulière ?</p>
+<ul><li>La moyenne dit « autour de combien » sont les valeurs.</li><li>Elle ne dit pas si toutes sont proches de ce nombre ou très éloignées.</li></ul>
     
 
-<h4>Ce que c’est</h4>
+<p>2. Une image</p>
     
 
-<p>Décrire une série, c’est la résumer par un indicateur de position (où se situent les valeurs) et un indicateur de dispersion (si elles sont serrées ou étalées).</p>
-    
-
-<h4>À quoi ça sert</h4>
-    
-
-<ul><li>Juger un résultat d’élevage, d’entraînement, de travail.</li></ul>
-    
-
-<h4>Comment ça marche</h4>
-    
-
-<ol><li>Moyenne : somme ÷ nombre de valeurs.</li><li>Médiane : valeur du milieu de la série rangée.</li><li>Étendue : max − min.</li></ol>
-    
-
-<p>À retenir : Une série se décrit par sa position et par sa dispersion.</p>
+<ul><li>Deux classes ont 12 de moyenne : l’une a toutes ses notes entre 10 et 14, l’autre entre 2 et 20.</li><li>Seul un indicateur de dispersion montre la différence.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -271,71 +249,56 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<ul><li>Automatisme : calcule 180 ÷ 6.</li></ul>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<h4>Ce que tu vas faire</h4>
+<p>Lot A : gain de poids (kg par mois) de 10 poulains, déjà rangé.</p>
     
 
-<p>Tu vas calculer la moyenne et l’étendue des gains de poids du lot A (document 1). On attend les deux indicateurs.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : calcule la moyenne, la médiane et l’étendue du lot A (document 1).</li><li>Pourquoi plusieurs indicateurs ? Un seul ne suffit pas pour juger la régularité.</li></ol>
-    
-
-<h4>Exemple et documents</h4>
-    
-
-<p>Document 1 — Gains mensuels (kg). Lot A : 26, 28, 30, 30, 32, 34. Lot B : 18, 24, 30, 31, 36, 41.</p>
-    
-
-<p>Données fictives créées pour l’exercice (ordres de grandeur réalistes).</p>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>Pour comparer deux séries, on utilise un indicateur de <span class="cours-trou" aria-label="à compléter"></span> .</li><li>… et un indicateur de <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 1 — Les indicateurs du lot A</h4>
+<p>Lot A : 28 ; 30 ; 31 ; 32 ; 33 ; 33 ; 34 ; 35 ; 36 ; 38.</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — Gains 20, 25, 30, 35 kg : moyenne, médiane, étendue ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Moyenne du lot A ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Étendue du lot A ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — Somme des gains du lot A ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Moyenne du lot A ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Médiane du lot A ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Q1 du lot A ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Q3 du lot A ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — Écart interquartile du lot A ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Étendue du lot A ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>II. Le lot B</h3>
+            <h3>II. Comparer deux séries</h3>
             
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Pour comparer, il faut les mêmes informations sur le lot B.</p>
+<p>Pour comparer deux groupes, on calcule les mêmes indicateurs pour les deux.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>On compare d’abord la position (qui a les plus grandes valeurs ?), puis la dispersion (qui est le plus régulier ?).</p>
     
 
-<p>On ne compare que ce qui est comparable : les mêmes indicateurs, calculés de la même façon.</p>
+<h4>À retenir</h4>
     
 
-<h4>À quoi ça sert</h4>
+<p>Comparer = même indicateur de position + même indicateur de dispersion pour les deux séries, puis une phrase chiffrée.</p>
     
 
-<ul><li>Faire une comparaison honnête.</li></ul>
+<h4>Comment ça fonctionne</h4>
     
 
-<h4>Comment ça marche</h4>
+<ol><li>Calcule moyenne (ou médiane) des deux séries.</li><li>Calcule l’écart interquartile (ou l’étendue) des deux séries.</li><li>Compare les positions, puis les dispersions.</li><li>Conclus en une phrase avec les nombres et l’unité.</li></ol>
     
 
-<ol><li>On reprend exactement les mêmes calculs que pour le lot A.</li><li>On range les résultats côte à côte.</li></ol>
+<h4>Pourquoi ça marche</h4>
     
 
-<p>À retenir : On calcule les mêmes indicateurs pour les deux séries.</p>
+<p>1. Pourquoi les mêmes indicateurs</p>
+    
+
+<ul><li>On ne compare pas une moyenne avec une médiane : ce ne sont pas les mêmes mesures.</li><li>Avec les mêmes calculs des deux côtés, la comparaison est juste.</li></ul>
+    
+
+<p>2. Quand les moyennes sont égales</p>
+    
+
+<ul><li>Si les deux lots ont la même moyenne, la position ne les départage pas.</li><li>C’est alors la dispersion qui dit lequel est le plus régulier.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -344,144 +307,34 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<h4>Ce que tu vas faire</h4>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<p>Tu vas calculer la moyenne et l’étendue des gains du lot B. On attend les deux indicateurs.</p>
+<p>Lot B : gain de poids (kg par mois) de 10 autres poulains, déjà rangé.</p>
     
 
-<h4>Ta mission</h4>
-    
-
-<ol><li>Rappel : moyenne = somme ÷ nombre de valeurs ; étendue = max − min.</li><li>Utilise exactement la même méthode que pour le lot A.</li><li>À toi : calcule les mêmes indicateurs pour le lot B.</li><li>Pourquoi les mêmes ? On ne compare que ce qui est comparable.</li></ol>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>On calcule les <span class="cours-trou" aria-label="à compléter"></span> indicateurs pour les deux séries.</li><li>Une étendue plus grande signifie une série plus <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 2 — Le lot B</h4>
+<p>Lot B : 20 ; 25 ; 28 ; 31 ; 33 ; 34 ; 36 ; 39 ; 42 ; 42.</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — Lot D : 26, 27, 28, 29 kg. Moyenne et étendue ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Moyenne du lot B ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Étendue du lot B ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — Moyenne du lot B ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Médiane du lot B ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Q1 du lot B ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Q3 du lot B ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Écart interquartile du lot B ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Étendue du lot B ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — Les deux lots ont-ils la même moyenne ? Choix : Oui, 33 kg / Non.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Quel lot a la croissance la plus régulière ? Choix : Le lot A / Le lot B / Pareil.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Combien de kg de différence entre les deux étendues ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Quelle conclusion est correcte ? Choix : Le lot B grossit plus, car sa médiane est 33,5 kg. / Les lots sont identiques, car la moyenne est la même. / Même moyenne (33 kg), mais le lot A est plus régulier (écart interquartile 4 kg contre 11 kg)..</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Dans le lot B, combien de poulains gagnent moins de 30 kg par mois ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Dans le lot A, combien de poulains gagnent moins de 30 kg par mois ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Quelle part du lot B gagne moins de 30 kg, en % ? (en %)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>III. Conclure</h3>
+            <h3>Encore des exercices (si tu as fini)</h3>
             
-<h4>La situation</h4>
-    
 
-<p>L’éleveur veut une réponse claire : quel aliment donne la croissance la plus homogène ?</p>
-    
-
-<h4>Ce que c’est</h4>
-    
-
-<p>Une conclusion chiffrée répond à la question en deux phrases : une sur la position, une sur la dispersion, avec les chiffres.</p>
-    
-
-<h4>À quoi ça sert</h4>
-    
-
-<ul><li>Aider l’éleveur à choisir un aliment.</li></ul>
-    
-
-<h4>Comment ça marche</h4>
-    
-
-<ol><li>Phrase 1 : on compare les moyennes (ou médianes).</li><li>Phrase 2 : on compare les étendues.</li><li>On termine par la réponse à la question posée.</li></ol>
-    
-
-<p>À retenir : Même moyenne ne veut pas dire même régularité.</p>
-    
-
-<h4>Exemple fait ensemble en classe</h4>
-    
-
-<div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
-    
-
-<h4>Ce que tu vas faire</h4>
-    
-
-<p>Tu vas rédiger une conclusion chiffrée comparant les deux lots de poulains. On attend une conclusion sur la position et la dispersion.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : compare les lots A et B et rédige deux phrases chiffrées.</li><li>Pourquoi deux phrases ? Une pour la position, une pour la dispersion.</li></ol>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>On conclut avec des phrases <span class="cours-trou" aria-label="à compléter"></span> .</li><li>Même moyenne ne veut pas dire même <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 3 — Conclure</h4>
-    
-
-
-            <ol class="course-paper-questions"><li><span>Entraînement — Lots C et D : même moyenne 27,5 kg ; étendues 15 et 3 kg. Rédige la conclusion.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Rédige ta conclusion pour l’éleveur.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Conclusion</h3>
-            
-<p>Avec ce que tu as fait dans les parties précédentes, réponds en quelques phrases complètes.</p>
-    
-
-
-            <ol class="course-paper-questions"><li><span>Réponds au problème du jour : comment comparer deux séries avec des indicateurs ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Pour aller plus loin (facultatif)</h3>
-            
-<p>Un poulain du lot B à 18 kg est peut-être malade.</p>
-    
-
-
-            <ol class="course-paper-questions"><li><span>Si on l’enlève, que devient la moyenne du lot B ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Moyenne de 30 ; 35 ; 40 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Écart interquartile si Q1 = 42 et Q3 = 51 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série X : moyenne 50, écart interquartile 2. Série Y : moyenne 50, écart 9. La plus régulière ? Choix : X / Y.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Médiane de 12 ; 15 ; 15 ; 18 ; 20 ; 21 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>À retenir</h3>
             
-<ul><li>Position + dispersion.</li><li>Conclusion chiffrée.</li></ul>
+<ul><li>Indicateurs de position : moyenne, médiane (où se situent les valeurs).</li><li>Indicateurs de dispersion : étendue, écart interquartile (si elles sont serrées ou étalées).</li><li>Pour comparer deux séries : un indicateur de position ET un indicateur de dispersion.</li><li>Conclusion : une phrase avec les nombres.</li></ul>
     
 
 
             
-        </section>
-        
-        <section class="course-paper-section course-paper-break">
-            <h2 class="course-paper-part">Fiche d’exercices</h2><h3>Exercice 1 — Deux lots</h3>
-            
-<p>Lot A : 20, 22, 24, 26, 28. Lot B : 14, 20, 24, 28, 34 (gains en kg).</p>
-    
-
-
-            <ol class="course-paper-questions"><li><span>Moyennes ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Étendues ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Exercice 2 — Conclure</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>Rédige une conclusion chiffrée.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Exercice 3 — Médiane</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>Médianes des deux lots ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
     </article>
@@ -495,66 +348,60 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Les indicateurs du lot A</h2>
+        <h2>Partie 1 — Résumer une série</h2>
         
         
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas calculer la moyenne et l’étendue des gains de poids du lot A (document 1). On attend les deux indicateurs.</p></div>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Un éleveur nourrit deux lots de poulains avec deux aliments différents. Quel lot a la croissance la plus régulière ?</p>
+<p>Pour résumer une série, on donne où se trouvent les valeurs (position) et si elles sont serrées ou étalées (dispersion).</p>
     
 
-<h4>Ce que c’est</h4>
+<p>Position : moyenne, médiane. Dispersion : étendue, écart interquartile (Q3 − Q1).</p>
     
 
-<p>Décrire une série, c’est la résumer par un indicateur de position (où se situent les valeurs) et un indicateur de dispersion (si elles sont serrées ou étalées).</p>
+<p>À retenir : Résumé d’une série = un indicateur de position + un indicateur de dispersion.</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Juger un résultat d’élevage, d’entraînement, de travail.</li></ul>
+<ol><li>Range la série et compte n.</li><li>Calcule la moyenne (somme ÷ n) et la médiane.</li><li>Calcule Q1, Q3 et l’écart interquartile.</li><li>Calcule l’étendue (max − min).</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>Moyenne : somme ÷ nombre de valeurs.</li><li>Médiane : valeur du milieu de la série rangée.</li><li>Étendue : max − min.</li></ol>
+<p>1. Pourquoi deux sortes d’indicateurs</p>
     
 
-<p>À retenir : Une série se décrit par sa position et par sa dispersion.</p>
+<ul><li>La moyenne dit « autour de combien » sont les valeurs.</li><li>Elle ne dit pas si toutes sont proches de ce nombre ou très éloignées.</li></ul>
+    
+
+<p>2. Une image</p>
+    
+
+<ul><li>Deux classes ont 12 de moyenne : l’une a toutes ses notes entre 10 et 14, l’autre entre 2 et 20.</li><li>Seul un indicateur de dispersion montre la différence.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>Gains 20, 25, 30, 35 kg : moyenne, médiane, étendue ?</li></ol>
+<p>Lot A : gain de poids (kg par mois) de 10 poulains, déjà rangé.</p>
     
 
-<ul><li>Automatisme : calcule 180 ÷ 6.</li></ul>
-    
-
-<p>Document 1 — Gains mensuels (kg). Lot A : 26, 28, 30, 30, 32, 34. Lot B : 18, 24, 30, 31, 36, 41.</p>
-    
-
-<p>Données fictives créées pour l’exercice (ordres de grandeur réalistes).</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : calcule la moyenne, la médiane et l’étendue du lot A (document 1).</li><li>Pourquoi plusieurs indicateurs ? Un seul ne suffit pas pour juger la régularité.</li></ol>
+<p>Lot A : 28 ; 30 ; 31 ; 32 ; 33 ; 33 ; 34 ; 35 ; 36 ; 38.</p>
     
 
 
@@ -563,63 +410,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a01-q01-label">Question 1 — Série A — Somme des gains du lot A ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Pour comparer deux séries, on utilise un indicateur de …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Les indicateurs du lot A — Mot(s) manquant(s) — Pour comparer deux séries, on utilise un indicateur de …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    … et un indicateur de …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Les indicateurs du lot A — Mot(s) manquant(s) — … et un indicateur de …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Pour comparer deux séries, il faut un indicateur qui dit « où se trouvent les valeurs », et un autre qui dit « si elles sont serrées ». Leurs noms ?</p></details>
+                <input type="text" inputmode="decimal" id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Additionne les 10 valeurs.</p></details>
             
             
         </div>
@@ -635,7 +434,7 @@
                 <input type="text" inputmode="decimal" id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><p>Unité : kg</p>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Additionne les gains de poids du lot A et divise par le nombre de poulains.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Somme ÷ 10.</p></details>
             
             
         </div>
@@ -643,7 +442,7 @@
         <div class="cours-question" data-question="q03">
             
             
-            <h3 id="a01-q03-label">Question 3 — Étendue du lot A ?</h3>
+            <h3 id="a01-q03-label">Question 3 — Médiane du lot A ?</h3>
             
 
             
@@ -651,7 +450,71 @@
                 <input type="text" inputmode="decimal" id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label"><p>Unité : kg</p>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Gain le plus grand du lot A moins gain le plus petit.</p></details>
+            <details><summary>Un coup de pouce</summary><p>10 valeurs : moyenne de la 5e et de la 6e.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a01-q04-label">Question 4 — Q1 du lot A ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q04" data-answer-id="a01_q04" data-required="true" aria-labelledby="a01-q04-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>10 ÷ 4 = 2,5 → rang 3.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a01-q05-label">Question 5 — Q3 du lot A ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q05" data-answer-id="a01_q05" data-required="true" aria-labelledby="a01-q05-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>30 ÷ 4 = 7,5 → rang 8.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a01-q06-label">Question 6 — Série B — Écart interquartile du lot A ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q06" data-answer-id="a01_q06" data-required="true" aria-labelledby="a01-q06-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Q3 − Q1.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q07">
+            
+            
+            <h3 id="a01-q07-label">Question 7 — Étendue du lot A ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q07" data-answer-id="a01_q07" data-required="true" aria-labelledby="a01-q07-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Max − min.</p></details>
             
             
         </div>
@@ -665,57 +528,60 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Le lot B</h2>
+        <h2>Partie 2 — Comparer deux séries</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le lot A est résumé. Fais pareil pour le lot B.</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas calculer la moyenne et l’étendue des gains du lot B. On attend les deux indicateurs.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais résumer une série. Deuxième notion : en comparer deux.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Pour comparer, il faut les mêmes informations sur le lot B.</p>
+<p>Pour comparer deux groupes, on calcule les mêmes indicateurs pour les deux.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>On compare d’abord la position (qui a les plus grandes valeurs ?), puis la dispersion (qui est le plus régulier ?).</p>
     
 
-<p>On ne compare que ce qui est comparable : les mêmes indicateurs, calculés de la même façon.</p>
+<p>À retenir : Comparer = même indicateur de position + même indicateur de dispersion pour les deux séries, puis une phrase chiffrée.</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Faire une comparaison honnête.</li></ul>
+<ol><li>Calcule moyenne (ou médiane) des deux séries.</li><li>Calcule l’écart interquartile (ou l’étendue) des deux séries.</li><li>Compare les positions, puis les dispersions.</li><li>Conclus en une phrase avec les nombres et l’unité.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>On reprend exactement les mêmes calculs que pour le lot A.</li><li>On range les résultats côte à côte.</li></ol>
+<p>1. Pourquoi les mêmes indicateurs</p>
     
 
-<p>À retenir : On calcule les mêmes indicateurs pour les deux séries.</p>
+<ul><li>On ne compare pas une moyenne avec une médiane : ce ne sont pas les mêmes mesures.</li><li>Avec les mêmes calculs des deux côtés, la comparaison est juste.</li></ul>
+    
+
+<p>2. Quand les moyennes sont égales</p>
+    
+
+<ul><li>Si les deux lots ont la même moyenne, la position ne les départage pas.</li><li>C’est alors la dispersion qui dit lequel est le plus régulier.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>Lot D : 26, 27, 28, 29 kg. Moyenne et étendue ?</li></ol>
+<p>Lot B : gain de poids (kg par mois) de 10 autres poulains, déjà rangé.</p>
     
 
-<h4>Ta mission</h4>
-    
-
-<ol><li>Rappel : moyenne = somme ÷ nombre de valeurs ; étendue = max − min.</li><li>Utilise exactement la même méthode que pour le lot A.</li><li>À toi : calcule les mêmes indicateurs pour le lot B.</li><li>Pourquoi les mêmes ? On ne compare que ce qui est comparable.</li></ol>
+<p>Lot B : 20 ; 25 ; 28 ; 31 ; 33 ; 34 ; 36 ; 39 ; 42 ; 42.</p>
     
 
 
@@ -724,63 +590,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a02-q01-label">Question 1 — Série A — Moyenne du lot B ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    On calcule les …… indicateurs pour les deux séries.
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Le lot B — Mot(s) manquant(s) — On calcule les …… indicateurs pour les deux séries.">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Une étendue plus grande signifie une série plus …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Le lot B — Mot(s) manquant(s) — Une étendue plus grande signifie une série plus …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Peut-on comparer si on ne calcule pas les mêmes indicateurs ? Et une grande étendue : série serrée ou étalée ?</p></details>
+                <input type="text" inputmode="decimal" id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Somme ÷ 10.</p></details>
             
             
         </div>
@@ -788,7 +606,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Moyenne du lot B ?</h3>
+            <h3 id="a02-q02-label">Question 2 — Médiane du lot B ?</h3>
             
 
             
@@ -796,7 +614,7 @@
                 <input type="text" inputmode="decimal" id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><p>Unité : kg</p>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Même calcul que pour le lot A, avec les valeurs du lot B.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Moyenne de la 5e et de la 6e valeur.</p></details>
             
             
         </div>
@@ -804,7 +622,7 @@
         <div class="cours-question" data-question="q03">
             
             
-            <h3 id="a02-q03-label">Question 3 — Étendue du lot B ?</h3>
+            <h3 id="a02-q03-label">Question 3 — Q1 du lot B ?</h3>
             
 
             
@@ -812,7 +630,167 @@
                 <input type="text" inputmode="decimal" id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label"><p>Unité : kg</p>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Plus grand gain moins plus petit gain du lot B.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Rang 3.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a02-q04-label">Question 4 — Q3 du lot B ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q04" data-answer-id="a02_q04" data-required="true" aria-labelledby="a02-q04-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Rang 8.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a02-q05-label">Question 5 — Écart interquartile du lot B ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q05" data-answer-id="a02_q05" data-required="true" aria-labelledby="a02-q05-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Q3 − Q1.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a02-q06-label">Question 6 — Étendue du lot B ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q06" data-answer-id="a02_q06" data-required="true" aria-labelledby="a02-q06-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Max − min.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q07">
+            
+            
+            <h3 id="a02-q07-label">Question 7 — Série B — Les deux lots ont-ils la même moyenne ?</h3>
+            
+
+            
+            
+                <select id="a02-q07" data-answer-id="a02_q07" data-required="true" aria-labelledby="a02-q07-label"><option value="">Choisis une réponse</option><option value="a">Oui, 33 kg</option><option value="b">Non</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Compare tes deux moyennes.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q08">
+            
+            
+            <h3 id="a02-q08-label">Question 8 — Quel lot a la croissance la plus régulière ?</h3>
+            
+
+            
+            
+                <select id="a02-q08" data-answer-id="a02_q08" data-required="true" aria-labelledby="a02-q08-label"><option value="">Choisis une réponse</option><option value="a">Le lot A</option><option value="b">Le lot B</option><option value="c">Pareil</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Compare les écarts interquartiles (4 kg et 11 kg).</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q09">
+            
+            
+            <h3 id="a02-q09-label">Question 9 — Combien de kg de différence entre les deux étendues ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q09" data-answer-id="a02_q09" data-required="true" aria-labelledby="a02-q09-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>22 − 10.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q10">
+            
+            
+            <h3 id="a02-q10-label">Question 10 — Quelle conclusion est correcte ?</h3>
+            
+
+            
+            
+                <select id="a02-q10" data-answer-id="a02_q10" data-required="true" aria-labelledby="a02-q10-label"><option value="">Choisis une réponse</option><option value="a">Le lot B grossit plus, car sa médiane est 33,5 kg.</option><option value="b">Les lots sont identiques, car la moyenne est la même.</option><option value="c">Même moyenne (33 kg), mais le lot A est plus régulier (écart interquartile 4 kg contre 11 kg).</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Une bonne conclusion utilise la position ET la dispersion.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q11">
+            
+            
+            <h3 id="a02-q11-label">Question 11 — Dans le lot B, combien de poulains gagnent moins de 30 kg par mois ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q11" data-answer-id="a02_q11" data-required="true" aria-labelledby="a02-q11-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Compte les valeurs inférieures à 30.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q12">
+            
+            
+            <h3 id="a02-q12-label">Question 12 — Dans le lot A, combien de poulains gagnent moins de 30 kg par mois ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q12" data-answer-id="a02_q12" data-required="true" aria-labelledby="a02-q12-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Compte les valeurs inférieures à 30.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q13">
+            
+            
+            <h3 id="a02-q13-label">Question 13 — Quelle part du lot B gagne moins de 30 kg, en % ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q13" data-answer-id="a02_q13" data-required="true" aria-labelledby="a02-q13-label"><p>Unité : %</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>3 ÷ 10 × 100.</p></details>
             
             
         </div>
@@ -825,153 +803,8 @@
     </article>
     
     <article class="cours-activite" id="a03" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Conclure</h2>
-        
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les deux lots sont résumés. Que conclure ?</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas rédiger une conclusion chiffrée comparant les deux lots de poulains. On attend une conclusion sur la position et la dispersion.</p></div>
-        
-        
-
-        
-<h4>La situation</h4>
-    
-
-<p>L’éleveur veut une réponse claire : quel aliment donne la croissance la plus homogène ?</p>
-    
-
-<h4>Ce que c’est</h4>
-    
-
-<p>Une conclusion chiffrée répond à la question en deux phrases : une sur la position, une sur la dispersion, avec les chiffres.</p>
-    
-
-<h4>À quoi ça sert</h4>
-    
-
-<ul><li>Aider l’éleveur à choisir un aliment.</li></ul>
-    
-
-<h4>Comment ça marche</h4>
-    
-
-<ol><li>Phrase 1 : on compare les moyennes (ou médianes).</li><li>Phrase 2 : on compare les étendues.</li><li>On termine par la réponse à la question posée.</li></ol>
-    
-
-<p>À retenir : Même moyenne ne veut pas dire même régularité.</p>
-    
-
-<h4>Exemple fait ensemble en classe</h4>
-    
-
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
-    
-
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
-    
-
-<ol><li>Lots C et D : même moyenne 27,5 kg ; étendues 15 et 3 kg. Rédige la conclusion.</li></ol>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : compare les lots A et B et rédige deux phrases chiffrées.</li><li>Pourquoi deux phrases ? Une pour la position, une pour la dispersion.</li></ol>
-    
-
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a03-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
-            
-
-            
-            
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    On conclut avec des phrases …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a03_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Conclure — Mot(s) manquant(s) — On conclut avec des phrases …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Même moyenne ne veut pas dire même …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a03_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Conclure — Mot(s) manquant(s) — Même moyenne ne veut pas dire même …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Une conclusion se fait avec des phrases qui contiennent des chiffres. Et deux lots de même moyenne ont-ils forcément la même régularité ?</p></details>
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a03-q02-label">Question 2 — Rédige ta conclusion pour l’éleveur.</h3>
-            
-
-            
-            
-                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Compare d’abord les moyennes, puis les étendues, avec les chiffres. Dis quel lot est le plus régulier.</p></details>
-            
-            
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a02">← Étape précédente</a>
-            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Pour aller plus loin</h2>
+        <h2>Encore des exercices (si tu as fini)</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
@@ -979,7 +812,7 @@
         
 
         
-<p>Un poulain du lot B à 18 kg est peut-être malade.</p>
+<p>Tu as fini ? Entraîne-toi encore. Ces exercices ne comptent pas dans la note.</p>
     
 
 
@@ -988,57 +821,70 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Si on l’enlève, que devient la moyenne du lot B ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Moyenne de 30 ; 35 ; 40 ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label">
 
                 
-            <details><summary>Un coup de pouce</summary><p>Enlève 18 kg de la somme du lot B et divise par un poulain de moins.</p></details>
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a03-q02-label">Question 2 — Écart interquartile si Q1 = 42 et Q3 = 51 ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q02" data-answer-id="a03_q02" data-required="false" aria-labelledby="a03-q02-label">
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a03-q03-label">Question 3 — Série X : moyenne 50, écart interquartile 2. Série Y : moyenne 50, écart 9. La plus régulière ?</h3>
+            
+
+            
+            
+                <select id="a03-q03" data-answer-id="a03_q03" data-required="false" aria-labelledby="a03-q03-label"><option value="">Choisis une réponse</option><option value="a">X</option><option value="b">Y</option></select>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a03-q04-label">Question 4 — Médiane de 12 ; 15 ; 15 ; 18 ; 20 ; 21 ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q04" data-answer-id="a03_q04" data-required="false" aria-labelledby="a03-q04-label">
+
+                
+            
             
             
         </div>
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a03">← Étape précédente</a>
-            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a05" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Conclusion de ton travail</h2>
-        
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais comparer deux séries. Il reste à répondre au problème de départ.</p>
-        
-        
-        
-
-        
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment comparer deux séries avec des indicateurs ?</h3>
-            
-
-            
-            
-                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Dis la méthode : mêmes indicateurs pour les deux lots, puis comparaison de la position et de la dispersion.</p></details>
-            
-            
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a04">← Étape précédente</a>
+            <a class="course-mission-back" href="#a02">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -1051,7 +897,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Position + dispersion.</li><li>Conclusion chiffrée.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Indicateurs de position : moyenne, médiane (où se situent les valeurs).</li><li>Indicateurs de dispersion : étendue, écart interquartile (si elles sont serrées ou étalées).</li><li>Pour comparer deux séries : un indicateur de position ET un indicateur de dispersion.</li><li>Conclusion : une phrase avec les nombres.</li></ul>
     
 </section>
 
@@ -1067,7 +913,7 @@
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
     
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a03">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

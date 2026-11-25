@@ -124,7 +124,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Les classes</a></li><li><a href="#a02">L’histogramme</a></li><li><a href="#a03">Lire et interpréter</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Partie 1 — Regrouper en classes</a></li><li><a href="#a02">Partie 2 — Lire un histogramme</a></li><li><a href="#a03">Encore des exercices (si tu as fini) — facultatif</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -136,7 +136,7 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Mathématiques · 2de Pro · S12</span></div>
-    <h1>Séance 12 : Regrouper en classes et tracer un histogramme</h1>
+    <h1>Séance 12 : Regrouper en classes et lire un histogramme</h1>
     
 
     
@@ -150,7 +150,7 @@
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Comment représenter une série de mesures nombreuses ?</p>
+        <p>Comment résumer beaucoup de valeurs différentes, et les lire sur un histogramme ?</p>
     </section>
     
 
@@ -168,9 +168,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Pour beaucoup de valeurs différentes, on regroupe en classes de même amplitude : [120 ; 130[.</li>
+            <li>Une classe [a ; b[ va de a (compris) à b (non compris).</li>
             
-            <li>Un histogramme représente les effectifs des classes par des rectangles accolés.</li>
+            <li>Histogramme : rectangles accolés, hauteur = effectif de la classe.</li>
             
         </ul>
         
@@ -178,16 +178,16 @@
         <h2>Ce que tu vas apprendre à faire</h2>
         <ul>
             
-            <li>Regrouper des données en classes.</li>
+            <li>Ranger des valeurs dans des classes et compter les effectifs.</li>
             
-            <li>Tracer et lire un histogramme.</li>
+            <li>Lire un histogramme : effectifs, classe la plus fréquente, fréquences.</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En S11, tu as compté des catégories.</p><p>Les tailles exactes (en cm) sont toutes différentes : il faut les regrouper.</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Aujourd’hui, deux notions : regrouper en classes, puis lire un histogramme.</p><p>Pour chacune : la notion, la méthode, pourquoi ça marche, un exemple au tableau, puis beaucoup d’exercices.</p></div></section>
     
     
     
@@ -202,67 +202,45 @@
 
 <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
     <article class="course-paper-sheet">
-        <header><p class="course-paper-class">Mathématiques — 2de Pro</p><p class="course-paper-kicker">Cours et exercices — version papier</p><h2 id="course-paper-title"><span class="course-paper-number">Séance 12</span> — Regrouper en classes et tracer un histogramme</h2><p>Comment représenter une série de mesures nombreuses ?</p></header>
+        <header><p class="course-paper-class">Mathématiques — 2de Pro</p><p class="course-paper-kicker">Cours et exercices — version papier</p><h2 id="course-paper-title"><span class="course-paper-number">Séance 12</span> — Regrouper en classes et lire un histogramme</h2><p>Deux notions : regrouper en classes, lire un histogramme. Pour chacune : la notion, la méthode, l’exemple au tableau, puis les exercices.</p></header>
         
         <section class="course-paper-section">
-            <h3>Le cours en bref</h3>
+            <h3>I. Regrouper en classes</h3>
             
-<p>Le problème à résoudre : Comment représenter une série de mesures nombreuses ?</p>
+<h4>La notion</h4>
     
 
-<h4>Ce que tu vas apprendre</h4>
+<p>Quand il y a beaucoup de valeurs différentes, un tableau valeur par valeur devient illisible.</p>
     
 
-<ul><li>Pour beaucoup de valeurs différentes, on regroupe en classes de même amplitude : [120 ; 130[.</li><li>Un histogramme représente les effectifs des classes par des rectangles accolés.</li></ul>
+<p>On regroupe alors les valeurs dans des intervalles de même largeur : les classes, notées [a ; b[.</p>
     
 
-<h4>Ce que tu vas savoir faire</h4>
+<h4>À retenir</h4>
     
 
-<ul><li>Regrouper des données en classes.</li><li>Tracer et lire un histogramme.</li></ul>
+<p>[a ; b[ contient a mais pas b. Amplitude de la classe = b − a.</p>
     
 
-<h4>Pourquoi cette séance ?</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<p>En S11, tu as compté des catégories. Les tailles exactes (en cm) sont toutes différentes : il faut les regrouper.</p>
+<ol><li>Choisis des classes de même amplitude qui couvrent toutes les valeurs (ici de 10 cm, à partir de 100).</li><li>Prends les valeurs une par une et range chacune dans sa classe.</li><li>Attention aux bornes : 120 va dans [120 ; 130[, pas dans [110 ; 120[.</li><li>Compte l’effectif de chaque classe, puis vérifie que le total est bien le nombre de valeurs.</li></ol>
     
 
-<p>Comment utiliser cette fiche : pour chaque partie, lis la méthode et l’exemple, complète les points clés, puis fais l’exercice. Réponds sur les lignes.</p>
+<h4>Pourquoi ça marche</h4>
     
 
-
-            
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>I. Les classes</h3>
-            
-<h4>La situation</h4>
+<p>1. Pourquoi le crochet tourné vers l’extérieur</p>
     
 
-<p>Les 20 poneys ont presque tous des tailles différentes. Un tableau valeur par valeur serait illisible.</p>
+<ul><li>Le crochet [120 du côté gauche « attrape » 120 ; le crochet 130[ du côté droit le « laisse dehors ».</li><li>Ainsi chaque valeur va dans une seule classe : 130 n’est compté qu’une fois, dans [130 ; 140[.</li></ul>
     
 
-<h4>Ce que c’est</h4>
+<p>2. Pourquoi la même amplitude</p>
     
 
-<p>Regrouper en classes, c’est ranger les valeurs dans des intervalles de même amplitude, notés [a ; b[ : de a (compris) à b (non compris).</p>
-    
-
-<h4>À quoi ça sert</h4>
-    
-
-<ul><li>Résumer une série de mesures nombreuses et variées.</li><li>Préparer un histogramme.</li></ul>
-    
-
-<h4>Comment ça marche</h4>
-    
-
-<ol><li>On choisit des classes de même amplitude (ici 10 cm) qui couvrent toutes les valeurs.</li><li>On range chaque valeur dans sa classe ; une valeur égale à la borne b va dans la classe suivante.</li><li>On compte l’effectif de chaque classe et on vérifie le total.</li></ol>
-    
-
-<p>À retenir : Dans [a ; b[, a est compris, b est exclu.</p>
+<ul><li>Avec des classes de même largeur, on peut comparer les effectifs directement.</li><li>Une classe deux fois plus large attraperait plus de valeurs sans que ce soit « plus fréquent ».</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -271,74 +249,56 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<ul><li>Automatisme : dans quelle classe va 130 cm ?</li></ul>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<h4>Ce que tu vas faire</h4>
+<p>Tailles au garrot (cm) des 20 poneys du club :</p>
     
 
-<p>Tu vas regrouper les tailles des 20 poneys (document 1) en classes de 10 cm. On attend l’effectif de chaque classe.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : range les 20 tailles du document 1 dans les classes, puis compte.</li><li>Pourquoi [a ; b[ ? La borne b appartient à la classe suivante : aucune valeur n’est comptée deux fois.</li></ol>
-    
-
-<h4>Exemple et documents</h4>
-    
-
-<p>Document 1 — Tailles (cm) : 104, 108, 109, 112, 115, 118, 119, 121, 124, 125, 128, 129, 130, 133, 136, 139, 141, 144, 147, 148.</p>
-    
-
-<p>Données fictives créées pour l’exercice (ordres de grandeur réalistes).</p>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>On regroupe les valeurs en <span class="cours-trou" aria-label="à compléter"></span> de même amplitude.</li><li>Dans [110 ; 120[, la valeur 120 est <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 1 — Les classes</h4>
-    
-
-<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Classe (cm)</th><th scope="col">Effectif</th></tr></thead><tbody><tr><td>[100 ; 110[</td><td></td></tr><tr><td>[110 ; 120[</td><td></td></tr><tr><td>[120 ; 130[</td><td></td></tr><tr><td>[130 ; 140[</td><td></td></tr><tr><td>[140 ; 150[</td><td></td></tr></tbody></table></div>
+<p>108 ; 112 ; 115 ; 117 ; 119 ; 121 ; 122 ; 124 ; 125 ; 126 ; 127 ; 128 ; 131 ; 133 ; 134 ; 136 ; 138 ; 141 ; 143 ; 147.</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — Dans quelle classe va 120 cm : [110 ; 120[ ou [120 ; 130[ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — Range 101, 109, 110, 117, 123 dans des classes de 10 cm à partir de 100.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Complète.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — Dans quelle classe va 120 cm ? Choix : [110 ; 120[ / [120 ; 130[ / Dans les deux.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Dans quelle classe va 139,5 cm ? Choix : [130 ; 140[ / [140 ; 150[ / Aucune.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Quelle est l’amplitude de la classe [120 ; 130[ ? (en cm)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — Effectif de la classe [100 ; 110[ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Effectif de la classe [110 ; 120[ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Effectif de la classe [120 ; 130[ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Effectif de la classe [130 ; 140[ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Effectif de la classe [140 ; 150[ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série C — Vérifie : quelle est la somme des effectifs des 5 classes ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Quelle est la fréquence de la classe [120 ; 130[, en % ? (en %)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>II. L’histogramme</h3>
+            <h3>II. Lire un histogramme</h3>
             
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Le club veut afficher la répartition des tailles de ses poneys sur un graphique clair.</p>
+<p>Un histogramme représente une série regroupée en classes par des rectangles accolés.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>La base d’un rectangle est la classe ; sa hauteur est l’effectif de la classe.</p>
     
 
-<p>Un histogramme représente une série regroupée en classes par des rectangles accolés : la base est la classe, la hauteur l’effectif.</p>
+<h4>À retenir</h4>
     
 
-<h4>À quoi ça sert</h4>
+<p>Effectif d’une classe = hauteur de son rectangle. Classe modale = le plus haut rectangle.</p>
     
 
-<ul><li>Voir d’un coup d’œil comment les valeurs sont réparties.</li><li>Repérer la classe la plus fréquente (classe modale).</li></ul>
+<h4>Comment ça fonctionne</h4>
     
 
-<h4>Comment ça marche</h4>
+<ol><li>Repère sur l’axe horizontal la classe demandée (ses deux bornes).</li><li>Monte jusqu’au haut du rectangle, puis va à gauche lire la hauteur sur l’axe vertical.</li><li>Pour un total : additionne les hauteurs des rectangles concernés.</li><li>Pour une fréquence : effectif ÷ effectif total × 100.</li></ol>
     
 
-<ol><li>Axe horizontal : les classes, gradué régulièrement ; axe vertical : les effectifs.</li><li>Pour chaque classe, un rectangle de la largeur de la classe et de la hauteur de son effectif.</li><li>Les rectangles se touchent, sans espace, car les classes se suivent.</li></ol>
+<h4>Pourquoi ça marche</h4>
     
 
-<p>À retenir : Histogramme : rectangles accolés, hauteur = effectif.</p>
+<p>1. Comment le graphique est fait</p>
+    
+
+<ul><li>On a tracé un rectangle par classe : de la borne a à la borne b, de hauteur égale à l’effectif.</li><li>Les rectangles se touchent parce que les classes se suivent sans trou : 45 finit une classe et commence la suivante.</li></ul>
+    
+
+<p>2. Comment le comprendre</p>
+    
+
+<ul><li>Plus un rectangle est haut, plus il y a de poulains dans cette classe de poids.</li><li>La forme montre la répartition : ici beaucoup de poulains au milieu, peu aux extrémités.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -347,168 +307,37 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<h4>Ce que tu vas faire</h4>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<p>Tu vas tracer l’histogramme des tailles des poneys. On attend la description des axes et la classe la plus haute.</p>
+<p>Poids à la naissance des poulains de l’élevage :</p>
     
 
-<h4>Ta mission</h4>
+<figure class="cours-document"><img src="/tifsec-test-eleves/assets/images/graphiques/maths-2de-s12-classique-poulains.svg" alt="Histogramme du poids des poulains à la naissance : [40 ; 45[ 3, [45 ; 50[ 7, [50 ; 55[ 11, [55 ; 60[ 6, [60 ; 65[ 3." loading="lazy" decoding="async"><figcaption>Histogramme du poids des poulains à la naissance : [40 ; 45[ 3, [45 ; 50[ 7, [50 ; 55[ 11, [55 ; 60[ 6, [60 ; 65[ 3.</figcaption></figure>
     
 
-<ol><li>À toi : trace l’histogramme sur papier : classes en abscisse, effectifs en ordonnée, rectangles accolés.</li><li>Pourquoi accolés ? Les classes se suivent sans trou.</li></ol>
-    
-
-<h4>Le graphique : le faire, le lire, le comprendre</h4>
-    
-
-<figure class="cours-document"><img src="/tifsec-test-eleves/assets/images/graphiques/maths-2de-s12-histogramme.svg" alt="Histogramme des tailles : un rectangle par classe de 10 cm." loading="lazy" decoding="async"><figcaption>Histogramme des tailles : un rectangle par classe de 10 cm.</figcaption></figure>
-    
-
-<h4>Comment faire ce graphique</h4>
-    
-
-<ol><li>Trace l’axe horizontal gradué de 100 à 150 cm, l’axe vertical gradué en effectifs.</li><li>Pour chaque classe [a ; b[, dessine un rectangle de largeur [a ; b] et de hauteur égale à l’effectif.</li><li>Les rectangles sont accolés (pas d’espace).</li></ol>
-    
-
-<h4>Comment le lire</h4>
-    
-
-<ul><li>Chaque rectangle correspond à une classe ; sa hauteur est l’effectif.</li><li>La classe modale est celle du plus haut rectangle.</li></ul>
-    
-
-<h4>Comment le comprendre</h4>
-    
-
-<ul><li>La forme de l’histogramme montre comment les tailles sont réparties : regroupées au centre ou étalées.</li></ul>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>Un histogramme est formé de rectangles <span class="cours-trou" aria-label="à compléter"></span> .</li><li>La hauteur d’un rectangle représente l’<span class="cours-trou" aria-label="à compléter"></span> de la classe.</li></ul>
-    
-
-<h4>Exercice 2 — L’histogramme</h4>
+<p>Comment le lire : chaque rectangle correspond à une classe de 5 kg ; on lit sa hauteur sur l’axe de gauche (nombre de poulains).</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — Une classe [130 ; 140[ a un effectif de 6. Décris son rectangle.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Décris ton histogramme : axes, classe la plus haute.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — Combien de poulains pèsent entre 45 et 50 kg ([45 ; 50[) ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Combien de poulains dans la classe [55 ; 60[ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Combien de poulains dans la classe [40 ; 45[ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Quelle est la borne de gauche de la classe modale ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Quelle est l’amplitude des classes ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — Combien y a-t-il de poulains en tout ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Combien de poulains pèsent 55 kg ou plus ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Combien de poulains pèsent moins de 50 kg ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Quelle fréquence de poulains dans la classe modale, en % ? (arrondi à l’unité) (en %)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Quelle fréquence de poulains pèse moins de 50 kg, en % ? (arrondi à l’unité) (en %)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>III. Lire et interpréter</h3>
+            <h3>Encore des exercices (si tu as fini)</h3>
             
-<h4>La situation</h4>
-    
 
-<p>Le club veut savoir quelle part des poneys mesure 140 cm ou plus, et combien mesurent moins de 120 cm.</p>
-    
-
-<h4>Ce que c’est</h4>
-    
-
-<p>Lire un histogramme, c’est retrouver les effectifs des classes et les additionner ou les comparer pour répondre à une question.</p>
-    
-
-<h4>À quoi ça sert</h4>
-    
-
-<ul><li>Adapter les cours selon la taille des montures.</li></ul>
-    
-
-<h4>Comment ça marche</h4>
-    
-
-<ol><li>On repère les classes concernées par la question (« 140 ou plus », « moins de 120 »).</li><li>On additionne leurs effectifs.</li><li>Pour une fréquence, on divise par l’effectif total.</li></ol>
-    
-
-<p>À retenir : Fréquence = effectif ÷ effectif total ; classe modale = la plus haute.</p>
-    
-
-<h4>Exemple fait ensemble en classe</h4>
-    
-
-<div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
-    
-
-<h4>Ce que tu vas faire</h4>
-    
-
-<p>Tu vas lire l’histogramme pour répondre à deux questions du club. On attend une fréquence et un effectif.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : calcule la fréquence des poneys de 140 cm et plus, puis compte ceux de moins de 120 cm.</li><li>Pourquoi cette lecture ? Le club adapte ses cours selon la taille des montures.</li></ol>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>La classe qui a le plus grand effectif est la classe <span class="cours-trou" aria-label="à compléter"></span> .</li><li>On lit une fréquence en divisant l’effectif par l’effectif <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 3 — Lire et interpréter</h4>
-    
-
-
-            <ol class="course-paper-questions"><li><span>Entraînement — Combien de poneys mesurent entre 120 et 140 cm (exclu) ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — Quelle fréquence cela représente-t-il ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Quelle fréquence des poneys mesure 140 cm ou plus ? (en %)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Combien de poneys mesurent moins de 120 cm ? (en poneys)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Conclusion</h3>
-            
-<p>Avec ce que tu as fait dans les parties précédentes, réponds en quelques phrases complètes.</p>
-    
-
-
-            <ol class="course-paper-questions"><li><span>Réponds au problème du jour : comment représenter une série de mesures nombreuses ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Pour aller plus loin (facultatif)</h3>
-            
-<p>Avec des classes de 25 cm, que se passerait-il ?</p>
-    
-
-
-            <ol class="course-paper-questions"><li><span>Avantage et inconvénient ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Dans quelle classe va 150 cm ? Choix : [140 ; 150[ / [150 ; 160[ / Aucune.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Valeurs 52, 57, 61, 63, 68, 69, 70 : effectif de [60 ; 70[ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Fréquence de [130 ; 140[ chez les poneys, en % ? (en %)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Poulains : combien pèsent entre 45 et 60 kg ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Poulains : fréquence de [60 ; 65[, en % ? (en %)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>À retenir</h3>
             
-<ul><li>Classes [a ; b[ de même amplitude.</li><li>Histogramme : rectangles accolés.</li></ul>
+<ul><li>Classe [a ; b[ : a est dedans, b n’est pas dedans (b va dans la classe suivante).</li><li>Toutes les classes ont la même amplitude (b − a).</li><li>Histogramme : la largeur d’un rectangle = la classe ; sa hauteur = l’effectif.</li><li>Classe modale : celle qui a le plus grand effectif (le plus haut rectangle).</li></ul>
     
 
 
             
-        </section>
-        
-        <section class="course-paper-section course-paper-break">
-            <h2 class="course-paper-part">Fiche d’exercices</h2><h3>Exercice 1 — Classes</h3>
-            
-<p>Poids (kg) : 410, 432, 448, 455, 470, 478, 489, 495, 503, 512, 530, 548.</p>
-    
-
-
-            <ol class="course-paper-questions"><li><span>Effectifs des classes [400 ; 450[, [450 ; 500[, [500 ; 550[ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Classe modale ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Exercice 2 — Histogramme</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>Trace l’histogramme de l’exercice 1.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Exercice 3 — Fréquence</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>Fréquence des chevaux de 500 kg ou plus ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
     </article>
@@ -522,66 +351,60 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Les classes</h2>
+        <h2>Partie 1 — Regrouper en classes</h2>
         
         
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas regrouper les tailles des 20 poneys (document 1) en classes de 10 cm. On attend l’effectif de chaque classe.</p></div>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Les 20 poneys ont presque tous des tailles différentes. Un tableau valeur par valeur serait illisible.</p>
+<p>Quand il y a beaucoup de valeurs différentes, un tableau valeur par valeur devient illisible.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>On regroupe alors les valeurs dans des intervalles de même largeur : les classes, notées [a ; b[.</p>
     
 
-<p>Regrouper en classes, c’est ranger les valeurs dans des intervalles de même amplitude, notés [a ; b[ : de a (compris) à b (non compris).</p>
+<p>À retenir : [a ; b[ contient a mais pas b. Amplitude de la classe = b − a.</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Résumer une série de mesures nombreuses et variées.</li><li>Préparer un histogramme.</li></ul>
+<ol><li>Choisis des classes de même amplitude qui couvrent toutes les valeurs (ici de 10 cm, à partir de 100).</li><li>Prends les valeurs une par une et range chacune dans sa classe.</li><li>Attention aux bornes : 120 va dans [120 ; 130[, pas dans [110 ; 120[.</li><li>Compte l’effectif de chaque classe, puis vérifie que le total est bien le nombre de valeurs.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>On choisit des classes de même amplitude (ici 10 cm) qui couvrent toutes les valeurs.</li><li>On range chaque valeur dans sa classe ; une valeur égale à la borne b va dans la classe suivante.</li><li>On compte l’effectif de chaque classe et on vérifie le total.</li></ol>
+<p>1. Pourquoi le crochet tourné vers l’extérieur</p>
     
 
-<p>À retenir : Dans [a ; b[, a est compris, b est exclu.</p>
+<ul><li>Le crochet [120 du côté gauche « attrape » 120 ; le crochet 130[ du côté droit le « laisse dehors ».</li><li>Ainsi chaque valeur va dans une seule classe : 130 n’est compté qu’une fois, dans [130 ; 140[.</li></ul>
+    
+
+<p>2. Pourquoi la même amplitude</p>
+    
+
+<ul><li>Avec des classes de même largeur, on peut comparer les effectifs directement.</li><li>Une classe deux fois plus large attraperait plus de valeurs sans que ce soit « plus fréquent ».</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>Dans quelle classe va 120 cm : [110 ; 120[ ou [120 ; 130[ ?</li><li>Range 101, 109, 110, 117, 123 dans des classes de 10 cm à partir de 100.</li></ol>
+<p>Tailles au garrot (cm) des 20 poneys du club :</p>
     
 
-<ul><li>Automatisme : dans quelle classe va 130 cm ?</li></ul>
-    
-
-<p>Document 1 — Tailles (cm) : 104, 108, 109, 112, 115, 118, 119, 121, 124, 125, 128, 129, 130, 133, 136, 139, 141, 144, 147, 148.</p>
-    
-
-<p>Données fictives créées pour l’exercice (ordres de grandeur réalistes).</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : range les 20 tailles du document 1 dans les classes, puis compte.</li><li>Pourquoi [a ; b[ ? La borne b appartient à la classe suivante : aucune valeur n’est comptée deux fois.</li></ol>
+<p>108 ; 112 ; 115 ; 117 ; 119 ; 121 ; 122 ; 124 ; 125 ; 126 ; 127 ; 128 ; 131 ; 133 ; 134 ; 136 ; 138 ; 141 ; 143 ; 147.</p>
     
 
 
@@ -590,63 +413,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a01-q01-label">Question 1 — Série A — Dans quelle classe va 120 cm ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    On regroupe les valeurs en …… de même amplitude.
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Les classes — Mot(s) manquant(s) — On regroupe les valeurs en …… de même amplitude.">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Dans [110 ; 120[, la valeur 120 est …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Les classes — Mot(s) manquant(s) — Dans [110 ; 120[, la valeur 120 est …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Les classes ont toutes la même largeur. Et dans [110 ; 120[, le crochet est tourné vers l’extérieur côté 120 : 120 est-il dedans ?</p></details>
+                <select id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><option value="">Choisis une réponse</option><option value="a">[110 ; 120[</option><option value="b">[120 ; 130[</option><option value="c">Dans les deux</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Le crochet de droite de [110 ; 120[ laisse 120 dehors.</p></details>
             
             
         </div>
@@ -654,114 +429,143 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Complète.</h3>
+            <h3 id="a01-q02-label">Question 2 — Dans quelle classe va 139,5 cm ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Classe (cm)</th>
-                                
-                                <th>Effectif</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    [100 ; 110[
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q02_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Les classes — Effectif — [100 ; 110[">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    [110 ; 120[
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q02_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Les classes — Effectif — [110 ; 120[">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    [120 ; 130[
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q02_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Les classes — Effectif — [120 ; 130[">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    [130 ; 140[
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q02_r3_c1" data-required="true" data-row="3" data-col="1" aria-label="Les classes — Effectif — [130 ; 140[">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    [140 ; 150[
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q02_r4_c1" data-required="true" data-row="4" data-col="1" aria-label="Les classes — Effectif — [140 ; 150[">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
+                <select id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><option value="">Choisis une réponse</option><option value="a">[130 ; 140[</option><option value="b">[140 ; 150[</option><option value="c">Aucune</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>139,5 est plus petit que 140.</p></details>
             
-            <details><summary>Un coup de pouce</summary><p>Range chaque taille de la liste dans sa classe. Une taille pile sur la borne de droite va dans la classe suivante.</p></details>
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a01-q03-label">Question 3 — Quelle est l’amplitude de la classe [120 ; 130[ ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label"><p>Unité : cm</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>b − a.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a01-q04-label">Question 4 — Série B — Effectif de la classe [100 ; 110[ ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q04" data-answer-id="a01_q04" data-required="true" aria-labelledby="a01-q04-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Compte les tailles de 100 à 109.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a01-q05-label">Question 5 — Effectif de la classe [110 ; 120[ ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q05" data-answer-id="a01_q05" data-required="true" aria-labelledby="a01-q05-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Compte les tailles de 110 à 119.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a01-q06-label">Question 6 — Effectif de la classe [120 ; 130[ ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q06" data-answer-id="a01_q06" data-required="true" aria-labelledby="a01-q06-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Compte les tailles de 120 à 129.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q07">
+            
+            
+            <h3 id="a01-q07-label">Question 7 — Effectif de la classe [130 ; 140[ ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q07" data-answer-id="a01_q07" data-required="true" aria-labelledby="a01-q07-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Compte les tailles de 130 à 139.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q08">
+            
+            
+            <h3 id="a01-q08-label">Question 8 — Effectif de la classe [140 ; 150[ ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q08" data-answer-id="a01_q08" data-required="true" aria-labelledby="a01-q08-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Compte les tailles de 140 à 149.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q09">
+            
+            
+            <h3 id="a01-q09-label">Question 9 — Série C — Vérifie : quelle est la somme des effectifs des 5 classes ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q09" data-answer-id="a01_q09" data-required="true" aria-labelledby="a01-q09-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Additionne tes 5 effectifs.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q10">
+            
+            
+            <h3 id="a01-q10-label">Question 10 — Quelle est la fréquence de la classe [120 ; 130[, en % ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q10" data-answer-id="a01_q10" data-required="true" aria-labelledby="a01-q10-label"><p>Unité : %</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Effectif ÷ 20 × 100.</p></details>
             
             
         </div>
@@ -775,78 +579,63 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>L’histogramme</h2>
+        <h2>Partie 2 — Lire un histogramme</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les classes sont prêtes. Représente-les.</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas tracer l’histogramme des tailles des poneys. On attend la description des axes et la classe la plus haute.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais faire les classes. Deuxième notion : les voir sur un graphique.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Le club veut afficher la répartition des tailles de ses poneys sur un graphique clair.</p>
+<p>Un histogramme représente une série regroupée en classes par des rectangles accolés.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>La base d’un rectangle est la classe ; sa hauteur est l’effectif de la classe.</p>
     
 
-<p>Un histogramme représente une série regroupée en classes par des rectangles accolés : la base est la classe, la hauteur l’effectif.</p>
+<p>À retenir : Effectif d’une classe = hauteur de son rectangle. Classe modale = le plus haut rectangle.</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Voir d’un coup d’œil comment les valeurs sont réparties.</li><li>Repérer la classe la plus fréquente (classe modale).</li></ul>
+<ol><li>Repère sur l’axe horizontal la classe demandée (ses deux bornes).</li><li>Monte jusqu’au haut du rectangle, puis va à gauche lire la hauteur sur l’axe vertical.</li><li>Pour un total : additionne les hauteurs des rectangles concernés.</li><li>Pour une fréquence : effectif ÷ effectif total × 100.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>Axe horizontal : les classes, gradué régulièrement ; axe vertical : les effectifs.</li><li>Pour chaque classe, un rectangle de la largeur de la classe et de la hauteur de son effectif.</li><li>Les rectangles se touchent, sans espace, car les classes se suivent.</li></ol>
+<p>1. Comment le graphique est fait</p>
     
 
-<p>À retenir : Histogramme : rectangles accolés, hauteur = effectif.</p>
+<ul><li>On a tracé un rectangle par classe : de la borne a à la borne b, de hauteur égale à l’effectif.</li><li>Les rectangles se touchent parce que les classes se suivent sans trou : 45 finit une classe et commence la suivante.</li></ul>
+    
+
+<p>2. Comment le comprendre</p>
+    
+
+<ul><li>Plus un rectangle est haut, plus il y a de poulains dans cette classe de poids.</li><li>La forme montre la répartition : ici beaucoup de poulains au milieu, peu aux extrémités.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>Une classe [130 ; 140[ a un effectif de 6. Décris son rectangle.</li></ol>
+<p>Poids à la naissance des poulains de l’élevage :</p>
     
 
-<figure class="cours-document"><img src="/tifsec-test-eleves/assets/images/graphiques/maths-2de-s12-histogramme.svg" alt="Histogramme des tailles : un rectangle par classe de 10 cm." loading="lazy" decoding="async"><figcaption>Histogramme des tailles : un rectangle par classe de 10 cm.</figcaption></figure>
+<figure class="cours-document"><img src="/tifsec-test-eleves/assets/images/graphiques/maths-2de-s12-classique-poulains.svg" alt="Histogramme du poids des poulains à la naissance : [40 ; 45[ 3, [45 ; 50[ 7, [50 ; 55[ 11, [55 ; 60[ 6, [60 ; 65[ 3." loading="lazy" decoding="async"><figcaption>Histogramme du poids des poulains à la naissance : [40 ; 45[ 3, [45 ; 50[ 7, [50 ; 55[ 11, [55 ; 60[ 6, [60 ; 65[ 3.</figcaption></figure>
     
 
-<h4>Comment faire ce graphique</h4>
-    
-
-<ol><li>Trace l’axe horizontal gradué de 100 à 150 cm, l’axe vertical gradué en effectifs.</li><li>Pour chaque classe [a ; b[, dessine un rectangle de largeur [a ; b] et de hauteur égale à l’effectif.</li><li>Les rectangles sont accolés (pas d’espace).</li></ol>
-    
-
-<h4>Comment le lire</h4>
-    
-
-<ul><li>Chaque rectangle correspond à une classe ; sa hauteur est l’effectif.</li><li>La classe modale est celle du plus haut rectangle.</li></ul>
-    
-
-<h4>Comment le comprendre</h4>
-    
-
-<ul><li>La forme de l’histogramme montre comment les tailles sont réparties : regroupées au centre ou étalées.</li></ul>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : trace l’histogramme sur papier : classes en abscisse, effectifs en ordonnée, rectangles accolés.</li><li>Pourquoi accolés ? Les classes se suivent sans trou.</li></ol>
+<p>Comment le lire : chaque rectangle correspond à une classe de 5 kg ; on lit sa hauteur sur l’axe de gauche (nombre de poulains).</p>
     
 
 
@@ -855,63 +644,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a02-q01-label">Question 1 — Série A — Combien de poulains pèsent entre 45 et 50 kg ([45 ; 50[) ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Un histogramme est formé de rectangles …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="L’histogramme — Mot(s) manquant(s) — Un histogramme est formé de rectangles …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    La hauteur d’un rectangle représente l’…… de la classe.
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="L’histogramme — Mot(s) manquant(s) — La hauteur d’un rectangle représente l’…… de la classe.">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Dans un histogramme, les rectangles se touchent-ils ? Et que représente leur hauteur ?</p></details>
+                <input type="text" inputmode="decimal" id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Lis la hauteur du 2e rectangle.</p></details>
             
             
         </div>
@@ -919,15 +660,143 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Décris ton histogramme : axes, classe la plus haute.</h3>
+            <h3 id="a02-q02-label">Question 2 — Combien de poulains dans la classe [55 ; 60[ ?</h3>
             
 
             
             
-                <textarea id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label">
 
                 
-            <details><summary>Un coup de pouce</summary><p>Décris l’axe horizontal (classes de tailles), l’axe vertical (effectifs) et la classe qui a le rectangle le plus haut.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Lis la hauteur du 4e rectangle.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a02-q03-label">Question 3 — Combien de poulains dans la classe [40 ; 45[ ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Lis la hauteur du 1er rectangle.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a02-q04-label">Question 4 — Quelle est la borne de gauche de la classe modale ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q04" data-answer-id="a02_q04" data-required="true" aria-labelledby="a02-q04-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Cherche le plus haut rectangle.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a02-q05-label">Question 5 — Quelle est l’amplitude des classes ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q05" data-answer-id="a02_q05" data-required="true" aria-labelledby="a02-q05-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>b − a pour une classe.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a02-q06-label">Question 6 — Série B — Combien y a-t-il de poulains en tout ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q06" data-answer-id="a02_q06" data-required="true" aria-labelledby="a02-q06-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Additionne toutes les hauteurs.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q07">
+            
+            
+            <h3 id="a02-q07-label">Question 7 — Combien de poulains pèsent 55 kg ou plus ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q07" data-answer-id="a02_q07" data-required="true" aria-labelledby="a02-q07-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Additionne les deux derniers rectangles.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q08">
+            
+            
+            <h3 id="a02-q08-label">Question 8 — Combien de poulains pèsent moins de 50 kg ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q08" data-answer-id="a02_q08" data-required="true" aria-labelledby="a02-q08-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Additionne les deux premiers rectangles.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q09">
+            
+            
+            <h3 id="a02-q09-label">Question 9 — Quelle fréquence de poulains dans la classe modale, en % ? (arrondi à l’unité)</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q09" data-answer-id="a02_q09" data-required="true" aria-labelledby="a02-q09-label"><p>Unité : %</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>11 ÷ 30 × 100.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q10">
+            
+            
+            <h3 id="a02-q10-label">Question 10 — Quelle fréquence de poulains pèse moins de 50 kg, en % ? (arrondi à l’unité)</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q10" data-answer-id="a02_q10" data-required="true" aria-labelledby="a02-q10-label"><p>Unité : %</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>10 ÷ 30 × 100.</p></details>
             
             
         </div>
@@ -940,169 +809,8 @@
     </article>
     
     <article class="cours-activite" id="a03" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Lire et interpréter</h2>
-        
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> L’histogramme est tracé. Que dit-il ?</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas lire l’histogramme pour répondre à deux questions du club. On attend une fréquence et un effectif.</p></div>
-        
-        
-
-        
-<h4>La situation</h4>
-    
-
-<p>Le club veut savoir quelle part des poneys mesure 140 cm ou plus, et combien mesurent moins de 120 cm.</p>
-    
-
-<h4>Ce que c’est</h4>
-    
-
-<p>Lire un histogramme, c’est retrouver les effectifs des classes et les additionner ou les comparer pour répondre à une question.</p>
-    
-
-<h4>À quoi ça sert</h4>
-    
-
-<ul><li>Adapter les cours selon la taille des montures.</li></ul>
-    
-
-<h4>Comment ça marche</h4>
-    
-
-<ol><li>On repère les classes concernées par la question (« 140 ou plus », « moins de 120 »).</li><li>On additionne leurs effectifs.</li><li>Pour une fréquence, on divise par l’effectif total.</li></ol>
-    
-
-<p>À retenir : Fréquence = effectif ÷ effectif total ; classe modale = la plus haute.</p>
-    
-
-<h4>Exemple fait ensemble en classe</h4>
-    
-
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
-    
-
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
-    
-
-<ol><li>Combien de poneys mesurent entre 120 et 140 cm (exclu) ?</li><li>Quelle fréquence cela représente-t-il ?</li></ol>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : calcule la fréquence des poneys de 140 cm et plus, puis compte ceux de moins de 120 cm.</li><li>Pourquoi cette lecture ? Le club adapte ses cours selon la taille des montures.</li></ol>
-    
-
-
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a03-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
-            
-
-            
-            
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    La classe qui a le plus grand effectif est la classe …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a03_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Lire et interpréter — Mot(s) manquant(s) — La classe qui a le plus grand effectif est la classe …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    On lit une fréquence en divisant l’effectif par l’effectif …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a03_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Lire et interpréter — Mot(s) manquant(s) — On lit une fréquence en divisant l’effectif par l’effectif …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>La classe la plus fréquente a un nom particulier (comme le mode). Et une fréquence se calcule par rapport à quel effectif ?</p></details>
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q02">
-            
-            
-            <h3 id="a03-q02-label">Question 2 — Quelle fréquence des poneys mesure 140 cm ou plus ?</h3>
-            
-
-            
-            
-                <input type="text" inputmode="decimal" id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label"><p>Unité : %</p>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Prends l’effectif de la classe [140 ; 150[ et divise par l’effectif total.</p></details>
-            
-            
-        </div>
-        
-        <div class="cours-question" data-question="q03">
-            
-            
-            <h3 id="a03-q03-label">Question 3 — Combien de poneys mesurent moins de 120 cm ?</h3>
-            
-
-            
-            
-                <input type="text" inputmode="decimal" id="a03-q03" data-answer-id="a03_q03" data-required="true" aria-labelledby="a03-q03-label"><p>Unité : poneys</p>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Additionne les effectifs des classes qui sont entièrement sous 120 cm.</p></details>
-            
-            
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a02">← Étape précédente</a>
-            <a class="course-mission-next" href="#a04">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Pour aller plus loin</h2>
+        <h2>Encore des exercices (si tu as fini)</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
@@ -1110,7 +818,7 @@
         
 
         
-<p>Avec des classes de 25 cm, que se passerait-il ?</p>
+<p>Tu as fini ? Entraîne-toi encore. Ces exercices ne comptent pas dans la note.</p>
     
 
 
@@ -1119,57 +827,86 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Avantage et inconvénient ?</h3>
+            <h3 id="a03-q01-label">Question 1 — Dans quelle classe va 150 cm ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <select id="a03-q01" data-answer-id="a03_q01" data-required="false" aria-labelledby="a03-q01-label"><option value="">Choisis une réponse</option><option value="a">[140 ; 150[</option><option value="b">[150 ; 160[</option><option value="c">Aucune</option></select>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Avec des classes plus larges, il y a moins de rectangles. Le graphique devient-il plus simple ? Que perd-on comme détail ?</p></details>
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a03-q02-label">Question 2 — Valeurs 52, 57, 61, 63, 68, 69, 70 : effectif de [60 ; 70[ ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q02" data-answer-id="a03_q02" data-required="false" aria-labelledby="a03-q02-label">
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a03-q03-label">Question 3 — Fréquence de [130 ; 140[ chez les poneys, en % ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q03" data-answer-id="a03_q03" data-required="false" aria-labelledby="a03-q03-label"><p>Unité : %</p>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a03-q04-label">Question 4 — Poulains : combien pèsent entre 45 et 60 kg ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q04" data-answer-id="a03_q04" data-required="false" aria-labelledby="a03-q04-label">
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a03-q05-label">Question 5 — Poulains : fréquence de [60 ; 65[, en % ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q05" data-answer-id="a03_q05" data-required="false" aria-labelledby="a03-q05-label"><p>Unité : %</p>
+
+                
+            
             
             
         </div>
         
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a03">← Étape précédente</a>
-            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a05" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Conclusion de ton travail</h2>
-        
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais représenter une série de mesures. Il reste à répondre au problème de départ.</p>
-        
-        
-        
-
-        
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment représenter une série de mesures nombreuses ?</h3>
-            
-
-            
-            
-                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Dis comment faire les classes, tracer l’histogramme et le lire.</p></details>
-            
-            
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a04">← Étape précédente</a>
+            <a class="course-mission-back" href="#a02">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -1182,7 +919,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Classes [a ; b[ de même amplitude.</li><li>Histogramme : rectangles accolés.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Classe [a ; b[ : a est dedans, b n’est pas dedans (b va dans la classe suivante).</li><li>Toutes les classes ont la même amplitude (b − a).</li><li>Histogramme : la largeur d’un rectangle = la classe ; sa hauteur = l’effectif.</li><li>Classe modale : celle qui a le plus grand effectif (le plus haut rectangle).</li></ul>
     
 </section>
 
@@ -1198,7 +935,7 @@
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
     
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a03">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

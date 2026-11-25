@@ -124,7 +124,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Le tableau de valeurs</a></li><li><a href="#a02">La courbe</a></li><li><a href="#a03">Lire la courbe</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Partie 1 — La fonction et son tableau de valeurs</a></li><li><a href="#a02">Partie 2 — Une fonction donnée par une formule</a></li><li><a href="#a03">Partie 3 — La courbe</a></li><li><a href="#a04">Encore des exercices (si tu as fini) — facultatif</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -136,7 +136,7 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Mathématiques · 2de Pro · S19</span></div>
-    <h1>Séance 19 : Le poids d’un poulain au fil des mois</h1>
+    <h1>Séance 19 : Fonctions, tableau de valeurs et courbe</h1>
     
 
     
@@ -150,7 +150,7 @@
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Comment représenter une grandeur qui dépend d’une autre ?</p>
+        <p>Comment décrire une grandeur qui dépend d’une autre, avec un tableau, une formule ou une courbe ?</p>
     </section>
     
 
@@ -168,9 +168,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Une fonction associe à chaque valeur de x (l’âge) une seule valeur f(x) (le poids).</li>
+            <li>Une fonction associe à chaque nombre x un seul nombre f(x).</li>
             
-            <li>Tableau de valeurs → points → courbe ; x en abscisse, f(x) en ordonnée.</li>
+            <li>f(x) se lit « f de x » : c’est l’image de x.</li>
             
         </ul>
         
@@ -178,16 +178,18 @@
         <h2>Ce que tu vas apprendre à faire</h2>
         <ul>
             
-            <li>Passer d’une situation à un tableau de valeurs et à une courbe.</li>
+            <li>Lire un tableau de valeurs.</li>
             
-            <li>Lire une valeur sur une courbe.</li>
+            <li>Calculer une image avec une formule.</li>
+            
+            <li>Placer des points et lire une courbe.</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En statistiques, tu as décrit des séries.</p><p>Ici, on étudie comment le poids dépend de l’âge : c’est la notion de fonction.</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Aujourd’hui, trois notions : la fonction et son tableau de valeurs, la formule, la courbe.</p><p>Pour chacune : la notion, la méthode, pourquoi ça marche, un exemple au tableau, puis beaucoup d’exercices.</p></div></section>
     
     
     
@@ -202,67 +204,45 @@
 
 <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
     <article class="course-paper-sheet">
-        <header><p class="course-paper-class">Mathématiques — 2de Pro</p><p class="course-paper-kicker">Cours et exercices — version papier</p><h2 id="course-paper-title"><span class="course-paper-number">Séance 19</span> — Le poids d’un poulain au fil des mois</h2><p>Comment représenter une grandeur qui dépend d’une autre ?</p></header>
+        <header><p class="course-paper-class">Mathématiques — 2de Pro</p><p class="course-paper-kicker">Cours et exercices — version papier</p><h2 id="course-paper-title"><span class="course-paper-number">Séance 19</span> — Fonctions, tableau de valeurs et courbe</h2><p>Trois notions : tableau de valeurs, formule, courbe. Pour chacune : la notion, la méthode, l’exemple au tableau, puis les exercices.</p></header>
         
         <section class="course-paper-section">
-            <h3>Le cours en bref</h3>
+            <h3>I. La fonction et son tableau de valeurs</h3>
             
-<p>Le problème à résoudre : Comment représenter une grandeur qui dépend d’une autre ?</p>
+<h4>La notion</h4>
     
 
-<h4>Ce que tu vas apprendre</h4>
+<p>Une fonction associe à chaque nombre x (par exemple un âge) un seul nombre f(x) (par exemple un poids).</p>
     
 
-<ul><li>Une fonction associe à chaque valeur de x (l’âge) une seule valeur f(x) (le poids).</li><li>Tableau de valeurs → points → courbe ; x en abscisse, f(x) en ordonnée.</li></ul>
+<p>f(x) s’appelle l’image de x. On écrit f(2) = 130 et on lit « f de 2 égale 130 ».</p>
     
 
-<h4>Ce que tu vas savoir faire</h4>
+<h4>À retenir</h4>
     
 
-<ul><li>Passer d’une situation à un tableau de valeurs et à une courbe.</li><li>Lire une valeur sur une courbe.</li></ul>
+<p>Tableau de valeurs : en haut x, en bas l’image f(x).</p>
     
 
-<h4>Pourquoi cette séance ?</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<p>En statistiques, tu as décrit des séries. Ici, on étudie comment le poids dépend de l’âge : c’est la notion de fonction.</p>
+<ol><li>Cherche x dans la 1re ligne.</li><li>Descends dans la 2e ligne : c’est f(x).</li><li>Pour une variation : f(fin) − f(début).</li><li>Ne confonds pas x (en haut) et f(x) (en bas).</li></ol>
     
 
-<p>Comment utiliser cette fiche : pour chaque partie, lis la méthode et l’exemple, complète les points clés, puis fais l’exercice. Réponds sur les lignes.</p>
+<h4>Pourquoi ça marche</h4>
     
 
-
-            
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>I. Le tableau de valeurs</h3>
-            
-<h4>La situation</h4>
+<p>1. Pourquoi « un seul » nombre</p>
     
 
-<p>Un éleveur pèse son poulain chaque mois. Le poids dépend de l’âge : comment le noter simplement ?</p>
+<ul><li>À un âge donné, un poulain n’a qu’un poids.</li><li>C’est ce qui fait que le poids est une fonction de l’âge.</li></ul>
     
 
-<h4>Ce que c’est</h4>
+<p>2. Pourquoi une notation</p>
     
 
-<p>Une fonction est un procédé qui associe à chaque valeur d’une variable x (ici l’âge) une seule valeur f(x) (ici le poids). f(x) se lit « f de x » ; c’est l’image de x.</p>
-    
-
-<h4>À quoi ça sert</h4>
-    
-
-<ul><li>Décrire une grandeur qui dépend d’une autre : poids selon l’âge, coût selon le nombre de jours, température selon le temps.</li></ul>
-    
-
-<h4>Comment ça marche</h4>
-    
-
-<ol><li>On repère ce qui varie librement : c’est x.</li><li>On repère ce qui en dépend : c’est f(x).</li><li>Dans le tableau, sous la valeur x, on lit f(x) : on écrit f(x) = …</li></ol>
-    
-
-<p>À retenir : À chaque x correspond une seule valeur f(x).</p>
+<ul><li>f(3) = 165 est plus court que « à 3 mois, le poulain pèse 165 kg ».</li><li>La lettre f désigne la règle qui transforme l’âge en poids.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -271,71 +251,56 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<ul><li>Automatisme : place le point (3 ; 175) dans un repère.</li></ul>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<h4>Ce que tu vas faire</h4>
+<p>Poids d’un poulain (kg) selon son âge x (mois) :</p>
     
 
-<p>Tu vas identifier la variable et la grandeur qui en dépend dans les pesées d’un poulain (document 1). On attend x, f(x) et f(3).</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : lis les pesées (document 1) et identifie x et f(x).</li><li>Pourquoi x et f(x) ? On note ce qui varie (l’âge) et ce qui en dépend (le poids).</li></ol>
-    
-
-<h4>Exemple et documents</h4>
-    
-
-<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Pesées d’un poulain (fictives)</caption><thead><tr><th scope="col">Âge x (mois)</th><th scope="col">0</th><th scope="col">1</th><th scope="col">2</th><th scope="col">3</th><th scope="col">4</th><th scope="col">6</th></tr></thead><tbody><tr><td>Poids f(x) (kg)</td><td>55</td><td>100</td><td>140</td><td>175</td><td>205</td><td>260</td></tr></tbody></table></div>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>Une fonction associe à chaque x une <span class="cours-trou" aria-label="à compléter"></span> valeur f(x).</li><li>f(x) se lit « f <span class="cours-trou" aria-label="à compléter"></span> x ».</li></ul>
-    
-
-<h4>Exercice 1 — Le tableau de valeurs</h4>
-    
-
-<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Élément</th><th scope="col">Réponse</th></tr></thead><tbody><tr><td>Variable x</td><td></td></tr><tr><td>f(x)</td><td></td></tr><tr><td>f(3)</td><td></td></tr></tbody></table></div>
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Âge x (mois)</th><th scope="col">0</th><th scope="col">1</th><th scope="col">2</th><th scope="col">3</th><th scope="col">4</th><th scope="col">5</th><th scope="col">6</th></tr></thead><tbody><tr><td>Poids f(x) (kg)</td><td>50</td><td>90</td><td>130</td><td>165</td><td>195</td><td>220</td><td>240</td></tr></tbody></table></div>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — Avec le document 1, que vaut f(1) ? Et f(6) ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — Le prix d’une pension dépend du nombre de jours. Qui est x, qui est f(x) ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Complète.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — Que vaut f(0) ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Que vaut f(3) ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Que vaut f(6) ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Pour quel âge le poids est-il 220 kg ? (en mois)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — Prise de poids entre 0 et 1 mois ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Prise de poids entre 3 et 6 mois ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>La prise de poids mensuelle… Choix : augmente avec l’âge / diminue avec l’âge / est toujours la même.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>II. La courbe</h3>
+            <h3>II. Une fonction donnée par une formule</h3>
             
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Un tableau de chiffres ne montre pas bien comment le poulain grandit. Un graphique sera plus parlant.</p>
+<p>Parfois, la fonction est donnée par une formule, par exemple f(x) = 12x + 50.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>Pour trouver f(x), on remplace x par le nombre et on calcule.</p>
     
 
-<p>La courbe représentative d’une fonction est l’ensemble des points (x ; f(x)) placés dans un repère et reliés régulièrement.</p>
+<h4>À retenir</h4>
     
 
-<h4>À quoi ça sert</h4>
+<p>f(x) = 12x + 50 : 12x veut dire 12 × x. On fait la multiplication avant l’addition.</p>
     
 
-<ul><li>Voir d’un coup d’œil si une grandeur augmente ou diminue, vite ou lentement.</li><li>Lire des valeurs entre les mesures.</li></ul>
+<h4>Comment ça fonctionne</h4>
     
 
-<h4>Comment ça marche</h4>
+<ol><li>Recopie la formule.</li><li>Remplace x par le nombre (entre parenthèses si besoin).</li><li>Fais la multiplication, puis l’addition.</li><li>Écris f(…) = résultat.</li></ol>
     
 
-<ol><li>Axe horizontal : x (l’âge) ; axe vertical : f(x) (le poids), gradués régulièrement.</li><li>On place un point pour chaque colonne du tableau.</li><li>On relie les points par une courbe régulière, sans angles.</li></ol>
+<h4>Pourquoi ça marche</h4>
     
 
-<p>À retenir : x sur l’axe horizontal, f(x) sur l’axe vertical.</p>
+<p>1. Ce que dit la formule</p>
+    
+
+<ul><li>Le coût de pension d’un poney : 50 € de frais fixes, plus 12 € par jour.</li><li>Pour x jours : 12 × x + 50. C’est f(x).</li></ul>
+    
+
+<p>2. Pourquoi × avant +</p>
+    
+
+<ul><li>On paie d’abord 12 € par jour (12 × 5 = 60 € pour 5 jours), puis on ajoute les 50 €.</li><li>Faire 12 × (5 + 50) donnerait 660 € : absurde.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -344,83 +309,53 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<h4>Ce que tu vas faire</h4>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<p>Tu vas tracer la courbe du poids du poulain en fonction de l’âge. On attend la description de la courbe.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : place tous les points du document 1 sur papier millimétré, puis relie-les.</li><li>Pourquoi relier ? Le poulain grandit continûment, pas par sauts.</li></ol>
-    
-
-<h4>Le graphique : le faire, le lire, le comprendre</h4>
-    
-
-<figure class="cours-document"><img src="/tifsec-test-eleves/assets/images/graphiques/maths-2de-s19-poulain.svg" alt="Courbe du poids f(x) en fonction de l’âge x." loading="lazy" decoding="async"><figcaption>Courbe du poids f(x) en fonction de l’âge x.</figcaption></figure>
-    
-
-<h4>Comment faire ce graphique</h4>
-    
-
-<ol><li>Sur une feuille (papier millimétré si possible), trace un repère orthogonal : deux axes qui se croisent à angle droit (90°). L’unité peut être différente d’un axe à l’autre.</li><li>Sur l’axe des abscisses (axe horizontal, x, qui se lit de gauche à droite), gradue régulièrement l’âge x, de 0 à 6 mois (par exemple 2 cm par mois).</li><li>Sur l’axe des ordonnées (axe vertical, y, qui se lit de bas en haut), gradue régulièrement le poids f(x), de 0 à 280 kg (par exemple 1 cm pour 20 kg).</li><li>Place chaque point (x ; f(x)) du document 1. Attention : il n’y a pas de mesure à 5 mois, laisse la place vide entre 4 et 6.</li><li>Relie les points par une courbe régulière, à main levée.</li><li>Écris le titre : « Poids d’un poulain selon son âge ».</li></ol>
-    
-
-<h4>Comment le lire</h4>
-    
-
-<ul><li>L’axe horizontal porte le temps, l’axe vertical la grandeur mesurée (avec son unité).</li><li>Pour lire une valeur : pars de l’axe horizontal, monte jusqu’à la courbe, puis va horizontalement jusqu’à l’axe vertical.</li><li>Une courbe qui monte = la grandeur augmente ; qui descend = elle diminue ; plus la pente est forte, plus le changement est rapide.</li></ul>
-    
-
-<h4>Comment le comprendre</h4>
-    
-
-<ul><li>Entre deux mesures, la courbe donne une estimation (lecture graphique).</li><li>Prolonger la courbe très loin des mesures (extrapoler) est risqué.</li></ul>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>Sur le graphique, x est sur l’axe <span class="cours-trou" aria-label="à compléter"></span> .</li><li>f(x) est sur l’axe <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 2 — La courbe</h4>
+<p>Coût de pension d’un poney : f(x) = 12x + 50, en euros, pour x jours.</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — Où places-tu le point de l’âge 4 mois ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Décris ta courbe : croissante ou décroissante ? régulière ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — Calcule f(1). (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Calcule f(10). (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Calcule f(0). (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Calcule f(30). (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Calcule f(7). (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — Autre fonction : g(x) = 3x − 4. Calcule g(5).</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Avec g(x) = 3x − 4, calcule g(0).</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>III. Lire la courbe</h3>
+            <h3>III. La courbe</h3>
             
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>L’éleveur n’a pas pesé le poulain à 5 mois. Peut-on estimer son poids avec la courbe ?</p>
+<p>La courbe d’une fonction est formée de tous les points de coordonnées (x ; f(x)).</p>
     
 
-<h4>Ce que c’est</h4>
+<p>On lit x sur l’axe horizontal et f(x) sur l’axe vertical.</p>
     
 
-<p>Une lecture graphique donne une valeur approchée lue sur la courbe, entre deux mesures.</p>
+<h4>À retenir</h4>
     
 
-<h4>À quoi ça sert</h4>
+<p>Point de la courbe : (x ; f(x)). Lire f(x) : partir de x en bas, monter jusqu’à la courbe, lire à gauche.</p>
     
 
-<ul><li>Estimer une valeur non mesurée.</li><li>Trouver à quel moment une valeur est atteinte.</li></ul>
+<h4>Comment ça fonctionne</h4>
     
 
-<h4>Comment ça marche</h4>
+<ol><li>Comment faire ce graphique : pour chaque colonne du tableau, place le point (x ; f(x)), puis relie les points.</li><li>Comment le lire : pars de x sur l’axe horizontal, monte verticalement jusqu’à la courbe, puis va horizontalement jusqu’à l’axe vertical.</li><li>Comment le comprendre : si la courbe monte, f(x) augmente quand x augmente.</li><li>Entre deux points, la courbe donne une valeur approchée.</li></ol>
     
 
-<ol><li>Pour un poids à un âge donné : on part de l’âge sur l’axe horizontal, on monte à la courbe, on lit sur l’axe vertical.</li><li>Pour un âge à un poids donné : on part du poids sur l’axe vertical, on va à la courbe, on descend sur l’axe horizontal.</li><li>On écrit « environ » : la lecture est approchée.</li></ol>
+<h4>Pourquoi ça marche</h4>
     
 
-<p>À retenir : On lit entre les mesures ; prévoir loin des mesures (extrapoler) est risqué.</p>
+<p>1. Pourquoi des points (x ; f(x))</p>
+    
+
+<ul><li>Chaque colonne du tableau donne un couple : l’âge et le poids.</li><li>Le point est placé à l’abscisse x (horizontal) et à l’ordonnée f(x) (vertical).</li></ul>
+    
+
+<p>2. Pourquoi relier les points</p>
+    
+
+<ul><li>Le poulain grossit aussi entre deux pesées.</li><li>La courbe permet d’estimer son poids à 2 mois et demi, par exemple.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -429,83 +364,37 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<h4>Ce que tu vas faire</h4>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<p>Tu vas lire sur la courbe un poids à 5 mois et l’âge correspondant à 150 kg. On attend les deux lectures.</p>
+<p>Courbe du poids du poulain (mêmes données que la partie 1) :</p>
     
 
-<h4>Ta mission</h4>
+<figure class="cours-document"><img src="/tifsec-test-eleves/assets/images/graphiques/maths-2de-s19-classique-poulain.svg" alt="Courbe du poids du poulain selon l’âge, de 0 à 6 mois." loading="lazy" decoding="async"><figcaption>Courbe du poids du poulain selon l’âge, de 0 à 6 mois.</figcaption></figure>
     
 
-<ol><li>À toi : lis le poids à 5 mois, puis l’âge où le poulain pèse 150 kg.</li><li>Pourquoi lire ? La courbe donne des valeurs entre les mesures.</li></ol>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>On lit une valeur entre deux points grâce à la <span class="cours-trou" aria-label="à compléter"></span> .</li><li>Prévoir loin des mesures s’appelle <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 3 — Lire la courbe</h4>
+<p>Comment le lire : l’âge est en bas (mois), le poids à gauche (kg). Chaque carreau vertical vaut 20 kg.</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — Avec ta courbe, estime le poids à 1,5 mois.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Poids estimé à 5 mois ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>À quel âge le poulain pèse-t-il 150 kg environ ? (en mois)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — Quelle est l’ordonnée du point d’abscisse 4 ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Le point (1 ; 90) est-il sur la courbe ? Choix : Oui / Non.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Le point (90 ; 1) est-il sur la courbe ? Choix : Oui / Non.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Estime le poids à 3,5 mois (à 5 kg près). (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — Sur ce graphique, la courbe… Choix : monte de 0 à 6 mois / descend / monte puis descend.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Où la courbe monte-t-elle le plus vite ? Choix : Entre 0 et 2 mois / Entre 4 et 6 mois.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>Conclusion</h3>
+            <h3>Encore des exercices (si tu as fini)</h3>
             
-<p>Avec ce que tu as fait dans les parties précédentes, réponds en quelques phrases complètes.</p>
-    
 
-
-            <ol class="course-paper-questions"><li><span>Réponds au problème du jour : comment représenter une grandeur qui dépend d’une autre ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Pour aller plus loin (facultatif)</h3>
-            
-<p>Prolonge la courbe jusqu’à 12 mois.</p>
-    
-
-
-            <ol class="course-paper-questions"><li><span>Est-ce fiable ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Avec f(x) = 12x + 50, calcule f(15). (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Avec h(x) = 5x + 2, calcule h(4).</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Avec h(x) = 5x + 2, calcule h(0,5).</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Tableau du poulain : prise de poids entre 1 et 5 mois ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>À retenir</h3>
             
-<ul><li>Fonction : x → f(x).</li><li>Tableau → courbe → lecture.</li></ul>
+<ul><li>Fonction : à chaque x, on associe un seul nombre f(x), son image.</li><li>Tableau de valeurs : 1re ligne x, 2e ligne f(x).</li><li>Formule : on remplace x par le nombre et on calcule (× avant +).</li><li>Courbe : les points (x ; f(x)) ; pour lire f(x), on part de x sur l’axe horizontal.</li></ul>
     
 
 
             
-        </section>
-        
-        <section class="course-paper-section course-paper-break">
-            <h2 class="course-paper-part">Fiche d’exercices</h2><h3>Exercice 1 — Tableau de valeurs</h3>
-            
-<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Âge (mois)</th><th scope="col">0</th><th scope="col">2</th><th scope="col">4</th><th scope="col">6</th></tr></thead><tbody><tr><td>Poids (kg)</td><td>50</td><td>130</td><td>200</td><td>250</td></tr></tbody></table></div>
-    
-
-
-            <ol class="course-paper-questions"><li><span>f(4) ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Quelle est la variable ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Exercice 2 — Courbe</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>Trace la courbe et estime le poids à 3 mois.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Exercice 3 — Vocabulaire</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>Que représente f(6) ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
     </article>
@@ -519,63 +408,60 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Le tableau de valeurs</h2>
+        <h2>Partie 1 — La fonction et son tableau de valeurs</h2>
         
         
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas identifier la variable et la grandeur qui en dépend dans les pesées d’un poulain (document 1). On attend x, f(x) et f(3).</p></div>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Un éleveur pèse son poulain chaque mois. Le poids dépend de l’âge : comment le noter simplement ?</p>
+<p>Une fonction associe à chaque nombre x (par exemple un âge) un seul nombre f(x) (par exemple un poids).</p>
     
 
-<h4>Ce que c’est</h4>
+<p>f(x) s’appelle l’image de x. On écrit f(2) = 130 et on lit « f de 2 égale 130 ».</p>
     
 
-<p>Une fonction est un procédé qui associe à chaque valeur d’une variable x (ici l’âge) une seule valeur f(x) (ici le poids). f(x) se lit « f de x » ; c’est l’image de x.</p>
+<p>À retenir : Tableau de valeurs : en haut x, en bas l’image f(x).</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Décrire une grandeur qui dépend d’une autre : poids selon l’âge, coût selon le nombre de jours, température selon le temps.</li></ul>
+<ol><li>Cherche x dans la 1re ligne.</li><li>Descends dans la 2e ligne : c’est f(x).</li><li>Pour une variation : f(fin) − f(début).</li><li>Ne confonds pas x (en haut) et f(x) (en bas).</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>On repère ce qui varie librement : c’est x.</li><li>On repère ce qui en dépend : c’est f(x).</li><li>Dans le tableau, sous la valeur x, on lit f(x) : on écrit f(x) = …</li></ol>
+<p>1. Pourquoi « un seul » nombre</p>
     
 
-<p>À retenir : À chaque x correspond une seule valeur f(x).</p>
+<ul><li>À un âge donné, un poulain n’a qu’un poids.</li><li>C’est ce qui fait que le poids est une fonction de l’âge.</li></ul>
+    
+
+<p>2. Pourquoi une notation</p>
+    
+
+<ul><li>f(3) = 165 est plus court que « à 3 mois, le poulain pèse 165 kg ».</li><li>La lettre f désigne la règle qui transforme l’âge en poids.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>Avec le document 1, que vaut f(1) ? Et f(6) ?</li><li>Le prix d’une pension dépend du nombre de jours. Qui est x, qui est f(x) ?</li></ol>
+<p>Poids d’un poulain (kg) selon son âge x (mois) :</p>
     
 
-<ul><li>Automatisme : place le point (3 ; 175) dans un repère.</li></ul>
-    
-
-<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Pesées d’un poulain (fictives)</caption><thead><tr><th scope="col">Âge x (mois)</th><th scope="col">0</th><th scope="col">1</th><th scope="col">2</th><th scope="col">3</th><th scope="col">4</th><th scope="col">6</th></tr></thead><tbody><tr><td>Poids f(x) (kg)</td><td>55</td><td>100</td><td>140</td><td>175</td><td>205</td><td>260</td></tr></tbody></table></div>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : lis les pesées (document 1) et identifie x et f(x).</li><li>Pourquoi x et f(x) ? On note ce qui varie (l’âge) et ce qui en dépend (le poids).</li></ol>
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Âge x (mois)</th><th scope="col">0</th><th scope="col">1</th><th scope="col">2</th><th scope="col">3</th><th scope="col">4</th><th scope="col">5</th><th scope="col">6</th></tr></thead><tbody><tr><td>Poids f(x) (kg)</td><td>50</td><td>90</td><td>130</td><td>165</td><td>195</td><td>220</td><td>240</td></tr></tbody></table></div>
     
 
 
@@ -584,63 +470,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a01-q01-label">Question 1 — Série A — Que vaut f(0) ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Une fonction associe à chaque x une …… valeur f(x).
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Le tableau de valeurs — Mot(s) manquant(s) — Une fonction associe à chaque x une …… valeur f(x).">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    f(x) se lit « f …… x ».
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Le tableau de valeurs — Mot(s) manquant(s) — f(x) se lit « f …… x ».">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>À un âge donné, le poulain a-t-il un poids ou plusieurs ? Et f(x), comment le lit-on à voix haute ?</p></details>
+                <input type="text" inputmode="decimal" id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Colonne x = 0.</p></details>
             
             
         </div>
@@ -648,80 +486,95 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Complète.</h3>
+            <h3 id="a01-q02-label">Question 2 — Que vaut f(3) ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Élément</th>
-                                
-                                <th>Réponse</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Variable x
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q02_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Le tableau de valeurs — Réponse — Variable x">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    f(x)
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q02_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Le tableau de valeurs — Réponse — f(x)">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    f(3)
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q02_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Le tableau de valeurs — Réponse — f(3)">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
+                <input type="text" inputmode="decimal" id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Colonne x = 3.</p></details>
             
-            <details><summary>Un coup de pouce</summary><p>La variable est ce qu’on choisit (l’âge) ; f(x) est ce qu’on obtient (le poids). f(3) : cherche la colonne 3 mois dans le tableau.</p></details>
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a01-q03-label">Question 3 — Que vaut f(6) ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Colonne x = 6.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a01-q04-label">Question 4 — Pour quel âge le poids est-il 220 kg ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q04" data-answer-id="a01_q04" data-required="true" aria-labelledby="a01-q04-label"><p>Unité : mois</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Cherche 220 dans la 2e ligne, remonte à x.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a01-q05-label">Question 5 — Série B — Prise de poids entre 0 et 1 mois ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q05" data-answer-id="a01_q05" data-required="true" aria-labelledby="a01-q05-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>f(1) − f(0).</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a01-q06-label">Question 6 — Prise de poids entre 3 et 6 mois ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q06" data-answer-id="a01_q06" data-required="true" aria-labelledby="a01-q06-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>f(6) − f(3).</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q07">
+            
+            
+            <h3 id="a01-q07-label">Question 7 — La prise de poids mensuelle…</h3>
+            
+
+            
+            
+                <select id="a01-q07" data-answer-id="a01_q07" data-required="true" aria-labelledby="a01-q07-label"><option value="">Choisis une réponse</option><option value="a">augmente avec l’âge</option><option value="b">diminue avec l’âge</option><option value="c">est toujours la même</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Calcule les écarts entre deux mois qui se suivent.</p></details>
             
             
         </div>
@@ -735,78 +588,57 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>La courbe</h2>
+        <h2>Partie 2 — Une fonction donnée par une formule</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le tableau est prêt. Trace la courbe.</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas tracer la courbe du poids du poulain en fonction de l’âge. On attend la description de la courbe.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais lire un tableau. Deuxième notion : calculer les images avec une formule.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Un tableau de chiffres ne montre pas bien comment le poulain grandit. Un graphique sera plus parlant.</p>
+<p>Parfois, la fonction est donnée par une formule, par exemple f(x) = 12x + 50.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>Pour trouver f(x), on remplace x par le nombre et on calcule.</p>
     
 
-<p>La courbe représentative d’une fonction est l’ensemble des points (x ; f(x)) placés dans un repère et reliés régulièrement.</p>
+<p>À retenir : f(x) = 12x + 50 : 12x veut dire 12 × x. On fait la multiplication avant l’addition.</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Voir d’un coup d’œil si une grandeur augmente ou diminue, vite ou lentement.</li><li>Lire des valeurs entre les mesures.</li></ul>
+<ol><li>Recopie la formule.</li><li>Remplace x par le nombre (entre parenthèses si besoin).</li><li>Fais la multiplication, puis l’addition.</li><li>Écris f(…) = résultat.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>Axe horizontal : x (l’âge) ; axe vertical : f(x) (le poids), gradués régulièrement.</li><li>On place un point pour chaque colonne du tableau.</li><li>On relie les points par une courbe régulière, sans angles.</li></ol>
+<p>1. Ce que dit la formule</p>
     
 
-<p>À retenir : x sur l’axe horizontal, f(x) sur l’axe vertical.</p>
+<ul><li>Le coût de pension d’un poney : 50 € de frais fixes, plus 12 € par jour.</li><li>Pour x jours : 12 × x + 50. C’est f(x).</li></ul>
+    
+
+<p>2. Pourquoi × avant +</p>
+    
+
+<ul><li>On paie d’abord 12 € par jour (12 × 5 = 60 € pour 5 jours), puis on ajoute les 50 €.</li><li>Faire 12 × (5 + 50) donnerait 660 € : absurde.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>Où places-tu le point de l’âge 4 mois ?</li></ol>
-    
-
-<figure class="cours-document"><img src="/tifsec-test-eleves/assets/images/graphiques/maths-2de-s19-poulain.svg" alt="Courbe du poids f(x) en fonction de l’âge x." loading="lazy" decoding="async"><figcaption>Courbe du poids f(x) en fonction de l’âge x.</figcaption></figure>
-    
-
-<h4>Comment faire ce graphique</h4>
-    
-
-<ol><li>Sur une feuille (papier millimétré si possible), trace un repère orthogonal : deux axes qui se croisent à angle droit (90°). L’unité peut être différente d’un axe à l’autre.</li><li>Sur l’axe des abscisses (axe horizontal, x, qui se lit de gauche à droite), gradue régulièrement l’âge x, de 0 à 6 mois (par exemple 2 cm par mois).</li><li>Sur l’axe des ordonnées (axe vertical, y, qui se lit de bas en haut), gradue régulièrement le poids f(x), de 0 à 280 kg (par exemple 1 cm pour 20 kg).</li><li>Place chaque point (x ; f(x)) du document 1. Attention : il n’y a pas de mesure à 5 mois, laisse la place vide entre 4 et 6.</li><li>Relie les points par une courbe régulière, à main levée.</li><li>Écris le titre : « Poids d’un poulain selon son âge ».</li></ol>
-    
-
-<h4>Comment le lire</h4>
-    
-
-<ul><li>L’axe horizontal porte le temps, l’axe vertical la grandeur mesurée (avec son unité).</li><li>Pour lire une valeur : pars de l’axe horizontal, monte jusqu’à la courbe, puis va horizontalement jusqu’à l’axe vertical.</li><li>Une courbe qui monte = la grandeur augmente ; qui descend = elle diminue ; plus la pente est forte, plus le changement est rapide.</li></ul>
-    
-
-<h4>Comment le comprendre</h4>
-    
-
-<ul><li>Entre deux mesures, la courbe donne une estimation (lecture graphique).</li><li>Prolonger la courbe très loin des mesures (extrapoler) est risqué.</li></ul>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : place tous les points du document 1 sur papier millimétré, puis relie-les.</li><li>Pourquoi relier ? Le poulain grandit continûment, pas par sauts.</li></ol>
+<p>Coût de pension d’un poney : f(x) = 12x + 50, en euros, pour x jours.</p>
     
 
 
@@ -815,63 +647,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a02-q01-label">Question 1 — Série A — Calcule f(1).</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Sur le graphique, x est sur l’axe …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="La courbe — Mot(s) manquant(s) — Sur le graphique, x est sur l’axe …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    f(x) est sur l’axe …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="La courbe — Mot(s) manquant(s) — f(x) est sur l’axe …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Dans un repère, la variable x est sur l’axe horizontal ou vertical ? Et f(x) ?</p></details>
+                <input type="text" inputmode="decimal" id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label"><p>Unité : €</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>12 × 1 + 50.</p></details>
             
             
         </div>
@@ -879,15 +663,95 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Décris ta courbe : croissante ou décroissante ? régulière ?</h3>
+            <h3 id="a02-q02-label">Question 2 — Calcule f(10).</h3>
             
 
             
             
-                <textarea id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><p>Unité : €</p>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Suis ta courbe de gauche à droite : monte-t-elle ? Monte-t-elle à la même vitesse partout ?</p></details>
+            <details><summary>Un coup de pouce</summary><p>12 × 10 + 50.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a02-q03-label">Question 3 — Calcule f(0).</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label"><p>Unité : €</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>12 × 0 + 50.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a02-q04-label">Question 4 — Calcule f(30).</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q04" data-answer-id="a02_q04" data-required="true" aria-labelledby="a02-q04-label"><p>Unité : €</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>12 × 30 + 50.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a02-q05-label">Question 5 — Calcule f(7).</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q05" data-answer-id="a02_q05" data-required="true" aria-labelledby="a02-q05-label"><p>Unité : €</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>12 × 7 + 50.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a02-q06-label">Question 6 — Série B — Autre fonction : g(x) = 3x − 4. Calcule g(5).</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q06" data-answer-id="a02_q06" data-required="true" aria-labelledby="a02-q06-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>3 × 5 − 4.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q07">
+            
+            
+            <h3 id="a02-q07-label">Question 7 — Avec g(x) = 3x − 4, calcule g(0).</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q07" data-answer-id="a02_q07" data-required="true" aria-labelledby="a02-q07-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>3 × 0 − 4.</p></details>
             
             
         </div>
@@ -901,57 +765,63 @@
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Lire la courbe</h2>
+        <h2>Partie 3 — La courbe</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> La courbe est tracée. Exploite-la.</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas lire sur la courbe un poids à 5 mois et l’âge correspondant à 150 kg. On attend les deux lectures.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Dernière notion : dessiner la fonction et la lire sur un graphique.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>L’éleveur n’a pas pesé le poulain à 5 mois. Peut-on estimer son poids avec la courbe ?</p>
+<p>La courbe d’une fonction est formée de tous les points de coordonnées (x ; f(x)).</p>
     
 
-<h4>Ce que c’est</h4>
+<p>On lit x sur l’axe horizontal et f(x) sur l’axe vertical.</p>
     
 
-<p>Une lecture graphique donne une valeur approchée lue sur la courbe, entre deux mesures.</p>
+<p>À retenir : Point de la courbe : (x ; f(x)). Lire f(x) : partir de x en bas, monter jusqu’à la courbe, lire à gauche.</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Estimer une valeur non mesurée.</li><li>Trouver à quel moment une valeur est atteinte.</li></ul>
+<ol><li>Comment faire ce graphique : pour chaque colonne du tableau, place le point (x ; f(x)), puis relie les points.</li><li>Comment le lire : pars de x sur l’axe horizontal, monte verticalement jusqu’à la courbe, puis va horizontalement jusqu’à l’axe vertical.</li><li>Comment le comprendre : si la courbe monte, f(x) augmente quand x augmente.</li><li>Entre deux points, la courbe donne une valeur approchée.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>Pour un poids à un âge donné : on part de l’âge sur l’axe horizontal, on monte à la courbe, on lit sur l’axe vertical.</li><li>Pour un âge à un poids donné : on part du poids sur l’axe vertical, on va à la courbe, on descend sur l’axe horizontal.</li><li>On écrit « environ » : la lecture est approchée.</li></ol>
+<p>1. Pourquoi des points (x ; f(x))</p>
     
 
-<p>À retenir : On lit entre les mesures ; prévoir loin des mesures (extrapoler) est risqué.</p>
+<ul><li>Chaque colonne du tableau donne un couple : l’âge et le poids.</li><li>Le point est placé à l’abscisse x (horizontal) et à l’ordonnée f(x) (vertical).</li></ul>
+    
+
+<p>2. Pourquoi relier les points</p>
+    
+
+<ul><li>Le poulain grossit aussi entre deux pesées.</li><li>La courbe permet d’estimer son poids à 2 mois et demi, par exemple.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>Avec ta courbe, estime le poids à 1,5 mois.</li></ol>
+<p>Courbe du poids du poulain (mêmes données que la partie 1) :</p>
     
 
-<h4>Ta mission</h4>
+<figure class="cours-document"><img src="/tifsec-test-eleves/assets/images/graphiques/maths-2de-s19-classique-poulain.svg" alt="Courbe du poids du poulain selon l’âge, de 0 à 6 mois." loading="lazy" decoding="async"><figcaption>Courbe du poids du poulain selon l’âge, de 0 à 6 mois.</figcaption></figure>
     
 
-<ol><li>À toi : lis le poids à 5 mois, puis l’âge où le poulain pèse 150 kg.</li><li>Pourquoi lire ? La courbe donne des valeurs entre les mesures.</li></ol>
+<p>Comment le lire : l’âge est en bas (mois), le poids à gauche (kg). Chaque carreau vertical vaut 20 kg.</p>
     
 
 
@@ -960,63 +830,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a03-q01-label">Question 1 — Série A — Quelle est l’ordonnée du point d’abscisse 4 ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    On lit une valeur entre deux points grâce à la …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a03_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Lire la courbe — Mot(s) manquant(s) — On lit une valeur entre deux points grâce à la …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Prévoir loin des mesures s’appelle …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a03_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Lire la courbe — Mot(s) manquant(s) — Prévoir loin des mesures s’appelle …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Pour une valeur entre deux mesures, on s’aide du tracé qui relie les points. Et prévoir loin après les mesures, comment s’appelle-t-on ?</p></details>
+                <input type="text" inputmode="decimal" id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Pars de 4 en bas, monte, lis à gauche.</p></details>
             
             
         </div>
@@ -1024,15 +846,15 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a03-q02-label">Question 2 — Poids estimé à 5 mois ?</h3>
+            <h3 id="a03-q02-label">Question 2 — Le point (1 ; 90) est-il sur la courbe ?</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label"><p>Unité : kg</p>
+                <select id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label"><option value="">Choisis une réponse</option><option value="a">Oui</option><option value="b">Non</option></select>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Pars de 5 mois sur l’axe horizontal, monte jusqu’à la courbe, lis le poids à gauche.</p></details>
+            <details><summary>Un coup de pouce</summary><p>À 1 mois, le poids est-il 90 kg ?</p></details>
             
             
         </div>
@@ -1040,15 +862,63 @@
         <div class="cours-question" data-question="q03">
             
             
-            <h3 id="a03-q03-label">Question 3 — À quel âge le poulain pèse-t-il 150 kg environ ?</h3>
+            <h3 id="a03-q03-label">Question 3 — Le point (90 ; 1) est-il sur la courbe ?</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a03-q03" data-answer-id="a03_q03" data-required="true" aria-labelledby="a03-q03-label"><p>Unité : mois</p>
+                <select id="a03-q03" data-answer-id="a03_q03" data-required="true" aria-labelledby="a03-q03-label"><option value="">Choisis une réponse</option><option value="a">Oui</option><option value="b">Non</option></select>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Pars de 150 kg sur l’axe vertical, va jusqu’à la courbe, descends lire l’âge.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Dans (x ; y), x est l’âge.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a03-q04-label">Question 4 — Estime le poids à 3,5 mois (à 5 kg près).</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q04" data-answer-id="a03_q04" data-required="true" aria-labelledby="a03-q04-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Milieu entre f(3) = 165 et f(4) = 195.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a03-q05-label">Question 5 — Série B — Sur ce graphique, la courbe…</h3>
+            
+
+            
+            
+                <select id="a03-q05" data-answer-id="a03_q05" data-required="true" aria-labelledby="a03-q05-label"><option value="">Choisis une réponse</option><option value="a">monte de 0 à 6 mois</option><option value="b">descend</option><option value="c">monte puis descend</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Regarde de gauche à droite.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a03-q06-label">Question 6 — Où la courbe monte-t-elle le plus vite ?</h3>
+            
+
+            
+            
+                <select id="a03-q06" data-answer-id="a03_q06" data-required="true" aria-labelledby="a03-q06-label"><option value="">Choisis une réponse</option><option value="a">Entre 0 et 2 mois</option><option value="b">Entre 4 et 6 mois</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Là où elle est la plus raide.</p></details>
             
             
         </div>
@@ -1062,7 +932,7 @@
     
     <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Pour aller plus loin</h2>
+        <h2>Encore des exercices (si tu as fini)</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
@@ -1070,7 +940,7 @@
         
 
         
-<p>Prolonge la courbe jusqu’à 12 mois.</p>
+<p>Tu as fini ? Entraîne-toi encore. Ces exercices ne comptent pas dans la note.</p>
     
 
 
@@ -1079,15 +949,63 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Est-ce fiable ?</h3>
+            <h3 id="a04-q01-label">Question 1 — Avec f(x) = 12x + 50, calcule f(15).</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label"><p>Unité : €</p>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Après la dernière mesure, la croissance continue-t-elle forcément de la même façon ?</p></details>
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a04-q02-label">Question 2 — Avec h(x) = 5x + 2, calcule h(4).</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a04-q02" data-answer-id="a04_q02" data-required="false" aria-labelledby="a04-q02-label">
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a04-q03-label">Question 3 — Avec h(x) = 5x + 2, calcule h(0,5).</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a04-q03" data-answer-id="a04_q03" data-required="false" aria-labelledby="a04-q03-label">
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a04-q04-label">Question 4 — Tableau du poulain : prise de poids entre 1 et 5 mois ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a04-q04" data-answer-id="a04_q04" data-required="false" aria-labelledby="a04-q04-label"><p>Unité : kg</p>
+
+                
+            
             
             
         </div>
@@ -1095,41 +1013,6 @@
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#a03">← Étape précédente</a>
-            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a05" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Conclusion de ton travail</h2>
-        
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as découvert la notion de fonction. Il reste à répondre au problème de départ.</p>
-        
-        
-        
-
-        
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment représenter une grandeur qui dépend d’une autre ?</h3>
-            
-
-            
-            
-                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Dis ce qu’est une fonction, comment on la représente et comment on lit la courbe.</p></details>
-            
-            
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -1142,7 +1025,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Fonction : x → f(x).</li><li>Tableau → courbe → lecture.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Fonction : à chaque x, on associe un seul nombre f(x), son image.</li><li>Tableau de valeurs : 1re ligne x, 2e ligne f(x).</li><li>Formule : on remplace x par le nombre et on calcule (× avant +).</li><li>Courbe : les points (x ; f(x)) ; pour lire f(x), on part de x sur l’axe horizontal.</li></ul>
     
 </section>
 
@@ -1158,7 +1041,7 @@
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
     
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

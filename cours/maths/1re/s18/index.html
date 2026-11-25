@@ -124,7 +124,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Les premiers termes</a></li><li><a href="#a02">Le terme général</a></li><li><a href="#a03">Comparer avec une hausse fixe</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Partie 1 — La raison d’une suite géométrique</a></li><li><a href="#a02">Partie 2 — Pourcentages et raison</a></li><li><a href="#a03">Partie 3 — La formule directe uₙ = u₀ × qⁿ</a></li><li><a href="#a04">Encore des exercices (si tu as fini) — facultatif</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -136,7 +136,7 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Mathématiques · Bac Pro 1 · S18</span></div>
-    <h1>Séance 18 : Le prix de la pension augmente de 3 % par an</h1>
+    <h1>Séance 18 : Les suites géométriques</h1>
     
 
     
@@ -150,7 +150,7 @@
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Comment modéliser une quantité qui augmente chaque année du même pourcentage ?</p>
+        <p>Comment décrire une quantité qui augmente ou baisse du même pourcentage à chaque étape ?</p>
     </section>
     
 
@@ -168,9 +168,11 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Suite géométrique : on multiplie toujours par la même raison q : uₙ₊₁ = q × uₙ ; terme général uₙ = u₀ × qⁿ.</li>
+            <li>Suite géométrique : on multiplie toujours par la même raison q : uₙ₊₁ = uₙ × q.</li>
             
-            <li>Une hausse de t % donne q = 1 + t/100.</li>
+            <li>Hausse de t % : q = 1 + t/100 ; baisse de t % : q = 1 − t/100.</li>
+            
+            <li>uₙ = u₀ × qⁿ.</li>
             
         </ul>
         
@@ -178,16 +180,18 @@
         <h2>Ce que tu vas apprendre à faire</h2>
         <ul>
             
-            <li>Reconnaître une suite géométrique.</li>
+            <li>Reconnaître une suite géométrique et trouver sa raison.</li>
             
-            <li>Utiliser le terme général.</li>
+            <li>Passer d’un pourcentage à la raison q.</li>
+            
+            <li>Calculer un terme avec la formule uₙ = u₀ × qⁿ.</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En S03, tu as enchaîné des hausses.</p><p>Une hausse de 3 % chaque année donne une suite géométrique.</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Aujourd’hui, trois notions : la raison d’une suite géométrique, le lien avec les pourcentages, la formule directe.</p><p>Pour chacune : la notion, la méthode, pourquoi ça marche, un exemple au tableau, puis beaucoup d’exercices.</p></div></section>
     
     
     
@@ -202,67 +206,45 @@
 
 <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
     <article class="course-paper-sheet">
-        <header><p class="course-paper-class">Mathématiques — Bac Pro 1</p><p class="course-paper-kicker">Cours et exercices — version papier</p><h2 id="course-paper-title"><span class="course-paper-number">Séance 18</span> — Le prix de la pension augmente de 3 % par an</h2><p>Comment modéliser une quantité qui augmente chaque année du même pourcentage ?</p></header>
+        <header><p class="course-paper-class">Mathématiques — Bac Pro 1</p><p class="course-paper-kicker">Cours et exercices — version papier</p><h2 id="course-paper-title"><span class="course-paper-number">Séance 18</span> — Les suites géométriques</h2><p>Trois notions : la raison q, le lien avec les pourcentages, la formule uₙ = u₀ × qⁿ. Pour chacune : la notion, la méthode, l’exemple au tableau, puis les exercices.</p></header>
         
         <section class="course-paper-section">
-            <h3>Le cours en bref</h3>
+            <h3>I. La raison d’une suite géométrique</h3>
             
-<p>Le problème à résoudre : Comment modéliser une quantité qui augmente chaque année du même pourcentage ?</p>
+<h4>La notion</h4>
     
 
-<h4>Ce que tu vas apprendre</h4>
+<p>Une suite est géométrique quand on passe d’un terme au suivant en multipliant toujours par le même nombre.</p>
     
 
-<ul><li>Suite géométrique : on multiplie toujours par la même raison q : uₙ₊₁ = q × uₙ ; terme général uₙ = u₀ × qⁿ.</li><li>Une hausse de t % donne q = 1 + t/100.</li></ul>
+<p>Ce nombre est la raison, notée q.</p>
     
 
-<h4>Ce que tu vas savoir faire</h4>
+<h4>À retenir</h4>
     
 
-<ul><li>Reconnaître une suite géométrique.</li><li>Utiliser le terme général.</li></ul>
+<p>q = terme suivant ÷ terme. Géométrique si ce quotient est toujours le même.</p>
     
 
-<h4>Pourquoi cette séance ?</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<p>En S03, tu as enchaîné des hausses. Une hausse de 3 % chaque année donne une suite géométrique.</p>
+<ol><li>Calcule u₁ ÷ u₀, u₂ ÷ u₁, u₃ ÷ u₂…</li><li>Tous égaux : géométrique de raison q.</li><li>q &gt; 1 : la suite augmente ; 0 &lt; q &lt; 1 : elle diminue.</li><li>Un quotient différent : pas géométrique.</li></ol>
     
 
-<p>Comment utiliser cette fiche : pour chaque partie, lis la méthode et l’exemple, complète les points clés, puis fais l’exercice. Réponds sur les lignes.</p>
+<h4>Pourquoi ça marche</h4>
     
 
-
-            
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>I. Les premiers termes</h3>
-            
-<h4>La situation</h4>
+<p>1. Pourquoi diviser</p>
     
 
-<p>La pension coûte 400 € par mois en 2026 et augmente de 3 % chaque année. Combien coûtera-t-elle les années suivantes ?</p>
+<ul><li>On cherche par combien on a multiplié.</li><li>Si 200 devient 210, on a multiplié par 210 ÷ 200 = 1,05.</li></ul>
     
 
-<h4>Ce que c’est</h4>
+<p>2. Arithmétique ou géométrique</p>
     
 
-<p>Une suite géométrique est une suite où l’on passe d’un terme au suivant en multipliant toujours par le même nombre q, appelé raison.</p>
-    
-
-<h4>À quoi ça sert</h4>
-    
-
-<ul><li>Modéliser une hausse ou une baisse du même pourcentage chaque période : prix, population, valeur d’un matériel.</li></ul>
-    
-
-<h4>Comment ça marche</h4>
-    
-
-<ol><li>On traduit le pourcentage en coefficient : +3 % → q = 1,03.</li><li>u₁ = u₀ × q ; u₂ = u₁ × q ; et ainsi de suite.</li><li>Chaque hausse s’applique au prix de l’année précédente, pas au prix de départ.</li></ol>
-    
-
-<p>À retenir : uₙ₊₁ = q × uₙ.</p>
+<ul><li>Arithmétique : on ajoute la même chose (différences égales).</li><li>Géométrique : on multiplie par la même chose (quotients égaux).</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -271,62 +253,53 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<ul><li>Automatisme : 3 % de 400 de tête.</li></ul>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<h4>Ce que tu vas faire</h4>
-    
-
-<p>Tu vas calculer les deux premières années de la suite du prix de la pension (+3 % par an). On attend u₁ et u₂.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : u₀ = 400 € (2026), q = 1,03. Calcule u₁ et u₂.</li><li>Pourquoi multiplier ? Chaque hausse s’applique au prix de l’année précédente.</li></ol>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>Suite géométrique : uₙ₊₁ = q × <span class="cours-trou" aria-label="à compléter"></span> .</li><li>+3 % par an : q = <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 1 — Les premiers termes</h4>
+<p>Calculatrice autorisée.</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — u₀ = 1 000 et q = 1,1. Calcule u₁ et u₂.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — Une valeur de 500 € baisse de 10 % par an. Quelle est la raison ? Calcule u₁.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>u₁ ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>u₂ ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — Suite 3 ; 6 ; 12 ; 24 : raison ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Suite 200 ; 210 ; 220,5 : raison ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Suite 800 ; 400 ; 200 ; 100 : raison ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Suite 1 000 ; 900 ; 810 : raison ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>La suite 2 ; 5 ; 8 ; 11 est-elle géométrique ? Choix : Oui / Non, elle est arithmétique.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — Suite 50 ; 150 ; 450 : terme suivant ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Suite 400 ; 360 ; 324 : elle… Choix : augmente / diminue.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>II. Le terme général</h3>
+            <h3>II. Pourcentages et raison</h3>
             
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Combien coûtera la pension en 2036, dans 10 ans ? On ne veut pas faire 10 multiplications.</p>
+<p>Une hausse de 3 % chaque année revient à multiplier chaque année par 1,03.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>La suite des valeurs est donc géométrique de raison q = 1,03.</p>
     
 
-<p>Le terme général d’une suite géométrique donne directement uₙ : uₙ = u₀ × qⁿ (q multiplié n fois par lui-même).</p>
+<h4>À retenir</h4>
     
 
-<h4>À quoi ça sert</h4>
+<p>+t % par étape : q = 1 + t/100. −t % par étape : q = 1 − t/100.</p>
     
 
-<ul><li>Prévoir un prix ou une valeur à long terme.</li><li>Calculer une évolution totale sur plusieurs années.</li></ul>
+<h4>Comment ça fonctionne</h4>
     
 
-<h4>Comment ça marche</h4>
+<ol><li>Écris le pourcentage en décimal (3 % = 0,03).</li><li>Hausse : q = 1 + 0,03 = 1,03 ; baisse : q = 1 − 0,03 = 0,97.</li><li>Terme suivant : uₙ₊₁ = uₙ × q.</li><li>Arrondis au centime si ce sont des euros.</li></ol>
     
 
-<ol><li>On écrit uₙ = u₀ × qⁿ.</li><li>À la calculatrice : u₀ × q ^ n (touche puissance).</li><li>Hausse totale : (uₙ − u₀) ÷ u₀, en pourcentage.</li></ol>
+<h4>Pourquoi ça marche</h4>
     
 
-<p>À retenir : uₙ = u₀ × qⁿ.</p>
+<p>1. En raisonnant avec les pourcentages</p>
+    
+
+<ul><li>Le prix de départ représente 100 % (soit 1).</li><li>Avec 3 % de plus, on paie 100 % + 3 % = 103 % = 1,03 fois le prix.</li></ul>
+    
+
+<p>2. En regroupant</p>
+    
+
+<ul><li>Nouveau prix = prix + prix × 0,03 = prix × (1 + 0,03) = prix × 1,03.</li><li>Le 1 garde le prix, le 0,03 ajoute les 3 %.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -335,59 +308,53 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<h4>Ce que tu vas faire</h4>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<p>Tu vas calculer avec le terme général le prix de la pension dans 10 ans et la hausse totale. On attend les deux résultats.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : écris uₙ = 400 × 1,03ⁿ et calcule le prix en 2036 (n = 10).</li><li>Pourquoi la puissance ? 10 hausses successives = 10 multiplications par 1,03.</li></ol>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>Terme général : uₙ = u₀ × q puissance <span class="cours-trou" aria-label="à compléter"></span> .</li><li>400 × 1,03¹⁰ ≈ <span class="cours-trou" aria-label="à compléter"></span> €.</li></ul>
-    
-
-<h4>Exercice 2 — Le terme général</h4>
+<p>Calculatrice autorisée. Arrondis au centime.</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — u₀ = 200 et q = 1,05. Calcule u₃ à la calculatrice.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — Avec u₀ = 1 000 et q = 1,1, calcule u₄.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Prix en 2036 (au centime) ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Hausse totale en % sur 10 ans (au dixième) ? (en %)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — Raison q pour +3 % par an ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Raison q pour +10 % par an ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Raison q pour −20 % par an ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Raison q pour −5 % par an ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — u₀ = 400 €, q = 1,03 : u₁ ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>u₂ ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Une selle de 1 500 € perd 20 % de sa valeur par an. Valeur après 1 an ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>III. Comparer avec une hausse fixe</h3>
+            <h3>III. La formule directe uₙ = u₀ × qⁿ</h3>
             
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Le client hésite entre deux contrats : A, +3 % par an ; B, +12 € par an. Lequel coûtera le moins cher en 2036 ?</p>
+<p>Pour connaître le prix dans 10 ans, on ne multiplie pas 10 fois à la main.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>Après n étapes, on a multiplié n fois par q : c’est q puissance n.</p>
     
 
-<p>Comparer une suite arithmétique (on ajoute toujours la même quantité) et une suite géométrique (on multiplie toujours par le même nombre).</p>
+<h4>À retenir</h4>
     
 
-<h4>À quoi ça sert</h4>
+<p>uₙ = u₀ × qⁿ. À la calculatrice : u₀ × q ^ n.</p>
     
 
-<ul><li>Choisir le contrat le moins cher sur une durée donnée.</li><li>Comprendre pourquoi une hausse en pourcentage finit par dépasser une hausse fixe.</li></ul>
+<h4>Comment ça fonctionne</h4>
     
 
-<h4>Comment ça marche</h4>
+<ol><li>Repère u₀, q et n.</li><li>Tape u₀ × q ^ n (touche ^ ou xʸ).</li><li>Arrondis selon l’unité.</li><li>Contrôle avec u₁ et u₂ calculés pas à pas.</li></ol>
     
 
-<ol><li>On écrit les deux suites : uₙ = u₀ × qⁿ et vₙ = v₀ + n × r.</li><li>On calcule les deux termes pour la même année.</li><li>On compare, puis on regarde l’évolution à long terme.</li></ol>
+<h4>Pourquoi ça marche</h4>
     
 
-<p>À retenir : Hausse fixe : suite arithmétique ; hausse en % : suite géométrique, de plus en plus rapide.</p>
+<p>1. En comptant les multiplications</p>
+    
+
+<ul><li>u₁ = u₀ × q ; u₂ = u₀ × q × q = u₀ × q² ; u₃ = u₀ × q³.</li><li>Au rang n, on a multiplié n fois par q : uₙ = u₀ × qⁿ.</li></ul>
+    
+
+<p>2. Pourquoi pas u₀ × q × n</p>
+    
+
+<ul><li>× n répéterait une addition, pas une multiplication.</li><li>400 × 1,03 × 10 = 4 120 € : absurde pour 10 ans à +3 %.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -396,80 +363,31 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<h4>Ce que tu vas faire</h4>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<p>Tu vas comparer en 2036 une hausse de 3 % par an et une hausse de 12 € par an. On attend le prix de l’option B et la comparaison.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : option B : + 12 € par an (suite arithmétique). Compare les prix en 2036.</li><li>Pourquoi comparer ? Le client choisit le contrat le moins cher sur la durée.</li></ol>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>Une hausse fixe donne une suite <span class="cours-trou" aria-label="à compléter"></span> .</li><li>À long terme, la suite géométrique augmente de plus en plus <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 3 — Comparer avec une hausse fixe</h4>
+<p>Calculatrice autorisée. Arrondis au centime.</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — v₀ = 200 et +10 € par an. Calcule v₃ et compare avec 200 × 1,05³ ≈ 231,53 €.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Prix en 2036 avec l’option B ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Quelle option est la plus favorable au client sur 10 ans ? Et sur le long terme ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — u₀ = 5, q = 2 : u₄ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>u₀ = 400, q = 1,03 : u₅ ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>u₀ = 1 500, q = 0,8 : u₃ ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>u₀ = 2 000, q = 1,1 : u₂ ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — Un troupeau de 40 chevaux augmente de 5 % par an. Effectif dans 4 ans (arrondi à l’unité) ? (en chevaux)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Un élève calcule u₁₀ = 400 × 1,03 × 10. Que dire ? Choix : C’est juste / Faux : c’est 400 × 1,03¹⁰.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>Conclusion</h3>
+            <h3>Encore des exercices (si tu as fini)</h3>
             
-<p>Avec ce que tu as fait dans les parties précédentes, réponds en quelques phrases complètes.</p>
-    
 
-
-            <ol class="course-paper-questions"><li><span>Réponds au problème du jour : comment modéliser une quantité qui augmente chaque année du même pourcentage ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Pour aller plus loin (facultatif)</h3>
-            
-<p>Au bout de combien d’années le prix dépasse-t-il 500 € (option A) ?</p>
-    
-
-
-            <ol class="course-paper-questions"><li><span>Au tableur ou par essais.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Suite 2 ; 6 ; 18 : raison ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Raison q pour +2,5 % ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>u₀ = 1 000, q = 0,9 : u₂ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>u₀ = 300, q = 1,02 : u₃ (au centime) ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>À retenir</h3>
             
-<ul><li>Géométrique : uₙ₊₁ = q × uₙ ; uₙ = u₀ × qⁿ.</li><li>+t % : q = 1 + t/100.</li></ul>
+<ul><li>Géométrique : le quotient de deux termes qui se suivent est toujours le même : la raison q.</li><li>uₙ₊₁ = uₙ × q.</li><li>+t % par étape : q = 1 + t/100 ; −t % : q = 1 − t/100.</li><li>uₙ = u₀ × qⁿ (puissance : touche ^ de la calculatrice).</li></ul>
     
 
 
             
-        </section>
-        
-        <section class="course-paper-section course-paper-break">
-            <h2 class="course-paper-part">Fiche d’exercices</h2><h3>Exercice 1 — Suite géométrique</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>u₀ = 500, q = 1,04 : u₁, u₂ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>u₅ (au centime) ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Exercice 2 — Baisse</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>Un matériel de 2 000 € perd 15 % par an : valeur après 3 ans ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Exercice 3 — Comparer</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>+4 % par an ou +20 € par an sur 500 € : lequel est plus cher après 10 ans ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
     </article>
@@ -483,60 +401,57 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Les premiers termes</h2>
+        <h2>Partie 1 — La raison d’une suite géométrique</h2>
         
         
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas calculer les deux premières années de la suite du prix de la pension (+3 % par an). On attend u₁ et u₂.</p></div>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>La pension coûte 400 € par mois en 2026 et augmente de 3 % chaque année. Combien coûtera-t-elle les années suivantes ?</p>
+<p>Une suite est géométrique quand on passe d’un terme au suivant en multipliant toujours par le même nombre.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>Ce nombre est la raison, notée q.</p>
     
 
-<p>Une suite géométrique est une suite où l’on passe d’un terme au suivant en multipliant toujours par le même nombre q, appelé raison.</p>
+<p>À retenir : q = terme suivant ÷ terme. Géométrique si ce quotient est toujours le même.</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Modéliser une hausse ou une baisse du même pourcentage chaque période : prix, population, valeur d’un matériel.</li></ul>
+<ol><li>Calcule u₁ ÷ u₀, u₂ ÷ u₁, u₃ ÷ u₂…</li><li>Tous égaux : géométrique de raison q.</li><li>q &gt; 1 : la suite augmente ; 0 &lt; q &lt; 1 : elle diminue.</li><li>Un quotient différent : pas géométrique.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>On traduit le pourcentage en coefficient : +3 % → q = 1,03.</li><li>u₁ = u₀ × q ; u₂ = u₁ × q ; et ainsi de suite.</li><li>Chaque hausse s’applique au prix de l’année précédente, pas au prix de départ.</li></ol>
+<p>1. Pourquoi diviser</p>
     
 
-<p>À retenir : uₙ₊₁ = q × uₙ.</p>
+<ul><li>On cherche par combien on a multiplié.</li><li>Si 200 devient 210, on a multiplié par 210 ÷ 200 = 1,05.</li></ul>
+    
+
+<p>2. Arithmétique ou géométrique</p>
+    
+
+<ul><li>Arithmétique : on ajoute la même chose (différences égales).</li><li>Géométrique : on multiplie par la même chose (quotients égaux).</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>u₀ = 1 000 et q = 1,1. Calcule u₁ et u₂.</li><li>Une valeur de 500 € baisse de 10 % par an. Quelle est la raison ? Calcule u₁.</li></ol>
-    
-
-<ul><li>Automatisme : 3 % de 400 de tête.</li></ul>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : u₀ = 400 € (2026), q = 1,03. Calcule u₁ et u₂.</li><li>Pourquoi multiplier ? Chaque hausse s’applique au prix de l’année précédente.</li></ol>
+<p>Calculatrice autorisée.</p>
     
 
 
@@ -545,63 +460,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a01-q01-label">Question 1 — Série A — Suite 3 ; 6 ; 12 ; 24 : raison ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Suite géométrique : uₙ₊₁ = q × …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Les premiers termes — Mot(s) manquant(s) — Suite géométrique : uₙ₊₁ = q × …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    +3 % par an : q = …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Les premiers termes — Mot(s) manquant(s) — +3 % par an : q = …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Relis l’exemple de la cotisation : chaque terme = q × le précédent. +3 % par an : q = 1 + combien ?</p></details>
+                <input type="text" inputmode="decimal" id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>6 ÷ 3.</p></details>
             
             
         </div>
@@ -609,15 +476,15 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — u₁ ?</h3>
+            <h3 id="a01-q02-label">Question 2 — Suite 200 ; 210 ; 220,5 : raison ?</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><p>Unité : €</p>
+                <input type="text" inputmode="decimal" id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label">
 
                 
-            <details><summary>Un coup de pouce</summary><p>u₁ = 400 × 1,03.</p></details>
+            <details><summary>Un coup de pouce</summary><p>210 ÷ 200.</p></details>
             
             
         </div>
@@ -625,15 +492,79 @@
         <div class="cours-question" data-question="q03">
             
             
-            <h3 id="a01-q03-label">Question 3 — u₂ ?</h3>
+            <h3 id="a01-q03-label">Question 3 — Suite 800 ; 400 ; 200 ; 100 : raison ?</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label"><p>Unité : €</p>
+                <input type="text" inputmode="decimal" id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label">
 
                 
-            <details><summary>Un coup de pouce</summary><p>u₂ = u₁ × 1,03 (ou 400 × 1,03²).</p></details>
+            <details><summary>Un coup de pouce</summary><p>400 ÷ 800.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a01-q04-label">Question 4 — Suite 1 000 ; 900 ; 810 : raison ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q04" data-answer-id="a01_q04" data-required="true" aria-labelledby="a01-q04-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>900 ÷ 1 000.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a01-q05-label">Question 5 — La suite 2 ; 5 ; 8 ; 11 est-elle géométrique ?</h3>
+            
+
+            
+            
+                <select id="a01-q05" data-answer-id="a01_q05" data-required="true" aria-labelledby="a01-q05-label"><option value="">Choisis une réponse</option><option value="a">Oui</option><option value="b">Non, elle est arithmétique</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Quotients : 2,5 ; 1,6… Différences : 3, 3, 3.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a01-q06-label">Question 6 — Série B — Suite 50 ; 150 ; 450 : terme suivant ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q06" data-answer-id="a01_q06" data-required="true" aria-labelledby="a01-q06-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>q = 3.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q07">
+            
+            
+            <h3 id="a01-q07-label">Question 7 — Suite 400 ; 360 ; 324 : elle…</h3>
+            
+
+            
+            
+                <select id="a01-q07" data-answer-id="a01_q07" data-required="true" aria-labelledby="a01-q07-label"><option value="">Choisis une réponse</option><option value="a">augmente</option><option value="b">diminue</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>q = 0,9 &lt; 1.</p></details>
             
             
         </div>
@@ -647,57 +578,57 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Le terme général</h2>
+        <h2>Partie 2 — Pourcentages et raison</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les premiers termes sont calculés. Saute directement à 10 ans.</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas calculer avec le terme général le prix de la pension dans 10 ans et la hausse totale. On attend les deux résultats.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais trouver q. Deuxième notion : faire le lien avec les pourcentages.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Combien coûtera la pension en 2036, dans 10 ans ? On ne veut pas faire 10 multiplications.</p>
+<p>Une hausse de 3 % chaque année revient à multiplier chaque année par 1,03.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>La suite des valeurs est donc géométrique de raison q = 1,03.</p>
     
 
-<p>Le terme général d’une suite géométrique donne directement uₙ : uₙ = u₀ × qⁿ (q multiplié n fois par lui-même).</p>
+<p>À retenir : +t % par étape : q = 1 + t/100. −t % par étape : q = 1 − t/100.</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Prévoir un prix ou une valeur à long terme.</li><li>Calculer une évolution totale sur plusieurs années.</li></ul>
+<ol><li>Écris le pourcentage en décimal (3 % = 0,03).</li><li>Hausse : q = 1 + 0,03 = 1,03 ; baisse : q = 1 − 0,03 = 0,97.</li><li>Terme suivant : uₙ₊₁ = uₙ × q.</li><li>Arrondis au centime si ce sont des euros.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>On écrit uₙ = u₀ × qⁿ.</li><li>À la calculatrice : u₀ × q ^ n (touche puissance).</li><li>Hausse totale : (uₙ − u₀) ÷ u₀, en pourcentage.</li></ol>
+<p>1. En raisonnant avec les pourcentages</p>
     
 
-<p>À retenir : uₙ = u₀ × qⁿ.</p>
+<ul><li>Le prix de départ représente 100 % (soit 1).</li><li>Avec 3 % de plus, on paie 100 % + 3 % = 103 % = 1,03 fois le prix.</li></ul>
+    
+
+<p>2. En regroupant</p>
+    
+
+<ul><li>Nouveau prix = prix + prix × 0,03 = prix × (1 + 0,03) = prix × 1,03.</li><li>Le 1 garde le prix, le 0,03 ajoute les 3 %.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>u₀ = 200 et q = 1,05. Calcule u₃ à la calculatrice.</li><li>Avec u₀ = 1 000 et q = 1,1, calcule u₄.</li></ol>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : écris uₙ = 400 × 1,03ⁿ et calcule le prix en 2036 (n = 10).</li><li>Pourquoi la puissance ? 10 hausses successives = 10 multiplications par 1,03.</li></ol>
+<p>Calculatrice autorisée. Arrondis au centime.</p>
     
 
 
@@ -706,63 +637,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a02-q01-label">Question 1 — Série A — Raison q pour +3 % par an ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Terme général : uₙ = u₀ × q puissance …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Le terme général — Mot(s) manquant(s) — Terme général : uₙ = u₀ × q puissance …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    400 × 1,03¹⁰ ≈ …… €.
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Le terme général — Mot(s) manquant(s) — 400 × 1,03¹⁰ ≈ …… €.">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Terme général : u₀ × q puissance… ? Puis calcule 400 × 1,03 ^ 10 avec la touche puissance.</p></details>
+                <input type="text" inputmode="decimal" id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>1 + 0,03.</p></details>
             
             
         </div>
@@ -770,15 +653,15 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Prix en 2036 (au centime) ?</h3>
+            <h3 id="a02-q02-label">Question 2 — Raison q pour +10 % par an ?</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><p>Unité : €</p>
+                <input type="text" inputmode="decimal" id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label">
 
                 
-            <details><summary>Un coup de pouce</summary><p>2036 correspond à n = 10 : 400 × 1,03¹⁰, arrondi au centime.</p></details>
+            <details><summary>Un coup de pouce</summary><p>1 + 0,10.</p></details>
             
             
         </div>
@@ -786,15 +669,79 @@
         <div class="cours-question" data-question="q03">
             
             
-            <h3 id="a02-q03-label">Question 3 — Hausse totale en % sur 10 ans (au dixième) ?</h3>
+            <h3 id="a02-q03-label">Question 3 — Raison q pour −20 % par an ?</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label"><p>Unité : %</p>
+                <input type="text" inputmode="decimal" id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label">
 
                 
-            <details><summary>Un coup de pouce</summary><p>Comme l’exemple : (prix 2036 − 400) ÷ 400 × 100, arrondi au dixième.</p></details>
+            <details><summary>Un coup de pouce</summary><p>1 − 0,20.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a02-q04-label">Question 4 — Raison q pour −5 % par an ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q04" data-answer-id="a02_q04" data-required="true" aria-labelledby="a02-q04-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>1 − 0,05.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a02-q05-label">Question 5 — Série B — u₀ = 400 €, q = 1,03 : u₁ ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q05" data-answer-id="a02_q05" data-required="true" aria-labelledby="a02-q05-label"><p>Unité : €</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>400 × 1,03.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a02-q06-label">Question 6 — u₂ ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q06" data-answer-id="a02_q06" data-required="true" aria-labelledby="a02-q06-label"><p>Unité : €</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>412 × 1,03.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q07">
+            
+            
+            <h3 id="a02-q07-label">Question 7 — Une selle de 1 500 € perd 20 % de sa valeur par an. Valeur après 1 an ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q07" data-answer-id="a02_q07" data-required="true" aria-labelledby="a02-q07-label"><p>Unité : €</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>1 500 × 0,8.</p></details>
             
             
         </div>
@@ -808,57 +755,57 @@
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Comparer avec une hausse fixe</h2>
+        <h2>Partie 3 — La formule directe uₙ = u₀ × qⁿ</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais calculer une hausse en %. Compare-la à une hausse fixe.</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas comparer en 2036 une hausse de 3 % par an et une hausse de 12 € par an. On attend le prix de l’option B et la comparaison.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Dernière notion : calculer directement un terme lointain.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Le client hésite entre deux contrats : A, +3 % par an ; B, +12 € par an. Lequel coûtera le moins cher en 2036 ?</p>
+<p>Pour connaître le prix dans 10 ans, on ne multiplie pas 10 fois à la main.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>Après n étapes, on a multiplié n fois par q : c’est q puissance n.</p>
     
 
-<p>Comparer une suite arithmétique (on ajoute toujours la même quantité) et une suite géométrique (on multiplie toujours par le même nombre).</p>
+<p>À retenir : uₙ = u₀ × qⁿ. À la calculatrice : u₀ × q ^ n.</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Choisir le contrat le moins cher sur une durée donnée.</li><li>Comprendre pourquoi une hausse en pourcentage finit par dépasser une hausse fixe.</li></ul>
+<ol><li>Repère u₀, q et n.</li><li>Tape u₀ × q ^ n (touche ^ ou xʸ).</li><li>Arrondis selon l’unité.</li><li>Contrôle avec u₁ et u₂ calculés pas à pas.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>On écrit les deux suites : uₙ = u₀ × qⁿ et vₙ = v₀ + n × r.</li><li>On calcule les deux termes pour la même année.</li><li>On compare, puis on regarde l’évolution à long terme.</li></ol>
+<p>1. En comptant les multiplications</p>
     
 
-<p>À retenir : Hausse fixe : suite arithmétique ; hausse en % : suite géométrique, de plus en plus rapide.</p>
+<ul><li>u₁ = u₀ × q ; u₂ = u₀ × q × q = u₀ × q² ; u₃ = u₀ × q³.</li><li>Au rang n, on a multiplié n fois par q : uₙ = u₀ × qⁿ.</li></ul>
+    
+
+<p>2. Pourquoi pas u₀ × q × n</p>
+    
+
+<ul><li>× n répéterait une addition, pas une multiplication.</li><li>400 × 1,03 × 10 = 4 120 € : absurde pour 10 ans à +3 %.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>v₀ = 200 et +10 € par an. Calcule v₃ et compare avec 200 × 1,05³ ≈ 231,53 €.</li></ol>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : option B : + 12 € par an (suite arithmétique). Compare les prix en 2036.</li><li>Pourquoi comparer ? Le client choisit le contrat le moins cher sur la durée.</li></ol>
+<p>Calculatrice autorisée. Arrondis au centime.</p>
     
 
 
@@ -867,63 +814,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a03-q01-label">Question 1 — Série A — u₀ = 5, q = 2 : u₄ ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Une hausse fixe donne une suite …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a03_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Comparer avec une hausse fixe — Mot(s) manquant(s) — Une hausse fixe donne une suite …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    À long terme, la suite géométrique augmente de plus en plus …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a03_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Comparer avec une hausse fixe — Mot(s) manquant(s) — À long terme, la suite géométrique augmente de plus en plus …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Une hausse fixe (+12 € par an) donne une suite de quel type ? Et la géométrique augmente de plus en plus… ?</p></details>
+                <input type="text" inputmode="decimal" id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>5 × 2⁴.</p></details>
             
             
         </div>
@@ -931,7 +830,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a03-q02-label">Question 2 — Prix en 2036 avec l’option B ?</h3>
+            <h3 id="a03-q02-label">Question 2 — u₀ = 400, q = 1,03 : u₅ ?</h3>
             
 
             
@@ -939,7 +838,7 @@
                 <input type="text" inputmode="decimal" id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label"><p>Unité : €</p>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Option B : vₙ = 400 + 12n. Remplace n par 10.</p></details>
+            <details><summary>Un coup de pouce</summary><p>400 × 1,03⁵.</p></details>
             
             
         </div>
@@ -947,15 +846,63 @@
         <div class="cours-question" data-question="q03">
             
             
-            <h3 id="a03-q03-label">Question 3 — Quelle option est la plus favorable au client sur 10 ans ? Et sur le long terme ?</h3>
+            <h3 id="a03-q03-label">Question 3 — u₀ = 1 500, q = 0,8 : u₃ ?</h3>
             
 
             
             
-                <textarea id="a03-q03" data-answer-id="a03_q03" data-required="true" aria-labelledby="a03-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a03-q03" data-answer-id="a03_q03" data-required="true" aria-labelledby="a03-q03-label"><p>Unité : €</p>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Compare les deux prix en 2036, puis imagine n = 30 : quelle suite finit par dépasser l’autre ?</p></details>
+            <details><summary>Un coup de pouce</summary><p>1 500 × 0,8³.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a03-q04-label">Question 4 — u₀ = 2 000, q = 1,1 : u₂ ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q04" data-answer-id="a03_q04" data-required="true" aria-labelledby="a03-q04-label"><p>Unité : €</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>2 000 × 1,1².</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a03-q05-label">Question 5 — Série B — Un troupeau de 40 chevaux augmente de 5 % par an. Effectif dans 4 ans (arrondi à l’unité) ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q05" data-answer-id="a03_q05" data-required="true" aria-labelledby="a03-q05-label"><p>Unité : chevaux</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>40 × 1,05⁴.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a03-q06-label">Question 6 — Un élève calcule u₁₀ = 400 × 1,03 × 10. Que dire ?</h3>
+            
+
+            
+            
+                <select id="a03-q06" data-answer-id="a03_q06" data-required="true" aria-labelledby="a03-q06-label"><option value="">Choisis une réponse</option><option value="a">C’est juste</option><option value="b">Faux : c’est 400 × 1,03¹⁰</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>On multiplie 10 fois par 1,03.</p></details>
             
             
         </div>
@@ -969,7 +916,7 @@
     
     <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Pour aller plus loin</h2>
+        <h2>Encore des exercices (si tu as fini)</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
@@ -977,7 +924,7 @@
         
 
         
-<p>Au bout de combien d’années le prix dépasse-t-il 500 € (option A) ?</p>
+<p>Tu as fini ? Entraîne-toi encore. Ces exercices ne comptent pas dans la note.</p>
     
 
 
@@ -986,15 +933,63 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Au tableur ou par essais.</h3>
+            <h3 id="a04-q01-label">Question 1 — Suite 2 ; 6 ; 18 : raison ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label">
 
                 
-            <details><summary>Un coup de pouce</summary><p>Au tableur, recopie 400 × 1,03ⁿ pour n = 1, 2, 3… et cherche la première année où le prix dépasse 500 €.</p></details>
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a04-q02-label">Question 2 — Raison q pour +2,5 % ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a04-q02" data-answer-id="a04_q02" data-required="false" aria-labelledby="a04-q02-label">
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a04-q03-label">Question 3 — u₀ = 1 000, q = 0,9 : u₂ ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a04-q03" data-answer-id="a04_q03" data-required="false" aria-labelledby="a04-q03-label">
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a04-q04-label">Question 4 — u₀ = 300, q = 1,02 : u₃ (au centime) ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a04-q04" data-answer-id="a04_q04" data-required="false" aria-labelledby="a04-q04-label">
+
+                
+            
             
             
         </div>
@@ -1002,41 +997,6 @@
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#a03">← Étape précédente</a>
-            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a05" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Conclusion de ton travail</h2>
-        
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais modéliser une hausse en %. Il reste à répondre au problème de départ.</p>
-        
-        
-        
-
-        
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment modéliser une quantité qui augmente chaque année du même pourcentage ?</h3>
-            
-
-            
-            
-                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Dis ce qu’est une suite géométrique, sa raison, son terme général, et la comparaison avec une hausse fixe.</p></details>
-            
-            
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -1049,7 +1009,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Géométrique : uₙ₊₁ = q × uₙ ; uₙ = u₀ × qⁿ.</li><li>+t % : q = 1 + t/100.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Géométrique : le quotient de deux termes qui se suivent est toujours le même : la raison q.</li><li>uₙ₊₁ = uₙ × q.</li><li>+t % par étape : q = 1 + t/100 ; −t % : q = 1 − t/100.</li><li>uₙ = u₀ × qⁿ (puissance : touche ^ de la calculatrice).</li></ul>
     
 </section>
 
@@ -1065,7 +1025,7 @@
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
     
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

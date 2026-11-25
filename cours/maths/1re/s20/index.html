@@ -124,7 +124,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Les termes au tableur</a></li><li><a href="#a02">Les sommes</a></li><li><a href="#a03">Conseiller</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Partie 1 — Additionner les termes</a></li><li><a href="#a02">Partie 2 — La somme d’une suite arithmétique</a></li><li><a href="#a03">Partie 3 — La somme d’une suite géométrique</a></li><li><a href="#a04">Encore des exercices (si tu as fini) — facultatif</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -136,7 +136,7 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Mathématiques · Bac Pro 1 · S20</span></div>
-    <h1>Séance 20 : Combien a-t-on dépensé en tout ?</h1>
+    <h1>Séance 20 : Combien a-t-on dépensé en tout ? La somme des termes</h1>
     
 
     
@@ -150,7 +150,7 @@
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Comment calculer la somme des termes d’une suite avec le tableur ?</p>
+        <p>Comment calculer rapidement le total de plusieurs termes d’une suite (dépenses de plusieurs années, plusieurs mois) ?</p>
     </section>
     
 
@@ -168,9 +168,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>La somme de termes = total cumulé sur plusieurs périodes (ex. coût total d’une pension sur 10 ans).</li>
+            <li>Somme de termes d’une suite arithmétique : S = nombre de termes × (premier + dernier) ÷ 2.</li>
             
-            <li>Au tableur : colonne des termes, puis SOMME, ou colonne de cumul.</li>
+            <li>Somme de termes d’une suite géométrique : S = premier terme × (1 − qⁿ) ÷ (1 − q), avec n le nombre de termes.</li>
             
         </ul>
         
@@ -178,16 +178,18 @@
         <h2>Ce que tu vas apprendre à faire</h2>
         <ul>
             
-            <li>Calculer une somme de termes au tableur.</li>
+            <li>Additionner les premiers termes d’une suite.</li>
             
-            <li>Comparer deux contrats sur leur coût total.</li>
+            <li>Utiliser la formule de la somme pour une suite arithmétique.</li>
+            
+            <li>Utiliser la formule de la somme pour une suite géométrique.</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En S18, tu as comparé deux options de prix pour 2036.</p><p>Mais le client paie chaque année : quel est le coût total sur 10 ans ?</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Aujourd’hui, trois notions : additionner les termes, la somme d’une suite arithmétique, la somme d’une suite géométrique.</p><p>Pour chacune : la notion, la méthode, pourquoi ça marche, un exemple au tableau, puis beaucoup d’exercices.</p></div></section>
     
     
     
@@ -202,67 +204,45 @@
 
 <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
     <article class="course-paper-sheet">
-        <header><p class="course-paper-class">Mathématiques — Bac Pro 1</p><p class="course-paper-kicker">Cours et exercices — version papier</p><h2 id="course-paper-title"><span class="course-paper-number">Séance 20</span> — Combien a-t-on dépensé en tout ?</h2><p>Comment calculer la somme des termes d’une suite avec le tableur ?</p></header>
+        <header><p class="course-paper-class">Mathématiques — Bac Pro 1</p><p class="course-paper-kicker">Cours et exercices — version papier</p><h2 id="course-paper-title"><span class="course-paper-number">Séance 20</span> — Combien a-t-on dépensé en tout ? La somme des termes</h2><p>Trois notions : additionner les termes, somme arithmétique, somme géométrique. Pour chacune : la notion, la méthode, l’exemple au tableau, puis les exercices.</p></header>
         
         <section class="course-paper-section">
-            <h3>Le cours en bref</h3>
+            <h3>I. Additionner les termes</h3>
             
-<p>Le problème à résoudre : Comment calculer la somme des termes d’une suite avec le tableur ?</p>
+<h4>La notion</h4>
     
 
-<h4>Ce que tu vas apprendre</h4>
+<p>Le prix payé chaque année forme une suite ; ce qu’on a payé en tout est la somme de ses termes.</p>
     
 
-<ul><li>La somme de termes = total cumulé sur plusieurs périodes (ex. coût total d’une pension sur 10 ans).</li><li>Au tableur : colonne des termes, puis SOMME, ou colonne de cumul.</li></ul>
+<p>Pour peu de termes, on les calcule et on les additionne.</p>
     
 
-<h4>Ce que tu vas savoir faire</h4>
+<h4>À retenir</h4>
     
 
-<ul><li>Calculer une somme de termes au tableur.</li><li>Comparer deux contrats sur leur coût total.</li></ul>
+<p>Total = u₀ + u₁ + u₂ + … (autant de termes que de périodes).</p>
     
 
-<h4>Pourquoi cette séance ?</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<p>En S18, tu as comparé deux options de prix pour 2036. Mais le client paie chaque année : quel est le coût total sur 10 ans ?</p>
+<ol><li>Compte le nombre de périodes : c’est le nombre de termes.</li><li>Calcule chaque terme.</li><li>Additionne-les.</li><li>Attention : de u₀ à u₃, il y a 4 termes.</li></ol>
     
 
-<p>Comment utiliser cette fiche : pour chaque partie, lis la méthode et l’exemple, complète les points clés, puis fais l’exercice. Réponds sur les lignes.</p>
+<h4>Pourquoi ça marche</h4>
     
 
-
-            
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>I. Les termes au tableur</h3>
-            
-<h4>La situation</h4>
+<p>1. Pourquoi une somme</p>
     
 
-<p>Le client paie une pension tous les mois pendant 10 ans. Combien paie-t-il chaque année avec chaque option ?</p>
+<ul><li>Chaque année, on paie le terme de l’année.</li><li>Sur 4 ans, on paie les 4 termes : on les additionne.</li></ul>
     
 
-<h4>Ce que c’est</h4>
+<p>2. Pourquoi compter les termes</p>
     
 
-<p>Le coût annuel est le terme de la suite pour une année : 12 fois le prix mensuel de cette année-là.</p>
-    
-
-<h4>À quoi ça sert</h4>
-    
-
-<ul><li>Préparer le calcul du total sur plusieurs années.</li><li>Comparer deux contrats année par année.</li></ul>
-    
-
-<h4>Comment ça marche</h4>
-    
-
-<ol><li>Colonne A : le rang n de 0 à 9.</li><li>Option A : =12*400*1,03^A2 ; option B : =12*(400+12*A2).</li><li>On recopie vers le bas jusqu’à n = 9.</li></ol>
-    
-
-<p>À retenir : Coût annuel = 12 × coût mensuel.</p>
+<ul><li>De u₀ à u₃ : u₀, u₁, u₂, u₃ → 4 termes, pas 3.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -271,62 +251,53 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<ul><li>Automatisme : 12 × 508 = ?</li></ul>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<h4>Ce que tu vas faire</h4>
-    
-
-<p>Tu vas construire au tableur les coûts annuels des deux options de pension sur 10 ans. On attend deux coûts annuels.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : colonne A : n de 0 à 9 ; colonne B : 12 × 400 × 1,03ⁿ (option A) ; colonne C : 12 × (400 + 12n) (option B).</li><li>Pourquoi × 12 ? Le prix est mensuel, le coût annuel compte 12 mois.</li></ol>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>Coût annuel = 12 × coût <span class="cours-trou" aria-label="à compléter"></span> .</li><li>Pour n = 9, option B : 12 × (400 + <span class="cours-trou" aria-label="à compléter"></span> ).</li></ul>
-    
-
-<h4>Exercice 1 — Les termes au tableur</h4>
+<p>Calculatrice autorisée.</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — Un loyer de 100 € par mois augmente de 2 % par an. Coût annuel pour n = 0 et n = 1 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Coût annuel de l’option A pour n = 0 ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Coût annuel de l’option B pour n = 9 ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — Combien de termes de u₀ à u₉ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Combien de termes de u₀ à u₁₄ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>u₀ = 100, r = 10 : u₀ + u₁ + u₂ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>u₀ = 50, r = −5 : u₀ + u₁ + u₂ + u₃ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — u₀ = 200, q = 2 : u₀ + u₁ + u₂ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Foin : 120 € le 1er mois, puis + 8 € par mois. Total sur 3 mois ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>II. Les sommes</h3>
+            <h3>II. La somme d’une suite arithmétique</h3>
             
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Ce qui compte pour le client, c’est ce qu’il paie en tout sur 10 ans.</p>
+<p>Pour une suite arithmétique, le premier et le dernier terme, le deuxième et l’avant-dernier, etc., ont toujours la même somme.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>Cela donne une formule rapide.</p>
     
 
-<p>La somme des termes est le total cumulé sur plusieurs périodes : u₀ + u₁ + … + u₉.</p>
+<h4>À retenir</h4>
     
 
-<h4>À quoi ça sert</h4>
+<p>S = nombre de termes × (premier terme + dernier terme) ÷ 2.</p>
     
 
-<ul><li>Connaître le coût total d’un contrat, d’un crédit, d’un abonnement.</li><li>Comparer des options sur toute leur durée.</li></ul>
+<h4>Comment ça fonctionne</h4>
     
 
-<h4>Comment ça marche</h4>
+<ol><li>Compte le nombre de termes.</li><li>Calcule le dernier terme avec uₙ = u₀ + n × r.</li><li>Additionne premier et dernier.</li><li>Multiplie par le nombre de termes, puis divise par 2.</li></ol>
     
 
-<ol><li>Au tableur : =SOMME(B2:B11) additionne les 10 coûts annuels.</li><li>On fait de même pour l’autre option et on compare.</li><li>On peut aussi faire une colonne de cumul (chaque ligne = cumul précédent + terme).</li></ol>
+<h4>Pourquoi ça marche</h4>
     
 
-<p>À retenir : Total payé = somme des termes.</p>
+<p>1. L’astuce des paires</p>
+    
+
+<ul><li>1 + 2 + … + 10 : on associe 1 + 10 = 11, 2 + 9 = 11, … : 5 paires de 11.</li><li>Total : 5 × 11 = 55 = 10 × (1 + 10) ÷ 2.</li></ul>
+    
+
+<p>2. Pourquoi diviser par 2</p>
+    
+
+<ul><li>Avec n termes, on fait n ÷ 2 paires.</li><li>Chaque paire vaut premier + dernier : S = n × (premier + dernier) ÷ 2.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -335,59 +306,53 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<h4>Ce que tu vas faire</h4>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<p>Tu vas calculer avec le tableur le coût total de chaque option de pension sur 10 ans. On attend les deux totaux.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : calcule SOMME(B2:B11) et SOMME(C2:C11), puis compare.</li><li>Pourquoi la somme ? C’est ce que le client paie vraiment.</li></ol>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>Le total payé est la <span class="cours-trou" aria-label="à compléter"></span> des termes.</li><li>Au tableur : =<span class="cours-trou" aria-label="à compléter"></span> (B2:B11).</li></ul>
-    
-
-<h4>Exercice 2 — Les sommes</h4>
+<p>Calculatrice autorisée.</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — Termes 100 ; 110 ; 120 ; 130. Quelle est leur somme ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — Quelle formule additionne les cellules C2 à C11 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Coût total option A sur 10 ans (à l’euro près) ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Coût total option B ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — Somme 1 + 2 + … + 20 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>u₀ = 100, r = 10 : dernier terme u₉ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Somme u₀ + … + u₉ ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>u₀ = 50, r = 4 : somme des 15 premiers termes (u₀ à u₁₄) ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — Pension : 350 € la 1re année, + 12 € par an. Total sur 10 ans ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Stock utilisé : 60 kg le 1er jour, puis 2 kg de moins chaque jour. Total sur 20 jours ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Somme 5 + 10 + 15 + … + 100 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>III. Conseiller</h3>
+            <h3>III. La somme d’une suite géométrique</h3>
             
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Le client demande conseil : quelle option choisir ?</p>
+<p>Pour une suite géométrique, l’astuce des paires ne marche plus.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>On utilise une autre formule, avec la puissance qⁿ.</p>
     
 
-<p>Un conseil chiffré donne une recommandation claire appuyée sur les totaux calculés.</p>
+<h4>À retenir</h4>
     
 
-<h4>À quoi ça sert</h4>
+<p>S = premier terme × (1 − qⁿ) ÷ (1 − q), avec n = nombre de termes.</p>
     
 
-<ul><li>Aider un client à décider ; défendre un choix devant un responsable.</li></ul>
+<h4>Comment ça fonctionne</h4>
     
 
-<h4>Comment ça marche</h4>
+<ol><li>Repère le premier terme, q et le nombre de termes n.</li><li>Calcule qⁿ (touche ^).</li><li>Calcule premier × (1 − qⁿ) ÷ (1 − q).</li><li>Contrôle sur 2 ou 3 termes en les additionnant.</li></ol>
     
 
-<ol><li>On nomme l’option conseillée.</li><li>On donne les deux totaux et l’économie réalisée.</li><li>On ajoute une remarque sur le long terme.</li></ol>
+<h4>Pourquoi ça marche</h4>
     
 
-<p>À retenir : On conseille l’option au coût total le plus faible, chiffres à l’appui.</p>
+<p>1. L’idée</p>
+    
+
+<ul><li>S = u₀ + u₀q + u₀q² ; q × S = u₀q + u₀q² + u₀q³.</li><li>En soustrayant, presque tout s’annule : S − qS = u₀ − u₀q³, d’où S = u₀(1 − q³) ÷ (1 − q).</li></ul>
+    
+
+<p>2. Vérification</p>
+    
+
+<ul><li>u₀ = 200, q = 2, 3 termes : 200 × (1 − 8) ÷ (1 − 2) = 200 × 7 = 1 400.</li><li>C’est bien 200 + 400 + 800.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -396,80 +361,31 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<h4>Ce que tu vas faire</h4>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<p>Tu vas conseiller le client sur l’option de pension la moins chère sur 10 ans. On attend un conseil chiffré.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : rédige ton conseil au client avec les chiffres.</li><li>Pourquoi un conseil ? Le calcul sert la décision.</li></ol>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>On conseille l’option au coût total le plus <span class="cours-trou" aria-label="à compléter"></span> .</li><li>L’écart entre les options <span class="cours-trou" aria-label="à compléter"></span> avec le temps.</li></ul>
-    
-
-<h4>Exercice 3 — Conseiller</h4>
+<p>Calculatrice autorisée. Arrondis au centime.</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — Option C : 30 000 € sur 5 ans ; option D : 29 400 €. Rédige le conseil.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Quelle option conseilles-tu ? Justifie avec les totaux.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — u₀ = 100, q = 2, 4 termes : somme ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>u₀ = 1 000, q = 0,5, 3 termes : somme ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>u₀ = 400, q = 1,03, 10 termes : somme (au centime) ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>u₀ = 500, q = 1,1, 3 termes : somme ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — Un club gagne 50 licences la 1re année, puis 10 % de plus chaque année. Total sur 5 ans (au dixième) ? (en licences)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Pension sur 10 ans : A (+12 € par an, départ 350 €) totalise 4 040 € ; B (+3 %, départ 400 €) ≈ 4 585,55 €. La moins chère sur 10 ans ? Choix : A / B.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Différence entre les deux totaux (au centime) ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>Conclusion</h3>
+            <h3>Encore des exercices (si tu as fini)</h3>
             
-<p>Avec ce que tu as fait dans les parties précédentes, réponds en quelques phrases complètes.</p>
-    
 
-
-            <ol class="course-paper-questions"><li><span>Réponds au problème du jour : comment calculer la somme des termes d’une suite avec le tableur ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Pour aller plus loin (facultatif)</h3>
-            
-<p>Formule de la somme d’une suite géométrique : u₀ × (1 − qⁿ) ÷ (1 − q).</p>
-    
-
-
-            <ol class="course-paper-questions"><li><span>Vérifie le total A.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Somme 1 + 2 + … + 50 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>u₀ = 20, r = 3 : somme des 10 premiers termes ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>u₀ = 3, q = 3, 4 termes : somme ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>À retenir</h3>
             
-<ul><li>Somme de termes : coût cumulé.</li><li>SOMME au tableur.</li></ul>
+<ul><li>Total sur plusieurs périodes = somme des termes.</li><li>Arithmétique : S = nombre de termes × (premier + dernier) ÷ 2.</li><li>Géométrique : S = premier × (1 − qⁿ) ÷ (1 − q), n = nombre de termes.</li><li>De u₀ à uₙ₋₁, il y a n termes.</li></ul>
     
 
 
             
-        </section>
-        
-        <section class="course-paper-section course-paper-break">
-            <h2 class="course-paper-part">Fiche d’exercices</h2><h3>Exercice 1 — Somme</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>Termes 100, 110, 120, …, 190 (10 termes) : somme ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Formule tableur de la somme de B2 à B11 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Exercice 2 — Coût total</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>Un abonnement de 30 € par mois augmente de 2 € chaque mois : total sur 12 mois ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Exercice 3 — Comparer</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>Option A 4 800 € par an fixe, option B 4 500 € +5 % par an : laquelle est moins chère sur 3 ans ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
     </article>
@@ -483,60 +399,57 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Les termes au tableur</h2>
+        <h2>Partie 1 — Additionner les termes</h2>
         
         
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas construire au tableur les coûts annuels des deux options de pension sur 10 ans. On attend deux coûts annuels.</p></div>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Le client paie une pension tous les mois pendant 10 ans. Combien paie-t-il chaque année avec chaque option ?</p>
+<p>Le prix payé chaque année forme une suite ; ce qu’on a payé en tout est la somme de ses termes.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>Pour peu de termes, on les calcule et on les additionne.</p>
     
 
-<p>Le coût annuel est le terme de la suite pour une année : 12 fois le prix mensuel de cette année-là.</p>
+<p>À retenir : Total = u₀ + u₁ + u₂ + … (autant de termes que de périodes).</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Préparer le calcul du total sur plusieurs années.</li><li>Comparer deux contrats année par année.</li></ul>
+<ol><li>Compte le nombre de périodes : c’est le nombre de termes.</li><li>Calcule chaque terme.</li><li>Additionne-les.</li><li>Attention : de u₀ à u₃, il y a 4 termes.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>Colonne A : le rang n de 0 à 9.</li><li>Option A : =12*400*1,03^A2 ; option B : =12*(400+12*A2).</li><li>On recopie vers le bas jusqu’à n = 9.</li></ol>
+<p>1. Pourquoi une somme</p>
     
 
-<p>À retenir : Coût annuel = 12 × coût mensuel.</p>
+<ul><li>Chaque année, on paie le terme de l’année.</li><li>Sur 4 ans, on paie les 4 termes : on les additionne.</li></ul>
+    
+
+<p>2. Pourquoi compter les termes</p>
+    
+
+<ul><li>De u₀ à u₃ : u₀, u₁, u₂, u₃ → 4 termes, pas 3.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>Un loyer de 100 € par mois augmente de 2 % par an. Coût annuel pour n = 0 et n = 1 ?</li></ol>
-    
-
-<ul><li>Automatisme : 12 × 508 = ?</li></ul>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : colonne A : n de 0 à 9 ; colonne B : 12 × 400 × 1,03ⁿ (option A) ; colonne C : 12 × (400 + 12n) (option B).</li><li>Pourquoi × 12 ? Le prix est mensuel, le coût annuel compte 12 mois.</li></ol>
+<p>Calculatrice autorisée.</p>
     
 
 
@@ -545,63 +458,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a01-q01-label">Question 1 — Série A — Combien de termes de u₀ à u₉ ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Coût annuel = 12 × coût …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Les termes au tableur — Mot(s) manquant(s) — Coût annuel = 12 × coût …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Pour n = 9, option B : 12 × (400 + …… ).
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Les termes au tableur — Mot(s) manquant(s) — Pour n = 9, option B : 12 × (400 + …… ).">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Le coût annuel, c’est 12 fois le coût de quoi ? Pour l’option B avec n = 9, que vaut 12n ?</p></details>
+                <input type="text" inputmode="decimal" id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Compte de 0 à 9.</p></details>
             
             
         </div>
@@ -609,15 +474,15 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Coût annuel de l’option A pour n = 0 ?</h3>
+            <h3 id="a01-q02-label">Question 2 — Combien de termes de u₀ à u₁₄ ?</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><p>Unité : €</p>
+                <input type="text" inputmode="decimal" id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label">
 
                 
-            <details><summary>Un coup de pouce</summary><p>Pour n = 0 : 12 × 400 × 1,03⁰. Rappel : tout nombre puissance 0 vaut 1.</p></details>
+            <details><summary>Un coup de pouce</summary><p>De 0 à 14.</p></details>
             
             
         </div>
@@ -625,15 +490,63 @@
         <div class="cours-question" data-question="q03">
             
             
-            <h3 id="a01-q03-label">Question 3 — Coût annuel de l’option B pour n = 9 ?</h3>
+            <h3 id="a01-q03-label">Question 3 — u₀ = 100, r = 10 : u₀ + u₁ + u₂ ?</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label"><p>Unité : €</p>
+                <input type="text" inputmode="decimal" id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label">
 
                 
-            <details><summary>Un coup de pouce</summary><p>Pour n = 9 : 12 × (400 + 12 × 9). Calcule d’abord la parenthèse.</p></details>
+            <details><summary>Un coup de pouce</summary><p>100 + 110 + 120.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a01-q04-label">Question 4 — u₀ = 50, r = −5 : u₀ + u₁ + u₂ + u₃ ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q04" data-answer-id="a01_q04" data-required="true" aria-labelledby="a01-q04-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>50 + 45 + 40 + 35.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a01-q05-label">Question 5 — Série B — u₀ = 200, q = 2 : u₀ + u₁ + u₂ ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q05" data-answer-id="a01_q05" data-required="true" aria-labelledby="a01-q05-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>200 + 400 + 800.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a01-q06-label">Question 6 — Foin : 120 € le 1er mois, puis + 8 € par mois. Total sur 3 mois ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q06" data-answer-id="a01_q06" data-required="true" aria-labelledby="a01-q06-label"><p>Unité : €</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>120 + 128 + 136.</p></details>
             
             
         </div>
@@ -647,57 +560,57 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Les sommes</h2>
+        <h2>Partie 2 — La somme d’une suite arithmétique</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les coûts annuels sont prêts. Additionne-les.</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas calculer avec le tableur le coût total de chaque option de pension sur 10 ans. On attend les deux totaux.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Additionner 3 termes, c’est facile ; 20 termes, c’est long. Deuxième notion : une formule.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Ce qui compte pour le client, c’est ce qu’il paie en tout sur 10 ans.</p>
+<p>Pour une suite arithmétique, le premier et le dernier terme, le deuxième et l’avant-dernier, etc., ont toujours la même somme.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>Cela donne une formule rapide.</p>
     
 
-<p>La somme des termes est le total cumulé sur plusieurs périodes : u₀ + u₁ + … + u₉.</p>
+<p>À retenir : S = nombre de termes × (premier terme + dernier terme) ÷ 2.</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Connaître le coût total d’un contrat, d’un crédit, d’un abonnement.</li><li>Comparer des options sur toute leur durée.</li></ul>
+<ol><li>Compte le nombre de termes.</li><li>Calcule le dernier terme avec uₙ = u₀ + n × r.</li><li>Additionne premier et dernier.</li><li>Multiplie par le nombre de termes, puis divise par 2.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>Au tableur : =SOMME(B2:B11) additionne les 10 coûts annuels.</li><li>On fait de même pour l’autre option et on compare.</li><li>On peut aussi faire une colonne de cumul (chaque ligne = cumul précédent + terme).</li></ol>
+<p>1. L’astuce des paires</p>
     
 
-<p>À retenir : Total payé = somme des termes.</p>
+<ul><li>1 + 2 + … + 10 : on associe 1 + 10 = 11, 2 + 9 = 11, … : 5 paires de 11.</li><li>Total : 5 × 11 = 55 = 10 × (1 + 10) ÷ 2.</li></ul>
+    
+
+<p>2. Pourquoi diviser par 2</p>
+    
+
+<ul><li>Avec n termes, on fait n ÷ 2 paires.</li><li>Chaque paire vaut premier + dernier : S = n × (premier + dernier) ÷ 2.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>Termes 100 ; 110 ; 120 ; 130. Quelle est leur somme ?</li><li>Quelle formule additionne les cellules C2 à C11 ?</li></ol>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : calcule SOMME(B2:B11) et SOMME(C2:C11), puis compare.</li><li>Pourquoi la somme ? C’est ce que le client paie vraiment.</li></ol>
+<p>Calculatrice autorisée.</p>
     
 
 
@@ -706,63 +619,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a02-q01-label">Question 1 — Série A — Somme 1 + 2 + … + 20 ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Le total payé est la …… des termes.
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Les sommes — Mot(s) manquant(s) — Le total payé est la …… des termes.">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Au tableur : =…… (B2:B11).
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Les sommes — Mot(s) manquant(s) — Au tableur : =…… (B2:B11).">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Le total payé est la… des termes. Et quelle fonction du tableur additionne une plage ?</p></details>
+                <input type="text" inputmode="decimal" id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>20 × (1 + 20) ÷ 2.</p></details>
             
             
         </div>
@@ -770,15 +635,15 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Coût total option A sur 10 ans (à l’euro près) ?</h3>
+            <h3 id="a02-q02-label">Question 2 — u₀ = 100, r = 10 : dernier terme u₉ ?</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><p>Unité : €</p>
+                <input type="text" inputmode="decimal" id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label">
 
                 
-            <details><summary>Un coup de pouce</summary><p>Tape =SOMME(B2:B11) sur la colonne de l’option A et arrondis à l’euro.</p></details>
+            <details><summary>Un coup de pouce</summary><p>100 + 9 × 10.</p></details>
             
             
         </div>
@@ -786,15 +651,79 @@
         <div class="cours-question" data-question="q03">
             
             
-            <h3 id="a02-q03-label">Question 3 — Coût total option B ?</h3>
+            <h3 id="a02-q03-label">Question 3 — Somme u₀ + … + u₉ ?</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label"><p>Unité : €</p>
+                <input type="text" inputmode="decimal" id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label">
 
                 
-            <details><summary>Un coup de pouce</summary><p>Même chose sur la colonne de l’option B : =SOMME(C2:C11).</p></details>
+            <details><summary>Un coup de pouce</summary><p>10 × (100 + 190) ÷ 2.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a02-q04-label">Question 4 — u₀ = 50, r = 4 : somme des 15 premiers termes (u₀ à u₁₄) ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q04" data-answer-id="a02_q04" data-required="true" aria-labelledby="a02-q04-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Dernier : 50 + 14 × 4 = 106 ; 15 × 156 ÷ 2.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a02-q05-label">Question 5 — Série B — Pension : 350 € la 1re année, + 12 € par an. Total sur 10 ans ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q05" data-answer-id="a02_q05" data-required="true" aria-labelledby="a02-q05-label"><p>Unité : €</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Dernier : 350 + 9 × 12 = 458 ; 10 × 808 ÷ 2.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a02-q06-label">Question 6 — Stock utilisé : 60 kg le 1er jour, puis 2 kg de moins chaque jour. Total sur 20 jours ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q06" data-answer-id="a02_q06" data-required="true" aria-labelledby="a02-q06-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Dernier : 60 − 19 × 2 = 22 ; 20 × 82 ÷ 2.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q07">
+            
+            
+            <h3 id="a02-q07-label">Question 7 — Somme 5 + 10 + 15 + … + 100 ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q07" data-answer-id="a02_q07" data-required="true" aria-labelledby="a02-q07-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>20 termes ; 20 × 105 ÷ 2.</p></details>
             
             
         </div>
@@ -808,57 +737,57 @@
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Conseiller</h2>
+        <h2>Partie 3 — La somme d’une suite géométrique</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les totaux sont calculés. Que conseiller ?</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas conseiller le client sur l’option de pension la moins chère sur 10 ans. On attend un conseil chiffré.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Dernière notion : le total quand le prix augmente d’un même pourcentage.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Le client demande conseil : quelle option choisir ?</p>
+<p>Pour une suite géométrique, l’astuce des paires ne marche plus.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>On utilise une autre formule, avec la puissance qⁿ.</p>
     
 
-<p>Un conseil chiffré donne une recommandation claire appuyée sur les totaux calculés.</p>
+<p>À retenir : S = premier terme × (1 − qⁿ) ÷ (1 − q), avec n = nombre de termes.</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Aider un client à décider ; défendre un choix devant un responsable.</li></ul>
+<ol><li>Repère le premier terme, q et le nombre de termes n.</li><li>Calcule qⁿ (touche ^).</li><li>Calcule premier × (1 − qⁿ) ÷ (1 − q).</li><li>Contrôle sur 2 ou 3 termes en les additionnant.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>On nomme l’option conseillée.</li><li>On donne les deux totaux et l’économie réalisée.</li><li>On ajoute une remarque sur le long terme.</li></ol>
+<p>1. L’idée</p>
     
 
-<p>À retenir : On conseille l’option au coût total le plus faible, chiffres à l’appui.</p>
+<ul><li>S = u₀ + u₀q + u₀q² ; q × S = u₀q + u₀q² + u₀q³.</li><li>En soustrayant, presque tout s’annule : S − qS = u₀ − u₀q³, d’où S = u₀(1 − q³) ÷ (1 − q).</li></ul>
+    
+
+<p>2. Vérification</p>
+    
+
+<ul><li>u₀ = 200, q = 2, 3 termes : 200 × (1 − 8) ÷ (1 − 2) = 200 × 7 = 1 400.</li><li>C’est bien 200 + 400 + 800.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>Option C : 30 000 € sur 5 ans ; option D : 29 400 €. Rédige le conseil.</li></ol>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : rédige ton conseil au client avec les chiffres.</li><li>Pourquoi un conseil ? Le calcul sert la décision.</li></ol>
+<p>Calculatrice autorisée. Arrondis au centime.</p>
     
 
 
@@ -867,63 +796,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a03-q01-label">Question 1 — Série A — u₀ = 100, q = 2, 4 termes : somme ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    On conseille l’option au coût total le plus …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a03_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Conseiller — Mot(s) manquant(s) — On conseille l’option au coût total le plus …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    L’écart entre les options …… avec le temps.
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a03_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Conseiller — Mot(s) manquant(s) — L’écart entre les options …… avec le temps.">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>On conseille l’option au coût total le plus… ? Et l’écart entre les options grandit ou diminue avec le temps ?</p></details>
+                <input type="text" inputmode="decimal" id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>100 × (1 − 2⁴) ÷ (1 − 2).</p></details>
             
             
         </div>
@@ -931,15 +812,95 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a03-q02-label">Question 2 — Quelle option conseilles-tu ? Justifie avec les totaux.</h3>
+            <h3 id="a03-q02-label">Question 2 — u₀ = 1 000, q = 0,5, 3 termes : somme ?</h3>
             
 
             
             
-                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label">
 
                 
-            <details><summary>Un coup de pouce</summary><p>Comme l’exemple : « Je vous conseille l’option … : … € sur 10 ans contre … €, soit … € d’économie », puis une remarque sur le long terme.</p></details>
+            <details><summary>Un coup de pouce</summary><p>1 000 × (1 − 0,125) ÷ 0,5.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a03-q03-label">Question 3 — u₀ = 400, q = 1,03, 10 termes : somme (au centime) ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q03" data-answer-id="a03_q03" data-required="true" aria-labelledby="a03-q03-label"><p>Unité : €</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>400 × (1 − 1,03¹⁰) ÷ (1 − 1,03).</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a03-q04-label">Question 4 — u₀ = 500, q = 1,1, 3 termes : somme ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q04" data-answer-id="a03_q04" data-required="true" aria-labelledby="a03-q04-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>500 + 550 + 605.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a03-q05-label">Question 5 — Série B — Un club gagne 50 licences la 1re année, puis 10 % de plus chaque année. Total sur 5 ans (au dixième) ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q05" data-answer-id="a03_q05" data-required="true" aria-labelledby="a03-q05-label"><p>Unité : licences</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>50 × (1 − 1,1⁵) ÷ (1 − 1,1).</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a03-q06-label">Question 6 — Pension sur 10 ans : A (+12 € par an, départ 350 €) totalise 4 040 € ; B (+3 %, départ 400 €) ≈ 4 585,55 €. La moins chère sur 10 ans ?</h3>
+            
+
+            
+            
+                <select id="a03-q06" data-answer-id="a03_q06" data-required="true" aria-labelledby="a03-q06-label"><option value="">Choisis une réponse</option><option value="a">A</option><option value="b">B</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Compare les totaux.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q07">
+            
+            
+            <h3 id="a03-q07-label">Question 7 — Différence entre les deux totaux (au centime) ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q07" data-answer-id="a03_q07" data-required="true" aria-labelledby="a03-q07-label"><p>Unité : €</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>4 585,55 − 4 040.</p></details>
             
             
         </div>
@@ -953,7 +914,7 @@
     
     <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Pour aller plus loin</h2>
+        <h2>Encore des exercices (si tu as fini)</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
@@ -961,7 +922,7 @@
         
 
         
-<p>Formule de la somme d’une suite géométrique : u₀ × (1 − qⁿ) ÷ (1 − q).</p>
+<p>Tu as fini ? Entraîne-toi encore. Ces exercices ne comptent pas dans la note.</p>
     
 
 
@@ -970,15 +931,47 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Vérifie le total A.</h3>
+            <h3 id="a04-q01-label">Question 1 — Somme 1 + 2 + … + 50 ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label">
 
                 
-            <details><summary>Un coup de pouce</summary><p>Ici u₀ = 12 × 400, q = 1,03 et n = 10. Calcule avec la formule et compare à ton SOMME.</p></details>
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a04-q02-label">Question 2 — u₀ = 20, r = 3 : somme des 10 premiers termes ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a04-q02" data-answer-id="a04_q02" data-required="false" aria-labelledby="a04-q02-label">
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a04-q03-label">Question 3 — u₀ = 3, q = 3, 4 termes : somme ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a04-q03" data-answer-id="a04_q03" data-required="false" aria-labelledby="a04-q03-label">
+
+                
+            
             
             
         </div>
@@ -986,41 +979,6 @@
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#a03">← Étape précédente</a>
-            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a05" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Conclusion de ton travail</h2>
-        
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais calculer une somme de termes. Il reste à répondre au problème de départ.</p>
-        
-        
-        
-
-        
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment calculer la somme des termes d’une suite avec le tableur ?</h3>
-            
-
-            
-            
-                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Dis comment calculer les coûts année par année, le total, et faire un conseil chiffré.</p></details>
-            
-            
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -1033,7 +991,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Somme de termes : coût cumulé.</li><li>SOMME au tableur.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Total sur plusieurs périodes = somme des termes.</li><li>Arithmétique : S = nombre de termes × (premier + dernier) ÷ 2.</li><li>Géométrique : S = premier × (1 − qⁿ) ÷ (1 − q), n = nombre de termes.</li><li>De u₀ à uₙ₋₁, il y a n termes.</li></ul>
     
 </section>
 
@@ -1049,7 +1007,7 @@
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
     
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

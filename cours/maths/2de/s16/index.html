@@ -124,7 +124,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Les fonctions</a></li><li><a href="#a02">Les quartiles</a></li><li><a href="#a03">Contrôler</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Partie 1 — Les fonctions de position</a></li><li><a href="#a02">Partie 2 — Les fonctions de dispersion</a></li><li><a href="#a03">Partie 3 — Contrôler le résultat du tableur</a></li><li><a href="#a04">Encore des exercices (si tu as fini) — facultatif</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -136,7 +136,7 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Mathématiques · 2de Pro · S16</span></div>
-    <h1>Séance 16 : Laisser le tableur calculer les indicateurs</h1>
+    <h1>Séance 16 : Les fonctions du tableur pour les indicateurs</h1>
     
 
     
@@ -150,7 +150,7 @@
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Comment obtenir rapidement les indicateurs d’une grande série avec le tableur ?</p>
+        <p>Comment faire calculer moyenne, médiane, quartiles et étendue par le tableur, et contrôler le résultat ?</p>
     </section>
     
 
@@ -168,9 +168,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Fonctions : MOYENNE, MEDIANE, MIN, MAX, QUARTILE(plage;1) et QUARTILE(plage;3), NB.</li>
+            <li>=MOYENNE(plage) ; =MEDIANE(plage) ; =MIN(plage) ; =MAX(plage).</li>
             
-            <li>Le tableur traite des centaines de valeurs sans erreur de calcul.</li>
+            <li>=QUARTILE(plage;1) et =QUARTILE(plage;3).</li>
             
         </ul>
         
@@ -178,16 +178,16 @@
         <h2>Ce que tu vas apprendre à faire</h2>
         <ul>
             
-            <li>Utiliser les fonctions statistiques du tableur.</li>
+            <li>Écrire la bonne formule pour un indicateur.</li>
             
-            <li>Contrôler un résultat.</li>
+            <li>Contrôler un résultat du tableur par un ordre de grandeur.</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>De S11 à S15, tu as calculé à la main sur de petites séries.</p><p>Le fichier des pesées de l’élevage compte 120 valeurs : le tableur est indispensable.</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Aujourd’hui, trois notions : les fonctions de position, les fonctions de dispersion, contrôler le tableur.</p><p>Pour chacune : la notion, la méthode, pourquoi ça marche, un exemple au tableau, puis beaucoup d’exercices.</p></div></section>
     
     
     
@@ -202,67 +202,45 @@
 
 <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
     <article class="course-paper-sheet">
-        <header><p class="course-paper-class">Mathématiques — 2de Pro</p><p class="course-paper-kicker">Cours et exercices — version papier</p><h2 id="course-paper-title"><span class="course-paper-number">Séance 16</span> — Laisser le tableur calculer les indicateurs</h2><p>Comment obtenir rapidement les indicateurs d’une grande série avec le tableur ?</p></header>
+        <header><p class="course-paper-class">Mathématiques — 2de Pro</p><p class="course-paper-kicker">Cours et exercices — version papier</p><h2 id="course-paper-title"><span class="course-paper-number">Séance 16</span> — Les fonctions du tableur pour les indicateurs</h2><p>Trois notions : fonctions de position, fonctions de dispersion, contrôler. Pour chacune : la notion, la méthode, l’exemple au tableau, puis les exercices.</p></header>
         
         <section class="course-paper-section">
-            <h3>Le cours en bref</h3>
+            <h3>I. Les fonctions de position</h3>
             
-<p>Le problème à résoudre : Comment obtenir rapidement les indicateurs d’une grande série avec le tableur ?</p>
+<h4>La notion</h4>
     
 
-<h4>Ce que tu vas apprendre</h4>
+<p>Le tableur a des fonctions toutes prêtes : on écrit leur nom et la plage de cellules, il fait le calcul.</p>
     
 
-<ul><li>Fonctions : MOYENNE, MEDIANE, MIN, MAX, QUARTILE(plage;1) et QUARTILE(plage;3), NB.</li><li>Le tableur traite des centaines de valeurs sans erreur de calcul.</li></ul>
+<p>Une plage comme B2:B11 désigne toutes les cellules de B2 à B11.</p>
     
 
-<h4>Ce que tu vas savoir faire</h4>
+<h4>À retenir</h4>
     
 
-<ul><li>Utiliser les fonctions statistiques du tableur.</li><li>Contrôler un résultat.</li></ul>
+<p>=MOYENNE(B2:B11) ; =MEDIANE(B2:B11) ; =MIN(B2:B11) ; =MAX(B2:B11).</p>
     
 
-<h4>Pourquoi cette séance ?</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<p>De S11 à S15, tu as calculé à la main sur de petites séries. Le fichier des pesées de l’élevage compte 120 valeurs : le tableur est indispensable.</p>
+<ol><li>Clique dans une cellule vide.</li><li>Tape = puis le nom de la fonction.</li><li>Ouvre la parenthèse, écris la plage (ou sélectionne les cellules), ferme la parenthèse.</li><li>Valide avec Entrée.</li></ol>
     
 
-<p>Comment utiliser cette fiche : pour chaque partie, lis la méthode et l’exemple, complète les points clés, puis fais l’exercice. Réponds sur les lignes.</p>
+<h4>Pourquoi ça marche</h4>
     
 
-
-            
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>I. Les fonctions</h3>
-            
-<h4>La situation</h4>
+<p>1. Ce que fait le tableur</p>
     
 
-<p>On a 120 pesées de poulains. Calculer la moyenne à la main prendrait longtemps, avec des risques d’erreur.</p>
+<ul><li>=MOYENNE(B2:B11) additionne les 10 cellules et divise par 10, comme toi à la main.</li><li>=MEDIANE range les valeurs et prend celle du milieu.</li></ul>
     
 
-<h4>Ce que c’est</h4>
+<p>2. Pourquoi la plage est importante</p>
     
 
-<p>Une fonction du tableur est une formule toute prête qui calcule un indicateur sur une plage de cellules (par exemple B2:B121, « de B2 à B121 »).</p>
-    
-
-<h4>À quoi ça sert</h4>
-    
-
-<ul><li>Traiter des centaines de valeurs en quelques secondes.</li><li>Refaire le calcul automatiquement si une donnée change.</li></ul>
-    
-
-<h4>Comment ça marche</h4>
-    
-
-<ol><li>Dans une cellule vide, on tape = puis le nom de la fonction et la plage entre parenthèses.</li><li>=NB(plage) d’abord, pour vérifier le nombre de valeurs.</li><li>=MOYENNE, =MEDIANE, =MIN, =MAX donnent les autres indicateurs.</li></ol>
-    
-
-<p>À retenir : Une formule commence toujours par = ; la plage s’écrit B2:B121.</p>
+<ul><li>Si tu écris B2:B10, le tableur oublie la cellule B11.</li><li>Le calcul est juste… mais sur la mauvaise série.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -271,71 +249,53 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<ul><li>Automatisme : calcule 251 − 250,4.</li></ul>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<h4>Ce que tu vas faire</h4>
-    
-
-<p>Tu vas calculer avec les fonctions du tableur les indicateurs principaux des 120 pesées de poulains. On attend trois résultats.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : ouvre le fichier pesees.ods (à télécharger ci-dessus, 120 poids de poulains à 6 mois) et calcule NB, MOYENNE, MEDIANE, MIN, MAX.</li><li>Pourquoi NB d’abord ? On vérifie qu’on a bien les 120 valeurs.</li></ol>
-    
-
-<h4>Exemple et documents</h4>
-    
-
-<p class="cours-fichier"><a href="/tifsec-test-eleves/assets/fichiers/maths/2de/pesees.ods" download>Télécharger le fichier : pesées de 120 poulains à 6 mois</a> <span>(pesees.ods)</span></p>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>=MOYENNE(plage) calcule la <span class="cours-trou" aria-label="à compléter"></span> .</li><li>=NB(plage) compte les cellules qui contiennent un <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 1 — Les fonctions</h4>
-    
-
-<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Indicateur</th><th scope="col">Valeur</th></tr></thead><tbody><tr><td>NB</td><td></td></tr><tr><td>MOYENNE (kg, au dixième)</td><td></td></tr><tr><td>MEDIANE (kg)</td><td></td></tr></tbody></table></div>
+<p>Poids de 10 poulains (kg), dans les cellules B2 à B11 : 42 ; 45 ; 47 ; 48 ; 50 ; 51 ; 53 ; 55 ; 58 ; 61.</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — Quelle formule pour la valeur maximale des cellules C2 à C50 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — Quelle formule pour compter les nombres de D2 à D30 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Écris les résultats.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — Quelle formule donne la moyenne des poids ? Choix : MOYENNE(B2:B11) / =MOYENNE(B2:B11) / =MOYENNE(B2:B10).</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Quelle formule donne la médiane ? Choix : =MEDIANE(B2:B11) / =MILIEU(B2:B11) / =MEDIANE(B2;B11).</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Quelle formule donne le plus grand poids ? Choix : =GRAND(B2:B11) / =MIN(B2:B11) / =MAX(B2:B11).</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Combien de cellules contient la plage B2:B11 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — Quel résultat affiche =MOYENNE(B2:B11) ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Quel résultat affiche =MEDIANE(B2:B11) ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Quel résultat affiche =MIN(B2:B11) ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>II. Les quartiles</h3>
+            <h3>II. Les fonctions de dispersion</h3>
             
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Ranger 120 valeurs à la main pour trouver les quartiles serait très long.</p>
+<p>Pour l’étendue, on combine deux fonctions : MAX − MIN.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>Pour les quartiles, la fonction QUARTILE prend la plage et le numéro du quartile.</p>
     
 
-<p>La fonction QUARTILE donne directement Q1 ou Q3 : le 2e nombre indique lequel (1 ou 3).</p>
+<h4>À retenir</h4>
     
 
-<h4>À quoi ça sert</h4>
+<p>Étendue : =MAX(B2:B11)-MIN(B2:B11). Q1 : =QUARTILE(B2:B11;1). Q3 : =QUARTILE(B2:B11;3).</p>
     
 
-<ul><li>Mesurer la dispersion d’une grande série sans la ranger.</li></ul>
+<h4>Comment ça fonctionne</h4>
     
 
-<h4>Comment ça marche</h4>
+<ol><li>Étendue : écris =MAX(plage)-MIN(plage) dans une seule cellule.</li><li>Q1 : =QUARTILE(plage;1). Q3 : =QUARTILE(plage;3).</li><li>Écart interquartile : soustrais la cellule de Q1 de celle de Q3.</li><li>Le point-virgule sépare la plage et le numéro du quartile.</li></ol>
     
 
-<ol><li>=QUARTILE(plage;1) donne Q1 ; =QUARTILE(plage;3) donne Q3.</li><li>Dans une autre cellule : = (cellule de Q3) − (cellule de Q1) donne l’écart interquartile.</li></ol>
+<h4>Pourquoi ça marche</h4>
     
 
-<p>À retenir : QUARTILE(plage;1) → Q1 ; QUARTILE(plage;3) → Q3.</p>
+<p>1. Une formule peut contenir un calcul</p>
+    
+
+<ul><li>=MAX(B2:B11)-MIN(B2:B11) calcule le max, le min, puis la soustraction.</li><li>C’est exactement « max − min » écrit pour le tableur.</li></ul>
+    
+
+<p>2. Pourquoi un numéro dans QUARTILE</p>
+    
+
+<ul><li>La même fonction donne Q1 (1), la médiane (2) ou Q3 (3).</li><li>Le numéro dit au tableur lequel tu veux.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -344,59 +304,53 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<h4>Ce que tu vas faire</h4>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<p>Tu vas calculer les quartiles et l’écart interquartile des pesées avec le tableur. On attend les valeurs et une formule.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : calcule Q1, Q3 et l’écart interquartile des 120 poids.</li><li>Pourquoi cette fonction ? Elle évite de ranger 120 valeurs à la main.</li></ol>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>=QUARTILE(plage;1) donne le <span class="cours-trou" aria-label="à compléter"></span> quartile.</li><li>=QUARTILE(plage;3) donne le <span class="cours-trou" aria-label="à compléter"></span> quartile.</li></ul>
-    
-
-<h4>Exercice 2 — Les quartiles</h4>
+<p>Même série de 10 poids en B2:B11.</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — Écris la formule de Q3 pour les cellules A2 à A41.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Écris Q1, Q3 et l’écart interquartile.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Écris la formule de Q1 (valeurs en B2:B121).</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — Quelle formule donne l’étendue ? Choix : =MAX(B2:B11)-MIN(B2:B11) / =ETENDUE(B2:B11) / =MAX(B2:B11)+MIN(B2:B11).</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Quelle formule donne Q1 ? Choix : =QUARTILE(B2:B11) / =QUARTILE(B2:B11;1) / =QUARTILE(1).</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Quelle formule donne Q3 ? Choix : =QUARTILE(B2:B11;2) / =QUARTILE3(B2:B11) / =QUARTILE(B2:B11;3).</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — Quel résultat affiche la formule de l’étendue ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Calcule Q1 à la main (méthode du cours). (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Calcule Q3 à la main (méthode du cours). (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Écart interquartile (avec tes Q1 et Q3) ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>III. Contrôler</h3>
+            <h3>III. Contrôler le résultat du tableur</h3>
             
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Le tableur ne se trompe pas dans ses calculs… mais si une donnée est mal tapée, le résultat est faux. Comment le repérer ?</p>
+<p>Le tableur calcule toujours ce qu’on lui demande, même si la formule est fausse.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>Il faut donc contrôler le résultat avec un ordre de grandeur.</p>
     
 
-<p>Contrôler la plausibilité, c’est vérifier qu’un résultat a un ordre de grandeur réaliste.</p>
+<h4>À retenir</h4>
     
 
-<h4>À quoi ça sert</h4>
+<p>Une moyenne ou une médiane est entre le min et le max ; une étendue est positive ; Q1 ≤ médiane ≤ Q3.</p>
     
 
-<ul><li>Repérer une erreur de saisie avant de prendre une décision.</li></ul>
+<h4>Comment ça fonctionne</h4>
     
 
-<h4>Comment ça marche</h4>
+<ol><li>Regarde le min et le max de la série.</li><li>Vérifie que la moyenne et la médiane sont entre les deux.</li><li>Vérifie que Q1 ≤ médiane ≤ Q3.</li><li>Si ce n’est pas le cas, relis la formule et la plage.</li></ol>
     
 
-<ol><li>On compare MIN et MAX aux valeurs possibles (un poulain de 6 mois pèse environ 200 à 300 kg).</li><li>On vérifie que la moyenne est entre MIN et MAX et proche de la médiane.</li><li>On cherche la valeur suspecte et on la vérifie auprès de la source.</li></ol>
+<h4>Pourquoi ça marche</h4>
     
 
-<p>À retenir : Une erreur de saisie fausse surtout la moyenne ; la médiane bouge peu.</p>
+<p>1. Pourquoi la moyenne est entre min et max</p>
+    
+
+<ul><li>Si on partage le total en parts égales, chaque part ne peut pas dépasser la plus grande valeur.</li><li>Ni être plus petite que la plus petite.</li></ul>
+    
+
+<p>2. D’où viennent les erreurs</p>
+    
+
+<ul><li>Une mauvaise plage, une cellule vide, une valeur mal tapée (450 au lieu de 45).</li><li>Le contrôle repère ces erreurs en quelques secondes.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -405,80 +359,31 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<h4>Ce que tu vas faire</h4>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<p>Tu vas contrôler la plausibilité des indicateurs et repérer une valeur suspecte. On attend la valeur et ton action.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : vérifie que la moyenne est entre MIN et MAX, puis repère la valeur suspecte.</li><li>Pourquoi contrôler ? Un poids de 2 480 kg tapé à la place de 248 fausse la moyenne.</li></ol>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>On vérifie qu’un résultat est <span class="cours-trou" aria-label="à compléter"></span> (ordre de grandeur).</li><li>Une erreur de saisie fausse surtout la <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 3 — Contrôler</h4>
+<p>Poids entre 42 et 61 kg (même série).</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — MIN = 1,2 kg pour des chevaux adultes. Que penses-tu ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>As-tu trouvé une valeur suspecte ? Que fais-tu ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — Le tableur affiche une moyenne de 92 kg. Est-ce possible ? Choix : Oui / Non, la moyenne doit être entre 42 et 61 kg.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Le tableur affiche une médiane de 50,5 kg. Est-ce possible ? Choix : Oui / Non.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Le tableur affiche Q1 = 56 kg et Q3 = 48 kg. Est-ce possible ? Choix : Oui / Non, Q1 doit être plus petit que Q3.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Le tableur affiche une étendue de −19. Que s’est-il passé ? Choix : La formule fait MIN − MAX au lieu de MAX − MIN / Rien, c’est juste.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — Un poids de 45 kg a été tapé 450. De combien la somme a-t-elle augmenté ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>De combien la moyenne des 10 poids a-t-elle augmenté ? (en kg)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>Conclusion</h3>
+            <h3>Encore des exercices (si tu as fini)</h3>
             
-<p>Avec ce que tu as fait dans les parties précédentes, réponds en quelques phrases complètes.</p>
-    
 
-
-            <ol class="course-paper-questions"><li><span>Réponds au problème du jour : comment obtenir rapidement les indicateurs d’une grande série avec le tableur ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Pour aller plus loin (facultatif)</h3>
-            
-<p>Le tableur peut tracer une boîte à moustaches (selon la version).</p>
-    
-
-
-            <ol class="course-paper-questions"><li><span>Que montre-t-elle ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Formule du plus petit poids en C2:C21 ? Choix : =PETIT(C2:C21) / =MIN(C2:C21).</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Combien de cellules dans C2:C21 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Formule de la moyenne en D3:D15 ? Choix : =MOYENNE(D3:D15) / =MOYENNE(D3;D15).</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Valeurs entre 10 et 20 ; le tableur donne une médiane de 25. Possible ? Choix : Oui / Non.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>À retenir</h3>
             
-<ul><li>=MOYENNE, =MEDIANE, =QUARTILE(plage;1).</li><li>Contrôler l’ordre de grandeur.</li></ul>
+<ul><li>Une formule commence par = ; la plage B2:B11 veut dire « de B2 à B11 ».</li><li>=MOYENNE(B2:B11) ; =MEDIANE(B2:B11) ; =MIN(…) ; =MAX(…).</li><li>=QUARTILE(B2:B11;1) pour Q1, ;3 pour Q3. Étendue : =MAX(…)−MIN(…).</li><li>Le tableur peut calculer les quartiles autrement qu’à la main : on vérifie l’ordre de grandeur.</li></ul>
     
 
 
             
-        </section>
-        
-        <section class="course-paper-section course-paper-break">
-            <h2 class="course-paper-part">Fiche d’exercices</h2><h3>Exercice 1 — Formules</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>Écris la formule de la moyenne des cellules B2 à B51.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Et du premier quartile ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Exercice 2 — Contrôle</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>MIN = 180, MAX = 320, MOYENNE = 412. Est-ce possible ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Exercice 3 — Comptage</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>Quelle fonction compte les cellules qui contiennent un nombre ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
     </article>
@@ -492,63 +397,57 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Les fonctions</h2>
+        <h2>Partie 1 — Les fonctions de position</h2>
         
         
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas calculer avec les fonctions du tableur les indicateurs principaux des 120 pesées de poulains. On attend trois résultats.</p></div>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>On a 120 pesées de poulains. Calculer la moyenne à la main prendrait longtemps, avec des risques d’erreur.</p>
+<p>Le tableur a des fonctions toutes prêtes : on écrit leur nom et la plage de cellules, il fait le calcul.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>Une plage comme B2:B11 désigne toutes les cellules de B2 à B11.</p>
     
 
-<p>Une fonction du tableur est une formule toute prête qui calcule un indicateur sur une plage de cellules (par exemple B2:B121, « de B2 à B121 »).</p>
+<p>À retenir : =MOYENNE(B2:B11) ; =MEDIANE(B2:B11) ; =MIN(B2:B11) ; =MAX(B2:B11).</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Traiter des centaines de valeurs en quelques secondes.</li><li>Refaire le calcul automatiquement si une donnée change.</li></ul>
+<ol><li>Clique dans une cellule vide.</li><li>Tape = puis le nom de la fonction.</li><li>Ouvre la parenthèse, écris la plage (ou sélectionne les cellules), ferme la parenthèse.</li><li>Valide avec Entrée.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>Dans une cellule vide, on tape = puis le nom de la fonction et la plage entre parenthèses.</li><li>=NB(plage) d’abord, pour vérifier le nombre de valeurs.</li><li>=MOYENNE, =MEDIANE, =MIN, =MAX donnent les autres indicateurs.</li></ol>
+<p>1. Ce que fait le tableur</p>
     
 
-<p>À retenir : Une formule commence toujours par = ; la plage s’écrit B2:B121.</p>
+<ul><li>=MOYENNE(B2:B11) additionne les 10 cellules et divise par 10, comme toi à la main.</li><li>=MEDIANE range les valeurs et prend celle du milieu.</li></ul>
+    
+
+<p>2. Pourquoi la plage est importante</p>
+    
+
+<ul><li>Si tu écris B2:B10, le tableur oublie la cellule B11.</li><li>Le calcul est juste… mais sur la mauvaise série.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>Quelle formule pour la valeur maximale des cellules C2 à C50 ?</li><li>Quelle formule pour compter les nombres de D2 à D30 ?</li></ol>
-    
-
-<p class="cours-fichier"><a href="/tifsec-test-eleves/assets/fichiers/maths/2de/pesees.ods" download>Télécharger le fichier : pesées de 120 poulains à 6 mois</a> <span>(pesees.ods)</span></p>
-    
-
-<ul><li>Automatisme : calcule 251 − 250,4.</li></ul>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : ouvre le fichier pesees.ods (à télécharger ci-dessus, 120 poids de poulains à 6 mois) et calcule NB, MOYENNE, MEDIANE, MIN, MAX.</li><li>Pourquoi NB d’abord ? On vérifie qu’on a bien les 120 valeurs.</li></ol>
+<p>Poids de 10 poulains (kg), dans les cellules B2 à B11 : 42 ; 45 ; 47 ; 48 ; 50 ; 51 ; 53 ; 55 ; 58 ; 61.</p>
     
 
 
@@ -557,63 +456,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a01-q01-label">Question 1 — Série A — Quelle formule donne la moyenne des poids ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    =MOYENNE(plage) calcule la …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Les fonctions — Mot(s) manquant(s) — =MOYENNE(plage) calcule la …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    =NB(plage) compte les cellules qui contiennent un …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Les fonctions — Mot(s) manquant(s) — =NB(plage) compte les cellules qui contiennent un …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Le nom de la fonction le dit : MOYENNE calcule… ? Et NB compte les cellules qui contiennent quoi ?</p></details>
+                <select id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><option value="">Choisis une réponse</option><option value="a">MOYENNE(B2:B11)</option><option value="b">=MOYENNE(B2:B11)</option><option value="c">=MOYENNE(B2:B10)</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Une formule commence par = et la plage va jusqu’à B11.</p></details>
             
             
         </div>
@@ -621,80 +472,95 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Écris les résultats.</h3>
+            <h3 id="a01-q02-label">Question 2 — Quelle formule donne la médiane ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Indicateur</th>
-                                
-                                <th>Valeur</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    NB
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q02_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Les fonctions — Valeur — NB">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    MOYENNE (kg, au dixième)
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q02_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Les fonctions — Valeur — MOYENNE (kg, au dixième)">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    MEDIANE (kg)
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q02_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Les fonctions — Valeur — MEDIANE (kg)">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
+                <select id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><option value="">Choisis une réponse</option><option value="a">=MEDIANE(B2:B11)</option><option value="b">=MILIEU(B2:B11)</option><option value="c">=MEDIANE(B2;B11)</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>La plage s’écrit avec « : ».</p></details>
             
-            <details><summary>Un coup de pouce</summary><p>Tape =NB(…), =MOYENNE(…) et =MEDIANE(…) sur la plage des poids, puis recopie ce qu’affiche le tableur.</p></details>
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a01-q03-label">Question 3 — Quelle formule donne le plus grand poids ?</h3>
+            
+
+            
+            
+                <select id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label"><option value="">Choisis une réponse</option><option value="a">=GRAND(B2:B11)</option><option value="b">=MIN(B2:B11)</option><option value="c">=MAX(B2:B11)</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Le plus grand : maximum.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a01-q04-label">Question 4 — Combien de cellules contient la plage B2:B11 ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q04" data-answer-id="a01_q04" data-required="true" aria-labelledby="a01-q04-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>De 2 à 11.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a01-q05-label">Question 5 — Série B — Quel résultat affiche =MOYENNE(B2:B11) ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q05" data-answer-id="a01_q05" data-required="true" aria-labelledby="a01-q05-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Calcule la moyenne à la main.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a01-q06-label">Question 6 — Quel résultat affiche =MEDIANE(B2:B11) ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q06" data-answer-id="a01_q06" data-required="true" aria-labelledby="a01-q06-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Moyenne de la 5e et de la 6e valeur.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q07">
+            
+            
+            <h3 id="a01-q07-label">Question 7 — Quel résultat affiche =MIN(B2:B11) ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q07" data-answer-id="a01_q07" data-required="true" aria-labelledby="a01-q07-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>La plus petite valeur.</p></details>
             
             
         </div>
@@ -708,57 +574,57 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Les quartiles</h2>
+        <h2>Partie 2 — Les fonctions de dispersion</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as la position. Mesure la dispersion.</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas calculer les quartiles et l’écart interquartile des pesées avec le tableur. On attend les valeurs et une formule.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais faire calculer la position. Deuxième notion : la dispersion.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Ranger 120 valeurs à la main pour trouver les quartiles serait très long.</p>
+<p>Pour l’étendue, on combine deux fonctions : MAX − MIN.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>Pour les quartiles, la fonction QUARTILE prend la plage et le numéro du quartile.</p>
     
 
-<p>La fonction QUARTILE donne directement Q1 ou Q3 : le 2e nombre indique lequel (1 ou 3).</p>
+<p>À retenir : Étendue : =MAX(B2:B11)-MIN(B2:B11). Q1 : =QUARTILE(B2:B11;1). Q3 : =QUARTILE(B2:B11;3).</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Mesurer la dispersion d’une grande série sans la ranger.</li></ul>
+<ol><li>Étendue : écris =MAX(plage)-MIN(plage) dans une seule cellule.</li><li>Q1 : =QUARTILE(plage;1). Q3 : =QUARTILE(plage;3).</li><li>Écart interquartile : soustrais la cellule de Q1 de celle de Q3.</li><li>Le point-virgule sépare la plage et le numéro du quartile.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>=QUARTILE(plage;1) donne Q1 ; =QUARTILE(plage;3) donne Q3.</li><li>Dans une autre cellule : = (cellule de Q3) − (cellule de Q1) donne l’écart interquartile.</li></ol>
+<p>1. Une formule peut contenir un calcul</p>
     
 
-<p>À retenir : QUARTILE(plage;1) → Q1 ; QUARTILE(plage;3) → Q3.</p>
+<ul><li>=MAX(B2:B11)-MIN(B2:B11) calcule le max, le min, puis la soustraction.</li><li>C’est exactement « max − min » écrit pour le tableur.</li></ul>
+    
+
+<p>2. Pourquoi un numéro dans QUARTILE</p>
+    
+
+<ul><li>La même fonction donne Q1 (1), la médiane (2) ou Q3 (3).</li><li>Le numéro dit au tableur lequel tu veux.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>Écris la formule de Q3 pour les cellules A2 à A41.</li></ol>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : calcule Q1, Q3 et l’écart interquartile des 120 poids.</li><li>Pourquoi cette fonction ? Elle évite de ranger 120 valeurs à la main.</li></ol>
+<p>Même série de 10 poids en B2:B11.</p>
     
 
 
@@ -767,63 +633,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a02-q01-label">Question 1 — Série A — Quelle formule donne l’étendue ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    =QUARTILE(plage;1) donne le …… quartile.
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Les quartiles — Mot(s) manquant(s) — =QUARTILE(plage;1) donne le …… quartile.">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    =QUARTILE(plage;3) donne le …… quartile.
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Les quartiles — Mot(s) manquant(s) — =QUARTILE(plage;3) donne le …… quartile.">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Le deuxième argument de QUARTILE dit quel quartile : 1 donne le… ? 3 donne le… ?</p></details>
+                <select id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label"><option value="">Choisis une réponse</option><option value="a">=MAX(B2:B11)-MIN(B2:B11)</option><option value="b">=ETENDUE(B2:B11)</option><option value="c">=MAX(B2:B11)+MIN(B2:B11)</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Étendue = max − min.</p></details>
             
             
         </div>
@@ -831,15 +649,15 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Écris Q1, Q3 et l’écart interquartile.</h3>
+            <h3 id="a02-q02-label">Question 2 — Quelle formule donne Q1 ?</h3>
             
 
             
             
-                <textarea id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <select id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><option value="">Choisis une réponse</option><option value="a">=QUARTILE(B2:B11)</option><option value="b">=QUARTILE(B2:B11;1)</option><option value="c">=QUARTILE(1)</option></select>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Utilise QUARTILE avec 1 puis 3, et fais la différence pour l’écart interquartile.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Il faut la plage et le numéro.</p></details>
             
             
         </div>
@@ -847,15 +665,79 @@
         <div class="cours-question" data-question="q03">
             
             
-            <h3 id="a02-q03-label">Question 3 — Écris la formule de Q1 (valeurs en B2:B121).</h3>
+            <h3 id="a02-q03-label">Question 3 — Quelle formule donne Q3 ?</h3>
             
 
             
             
-                <textarea id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <select id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label"><option value="">Choisis une réponse</option><option value="a">=QUARTILE(B2:B11;2)</option><option value="b">=QUARTILE3(B2:B11)</option><option value="c">=QUARTILE(B2:B11;3)</option></select>
 
                 
-            <details><summary>Un coup de pouce</summary><p>La fonction s’écrit avec la plage des poids, un point-virgule, puis le numéro du quartile.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Numéro 3.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a02-q04-label">Question 4 — Série B — Quel résultat affiche la formule de l’étendue ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q04" data-answer-id="a02_q04" data-required="true" aria-labelledby="a02-q04-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Max − min, à la main.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a02-q05-label">Question 5 — Calcule Q1 à la main (méthode du cours).</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q05" data-answer-id="a02_q05" data-required="true" aria-labelledby="a02-q05-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>10 ÷ 4 = 2,5 → rang 3.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a02-q06-label">Question 6 — Calcule Q3 à la main (méthode du cours).</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q06" data-answer-id="a02_q06" data-required="true" aria-labelledby="a02-q06-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>30 ÷ 4 = 7,5 → rang 8.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q07">
+            
+            
+            <h3 id="a02-q07-label">Question 7 — Écart interquartile (avec tes Q1 et Q3) ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q07" data-answer-id="a02_q07" data-required="true" aria-labelledby="a02-q07-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Q3 − Q1.</p></details>
             
             
         </div>
@@ -869,57 +751,57 @@
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Contrôler</h2>
+        <h2>Partie 3 — Contrôler le résultat du tableur</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les calculs sont faits. Sont-ils plausibles ?</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas contrôler la plausibilité des indicateurs et repérer une valeur suspecte. On attend la valeur et ton action.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Dernière notion : ne pas croire le tableur les yeux fermés.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Le tableur ne se trompe pas dans ses calculs… mais si une donnée est mal tapée, le résultat est faux. Comment le repérer ?</p>
+<p>Le tableur calcule toujours ce qu’on lui demande, même si la formule est fausse.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>Il faut donc contrôler le résultat avec un ordre de grandeur.</p>
     
 
-<p>Contrôler la plausibilité, c’est vérifier qu’un résultat a un ordre de grandeur réaliste.</p>
+<p>À retenir : Une moyenne ou une médiane est entre le min et le max ; une étendue est positive ; Q1 ≤ médiane ≤ Q3.</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Repérer une erreur de saisie avant de prendre une décision.</li></ul>
+<ol><li>Regarde le min et le max de la série.</li><li>Vérifie que la moyenne et la médiane sont entre les deux.</li><li>Vérifie que Q1 ≤ médiane ≤ Q3.</li><li>Si ce n’est pas le cas, relis la formule et la plage.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>On compare MIN et MAX aux valeurs possibles (un poulain de 6 mois pèse environ 200 à 300 kg).</li><li>On vérifie que la moyenne est entre MIN et MAX et proche de la médiane.</li><li>On cherche la valeur suspecte et on la vérifie auprès de la source.</li></ol>
+<p>1. Pourquoi la moyenne est entre min et max</p>
     
 
-<p>À retenir : Une erreur de saisie fausse surtout la moyenne ; la médiane bouge peu.</p>
+<ul><li>Si on partage le total en parts égales, chaque part ne peut pas dépasser la plus grande valeur.</li><li>Ni être plus petite que la plus petite.</li></ul>
+    
+
+<p>2. D’où viennent les erreurs</p>
+    
+
+<ul><li>Une mauvaise plage, une cellule vide, une valeur mal tapée (450 au lieu de 45).</li><li>Le contrôle repère ces erreurs en quelques secondes.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>MIN = 1,2 kg pour des chevaux adultes. Que penses-tu ?</li></ol>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : vérifie que la moyenne est entre MIN et MAX, puis repère la valeur suspecte.</li><li>Pourquoi contrôler ? Un poids de 2 480 kg tapé à la place de 248 fausse la moyenne.</li></ol>
+<p>Poids entre 42 et 61 kg (même série).</p>
     
 
 
@@ -928,63 +810,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a03-q01-label">Question 1 — Série A — Le tableur affiche une moyenne de 92 kg. Est-ce possible ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    On vérifie qu’un résultat est …… (ordre de grandeur).
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a03_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Contrôler — Mot(s) manquant(s) — On vérifie qu’un résultat est …… (ordre de grandeur).">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Une erreur de saisie fausse surtout la …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a03_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Contrôler — Mot(s) manquant(s) — Une erreur de saisie fausse surtout la …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Un poids de poulain de 2 000 kg est-il possible ? On vérifie l’ordre de… Et quel indicateur une valeur fausse déplace-t-elle le plus ?</p></details>
+                <select id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label"><option value="">Choisis une réponse</option><option value="a">Oui</option><option value="b">Non, la moyenne doit être entre 42 et 61 kg</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Compare avec le min et le max.</p></details>
             
             
         </div>
@@ -992,15 +826,79 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a03-q02-label">Question 2 — As-tu trouvé une valeur suspecte ? Que fais-tu ?</h3>
+            <h3 id="a03-q02-label">Question 2 — Le tableur affiche une médiane de 50,5 kg. Est-ce possible ?</h3>
             
 
             
             
-                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <select id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label"><option value="">Choisis une réponse</option><option value="a">Oui</option><option value="b">Non</option></select>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Trie la colonne des poids et regarde le début et la fin de la liste. Si une valeur est impossible, qui peut la corriger ?</p></details>
+            <details><summary>Un coup de pouce</summary><p>Est-ce entre 42 et 61 ?</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a03-q03-label">Question 3 — Le tableur affiche Q1 = 56 kg et Q3 = 48 kg. Est-ce possible ?</h3>
+            
+
+            
+            
+                <select id="a03-q03" data-answer-id="a03_q03" data-required="true" aria-labelledby="a03-q03-label"><option value="">Choisis une réponse</option><option value="a">Oui</option><option value="b">Non, Q1 doit être plus petit que Q3</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Q1 ≤ Q3.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a03-q04-label">Question 4 — Le tableur affiche une étendue de −19. Que s’est-il passé ?</h3>
+            
+
+            
+            
+                <select id="a03-q04" data-answer-id="a03_q04" data-required="true" aria-labelledby="a03-q04-label"><option value="">Choisis une réponse</option><option value="a">La formule fait MIN − MAX au lieu de MAX − MIN</option><option value="b">Rien, c’est juste</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Une étendue est toujours positive.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a03-q05-label">Question 5 — Série B — Un poids de 45 kg a été tapé 450. De combien la somme a-t-elle augmenté ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q05" data-answer-id="a03_q05" data-required="true" aria-labelledby="a03-q05-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>450 − 45.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a03-q06-label">Question 6 — De combien la moyenne des 10 poids a-t-elle augmenté ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q06" data-answer-id="a03_q06" data-required="true" aria-labelledby="a03-q06-label"><p>Unité : kg</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Écart de la somme ÷ 10.</p></details>
             
             
         </div>
@@ -1014,7 +912,7 @@
     
     <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Pour aller plus loin</h2>
+        <h2>Encore des exercices (si tu as fini)</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
@@ -1022,7 +920,7 @@
         
 
         
-<p>Le tableur peut tracer une boîte à moustaches (selon la version).</p>
+<p>Tu as fini ? Entraîne-toi encore. Ces exercices ne comptent pas dans la note.</p>
     
 
 
@@ -1031,15 +929,63 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Que montre-t-elle ?</h3>
+            <h3 id="a04-q01-label">Question 1 — Formule du plus petit poids en C2:C21 ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <select id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label"><option value="">Choisis une réponse</option><option value="a">=PETIT(C2:C21)</option><option value="b">=MIN(C2:C21)</option></select>
 
                 
-            <details><summary>Un coup de pouce</summary><p>La boîte à moustaches dessine la médiane, Q1, Q3, le minimum et le maximum. Qu’est-ce qu’elle permet de voir d’un coup d’œil ?</p></details>
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a04-q02-label">Question 2 — Combien de cellules dans C2:C21 ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a04-q02" data-answer-id="a04_q02" data-required="false" aria-labelledby="a04-q02-label">
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a04-q03-label">Question 3 — Formule de la moyenne en D3:D15 ?</h3>
+            
+
+            
+            
+                <select id="a04-q03" data-answer-id="a04_q03" data-required="false" aria-labelledby="a04-q03-label"><option value="">Choisis une réponse</option><option value="a">=MOYENNE(D3:D15)</option><option value="b">=MOYENNE(D3;D15)</option></select>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a04-q04-label">Question 4 — Valeurs entre 10 et 20 ; le tableur donne une médiane de 25. Possible ?</h3>
+            
+
+            
+            
+                <select id="a04-q04" data-answer-id="a04_q04" data-required="false" aria-labelledby="a04-q04-label"><option value="">Choisis une réponse</option><option value="a">Oui</option><option value="b">Non</option></select>
+
+                
+            
             
             
         </div>
@@ -1047,41 +993,6 @@
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#a03">← Étape précédente</a>
-            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a05" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Conclusion de ton travail</h2>
-        
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le tableur calcule tes indicateurs. Il reste à répondre au problème de départ.</p>
-        
-        
-        
-
-        
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment obtenir rapidement les indicateurs d’une grande série avec le tableur ?</h3>
-            
-
-            
-            
-                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Cite les fonctions du tableur utilisées et les contrôles à faire sur les résultats.</p></details>
-            
-            
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -1094,7 +1005,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>=MOYENNE, =MEDIANE, =QUARTILE(plage;1).</li><li>Contrôler l’ordre de grandeur.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Une formule commence par = ; la plage B2:B11 veut dire « de B2 à B11 ».</li><li>=MOYENNE(B2:B11) ; =MEDIANE(B2:B11) ; =MIN(…) ; =MAX(…).</li><li>=QUARTILE(B2:B11;1) pour Q1, ;3 pour Q3. Étendue : =MAX(…)−MIN(…).</li><li>Le tableur peut calculer les quartiles autrement qu’à la main : on vérifie l’ordre de grandeur.</li></ul>
     
 </section>
 
@@ -1110,7 +1021,7 @@
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
     
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>

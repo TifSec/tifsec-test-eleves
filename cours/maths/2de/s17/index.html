@@ -124,7 +124,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Lire le tableau</a></li><li><a href="#a02">Calculer des fréquences</a></li><li><a href="#a03">Une évolution</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Partie 1 — Lire un tableau de données</a></li><li><a href="#a02">Partie 2 — Calculer des parts</a></li><li><a href="#a03">Partie 3 — Calculer une évolution</a></li><li><a href="#a04">Encore des exercices (si tu as fini) — facultatif</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -150,7 +150,7 @@
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Que nous apprennent les chiffres réels de la filière cheval ?</p>
+        <p>Comment lire un tableau de données publiées, calculer des parts et des évolutions ?</p>
     </section>
     
 
@@ -168,9 +168,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Les données ouvertes de l’IFCE (Observatoire économique et social du cheval) et d’Agreste décrivent la filière.</li>
+            <li>On cite toujours la source et l’année des données.</li>
             
-            <li>On cite toujours la source et l’année.</li>
+            <li>Part = effectif ÷ total ; taux d’évolution = (nouvelle ÷ ancienne − 1) × 100.</li>
             
         </ul>
         
@@ -180,14 +180,16 @@
             
             <li>Lire un tableau de données réelles.</li>
             
-            <li>Calculer des fréquences et des évolutions.</li>
+            <li>Calculer la part d’une catégorie en %.</li>
+            
+            <li>Calculer et interpréter une évolution en %.</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Jusqu’ici, les données étaient fictives.</p><p>Aujourd’hui, tu travailles sur des chiffres publiés (extraits arrondis préparés par le professeur).</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Aujourd’hui, trois notions : lire un tableau de données, calculer des parts, calculer des évolutions.</p><p>Pour chacune : la notion, la méthode, pourquoi ça marche, un exemple au tableau, puis beaucoup d’exercices.</p></div></section>
     
     
     
@@ -202,67 +204,45 @@
 
 <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
     <article class="course-paper-sheet">
-        <header><p class="course-paper-class">Mathématiques — 2de Pro</p><p class="course-paper-kicker">Cours et exercices — version papier</p><h2 id="course-paper-title"><span class="course-paper-number">Séance 17</span> — Des données réelles de la filière cheval</h2><p>Que nous apprennent les chiffres réels de la filière cheval ?</p></header>
+        <header><p class="course-paper-class">Mathématiques — 2de Pro</p><p class="course-paper-kicker">Cours et exercices — version papier</p><h2 id="course-paper-title"><span class="course-paper-number">Séance 17</span> — Des données réelles de la filière cheval</h2><p>Trois notions : lire un tableau, calculer des parts, calculer des évolutions. Données : naissances de poulains en France (IFCE).</p></header>
         
         <section class="course-paper-section">
-            <h3>Le cours en bref</h3>
+            <h3>I. Lire un tableau de données</h3>
             
-<p>Le problème à résoudre : Que nous apprennent les chiffres réels de la filière cheval ?</p>
+<h4>La notion</h4>
     
 
-<h4>Ce que tu vas apprendre</h4>
+<p>Des organismes publics publient des chiffres sur la filière cheval : l’IFCE (Institut français du cheval et de l’équitation) en fait partie.</p>
     
 
-<ul><li>Les données ouvertes de l’IFCE (Observatoire économique et social du cheval) et d’Agreste décrivent la filière.</li><li>On cite toujours la source et l’année.</li></ul>
+<p>Un tableau de données a des lignes (les catégories), des colonnes (les années) et une source.</p>
     
 
-<h4>Ce que tu vas savoir faire</h4>
+<h4>À retenir</h4>
     
 
-<ul><li>Lire un tableau de données réelles.</li><li>Calculer des fréquences et des évolutions.</li></ul>
+<p>Lire une donnée = croiser une ligne et une colonne. Toujours noter la source et l’année.</p>
     
 
-<h4>Pourquoi cette séance ?</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<p>Jusqu’ici, les données étaient fictives. Aujourd’hui, tu travailles sur des chiffres publiés (extraits arrondis préparés par le professeur).</p>
+<ol><li>Lis le titre et la source sous le tableau.</li><li>Repère la ligne de la catégorie demandée.</li><li>Repère la colonne de l’année demandée.</li><li>Lis le nombre à leur croisement.</li></ol>
     
 
-<p>Comment utiliser cette fiche : pour chaque partie, lis la méthode et l’exemple, complète les points clés, puis fais l’exercice. Réponds sur les lignes.</p>
+<h4>Pourquoi ça marche</h4>
     
 
-
-            
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>I. Lire le tableau</h3>
-            
-<h4>La situation</h4>
+<p>1. Pourquoi la source</p>
     
 
-<p>Combien de poulains naissent chaque année en France, et de quelles races ? L’IFCE publie ces chiffres.</p>
+<ul><li>Un chiffre peut venir d’une enquête, d’un registre ou d’une simple estimation.</li><li>Avec la source et l’année, on sait d’où il vient et s’il est récent.</li></ul>
     
 
-<h4>Ce que c’est</h4>
+<p>2. Pourquoi « provisoire »</p>
     
 
-<p>Des données réelles sont des chiffres publiés par un organisme (ici l’IFCE). La source dit qui les a produits, l’année dit quand.</p>
-    
-
-<h4>À quoi ça sert</h4>
-    
-
-<ul><li>Connaître la filière dans laquelle on travaille.</li><li>Pouvoir vérifier un chiffre.</li></ul>
-    
-
-<h4>Comment ça marche</h4>
-    
-
-<ol><li>On repère sous le tableau la source et l’année.</li><li>On lit le titre et les unités.</li><li>Pour trouver le plus grand nombre, on parcourt la colonne.</li></ol>
-    
-
-<p>À retenir : On cite toujours la source et l’année.</p>
+<ul><li>Les chiffres de 2023 marqués (p) peuvent encore un peu changer.</li><li>Ils sont publiés tôt pour être utiles, puis corrigés.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -271,71 +251,59 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<ul><li>Automatisme : arrondis 12 486 à la centaine.</li></ul>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<h4>Ce que tu vas faire</h4>
+<p>Naissances de poulains en France :</p>
     
 
-<p>Tu vas lire un extrait des chiffres de naissances d’équidés publiés par l’IFCE (document 1). On attend la source, l’année et le type le plus représenté.</p>
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Type d’équidé</th><th scope="col">2018</th><th scope="col">2023</th></tr></thead><tbody><tr><td>Galop (courses)</td><td>6 769</td><td>6 476</td></tr><tr><td>Trot (courses)</td><td>10 141</td><td>8 960</td></tr><tr><td>Sport-loisir</td><td>13 159</td><td>16 577</td></tr><tr><td>Ânes</td><td>352</td><td>417</td></tr></tbody></table></div>
     
 
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : lis l’extrait (document 1, préparé par le professeur à partir des publications de l’IFCE) ; repère la source, l’année et le type le plus nombreux.</li><li>Pourquoi la source ? Sans elle, un chiffre ne peut pas être vérifié.</li></ol>
-    
-
-<h4>Exemple et documents</h4>
-    
-
-<p>Document 1 — Extrait des naissances d’équidés par type en France (chiffres arrondis), à distribuer par le professeur depuis la publication IFCE la plus récente.</p>
-    
-
-<p><a href="https://www.ifce.fr/ifce/connaissances/statistiques-et-donnees/" target="_blank" rel="noopener noreferrer">IFCE — Statistiques et données de la filière</a></p>
-
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>On cite toujours la <span class="cours-trou" aria-label="à compléter"></span> et l’année des données.</li><li>L’IFCE publie des données sur la filière <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 1 — Lire le tableau</h4>
+<p>Source : IFCE-SIRE, dépliant « Chiffres clés 2024 » (naissances de poulains immatriculés ; 2023 : chiffres provisoires). Extrait : les chevaux de trait ne figurent pas dans ce tableau.</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — Pourquoi un chiffre sans source n’est-il pas fiable ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Quelle est la source et l’année des données du document 1 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Quelle race ou quel type a le plus de naissances ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — Combien de naissances de trotteurs en 2023 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Combien de naissances en sport-loisir en 2018 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Combien de naissances d’ânes en 2023 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Quelle est la source de ces données ? Choix : Un site de petites annonces / L’IFCE (fichier SIRE) / Aucune.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — En 2023, quel type a le plus de naissances ? Choix : Galop / Trot / Sport-loisir.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Combien de naissances en tout en 2023, pour ces 4 types ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>II. Calculer des fréquences</h3>
+            <h3>II. Calculer des parts</h3>
             
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Quelle part des naissances représente chaque type de cheval ?</p>
+<p>La part d’une catégorie dit quelle fraction du total elle représente.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>C’est une fréquence, qu’on écrit en pourcentage.</p>
     
 
-<p>La part (ou fréquence) d’un type est son effectif divisé par le total, souvent en pourcentage.</p>
+<h4>À retenir</h4>
     
 
-<h4>À quoi ça sert</h4>
+<p>Part = effectif de la catégorie ÷ total × 100.</p>
     
 
-<ul><li>Voir la structure de la filière : quels types dominent.</li></ul>
+<h4>Comment ça fonctionne</h4>
     
 
-<h4>Comment ça marche</h4>
+<ol><li>Calcule le total de la colonne (une seule année).</li><li>Divise l’effectif de la catégorie par ce total.</li><li>Multiplie par 100 et arrondis à l’unité.</li><li>Contrôle : la somme des parts fait environ 100 %.</li></ol>
     
 
-<ol><li>On divise l’effectif du type par le total.</li><li>On multiplie par 100.</li><li>On vérifie que la somme des parts fait environ 100 % (les arrondis peuvent donner 99 % ou 101 %).</li></ol>
+<h4>Pourquoi ça marche</h4>
     
 
-<p>À retenir : Part = effectif du type ÷ total.</p>
+<p>1. Pourquoi diviser par le total</p>
+    
+
+<ul><li>La part répond à « combien sur 100 naissances ? ».</li><li>On ramène le nombre de la catégorie au nombre total, puis à 100.</li></ul>
+    
+
+<p>2. Pourquoi c’est utile</p>
+    
+
+<ul><li>16 577 ne dit pas si c’est beaucoup.</li><li>Dire « environ une naissance sur deux » (51 %) parle tout de suite.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -344,59 +312,59 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<h4>Ce que tu vas faire</h4>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<p>Tu vas calculer la part des principaux types dans les naissances. On attend deux parts en pourcentage.</p>
+<p>Total des naissances 2023 (4 types) : 32 430. Arrondis les parts à l’unité.</p>
     
 
-<h4>Ta mission</h4>
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Type d’équidé</th><th scope="col">2018</th><th scope="col">2023</th></tr></thead><tbody><tr><td>Galop (courses)</td><td>6 769</td><td>6 476</td></tr><tr><td>Trot (courses)</td><td>10 141</td><td>8 960</td></tr><tr><td>Sport-loisir</td><td>13 159</td><td>16 577</td></tr><tr><td>Ânes</td><td>352</td><td>417</td></tr></tbody></table></div>
     
 
-<ol><li>À toi : calcule la part de chaque type dans le total.</li><li>Pourquoi des parts ? Elles montrent la structure de la filière.</li></ol>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>Part d’un type = effectif du type ÷ <span class="cours-trou" aria-label="à compléter"></span> .</li><li>On écrit une part en <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 2 — Calculer des fréquences</h4>
+<p>Source : IFCE-SIRE, dépliant « Chiffres clés 2024 » (naissances de poulains immatriculés ; 2023 : chiffres provisoires). Extrait : les chevaux de trait ne figurent pas dans ce tableau.</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — 300 naissances d’un type sur 1 200. Part ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — 4 500 sur 30 000 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Écris la part (en %) des deux types les plus nombreux.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — Part du sport-loisir en 2023, en % ? (en %)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Part du trot en 2023, en % ? (en %)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Part du galop en 2023, en % ? (en %)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Part des ânes en 2023, en % ? (en %)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — Part des courses (galop + trot) en 2023, en % ? (en %)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Total des naissances en 2018 (4 types) ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Part du sport-loisir en 2018, en % ? (en %)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>III. Une évolution</h3>
+            <h3>III. Calculer une évolution</h3>
             
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Les naissances d’un type augmentent-elles ou baissent-elles d’une année à l’autre ?</p>
+<p>L’évolution compare la même catégorie à deux dates.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>On l’exprime en pourcentage avec le taux d’évolution (vu en séance 5).</p>
     
 
-<p>Le taux d’évolution mesure, en pourcentage, de combien une valeur a augmenté ou baissé par rapport à l’année d’avant.</p>
+<h4>À retenir</h4>
     
 
-<h4>À quoi ça sert</h4>
+<p>Taux d’évolution = (valeur 2023 ÷ valeur 2018 − 1) × 100.</p>
     
 
-<ul><li>Savoir si une filière grandit ou recule.</li></ul>
+<h4>Comment ça fonctionne</h4>
     
 
-<h4>Comment ça marche</h4>
+<ol><li>Repère l’ancienne valeur (2018) et la nouvelle (2023).</li><li>Divise la nouvelle par l’ancienne.</li><li>Enlève 1, multiplie par 100, arrondis à l’unité.</li><li>Positif : hausse ; négatif : baisse.</li></ol>
     
 
-<ol><li>On calcule nouvelle − ancienne.</li><li>On divise par l’ancienne valeur.</li><li>On multiplie par 100 : positif = hausse, négatif = baisse.</li></ol>
+<h4>Pourquoi ça marche</h4>
     
 
-<p>À retenir : Taux d’évolution = (nouvelle − ancienne) ÷ ancienne.</p>
+<p>1. Pourquoi diviser par l’ancienne valeur</p>
+    
+
+<ul><li>On compare au point de départ : 2018 représente 100 %.</li><li>Si 2023 vaut 126 % de 2018, il y a eu 26 % de plus.</li></ul>
+    
+
+<p>2. Évolution en nombre ou en %</p>
+    
+
+<ul><li>Les ânes gagnent 65 naissances, le sport-loisir 3 418.</li><li>Mais pour les ânes, 65 sur 352 c’est une hausse de 18 % : le % permet de comparer.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -405,83 +373,37 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<h4>Ce que tu vas faire</h4>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<p>Tu vas calculer le taux d’évolution des naissances d’un type entre deux années. On attend le calcul et son interprétation.</p>
+<p>Arrondis les taux à l’unité. Pour une baisse, écris le signe moins.</p>
     
 
-<h4>Ta mission</h4>
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Type d’équidé</th><th scope="col">2018</th><th scope="col">2023</th></tr></thead><tbody><tr><td>Galop (courses)</td><td>6 769</td><td>6 476</td></tr><tr><td>Trot (courses)</td><td>10 141</td><td>8 960</td></tr><tr><td>Sport-loisir</td><td>13 159</td><td>16 577</td></tr><tr><td>Ânes</td><td>352</td><td>417</td></tr></tbody></table></div>
     
 
-<ol><li>À toi : compare avec l’année précédente (deuxième colonne de l’extrait) et calcule le taux d’évolution d’un type.</li><li>Pourquoi une évolution ? Elle montre si la filière grandit ou recule.</li></ol>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>Taux d’évolution = (nouvelle − ancienne) ÷ <span class="cours-trou" aria-label="à compléter"></span> .</li><li>Un taux négatif signifie une <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 3 — Une évolution</h4>
+<p>Source : IFCE-SIRE, dépliant « Chiffres clés 2024 » (naissances de poulains immatriculés ; 2023 : chiffres provisoires). Extrait : les chevaux de trait ne figurent pas dans ce tableau.</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — 400 naissances une année, 360 la suivante. Taux d’évolution ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — 250 puis 300 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Calcule le taux d’évolution des naissances d’un type entre les deux années et interprète.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — Combien de naissances en plus en sport-loisir entre 2018 et 2023 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Taux d’évolution du sport-loisir, en % ? (en %)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Taux d’évolution du trot, en % ? (en %)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Taux d’évolution des ânes, en % ? (en %)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — Taux d’évolution du total (4 types), en % ? (en %)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Quelle phrase est juste ? Choix : Tous les types ont augmenté. / Le sport-loisir a augmenté, les courses (galop et trot) ont baissé. / Tous les types ont baissé..</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Quelle catégorie a la plus forte hausse en % ? Choix : Sport-loisir / Ânes / Trot.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>Conclusion</h3>
+            <h3>Encore des exercices (si tu as fini)</h3>
             
-<p>Avec ce que tu as fait dans les parties précédentes, réponds en quelques phrases complètes.</p>
-    
 
-
-            <ol class="course-paper-questions"><li><span>Réponds au problème du jour : que nous apprennent les chiffres réels de la filière cheval ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Pour aller plus loin (facultatif)</h3>
-            
-<p>Les naissances baissent dans certaines races depuis des années.</p>
-    
-
-
-            <ol class="course-paper-questions"><li><span>Propose une explication à vérifier.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Combien de naissances de trotteurs en moins entre 2018 et 2023 ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Part du trot en 2018, en % (arrondi) ? (en %)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Si le sport-loisir augmentait encore de 26 % après 2023, combien de naissances environ (arrondi à la centaine) ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>À retenir</h3>
             
-<ul><li>Citer source et année.</li><li>Parts et évolutions.</li></ul>
+<ul><li>Un chiffre sans source ni année n’est pas fiable : on les cite toujours.</li><li>Part d’une catégorie = effectif de la catégorie ÷ total × 100.</li><li>Taux d’évolution = (nouvelle valeur ÷ ancienne valeur − 1) × 100.</li><li>Taux positif : hausse ; taux négatif : baisse.</li></ul>
     
 
 
             
-        </section>
-        
-        <section class="course-paper-section course-paper-break">
-            <h2 class="course-paper-part">Fiche d’exercices</h2><h3>Exercice 1 — Parts</h3>
-            
-<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Type</th><th scope="col">Naissances</th></tr></thead><tbody><tr><td>Selle</td><td>300</td></tr><tr><td>Trait</td><td>150</td></tr><tr><td>Poney</td><td>50</td></tr></tbody></table></div>
-    
-
-
-            <ol class="course-paper-questions"><li><span>Part des chevaux de selle ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Part des poneys ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Exercice 2 — Évolution</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>Naissances de trait : 150 cette année, 200 l’an dernier. Taux ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Exercice 3 — Source</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>Pourquoi indiquer la source et l’année ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
     </article>
@@ -495,66 +417,63 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Lire le tableau</h2>
+        <h2>Partie 1 — Lire un tableau de données</h2>
         
         
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas lire un extrait des chiffres de naissances d’équidés publiés par l’IFCE (document 1). On attend la source, l’année et le type le plus représenté.</p></div>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Combien de poulains naissent chaque année en France, et de quelles races ? L’IFCE publie ces chiffres.</p>
+<p>Des organismes publics publient des chiffres sur la filière cheval : l’IFCE (Institut français du cheval et de l’équitation) en fait partie.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>Un tableau de données a des lignes (les catégories), des colonnes (les années) et une source.</p>
     
 
-<p>Des données réelles sont des chiffres publiés par un organisme (ici l’IFCE). La source dit qui les a produits, l’année dit quand.</p>
+<p>À retenir : Lire une donnée = croiser une ligne et une colonne. Toujours noter la source et l’année.</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Connaître la filière dans laquelle on travaille.</li><li>Pouvoir vérifier un chiffre.</li></ul>
+<ol><li>Lis le titre et la source sous le tableau.</li><li>Repère la ligne de la catégorie demandée.</li><li>Repère la colonne de l’année demandée.</li><li>Lis le nombre à leur croisement.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>On repère sous le tableau la source et l’année.</li><li>On lit le titre et les unités.</li><li>Pour trouver le plus grand nombre, on parcourt la colonne.</li></ol>
+<p>1. Pourquoi la source</p>
     
 
-<p>À retenir : On cite toujours la source et l’année.</p>
+<ul><li>Un chiffre peut venir d’une enquête, d’un registre ou d’une simple estimation.</li><li>Avec la source et l’année, on sait d’où il vient et s’il est récent.</li></ul>
+    
+
+<p>2. Pourquoi « provisoire »</p>
+    
+
+<ul><li>Les chiffres de 2023 marqués (p) peuvent encore un peu changer.</li><li>Ils sont publiés tôt pour être utiles, puis corrigés.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>Pourquoi un chiffre sans source n’est-il pas fiable ?</li></ol>
+<p>Naissances de poulains en France :</p>
     
 
-<ul><li>Automatisme : arrondis 12 486 à la centaine.</li></ul>
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Type d’équidé</th><th scope="col">2018</th><th scope="col">2023</th></tr></thead><tbody><tr><td>Galop (courses)</td><td>6 769</td><td>6 476</td></tr><tr><td>Trot (courses)</td><td>10 141</td><td>8 960</td></tr><tr><td>Sport-loisir</td><td>13 159</td><td>16 577</td></tr><tr><td>Ânes</td><td>352</td><td>417</td></tr></tbody></table></div>
     
 
-<p>Document 1 — Extrait des naissances d’équidés par type en France (chiffres arrondis), à distribuer par le professeur depuis la publication IFCE la plus récente.</p>
-    
-
-<p><a href="https://www.ifce.fr/ifce/connaissances/statistiques-et-donnees/" target="_blank" rel="noopener noreferrer">IFCE — Statistiques et données de la filière</a></p>
-
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : lis l’extrait (document 1, préparé par le professeur à partir des publications de l’IFCE) ; repère la source, l’année et le type le plus nombreux.</li><li>Pourquoi la source ? Sans elle, un chiffre ne peut pas être vérifié.</li></ol>
+<p>Source : IFCE-SIRE, dépliant « Chiffres clés 2024 » (naissances de poulains immatriculés ; 2023 : chiffres provisoires). Extrait : les chevaux de trait ne figurent pas dans ce tableau.</p>
     
 
 
@@ -563,63 +482,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a01-q01-label">Question 1 — Série A — Combien de naissances de trotteurs en 2023 ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    On cite toujours la …… et l’année des données.
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Lire le tableau — Mot(s) manquant(s) — On cite toujours la …… et l’année des données.">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    L’IFCE publie des données sur la filière …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Lire le tableau — Mot(s) manquant(s) — L’IFCE publie des données sur la filière …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Sous un tableau de données, on écrit toujours d’où il vient et… ? Et l’IFCE publie des données sur quelle filière ?</p></details>
+                <input type="text" inputmode="decimal" id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Ligne Trot, colonne 2023.</p></details>
             
             
         </div>
@@ -627,15 +498,15 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Quelle est la source et l’année des données du document 1 ?</h3>
+            <h3 id="a01-q02-label">Question 2 — Combien de naissances en sport-loisir en 2018 ?</h3>
             
 
             
             
-                <textarea id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label">
 
                 
-            <details><summary>Un coup de pouce</summary><p>La source et l’année sont écrites sous le tableau du document 1.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Ligne Sport-loisir, colonne 2018.</p></details>
             
             
         </div>
@@ -643,15 +514,63 @@
         <div class="cours-question" data-question="q03">
             
             
-            <h3 id="a01-q03-label">Question 3 — Quelle race ou quel type a le plus de naissances ?</h3>
+            <h3 id="a01-q03-label">Question 3 — Combien de naissances d’ânes en 2023 ?</h3>
             
 
             
             
-                <textarea id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label">
 
                 
-            <details><summary>Un coup de pouce</summary><p>Cherche la plus grande valeur de la colonne des naissances du document 1.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Ligne Ânes, colonne 2023.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a01-q04-label">Question 4 — Quelle est la source de ces données ?</h3>
+            
+
+            
+            
+                <select id="a01-q04" data-answer-id="a01_q04" data-required="true" aria-labelledby="a01-q04-label"><option value="">Choisis une réponse</option><option value="a">Un site de petites annonces</option><option value="b">L’IFCE (fichier SIRE)</option><option value="c">Aucune</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Lis sous le tableau.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a01-q05-label">Question 5 — Série B — En 2023, quel type a le plus de naissances ?</h3>
+            
+
+            
+            
+                <select id="a01-q05" data-answer-id="a01_q05" data-required="true" aria-labelledby="a01-q05-label"><option value="">Choisis une réponse</option><option value="a">Galop</option><option value="b">Trot</option><option value="c">Sport-loisir</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Compare la colonne 2023.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a01-q06-label">Question 6 — Combien de naissances en tout en 2023, pour ces 4 types ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a01-q06" data-answer-id="a01_q06" data-required="true" aria-labelledby="a01-q06-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Additionne la colonne 2023.</p></details>
             
             
         </div>
@@ -665,57 +584,63 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Calculer des fréquences</h2>
+        <h2>Partie 2 — Calculer des parts</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as lu le tableau. Calcule la structure de la filière.</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas calculer la part des principaux types dans les naissances. On attend deux parts en pourcentage.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais lire le tableau. Deuxième notion : calculer la part de chaque type.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Quelle part des naissances représente chaque type de cheval ?</p>
+<p>La part d’une catégorie dit quelle fraction du total elle représente.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>C’est une fréquence, qu’on écrit en pourcentage.</p>
     
 
-<p>La part (ou fréquence) d’un type est son effectif divisé par le total, souvent en pourcentage.</p>
+<p>À retenir : Part = effectif de la catégorie ÷ total × 100.</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Voir la structure de la filière : quels types dominent.</li></ul>
+<ol><li>Calcule le total de la colonne (une seule année).</li><li>Divise l’effectif de la catégorie par ce total.</li><li>Multiplie par 100 et arrondis à l’unité.</li><li>Contrôle : la somme des parts fait environ 100 %.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>On divise l’effectif du type par le total.</li><li>On multiplie par 100.</li><li>On vérifie que la somme des parts fait environ 100 % (les arrondis peuvent donner 99 % ou 101 %).</li></ol>
+<p>1. Pourquoi diviser par le total</p>
     
 
-<p>À retenir : Part = effectif du type ÷ total.</p>
+<ul><li>La part répond à « combien sur 100 naissances ? ».</li><li>On ramène le nombre de la catégorie au nombre total, puis à 100.</li></ul>
+    
+
+<p>2. Pourquoi c’est utile</p>
+    
+
+<ul><li>16 577 ne dit pas si c’est beaucoup.</li><li>Dire « environ une naissance sur deux » (51 %) parle tout de suite.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>300 naissances d’un type sur 1 200. Part ?</li><li>4 500 sur 30 000 ?</li></ol>
+<p>Total des naissances 2023 (4 types) : 32 430. Arrondis les parts à l’unité.</p>
     
 
-<h4>Ta mission</h4>
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Type d’équidé</th><th scope="col">2018</th><th scope="col">2023</th></tr></thead><tbody><tr><td>Galop (courses)</td><td>6 769</td><td>6 476</td></tr><tr><td>Trot (courses)</td><td>10 141</td><td>8 960</td></tr><tr><td>Sport-loisir</td><td>13 159</td><td>16 577</td></tr><tr><td>Ânes</td><td>352</td><td>417</td></tr></tbody></table></div>
     
 
-<ol><li>À toi : calcule la part de chaque type dans le total.</li><li>Pourquoi des parts ? Elles montrent la structure de la filière.</li></ol>
+<p>Source : IFCE-SIRE, dépliant « Chiffres clés 2024 » (naissances de poulains immatriculés ; 2023 : chiffres provisoires). Extrait : les chevaux de trait ne figurent pas dans ce tableau.</p>
     
 
 
@@ -724,63 +649,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a02-q01-label">Question 1 — Série A — Part du sport-loisir en 2023, en % ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Part d’un type = effectif du type ÷ …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Calculer des fréquences — Mot(s) manquant(s) — Part d’un type = effectif du type ÷ …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    On écrit une part en …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Calculer des fréquences — Mot(s) manquant(s) — On écrit une part en …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Part = effectif du type ÷ effectif… ? Et on l’écrit en quelle unité ?</p></details>
+                <input type="text" inputmode="decimal" id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label"><p>Unité : %</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>16 577 ÷ 32 430 × 100.</p></details>
             
             
         </div>
@@ -788,15 +665,95 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Écris la part (en %) des deux types les plus nombreux.</h3>
+            <h3 id="a02-q02-label">Question 2 — Part du trot en 2023, en % ?</h3>
             
 
             
             
-                <textarea id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><p>Unité : %</p>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Pour les deux types les plus nombreux : naissances du type ÷ total des naissances × 100.</p></details>
+            <details><summary>Un coup de pouce</summary><p>8 960 ÷ 32 430 × 100.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a02-q03-label">Question 3 — Part du galop en 2023, en % ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label"><p>Unité : %</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>6 476 ÷ 32 430 × 100.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a02-q04-label">Question 4 — Part des ânes en 2023, en % ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q04" data-answer-id="a02_q04" data-required="true" aria-labelledby="a02-q04-label"><p>Unité : %</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>417 ÷ 32 430 × 100.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a02-q05-label">Question 5 — Série B — Part des courses (galop + trot) en 2023, en % ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q05" data-answer-id="a02_q05" data-required="true" aria-labelledby="a02-q05-label"><p>Unité : %</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>(6 476 + 8 960) ÷ 32 430 × 100.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a02-q06-label">Question 6 — Total des naissances en 2018 (4 types) ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q06" data-answer-id="a02_q06" data-required="true" aria-labelledby="a02-q06-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>Additionne la colonne 2018.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q07">
+            
+            
+            <h3 id="a02-q07-label">Question 7 — Part du sport-loisir en 2018, en % ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a02-q07" data-answer-id="a02_q07" data-required="true" aria-labelledby="a02-q07-label"><p>Unité : %</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>13 159 ÷ 30 421 × 100.</p></details>
             
             
         </div>
@@ -810,57 +767,63 @@
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Une évolution</h2>
+        <h2>Partie 3 — Calculer une évolution</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu connais la structure. Comment évolue-t-elle ?</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas calculer le taux d’évolution des naissances d’un type entre deux années. On attend le calcul et son interprétation.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Dernière notion : comment chaque type a évolué entre 2018 et 2023.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Les naissances d’un type augmentent-elles ou baissent-elles d’une année à l’autre ?</p>
+<p>L’évolution compare la même catégorie à deux dates.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>On l’exprime en pourcentage avec le taux d’évolution (vu en séance 5).</p>
     
 
-<p>Le taux d’évolution mesure, en pourcentage, de combien une valeur a augmenté ou baissé par rapport à l’année d’avant.</p>
+<p>À retenir : Taux d’évolution = (valeur 2023 ÷ valeur 2018 − 1) × 100.</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Savoir si une filière grandit ou recule.</li></ul>
+<ol><li>Repère l’ancienne valeur (2018) et la nouvelle (2023).</li><li>Divise la nouvelle par l’ancienne.</li><li>Enlève 1, multiplie par 100, arrondis à l’unité.</li><li>Positif : hausse ; négatif : baisse.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>On calcule nouvelle − ancienne.</li><li>On divise par l’ancienne valeur.</li><li>On multiplie par 100 : positif = hausse, négatif = baisse.</li></ol>
+<p>1. Pourquoi diviser par l’ancienne valeur</p>
     
 
-<p>À retenir : Taux d’évolution = (nouvelle − ancienne) ÷ ancienne.</p>
+<ul><li>On compare au point de départ : 2018 représente 100 %.</li><li>Si 2023 vaut 126 % de 2018, il y a eu 26 % de plus.</li></ul>
+    
+
+<p>2. Évolution en nombre ou en %</p>
+    
+
+<ul><li>Les ânes gagnent 65 naissances, le sport-loisir 3 418.</li><li>Mais pour les ânes, 65 sur 352 c’est une hausse de 18 % : le % permet de comparer.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>400 naissances une année, 360 la suivante. Taux d’évolution ?</li><li>250 puis 300 ?</li></ol>
+<p>Arrondis les taux à l’unité. Pour une baisse, écris le signe moins.</p>
     
 
-<h4>Ta mission</h4>
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Type d’équidé</th><th scope="col">2018</th><th scope="col">2023</th></tr></thead><tbody><tr><td>Galop (courses)</td><td>6 769</td><td>6 476</td></tr><tr><td>Trot (courses)</td><td>10 141</td><td>8 960</td></tr><tr><td>Sport-loisir</td><td>13 159</td><td>16 577</td></tr><tr><td>Ânes</td><td>352</td><td>417</td></tr></tbody></table></div>
     
 
-<ol><li>À toi : compare avec l’année précédente (deuxième colonne de l’extrait) et calcule le taux d’évolution d’un type.</li><li>Pourquoi une évolution ? Elle montre si la filière grandit ou recule.</li></ol>
+<p>Source : IFCE-SIRE, dépliant « Chiffres clés 2024 » (naissances de poulains immatriculés ; 2023 : chiffres provisoires). Extrait : les chevaux de trait ne figurent pas dans ce tableau.</p>
     
 
 
@@ -869,63 +832,15 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a03-q01-label">Question 1 — Série A — Combien de naissances en plus en sport-loisir entre 2018 et 2023 ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Taux d’évolution = (nouvelle − ancienne) ÷ …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a03_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Une évolution — Mot(s) manquant(s) — Taux d’évolution = (nouvelle − ancienne) ÷ …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Un taux négatif signifie une …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a03_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Une évolution — Mot(s) manquant(s) — Un taux négatif signifie une …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Taux d’évolution = (nouvelle − ancienne) ÷ quelle valeur ? Et si le résultat est négatif, il y a eu une hausse ou une… ?</p></details>
+                <input type="text" inputmode="decimal" id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label">
+
+                
+            <details><summary>Un coup de pouce</summary><p>16 577 − 13 159.</p></details>
             
             
         </div>
@@ -933,15 +848,95 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a03-q02-label">Question 2 — Calcule le taux d’évolution des naissances d’un type entre les deux années et interprète.</h3>
+            <h3 id="a03-q02-label">Question 2 — Taux d’évolution du sport-loisir, en % ?</h3>
             
 
             
             
-                <textarea id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label"><p>Unité : %</p>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Choisis un type, prends ses naissances des deux années du document 1, applique la formule, puis dis si c’est une hausse ou une baisse.</p></details>
+            <details><summary>Un coup de pouce</summary><p>(16 577 ÷ 13 159 − 1) × 100.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a03-q03-label">Question 3 — Taux d’évolution du trot, en % ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q03" data-answer-id="a03_q03" data-required="true" aria-labelledby="a03-q03-label"><p>Unité : %</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>(8 960 ÷ 10 141 − 1) × 100.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a03-q04-label">Question 4 — Taux d’évolution des ânes, en % ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q04" data-answer-id="a03_q04" data-required="true" aria-labelledby="a03-q04-label"><p>Unité : %</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>(417 ÷ 352 − 1) × 100.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a03-q05-label">Question 5 — Série B — Taux d’évolution du total (4 types), en % ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a03-q05" data-answer-id="a03_q05" data-required="true" aria-labelledby="a03-q05-label"><p>Unité : %</p>
+
+                
+            <details><summary>Un coup de pouce</summary><p>(32 430 ÷ 30 421 − 1) × 100.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a03-q06-label">Question 6 — Quelle phrase est juste ?</h3>
+            
+
+            
+            
+                <select id="a03-q06" data-answer-id="a03_q06" data-required="true" aria-labelledby="a03-q06-label"><option value="">Choisis une réponse</option><option value="a">Tous les types ont augmenté.</option><option value="b">Le sport-loisir a augmenté, les courses (galop et trot) ont baissé.</option><option value="c">Tous les types ont baissé.</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Regarde le signe de chaque évolution.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q07">
+            
+            
+            <h3 id="a03-q07-label">Question 7 — Quelle catégorie a la plus forte hausse en % ?</h3>
+            
+
+            
+            
+                <select id="a03-q07" data-answer-id="a03_q07" data-required="true" aria-labelledby="a03-q07-label"><option value="">Choisis une réponse</option><option value="a">Sport-loisir</option><option value="b">Ânes</option><option value="c">Trot</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Compare +26 % et +18 %.</p></details>
             
             
         </div>
@@ -955,7 +950,7 @@
     
     <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Pour aller plus loin</h2>
+        <h2>Encore des exercices (si tu as fini)</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
@@ -963,7 +958,7 @@
         
 
         
-<p>Les naissances baissent dans certaines races depuis des années.</p>
+<p>Tu as fini ? Entraîne-toi encore. Ces exercices ne comptent pas dans la note.</p>
     
 
 
@@ -972,15 +967,47 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Propose une explication à vérifier.</h3>
+            <h3 id="a04-q01-label">Question 1 — Combien de naissances de trotteurs en moins entre 2018 et 2023 ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                <input type="text" inputmode="decimal" id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label">
 
                 
-            <details><summary>Un coup de pouce</summary><p>Pense au prix d’un poulain, au coût de l’élevage, aux usages du cheval (sport, loisir, travail) : propose une piste à vérifier.</p></details>
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a04-q02-label">Question 2 — Part du trot en 2018, en % (arrondi) ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a04-q02" data-answer-id="a04_q02" data-required="false" aria-labelledby="a04-q02-label"><p>Unité : %</p>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a04-q03-label">Question 3 — Si le sport-loisir augmentait encore de 26 % après 2023, combien de naissances environ (arrondi à la centaine) ?</h3>
+            
+
+            
+            
+                <input type="text" inputmode="decimal" id="a04-q03" data-answer-id="a04_q03" data-required="false" aria-labelledby="a04-q03-label">
+
+                
+            
             
             
         </div>
@@ -988,41 +1015,6 @@
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#a03">← Étape précédente</a>
-            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a05" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Conclusion de ton travail</h2>
-        
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as exploité des données réelles. Il reste à répondre au problème de départ.</p>
-        
-        
-        
-
-        
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : que nous apprennent les chiffres réels de la filière cheval ?</h3>
-            
-
-            
-            
-                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Dis comment lire un tableau de données réelles, calculer une part et un taux d’évolution, et citer la source.</p></details>
-            
-            
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -1035,7 +1027,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Citer source et année.</li><li>Parts et évolutions.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Un chiffre sans source ni année n’est pas fiable : on les cite toujours.</li><li>Part d’une catégorie = effectif de la catégorie ÷ total × 100.</li><li>Taux d’évolution = (nouvelle valeur ÷ ancienne valeur − 1) × 100.</li><li>Taux positif : hausse ; taux négatif : baisse.</li></ul>
     
 </section>
 
@@ -1051,7 +1043,7 @@
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
     
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>
