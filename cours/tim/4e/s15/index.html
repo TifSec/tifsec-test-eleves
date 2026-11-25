@@ -45,7 +45,7 @@
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css?v=20261022-shop-effects-2">
     
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css?v=20261125-calcul">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
@@ -240,7 +240,12 @@
 
             
             
-                <input type="text" inputmode="decimal" id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><p>Unité : filets</p>
+                
+                
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a01-q01">🎯 Résultat <span>un nombre seulement, en filets</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><span class="cours-resultat-unite">filets</span></span>
+                </div>
 
                 
             <details><summary>Un coup de pouce</summary><p>Dans le document 1, croise la ligne des filets avec la colonne du nombre (réflexe M6).</p></details>
@@ -491,6 +496,7 @@
 <script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/nombre-seulement.js?v=20261125-calcul"></script>
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-steps.js?v=20261029-steps-1"></script>

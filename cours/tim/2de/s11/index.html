@@ -45,7 +45,7 @@
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css?v=20261022-shop-effects-2">
     
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css?v=20261125-calcul">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
@@ -237,7 +237,12 @@
 
             
             
-                <input type="text" inputmode="decimal" id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><p>Unité : kg</p>
+                
+                
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a01-q01">🎯 Résultat <span>un nombre seulement, en kg</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><span class="cours-resultat-unite">kg</span></span>
+                </div>
 
                 
             <details><summary>Un coup de pouce</summary><p>Tango mange 9 kg par jour ; le mois compte 30 jours dans la feuille. Lis le résultat de Calc en D.</p></details>
@@ -292,7 +297,12 @@
 
             
             
-                <input type="text" inputmode="decimal" id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label"><p>Unité : kg</p>
+                
+                
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a02-q01">🎯 Résultat <span>un nombre seulement, en kg</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label"><span class="cours-resultat-unite">kg</span></span>
+                </div>
 
                 
             <details><summary>Un coup de pouce</summary><p>Clique sur D11 : c’est la SOMME de la colonne des consommations mensuelles. Lis le total en kg.</p></details>
@@ -412,7 +422,12 @@
 
             
             
-                <input type="text" inputmode="decimal" id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label"><p>Unité : bottes</p>
+                
+                
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a03-q01">🎯 Résultat <span>un nombre seulement, en bottes</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label"><span class="cours-resultat-unite">bottes</span></span>
+                </div>
 
                 
             <details><summary>Un coup de pouce</summary><p>Divise le total du mois par 250 kg, puis cherche l’entier au-dessus du résultat.</p></details>
@@ -553,6 +568,7 @@
 <script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/nombre-seulement.js?v=20261125-calcul"></script>
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-steps.js?v=20261029-steps-1"></script>

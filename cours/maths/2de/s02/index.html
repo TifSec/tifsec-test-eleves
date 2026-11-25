@@ -45,9 +45,9 @@
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css?v=20261022-shop-effects-2">
     
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css?v=20261125-calcul">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css?v=20261124-classe">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css?v=20261125-calcul">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
@@ -631,7 +631,12 @@
 
             
             
-                <input type="text" inputmode="decimal" id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label">
+                
+                
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a01-q02">🎯 Résultat <span>un nombre seulement</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"></span>
+                </div>
 
                 
             <details><summary>Un coup de pouce</summary><p>Tape exactement les parenthèses : la somme est calculée d’abord, puis divisée par 4.</p></details>
@@ -647,7 +652,12 @@
 
             
             
-                <input type="text" inputmode="decimal" id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label">
+                
+                
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a01-q03">🎯 Résultat <span>un nombre seulement</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label"></span>
+                </div>
 
                 
             <details><summary>Un coup de pouce</summary><p>Sans parenthèses, la calculatrice fait d’abord la division 240 ÷ 4, puis ajoute 360.</p></details>
@@ -792,7 +802,12 @@
 
             
             
-                <input type="text" inputmode="decimal" id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><p>Unité : €</p>
+                
+                
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a02-q02">🎯 Résultat <span>un nombre seulement, en €</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><span class="cours-resultat-unite">€</span></span>
+                </div>
 
                 
             <details><summary>Un coup de pouce</summary><p>Prix au kg = prix du sac ÷ nombre de kg. Regarde le 3e chiffre après la virgule pour arrondir au centime.</p></details>
@@ -808,7 +823,12 @@
 
             
             
-                <input type="text" inputmode="decimal" id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label"><p>Unité : kg</p>
+                
+                
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a02-q03">🎯 Résultat <span>un nombre seulement, en kg</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label"><span class="cours-resultat-unite">kg</span></span>
+                </div>
 
                 
             <details><summary>Un coup de pouce</summary><p>Ration par cheval = ration totale ÷ nombre de chevaux. Au dixième : un chiffre après la virgule ; regarde le suivant.</p></details>
@@ -1081,6 +1101,7 @@
 <script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/nombre-seulement.js?v=20261125-calcul"></script>
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-steps.js?v=20261029-steps-1"></script>

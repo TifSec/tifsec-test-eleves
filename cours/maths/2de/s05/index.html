@@ -45,9 +45,9 @@
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css?v=20261022-shop-effects-2">
     
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css?v=20261125-calcul">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css?v=20261124-classe">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css?v=20261125-calcul">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
@@ -124,7 +124,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">En deux étapes</a></li><li><a href="#a02">Le coefficient multiplicateur</a></li><li><a href="#a03">Retrouver un pourcentage</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Partie 1 — Calculer un pourcentage, augmenter, diminuer</a></li><li><a href="#a02">Partie 2 — Le coefficient multiplicateur</a></li><li><a href="#a03">Partie 3 — Retrouver le pourcentage d’évolution</a></li><li><a href="#a04">Encore des exercices (si tu as fini) — facultatif</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -136,7 +136,7 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Mathématiques · 2de Pro · S05</span></div>
-    <h1>Séance 5 : Le prix de la pension augmente de 5 %</h1>
+    <h1>Séance 5 : Augmenter ou baisser un prix en pourcentage</h1>
     
 
     
@@ -150,7 +150,7 @@
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Comment calculer une augmentation ou une réduction en pourcentage ?</p>
+        <p>Comment calculer une hausse ou une baisse en pourcentage, et retrouver le pourcentage d’une évolution ?</p>
     </section>
     
 
@@ -168,9 +168,11 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Augmenter de t % : multiplier par (1 + t/100) ; diminuer de t % : multiplier par (1 − t/100).</li>
+            <li>t % d’une valeur = valeur × t ÷ 100.</li>
             
-            <li>Le coefficient multiplicateur évite deux étapes.</li>
+            <li>Coefficient multiplicateur : 1 + t/100 (hausse) ; 1 − t/100 (baisse).</li>
+            
+            <li>Taux d’évolution = (nouvelle ÷ ancienne − 1) × 100.</li>
             
         </ul>
         
@@ -178,16 +180,18 @@
         <h2>Ce que tu vas apprendre à faire</h2>
         <ul>
             
-            <li>Calculer une évolution en pourcentage.</li>
+            <li>Calculer un pourcentage d’une valeur.</li>
             
-            <li>Utiliser un coefficient multiplicateur.</li>
+            <li>Calculer un nouveau prix après une hausse ou une baisse.</li>
+            
+            <li>Retrouver le pourcentage d’une évolution.</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En S04, tu as utilisé la proportionnalité.</p><p>Le centre équestre annonce : « Hausse de 5 % des pensions au 1er janvier. »</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Aujourd’hui, trois notions : appliquer un pourcentage, le coefficient multiplicateur, puis retrouver un pourcentage.</p><p>Pour chacune : la notion, la méthode, un exemple au tableau, puis beaucoup d’exercices pour s’entraîner.</p></div></section>
     
     
     
@@ -202,67 +206,42 @@
 
 <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
     <article class="course-paper-sheet">
-        <header><p class="course-paper-class">Mathématiques — 2de Pro</p><p class="course-paper-kicker">Cours et exercices — version papier</p><h2 id="course-paper-title"><span class="course-paper-number">Séance 5</span> — Le prix de la pension augmente de 5 %</h2><p>Comment calculer une augmentation ou une réduction en pourcentage ?</p></header>
+        <header><p class="course-paper-class">Mathématiques — 2de Pro</p><p class="course-paper-kicker">Cours et exercices — version papier</p><h2 id="course-paper-title"><span class="course-paper-number">Séance 5</span> — Augmenter ou baisser un prix en pourcentage</h2><p>Trois notions : appliquer un pourcentage, le coefficient multiplicateur, retrouver un pourcentage. Pour chacune : la notion, la méthode, l’exemple au tableau, puis les exercices.</p></header>
         
         <section class="course-paper-section">
-            <h3>Le cours en bref</h3>
+            <h3>I. Calculer un pourcentage, augmenter, diminuer</h3>
             
-<p>Le problème à résoudre : Comment calculer une augmentation ou une réduction en pourcentage ?</p>
+<h4>La notion</h4>
     
 
-<h4>Ce que tu vas apprendre</h4>
+<p>Un pourcentage est une part sur 100 : 5 % de 380, c’est 5 parts sur 100 de 380. Augmenter une valeur de t %, c’est lui ajouter t % d’elle-même ; la diminuer de t %, c’est lui enlever t % d’elle-même.</p>
     
 
-<ul><li>Augmenter de t % : multiplier par (1 + t/100) ; diminuer de t % : multiplier par (1 − t/100).</li><li>Le coefficient multiplicateur évite deux étapes.</li></ul>
+<h4>À retenir</h4>
     
 
-<h4>Ce que tu vas savoir faire</h4>
+<p>t % d’une valeur = valeur × t ÷ 100. Nouvelle valeur = valeur ± ce montant.</p>
     
 
-<ul><li>Calculer une évolution en pourcentage.</li><li>Utiliser un coefficient multiplicateur.</li></ul>
+<h4>Comment ça fonctionne</h4>
     
 
-<h4>Pourquoi cette séance ?</h4>
+<ol><li>Étape 1 : calcule t % de la valeur de départ : valeur × t ÷ 100.</li><li>Étape 2 : pour une hausse, ajoute ce montant à la valeur de départ.</li><li>Pour une baisse, enlève ce montant à la valeur de départ.</li><li>Astuce de tête : 10 % = diviser par 10 ; 5 % = la moitié de 10 % ; 25 % = un quart ; 50 % = la moitié.</li></ol>
     
 
-<p>En S04, tu as utilisé la proportionnalité. Le centre équestre annonce : « Hausse de 5 % des pensions au 1er janvier. »</p>
+<h4>Pourquoi ça marche</h4>
     
 
-<p>Comment utiliser cette fiche : pour chaque partie, lis la méthode et l’exemple, complète les points clés, puis fais l’exercice. Réponds sur les lignes.</p>
+<p>1. En raisonnant avec « sur 100 »</p>
     
 
-
-            
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>I. En deux étapes</h3>
-            
-<h4>La situation</h4>
+<ul><li>5 % veut dire « 5 sur 100 ». Prendre 5 % d’un prix, c’est partager ce prix en 100 parts égales et en prendre 5.</li><li>Une part = prix ÷ 100 ; 5 parts = prix ÷ 100 × 5, ce qui s’écrit aussi prix × 5 ÷ 100.</li><li>Exemple : 5 % de 40 €. Une part = 40 ÷ 100 = 0,40 € ; 5 parts = 0,40 × 5 = 2 €.</li></ul>
     
 
-<p>La pension coûte 380 € par mois. Elle augmente de 5 %. Combien coûtera-t-elle ?</p>
+<p>2. Pourquoi on ajoute ou on enlève</p>
     
 
-<h4>Ce que c’est</h4>
-    
-
-<p>Augmenter une valeur de t %, c’est lui ajouter t % d’elle-même.</p>
-    
-
-<h4>À quoi ça sert</h4>
-    
-
-<ul><li>Calculer un nouveau prix après une hausse : pension, foin, licence.</li></ul>
-    
-
-<h4>Comment ça marche</h4>
-    
-
-<ol><li>Étape 1 : on calcule t % de la valeur de départ : valeur × t ÷ 100.</li><li>Étape 2 : on ajoute ce montant à la valeur de départ (on l’enlève pour une baisse).</li></ol>
-    
-
-<p>À retenir : Nouvelle valeur = valeur initiale + t % de la valeur initiale.</p>
+<ul><li>Après une hausse, tu paies le prix de départ, plus la hausse : 40 + 2 = 42 €.</li><li>Après une baisse, tu paies le prix de départ, moins la baisse : 40 − 2 = 38 €.</li><li>C’est pour cela qu’il y a deux étapes : d’abord le montant de la hausse (ou de la baisse), puis le nouveau prix.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -271,126 +250,47 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<ul><li>Automatisme : calcule 10 % puis 5 % de 380 de tête.</li></ul>
-    
-
-<h4>Ce que tu vas faire</h4>
-    
-
-<p>Tu vas calculer en deux étapes la hausse de 5 % d’une pension de 380 €. On attend la hausse et le nouveau prix.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : la pension actuelle est de 380 €. Calcule 5 % de 380, puis ajoute-le.</li><li>Pourquoi d’abord en deux étapes ? On comprend d’où vient le coefficient.</li></ol>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>Augmenter de t % : on ajoute t % de la valeur <span class="cours-trou" aria-label="à compléter"></span> .</li><li>5 % de 380 = 380 × 5 ÷ <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 1 — En deux étapes</h4>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — Une licence de 40 € augmente de 10 %. Nouveau prix ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — Un tapis de 60 € baisse de 5 %. Nouveau prix ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>De combien la pension augmente-t-elle ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Quel est le nouveau prix ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li class="course-paper-calcul"><span>Série A — Calcule 10 % de 40 €.</span><span class="course-paper-zone-label">Calcul :</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span><span class="course-paper-resultat">Résultat : <span class="course-paper-resultat-case" aria-hidden="true"></span> €</span></li><li class="course-paper-calcul"><span>Calcule 5 % de 380 €.</span><span class="course-paper-zone-label">Calcul :</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span><span class="course-paper-resultat">Résultat : <span class="course-paper-resultat-case" aria-hidden="true"></span> €</span></li><li class="course-paper-calcul"><span>Calcule 20 % de 150 €.</span><span class="course-paper-zone-label">Calcul :</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span><span class="course-paper-resultat">Résultat : <span class="course-paper-resultat-case" aria-hidden="true"></span> €</span></li><li class="course-paper-calcul"><span>Série B — Une licence de 40 € augmente de 10 %. Quel est le nouveau prix ?</span><span class="course-paper-zone-label">Calcul :</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span><span class="course-paper-resultat">Résultat : <span class="course-paper-resultat-case" aria-hidden="true"></span> €</span></li><li class="course-paper-calcul"><span>Une pension de 380 € augmente de 5 %. Quel est le nouveau prix ?</span><span class="course-paper-zone-label">Calcul :</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span><span class="course-paper-resultat">Résultat : <span class="course-paper-resultat-case" aria-hidden="true"></span> €</span></li><li class="course-paper-calcul"><span>Un tapis de 60 € baisse de 5 %. Quel est le nouveau prix ?</span><span class="course-paper-zone-label">Calcul :</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span><span class="course-paper-resultat">Résultat : <span class="course-paper-resultat-case" aria-hidden="true"></span> €</span></li><li class="course-paper-calcul"><span>Une selle de 800 € baisse de 25 %. Quel est le nouveau prix ?</span><span class="course-paper-zone-label">Calcul :</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span><span class="course-paper-resultat">Résultat : <span class="course-paper-resultat-case" aria-hidden="true"></span> €</span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>II. Le coefficient multiplicateur</h3>
             
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>On doit calculer beaucoup de prix soldés : faire deux étapes à chaque fois est long. Existe-t-il un raccourci ?</p>
+<p>Le coefficient multiplicateur permet de faire une hausse ou une baisse en un seul calcul. Hausse de 5 % : on garde 100 % et on ajoute 5 %, donc 105 % = 1,05. Baisse de 20 % : il reste 80 % = 0,8.</p>
     
 
-<h4>Ce que c’est</h4>
+<h4>À retenir</h4>
     
 
-<p>Le coefficient multiplicateur est le nombre par lequel on multiplie la valeur de départ pour obtenir directement la nouvelle valeur.</p>
+<p>Hausse de t % : × (1 + t/100). Baisse de t % : × (1 − t/100).</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Calculer une évolution en un seul calcul.</li><li>Enchaîner plusieurs évolutions (2de puis Bac Pro).</li></ul>
+<ol><li>Écris le pourcentage en nombre décimal : 5 % = 0,05 ; 20 % = 0,20.</li><li>Hausse : ajoute-le à 1 (1 + 0,05 = 1,05).</li><li>Baisse : enlève-le à 1 (1 − 0,20 = 0,8).</li><li>Nouvelle valeur = valeur de départ × coefficient.</li><li>Vérifie : une hausse donne un coefficient plus grand que 1, une baisse un coefficient plus petit que 1.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>Hausse de t % : on garde 100 % et on ajoute t % : coefficient 1 + t/100.</li><li>Baisse de t % : il reste 100 % − t % : coefficient 1 − t/100.</li><li>Nouvelle valeur = valeur de départ × coefficient.</li></ol>
+<p>1. En raisonnant avec les pourcentages</p>
     
 
-<p>À retenir : +t % → × (1 + t/100) ; −t % → × (1 − t/100).</p>
+<ul><li>Le prix de départ représente la totalité, c’est-à-dire 100 % (soit 1).</li><li>Si le prix augmente de 5 %, tu paies le prix de départ plus l’augmentation : 100 % + 5 % = 105 %.</li><li>En mathématiques, « 105 % de quelque chose » s’écrit 105/100, ce qui est égal à 1,05.</li><li>Pour une baisse de 20 %, il te reste 100 % − 20 % = 80 % du prix : 80/100 = 0,80.</li></ul>
     
 
-<h4>Exemple fait ensemble en classe</h4>
+<p>2. En regroupant les deux étapes en une seule</p>
     
 
-<div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
-    
-
-<h4>Ce que tu vas faire</h4>
-    
-
-<p>Tu vas écrire les coefficients multiplicateurs de trois évolutions et calculer un prix soldé. On attend les coefficients et le prix.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : écris les coefficients demandés, puis calcule le prix soldé de la selle.</li><li>Pourquoi × 1,05 ? On garde 100 % et on ajoute 5 % : 105 % = 1,05.</li></ol>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>Augmenter de 5 % revient à multiplier par <span class="cours-trou" aria-label="à compléter"></span> .</li><li>Baisser de 20 % revient à multiplier par <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 2 — Le coefficient multiplicateur</h4>
-    
-
-<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Évolution</th><th scope="col">Coefficient</th></tr></thead><tbody><tr><td>+5 %</td><td></td></tr><tr><td>+12 %</td><td></td></tr><tr><td>−20 %</td><td></td></tr></tbody></table></div>
-    
-
-
-            <ol class="course-paper-questions"><li><span>Entraînement — Coefficient pour +8 % ? pour −15 % ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — Un filet à 40 € soldé −25 %. Prix soldé avec le coefficient ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Écris le coefficient multiplicateur.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Une selle à 1 250 € est soldée −20 %. Prix soldé ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>III. Retrouver un pourcentage</h3>
-            
-<h4>La situation</h4>
-    
-
-<p>Le foin passe de 160 € à 184 € la tonne. Le fournisseur annonce « +10 % ». Dit-il vrai ?</p>
-    
-
-<h4>Ce que c’est</h4>
-    
-
-<p>Le taux d’évolution est le pourcentage de hausse ou de baisse entre deux valeurs.</p>
-    
-
-<h4>À quoi ça sert</h4>
-    
-
-<ul><li>Vérifier une hausse annoncée.</li><li>Comparer des évolutions.</li></ul>
-    
-
-<h4>Comment ça marche</h4>
-    
-
-<ol><li>On calcule le coefficient : nouvelle valeur ÷ ancienne valeur.</li><li>On enlève 1 : coefficient − 1.</li><li>On multiplie par 100 : positif = hausse, négatif = baisse.</li></ol>
-    
-
-<p>À retenir : Taux d’évolution = nouvelle ÷ ancienne − 1.</p>
+<ul><li>Reprenons la pension à 380 € qui augmente de 5 %. En deux étapes, tu fais : nouveau prix = 380 (1 fois le prix) + 380 × 0,05 (0,05 fois le prix).</li><li>Si tu regroupes le nombre 380 (on appelle cela factoriser), tu as 1 fois 380 plus 0,05 fois 380, soit : nouveau prix = 380 × (1 + 0,05) = 380 × 1,05.</li><li>Le 1 sert à conserver le prix de départ, et le 0,05 sert à ajouter directement les 5 %.</li><li>Pour une baisse de 20 % sur un tapis à 50 € : 50 − 50 × 0,20 = 50 × (1 − 0,20) = 50 × 0,80. Le 1 garde le prix, le − 0,20 enlève directement les 20 %.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -399,80 +299,77 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<h4>Ce que tu vas faire</h4>
-    
-
-<p>Tu vas retrouver le pourcentage d’augmentation du prix du foin. On attend le pourcentage et la vérification de l’annonce.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : le prix du foin passe de 160 € à 184 € la tonne. Calcule le coefficient (184 ÷ 160), puis le pourcentage.</li><li>Pourquoi ce calcul ? Pour savoir si une hausse annoncée est vraie.</li></ol>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>Taux d’évolution = nouvelle valeur ÷ ancienne valeur − <span class="cours-trou" aria-label="à compléter"></span> .</li><li>Un coefficient de 1,15 correspond à une hausse de <span class="cours-trou" aria-label="à compléter"></span> %.</li></ul>
-    
-
-<h4>Exercice 3 — Retrouver un pourcentage</h4>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — Un sac passe de 20 € à 23 €. Taux d’évolution ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — Une selle passe de 800 € à 600 €. Taux d’évolution ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Quel est le pourcentage d’augmentation ? (en %)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Un fournisseur dit « +10 % ». Est-ce vrai ? Justifie.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li class="course-paper-calcul"><span>Série A — Quel est le coefficient multiplicateur pour une hausse de 5 % ?</span><span class="course-paper-zone-label">Calcul :</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span><span class="course-paper-resultat">Résultat : <span class="course-paper-resultat-case" aria-hidden="true"></span></span></li><li class="course-paper-calcul"><span>Quel est le coefficient pour une hausse de 12 % ?</span><span class="course-paper-zone-label">Calcul :</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span><span class="course-paper-resultat">Résultat : <span class="course-paper-resultat-case" aria-hidden="true"></span></span></li><li class="course-paper-calcul"><span>Quel est le coefficient pour une baisse de 20 % ?</span><span class="course-paper-zone-label">Calcul :</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span><span class="course-paper-resultat">Résultat : <span class="course-paper-resultat-case" aria-hidden="true"></span></span></li><li class="course-paper-calcul"><span>Quel est le coefficient pour une baisse de 15 % ?</span><span class="course-paper-zone-label">Calcul :</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span><span class="course-paper-resultat">Résultat : <span class="course-paper-resultat-case" aria-hidden="true"></span></span></li><li class="course-paper-calcul"><span>Série B — Un sac de granulés à 250 € augmente de 8 %. Calcule le nouveau prix avec le coefficient.</span><span class="course-paper-zone-label">Calcul :</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span><span class="course-paper-resultat">Résultat : <span class="course-paper-resultat-case" aria-hidden="true"></span> €</span></li><li class="course-paper-calcul"><span>Une selle à 1 250 € est soldée −20 %. Calcule le prix soldé avec le coefficient.</span><span class="course-paper-zone-label">Calcul :</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span><span class="course-paper-resultat">Résultat : <span class="course-paper-resultat-case" aria-hidden="true"></span> €</span></li><li class="course-paper-calcul"><span>Un filet à 40 € est soldé −25 %. Calcule le prix soldé avec le coefficient.</span><span class="course-paper-zone-label">Calcul :</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span><span class="course-paper-resultat">Résultat : <span class="course-paper-resultat-case" aria-hidden="true"></span> €</span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>Conclusion</h3>
+            <h3>III. Retrouver le pourcentage d’évolution</h3>
             
-<p>Avec ce que tu as fait dans les parties précédentes, réponds en quelques phrases complètes.</p>
+<h4>La notion</h4>
+    
+
+<p>Le taux d’évolution dit de combien de pourcents une valeur a changé. On part de l’ancienne et de la nouvelle valeur, et on retrouve le pourcentage.</p>
+    
+
+<h4>À retenir</h4>
+    
+
+<p>Coefficient = nouvelle valeur ÷ ancienne valeur. Taux = (coefficient − 1) × 100.</p>
+    
+
+<h4>Comment ça fonctionne</h4>
+    
+
+<ol><li>Divise la nouvelle valeur par l’ancienne : c’est le coefficient.</li><li>Enlève 1 au coefficient.</li><li>Multiplie par 100 : tu obtiens le taux en %.</li><li>Résultat positif = hausse ; résultat négatif = baisse.</li><li>Attention : on divise toujours par l’ancienne valeur (celle de départ).</li></ol>
+    
+
+<h4>Pourquoi ça marche</h4>
+    
+
+<p>1. En raisonnant avec les pourcentages</p>
+    
+
+<ul><li>Un licol passe de 40 € à 46 €. Le coefficient 46 ÷ 40 = 1,15 dit : « le nouveau prix vaut 1,15 fois l’ancien ».</li><li>1,15, c’est 115/100, donc 115 % de l’ancien prix.</li><li>L’ancien prix, c’était 100 %. On paie maintenant 115 % : 115 % − 100 % = 15 % de plus. C’est une hausse de 15 %.</li><li>Pour une baisse : de 40 € à 30 €, 30 ÷ 40 = 0,75 = 75 %. Il manque 100 % − 75 % = 25 % : c’est une baisse de 25 %, qu’on écrit −25 %.</li></ul>
+    
+
+<p>2. En faisant le chemin du coefficient à l’envers</p>
+    
+
+<ul><li>Partie 2 : ancien prix × coefficient = nouveau prix. Donc coefficient = nouveau prix ÷ ancien prix.</li><li>Partie 2 : coefficient = 1 + taux. Donc taux = coefficient − 1 (ici 1,15 − 1 = 0,15).</li><li>Et 0,15 = 15/100 = 15 % : c’est pour cela qu’on multiplie par 100 à la fin.</li><li>On divise toujours par l’ancien prix, parce que c’est lui qui fait 100 %.</li></ul>
+    
+
+<h4>Exemple fait ensemble en classe</h4>
+    
+
+<div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    
+
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
 
-            <ol class="course-paper-questions"><li><span>Réponds au problème du jour : comment calculer une augmentation ou une réduction en pourcentage ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li class="course-paper-calcul"><span>Série A — Un sac passe de 20 € à 23 €. Quel est le coefficient multiplicateur ?</span><span class="course-paper-zone-label">Calcul :</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span><span class="course-paper-resultat">Résultat : <span class="course-paper-resultat-case" aria-hidden="true"></span></span></li><li class="course-paper-calcul"><span>Un sac passe de 20 € à 23 €. Quel est le taux d’évolution en % ?</span><span class="course-paper-zone-label">Calcul :</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span><span class="course-paper-resultat">Résultat : <span class="course-paper-resultat-case" aria-hidden="true"></span> %</span></li><li class="course-paper-calcul"><span>Le foin passe de 160 € à 184 € la tonne. Quel est le taux d’évolution en % ?</span><span class="course-paper-zone-label">Calcul :</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span><span class="course-paper-resultat">Résultat : <span class="course-paper-resultat-case" aria-hidden="true"></span> %</span></li><li class="course-paper-calcul"><span>Une selle passe de 800 € à 600 €. Quel est le taux d’évolution en % ? (Pour une baisse, écris le signe moins : −…)</span><span class="course-paper-zone-label">Calcul :</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span><span class="course-paper-resultat">Résultat : <span class="course-paper-resultat-case" aria-hidden="true"></span> %</span></li><li class="course-paper-calcul"><span>Une leçon passe de 50 € à 60 €. Quel est le taux d’évolution en % ?</span><span class="course-paper-zone-label">Calcul :</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span><span class="course-paper-resultat">Résultat : <span class="course-paper-resultat-case" aria-hidden="true"></span> %</span></li><li><span>Série B — Le fournisseur annonce : « Le foin augmente de 10 % » (de 160 € à 184 € la tonne). A-t-il raison ? Choix : Oui, la hausse est bien de 10 %. / Non, la hausse est de 15 %. / Non, la hausse est de 24 %..</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>Pour aller plus loin (facultatif)</h3>
+            <h3>Encore des exercices (si tu as fini)</h3>
             
-<p>+10 % puis −10 % : revient-on au prix de départ ?</p>
-    
 
-
-            <ol class="course-paper-questions"><li><span>Teste sur 100 €.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li class="course-paper-calcul"><span>Calcule 30 % de 70 €.</span><span class="course-paper-zone-label">Calcul :</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span><span class="course-paper-resultat">Résultat : <span class="course-paper-resultat-case" aria-hidden="true"></span> €</span></li><li class="course-paper-calcul"><span>Une couverture de 45 € augmente de 20 %. Nouveau prix ?</span><span class="course-paper-zone-label">Calcul :</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span><span class="course-paper-resultat">Résultat : <span class="course-paper-resultat-case" aria-hidden="true"></span> €</span></li><li class="course-paper-calcul"><span>Un licol de 120 € est soldé −30 %. Prix soldé ?</span><span class="course-paper-zone-label">Calcul :</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span><span class="course-paper-resultat">Résultat : <span class="course-paper-resultat-case" aria-hidden="true"></span> €</span></li><li class="course-paper-calcul"><span>Quel est le coefficient pour une baisse de 8 % ?</span><span class="course-paper-zone-label">Calcul :</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span><span class="course-paper-resultat">Résultat : <span class="course-paper-resultat-case" aria-hidden="true"></span></span></li><li class="course-paper-calcul"><span>Un prix passe de 400 € à 460 €. Taux d’évolution en % ?</span><span class="course-paper-zone-label">Calcul :</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span><span class="course-paper-resultat">Résultat : <span class="course-paper-resultat-case" aria-hidden="true"></span> %</span></li><li class="course-paper-calcul"><span>Un prix passe de 75 € à 60 €. Taux d’évolution en % ?</span><span class="course-paper-zone-label">Calcul :</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span><span class="course-paper-resultat">Résultat : <span class="course-paper-resultat-case" aria-hidden="true"></span> %</span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>À retenir</h3>
             
-<ul><li>+t % : × (1 + t/100) ; −t % : × (1 − t/100).</li><li>Taux = (nouveau ÷ ancien) − 1.</li></ul>
+<ul><li>t % d’une valeur = valeur × t ÷ 100.</li><li>Hausse de t % : × (1 + t/100) ; baisse de t % : × (1 − t/100).</li><li>Coefficient = nouvelle valeur ÷ ancienne valeur ; taux = (coefficient − 1) × 100.</li><li>Taux positif = hausse ; taux négatif = baisse.</li></ul>
     
 
 
             
-        </section>
-        
-        <section class="course-paper-section course-paper-break">
-            <h2 class="course-paper-part">Fiche d’exercices</h2><h3>Exercice 1 — Hausses</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>Une selle à 900 € augmente de 8 %. Nouveau prix ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Une pension à 420 € augmente de 3 %. Nouveau prix ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Exercice 2 — Soldes</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>Un licol à 45 € est soldé −30 %. Prix soldé ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Exercice 3 — Retrouver le taux</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>Le foin passe de 150 € à 165 € la tonne. Taux ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
     </article>
@@ -486,60 +383,57 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>En deux étapes</h2>
+        <h2>Partie 1 — Calculer un pourcentage, augmenter, diminuer</h2>
         
         
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas calculer en deux étapes la hausse de 5 % d’une pension de 380 €. On attend la hausse et le nouveau prix.</p></div>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>La pension coûte 380 € par mois. Elle augmente de 5 %. Combien coûtera-t-elle ?</p>
+<p>Un pourcentage est une part sur 100 : 5 % de 380, c’est 5 parts sur 100 de 380.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>Augmenter une valeur de t %, c’est lui ajouter t % d’elle-même ; la diminuer de t %, c’est lui enlever t % d’elle-même.</p>
     
 
-<p>Augmenter une valeur de t %, c’est lui ajouter t % d’elle-même.</p>
+<p>À retenir : t % d’une valeur = valeur × t ÷ 100. Nouvelle valeur = valeur ± ce montant.</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Calculer un nouveau prix après une hausse : pension, foin, licence.</li></ul>
+<ol><li>Étape 1 : calcule t % de la valeur de départ : valeur × t ÷ 100.</li><li>Étape 2 : pour une hausse, ajoute ce montant à la valeur de départ.</li><li>Pour une baisse, enlève ce montant à la valeur de départ.</li><li>Astuce de tête : 10 % = diviser par 10 ; 5 % = la moitié de 10 % ; 25 % = un quart ; 50 % = la moitié.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>Étape 1 : on calcule t % de la valeur de départ : valeur × t ÷ 100.</li><li>Étape 2 : on ajoute ce montant à la valeur de départ (on l’enlève pour une baisse).</li></ol>
+<p>1. En raisonnant avec « sur 100 »</p>
     
 
-<p>À retenir : Nouvelle valeur = valeur initiale + t % de la valeur initiale.</p>
+<ul><li>5 % veut dire « 5 sur 100 ». Prendre 5 % d’un prix, c’est partager ce prix en 100 parts égales et en prendre 5.</li><li>Une part = prix ÷ 100 ; 5 parts = prix ÷ 100 × 5, ce qui s’écrit aussi prix × 5 ÷ 100.</li><li>Exemple : 5 % de 40 €. Une part = 40 ÷ 100 = 0,40 € ; 5 parts = 0,40 × 5 = 2 €.</li></ul>
+    
+
+<p>2. Pourquoi on ajoute ou on enlève</p>
+    
+
+<ul><li>Après une hausse, tu paies le prix de départ, plus la hausse : 40 + 2 = 42 €.</li><li>Après une baisse, tu paies le prix de départ, moins la baisse : 40 − 2 = 38 €.</li><li>C’est pour cela qu’il y a deux étapes : d’abord le montant de la hausse (ou de la baisse), puis le nouveau prix.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>Une licence de 40 € augmente de 10 %. Nouveau prix ?</li><li>Un tapis de 60 € baisse de 5 %. Nouveau prix ?</li></ol>
-    
-
-<ul><li>Automatisme : calcule 10 % puis 5 % de 380 de tête.</li></ul>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : la pension actuelle est de 380 €. Calcule 5 % de 380, puis ajoute-le.</li><li>Pourquoi d’abord en deux étapes ? On comprend d’où vient le coefficient.</li></ol>
+<p>Calculatrice autorisée. Fais les deux étapes à chaque fois.</p>
     
 
 
@@ -548,63 +442,23 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a01-q01-label">Question 1 — Série A — Calcule 10 % de 40 €.</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Augmenter de t % : on ajoute t % de la valeur …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="En deux étapes — Mot(s) manquant(s) — Augmenter de t % : on ajoute t % de la valeur …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    5 % de 380 = 380 × 5 ÷ …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="En deux étapes — Mot(s) manquant(s) — 5 % de 380 = 380 × 5 ÷ …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a01-q01-calcul">✏️ Ton calcul <span>écris le calcul que tu as posé (exemple : 380 × 1,05)</span></label>
+                <textarea class="cours-calcul" id="a01-q01-calcul" data-answer-id="a01_q01_calcul" data-answer-role="calcul" data-required="true" rows="2" placeholder="Écris ton calcul ici..."></textarea>
                 </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Relis l’exemple : sur quelle valeur calcule-t-on les 5 % ? Et « pour cent » veut dire diviser par combien ?</p></details>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a01-q01">🎯 Résultat <span>un nombre seulement, en €</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><span class="cours-resultat-unite">€</span></span>
+                </div>
+
+                
+            <details><summary>Un coup de pouce</summary><p>10 % de 40 = 40 × 10 ÷ 100.</p></details>
             
             
         </div>
@@ -612,15 +466,23 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — De combien la pension augmente-t-elle ?</h3>
+            <h3 id="a01-q02-label">Question 2 — Calcule 5 % de 380 €.</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><p>Unité : €</p>
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a01-q02-calcul">✏️ Ton calcul <span>écris le calcul que tu as posé (exemple : 380 × 1,05)</span></label>
+                <textarea class="cours-calcul" id="a01-q02-calcul" data-answer-id="a01_q02_calcul" data-answer-role="calcul" data-required="true" rows="2" placeholder="Écris ton calcul ici..."></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a01-q02">🎯 Résultat <span>un nombre seulement, en €</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><span class="cours-resultat-unite">€</span></span>
+                </div>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Calcule 5 % du prix actuel de la pension (380 €) : 380 × 5 ÷ 100.</p></details>
+            <details><summary>Un coup de pouce</summary><p>5 % de 380 = 380 × 5 ÷ 100.</p></details>
             
             
         </div>
@@ -628,15 +490,119 @@
         <div class="cours-question" data-question="q03">
             
             
-            <h3 id="a01-q03-label">Question 3 — Quel est le nouveau prix ?</h3>
+            <h3 id="a01-q03-label">Question 3 — Calcule 20 % de 150 €.</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label"><p>Unité : €</p>
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a01-q03-calcul">✏️ Ton calcul <span>écris le calcul que tu as posé (exemple : 380 × 1,05)</span></label>
+                <textarea class="cours-calcul" id="a01-q03-calcul" data-answer-id="a01_q03_calcul" data-answer-role="calcul" data-required="true" rows="2" placeholder="Écris ton calcul ici..."></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a01-q03">🎯 Résultat <span>un nombre seulement, en €</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label"><span class="cours-resultat-unite">€</span></span>
+                </div>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Ajoute l’augmentation trouvée au prix de départ.</p></details>
+            <details><summary>Un coup de pouce</summary><p>20 % de 150 = 150 × 20 ÷ 100.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a01-q04-label">Question 4 — Série B — Une licence de 40 € augmente de 10 %. Quel est le nouveau prix ?</h3>
+            
+
+            
+            
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a01-q04-calcul">✏️ Ton calcul <span>écris le calcul que tu as posé (exemple : 380 × 1,05)</span></label>
+                <textarea class="cours-calcul" id="a01-q04-calcul" data-answer-id="a01_q04_calcul" data-answer-role="calcul" data-required="true" rows="2" placeholder="Écris ton calcul ici..."></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a01-q04">🎯 Résultat <span>un nombre seulement, en €</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a01-q04" data-answer-id="a01_q04" data-required="true" aria-labelledby="a01-q04-label"><span class="cours-resultat-unite">€</span></span>
+                </div>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Étape 1 : calcule 10 % de 40. Étape 2 : ajoute-le à 40.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a01-q05-label">Question 5 — Une pension de 380 € augmente de 5 %. Quel est le nouveau prix ?</h3>
+            
+
+            
+            
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a01-q05-calcul">✏️ Ton calcul <span>écris le calcul que tu as posé (exemple : 380 × 1,05)</span></label>
+                <textarea class="cours-calcul" id="a01-q05-calcul" data-answer-id="a01_q05_calcul" data-answer-role="calcul" data-required="true" rows="2" placeholder="Écris ton calcul ici..."></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a01-q05">🎯 Résultat <span>un nombre seulement, en €</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a01-q05" data-answer-id="a01_q05" data-required="true" aria-labelledby="a01-q05-label"><span class="cours-resultat-unite">€</span></span>
+                </div>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Étape 1 : 5 % de 380. Étape 2 : ajoute-le à 380.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a01-q06-label">Question 6 — Un tapis de 60 € baisse de 5 %. Quel est le nouveau prix ?</h3>
+            
+
+            
+            
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a01-q06-calcul">✏️ Ton calcul <span>écris le calcul que tu as posé (exemple : 380 × 1,05)</span></label>
+                <textarea class="cours-calcul" id="a01-q06-calcul" data-answer-id="a01_q06_calcul" data-answer-role="calcul" data-required="true" rows="2" placeholder="Écris ton calcul ici..."></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a01-q06">🎯 Résultat <span>un nombre seulement, en €</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a01-q06" data-answer-id="a01_q06" data-required="true" aria-labelledby="a01-q06-label"><span class="cours-resultat-unite">€</span></span>
+                </div>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Étape 1 : 5 % de 60. Étape 2 : enlève-le à 60.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q07">
+            
+            
+            <h3 id="a01-q07-label">Question 7 — Une selle de 800 € baisse de 25 %. Quel est le nouveau prix ?</h3>
+            
+
+            
+            
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a01-q07-calcul">✏️ Ton calcul <span>écris le calcul que tu as posé (exemple : 380 × 1,05)</span></label>
+                <textarea class="cours-calcul" id="a01-q07-calcul" data-answer-id="a01_q07_calcul" data-answer-role="calcul" data-required="true" rows="2" placeholder="Écris ton calcul ici..."></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a01-q07">🎯 Résultat <span>un nombre seulement, en €</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a01-q07" data-answer-id="a01_q07" data-required="true" aria-labelledby="a01-q07-label"><span class="cours-resultat-unite">€</span></span>
+                </div>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Étape 1 : 25 % de 800. Étape 2 : enlève-le à 800.</p></details>
             
             
         </div>
@@ -650,57 +616,57 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Le coefficient multiplicateur</h2>
+        <h2>Partie 2 — Le coefficient multiplicateur</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as compris le calcul. Va plus vite avec un coefficient.</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas écrire les coefficients multiplicateurs de trois évolutions et calculer un prix soldé. On attend les coefficients et le prix.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais faire une hausse en deux étapes. Deuxième notion : le faire en un seul calcul.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>On doit calculer beaucoup de prix soldés : faire deux étapes à chaque fois est long. Existe-t-il un raccourci ?</p>
+<p>Le coefficient multiplicateur permet de faire une hausse ou une baisse en un seul calcul.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>Hausse de 5 % : on garde 100 % et on ajoute 5 %, donc 105 % = 1,05. Baisse de 20 % : il reste 80 % = 0,8.</p>
     
 
-<p>Le coefficient multiplicateur est le nombre par lequel on multiplie la valeur de départ pour obtenir directement la nouvelle valeur.</p>
+<p>À retenir : Hausse de t % : × (1 + t/100). Baisse de t % : × (1 − t/100).</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Calculer une évolution en un seul calcul.</li><li>Enchaîner plusieurs évolutions (2de puis Bac Pro).</li></ul>
+<ol><li>Écris le pourcentage en nombre décimal : 5 % = 0,05 ; 20 % = 0,20.</li><li>Hausse : ajoute-le à 1 (1 + 0,05 = 1,05).</li><li>Baisse : enlève-le à 1 (1 − 0,20 = 0,8).</li><li>Nouvelle valeur = valeur de départ × coefficient.</li><li>Vérifie : une hausse donne un coefficient plus grand que 1, une baisse un coefficient plus petit que 1.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>Hausse de t % : on garde 100 % et on ajoute t % : coefficient 1 + t/100.</li><li>Baisse de t % : il reste 100 % − t % : coefficient 1 − t/100.</li><li>Nouvelle valeur = valeur de départ × coefficient.</li></ol>
+<p>1. En raisonnant avec les pourcentages</p>
     
 
-<p>À retenir : +t % → × (1 + t/100) ; −t % → × (1 − t/100).</p>
+<ul><li>Le prix de départ représente la totalité, c’est-à-dire 100 % (soit 1).</li><li>Si le prix augmente de 5 %, tu paies le prix de départ plus l’augmentation : 100 % + 5 % = 105 %.</li><li>En mathématiques, « 105 % de quelque chose » s’écrit 105/100, ce qui est égal à 1,05.</li><li>Pour une baisse de 20 %, il te reste 100 % − 20 % = 80 % du prix : 80/100 = 0,80.</li></ul>
+    
+
+<p>2. En regroupant les deux étapes en une seule</p>
+    
+
+<ul><li>Reprenons la pension à 380 € qui augmente de 5 %. En deux étapes, tu fais : nouveau prix = 380 (1 fois le prix) + 380 × 0,05 (0,05 fois le prix).</li><li>Si tu regroupes le nombre 380 (on appelle cela factoriser), tu as 1 fois 380 plus 0,05 fois 380, soit : nouveau prix = 380 × (1 + 0,05) = 380 × 1,05.</li><li>Le 1 sert à conserver le prix de départ, et le 0,05 sert à ajouter directement les 5 %.</li><li>Pour une baisse de 20 % sur un tapis à 50 € : 50 − 50 × 0,20 = 50 × (1 − 0,20) = 50 × 0,80. Le 1 garde le prix, le − 0,20 enlève directement les 20 %.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>Coefficient pour +8 % ? pour −15 % ?</li><li>Un filet à 40 € soldé −25 %. Prix soldé avec le coefficient ?</li></ol>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : écris les coefficients demandés, puis calcule le prix soldé de la selle.</li><li>Pourquoi × 1,05 ? On garde 100 % et on ajoute 5 % : 105 % = 1,05.</li></ol>
+<p>Calculatrice autorisée. Pour la série B, utilise le coefficient : un seul calcul.</p>
     
 
 
@@ -709,63 +675,23 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a02-q01-label">Question 1 — Série A — Quel est le coefficient multiplicateur pour une hausse de 5 % ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Augmenter de 5 % revient à multiplier par …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Le coefficient multiplicateur — Mot(s) manquant(s) — Augmenter de 5 % revient à multiplier par …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Baisser de 20 % revient à multiplier par …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Le coefficient multiplicateur — Mot(s) manquant(s) — Baisser de 20 % revient à multiplier par …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a02-q01-calcul">✏️ Ton calcul <span>écris le calcul que tu as posé (exemple : 380 × 1,05)</span></label>
+                <textarea class="cours-calcul" id="a02-q01-calcul" data-answer-id="a02_q01_calcul" data-answer-role="calcul" data-required="true" rows="2" placeholder="Écris ton calcul ici..."></textarea>
                 </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Garder 100 % et ajouter 5 %, c’est garder combien en tout ? Et enlever 20 %, il reste combien ?</p></details>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a02-q01">🎯 Résultat <span>un nombre seulement</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label"></span>
+                </div>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Hausse : 1 + 5 ÷ 100.</p></details>
             
             
         </div>
@@ -773,80 +699,23 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Écris le coefficient multiplicateur.</h3>
+            <h3 id="a02-q02-label">Question 2 — Quel est le coefficient pour une hausse de 12 % ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Évolution</th>
-                                
-                                <th>Coefficient</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    +5 %
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q02_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Le coefficient multiplicateur — Coefficient — +5 %">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    +12 %
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q02_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Le coefficient multiplicateur — Coefficient — +12 %">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    −20 %
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q02_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Le coefficient multiplicateur — Coefficient — −20 %">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a02-q02-calcul">✏️ Ton calcul <span>écris le calcul que tu as posé (exemple : 380 × 1,05)</span></label>
+                <textarea class="cours-calcul" id="a02-q02-calcul" data-answer-id="a02_q02_calcul" data-answer-role="calcul" data-required="true" rows="2" placeholder="Écris ton calcul ici..."></textarea>
                 </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Pour une hausse : 1 + taux ÷ 100. Pour une baisse : 1 − taux ÷ 100.</p></details>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a02-q02">🎯 Résultat <span>un nombre seulement</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"></span>
+                </div>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Hausse : 1 + 12 ÷ 100.</p></details>
             
             
         </div>
@@ -854,15 +723,119 @@
         <div class="cours-question" data-question="q03">
             
             
-            <h3 id="a02-q03-label">Question 3 — Une selle à 1 250 € est soldée −20 %. Prix soldé ?</h3>
+            <h3 id="a02-q03-label">Question 3 — Quel est le coefficient pour une baisse de 20 % ?</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label"><p>Unité : €</p>
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a02-q03-calcul">✏️ Ton calcul <span>écris le calcul que tu as posé (exemple : 380 × 1,05)</span></label>
+                <textarea class="cours-calcul" id="a02-q03-calcul" data-answer-id="a02_q03_calcul" data-answer-role="calcul" data-required="true" rows="2" placeholder="Écris ton calcul ici..."></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a02-q03">🎯 Résultat <span>un nombre seulement</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label"></span>
+                </div>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Multiplie 1 250 € par le coefficient d’une baisse de 20 %.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Baisse : 1 − 20 ÷ 100.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a02-q04-label">Question 4 — Quel est le coefficient pour une baisse de 15 % ?</h3>
+            
+
+            
+            
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a02-q04-calcul">✏️ Ton calcul <span>écris le calcul que tu as posé (exemple : 380 × 1,05)</span></label>
+                <textarea class="cours-calcul" id="a02-q04-calcul" data-answer-id="a02_q04_calcul" data-answer-role="calcul" data-required="true" rows="2" placeholder="Écris ton calcul ici..."></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a02-q04">🎯 Résultat <span>un nombre seulement</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a02-q04" data-answer-id="a02_q04" data-required="true" aria-labelledby="a02-q04-label"></span>
+                </div>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Baisse : 1 − 15 ÷ 100.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a02-q05-label">Question 5 — Série B — Un sac de granulés à 250 € augmente de 8 %. Calcule le nouveau prix avec le coefficient.</h3>
+            
+
+            
+            
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a02-q05-calcul">✏️ Ton calcul <span>écris le calcul que tu as posé (exemple : 380 × 1,05)</span></label>
+                <textarea class="cours-calcul" id="a02-q05-calcul" data-answer-id="a02_q05_calcul" data-answer-role="calcul" data-required="true" rows="2" placeholder="Écris ton calcul ici..."></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a02-q05">🎯 Résultat <span>un nombre seulement, en €</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a02-q05" data-answer-id="a02_q05" data-required="true" aria-labelledby="a02-q05-label"><span class="cours-resultat-unite">€</span></span>
+                </div>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Coefficient de +8 % : 1,08. Nouveau prix = 250 × 1,08.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a02-q06-label">Question 6 — Une selle à 1 250 € est soldée −20 %. Calcule le prix soldé avec le coefficient.</h3>
+            
+
+            
+            
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a02-q06-calcul">✏️ Ton calcul <span>écris le calcul que tu as posé (exemple : 380 × 1,05)</span></label>
+                <textarea class="cours-calcul" id="a02-q06-calcul" data-answer-id="a02_q06_calcul" data-answer-role="calcul" data-required="true" rows="2" placeholder="Écris ton calcul ici..."></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a02-q06">🎯 Résultat <span>un nombre seulement, en €</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a02-q06" data-answer-id="a02_q06" data-required="true" aria-labelledby="a02-q06-label"><span class="cours-resultat-unite">€</span></span>
+                </div>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Coefficient de −20 % : 0,8. Prix soldé = 1 250 × 0,8.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q07">
+            
+            
+            <h3 id="a02-q07-label">Question 7 — Un filet à 40 € est soldé −25 %. Calcule le prix soldé avec le coefficient.</h3>
+            
+
+            
+            
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a02-q07-calcul">✏️ Ton calcul <span>écris le calcul que tu as posé (exemple : 380 × 1,05)</span></label>
+                <textarea class="cours-calcul" id="a02-q07-calcul" data-answer-id="a02_q07_calcul" data-answer-role="calcul" data-required="true" rows="2" placeholder="Écris ton calcul ici..."></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a02-q07">🎯 Résultat <span>un nombre seulement, en €</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a02-q07" data-answer-id="a02_q07" data-required="true" aria-labelledby="a02-q07-label"><span class="cours-resultat-unite">€</span></span>
+                </div>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Coefficient de −25 % : 0,75. Prix soldé = 40 × 0,75.</p></details>
             
             
         </div>
@@ -876,57 +849,57 @@
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Retrouver un pourcentage</h2>
+        <h2>Partie 3 — Retrouver le pourcentage d’évolution</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais appliquer un pourcentage. Et si on cherche le pourcentage ?</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas retrouver le pourcentage d’augmentation du prix du foin. On attend le pourcentage et la vérification de l’annonce.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais appliquer un pourcentage. Dernière notion : retrouver le pourcentage quand on connaît l’ancien et le nouveau prix.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Le foin passe de 160 € à 184 € la tonne. Le fournisseur annonce « +10 % ». Dit-il vrai ?</p>
+<p>Le taux d’évolution dit de combien de pourcents une valeur a changé.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>On part de l’ancienne et de la nouvelle valeur, et on retrouve le pourcentage.</p>
     
 
-<p>Le taux d’évolution est le pourcentage de hausse ou de baisse entre deux valeurs.</p>
+<p>À retenir : Coefficient = nouvelle valeur ÷ ancienne valeur. Taux = (coefficient − 1) × 100.</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Vérifier une hausse annoncée.</li><li>Comparer des évolutions.</li></ul>
+<ol><li>Divise la nouvelle valeur par l’ancienne : c’est le coefficient.</li><li>Enlève 1 au coefficient.</li><li>Multiplie par 100 : tu obtiens le taux en %.</li><li>Résultat positif = hausse ; résultat négatif = baisse.</li><li>Attention : on divise toujours par l’ancienne valeur (celle de départ).</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>On calcule le coefficient : nouvelle valeur ÷ ancienne valeur.</li><li>On enlève 1 : coefficient − 1.</li><li>On multiplie par 100 : positif = hausse, négatif = baisse.</li></ol>
+<p>1. En raisonnant avec les pourcentages</p>
     
 
-<p>À retenir : Taux d’évolution = nouvelle ÷ ancienne − 1.</p>
+<ul><li>Un licol passe de 40 € à 46 €. Le coefficient 46 ÷ 40 = 1,15 dit : « le nouveau prix vaut 1,15 fois l’ancien ».</li><li>1,15, c’est 115/100, donc 115 % de l’ancien prix.</li><li>L’ancien prix, c’était 100 %. On paie maintenant 115 % : 115 % − 100 % = 15 % de plus. C’est une hausse de 15 %.</li><li>Pour une baisse : de 40 € à 30 €, 30 ÷ 40 = 0,75 = 75 %. Il manque 100 % − 75 % = 25 % : c’est une baisse de 25 %, qu’on écrit −25 %.</li></ul>
+    
+
+<p>2. En faisant le chemin du coefficient à l’envers</p>
+    
+
+<ul><li>Partie 2 : ancien prix × coefficient = nouveau prix. Donc coefficient = nouveau prix ÷ ancien prix.</li><li>Partie 2 : coefficient = 1 + taux. Donc taux = coefficient − 1 (ici 1,15 − 1 = 0,15).</li><li>Et 0,15 = 15/100 = 15 % : c’est pour cela qu’on multiplie par 100 à la fin.</li><li>On divise toujours par l’ancien prix, parce que c’est lui qui fait 100 %.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>Un sac passe de 20 € à 23 €. Taux d’évolution ?</li><li>Une selle passe de 800 € à 600 €. Taux d’évolution ?</li></ol>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : le prix du foin passe de 160 € à 184 € la tonne. Calcule le coefficient (184 ÷ 160), puis le pourcentage.</li><li>Pourquoi ce calcul ? Pour savoir si une hausse annoncée est vraie.</li></ol>
+<p>Calculatrice autorisée. Pour une baisse, écris le signe moins (par exemple −25).</p>
     
 
 
@@ -935,63 +908,23 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a03-q01-label">Question 1 — Série A — Un sac passe de 20 € à 23 €. Quel est le coefficient multiplicateur ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Taux d’évolution = nouvelle valeur ÷ ancienne valeur − …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a03_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Retrouver un pourcentage — Mot(s) manquant(s) — Taux d’évolution = nouvelle valeur ÷ ancienne valeur − …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Un coefficient de 1,15 correspond à une hausse de …… %.
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a03_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Retrouver un pourcentage — Mot(s) manquant(s) — Un coefficient de 1,15 correspond à une hausse de …… %.">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a03-q01-calcul">✏️ Ton calcul <span>écris le calcul que tu as posé (exemple : 380 × 1,05)</span></label>
+                <textarea class="cours-calcul" id="a03-q01-calcul" data-answer-id="a03_q01_calcul" data-answer-role="calcul" data-required="true" rows="2" placeholder="Écris ton calcul ici..."></textarea>
                 </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Taux = nouvelle ÷ ancienne − quelque chose. Puis un coefficient de 1,15 : combien au-dessus de 1 ?</p></details>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a03-q01">🎯 Résultat <span>un nombre seulement</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label"></span>
+                </div>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Coefficient = nouvelle valeur ÷ ancienne valeur.</p></details>
             
             
         </div>
@@ -999,15 +932,23 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a03-q02-label">Question 2 — Quel est le pourcentage d’augmentation ?</h3>
+            <h3 id="a03-q02-label">Question 2 — Un sac passe de 20 € à 23 €. Quel est le taux d’évolution en % ?</h3>
             
 
             
             
-                <input type="text" inputmode="decimal" id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label"><p>Unité : %</p>
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a03-q02-calcul">✏️ Ton calcul <span>écris le calcul que tu as posé (exemple : 380 × 1,05)</span></label>
+                <textarea class="cours-calcul" id="a03-q02-calcul" data-answer-id="a03_q02_calcul" data-answer-role="calcul" data-required="true" rows="2" placeholder="Écris ton calcul ici..."></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a03-q02">🎯 Résultat <span>un nombre seulement, en %</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label"><span class="cours-resultat-unite">%</span></span>
+                </div>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Divise le nouveau prix par l’ancien, enlève 1, puis multiplie par 100.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Coefficient − 1, puis × 100.</p></details>
             
             
         </div>
@@ -1015,15 +956,87 @@
         <div class="cours-question" data-question="q03">
             
             
-            <h3 id="a03-q03-label">Question 3 — Un fournisseur dit « +10 % ». Est-ce vrai ? Justifie.</h3>
+            <h3 id="a03-q03-label">Question 3 — Le foin passe de 160 € à 184 € la tonne. Quel est le taux d’évolution en % ?</h3>
             
 
             
             
-                <textarea id="a03-q03" data-answer-id="a03_q03" data-required="true" aria-labelledby="a03-q03-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a03-q03-calcul">✏️ Ton calcul <span>écris le calcul que tu as posé (exemple : 380 × 1,05)</span></label>
+                <textarea class="cours-calcul" id="a03-q03-calcul" data-answer-id="a03_q03_calcul" data-answer-role="calcul" data-required="true" rows="2" placeholder="Écris ton calcul ici..."></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a03-q03">🎯 Résultat <span>un nombre seulement, en %</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a03-q03" data-answer-id="a03_q03" data-required="true" aria-labelledby="a03-q03-label"><span class="cours-resultat-unite">%</span></span>
+                </div>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Compare le pourcentage que tu viens de calculer à celui annoncé par le fournisseur.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Calcule 184 ÷ 160, enlève 1, multiplie par 100.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a03-q04-label">Question 4 — Une selle passe de 800 € à 600 €. Quel est le taux d’évolution en % ? (Pour une baisse, écris le signe moins : −…)</h3>
+            
+
+            
+            
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a03-q04-calcul">✏️ Ton calcul <span>écris le calcul que tu as posé (exemple : 380 × 1,05)</span></label>
+                <textarea class="cours-calcul" id="a03-q04-calcul" data-answer-id="a03_q04_calcul" data-answer-role="calcul" data-required="true" rows="2" placeholder="Écris ton calcul ici..."></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a03-q04">🎯 Résultat <span>un nombre seulement, en %</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a03-q04" data-answer-id="a03_q04" data-required="true" aria-labelledby="a03-q04-label"><span class="cours-resultat-unite">%</span></span>
+                </div>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Calcule 600 ÷ 800, enlève 1, multiplie par 100. Le résultat est négatif : c’est une baisse.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a03-q05-label">Question 5 — Une leçon passe de 50 € à 60 €. Quel est le taux d’évolution en % ?</h3>
+            
+
+            
+            
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a03-q05-calcul">✏️ Ton calcul <span>écris le calcul que tu as posé (exemple : 380 × 1,05)</span></label>
+                <textarea class="cours-calcul" id="a03-q05-calcul" data-answer-id="a03_q05_calcul" data-answer-role="calcul" data-required="true" rows="2" placeholder="Écris ton calcul ici..."></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a03-q05">🎯 Résultat <span>un nombre seulement, en %</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a03-q05" data-answer-id="a03_q05" data-required="true" aria-labelledby="a03-q05-label"><span class="cours-resultat-unite">%</span></span>
+                </div>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Calcule 60 ÷ 50, enlève 1, multiplie par 100.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a03-q06-label">Question 6 — Série B — Le fournisseur annonce : « Le foin augmente de 10 % » (de 160 € à 184 € la tonne). A-t-il raison ?</h3>
+            
+
+            
+            
+                <select id="a03-q06" data-answer-id="a03_q06" data-required="true" aria-labelledby="a03-q06-label"><option value="">Choisis une réponse</option><option value="a">Oui, la hausse est bien de 10 %.</option><option value="b">Non, la hausse est de 15 %.</option><option value="c">Non, la hausse est de 24 %.</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Calcule le vrai taux d’évolution, puis compare avec 10 %.</p></details>
             
             
         </div>
@@ -1037,7 +1050,7 @@
     
     <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Pour aller plus loin</h2>
+        <h2>Encore des exercices (si tu as fini)</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
@@ -1045,7 +1058,7 @@
         
 
         
-<p>+10 % puis −10 % : revient-on au prix de départ ?</p>
+<p>Tu as fini les trois parties ? Entraîne-toi encore. Ces exercices ne comptent pas dans la note.</p>
     
 
 
@@ -1054,15 +1067,143 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Teste sur 100 €.</h3>
+            <h3 id="a04-q01-label">Question 1 — Calcule 30 % de 70 €.</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a04-q01-calcul">✏️ Ton calcul <span>écris le calcul que tu as posé (exemple : 380 × 1,05)</span></label>
+                <textarea class="cours-calcul" id="a04-q01-calcul" data-answer-id="a04_q01_calcul" data-answer-role="calcul" data-required="false" rows="2" placeholder="Écris ton calcul ici..."></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a04-q01">🎯 Résultat <span>un nombre seulement, en €</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label"><span class="cours-resultat-unite">€</span></span>
+                </div>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Pars de 100 €, multiplie par 1,1, puis le résultat par 0,9. Retombes-tu sur 100 € ?</p></details>
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a04-q02-label">Question 2 — Une couverture de 45 € augmente de 20 %. Nouveau prix ?</h3>
+            
+
+            
+            
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a04-q02-calcul">✏️ Ton calcul <span>écris le calcul que tu as posé (exemple : 380 × 1,05)</span></label>
+                <textarea class="cours-calcul" id="a04-q02-calcul" data-answer-id="a04_q02_calcul" data-answer-role="calcul" data-required="false" rows="2" placeholder="Écris ton calcul ici..."></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a04-q02">🎯 Résultat <span>un nombre seulement, en €</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a04-q02" data-answer-id="a04_q02" data-required="false" aria-labelledby="a04-q02-label"><span class="cours-resultat-unite">€</span></span>
+                </div>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a04-q03-label">Question 3 — Un licol de 120 € est soldé −30 %. Prix soldé ?</h3>
+            
+
+            
+            
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a04-q03-calcul">✏️ Ton calcul <span>écris le calcul que tu as posé (exemple : 380 × 1,05)</span></label>
+                <textarea class="cours-calcul" id="a04-q03-calcul" data-answer-id="a04_q03_calcul" data-answer-role="calcul" data-required="false" rows="2" placeholder="Écris ton calcul ici..."></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a04-q03">🎯 Résultat <span>un nombre seulement, en €</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a04-q03" data-answer-id="a04_q03" data-required="false" aria-labelledby="a04-q03-label"><span class="cours-resultat-unite">€</span></span>
+                </div>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a04-q04-label">Question 4 — Quel est le coefficient pour une baisse de 8 % ?</h3>
+            
+
+            
+            
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a04-q04-calcul">✏️ Ton calcul <span>écris le calcul que tu as posé (exemple : 380 × 1,05)</span></label>
+                <textarea class="cours-calcul" id="a04-q04-calcul" data-answer-id="a04_q04_calcul" data-answer-role="calcul" data-required="false" rows="2" placeholder="Écris ton calcul ici..."></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a04-q04">🎯 Résultat <span>un nombre seulement</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a04-q04" data-answer-id="a04_q04" data-required="false" aria-labelledby="a04-q04-label"></span>
+                </div>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a04-q05-label">Question 5 — Un prix passe de 400 € à 460 €. Taux d’évolution en % ?</h3>
+            
+
+            
+            
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a04-q05-calcul">✏️ Ton calcul <span>écris le calcul que tu as posé (exemple : 380 × 1,05)</span></label>
+                <textarea class="cours-calcul" id="a04-q05-calcul" data-answer-id="a04_q05_calcul" data-answer-role="calcul" data-required="false" rows="2" placeholder="Écris ton calcul ici..."></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a04-q05">🎯 Résultat <span>un nombre seulement, en %</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a04-q05" data-answer-id="a04_q05" data-required="false" aria-labelledby="a04-q05-label"><span class="cours-resultat-unite">%</span></span>
+                </div>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a04-q06-label">Question 6 — Un prix passe de 75 € à 60 €. Taux d’évolution en % ?</h3>
+            
+
+            
+            
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a04-q06-calcul">✏️ Ton calcul <span>écris le calcul que tu as posé (exemple : 380 × 1,05)</span></label>
+                <textarea class="cours-calcul" id="a04-q06-calcul" data-answer-id="a04_q06_calcul" data-answer-role="calcul" data-required="false" rows="2" placeholder="Écris ton calcul ici..."></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a04-q06">🎯 Résultat <span>un nombre seulement, en %</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a04-q06" data-answer-id="a04_q06" data-required="false" aria-labelledby="a04-q06-label"><span class="cours-resultat-unite">%</span></span>
+                </div>
+
+                
+            
             
             
         </div>
@@ -1070,41 +1211,6 @@
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#a03">← Étape précédente</a>
-            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a05" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Conclusion de ton travail</h2>
-        
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais calculer une évolution. Il reste à répondre au problème de départ.</p>
-        
-        
-        
-
-        
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment calculer une augmentation ou une réduction en pourcentage ?</h3>
-            
-
-            
-            
-                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Explique les deux méthodes (en deux étapes, avec le coefficient) et comment retrouver un pourcentage.</p></details>
-            
-            
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -1117,7 +1223,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>+t % : × (1 + t/100) ; −t % : × (1 − t/100).</li><li>Taux = (nouveau ÷ ancien) − 1.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>t % d’une valeur = valeur × t ÷ 100.</li><li>Hausse de t % : × (1 + t/100) ; baisse de t % : × (1 − t/100).</li><li>Coefficient = nouvelle valeur ÷ ancienne valeur ; taux = (coefficient − 1) × 100.</li><li>Taux positif = hausse ; taux négatif = baisse.</li></ul>
     
 </section>
 
@@ -1133,7 +1239,7 @@
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
     
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>
@@ -1145,6 +1251,7 @@
 <script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/nombre-seulement.js?v=20261125-calcul"></script>
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-steps.js?v=20261029-steps-1"></script>

@@ -45,9 +45,9 @@
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css?v=20261022-shop-effects-2">
     
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css?v=20261125-calcul">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css?v=20261124-classe">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-paper-version.css?v=20261125-calcul">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/collaboration.css">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/student-evaluation.css">
@@ -838,7 +838,12 @@
 
             
             
-                <input type="text" inputmode="decimal" id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><p>Unité : %</p>
+                
+                
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a02-q02">🎯 Résultat <span>un nombre seulement, en %</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><span class="cours-resultat-unite">%</span></span>
+                </div>
 
                 
             <details><summary>Un coup de pouce</summary><p>Comme l’exemple des 9 poulains sur 12 : juments pleines ÷ total des juments, puis × 100.</p></details>
@@ -999,7 +1004,12 @@
 
             
             
-                <input type="text" inputmode="decimal" id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label"><p>Unité : %</p>
+                
+                
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a03-q02">🎯 Résultat <span>un nombre seulement, en %</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label"><span class="cours-resultat-unite">%</span></span>
+                </div>
 
                 
             <details><summary>Un coup de pouce</summary><p>Multiplie les deux proportions de « À toi » écrites en décimaux, puis écris le résultat en %.</p></details>
@@ -1015,7 +1025,12 @@
 
             
             
-                <input type="text" inputmode="decimal" id="a03-q03" data-answer-id="a03_q03" data-required="true" aria-labelledby="a03-q03-label"><p>Unité : poulains</p>
+                
+                
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a03-q03">🎯 Résultat <span>un nombre seulement, en poulains</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a03-q03" data-answer-id="a03_q03" data-required="true" aria-labelledby="a03-q03-label"><span class="cours-resultat-unite">poulains</span></span>
+                </div>
 
                 
             <details><summary>Un coup de pouce</summary><p>Applique la proportion trouvée aux 40 juments : 40 × la proportion décimale.</p></details>
@@ -1140,6 +1155,7 @@
 <script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/nombre-seulement.js?v=20261125-calcul"></script>
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-steps.js?v=20261029-steps-1"></script>

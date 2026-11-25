@@ -45,7 +45,7 @@
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/eleve/student-header.css?v=20261022-shop-effects-2">
     
     
-    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css">
+    <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-activites.css?v=20261125-calcul">
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/course-layout.css?v=20261029-mission-1">
     
     <link rel="stylesheet" href="/tifsec-test-eleves/assets/css/cours/cours-sauvegarde.css">
@@ -241,7 +241,12 @@ lorsque secouer
 
             
             
-                <input type="text" inputmode="decimal" id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><p>Unité : foulées</p>
+                
+                
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a01-q01">🎯 Résultat <span>un nombre seulement, en foulées</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><span class="cours-resultat-unite">foulées</span></span>
+                </div>
 
                 
             <details><summary>Un coup de pouce</summary><p>Lis le programme bloc par bloc (M9) : la variable part de 0, et chaque secousse ajoute combien ?</p></details>
@@ -343,7 +348,12 @@ lorsque secouer
 
             
             
-                <input type="text" inputmode="decimal" id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label"><p>Unité : m</p>
+                
+                
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a03-q01">🎯 Résultat <span>un nombre seulement, en m</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label"><span class="cours-resultat-unite">m</span></span>
+                </div>
 
                 
             <details><summary>Un coup de pouce</summary><p>Distance = nombre de foulées × longueur d’une foulée. Écris l’unité (M5).</p></details>
@@ -500,6 +510,7 @@ lorsque secouer
 <script src="/tifsec-test-eleves/assets/vendor/supabase/supabase-2.118.0.js" integrity="sha384-UagCvVPT5XXA0Hx+nJYUAGBFseHT9zBgpJMSebsAxl9lciTwbT+39j5VfRjdP5Tp"></script>
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-shell.js"></script>
+<script type="module" src="/tifsec-test-eleves/assets/js/cours/nombre-seulement.js?v=20261125-calcul"></script>
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-work.js"></script>
 
 <script type="module" src="/tifsec-test-eleves/assets/js/cours/course-steps.js?v=20261029-steps-1"></script>
