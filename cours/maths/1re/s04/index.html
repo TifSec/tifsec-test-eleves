@@ -124,7 +124,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">La facture</a></li><li><a href="#a02">Retrouver le HT</a></li><li><a href="#a03">Quelle remise ?</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Partie 1 — La facture</a></li><li><a href="#a02">Partie 2 — Retrouver le prix HT</a></li><li><a href="#a03">Partie 3 — Quelle remise ?</a></li><li><a href="#a04">Encore des exercices (si tu as fini) — facultatif</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -136,7 +136,7 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">Mathématiques · Bac Pro 1 · S04</span></div>
-    <h1>Séance 4 : Prix HT, TVA, remise : la facture de la sellerie</h1>
+    <h1>Séance 4 : La facture : HT, remise, TVA et TTC</h1>
     
 
     
@@ -150,7 +150,7 @@
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Comment calculer une facture complète avec remise et TVA ?</p>
+        <p>Comment calculer une facture avec remise et TVA, retrouver un prix HT et le taux d’une remise ?</p>
     </section>
     
 
@@ -168,9 +168,11 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Ordre d’une facture : prix HT → remise sur le HT → TVA sur le HT remisé → TTC.</li>
+            <li>Total HT = somme des quantités × prix unitaires.</li>
             
-            <li>Retrouver un HT : TTC ÷ (1 + taux de TVA).</li>
+            <li>HT net = HT × (1 − remise) ; TTC = HT net × 1,2.</li>
+            
+            <li>HT = TTC ÷ 1,2 ; taux de remise = 1 − nouveau ÷ ancien.</li>
             
         </ul>
         
@@ -180,14 +182,16 @@
             
             <li>Calculer une facture complète.</li>
             
-            <li>Retrouver un prix HT et une remise.</li>
+            <li>Retrouver un prix HT à partir du TTC.</li>
+            
+            <li>Calculer le taux d’une remise.</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En 2de, tu as calculé une TVA.</p><p>La sellerie fait une remise aux clubs : il faut l’appliquer au bon moment.</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Aujourd’hui, trois notions : la facture, retrouver le HT, calculer une remise.</p><p>Pour chacune : la notion, la méthode, pourquoi ça marche, un exemple au tableau, puis beaucoup d’exercices.</p></div></section>
     
     
     
@@ -202,67 +206,45 @@
 
 <section id="course-paper-version" class="course-paper-version" hidden aria-labelledby="course-paper-title">
     <article class="course-paper-sheet">
-        <header><p class="course-paper-class">Mathématiques — Bac Pro 1</p><p class="course-paper-kicker">Cours et exercices — version papier</p><h2 id="course-paper-title"><span class="course-paper-number">Séance 4</span> — Prix HT, TVA, remise : la facture de la sellerie</h2><p>Comment calculer une facture complète avec remise et TVA ?</p></header>
-        
-        <section class="course-paper-section">
-            <h3>Le cours en bref</h3>
-            
-<p>Le problème à résoudre : Comment calculer une facture complète avec remise et TVA ?</p>
-    
-
-<h4>Ce que tu vas apprendre</h4>
-    
-
-<ul><li>Ordre d’une facture : prix HT → remise sur le HT → TVA sur le HT remisé → TTC.</li><li>Retrouver un HT : TTC ÷ (1 + taux de TVA).</li></ul>
-    
-
-<h4>Ce que tu vas savoir faire</h4>
-    
-
-<ul><li>Calculer une facture complète.</li><li>Retrouver un prix HT et une remise.</li></ul>
-    
-
-<h4>Pourquoi cette séance ?</h4>
-    
-
-<p>En 2de, tu as calculé une TVA. La sellerie fait une remise aux clubs : il faut l’appliquer au bon moment.</p>
-    
-
-<p>Comment utiliser cette fiche : pour chaque partie, lis la méthode et l’exemple, complète les points clés, puis fais l’exercice. Réponds sur les lignes.</p>
-    
-
-
-            
-        </section>
+        <header><p class="course-paper-class">Mathématiques — Bac Pro 1</p><p class="course-paper-kicker">Cours et exercices — version papier</p><h2 id="course-paper-title"><span class="course-paper-number">Séance 4</span> — La facture : HT, remise, TVA et TTC</h2><p>Trois notions : la facture, retrouver le HT, quelle remise. Pour chacune : la notion, la méthode, l’exemple au tableau, puis les exercices.</p></header>
         
         <section class="course-paper-section">
             <h3>I. La facture</h3>
             
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Le club commande des tapis et des filets à la sellerie. Il a droit à une remise, puis la TVA s’ajoute. Combien va-t-il payer ?</p>
+<p>Une facture liste les articles, calcule le total hors taxes (HT), applique une remise, puis ajoute la TVA.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>Le TTC est le montant que le client paie.</p>
     
 
-<p>Une facture part du prix hors taxes (HT). La remise est une réduction sur ce prix. La TVA est un impôt calculé en pourcentage du prix HT après remise ; le client paie le prix toutes taxes comprises (TTC).</p>
+<h4>À retenir</h4>
     
 
-<h4>À quoi ça sert</h4>
+<p>Total HT → HT net = HT × (1 − remise) → TTC = HT net × 1,2.</p>
     
 
-<ul><li>Calculer et vérifier une facture de matériel ou de pension.</li><li>Comparer des devis.</li></ul>
+<h4>Comment ça fonctionne</h4>
     
 
-<h4>Comment ça marche</h4>
+<ol><li>Pour chaque ligne : quantité × prix unitaire.</li><li>Additionne les lignes : total HT.</li><li>Applique la remise : × 0,9 pour −10 %.</li><li>Ajoute la TVA : × 1,2.</li></ol>
     
 
-<ol><li>HT brut = quantité × prix unitaire HT, pour chaque ligne, puis on additionne.</li><li>Remise = HT brut × taux ÷ 100 ; HT net = HT brut − remise.</li><li>TVA = HT net × 20 ÷ 100 ; TTC = HT net + TVA.</li></ol>
+<h4>Pourquoi ça marche</h4>
     
 
-<p>À retenir : Toujours dans cet ordre : remise sur le HT, puis TVA sur le HT net.</p>
+<p>1. Pourquoi cet ordre</p>
+    
+
+<ul><li>La remise est un geste du vendeur sur son prix HT.</li><li>La TVA est un impôt calculé sur le prix réellement vendu (HT net).</li></ul>
+    
+
+<p>2. En regroupant</p>
+    
+
+<ul><li>HT × 0,9 × 1,2 = HT × 1,08.</li><li>Avec 10 % de remise et 20 % de TVA, le client paie 108 % du total HT.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -271,74 +253,59 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<ul><li>Automatisme : 10 % de 1 000 ; 20 % de 900.</li></ul>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<h4>Ce que tu vas faire</h4>
+<p>Facture de la sellerie :</p>
     
 
-<p>Tu vas calculer la facture complète de la commande du club (document 1), avec remise et TVA. On attend chaque ligne de la facture.</p>
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Article</th><th scope="col">Quantité</th><th scope="col">Prix unitaire HT</th></tr></thead><tbody><tr><td>Filet</td><td>4</td><td>175,00 €</td></tr><tr><td>Licol</td><td>6</td><td>22,50 €</td></tr><tr><td>Tapis</td><td>5</td><td>38,00 €</td></tr></tbody></table></div>
     
 
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : lis la commande du club (document 1) et calcule HT, remise, HT net, TVA, TTC.</li><li>Pourquoi cet ordre ? La TVA se calcule sur le prix réellement facturé.</li></ol>
-    
-
-<h4>Exemple et documents</h4>
-    
-
-<ul><li>6 tapis à 50 € HT.</li><li>4 filets à 175 € HT.</li><li>Remise club : 10 % sur le HT.</li><li>TVA : 20 %.</li></ul>
-    
-
-<p>Données fictives créées pour l’exercice (ordres de grandeur réalistes).</p>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>La remise se calcule sur le prix <span class="cours-trou" aria-label="à compléter"></span> .</li><li>La TVA se calcule sur le HT <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 1 — La facture</h4>
-    
-
-<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Ligne</th><th scope="col">Montant (€)</th></tr></thead><tbody><tr><td>Total HT</td><td></td></tr><tr><td>Remise 10 %</td><td></td></tr><tr><td>HT net</td><td></td></tr><tr><td>TVA 20 %</td><td></td></tr><tr><td>TTC</td><td></td></tr></tbody></table></div>
+<p>Facture fictive de la sellerie. Remise de 10 % sur le total HT, puis TVA 20 %.</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — 3 licols à 20 € HT, remise 10 %, TVA 20 %. Calcule le TTC.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — Une selle à 600 € HT, sans remise, TVA 20 %. Prix TTC ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Complète la facture.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — Montant HT de la ligne Filet ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Montant HT de la ligne Licol ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Montant HT de la ligne Tapis ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Total HT ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — HT net après la remise de 10 % ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Montant de la TVA (20 % du HT net) ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Total TTC ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>II. Retrouver le HT</h3>
+            <h3>II. Retrouver le prix HT</h3>
             
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Un client a payé un article 210 € TTC. Le comptable a besoin du prix hors taxes.</p>
+<p>Un prix affiché TTC contient la TVA. Pour retrouver le HT, on défait la multiplication par 1,2.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>On divise par 1,2 ; on ne retire jamais 20 % du TTC.</p>
     
 
-<p>Retrouver le HT, c’est faire le calcul de la TVA à l’envers.</p>
+<h4>À retenir</h4>
     
 
-<h4>À quoi ça sert</h4>
+<p>HT = TTC ÷ 1,2. TVA = TTC − HT.</p>
     
 
-<ul><li>Remplir la comptabilité, qui se fait en HT.</li><li>Comparer des prix affichés TTC et HT.</li></ul>
+<h4>Comment ça fonctionne</h4>
     
 
-<h4>Comment ça marche</h4>
+<ol><li>Divise le TTC par 1,2.</li><li>Arrondis au centime.</li><li>Contrôle : HT × 1,2 = TTC.</li><li>TVA = TTC − HT.</li></ol>
     
 
-<ol><li>Le TTC est le HT multiplié par 1,2 (TVA à 20 %).</li><li>Pour revenir au HT, on fait l’opération inverse : on divise le TTC par 1,2.</li><li>On vérifie en multipliant le HT trouvé par 1,2.</li></ol>
+<h4>Pourquoi ça marche</h4>
     
 
-<p>À retenir : HT = TTC ÷ 1,2 (TVA 20 %). Enlever 20 % du TTC donne un résultat faux.</p>
+<p>1. En raisonnant avec les pourcentages</p>
+    
+
+<ul><li>Le TTC représente 120 % du HT.</li><li>Si 120 % = 60 €, alors 1 % = 0,50 € et 100 % = 50 €.</li></ul>
+    
+
+<p>2. Pourquoi pas −20 %</p>
+    
+
+<ul><li>60 − 20 % de 60 = 48 € ; mais 48 × 1,2 = 57,60 €, pas 60 €.</li><li>Les 20 % de TVA portent sur le HT, pas sur le TTC.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -347,59 +314,53 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<h4>Ce que tu vas faire</h4>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<p>Tu vas retrouver le prix hors taxes d’un article de sellerie payé 210 € TTC avec une TVA de 20 %. On attend le prix HT.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : un client a payé 210 € TTC (TVA 20 %). Retrouve le HT.</li><li>Pourquoi diviser ? Le TTC = HT × 1,2.</li></ol>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>HT = TTC ÷ <span class="cours-trou" aria-label="à compléter"></span> (TVA 20 %).</li><li>Retirer 20 % du TTC donne un résultat <span class="cours-trou" aria-label="à compléter"></span> .</li></ul>
-    
-
-<h4>Exercice 2 — Retrouver le HT</h4>
+<p>Calculatrice autorisée. TVA 20 %.</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — Un article coûte 96 € TTC (TVA 20 %). Prix HT ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — Un article coûte 66 € TTC avec une TVA de 10 %. Prix HT ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Prix HT ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — 90 € TTC : prix HT ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>210 € TTC : prix HT ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>1 440 € TTC : prix HT ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>54 € TTC : montant de TVA ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — 1 107 € TTC (la facture) : HT net ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Un élève enlève 20 % de 90 € TTC et trouve 72 € HT. A-t-il raison ? Choix : Oui / Non, le HT est 75 €.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>III. Quelle remise ?</h3>
             
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Une selle passe de 1 500 € à 1 275 €. Quel est le taux de la remise ?</p>
+<p>Quand on connaît l’ancien et le nouveau prix, on peut retrouver le taux de la remise.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>On compare le nouveau prix à l’ancien.</p>
     
 
-<p>Le taux de remise est la réduction exprimée en pourcentage du prix de départ.</p>
+<h4>À retenir</h4>
     
 
-<h4>À quoi ça sert</h4>
+<p>Taux de remise = (1 − nouveau ÷ ancien) × 100.</p>
     
 
-<ul><li>Vérifier qu’une promotion annoncée est exacte.</li><li>Comparer deux promotions.</li></ul>
+<h4>Comment ça fonctionne</h4>
     
 
-<h4>Comment ça marche</h4>
+<ol><li>Divise le nouveau prix par l’ancien : c’est le coefficient.</li><li>Calcule 1 − coefficient.</li><li>Multiplie par 100.</li><li>Contrôle : ancien × (1 − taux) = nouveau.</li></ol>
     
 
-<ol><li>Méthode 1 : remise en euros = ancien prix − nouveau prix ; taux = remise ÷ ancien prix, puis × 100.</li><li>Méthode 2 : coefficient = nouveau ÷ ancien ; taux de remise = (1 − coefficient) × 100.</li></ol>
+<h4>Pourquoi ça marche</h4>
     
 
-<p>À retenir : Taux de remise = remise ÷ ancien prix.</p>
+<p>1. En raisonnant avec les pourcentages</p>
+    
+
+<ul><li>Un filet passe de 175 € à 140 € : 140 ÷ 175 = 0,8 = 80 %.</li><li>On paie 80 % : il manque 20 %, c’est la remise.</li></ul>
+    
+
+<p>2. Pourquoi diviser par l’ancien</p>
+    
+
+<ul><li>La remise est un pourcentage du prix de départ.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
@@ -408,80 +369,31 @@
 <div class="cours-zone" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     
 
-<h4>Ce que tu vas faire</h4>
+<h4>Exercices (calculatrice autorisée)</h4>
     
 
-<p>Tu vas calculer le taux de remise d’une selle passée de 1 500 € à 1 275 €. On attend le taux.</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : une selle passe de 1 500 € à 1 275 € ; calcule le taux de remise.</li><li>Pourquoi ce calcul ? Vérifier une promotion annoncée.</li></ol>
-    
-
-<h4>Points clés à compléter</h4>
-    
-
-<ul class="cours-trous"><li>Taux de remise = 1 − nouveau prix ÷ <span class="cours-trou" aria-label="à compléter"></span> prix.</li><li>Un coefficient de 0,85 correspond à −<span class="cours-trou" aria-label="à compléter"></span> %.</li></ul>
-    
-
-<h4>Exercice 3 — Quelle remise ?</h4>
+<p>Calculatrice autorisée.</p>
     
 
 
-            <ol class="course-paper-questions"><li><span>Entraînement — Un tapis passe de 50 € à 40 €. Taux de remise ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Entraînement — Une couverture passe de 120 € à 102 €. Taux de remise ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Taux de remise ? (en %)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>Série A — 50 € → 40 € : taux de remise en % ? (en %)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>120 € → 90 € : taux de remise en % ? (en %)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>1 025 € → 922,50 € : taux de remise en % ? (en %)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>80 € → 68 € : taux de remise en % ? (en %)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Série B — 350 € → 315 € : taux de remise en % ? (en %)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Un licol à 22,50 € est vendu 18 €. Remise en % ? (en %)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>Après 15 % de remise, un tapis coûte 32,30 €. Prix avant remise ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
-            <h3>Conclusion</h3>
+            <h3>Encore des exercices (si tu as fini)</h3>
             
-<p>Avec ce que tu as fait dans les parties précédentes, réponds en quelques phrases complètes.</p>
-    
 
-
-            <ol class="course-paper-questions"><li><span>Réponds au problème du jour : comment calculer une facture complète avec remise et TVA ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Pour aller plus loin (facultatif)</h3>
-            
-<p>La TVA sur la remise est-elle la même si on calcule TTC puis remise ?</p>
-    
-
-
-            <ol class="course-paper-questions"><li><span>Teste sur 1 000 € HT.</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
+            <ol class="course-paper-questions"><li><span>2 couvertures à 64 € HT, remise 5 %, TVA 20 % : TTC ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>300 € TTC : HT ? (en €)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li><li><span>60 € → 45 € : remise en % ? (en %)</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
         <section class="course-paper-section">
             <h3>À retenir</h3>
             
-<ul><li>HT net × 1,2 = TTC.</li><li>Taux = 1 − nouveau ÷ ancien.</li></ul>
+<ul><li>Total HT = somme des (quantité × prix unitaire HT).</li><li>Remise de t % : HT net = HT × (1 − t/100).</li><li>TTC = HT net × 1,2 (TVA 20 %) ; HT = TTC ÷ 1,2.</li><li>Taux de remise = (1 − nouveau prix ÷ ancien prix) × 100.</li></ul>
     
 
 
             
-        </section>
-        
-        <section class="course-paper-section course-paper-break">
-            <h2 class="course-paper-part">Fiche d’exercices</h2><h3>Exercice 1 — Facture</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>10 brosses à 8 € HT, remise 15 %, TVA 20 % : TTC ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Exercice 2 — Retrouver le HT</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>Un tapis payé 54 € TTC (TVA 20 %) : HT ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
-        </section>
-        
-        <section class="course-paper-section">
-            <h3>Exercice 3 — Remise</h3>
-            
-
-            <ol class="course-paper-questions"><li><span>Une selle passe de 1 200 € à 1 020 €. Taux de remise ?</span><span class="course-paper-answer-lines" aria-hidden="true"><span></span><span></span></span></li></ol>
         </section>
         
     </article>
@@ -495,66 +407,63 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>La facture</h2>
+        <h2>Partie 1 — La facture</h2>
         
         
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas calculer la facture complète de la commande du club (document 1), avec remise et TVA. On attend chaque ligne de la facture.</p></div>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Le club commande des tapis et des filets à la sellerie. Il a droit à une remise, puis la TVA s’ajoute. Combien va-t-il payer ?</p>
+<p>Une facture liste les articles, calcule le total hors taxes (HT), applique une remise, puis ajoute la TVA.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>Le TTC est le montant que le client paie.</p>
     
 
-<p>Une facture part du prix hors taxes (HT). La remise est une réduction sur ce prix. La TVA est un impôt calculé en pourcentage du prix HT après remise ; le client paie le prix toutes taxes comprises (TTC).</p>
+<p>À retenir : Total HT → HT net = HT × (1 − remise) → TTC = HT net × 1,2.</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Calculer et vérifier une facture de matériel ou de pension.</li><li>Comparer des devis.</li></ul>
+<ol><li>Pour chaque ligne : quantité × prix unitaire.</li><li>Additionne les lignes : total HT.</li><li>Applique la remise : × 0,9 pour −10 %.</li><li>Ajoute la TVA : × 1,2.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>HT brut = quantité × prix unitaire HT, pour chaque ligne, puis on additionne.</li><li>Remise = HT brut × taux ÷ 100 ; HT net = HT brut − remise.</li><li>TVA = HT net × 20 ÷ 100 ; TTC = HT net + TVA.</li></ol>
+<p>1. Pourquoi cet ordre</p>
     
 
-<p>À retenir : Toujours dans cet ordre : remise sur le HT, puis TVA sur le HT net.</p>
+<ul><li>La remise est un geste du vendeur sur son prix HT.</li><li>La TVA est un impôt calculé sur le prix réellement vendu (HT net).</li></ul>
+    
+
+<p>2. En regroupant</p>
+    
+
+<ul><li>HT × 0,9 × 1,2 = HT × 1,08.</li><li>Avec 10 % de remise et 20 % de TVA, le client paie 108 % du total HT.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>3 licols à 20 € HT, remise 10 %, TVA 20 %. Calcule le TTC.</li><li>Une selle à 600 € HT, sans remise, TVA 20 %. Prix TTC ?</li></ol>
+<p>Facture de la sellerie :</p>
     
 
-<ul><li>Automatisme : 10 % de 1 000 ; 20 % de 900.</li></ul>
+<div class="cours-table-wrapper"><table class="cours-table"><thead><tr><th scope="col">Article</th><th scope="col">Quantité</th><th scope="col">Prix unitaire HT</th></tr></thead><tbody><tr><td>Filet</td><td>4</td><td>175,00 €</td></tr><tr><td>Licol</td><td>6</td><td>22,50 €</td></tr><tr><td>Tapis</td><td>5</td><td>38,00 €</td></tr></tbody></table></div>
     
 
-<ul><li>6 tapis à 50 € HT.</li><li>4 filets à 175 € HT.</li><li>Remise club : 10 % sur le HT.</li><li>TVA : 20 %.</li></ul>
-    
-
-<p>Données fictives créées pour l’exercice (ordres de grandeur réalistes).</p>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : lis la commande du club (document 1) et calcule HT, remise, HT net, TVA, TTC.</li><li>Pourquoi cet ordre ? La TVA se calcule sur le prix réellement facturé.</li></ol>
+<p>Facture fictive de la sellerie. Remise de 10 % sur le total HT, puis TVA 20 %.</p>
     
 
 
@@ -563,63 +472,23 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a01-q01-label">Question 1 — Série A — Montant HT de la ligne Filet ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    La remise se calcule sur le prix …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="La facture — Mot(s) manquant(s) — La remise se calcule sur le prix …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    La TVA se calcule sur le HT …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="La facture — Mot(s) manquant(s) — La TVA se calcule sur le HT …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a01-q01-calcul">✏️ Écris ici le calcul qui t’a permis d’arriver au résultat</label>
+                <textarea class="cours-calcul" id="a01-q01-calcul" data-answer-id="a01_q01_calcul" data-answer-role="calcul" data-required="true" rows="2"></textarea>
                 </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Relis l’exemple des 2 selles : la remise est calculée sur quel prix ? Et la TVA, sur le HT avant ou après remise ?</p></details>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a01-q01">🎯 Résultat <span>un nombre seulement, en €</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label"><span class="cours-resultat-unite">€</span></span>
+                </div>
+
+                
+            <details><summary>Un coup de pouce</summary><p>4 × 175.</p></details>
             
             
         </div>
@@ -627,114 +496,143 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Complète la facture.</h3>
+            <h3 id="a01-q02-label">Question 2 — Montant HT de la ligne Licol ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Ligne</th>
-                                
-                                <th>Montant (€)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Total HT
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q02_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="La facture — Montant (€) — Total HT">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Remise 10 %
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q02_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="La facture — Montant (€) — Remise 10 %">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    HT net
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q02_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="La facture — Montant (€) — HT net">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    TVA 20 %
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q02_r3_c1" data-required="true" data-row="3" data-col="1" aria-label="La facture — Montant (€) — TVA 20 %">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    TTC
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a01_q02_r4_c1" data-required="true" data-row="4" data-col="1" aria-label="La facture — Montant (€) — TTC">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a01-q02-calcul">✏️ Écris ici le calcul qui t’a permis d’arriver au résultat</label>
+                <textarea class="cours-calcul" id="a01-q02-calcul" data-answer-id="a01_q02_calcul" data-answer-role="calcul" data-required="true" rows="2"></textarea>
                 </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a01-q02">🎯 Résultat <span>un nombre seulement, en €</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label"><span class="cours-resultat-unite">€</span></span>
+                </div>
+
+                
+            <details><summary>Un coup de pouce</summary><p>6 × 22,50.</p></details>
             
-            <details><summary>Un coup de pouce</summary><p>Suis l’ordre de l’exemple avec les données : 6 tapis et 4 filets (HT brut), remise 10 %, HT net, TVA 20 %, TTC.</p></details>
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a01-q03-label">Question 3 — Montant HT de la ligne Tapis ?</h3>
+            
+
+            
+            
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a01-q03-calcul">✏️ Écris ici le calcul qui t’a permis d’arriver au résultat</label>
+                <textarea class="cours-calcul" id="a01-q03-calcul" data-answer-id="a01_q03_calcul" data-answer-role="calcul" data-required="true" rows="2"></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a01-q03">🎯 Résultat <span>un nombre seulement, en €</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a01-q03" data-answer-id="a01_q03" data-required="true" aria-labelledby="a01-q03-label"><span class="cours-resultat-unite">€</span></span>
+                </div>
+
+                
+            <details><summary>Un coup de pouce</summary><p>5 × 38.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a01-q04-label">Question 4 — Total HT ?</h3>
+            
+
+            
+            
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a01-q04-calcul">✏️ Écris ici le calcul qui t’a permis d’arriver au résultat</label>
+                <textarea class="cours-calcul" id="a01-q04-calcul" data-answer-id="a01_q04_calcul" data-answer-role="calcul" data-required="true" rows="2"></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a01-q04">🎯 Résultat <span>un nombre seulement, en €</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a01-q04" data-answer-id="a01_q04" data-required="true" aria-labelledby="a01-q04-label"><span class="cours-resultat-unite">€</span></span>
+                </div>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Additionne les trois lignes.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a01-q05-label">Question 5 — Série B — HT net après la remise de 10 % ?</h3>
+            
+
+            
+            
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a01-q05-calcul">✏️ Écris ici le calcul qui t’a permis d’arriver au résultat</label>
+                <textarea class="cours-calcul" id="a01-q05-calcul" data-answer-id="a01_q05_calcul" data-answer-role="calcul" data-required="true" rows="2"></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a01-q05">🎯 Résultat <span>un nombre seulement, en €</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a01-q05" data-answer-id="a01_q05" data-required="true" aria-labelledby="a01-q05-label"><span class="cours-resultat-unite">€</span></span>
+                </div>
+
+                
+            <details><summary>Un coup de pouce</summary><p>1 025 × 0,9.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a01-q06-label">Question 6 — Montant de la TVA (20 % du HT net) ?</h3>
+            
+
+            
+            
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a01-q06-calcul">✏️ Écris ici le calcul qui t’a permis d’arriver au résultat</label>
+                <textarea class="cours-calcul" id="a01-q06-calcul" data-answer-id="a01_q06_calcul" data-answer-role="calcul" data-required="true" rows="2"></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a01-q06">🎯 Résultat <span>un nombre seulement, en €</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a01-q06" data-answer-id="a01_q06" data-required="true" aria-labelledby="a01-q06-label"><span class="cours-resultat-unite">€</span></span>
+                </div>
+
+                
+            <details><summary>Un coup de pouce</summary><p>922,50 × 0,2.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q07">
+            
+            
+            <h3 id="a01-q07-label">Question 7 — Total TTC ?</h3>
+            
+
+            
+            
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a01-q07-calcul">✏️ Écris ici le calcul qui t’a permis d’arriver au résultat</label>
+                <textarea class="cours-calcul" id="a01-q07-calcul" data-answer-id="a01_q07_calcul" data-answer-role="calcul" data-required="true" rows="2"></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a01-q07">🎯 Résultat <span>un nombre seulement, en €</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a01-q07" data-answer-id="a01_q07" data-required="true" aria-labelledby="a01-q07-label"><span class="cours-resultat-unite">€</span></span>
+                </div>
+
+                
+            <details><summary>Un coup de pouce</summary><p>922,50 × 1,2.</p></details>
             
             
         </div>
@@ -748,57 +646,57 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Retrouver le HT</h2>
+        <h2>Partie 2 — Retrouver le prix HT</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> La facture est calculée. Fais le chemin inverse.</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas retrouver le prix hors taxes d’un article de sellerie payé 210 € TTC avec une TVA de 20 %. On attend le prix HT.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais faire la facture. Deuxième notion : faire le chemin inverse.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Un client a payé un article 210 € TTC. Le comptable a besoin du prix hors taxes.</p>
+<p>Un prix affiché TTC contient la TVA. Pour retrouver le HT, on défait la multiplication par 1,2.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>On divise par 1,2 ; on ne retire jamais 20 % du TTC.</p>
     
 
-<p>Retrouver le HT, c’est faire le calcul de la TVA à l’envers.</p>
+<p>À retenir : HT = TTC ÷ 1,2. TVA = TTC − HT.</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Remplir la comptabilité, qui se fait en HT.</li><li>Comparer des prix affichés TTC et HT.</li></ul>
+<ol><li>Divise le TTC par 1,2.</li><li>Arrondis au centime.</li><li>Contrôle : HT × 1,2 = TTC.</li><li>TVA = TTC − HT.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>Le TTC est le HT multiplié par 1,2 (TVA à 20 %).</li><li>Pour revenir au HT, on fait l’opération inverse : on divise le TTC par 1,2.</li><li>On vérifie en multipliant le HT trouvé par 1,2.</li></ol>
+<p>1. En raisonnant avec les pourcentages</p>
     
 
-<p>À retenir : HT = TTC ÷ 1,2 (TVA 20 %). Enlever 20 % du TTC donne un résultat faux.</p>
+<ul><li>Le TTC représente 120 % du HT.</li><li>Si 120 % = 60 €, alors 1 % = 0,50 € et 100 % = 50 €.</li></ul>
+    
+
+<p>2. Pourquoi pas −20 %</p>
+    
+
+<ul><li>60 − 20 % de 60 = 48 € ; mais 48 × 1,2 = 57,60 €, pas 60 €.</li><li>Les 20 % de TVA portent sur le HT, pas sur le TTC.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>Un article coûte 96 € TTC (TVA 20 %). Prix HT ?</li><li>Un article coûte 66 € TTC avec une TVA de 10 %. Prix HT ?</li></ol>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : un client a payé 210 € TTC (TVA 20 %). Retrouve le HT.</li><li>Pourquoi diviser ? Le TTC = HT × 1,2.</li></ol>
+<p>Calculatrice autorisée. TVA 20 %.</p>
     
 
 
@@ -807,63 +705,23 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a02-q01-label">Question 1 — Série A — 90 € TTC : prix HT ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    HT = TTC ÷ …… (TVA 20 %).
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Retrouver le HT — Mot(s) manquant(s) — HT = TTC ÷ …… (TVA 20 %).">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Retirer 20 % du TTC donne un résultat …… .
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Retrouver le HT — Mot(s) manquant(s) — Retirer 20 % du TTC donne un résultat …… .">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a02-q01-calcul">✏️ Écris ici le calcul qui t’a permis d’arriver au résultat</label>
+                <textarea class="cours-calcul" id="a02-q01-calcul" data-answer-id="a02_q01_calcul" data-answer-role="calcul" data-required="true" rows="2"></textarea>
                 </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Relis l’exemple 144 € TTC : par quoi divise-t-on ? Et si on retire 20 % du TTC, le résultat est-il juste ?</p></details>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a02-q01">🎯 Résultat <span>un nombre seulement, en €</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label"><span class="cours-resultat-unite">€</span></span>
+                </div>
+
+                
+            <details><summary>Un coup de pouce</summary><p>90 ÷ 1,2.</p></details>
             
             
         </div>
@@ -871,20 +729,111 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Prix HT ?</h3>
+            <h3 id="a02-q02-label">Question 2 — 210 € TTC : prix HT ?</h3>
             
 
             
             
                 
-                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a02-q02-calcul">✏️ Écris ici le calcul qui t’a permis d’arriver au résultat</label>
+                <textarea class="cours-calcul" id="a02-q02-calcul" data-answer-id="a02_q02_calcul" data-answer-role="calcul" data-required="true" rows="2"></textarea>
+                </div>
                 <div class="cours-resultat-box">
                 <label class="cours-resultat-label" for="a02-q02">🎯 Résultat <span>un nombre seulement, en €</span></label>
                 <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label"><span class="cours-resultat-unite">€</span></span>
                 </div>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Divise les 210 € TTC par le coefficient de la TVA à 20 %. Vérifie en remultipliant.</p></details>
+            <details><summary>Un coup de pouce</summary><p>210 ÷ 1,2.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a02-q03-label">Question 3 — 1 440 € TTC : prix HT ?</h3>
+            
+
+            
+            
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a02-q03-calcul">✏️ Écris ici le calcul qui t’a permis d’arriver au résultat</label>
+                <textarea class="cours-calcul" id="a02-q03-calcul" data-answer-id="a02_q03_calcul" data-answer-role="calcul" data-required="true" rows="2"></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a02-q03">🎯 Résultat <span>un nombre seulement, en €</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a02-q03" data-answer-id="a02_q03" data-required="true" aria-labelledby="a02-q03-label"><span class="cours-resultat-unite">€</span></span>
+                </div>
+
+                
+            <details><summary>Un coup de pouce</summary><p>1 440 ÷ 1,2.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a02-q04-label">Question 4 — 54 € TTC : montant de TVA ?</h3>
+            
+
+            
+            
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a02-q04-calcul">✏️ Écris ici le calcul qui t’a permis d’arriver au résultat</label>
+                <textarea class="cours-calcul" id="a02-q04-calcul" data-answer-id="a02_q04_calcul" data-answer-role="calcul" data-required="true" rows="2"></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a02-q04">🎯 Résultat <span>un nombre seulement, en €</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a02-q04" data-answer-id="a02_q04" data-required="true" aria-labelledby="a02-q04-label"><span class="cours-resultat-unite">€</span></span>
+                </div>
+
+                
+            <details><summary>Un coup de pouce</summary><p>HT = 45 ; TVA = 54 − 45.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a02-q05-label">Question 5 — Série B — 1 107 € TTC (la facture) : HT net ?</h3>
+            
+
+            
+            
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a02-q05-calcul">✏️ Écris ici le calcul qui t’a permis d’arriver au résultat</label>
+                <textarea class="cours-calcul" id="a02-q05-calcul" data-answer-id="a02_q05_calcul" data-answer-role="calcul" data-required="true" rows="2"></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a02-q05">🎯 Résultat <span>un nombre seulement, en €</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a02-q05" data-answer-id="a02_q05" data-required="true" aria-labelledby="a02-q05-label"><span class="cours-resultat-unite">€</span></span>
+                </div>
+
+                
+            <details><summary>Un coup de pouce</summary><p>1 107 ÷ 1,2.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a02-q06-label">Question 6 — Un élève enlève 20 % de 90 € TTC et trouve 72 € HT. A-t-il raison ?</h3>
+            
+
+            
+            
+                <select id="a02-q06" data-answer-id="a02_q06" data-required="true" aria-labelledby="a02-q06-label"><option value="">Choisis une réponse</option><option value="a">Oui</option><option value="b">Non, le HT est 75 €</option></select>
+
+                
+            <details><summary>Un coup de pouce</summary><p>Contrôle : 72 × 1,2 = ?</p></details>
             
             
         </div>
@@ -898,57 +847,57 @@
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Quelle remise ?</h2>
+        <h2>Partie 3 — Quelle remise ?</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais retrouver un HT. Retrouve maintenant une remise.</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas calculer le taux de remise d’une selle passée de 1 500 € à 1 275 €. On attend le taux.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Dernière notion : retrouver le pourcentage d’une remise.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Lis la notion et la méthode. On fait l’exemple ensemble au tableau. Ensuite, fais les exercices dans l’ordre : ils sont de plus en plus difficiles.</p></div>
         
         
 
         
-<h4>La situation</h4>
+<h4>La notion</h4>
     
 
-<p>Une selle passe de 1 500 € à 1 275 €. Quel est le taux de la remise ?</p>
+<p>Quand on connaît l’ancien et le nouveau prix, on peut retrouver le taux de la remise.</p>
     
 
-<h4>Ce que c’est</h4>
+<p>On compare le nouveau prix à l’ancien.</p>
     
 
-<p>Le taux de remise est la réduction exprimée en pourcentage du prix de départ.</p>
+<p>À retenir : Taux de remise = (1 − nouveau ÷ ancien) × 100.</p>
     
 
-<h4>À quoi ça sert</h4>
+<h4>Comment ça fonctionne</h4>
     
 
-<ul><li>Vérifier qu’une promotion annoncée est exacte.</li><li>Comparer deux promotions.</li></ul>
+<ol><li>Divise le nouveau prix par l’ancien : c’est le coefficient.</li><li>Calcule 1 − coefficient.</li><li>Multiplie par 100.</li><li>Contrôle : ancien × (1 − taux) = nouveau.</li></ol>
     
 
-<h4>Comment ça marche</h4>
+<h4>Pourquoi ça marche</h4>
     
 
-<ol><li>Méthode 1 : remise en euros = ancien prix − nouveau prix ; taux = remise ÷ ancien prix, puis × 100.</li><li>Méthode 2 : coefficient = nouveau ÷ ancien ; taux de remise = (1 − coefficient) × 100.</li></ol>
+<p>1. En raisonnant avec les pourcentages</p>
     
 
-<p>À retenir : Taux de remise = remise ÷ ancien prix.</p>
+<ul><li>Un filet passe de 175 € à 140 € : 140 ÷ 175 = 0,8 = 80 %.</li><li>On paie 80 % : il manque 20 %, c’est la remise.</li></ul>
+    
+
+<p>2. Pourquoi diviser par l’ancien</p>
+    
+
+<ul><li>La remise est un pourcentage du prix de départ.</li></ul>
     
 
 <h4>Exemple fait ensemble en classe</h4>
     
 
-<p>Ton professeur résout un exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
+<p>Ton professeur fait l’exemple au tableau avec toi. Recopie-le dans ton cahier ou sur ta fiche papier.</p>
     
 
-<h4>Exercices d’entraînement (cherche, puis on corrige ensemble)</h4>
+<h4>Exercices</h4>
     
 
-<ol><li>Un tapis passe de 50 € à 40 €. Taux de remise ?</li><li>Une couverture passe de 120 € à 102 €. Taux de remise ?</li></ol>
-    
-
-<h4>Ta mission</h4>
-    
-
-<ol><li>À toi : une selle passe de 1 500 € à 1 275 € ; calcule le taux de remise.</li><li>Pourquoi ce calcul ? Vérifier une promotion annoncée.</li></ol>
+<p>Calculatrice autorisée.</p>
     
 
 
@@ -957,63 +906,23 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Points clés du cours : complète chaque phrase avec le ou les mots qui manquent.</h3>
+            <h3 id="a03-q01-label">Question 1 — Série A — 50 € → 40 € : taux de remise en % ?</h3>
             
 
             
             
-                <div class="cours-table-wrapper">
-                    <table class="cours-table">
-                        <thead>
-                            <tr>
-                                
-                                <th>Point clé</th>
-                                
-                                <th>Mot(s) manquant(s)</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Taux de remise = 1 − nouveau prix ÷ …… prix.
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a03_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Quelle remise ? — Mot(s) manquant(s) — Taux de remise = 1 − nouveau prix ÷ …… prix.">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Un coefficient de 0,85 correspond à −…… %.
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a03_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Quelle remise ? — Mot(s) manquant(s) — Un coefficient de 0,85 correspond à −…… %.">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                        </tbody>
-                    </table>
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a03-q01-calcul">✏️ Écris ici le calcul qui t’a permis d’arriver au résultat</label>
+                <textarea class="cours-calcul" id="a03-q01-calcul" data-answer-id="a03_q01_calcul" data-answer-role="calcul" data-required="true" rows="2"></textarea>
                 </div>
-            
-            <details><summary>Un coup de pouce</summary><p>Relis l’exemple du licol 40 € → 34 € : 34 ÷ 40 = 0,85. Taux = 1 − nouveau ÷ quel prix ? Et 0,85, c’est combien de % en moins ?</p></details>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a03-q01">🎯 Résultat <span>un nombre seulement, en %</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label"><span class="cours-resultat-unite">%</span></span>
+                </div>
+
+                
+            <details><summary>Un coup de pouce</summary><p>1 − 40 ÷ 50.</p></details>
             
             
         </div>
@@ -1021,20 +930,143 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a03-q02-label">Question 2 — Taux de remise ?</h3>
+            <h3 id="a03-q02-label">Question 2 — 120 € → 90 € : taux de remise en % ?</h3>
             
 
             
             
                 
-                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a03-q02-calcul">✏️ Écris ici le calcul qui t’a permis d’arriver au résultat</label>
+                <textarea class="cours-calcul" id="a03-q02-calcul" data-answer-id="a03_q02_calcul" data-answer-role="calcul" data-required="true" rows="2"></textarea>
+                </div>
                 <div class="cours-resultat-box">
                 <label class="cours-resultat-label" for="a03-q02">🎯 Résultat <span>un nombre seulement, en %</span></label>
                 <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a03-q02" data-answer-id="a03_q02" data-required="true" aria-labelledby="a03-q02-label"><span class="cours-resultat-unite">%</span></span>
                 </div>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Fais 1 275 ÷ 1 500, puis 1 moins ce résultat, en %.</p></details>
+            <details><summary>Un coup de pouce</summary><p>1 − 90 ÷ 120.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a03-q03-label">Question 3 — 1 025 € → 922,50 € : taux de remise en % ?</h3>
+            
+
+            
+            
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a03-q03-calcul">✏️ Écris ici le calcul qui t’a permis d’arriver au résultat</label>
+                <textarea class="cours-calcul" id="a03-q03-calcul" data-answer-id="a03_q03_calcul" data-answer-role="calcul" data-required="true" rows="2"></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a03-q03">🎯 Résultat <span>un nombre seulement, en %</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a03-q03" data-answer-id="a03_q03" data-required="true" aria-labelledby="a03-q03-label"><span class="cours-resultat-unite">%</span></span>
+                </div>
+
+                
+            <details><summary>Un coup de pouce</summary><p>1 − 922,5 ÷ 1 025.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q04">
+            
+            
+            <h3 id="a03-q04-label">Question 4 — 80 € → 68 € : taux de remise en % ?</h3>
+            
+
+            
+            
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a03-q04-calcul">✏️ Écris ici le calcul qui t’a permis d’arriver au résultat</label>
+                <textarea class="cours-calcul" id="a03-q04-calcul" data-answer-id="a03_q04_calcul" data-answer-role="calcul" data-required="true" rows="2"></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a03-q04">🎯 Résultat <span>un nombre seulement, en %</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a03-q04" data-answer-id="a03_q04" data-required="true" aria-labelledby="a03-q04-label"><span class="cours-resultat-unite">%</span></span>
+                </div>
+
+                
+            <details><summary>Un coup de pouce</summary><p>1 − 68 ÷ 80.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q05">
+            
+            
+            <h3 id="a03-q05-label">Question 5 — Série B — 350 € → 315 € : taux de remise en % ?</h3>
+            
+
+            
+            
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a03-q05-calcul">✏️ Écris ici le calcul qui t’a permis d’arriver au résultat</label>
+                <textarea class="cours-calcul" id="a03-q05-calcul" data-answer-id="a03_q05_calcul" data-answer-role="calcul" data-required="true" rows="2"></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a03-q05">🎯 Résultat <span>un nombre seulement, en %</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a03-q05" data-answer-id="a03_q05" data-required="true" aria-labelledby="a03-q05-label"><span class="cours-resultat-unite">%</span></span>
+                </div>
+
+                
+            <details><summary>Un coup de pouce</summary><p>1 − 315 ÷ 350.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q06">
+            
+            
+            <h3 id="a03-q06-label">Question 6 — Un licol à 22,50 € est vendu 18 €. Remise en % ?</h3>
+            
+
+            
+            
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a03-q06-calcul">✏️ Écris ici le calcul qui t’a permis d’arriver au résultat</label>
+                <textarea class="cours-calcul" id="a03-q06-calcul" data-answer-id="a03_q06_calcul" data-answer-role="calcul" data-required="true" rows="2"></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a03-q06">🎯 Résultat <span>un nombre seulement, en %</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a03-q06" data-answer-id="a03_q06" data-required="true" aria-labelledby="a03-q06-label"><span class="cours-resultat-unite">%</span></span>
+                </div>
+
+                
+            <details><summary>Un coup de pouce</summary><p>1 − 18 ÷ 22,5.</p></details>
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q07">
+            
+            
+            <h3 id="a03-q07-label">Question 7 — Après 15 % de remise, un tapis coûte 32,30 €. Prix avant remise ?</h3>
+            
+
+            
+            
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a03-q07-calcul">✏️ Écris ici le calcul qui t’a permis d’arriver au résultat</label>
+                <textarea class="cours-calcul" id="a03-q07-calcul" data-answer-id="a03_q07_calcul" data-answer-role="calcul" data-required="true" rows="2"></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a03-q07">🎯 Résultat <span>un nombre seulement, en €</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a03-q07" data-answer-id="a03_q07" data-required="true" aria-labelledby="a03-q07-label"><span class="cours-resultat-unite">€</span></span>
+                </div>
+
+                
+            <details><summary>Un coup de pouce</summary><p>32,30 ÷ 0,85.</p></details>
             
             
         </div>
@@ -1048,7 +1080,7 @@
     
     <article class="cours-activite" id="a04" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Défi</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Pour aller plus loin</h2>
+        <h2>Encore des exercices (si tu as fini)</h2>
         <p class="course-optional course-challenge">Petit défi pour les plus avancés — facultatif : fais-le seulement si tu as terminé le reste. <strong class="course-challenge-xp">Défi réussi = +5 XP</strong>, plus qu’une question normale : de quoi débloquer plus vite les thèmes du shop.</p>
         
         
@@ -1056,7 +1088,7 @@
         
 
         
-<p>La TVA sur la remise est-elle la même si on calcule TTC puis remise ?</p>
+<p>Tu as fini ? Entraîne-toi encore. Ces exercices ne comptent pas dans la note.</p>
     
 
 
@@ -1065,15 +1097,71 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Teste sur 1 000 € HT.</h3>
+            <h3 id="a04-q01-label">Question 1 — 2 couvertures à 64 € HT, remise 5 %, TVA 20 % : TTC ?</h3>
             
 
             
             
-                <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a04-q01-calcul">✏️ Écris ici le calcul qui t’a permis d’arriver au résultat</label>
+                <textarea class="cours-calcul" id="a04-q01-calcul" data-answer-id="a04_q01_calcul" data-answer-role="calcul" data-required="false" rows="2"></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a04-q01">🎯 Résultat <span>un nombre seulement, en €</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label"><span class="cours-resultat-unite">€</span></span>
+                </div>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Calcule les deux chemins à partir de 1 000 € HT : remise puis TVA, et TVA puis remise. Compare les TTC.</p></details>
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q02">
+            
+            
+            <h3 id="a04-q02-label">Question 2 — 300 € TTC : HT ?</h3>
+            
+
+            
+            
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a04-q02-calcul">✏️ Écris ici le calcul qui t’a permis d’arriver au résultat</label>
+                <textarea class="cours-calcul" id="a04-q02-calcul" data-answer-id="a04_q02_calcul" data-answer-role="calcul" data-required="false" rows="2"></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a04-q02">🎯 Résultat <span>un nombre seulement, en €</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a04-q02" data-answer-id="a04_q02" data-required="false" aria-labelledby="a04-q02-label"><span class="cours-resultat-unite">€</span></span>
+                </div>
+
+                
+            
+            
+            
+        </div>
+        
+        <div class="cours-question" data-question="q03">
+            
+            
+            <h3 id="a04-q03-label">Question 3 — 60 € → 45 € : remise en % ?</h3>
+            
+
+            
+            
+                
+                <div class="cours-calcul-box">
+                <label class="cours-calcul-label" for="a04-q03-calcul">✏️ Écris ici le calcul qui t’a permis d’arriver au résultat</label>
+                <textarea class="cours-calcul" id="a04-q03-calcul" data-answer-id="a04_q03_calcul" data-answer-role="calcul" data-required="false" rows="2"></textarea>
+                </div>
+                <div class="cours-resultat-box">
+                <label class="cours-resultat-label" for="a04-q03">🎯 Résultat <span>un nombre seulement, en %</span></label>
+                <span class="cours-resultat-ligne"><input class="cours-resultat" type="text" inputmode="decimal" autocomplete="off" pattern="[−\-]?[0-9 ]*([,.][0-9]*)?" data-nombre-seulement id="a04-q03" data-answer-id="a04_q03" data-required="false" aria-labelledby="a04-q03-label"><span class="cours-resultat-unite">%</span></span>
+                </div>
+
+                
+            
             
             
         </div>
@@ -1081,41 +1169,6 @@
         
         <nav class="course-mission-controls" aria-label="Continuer dans la séance">
             <a class="course-mission-back" href="#a03">← Étape précédente</a>
-            <a class="course-mission-next" href="#a05">Passer à l’étape suivante <span aria-hidden="true">→</span></a>
-        </nav>
-    </article>
-    
-    <article class="cours-activite" id="a05" data-course-step>
-        <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Conclusion de ton travail</h2>
-        
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais calculer une facture complète. Il reste à répondre au problème de départ.</p>
-        
-        
-        
-
-        
-        
-        
-        <div class="cours-question" data-question="q01">
-            <p class="course-learning-label">À toi d’essayer avec les questions</p>
-            
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment calculer une facture complète avec remise et TVA ?</h3>
-            
-
-            
-            
-                <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
-
-                
-            <details><summary>Un coup de pouce</summary><p>Dis l’ordre des calculs d’une facture, comment retrouver le HT et calculer un taux de remise.</p></details>
-            
-            
-        </div>
-        
-        
-        <nav class="course-mission-controls" aria-label="Continuer dans la séance">
-            <a class="course-mission-back" href="#a04">← Étape précédente</a>
             <a class="course-mission-next" href="#course-summary">Faire le point <span aria-hidden="true">→</span></a>
         </nav>
     </article>
@@ -1128,7 +1181,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>HT net × 1,2 = TTC.</li><li>Taux = 1 − nouveau ÷ ancien.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Total HT = somme des (quantité × prix unitaire HT).</li><li>Remise de t % : HT net = HT × (1 − t/100).</li><li>TTC = HT net × 1,2 (TVA 20 %) ; HT = TTC ÷ 1,2.</li><li>Taux de remise = (1 − nouveau prix ÷ ancien prix) × 100.</li></ul>
     
 </section>
 
@@ -1144,7 +1197,7 @@
         <p><a href="/tifsec-test-eleves/eleve/">Retour à mon espace et à la séance suivante</a></p>
     </div>
     
-    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a05">← Étape précédente</a></nav>
+    <nav class="course-mission-controls course-final-controls" aria-label="Revenir dans la séance"><a class="course-mission-back" href="#a04">← Étape précédente</a></nav>
     </section>
 </div></div>
 </div>
