@@ -124,7 +124,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Les entités</a></li><li><a href="#a02">Les relations</a></li><li><a href="#a03">Les pièges</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Les sujets et leurs informations</a></li><li><a href="#a02">Les liens</a></li><li><a href="#a03">Les pièges</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -150,7 +150,7 @@
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Comment concevoir le modèle de données d’un élevage avant de créer la base ?</p>
+        <p>Comment concevoir l’organisation des données d’un élevage avant de créer le classeur ?</p>
     </section>
     
 
@@ -168,9 +168,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Modéliser : lister les entités (jument, étalon, saillie, poulain, soin), leurs attributs, leurs relations.</li>
+            <li>Modéliser : lister les sujets (jument, étalon, saillie, poulain, soin) qui deviendront des feuilles, leurs informations (les colonnes) et les liens entre eux.</li>
             
-            <li>Règles : un attribut dépend de la clé de sa table ; pas de calcul stocké (l’âge se calcule).</li>
+            <li>Règles : chaque information dépend de l’identifiant de sa feuille ; on ne tape pas à la main ce qui se calcule (l’âge se calcule par formule).</li>
             
         </ul>
         
@@ -178,16 +178,16 @@
         <h2>Ce que tu vas apprendre à faire</h2>
         <ul>
             
-            <li>Construire un modèle entité-relation simplifié.</li>
+            <li>Construire un schéma simple des données.</li>
             
-            <li>Choisir les attributs et les clés.</li>
+            <li>Choisir les colonnes et les identifiants.</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En S03, tu as lu une base existante.</p><p>Tu conçois maintenant celle de l’élevage du Moulin, avec ses soins vétérinaires.</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En S03, tu as lu un classeur déjà organisé.</p><p>Tu conçois maintenant celui de l’élevage du Moulin, avec ses soins vétérinaires.</p></div></section>
     
     
     
@@ -209,10 +209,10 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Les entités</h2>
+        <h2>Les sujets et leurs informations</h2>
         
         
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas lister les entités et attributs de l’élevage à partir du cahier des charges (document 1). On attend les attributs de trois entités.</p></div>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas lister les sujets (futures feuilles) et leurs informations à partir du cahier des charges (document 1). On attend les colonnes de trois feuilles.</p></div>
         
         
 
@@ -220,7 +220,7 @@
 <p>Document 1 — L’éleveur veut : la liste de ses juments et étalons utilisés, chaque saillie (date, résultat d’échographie), les poulains nés, et les soins (vermifuges, vaccins, traitements) de chaque jument avec les délais d’attente.</p>
     
 
-<ol><li>Lis le cahier des charges (document 1).</li><li>Liste les entités et leurs attributs.</li><li>Pourquoi partir du cahier des charges ? La base doit répondre aux questions de l’éleveur.</li></ol>
+<ol><li>Lis le cahier des charges (document 1).</li><li>Liste les sujets (une feuille par sujet) et leurs informations (les colonnes).</li><li>Pourquoi partir du cahier des charges ? Le classeur doit répondre aux questions de l’éleveur.</li></ol>
     
 
 
@@ -229,7 +229,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Complète pour trois entités.</h3>
+            <h3 id="a01-q01-label">Question 1 — Complète pour trois feuilles.</h3>
             
 
             
@@ -239,9 +239,9 @@
                         <thead>
                             <tr>
                                 
-                                <th>Entité</th>
+                                <th>Feuille</th>
                                 
-                                <th>Attributs (clé soulignée par *)</th>
+                                <th>Colonnes (identifiant marqué par *)</th>
                                 
                             </tr>
                         </thead>
@@ -258,7 +258,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Les entités — Attributs (clé soulignée par *) — Jument">
+                                    <input type="text" data-answer-id="a01_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Les sujets et leurs informations — Colonnes (identifiant marqué par *) — Jument">
                                     
                                 </td>
                                 
@@ -275,7 +275,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Les entités — Attributs (clé soulignée par *) — Étalon">
+                                    <input type="text" data-answer-id="a01_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Les sujets et leurs informations — Colonnes (identifiant marqué par *) — Étalon">
                                     
                                 </td>
                                 
@@ -292,7 +292,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Les entités — Attributs (clé soulignée par *) — Soin">
+                                    <input type="text" data-answer-id="a01_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Les sujets et leurs informations — Colonnes (identifiant marqué par *) — Soin">
                                     
                                 </td>
                                 
@@ -302,7 +302,7 @@
                     </table>
                 </div>
             
-            <details><summary>Un coup de pouce</summary><p>Pour chaque entité, commence par l’identifiant (clé), puis les informations qui la décrivent sans dépendre d’autre chose.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Pour chaque feuille, commence par l’identifiant (id_…), puis les informations qui la décrivent sans dépendre d’autre chose.</p></details>
             
             
         </div>
@@ -316,15 +316,15 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Les relations</h2>
+        <h2>Les liens</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les entités sont prêtes. Relie-les.</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas décrire les relations et cardinalités de ton modèle de l’élevage. On attend les relations et la place des clés étrangères.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les feuilles sont prêtes. Relie-les.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas décrire les liens entre les feuilles de ton modèle. On attend les liens et la place des colonnes qui renvoient à une autre feuille.</p></div>
         
         
 
         
-<ol><li>Dessine le schéma : entités reliées, cardinalités.</li><li>Place les clés étrangères.</li><li>Pourquoi placer la clé côté n ? Chaque saillie connaît sa jument ; une jument ne peut pas stocker toutes ses saillies dans un champ.</li></ol>
+<ol><li>Dessine le schéma : les feuilles reliées, avec le sens du lien (1 pour plusieurs).</li><li>Place les colonnes qui renvoient (id_jument, id_etalon…).</li><li>Pourquoi côté « plusieurs » ? Chaque saillie connaît sa jument ; une jument ne peut pas lister toutes ses saillies dans une seule cellule.</li></ol>
     
 
 
@@ -333,7 +333,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Décris les relations de ton modèle et la place des clés étrangères.</h3>
+            <h3 id="a02-q01-label">Question 1 — Décris les liens de ton modèle et la place des colonnes qui renvoient à une autre feuille.</h3>
             
 
             
@@ -341,7 +341,7 @@
                 <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Pour chaque relation 1-n, la clé de la table « 1 » est recopiée dans la table « n ». Décris-les une par une.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Pour chaque lien 1 pour plusieurs, l’identifiant de la feuille « 1 » est recopié dans une colonne de la feuille « plusieurs ». Décris-les un par un.</p></details>
             
             
         </div>
@@ -358,7 +358,7 @@
         <h2>Les pièges</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le modèle est dessiné. Vérifie-le.</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas repérer, parmi trois attributs proposés (document 2), ceux à éviter. On attend les attributs et la raison.</p></div>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas repérer, parmi trois colonnes proposées (document 2), celles à éviter. On attend les colonnes et la raison.</p></div>
         
         
 
@@ -366,7 +366,7 @@
 <ul><li>Jument : âge.</li><li>Jument : nombre de poulains.</li><li>Jument : date de naissance.</li></ul>
     
 
-<ol><li>Lis les trois propositions d’attributs (document 2).</li><li>Dis lesquelles sont à éviter.</li><li>Pourquoi éviter ? Un âge stocké est faux l’année suivante ; un champ « poulains » rempli à la main contredit la table Poulain.</li></ol>
+<ol><li>Lis les trois propositions de colonnes (document 2).</li><li>Dis lesquelles sont à éviter.</li><li>Pourquoi éviter ? Un âge tapé à la main est faux l’année suivante ; un nombre de poulains tapé à la main contredit la feuille Poulains.</li></ol>
     
 
 
@@ -375,7 +375,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — D’après le document 2, quels attributs faut-il éviter, et pourquoi ?</h3>
+            <h3 id="a03-q01-label">Question 1 — D’après le document 2, quelles colonnes faut-il éviter, et pourquoi ?</h3>
             
 
             
@@ -383,7 +383,7 @@
                 <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Dans le document 2, cherche les attributs qui changent avec le temps ou qui se calculent à partir d’autres données.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Dans le document 2, cherche les informations qui changent avec le temps ou qui se calculent par une formule à partir d’autres données.</p></details>
             
             
         </div>
@@ -414,7 +414,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Faut-il une nouvelle entité ?</h3>
+            <h3 id="a04-q01-label">Question 1 — Faut-il une nouvelle feuille ?</h3>
             
 
             
@@ -422,7 +422,7 @@
                 <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>L’insémination est une autre façon de faire une saillie. Faut-il une table de plus, ou une information dans une table existante ?</p></details>
+            <details><summary>Un coup de pouce</summary><p>L’insémination est une autre façon de faire une saillie. Faut-il une feuille de plus, ou une colonne dans une feuille existante ?</p></details>
             
             
         </div>
@@ -438,7 +438,7 @@
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le modèle de données est prêt. Il reste à répondre au problème de départ.</p>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le modèle est prêt. Il reste à répondre au problème de départ.</p>
         
         
         
@@ -449,7 +449,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment concevoir le modèle de données d’un élevage avant de créer la base ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment concevoir l’organisation des données d’un élevage avant de créer le classeur ?</h3>
             
 
             
@@ -457,7 +457,7 @@
                 <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Dis les étapes : cahier des charges, entités et attributs, relations et clés, pièges évités.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Dis les étapes : cahier des charges, feuilles et colonnes, identifiants et liens, pièges évités.</p></details>
             
             
         </div>
@@ -477,7 +477,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Entités, attributs, clés ; relations 1-n.</li><li>Ne pas stocker ce qui se calcule.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Feuilles, colonnes, identifiants ; liens 1 pour plusieurs.</li><li>Ne pas taper ce qui se calcule : on le calcule par formule.</li></ul>
     
 </section>
 

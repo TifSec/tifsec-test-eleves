@@ -136,7 +136,7 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">TIM · BTSA ACS&#39;AGRI 2 · S11</span></div>
-    <h1>Séance 11 : Évaluation : une base pour le suivi sanitaire</h1>
+    <h1>Séance 11 : Évaluation : un classeur pour le suivi sanitaire</h1>
     
 
     
@@ -150,7 +150,7 @@
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Saurai-je concevoir et exploiter seul une petite base de données d’élevage ?</p>
+        <p>Saurai-je concevoir et exploiter seul un classeur de données d’élevage ?</p>
     </section>
     
 
@@ -168,7 +168,7 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>On réutilise : modélisation, tables, relations, requêtes, formulaire, état.</li>
+            <li>On réutilise : modélisation, feuilles reliées, formats et validité, RECHERCHEV, filtres, NB.SI.ENS, mise en page.</li>
             
         </ul>
         
@@ -176,14 +176,14 @@
         <h2>Ce que tu vas apprendre à faire</h2>
         <ul>
             
-            <li>Concevoir et exploiter une base en autonomie.</li>
+            <li>Concevoir et exploiter un classeur relié en autonomie.</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>De S03 à S10, tu as construit la base de reproduction.</p><p>Évaluation : une base pour le suivi des vaccinations d’un centre équestre (cas nouveau).</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>De S03 à S10, tu as construit le classeur de reproduction.</p><p>Évaluation : un classeur pour le suivi des vaccinations d’un centre équestre (cas nouveau).</p></div></section>
     
     
     
@@ -208,18 +208,18 @@
         <h2>Modéliser</h2>
         
         
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas proposer seul le modèle de données du suivi des vaccinations (document 1). On attend tables, clés et relations.</p></div>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas proposer seul l’organisation du suivi des vaccinations (document 1). On attend les feuilles, les identifiants et les liens.</p></div>
         
         
 
         
-<p class="cours-fichier"><a href="/tifsec-test-eleves/assets/fichiers/tim/bts2/vaccins_jeu_essai.ods" download>Télécharger le fichier : jeu d’essai des vaccinations à saisir</a> <span>(vaccins_jeu_essai.ods)</span></p>
+<p class="cours-fichier"><a href="/tifsec-test-eleves/assets/fichiers/tim/bts2/vaccins_jeu_essai.ods" download>Télécharger le fichier : jeu d’essai des vaccinations (LibreOffice Calc)</a> <span>(vaccins_jeu_essai.ods)</span></p>
     
 
 <p>Document 1 — Le centre veut enregistrer pour chaque équidé les injections de vaccins (grippe, tétanos, rhinopneumonie), la date, le vétérinaire, et savoir quels rappels sont à faire.</p>
     
 
-<ol><li>Lis le besoin (document 1).</li><li>Propose les tables, clés et relations.</li><li>Pourquoi modéliser d’abord ? Une erreur de modèle coûte cher ensuite.</li></ol>
+<ol><li>Lis le besoin (document 1).</li><li>Propose les feuilles, leurs colonnes, les identifiants et les liens.</li><li>Pourquoi modéliser d’abord ? Une erreur d’organisation coûte cher ensuite.</li></ol>
     
 
 
@@ -228,7 +228,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Écris ton modèle (tables, clés, relations).</h3>
+            <h3 id="a01-q01-label">Question 1 — Écris ton modèle (feuilles, identifiants, liens).</h3>
             
 
             
@@ -236,7 +236,7 @@
                 <textarea id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Trois tables : les équidés, les vaccins (avec leur délai de rappel), les injections qui relient les deux. Indique les clés.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Trois feuilles : les équidés, les vaccins (avec leur délai de rappel), les injections qui relient les deux. Indique les identifiants et les colonnes qui renvoient.</p></details>
             
             
         </div>
@@ -253,12 +253,12 @@
         <h2>Construire et interroger</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le modèle est prêt. Construis et interroge.</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas construire la base et écrire la requête des rappels de vaccins à faire. On attend le SQL et le nombre de rappels.</p></div>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas compléter le classeur et calculer les rappels de vaccins à faire. On attend la formule et le nombre de rappels.</p></div>
         
         
 
         
-<ol><li>Crée les tables et relations ; saisis le jeu d’essai fourni.</li><li>Requête : prochaine date = date + rappel_jours ; critère : avant la fin du mois.</li><li>Pourquoi cette requête ? C’est la question principale du centre.</li></ol>
+<ol><li>Ouvre le jeu d’essai : vérifie les feuilles et ajoute les règles de validité (liste des vaccins, UELN existant).</li><li>Feuille Injections : colonne rappel_jours =RECHERCHEV(B2;$Vaccins.$A$2:$B$4;2;0) ; colonne prochain_rappel = date + rappel_jours (format date).</li><li>Compte les rappels à faire avant le 31/12/2026 (filtre ou NB.SI).</li><li>Pourquoi ce calcul ? C’est la question principale du centre.</li></ol>
     
 
 
@@ -267,7 +267,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Écris le SQL (grandes lignes) de la requête des rappels à faire.</h3>
+            <h3 id="a02-q01-label">Question 1 — Écris les formules (grandes lignes) qui calculent la date du prochain rappel et comptent les rappels à faire.</h3>
             
 
             
@@ -275,7 +275,7 @@
                 <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Relie Injection à Equide et Vaccin, calcule date + délai de rappel, et garde les dates avant la fin du mois.</p></details>
+            <details><summary>Un coup de pouce</summary><p>RECHERCHEV va chercher le délai de rappel du vaccin ; on l’ajoute à la date d’injection ; NB.SI compte les dates avant le 31/12/2026.</p></details>
             
             
         </div>
@@ -283,7 +283,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Combien de rappels sont à faire avant la fin du mois (jeu d’essai fourni) ?</h3>
+            <h3 id="a02-q02-label">Question 2 — Combien de rappels sont à faire avant le 31/12/2026 (jeu d’essai fourni) ?</h3>
             
 
             
@@ -296,7 +296,7 @@
                 </div>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Exécute ta requête des rappels sur le jeu d’essai fourni et compte les lignes.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Applique ta formule à toutes les injections du jeu d’essai, puis compte les prochains rappels avant le 31/12/2026.</p></details>
             
             
         </div>
@@ -312,13 +312,13 @@
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Justifier</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> La base répond. Justifie ton choix.</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas justifier auprès du gérant le choix d’une base de données. On attend une justification argumentée.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le classeur répond. Justifie ton choix.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas justifier auprès du gérant l’organisation en feuilles reliées. On attend une justification argumentée.</p></div>
         
         
 
         
-<ol><li>Rédige 3 lignes pour le gérant : pourquoi une base plutôt qu’un tableur ici ?</li><li>Pourquoi justifier ? Le choix d’outil fait partie de la compétence.</li></ol>
+<ol><li>Rédige 3 lignes pour le gérant : pourquoi plusieurs feuilles reliées plutôt qu’un seul tableau ici ?</li><li>Pourquoi justifier ? Le choix de l’organisation fait partie de la compétence.</li></ol>
     
 
 
@@ -335,7 +335,7 @@
                 <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Pourquoi une base plutôt qu’un tableur ici : plusieurs injections par équidé, redondance, requêtes, contrôles.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Pourquoi des feuilles reliées plutôt qu’un seul tableau : plusieurs injections par équidé, répétitions, calcul automatique des rappels, contrôles.</p></details>
             
             
         </div>
@@ -357,7 +357,7 @@
         
 
         
-<p>Ajoute un état « carnet de vaccination » par équidé.</p>
+<p>Ajoute un document imprimable « carnet de vaccination » par équidé.</p>
     
 
 
@@ -374,7 +374,7 @@
                 <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Un carnet de vaccination se lit cheval par cheval, vaccin par vaccin dans le temps. Quel regroupement et quel tri ?</p></details>
+            <details><summary>Un coup de pouce</summary><p>Un carnet de vaccination se lit cheval par cheval, vaccin par vaccin dans le temps. Quel tri et quels sous-totaux ?</p></details>
             
             
         </div>
@@ -401,7 +401,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : saurais-tu concevoir et exploiter seul une petite base de données d’élevage ? Fais ton bilan.</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : saurais-tu concevoir et exploiter seul un classeur de données d’élevage ? Fais ton bilan.</h3>
             
 
             
@@ -409,7 +409,7 @@
                 <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Fais ton bilan sur les quatre étapes : modèle, construction, requête, justification.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Fais ton bilan sur les quatre étapes : modèle, construction, calcul des rappels, justification.</p></details>
             
             
         </div>
@@ -429,7 +429,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Modèle → tables → relations → requêtes → justification.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Modèle → feuilles reliées → contrôles → formules → justification.</li></ul>
     
 </section>
 

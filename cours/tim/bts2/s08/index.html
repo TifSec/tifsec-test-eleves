@@ -150,7 +150,7 @@
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Comment calculer des indicateurs de reproduction par étalon avec une requête ?</p>
+        <p>Comment calculer des indicateurs de reproduction par étalon dans un tableur ?</p>
     </section>
     
 
@@ -168,7 +168,7 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Une requête de regroupement (GROUP BY) calcule des totaux et comptages par catégorie.</li>
+            <li>NB.SI.ENS compte les lignes qui respectent plusieurs critères (un étalon ET une saison ET un résultat) ; une table de pilote fait les mêmes regroupements en quelques clics.</li>
             
             <li>Taux de gestation = juments pleines / juments saillies ; utile pour comparer des étalons ou des saisons.</li>
             
@@ -178,7 +178,7 @@
         <h2>Ce que tu vas apprendre à faire</h2>
         <ul>
             
-            <li>Créer une requête de regroupement.</li>
+            <li>Compter par catégorie avec NB.SI.ENS et une table de pilote.</li>
             
             <li>Interpréter un indicateur de reproduction.</li>
             
@@ -212,15 +212,15 @@
         <h2>Compter par étalon</h2>
         
         
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas compter le nombre de saillies par étalon en 2026 avec une requête de regroupement. On attend les effectifs.</p></div>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas compter le nombre de saillies par étalon en 2026 avec NB.SI.ENS. On attend les effectifs.</p></div>
         
         
 
         
-<p class="cours-fichier"><a href="/tifsec-test-eleves/assets/fichiers/tim/bts2/elevage_complet.odb" download>Télécharger le fichier : base complète de l’élevage</a> <span>(elevage_complet.odb)</span></p>
+<p class="cours-fichier"><a href="/tifsec-test-eleves/assets/fichiers/tim/bts2/elevage_complet.ods" download>Télécharger le fichier : classeur complet de l’élevage (LibreOffice Calc)</a> <span>(elevage_complet.ods)</span></p>
     
 
-<ol><li>Requête : Étalon + Saillie ; regroupement par nom d’étalon.</li><li>Fonctions : Nombre(id_saillie).</li><li>Ajoute un critère d’année 2026.</li><li>Pourquoi regrouper ? On obtient une ligne par étalon au lieu d’une ligne par saillie.</li></ol>
+<ol><li>Nouvelle feuille « Indicateurs » : en A2:A4, les noms des étalons ; en B2, leur numéro (1, 2, 3).</li><li>C2 « saillies 2026 » : =NB.SI.ENS($Saillies.$C$2:$C$100;B2;$Saillies.$D$2:$D$100;&quot;&gt;=&quot;&amp;DATE(2026;1;1);$Saillies.$D$2:$D$100;&quot;&lt;&quot;&amp;DATE(2027;1;1)) ; recopie vers le bas.</li><li>Vérifie avec une table de pilote (Insertion &gt; Table dynamique) : lignes = id_etalon, données = Nombre de id_saillie, filtre sur 2026.</li><li>Pourquoi regrouper ? On obtient une ligne par étalon au lieu d’une ligne par saillie.</li></ol>
     
 
 
@@ -237,7 +237,7 @@
                 <textarea id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Requête regroupée par étalon avec un comptage des saillies, critère sur la saison 2026.</p></details>
+            <details><summary>Un coup de pouce</summary><p>NB.SI.ENS sur la feuille Saillies : critère sur l’étalon et deux critères sur la date (saison 2026). Lis le résultat pour chaque étalon.</p></details>
             
             
         </div>
@@ -254,12 +254,12 @@
         <h2>Le taux de gestation</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu as les effectifs. Calcule la réussite.</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas calculer le taux de gestation de chaque étalon. On attend le taux de Quatar et le SQL de la requête.</p></div>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas calculer le taux de gestation de chaque étalon. On attend le taux de Quatar et les formules utilisées.</p></div>
         
         
 
         
-<ol><li>Ajoute un champ : SUM(CASE WHEN resultat = &#39;pleine&#39; THEN 1 ELSE 0 END).</li><li>Calcule le taux = pleines / saillies (dans la requête ou dans Calc après export).</li><li>Pourquoi un taux ? Un étalon avec 12 saillies et 10 juments pleines fait mieux qu’un autre avec 8 et 4.</li></ol>
+<ol><li>D2 « pleines » : même NB.SI.ENS que C2, avec un critère de plus : $Saillies.$E$2:$E$100;&quot;pleine&quot;.</li><li>E2 « taux » : =D2/C2, au format pourcentage.</li><li>Pourquoi un taux ? Un étalon avec 12 saillies et 10 juments pleines fait mieux qu’un autre avec 8 et 4.</li></ol>
     
 
 
@@ -289,7 +289,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a02-q02-label">Question 2 — Écris le SQL de la requête (grandes lignes).</h3>
+            <h3 id="a02-q02-label">Question 2 — Écris les formules des colonnes « pleines » et « taux » (grandes lignes).</h3>
             
 
             
@@ -297,7 +297,7 @@
                 <textarea id="a02-q02" data-answer-id="a02_q02" data-required="true" aria-labelledby="a02-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Regroupe par étalon ; compte toutes les saillies ; additionne 1 seulement quand le résultat est « pleine ».</p></details>
+            <details><summary>Un coup de pouce</summary><p>Pleines : le NB.SI.ENS des saillies, avec en plus le critère resultat = &quot;pleine&quot;. Taux : pleines ÷ saillies.</p></details>
             
             
         </div>
@@ -367,7 +367,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Quelle requête permettrait de le vérifier ?</h3>
+            <h3 id="a04-q01-label">Question 1 — Quel calcul permettrait de le vérifier ?</h3>
             
 
             
@@ -375,7 +375,7 @@
                 <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Pour tester l’effet de l’âge, sur quoi faut-il regrouper au lieu de l’étalon ?</p></details>
+            <details><summary>Un coup de pouce</summary><p>Pour tester l’effet de l’âge, sur quoi faut-il regrouper au lieu de l’étalon ? Quelle colonne ajouter dans Saillies ?</p></details>
             
             
         </div>
@@ -402,7 +402,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment calculer des indicateurs de reproduction par étalon avec une requête ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment calculer des indicateurs de reproduction par étalon dans un tableur ?</h3>
             
 
             
@@ -410,7 +410,7 @@
                 <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Dis comment la requête regroupe, compte et calcule le taux, et les précautions pour l’interpréter.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Dis comment les formules (ou la table de pilote) regroupent, comptent et calculent le taux, et les précautions pour l’interpréter.</p></details>
             
             
         </div>
@@ -430,7 +430,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>GROUP BY ; COUNT ; SUM(CASE…).</li><li>Taux de gestation ; prudence sur les petits effectifs.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>NB.SI.ENS (plusieurs critères) ; table de pilote.</li><li>Taux de gestation ; prudence sur les petits effectifs.</li></ul>
     
 </section>
 

@@ -124,7 +124,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Créer les relations</a></li><li><a href="#a02">Tester l’intégrité</a></li><li><a href="#a03">Et dans un tableur ?</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Relier les feuilles</a></li><li><a href="#a02">Tester les règles</a></li><li><a href="#a03">Et avec un seul tableau ?</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -136,7 +136,7 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">TIM · BTSA ACS&#39;AGRI 2 · S06</span></div>
-    <h1>Séance 6 : Relier les tables sans incohérence</h1>
+    <h1>Séance 6 : Relier les feuilles sans incohérence</h1>
     
 
     
@@ -150,7 +150,7 @@
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Comment la base empêche-t-elle d’enregistrer des données incohérentes ?</p>
+        <p>Comment empêcher, dans Calc, d’enregistrer des données incohérentes entre les feuilles ?</p>
     </section>
     
 
@@ -168,9 +168,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Une relation relie la clé étrangère à la clé primaire.</li>
+            <li>RECHERCHEV retrouve une information dans une autre feuille à partir de l’identifiant (le nom de la jument à partir de id_jument).</li>
             
-            <li>L’intégrité référentielle interdit une saillie pour une jument inexistante, ou la suppression d’une jument qui a des saillies (sauf cascade).</li>
+            <li>Une règle de validité « plage de cellules » n’accepte qu’un identifiant qui existe ; la protection de la feuille empêche de supprimer une jument par erreur.</li>
             
         </ul>
         
@@ -178,16 +178,16 @@
         <h2>Ce que tu vas apprendre à faire</h2>
         <ul>
             
-            <li>Créer des relations avec intégrité référentielle.</li>
+            <li>Relier deux feuilles avec RECHERCHEV.</li>
             
-            <li>Tester les règles de mise à jour et de suppression.</li>
+            <li>Tester les règles de saisie et de suppression.</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En S05, les tables existent mais ne sont pas liées.</p><p>Rien n’empêche encore une saillie pour une jument qui n’existe pas.</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>En S05, les feuilles existent mais ne sont pas reliées.</p><p>Rien n’empêche encore une saillie pour une jument qui n’existe pas.</p></div></section>
     
     
     
@@ -209,15 +209,15 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Créer les relations</h2>
+        <h2>Relier les feuilles</h2>
         
         
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas créer les relations entre les tables de l’élevage avec l’intégrité référentielle. On attend la liste des relations.</p></div>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas relier la feuille Saillies aux feuilles Juments et Etalons. On attend la liste des liens et une formule.</p></div>
         
         
 
         
-<ol><li>Outils &gt; Relations : ajoute les tables.</li><li>Glisse id_jument (Jument) sur id_jument (Saillie) ; idem pour les autres liens.</li><li>Options : mise à jour en cascade, suppression : aucune action.</li><li>Pourquoi « aucune action » à la suppression ? On ne veut pas effacer par erreur tout l’historique d’une jument.</li></ol>
+<ol><li>Dans Saillies, ajoute une colonne nom_jument : =RECHERCHEV(B2;$Juments.$A$2:$C$100;3;0), puis recopie vers le bas.</li><li>Fais de même pour le nom de l’étalon (feuille Etalons), puis dans Poulains (id_saillie) et Soins (id_jument).</li><li>Colonne id_jument de Saillies : Données &gt; Validité &gt; Autoriser : Plage de cellules, source $Juments.$A$2:$A$100 ; action « Stop ».</li><li>Pourquoi ces règles ? Le nom s’affiche tout seul, et un numéro de jument inconnu est refusé.</li></ol>
     
 
 
@@ -226,7 +226,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Liste les relations créées.</h3>
+            <h3 id="a01-q01-label">Question 1 — Liste les liens créés (quelle colonne renvoie à quelle feuille) et recopie une de tes formules.</h3>
             
 
             
@@ -234,7 +234,7 @@
                 <textarea id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Ouvre Outils &gt; Relations et liste chaque lien tracé entre deux tables.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Pour chaque colonne id_… qui renvoie à une autre feuille, écris « colonne → feuille ». Recopie ensuite une formule RECHERCHEV de la barre de formule.</p></details>
             
             
         </div>
@@ -248,15 +248,15 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Tester l’intégrité</h2>
+        <h2>Tester les règles</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les relations sont créées. Teste-les.</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas tester l’intégrité référentielle avec deux saisies interdites. On attend la réaction de la base.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les feuilles sont reliées. Teste-les.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas tester tes règles avec deux saisies interdites. On attend la réaction de Calc.</p></div>
         
         
 
         
-<ol><li>Saisis une saillie avec id_jument = 99 (inexistant).</li><li>Essaie de supprimer Belle de Mai (qui a des saillies).</li><li>Pourquoi ces tests ? Ce sont les deux erreurs les plus fréquentes.</li></ol>
+<ol><li>Dans Saillies, saisis une saillie avec id_jument = 99 (inexistant).</li><li>Protège la feuille Juments (Outils &gt; Protéger la feuille, réglages par défaut).</li><li>Essaie ensuite de supprimer la ligne de Belle de Mai (qui a des saillies).</li><li>Pourquoi ces tests ? Ce sont les deux erreurs les plus fréquentes.</li></ol>
     
 
 
@@ -265,7 +265,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Que fait la base ?</h3>
+            <h3 id="a02-q01-label">Question 1 — Que fait Calc ?</h3>
             
 
             
@@ -294,7 +294,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Tester l’intégrité — Réaction — Saillie pour la jument 99">
+                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Tester les règles — Réaction — Saillie pour la jument 99">
                                     
                                 </td>
                                 
@@ -311,7 +311,7 @@
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Tester l’intégrité — Réaction — Supprimer Belle de Mai">
+                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Tester les règles — Réaction — Supprimer Belle de Mai">
                                     
                                 </td>
                                 
@@ -321,7 +321,7 @@
                     </table>
                 </div>
             
-            <details><summary>Un coup de pouce</summary><p>Essaie les deux manipulations. Pour chacune, lis le message : la jument 99 existe-t-elle ? Belle de Mai a-t-elle des saillies ?</p></details>
+            <details><summary>Un coup de pouce</summary><p>Essaie les deux manipulations. Pour chacune, lis le message : la jument 99 existe-t-elle ? La feuille Juments est-elle protégée ?</p></details>
             
             
         </div>
@@ -335,15 +335,15 @@
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Et dans un tableur ?</h2>
+        <h2>Et avec un seul tableau ?</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> La base se protège. Le tableur le faisait-il ?</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas expliquer pourquoi la base est plus fiable que le tableur pour l’historique de reproduction. On attend une explication argumentée.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le classeur se protège. Le tableau unique le faisait-il ?</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas expliquer pourquoi un classeur relié et contrôlé est plus fiable qu’un tableau unique pour l’historique de reproduction. On attend une explication argumentée.</p></div>
         
         
 
         
-<ol><li>Compare avec le tableur du document 1 de S03.</li><li>Pourquoi comparer ? Pour justifier le choix de l’outil devant un employeur.</li></ol>
+<ol><li>Compare avec le tableau unique du document 1 de S03.</li><li>Pourquoi comparer ? Pour justifier l’organisation choisie devant un employeur.</li></ol>
     
 
 
@@ -352,7 +352,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Explique pourquoi la base est plus fiable que le tableur pour l’historique de reproduction.</h3>
+            <h3 id="a03-q01-label">Question 1 — Explique pourquoi le classeur relié est plus fiable que le tableau unique pour l’historique de reproduction.</h3>
             
 
             
@@ -360,7 +360,7 @@
                 <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Pense à une jument tapée dans 15 lignes de tableur, puis dans une base : combien de fois est-elle saisie, et qui contrôle les liens ?</p></details>
+            <details><summary>Un coup de pouce</summary><p>Pense à une jument tapée dans 15 lignes du tableau unique, puis dans le classeur relié : combien de fois est-elle saisie, et qu’est-ce qui contrôle les numéros ?</p></details>
             
             
         </div>
@@ -399,7 +399,7 @@
                 <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Une jument vendue a un passé dans l’élevage. Si on la supprime, que perd-on ? Quelle information ajouter à la table à la place ?</p></details>
+            <details><summary>Un coup de pouce</summary><p>Une jument vendue a un passé dans l’élevage. Si on supprime sa ligne, que deviennent les RECHERCHEV de la feuille Saillies ? Quelle colonne ajouter à la place ?</p></details>
             
             
         </div>
@@ -426,7 +426,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment la base empêche-t-elle d’enregistrer des données incohérentes ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment empêcher, dans Calc, d’enregistrer des données incohérentes entre les feuilles ?</h3>
             
 
             
@@ -434,7 +434,7 @@
                 <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Dis comment les relations et l’intégrité référentielle bloquent les incohérences.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Dis comment RECHERCHEV, les règles de validité et la protection de la feuille bloquent les incohérences.</p></details>
             
             
         </div>
@@ -454,7 +454,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Intégrité référentielle.</li><li>Pas de saillie orpheline, pas de suppression d’historique.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>RECHERCHEV relie les feuilles par l’identifiant.</li><li>Validité + protection : pas de saillie orpheline, pas de suppression d’historique.</li></ul>
     
 </section>
 

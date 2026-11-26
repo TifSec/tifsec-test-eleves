@@ -124,7 +124,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Une requête simple</a></li><li><a href="#a02">Une requête multi-tables</a></li><li><a href="#a03">Paramétrer</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Un filtre simple</a></li><li><a href="#a02">Croiser deux feuilles</a></li><li><a href="#a03">Une cellule paramètre</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -136,7 +136,7 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">TIM · BTSA ACS&#39;AGRI 2 · S07</span></div>
-    <h1>Séance 7 : Interroger la base : quelles juments surveiller ?</h1>
+    <h1>Séance 7 : Interroger le classeur : quelles juments surveiller ?</h1>
     
 
     
@@ -150,7 +150,7 @@
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Comment extraire de la base les informations utiles à une décision ?</p>
+        <p>Comment extraire d’un classeur les informations utiles à une décision ?</p>
     </section>
     
 
@@ -168,9 +168,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Une requête de sélection choisit des champs, dans une ou plusieurs tables liées, avec des critères et un tri.</li>
+            <li>Le filtre standard (Données &gt; Plus de filtres &gt; Filtre standard) ne garde que les lignes qui respectent des critères ; le tri les range.</li>
             
-            <li>Le mode Ébauche génère du SQL : SELECT … FROM … WHERE … ORDER BY …</li>
+            <li>Une formule calcule une nouvelle colonne (terme = date_saillie + 340) ; une cellule « paramètre » rend le critère réutilisable.</li>
             
         </ul>
         
@@ -178,16 +178,16 @@
         <h2>Ce que tu vas apprendre à faire</h2>
         <ul>
             
-            <li>Créer une requête multi-tables avec critères.</li>
+            <li>Filtrer et trier sur plusieurs critères.</li>
             
-            <li>Lire le SQL produit.</li>
+            <li>Ajouter une colonne calculée et une cellule paramètre.</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>La base contient maintenant le fichier elevage_complet.odb (à télécharger ci-dessus) (25 juments, 3 saisons).</p><p>L’éleveur demande : quelles juments pleines doivent pouliner avant le 1er avril ?</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Le classeur contient maintenant le fichier elevage_complet.ods (à télécharger ci-dessous) : 25 juments, 3 saisons.</p><p>L’éleveur demande : quelles juments pleines doivent pouliner avant le 1er avril ?</p></div></section>
     
     
     
@@ -209,18 +209,18 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Une requête simple</h2>
+        <h2>Un filtre simple</h2>
         
         
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas créer une requête qui liste les juments Selle Français de la base. On attend le nombre de juments et le SQL.</p></div>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas filtrer la feuille Juments pour garder les juments Selle Français. On attend le nombre de juments et le critère utilisé.</p></div>
         
         
 
         
-<p class="cours-fichier"><a href="/tifsec-test-eleves/assets/fichiers/tim/bts2/elevage_complet.odb" download>Télécharger le fichier : base complète de l’élevage : 25 juments, 3 saisons</a> <span>(elevage_complet.odb)</span></p>
+<p class="cours-fichier"><a href="/tifsec-test-eleves/assets/fichiers/tim/bts2/elevage_complet.ods" download>Télécharger le fichier : classeur complet de l’élevage : 25 juments, 3 saisons (LibreOffice Calc)</a> <span>(elevage_complet.ods)</span></p>
     
 
-<ol><li>Requêtes &gt; Ébauche : table Jument ; champs nom, race, date_naissance.</li><li>Critère : race = &#39;Selle Français&#39; ; tri par nom.</li><li>Exécute (F5).</li><li>Pourquoi un critère ? On ne garde que les lignes utiles.</li></ol>
+<ol><li>Feuille Juments : clique dans le tableau, puis Données &gt; Plus de filtres &gt; Filtre standard.</li><li>Critère : race = Selle Français. Trie ensuite par nom (Données &gt; Trier).</li><li>Lis le nombre de lignes affichées dans la barre d’état en bas (« x sur 25 enregistrements trouvés »), ou vérifie avec =NB.SI(E2:E26;&quot;Selle Français&quot;).</li><li>Pourquoi un critère ? On ne garde que les lignes utiles.</li></ol>
     
 
 
@@ -229,7 +229,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Combien de juments Selle Français la requête renvoie-t-elle ?</h3>
+            <h3 id="a01-q01-label">Question 1 — Combien de juments Selle Français le filtre garde-t-il ?</h3>
             
 
             
@@ -242,7 +242,7 @@
                 </div>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Exécute ta requête avec le critère sur la race et lis le nombre d’enregistrements en bas de la fenêtre.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Applique le filtre sur la race et lis le nombre de lignes trouvées dans la barre d’état, en bas de la fenêtre.</p></details>
             
             
         </div>
@@ -250,7 +250,7 @@
         <div class="cours-question" data-question="q02">
             
             
-            <h3 id="a01-q02-label">Question 2 — Recopie le SQL de ta requête (Affichage &gt; Mode SQL).</h3>
+            <h3 id="a01-q02-label">Question 2 — Écris le critère de ton filtre et la formule NB.SI qui donne le même nombre.</h3>
             
 
             
@@ -258,7 +258,7 @@
                 <textarea id="a01-q02" data-answer-id="a01_q02" data-required="true" aria-labelledby="a01-q02-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Passe en mode SQL (Affichage &gt; Mode SQL) et recopie la requête : SELECT, FROM, WHERE, ORDER BY.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Le critère : nom de colonne, condition, valeur. La formule : =NB.SI(plage des races;&quot;valeur cherchée&quot;).</p></details>
             
             
         </div>
@@ -272,15 +272,15 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Une requête multi-tables</h2>
+        <h2>Croiser deux feuilles</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Une table, c’est simple. Croise maintenant deux tables.</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas créer une requête sur Jument et Saillie qui calcule la date de terme des juments pleines. On attend les juments à surveiller avant le 1er avril.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Une feuille, c’est simple. Croise maintenant deux feuilles.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas calculer dans la feuille Saillies la date de terme des juments pleines. On attend les juments à surveiller avant le 1er avril.</p></div>
         
         
 
         
-<ol><li>Ajoute Jument et Saillie (la relation apparaît).</li><li>Champs : nom, date_saillie, resultat ; critères : resultat = &#39;pleine&#39; et année 2026.</li><li>Ajoute un champ calculé : date de terme ≈ date_saillie + 340 jours.</li><li>Pourquoi + 340 ? La gestation d’une jument dure environ 11 mois (≈ 340 jours) : on prévoit la surveillance.</li></ol>
+<ol><li>Feuille Saillies : colonne F « nom » : =RECHERCHEV(B2;$Juments.$A$2:$C$26;3;0) ; recopie vers le bas.</li><li>Colonne G « terme » : =D2+340, au format date ; recopie vers le bas.</li><li>Filtre standard : resultat = pleine ET terme &lt; 01/04/2027 ET date_saillie ≥ 01/01/2026. Trie par terme.</li><li>Pourquoi + 340 ? La gestation d’une jument dure environ 11 mois (≈ 340 jours) : on prévoit la surveillance.</li></ol>
     
 
 
@@ -297,7 +297,7 @@
                 <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Ta requête relie Jument et Saillie, calcule le terme prévu et garde ceux avant le 01/04/2027. Recopie les noms et les dates.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Ta feuille Saillies affiche le nom (RECHERCHEV) et le terme (date + 340). Filtre les pleines de 2026 dont le terme est avant le 01/04/2027. Recopie les noms et les dates.</p></details>
             
             
         </div>
@@ -311,15 +311,15 @@
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Paramétrer</h2>
+        <h2>Une cellule paramètre</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> La requête marche pour une date. Rends-la réutilisable.</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas transformer le critère de date en paramètre pour réutiliser la requête. On attend le critère et ce qui se passe à l’exécution.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le filtre marche pour une date. Rends-le réutilisable.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas remplacer la date fixe par une cellule paramètre. On attend la formule et ce qui se passe quand tu changes la date.</p></div>
         
         
 
         
-<ol><li>Remplace la date du critère par un paramètre :date_limite.</li><li>Exécute avec deux dates différentes.</li><li>Pourquoi un paramètre ? La même requête sert toute la saison.</li></ol>
+<ol><li>En J1, écris « date limite » ; en J2, une date (01/04/2027).</li><li>Colonne H « à surveiller » : =SI(ET(E2=&quot;pleine&quot;;G2&lt;$J$2);&quot;oui&quot;;&quot;&quot;) ; recopie vers le bas, puis filtre sur « oui ».</li><li>Change la date de J2 (01/03/2027) : observe la colonne H.</li><li>Pourquoi un paramètre ? Le même classeur sert toute la saison : on change une seule cellule.</li></ol>
     
 
 
@@ -328,7 +328,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Écris le critère avec paramètre et ce qui se passe à l’exécution.</h3>
+            <h3 id="a03-q01-label">Question 1 — Écris ta formule avec la cellule paramètre et ce qui se passe quand tu changes la date.</h3>
             
 
             
@@ -336,7 +336,7 @@
                 <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Remplace la date fixe par un paramètre précédé de « : ». Exécute : que demande la base ?</p></details>
+            <details><summary>Un coup de pouce</summary><p>La formule compare le terme à la cellule $J$2 (référence absolue). Change la date de J2 : que deviennent les « oui » ?</p></details>
             
             
         </div>
@@ -367,7 +367,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Quelle requête prépare la mise en place de la caméra de poulinage ?</h3>
+            <h3 id="a04-q01-label">Question 1 — Quel filtre ou quelle formule prépare la mise en place de la caméra de poulinage ?</h3>
             
 
             
@@ -391,7 +391,7 @@
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> La base répond aux questions de l’éleveur. Il reste à répondre au problème de départ.</p>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le classeur répond aux questions de l’éleveur. Il reste à répondre au problème de départ.</p>
         
         
         
@@ -402,7 +402,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment extraire de la base les informations utiles à une décision ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment extraire d’un classeur les informations utiles à une décision ?</h3>
             
 
             
@@ -410,7 +410,7 @@
                 <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Dis ce que permettent les requêtes : critères, plusieurs tables, champs calculés, paramètres.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Dis ce que permettent les filtres, le tri, RECHERCHEV, les colonnes calculées et la cellule paramètre.</p></details>
             
             
         </div>
@@ -430,7 +430,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>SELECT … FROM … WHERE … ORDER BY.</li><li>Champ calculé ; paramètre.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Filtre standard (plusieurs critères) + tri.</li><li>Colonne calculée ; cellule paramètre en référence absolue ($J$2).</li></ul>
     
 </section>
 

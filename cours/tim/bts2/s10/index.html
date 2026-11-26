@@ -124,7 +124,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">La requête source</a></li><li><a href="#a02">L’état</a></li><li><a href="#a03">Vérifier</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Les données à imprimer</a></li><li><a href="#a02">La mise en page</a></li><li><a href="#a03">Vérifier</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -136,7 +136,7 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">TIM · BTSA ACS&#39;AGRI 2 · S10</span></div>
-    <h1>Séance 10 : Un état imprimable pour le vétérinaire</h1>
+    <h1>Séance 10 : Un document imprimable pour le vétérinaire</h1>
     
 
     
@@ -150,7 +150,7 @@
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Comment produire un document clair à partir de la base ?</p>
+        <p>Comment produire un document clair à partir du classeur ?</p>
     </section>
     
 
@@ -168,9 +168,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Un état (rapport) met en page le résultat d’une requête : regroupements, tris, totaux.</li>
+            <li>On trie, puis Données &gt; Sous-totaux regroupe les lignes par jument et ajoute un total par groupe.</li>
             
-            <li>On l’exporte en PDF pour le transmettre.</li>
+            <li>La mise en page (plage d’impression, en-tête, pied de page) prépare l’export PDF.</li>
             
         </ul>
         
@@ -178,9 +178,9 @@
         <h2>Ce que tu vas apprendre à faire</h2>
         <ul>
             
-            <li>Créer un état à partir d’une requête.</li>
+            <li>Trier et regrouper avec les sous-totaux.</li>
             
-            <li>Regrouper et trier dans un état.</li>
+            <li>Mettre en page et exporter en PDF.</li>
             
         </ul>
         
@@ -209,10 +209,10 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>La requête source</h2>
+        <h2>Les données à imprimer</h2>
         
         
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas préparer la requête qui sélectionne les soins de l’année par jument. On attend le nombre de lignes et l’ordre de tri.</p></div>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas préparer une feuille qui rassemble les soins de l’année par jument. On attend le nombre de lignes et l’ordre de tri.</p></div>
         
         
 
@@ -220,10 +220,10 @@
 <p class="cours-fichier"><a href="/tifsec-test-eleves/assets/fichiers/tim/bts2/registre_papier_iris.odt" download>Télécharger le fichier : registre papier des traitements d’Iris</a> <span>(registre_papier_iris.odt)</span></p>
     
 
-<p class="cours-fichier"><a href="/tifsec-test-eleves/assets/fichiers/tim/bts2/elevage_complet.odb" download>Télécharger le fichier : base complète de l’élevage</a> <span>(elevage_complet.odb)</span></p>
+<p class="cours-fichier"><a href="/tifsec-test-eleves/assets/fichiers/tim/bts2/elevage_complet.ods" download>Télécharger le fichier : classeur complet de l’élevage (LibreOffice Calc)</a> <span>(elevage_complet.ods)</span></p>
     
 
-<ol><li>Requête : Jument + Soin ; champs nom, date, type, produit, délai d’attente ; année en cours ; tri par nom puis date.</li><li>Pourquoi une requête d’abord ? L’état affiche ce que la requête sélectionne.</li></ol>
+<ol><li>Copie la feuille Soins (clic droit sur l’onglet &gt; Déplacer ou copier) et nomme-la « Vétérinaire » ; ajoute le nom de la jument (RECHERCHEV), garde les soins de 2026.</li><li>Pourquoi une copie ? On met en page sans abîmer la feuille de saisie.</li></ol>
     
 
 
@@ -232,7 +232,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Combien de lignes renvoie ta requête ?</h3>
+            <h3 id="a01-q01-label">Question 1 — Combien de lignes de soins contient ta feuille ?</h3>
             
 
             
@@ -240,7 +240,7 @@
                 <textarea id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Exécute la requête source de l’état et lis le nombre d’enregistrements.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Compte les lignes de soins de 2026 (barre d’état ou =NB(colonne date)).</p></details>
             
             
         </div>
@@ -270,15 +270,15 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>L’état</h2>
+        <h2>La mise en page</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Les données sont prêtes. Mets-les en page.</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas créer l’état des traitements regroupé par jument et l’exporter en PDF. On attend la description de la mise en page.</p></div>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas regrouper les soins par jument et exporter la feuille en PDF. On attend la description de la mise en page.</p></div>
         
         
 
         
-<ol><li>Rapports &gt; Assistant : source = ta requête ; regroupement par nom de jument.</li><li>Ajoute un titre, la date d’édition, les numéros de page.</li><li>Exporte en PDF.</li><li>Pourquoi regrouper ? Chaque jument a son bloc : le vétérinaire lit comme un carnet.</li></ol>
+<ol><li>Données &gt; Trier : par nom, puis par date. Puis Données &gt; Sous-totaux : regrouper par nom, fonction Nombre sur la colonne date.</li><li>Format &gt; Zones d’impression &gt; Définir ; Format &gt; Style de page : en-tête (titre, date d’édition), pied de page (numéro de page) ; ligne de titres répétée.</li><li>Fichier &gt; Exporter au format PDF.</li><li>Pourquoi regrouper ? Chaque jument a son bloc : le vétérinaire lit comme un carnet.</li></ol>
     
 
 
@@ -287,7 +287,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Décris la mise en page de ton état.</h3>
+            <h3 id="a02-q01-label">Question 1 — Décris la mise en page de ton document.</h3>
             
 
             
@@ -295,7 +295,7 @@
                 <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Décris ton état : l’en-tête, le regroupement par jument, le tableau des soins, la pagination.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Décris ton document : l’en-tête, le regroupement par jument, le tableau des soins, les totaux, la pagination.</p></details>
             
             
         </div>
@@ -311,13 +311,13 @@
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Vérifier</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> L’état est édité. Est-il juste ?</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas comparer l’état avec le registre papier d’une jument. On attend la différence trouvée et ton action.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le document est prêt. Est-il juste ?</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas comparer ton document avec le registre papier d’une jument. On attend la différence trouvée et ton action.</p></div>
         
         
 
         
-<ol><li>Compare l’état avec le registre papier fourni pour une jument.</li><li>Signale toute différence.</li><li>Pourquoi vérifier ? Le document sert de preuve sanitaire.</li></ol>
+<ol><li>Compare ton document avec le registre papier fourni pour une jument.</li><li>Signale toute différence.</li><li>Pourquoi vérifier ? Le document sert de preuve sanitaire.</li></ol>
     
 
 
@@ -334,7 +334,7 @@
                 <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Compare ton état avec les ordonnances fournies : un soin manque-t-il ? Que faut-il faire, et avec qui vérifier ?</p></details>
+            <details><summary>Un coup de pouce</summary><p>Compare ton document avec le registre papier fourni : un soin manque-t-il ? Que faut-il faire, et avec qui vérifier ?</p></details>
             
             
         </div>
@@ -356,7 +356,7 @@
         
 
         
-<p>L’état pourrait afficher le nombre de traitements par jument.</p>
+<p>Le document pourrait afficher le nombre de traitements (et seulement de traitements) par jument.</p>
     
 
 
@@ -373,7 +373,7 @@
                 <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Dans l’état, chaque jument a un pied de groupe. Quel champ y ajouter pour compter ses traitements ?</p></details>
+            <details><summary>Un coup de pouce</summary><p>Les sous-totaux comptent tous les soins. Quelle formule compte seulement les traitements d’une jument (deux critères) ?</p></details>
             
             
         </div>
@@ -400,7 +400,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment produire un document clair à partir de la base ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment produire un document clair à partir du classeur ?</h3>
             
 
             
@@ -408,7 +408,7 @@
                 <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Dis les étapes : requête triée, état regroupé, export, vérification.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Dis les étapes : données triées, sous-totaux par jument, mise en page, export PDF, vérification.</p></details>
             
             
         </div>
@@ -428,7 +428,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Requête → état (regroupement, tri, total) → PDF.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Tri → sous-totaux par jument → mise en page → PDF.</li></ul>
     
 </section>
 

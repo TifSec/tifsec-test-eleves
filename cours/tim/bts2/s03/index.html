@@ -124,7 +124,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Les limites du tableur</a></li><li><a href="#a02">Lire le schéma</a></li><li><a href="#a03">Les cardinalités</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Les limites du tableau unique</a></li><li><a href="#a02">Lire l’organisation du classeur</a></li><li><a href="#a03">Combien de lignes pour une jument ?</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -136,7 +136,7 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">TIM · BTSA ACS&#39;AGRI 2 · S03</span></div>
-    <h1>Séance 3 : Analyser une base de données existante</h1>
+    <h1>Séance 3 : Analyser un classeur de données relié</h1>
     
     <aside class="course-learning-sequence" aria-label="Comment avancer dans le cours">
         <strong>Pour avancer</strong>
@@ -161,7 +161,7 @@
     
     <section class="course-info-card cours-problematique">
         <h2>Le problème à résoudre</h2>
-        <p>Comment est organisée une base de données relationnelle ?</p>
+        <p>Comment organiser les données d’un élevage en plusieurs feuilles reliées d’un classeur ?</p>
     </section>
     
 
@@ -179,9 +179,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Une base relationnelle : des tables (une par sujet), des champs typés, une clé primaire par table, des relations par clés étrangères.</li>
+            <li>Un classeur relié : une feuille par sujet (juments, étalons, saillies…), une colonne par information, un identifiant unique par ligne (id_jument).</li>
             
-            <li>Elle évite la redondance des tableurs (un nom de jument écrit 30 fois).</li>
+            <li>Une feuille renvoie à une autre par l’identifiant : la feuille Saillies contient id_jument, pas le nom. On évite ainsi de taper 30 fois le nom d’une jument.</li>
             
         </ul>
         
@@ -189,16 +189,16 @@
         <h2>Ce que tu vas apprendre à faire</h2>
         <ul>
             
-            <li>Identifier tables, champs, clés.</li>
+            <li>Repérer les feuilles, les colonnes et les identifiants.</li>
             
-            <li>Lire un schéma relationnel.</li>
+            <li>Lire les liens entre les feuilles.</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Le tableur atteint ses limites avec des données liées (juments, saillies, poulains).</p><p>Avant de construire une base, tu en analyses une.</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Un tableau unique atteint ses limites avec des données liées (juments, saillies, poulains).</p><p>Avant de construire ton classeur, tu en analyses un déjà organisé.</p></div></section>
     
     
     
@@ -220,18 +220,18 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Les limites du tableur</h2>
+        <h2>Les limites du tableau unique</h2>
         
         
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas repérer dans l’extrait du tableur de l’élevage (document 1) les problèmes de redondance. On attend les problèmes et leur conséquence.</p></div>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas repérer dans l’extrait du tableau unique de l’élevage (document 1) les problèmes de répétition. On attend les problèmes et leur conséquence.</p></div>
         
         
 
         
-<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Extrait du tableur de l’élevage (fictif)</caption><thead><tr><th scope="col">Jument</th><th scope="col">UELN</th><th scope="col">Étalon</th><th scope="col">Date saillie</th><th scope="col">Résultat</th></tr></thead><tbody><tr><td>Belle de Mai</td><td>250001X…01</td><td>Quatar</td><td>02/04/2026</td><td>pleine</td></tr><tr><td>Bele de Mai</td><td>250001X…01</td><td>Quatar</td><td>20/04/2025</td><td>vide</td></tr><tr><td>Belle de Mai</td><td>250001X…01</td><td>Ugo</td><td>15/05/2024</td><td>pleine</td></tr></tbody></table></div>
+<div class="cours-table-wrapper"><table class="cours-table"><caption>Document 1 — Extrait du tableau unique de l’élevage (fictif)</caption><thead><tr><th scope="col">Jument</th><th scope="col">UELN</th><th scope="col">Étalon</th><th scope="col">Date saillie</th><th scope="col">Résultat</th></tr></thead><tbody><tr><td>Belle de Mai</td><td>250001X…01</td><td>Quatar</td><td>02/04/2026</td><td>pleine</td></tr><tr><td>Bele de Mai</td><td>250001X…01</td><td>Quatar</td><td>20/04/2025</td><td>vide</td></tr><tr><td>Belle de Mai</td><td>250001X…01</td><td>Ugo</td><td>15/05/2024</td><td>pleine</td></tr></tbody></table></div>
     
 
-<ol><li>Lis l’extrait du tableur de l’élevage (document 1).</li><li>Repère les répétitions et les risques.</li><li>Pourquoi la redondance pose problème ? Si on corrige un nom à un endroit, il reste faux ailleurs.</li></ol>
+<ol><li>Lis l’extrait du tableau unique de l’élevage (document 1).</li><li>Repère les répétitions et les risques.</li><li>Pourquoi la répétition (redondance) pose problème ? Si on corrige un nom à un endroit, il reste faux ailleurs.</li></ol>
     
 
 
@@ -262,23 +262,23 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Lire le schéma</h2>
+        <h2>Lire l’organisation du classeur</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le tableur montre ses limites. Regarde une vraie base.</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas lire le schéma relationnel de la base elevage_demo.odb. On attend la clé primaire et les clés étrangères de trois tables.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le tableau unique montre ses limites. Regarde un classeur organisé.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas lire l’organisation du classeur elevage_demo.ods. On attend l’identifiant et les colonnes qui renvoient à une autre feuille, pour trois feuilles.</p></div>
         
         
 
         
-<p class="cours-fichier"><a href="/tifsec-test-eleves/assets/fichiers/tim/bts2/elevage_demo.odb" download>Télécharger le fichier : base de démonstration de l’élevage (LibreOffice Base)</a> <span>(elevage_demo.odb)</span></p>
+<p class="cours-fichier"><a href="/tifsec-test-eleves/assets/fichiers/tim/bts2/elevage_demo.ods" download>Télécharger le fichier : classeur de démonstration de l’élevage (LibreOffice Calc)</a> <span>(elevage_demo.ods)</span></p>
     
 
-<ol><li>Ouvre la base elevage_demo.odb (à télécharger ci-dessus) dans LibreOffice Base.</li><li>Outils &gt; Relations : observe les tables et les liens.</li><li>Remplis le tableau.</li><li>Pourquoi un schéma ? Il montre toute l’organisation des données d’un coup d’œil.</li></ol>
+<ol><li>Ouvre le classeur elevage_demo.ods (à télécharger ci-dessus) dans LibreOffice Calc.</li><li>Regarde les onglets en bas : une feuille par sujet. Observe la ligne de titres de chaque feuille.</li><li>Dans la feuille Saillies, la colonne id_jument contient un numéro : retrouve ce numéro dans la feuille Juments.</li><li>Remplis le tableau.</li><li>Pourquoi des identifiants ? Le nom de la jument n’est écrit qu’une seule fois, dans la feuille Juments.</li></ol>
     
 
 
         <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
-<p><a href="https://help.libreoffice.org/latest/fr/text/sdatabase/main.html" target="_blank" rel="noopener noreferrer">LibreOffice Base — aide en ligne</a></p>
+<p><a href="https://help.libreoffice.org/latest/fr/text/scalc/main0000.html" target="_blank" rel="noopener noreferrer">LibreOffice Calc — aide en ligne</a></p>
 
 
 </div></details>
@@ -287,7 +287,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — D’après le schéma, complète.</h3>
+            <h3 id="a02-q01-label">Question 1 — D’après le classeur, complète.</h3>
             
 
             
@@ -297,9 +297,9 @@
                         <thead>
                             <tr>
                                 
-                                <th>Table</th>
+                                <th>Feuille</th>
                                 
-                                <th>Clé primaire / clé étrangère</th>
+                                <th>Identifiant / colonnes qui renvoient à une autre feuille</th>
                                 
                             </tr>
                         </thead>
@@ -310,30 +310,13 @@
                                 
                                 <td>
                                     
-                                    Jument
+                                    Juments
                                     
                                 </td>
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Lire le schéma — Clé primaire / clé étrangère — Jument">
-                                    
-                                </td>
-                                
-                            </tr>
-                            
-                            
-                            <tr>
-                                
-                                <td>
-                                    
-                                    Saillie
-                                    
-                                </td>
-                                
-                                <td>
-                                    
-                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Lire le schéma — Clé primaire / clé étrangère — Saillie">
+                                    <input type="text" data-answer-id="a02_q01_r0_c1" data-required="true" data-row="0" data-col="1" aria-label="Lire l’organisation du classeur — Identifiant / colonnes qui renvoient à une autre feuille — Juments">
                                     
                                 </td>
                                 
@@ -344,13 +327,30 @@
                                 
                                 <td>
                                     
-                                    Poulain
+                                    Saillies
                                     
                                 </td>
                                 
                                 <td>
                                     
-                                    <input type="text" data-answer-id="a02_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Lire le schéma — Clé primaire / clé étrangère — Poulain">
+                                    <input type="text" data-answer-id="a02_q01_r1_c1" data-required="true" data-row="1" data-col="1" aria-label="Lire l’organisation du classeur — Identifiant / colonnes qui renvoient à une autre feuille — Saillies">
+                                    
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                            <tr>
+                                
+                                <td>
+                                    
+                                    Poulains
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                    <input type="text" data-answer-id="a02_q01_r2_c1" data-required="true" data-row="2" data-col="1" aria-label="Lire l’organisation du classeur — Identifiant / colonnes qui renvoient à une autre feuille — Poulains">
                                     
                                 </td>
                                 
@@ -360,7 +360,7 @@
                     </table>
                 </div>
             
-            <details><summary>Un coup de pouce</summary><p>Sur le schéma, la clé primaire est soulignée ou marquée ; les clés étrangères sont les champs qui pointent vers une autre table.</p></details>
+            <details><summary>Un coup de pouce</summary><p>L’identifiant est la première colonne de la feuille (id_…). Les colonnes qui renvoient sont les autres id_… : elles désignent une ligne d’une autre feuille.</p></details>
             
             
         </div>
@@ -374,15 +374,15 @@
     
     <article class="cours-activite" id="a03" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 3</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Les cardinalités</h2>
+        <h2>Combien de lignes pour une jument ?</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu connais les tables. Comment sont-elles liées ?</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas analyser la cardinalité de la relation entre jument et saillie. On attend la relation et la place de la clé étrangère.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu connais les feuilles. Comment sont-elles liées ?</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas analyser le lien entre la feuille Juments et la feuille Saillies. On attend le sens du lien et la feuille où se trouve la colonne id_jument.</p></div>
         
         
 
         
-<ol><li>Pour chaque relation, demande-toi : combien de… pour un… ?</li><li>Écris la cardinalité.</li><li>Pourquoi les cardinalités ? Elles disent où placer la clé étrangère.</li></ol>
+<ol><li>Pour chaque lien, demande-toi : combien de lignes de l’une pour une ligne de l’autre ?</li><li>Écris le sens du lien (1 pour plusieurs).</li><li>Pourquoi le sens du lien ? Il dit dans quelle feuille placer la colonne qui renvoie à l’autre.</li></ol>
     
 
 
@@ -391,7 +391,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a03-q01-label">Question 1 — Une jument peut-elle avoir plusieurs saillies ? Une saillie concerne-t-elle plusieurs juments ? Conclus sur la relation.</h3>
+            <h3 id="a03-q01-label">Question 1 — Une jument peut-elle avoir plusieurs saillies (plusieurs lignes dans Saillies) ? Une saillie concerne-t-elle plusieurs juments ? Conclus sur le sens du lien.</h3>
             
 
             
@@ -399,7 +399,7 @@
                 <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Pense à une saison de reproduction : une jument peut revenir plusieurs fois. Et une saillie, concerne combien de juments ? Déduis le type de relation.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Pense à une saison de reproduction : une jument peut revenir plusieurs fois. Et une saillie, concerne combien de juments ? Déduis le sens du lien (1 pour plusieurs).</p></details>
             
             
         </div>
@@ -430,7 +430,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a04-q01-label">Question 1 — Le schéma le permet-il ?</h3>
+            <h3 id="a04-q01-label">Question 1 — L’organisation du classeur le permet-elle ?</h3>
             
 
             
@@ -438,7 +438,7 @@
                 <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Deux poulains pour une seule saillie : regarde comment Saillie et Poulain sont reliés sur le schéma.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Deux poulains pour une seule saillie : regarde la colonne id_saillie de la feuille Poulains. Deux lignes peuvent-elles avoir le même numéro ?</p></details>
             
             
         </div>
@@ -454,7 +454,7 @@
         <div class="course-mission-heading"><span class="course-mission-number">Conclusion</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
         <h2>Conclusion de ton travail</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais lire une base relationnelle. Il reste à répondre au problème de départ.</p>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Tu sais lire un classeur relié. Il reste à répondre au problème de départ.</p>
         
         
         
@@ -465,7 +465,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment est organisée une base de données relationnelle ?</h3>
+            <h3 id="a05-q01-label">Question 1 — Réponds au problème du jour : comment organiser les données d’un élevage en plusieurs feuilles reliées d’un classeur ?</h3>
             
 
             
@@ -473,7 +473,7 @@
                 <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Dis comment la base est découpée : tables, champs, clés primaires et étrangères, relations.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Dis comment le classeur est découpé : feuilles par sujet, colonnes, identifiants, colonnes qui renvoient à une autre feuille, sens des liens.</p></details>
             
             
         </div>
@@ -493,7 +493,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Table, champ, clé primaire, clé étrangère.</li><li>Relation 1-n : clé étrangère côté n.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Feuille, colonne, identifiant, colonne qui renvoie à une autre feuille.</li><li>Lien 1 pour plusieurs : l’identifiant est recopié côté « plusieurs » (id_jument dans Saillies).</li></ul>
     
 </section>
 

@@ -124,7 +124,7 @@
         <h2>Ma progression</h2><p id="course-progress-label" role="status">Chargement de la copie…</p>
         <progress id="course-progress" max="1" value="0" aria-labelledby="course-progress-label"></progress>
         <p class="course-progress-help">Réponses remplies, pas forcément justes.</p>
-        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">Le formulaire principal</a></li><li><a href="#a02">Le sous-formulaire des soins</a></li><li><a href="#a03">Test par un utilisateur</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
+        <details class="course-step-list" id="course-step-list" open><summary>Étapes de la séance</summary><nav><ol><li><a href="#course-intro">Comprendre l’objectif</a></li><li><a href="#a01">La fiche de saisie</a></li><li><a href="#a02">Les listes et les soins d’une jument</a></li><li><a href="#a03">Test par un utilisateur</a></li><li><a href="#a04">Pour aller plus loin — facultatif</a></li><li><a href="#a05">Conclusion de ton travail</a></li><li><a href="#course-summary">À retenir</a></li></ol></nav></details>
     </aside>
 
 <div class="course-reading">
@@ -136,7 +136,7 @@
     
     
     <div class="course-title-strip"><span class="course-title-kicker">Ta mission du jour</span><span class="course-title-context">TIM · BTSA ACS&#39;AGRI 2 · S09</span></div>
-    <h1>Séance 9 : Un formulaire de saisie pour l’équipe</h1>
+    <h1>Séance 9 : Une saisie simple et sûre pour l’équipe</h1>
     
 
     
@@ -168,9 +168,9 @@
         <h2>Ce que tu vas apprendre</h2>
         <ul>
             
-            <li>Un formulaire présente les champs d’une table de façon conviviale ; une liste déroulante affiche le nom et stocke l’id.</li>
+            <li>Données &gt; Formulaire affiche une ligne comme une fiche (un champ par colonne) ; les listes de validité imposent des valeurs ; une note d’aide (Validité &gt; Aide à la saisie) guide le salarié.</li>
             
-            <li>Un sous-formulaire affiche les enregistrements liés (les soins d’une jument).</li>
+            <li>Le filtre automatique affiche les soins d’une seule jument.</li>
             
         </ul>
         
@@ -178,16 +178,16 @@
         <h2>Ce que tu vas apprendre à faire</h2>
         <ul>
             
-            <li>Créer un formulaire avec liste déroulante.</li>
+            <li>Préparer une feuille de saisie avec formulaire, listes et aides.</li>
             
-            <li>Créer un sous-formulaire.</li>
+            <li>Filtrer les soins d’une jument.</li>
             
         </ul>
         
     </section>
     
 
-    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Les salariés ne doivent pas toucher aux tables directement.</p><p>Tu crées un formulaire de saisie des soins.</p></div></section>
+    <section class="course-info-card course-info-why"><h2>Pourquoi cette séance ?</h2><div class="course-info-why-text"><p>Les salariés ne doivent pas modifier les formules ni les autres feuilles.</p><p>Tu prépares la saisie des soins.</p></div></section>
     
     
     
@@ -209,23 +209,23 @@
     
     <article class="cours-activite" id="a01" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 1</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Le formulaire principal</h2>
+        <h2>La fiche de saisie</h2>
         
         
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas créer le formulaire principal de la table Jument. On attend la description du formulaire.</p></div>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas préparer la saisie des soins sous forme de fiche. On attend la description de ta fiche.</p></div>
         
         
 
         
-<p class="cours-fichier"><a href="/tifsec-test-eleves/assets/fichiers/tim/bts2/elevage_complet.odb" download>Télécharger le fichier : base complète de l’élevage</a> <span>(elevage_complet.odb)</span></p>
+<p class="cours-fichier"><a href="/tifsec-test-eleves/assets/fichiers/tim/bts2/elevage_complet.ods" download>Télécharger le fichier : classeur complet de l’élevage (LibreOffice Calc)</a> <span>(elevage_complet.ods)</span></p>
     
 
-<ol><li>Formulaires &gt; Assistant : table Jument, tous les champs.</li><li>Mode Ébauche : réorganise, ajoute un titre.</li><li>Pourquoi un formulaire ? Les salariés voient une fiche claire, pas une grille de données.</li></ol>
+<ol><li>Feuille Soins : clique dans le tableau, puis Données &gt; Formulaire : chaque soin s’affiche comme une fiche ; « Nouveau » ajoute une ligne.</li><li>Ajoute une colonne « nom » (RECHERCHEV sur id_jument) pour que la personne vérifie la jument choisie ; mets un titre clair au-dessus de chaque colonne.</li><li>Pourquoi une fiche ? Les salariés voient un soin à la fois, pas une grande grille.</li></ol>
     
 
 
         <details class="cours-ressources"><summary>Des ressources pour chercher</summary><div>
-<p><a href="https://help.libreoffice.org/latest/fr/text/sdatabase/main.html" target="_blank" rel="noopener noreferrer">LibreOffice Base — aide en ligne</a></p>
+<p><a href="https://help.libreoffice.org/latest/fr/text/scalc/main0000.html" target="_blank" rel="noopener noreferrer">LibreOffice Calc — aide en ligne</a></p>
 
 
 </div></details>
@@ -234,7 +234,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a01-q01-label">Question 1 — Décris ton formulaire (titre, champs affichés, ordre).</h3>
+            <h3 id="a01-q01-label">Question 1 — Décris ta fiche de saisie (titres des champs, ordre, aide à la vérification).</h3>
             
 
             
@@ -242,7 +242,7 @@
                 <textarea id="a01-q01" data-answer-id="a01_q01" data-required="true" aria-labelledby="a01-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Décris ton formulaire : le titre, les champs de la jument affichés et leur ordre de saisie.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Décris ta fiche : les champs affichés, leur ordre de saisie, et ce qui permet de vérifier qu’on a choisi la bonne jument.</p></details>
             
             
         </div>
@@ -256,15 +256,15 @@
     
     <article class="cours-activite" id="a02" data-course-step>
         <div class="course-mission-heading"><span class="course-mission-number">Mission 2</span><span class="course-step-counter" data-course-step-counter></span><span class="course-mission-status" data-course-mission-status data-state="todo" aria-live="polite">À commencer</span></div>
-        <h2>Le sous-formulaire des soins</h2>
+        <h2>Les listes et les soins d’une jument</h2>
         
-        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> La fiche jument existe. Ajoute ses soins.</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas ajouter le sous-formulaire des soins lié à la jument affichée. On attend son comportement et l’intérêt de la liste.</p></div>
+        <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> La fiche existe. Rends-la plus sûre.</p>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas ajouter des listes de choix et filtrer les soins d’une jument. On attend le comportement du filtre et l’intérêt de la liste.</p></div>
         
         
 
         
-<ol><li>Ajoute un sous-formulaire basé sur Soin, lié par id_jument.</li><li>Dans le sous-formulaire, le champ type est une liste : vermifuge, vaccin, traitement, autre.</li><li>Pourquoi un sous-formulaire ? On voit et on saisit les soins de la jument affichée.</li></ol>
+<ol><li>Colonne type : Données &gt; Validité &gt; Liste : vermifuge ; vaccin ; traitement ; autre. Colonne id_jument : Plage de cellules = $Juments.$A$2:$A$26.</li><li>Validité &gt; onglet Aide à la saisie : écris une consigne courte pour chaque colonne.</li><li>Données &gt; Filtre automatique : choisis une jument dans la colonne nom, puis une autre.</li><li>Pourquoi filtrer ? On voit et on contrôle les soins de la jument choisie.</li></ol>
     
 
 
@@ -273,7 +273,7 @@
         <div class="cours-question" data-question="q01">
             <p class="course-learning-label">À toi d’essayer avec les questions</p>
             
-            <h3 id="a02-q01-label">Question 1 — Quand tu passes à la jument suivante, que fait le sous-formulaire ?</h3>
+            <h3 id="a02-q01-label">Question 1 — Quand tu choisis une autre jument dans le filtre, que devient la liste des soins ?</h3>
             
 
             
@@ -281,7 +281,7 @@
                 <textarea id="a02-q01" data-answer-id="a02_q01" data-required="true" aria-labelledby="a02-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Passe à la jument suivante et regarde la liste des soins en bas : que devient-elle ?</p></details>
+            <details><summary>Un coup de pouce</summary><p>Choisis une autre jument dans le filtre automatique de la colonne nom : quelles lignes restent affichées ?</p></details>
             
             
         </div>
@@ -314,12 +314,12 @@
         <h2>Test par un utilisateur</h2>
         
         <p class="course-transition"><strong>Pourquoi on change d’exercice ?</strong> Le formulaire marche pour toi. Et pour un autre ?</p>
-        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas faire tester ton formulaire par un camarade et le corriger. On attend la difficulté et ta correction.</p></div>
+        <div class="course-mission-goal"><strong>Ta mission</strong><p>Tu vas faire tester ta feuille de saisie par un camarade et la corriger. On attend la difficulté et ta correction.</p></div>
         
         
 
         
-<ol><li>Un camarade saisit 3 soins sans aide.</li><li>Note ses difficultés et corrige le formulaire.</li><li>Pourquoi tester avec un autre ? Le concepteur ne voit plus les pièges.</li></ol>
+<ol><li>Un camarade saisit 3 soins sans aide, avec Données &gt; Formulaire.</li><li>Note ses difficultés et corrige ta feuille.</li><li>Pourquoi tester avec un autre ? Le concepteur ne voit plus les pièges.</li></ol>
     
 
 
@@ -336,7 +336,7 @@
                 <textarea id="a03-q01" data-answer-id="a03_q01" data-required="true" aria-labelledby="a03-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Écris ce qui a bloqué ton testeur (ordre de tabulation, libellé, date…) et la modification que tu as faite.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Écris ce qui a bloqué ton testeur (titre de colonne peu clair, format de date, liste…) et la modification que tu as faite.</p></details>
             
             
         </div>
@@ -375,7 +375,7 @@
                 <textarea id="a04-q01" data-answer-id="a04_q01" data-required="false" aria-labelledby="a04-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Le délai d’attente ne concerne que les traitements. Que peut vérifier la base, et sinon quelle consigne donner ?</p></details>
+            <details><summary>Un coup de pouce</summary><p>Le délai d’attente ne concerne que les traitements. Quelle formule peut signaler un oubli (SI, ET), et sinon quelle consigne donner ?</p></details>
             
             
         </div>
@@ -410,7 +410,7 @@
                 <textarea id="a05-q01" data-answer-id="a05_q01" data-required="true" aria-labelledby="a05-q01-label" rows="4" placeholder="Écris ta réponse ici..."></textarea>
 
                 
-            <details><summary>Un coup de pouce</summary><p>Dis comment le formulaire, le sous-formulaire et les listes rendent la saisie simple et sûre.</p></details>
+            <details><summary>Un coup de pouce</summary><p>Dis comment le formulaire, les listes, les aides à la saisie et le filtre rendent la saisie simple et sûre.</p></details>
             
             
         </div>
@@ -430,7 +430,7 @@
     <div class="course-mission-heading course-final-heading"><span class="course-mission-number">Fin de la séance</span><span class="course-step-counter" data-course-step-counter></span></div>
     
 <section class="cours-synthese" id="course-summary" aria-labelledby="course-summary-title">
-    <h2 id="course-summary-title">À retenir</h2><ul><li>Formulaire + sous-formulaire lié.</li><li>Listes ; test utilisateur.</li></ul>
+    <h2 id="course-summary-title">À retenir</h2><ul><li>Données &gt; Formulaire ; listes et aides de validité.</li><li>Filtre automatique ; test utilisateur.</li></ul>
     
 </section>
 
